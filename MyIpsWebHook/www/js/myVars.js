@@ -178,11 +178,11 @@
             check(ips[0].ID36414,83);  //Wasser Sensor Bad Wasserstand
             check(ips[0].ID44956,84);  //TV Volume
             check(ips[0].ID23548,85);  //TV Power
-            check(ips[0].ID15810,86);  //TV Channel
-            check(ips[0].ID41307,87);  //TV Channel Name
-            check(ips[0].ID24408,88);  //TV Source
+            check(ips[0].ID43304,86);  //TV Channel - 15810
+            check(ips[0].ID53698,87);  //TV Channel Name - 41307
+            check(ips[0].ID26003,88);  //TV Source 24408
             //check(ips[0].ID25544,90);  //TV Guide
-            check(ips[0].ID45960,91);  //TV SourceList
+            check(ips[0].ID35428,91);  //TV SourceList 45960
             
             check(ips[0].ID10567,92);  //SZ Lampe
             
@@ -197,8 +197,8 @@
             check(ips[0].ID57771,101);  //SZ Sonos Playmode
             check(ips[0].ID35731,102);  //SZ Sonos Cover image
             
-            check(ips[0].ID31510,103);   //TVchProgList
-            check(ips[0].ID49099,104); //TVProgList
+            check(ips[0].ID33459,103);   //TVchProgList 31510
+            check(ips[0].ID35025,104); //TVProgList  49099
      }
     function check(value, n){
         if (typeof value === "undefined") {$('fehler').innerHTML =  "Variable  wrong ID:" + n;} else {return value;}
@@ -542,13 +542,13 @@
         txtBox.update(ips[0].ID59260);
         RezepteBox.update(ips[0].ID16493);
         //<!-- ******************** Samsung TV **************************  -->
-        TVframe.update(ips[0].ID31510, 10000);
-        TVGuideframe.update(ips[0].ID49099, 10000);
+        TVframe.update(ips[0].ID33459, 10000);
+        TVGuideframe.update(ips[0].IDID35025, 10000);
         transVarPower.update(ips[0].ID23548,"state");
         transVarVol.update(ips[0].ID44956);
-        transVarCh.update(ips[0].ID15810);
-        LedDisplayTV.update(ips[0].ID41307);
-        transVarSource.update(ips[0].ID24408);
+        transVarCh.update(ips[0].ID43304);
+        LedDisplayTV.update(ips[0].ID53698);
+        transVarSource.update(ips[0].ID26003);
             
         iDisArtistSsz.update(ips[0].ID35731, ips[0].ID38320, ips[0].ID32160, ips[0].ID23875);
         transVarVolSsz.update(ips[0].ID36157,"");
@@ -589,7 +589,7 @@
         //<!-- ********************   **************************  -->
             var sourceList = new Array(); 
         try{
-            sourceList = JSON.parse(ips[0].ID45960);
+            sourceList = JSON.parse(ips[0].ID35428);
             sourceList.forEach(function(item) { 
                 stat1 = item.CONNECTED;
                 stat2 = item.active;
