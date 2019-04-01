@@ -788,7 +788,7 @@
            DisDoorOpen.update(ips[0].ID22196) ;
            DisFloorPD.update(ips[0].ID36168);
            DisBalkonDoorOpen.update(ips[0].ID37348);
-           KeyPadSecKey.update(ips[0].ID49127);
+           KeyPadSecKey.update(ips[0].ID17052);
            
 
         } 
