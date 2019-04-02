@@ -69,8 +69,6 @@
             sym[5] = ips[0].ID49335; //Position KZ
             sym[6] = ips[0].ID36448; //Position SZ 
             sym[7] = ips[0].ID51619; //Position K
-            
-            
             sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
             sym[9] = ips[0].ID22196;  // Diele Haustür   
             sym[10] = ips[0].ID56454;  // humidity KZ
@@ -79,7 +77,39 @@
             sym[13] = ips[0].ID33678;  //Rollo KZ Postion            
             sym[14] = ips[0].ID46774;  //Rollo K Mode
             sym[15] = ips[0].ID13174;  //Rollo K Postion     
-            
+            sym[16] = ips[0].ID13013;  //Rollo WZ up/down
+            sym[17] = ips[0].ID39896;  //Rollo WZ Position
+            sym[18] = ips[0].ID50459; //Rollo WZ Mode
+            sym[19] = ips[0].ID29948;  //Rollo WZ Schaltzeit Mo-Fr
+            sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
+            sym[21] = ips[0].ID29574; //Rollo B Mode
+            sym[22] = ips[0].ID46035; //Rollo B Postion          
+            sym[23] = ips[0].ID57942;  //Sonnenuntergang
+            sym[24] = ips[0].ID11938;  //Sonnenaufgang
+            sym[25] = ips[0].ID37348;  //Balkontür
+            sym[26] = ips[0].ID53071;  //Soll Modus Hz WZ
+            sym[27] = ips[0].ID31769;  //Soll Temp Hz WZ 
+            sym[28] = ips[0].ID27789;  //Soll Temp Ausstehend Hz WZ
+            sym[29] = ips[0].ID23472;  //Bat Hz WZ
+            sym[30] = ips[0].ID52085;  //Bat Hz KZ
+            sym[31] = ips[0].ID57118;  //Bat Hz SZ
+            sym[32] = ips[0].ID22083;  //Bat Hz K
+            sym[33] = ips[0].ID34102;  //Soll Modus Hz KZ
+            sym[34] = ips[0].ID36377;  //Soll Temp Hz KZ 
+            sym[35] = ips[0].ID38441;  //Soll Temp Ausstehend Hz KZ
+            sym[36] = ips[0].ID31202;  //Soll Modus Hz SZ
+            sym[37] = ips[0].ID17998;  //Soll Temp Hz SZ 
+            sym[38] = ips[0].ID51755;  //Soll Temp Ausstehend Hz SZ
+            sym[39] = ips[0].ID26565;  //Temp Vor Hz SZ
+            sym[40] = ips[0].ID32007;  //Temp Rueck Hz SZ  
+            sym[41] = ips[0].ID39562;  //Soll Modus Hz K
+            sym[42] = ips[0].ID54426;  //Soll Temp Hz K 
+            sym[43] = ips[0].ID21258;  //Soll Temp Ausstehend Hz K     
+            sym[44] = ips[0].ID48221;  //Battery Alarm  
+            sym[45] = ips[0].ID26213;  //Security Meldung
+            sym[46] = ips[0].ID16709;  //Temperatur Balkon Aussen
+            sym[47] = ips[0].ID27502;  //Humidity Balkon Aussen
+            sym[48] = ips[0].ID20483;  //Alarm Anlage aktiv
             
             return sym;
             
@@ -103,56 +133,17 @@
             check(ips[0].ID45141, 50); //Rollo K SSunSet
            
 
-            check(ips[0].ID13013, 17);  //Rollo WZ up/down
-            check(ips[0].ID39896, 18);  //Rollo WZ Position
-            check(ips[0].ID50459, 19); //Rollo WZ Mode
-            check(ips[0].ID29948, 18);  //Rollo WZ Schaltzeit Mo-Fr
-            check(ips[0].ID56266, 19); //Rollo WZ Schaltzeit Sa-So
+
             check(ips[0].ID49927, 46); //Rollo WZ SSunSet
             
-            check(ips[0].ID29574, 20); //Rollo B Mode
-            check(ips[0].ID46035, 21); //Rollo B Postion 
+
             check(ips[0].ID53721, 42);  //Rollo B up/down
             check(ips[0].ID48410, 43);  //Rollo B Schaltzeit Mo-Fr
             check(ips[0].ID12438, 44); //Rollo B Schaltzeit Sa-So
             check(ips[0].ID56785, 45); //Rollo B SSunSet
             
             
-            check(ips[0].ID57942, 22);  //Sonnenuntergang
-            check(ips[0].ID11938, 23);  //Sonnenaufgang
-            
-            check(ips[0].ID37348, 24);  //Balkontür
-            //Heizung
-            check(ips[0].ID53071, 25);  //Soll Modus Hz WZ
-            check(ips[0].ID31769, 26);  //Soll Temp Hz WZ 
-            check(ips[0].ID27789, 27);  //Soll Temp Ausstehend Hz WZ
-            
-            check(ips[0].ID23472, 28);  //Bat Hz WZ
-            check(ips[0].ID52085, 29);  //Bat Hz KZ
-            check(ips[0].ID57118, 30);  //Bat Hz SZ
-            check(ips[0].ID22083, 31);  //Bat Hz K
-            
-            check(ips[0].ID34102, 31);  //Soll Modus Hz KZ
-            check(ips[0].ID36377, 32);  //Soll Temp Hz KZ 
-            check(ips[0].ID38441, 33);  //Soll Temp Ausstehend Hz KZ
-            
-            check(ips[0].ID31202, 34);  //Soll Modus Hz SZ
-            check(ips[0].ID17998, 35);  //Soll Temp Hz SZ 
-            check(ips[0].ID51755, 36);  //Soll Temp Ausstehend Hz SZ
-            check(ips[0].ID26565, 34);  //Temp Vor Hz SZ
-            check(ips[0].ID32007, 35);  //Temp Rueck Hz SZ  
-            
-            check(ips[0].ID39562, 37);  //Soll Modus Hz K
-            check(ips[0].ID54426, 38);  //Soll Temp Hz K 
-            check(ips[0].ID21258, 39);  //Soll Temp Ausstehend Hz K     
-            
-            check(ips[0].ID48221, 40);  //Battery Alarm  
-            check(ips[0].ID26213, 41);  //Security Meldung
-            
-            check(ips[0].ID16709, 51);  //Temperatur Balkon Aussen
-            check(ips[0].ID27502, 52);  //Humidity Balkon Aussen
-            
-            check(ips[0].ID20483, 53);  //Alarm Anlage aktiv
+
             check(ips[0].ID54653, 60);  //Alarm Anlage Code
             
             check(ips[0].ID34292, 56);  //ArtisPicLastFM
@@ -168,15 +159,15 @@
             
             check(ips[0].ID26399, 66);  //Diele Präsenzmelder
             check(ips[0].ID25322, 67);  //Haustür Kontakt
-            check(ips[0].ID52085, 68);  //Kinderzimmer Heizregler 
+             
             check(ips[0].ID38784, 69);  //Kinderzimmer Temp-Feuchte Sensor
-            check(ips[0].ID22083, 70);  //Küche Heizregler
-            check(ips[0].ID16681, 71);  //Küche Wassermelder
-            check(ips[0].ID57118, 72);  //Schlafzimmer Heizregler
-            check(ips[0].ID18803, 73);  //Schlafzimmer Feuchte Sensor
-            check(ips[0].ID23472, 74);  //Wohnzimmer Heizregler
             
-            check(ips[0].ID48221, 75);  //Battery Alarm Text
+            check(ips[0].ID16681, 71);  //Küche Wassermelder
+            
+            check(ips[0].ID18803, 73);  //Schlafzimmer Feuchte Sensor
+            
+            
+           
             
             check(ips[0].ID50294,76);  //Sabotage Alarm Bewegungsmelder Diele
             
@@ -421,16 +412,16 @@
 
         $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzWZ1').innerHTML =  "--" + '°C' ;
-        $('SollTempHzWZ1').innerHTML =  ips[0].ID31769 + '°C'  ;
-        $('SollTempAusHzWZ1').innerHTML =  ips[0].ID27789 + '°C' ;
+        $('SollTempHzWZ1').innerHTML =  sym[27] + '°C'  ;
+        $('SollTempAusHzWZ1').innerHTML =  sym[28] + '°C' ;
 
         iHzWZ.update(sym[4]);
        
-        DisModeHzWZ.update(ips[0].ID53071);
+        DisModeHzWZ.update(sym[26]);
         DisTempHzWZ.update(sym[2]);
         DisPosHzWZCtrl.update(sym[4]);
         
-        var BatHzWZ1 = ips[0].ID23472;
+        var BatHzWZ1 = sym[29];
         if (BatHzWZ1){
             document.getElementById("BatHzWZ1").style.color  = 'red';
           
@@ -447,17 +438,17 @@
         //$('PosHzKZ2').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
         $('TempVorHzKZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzKZ1').innerHTML =  "--" + '°C'  ;
-        $('SollTempHzKZ1').innerHTML =  ips[0].ID36377 + '°C'  ;
-        $('SollTempAusHzKZ1').innerHTML =  ips[0].ID38441 + '°C' ;
+        $('SollTempHzKZ1').innerHTML =  sym[34] + '°C'  ;
+        $('SollTempAusHzKZ1').innerHTML =  sym[35] + '°C' ;
  
         iHzKZ.update(sym[5]);
         
        
-        DisModeHzKZCtrl.update(ips[0].ID34102);
+        DisModeHzKZCtrl.update(sym[33]);
         DisTempHzKZCtrl.update(sym[1]);
         DisPosHzKZCtrl.update(sym[5]);
         
-        var BatHzKZ1 = ips[0].ID52085;
+        var BatHzKZ1 = sym[30];
         if (BatHzKZ1){
             document.getElementById("BatHzKWZ1").style.color  = 'red';
           
@@ -472,20 +463,20 @@
         MainPosHzSZ.update(sym[6], 0); 
       
       //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
-        $('TempVorHzSZ1').innerHTML =  ips[0].ID26565 + '°C'  ;
-        $('TempRueckHzSZ1').innerHTML = ips[0].ID32007 + '°C'  ;
-        $('SollTempHzSZ1').innerHTML =  ips[0].ID17998 + '°C'  ;
-        $('SollTempAusHzSZ1').innerHTML =  ips[0].ID51755 + '°C' ;
+        $('TempVorHzSZ1').innerHTML =  sym[39] + '°C'  ;
+        $('TempRueckHzSZ1').innerHTML = sym[40] + '°C'  ;
+        $('SollTempHzSZ1').innerHTML =  sym[37] + '°C'  ;
+        $('SollTempAusHzSZ1').innerHTML =  sym[38] + '°C' ;
   
         iHzSZ.update(sym[6]);
         
        
-        DisModeHzSZCtrl.update(ips[0].ID31202);
+        DisModeHzSZCtrl.update(sym[36]);
         DisTempHzSZCtrl.update(sym[0]);
         DisPosHzSZCtrl.update(sym[6]);
 
         
-        var BatHzSZ1 = ips[0].ID57118;
+        var BatHzSZ1 = sym[31];
         if (BatHzSZ1){
             document.getElementById("BatHzSZ1").style.color  = 'red';
           
@@ -502,17 +493,17 @@
      //   $('PosHzK2').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
         $('TempVorHzK1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzK1').innerHTML =  "--" + '°C'  ;
-        $('SollTempHzK1').innerHTML =  ips[0].ID54426 + '°C'  ;
-        $('SollTempAusHzK1').innerHTML =  ips[0].ID21258 + '°C' ;
+        $('SollTempHzK1').innerHTML =  sym[42] + '°C'  ;
+        $('SollTempAusHzK1').innerHTML =  sym[43] + '°C' ;
   
         iHzK.update(sym[7]);
         
        
-        DisModeHzKCtrl.update(ips[0].ID39562);
+        DisModeHzKCtrl.update(sym[41]);
         DisTempHzKCtrl.update(sym[3]);
         DisPosHzKCtrl.update(sym[7]);
         
-         var BatHzK1 = ips[0].ID22083;
+         var BatHzK1 = sym[32];
         if (BatHzK1){
             document.getElementById("BatHzK1").style.color  = 'red';
           
@@ -659,16 +650,16 @@
             iBat03.update(ips[0].ID33304);
             iBat04.update(ips[0].ID26399);
             iBat05.update(ips[0].ID25322);
-            iBat06.update(ips[0].ID52085);
+            iBat06.update(sym[30]);
             iBat07.update(ips[0].ID38784);
-            iBat11.update(ips[0].ID22083);
+            iBat11.update(sym[32]);
             iBat12.update(ips[0].ID16681);
-            iBat13.update(ips[0].ID57118);
+            iBat13.update(sym[31]);
             iBat14.update(ips[0].ID18803);
-            iBat15.update(ips[0].ID23472);
+            iBat15.update(sym[29]);
             iBat16.update(ips[0].ID20350);
             
-            BatDis.update(ips[0].ID48221);
+            BatDis.update(sym[44]);
             
             DisSabAlarm.update(ips[0].ID50294);
         
@@ -683,21 +674,21 @@
             
             
             //Dynamisches Bild Rolladen
-            iRolloB.update(ips[0].ID46035);
-            iRolloWZ.update(ips[0].ID39896);
-            iRolloK.update(ips[0].ID13174);
+            iRolloB.update(sym[22]);
+            iRolloWZ.update(sym[17]);
+            iRolloK.update(sym[15]);
             
-            DisPosRolloWZCtrl.update(ips[0].ID39896);   
-            DisModeRolloWZCtrl.update(ips[0].ID50459); 
-            DisST1RolloWZCtrl.update(ips[0].ID29948); 
-            DisST2RolloWZCtrl.update(ips[0].ID56266); 
+            DisPosRolloWZCtrl.update(sym[17]);   
+            DisModeRolloWZCtrl.update(sym[18]); 
+            DisST1RolloWZCtrl.update(sym[19]); 
+            DisST2RolloWZCtrl.update(sym[20]); 
 
-            DisPosRolloB.update(ips[0].ID46035);   
-            DisModeRolloB.update(ips[0].ID29574); 
+            DisPosRolloB.update(sym[22]);   
+            DisModeRolloB.update(sym[21]); 
             DisST1RolloB.update(ips[0].ID48410); 
             DisST2RolloB.update(ips[0].ID12438); 
 
-            DisPosRolloK.update(ips[0].ID13174);   
+            DisPosRolloK.update(sym[15]);   
             DisModeRolloK.update(ips[0].ID54826); 
             DisST1RolloK.update(ips[0].ID42555); 
             DisST2RolloK.update(ips[0].ID46774); 
@@ -707,10 +698,10 @@
             CbSSrolloB.update(ips[0].ID56785);
             CbSSrolloWZ.update(ips[0].ID49927);
             
-            VarDisTempOutside.update(ips[0].ID16709);
-            VarDisHumOutside.update(ips[0].ID27502);
+            VarDisTempOutside.update(sym[46]);
+            VarDisHumOutside.update(sym[47]);
             
-            DisAlarmActiveSec.update(ips[0].ID20483); 
+            DisAlarmActiveSec.update(sym[48]); 
             ABox.update(ips[0].ID54653);
           
             iDisArtist.update(ips[0].ID34292, ips[0].ID31822, ips[0].ID30505, ips[0].ID17922);
@@ -730,16 +721,16 @@
      
     }
 			
-     function Rollo(ips){
+     function Rollo(sym){
  
 
         //<!-- **************************  Rolladen Ctrl Kinderzimmer **************************  -->
-        if (ips[0].ID33678 == '0'){
+        if (sym[13] == '0'){
             $('RolloKZPos1').innerHTML =  'offen'; 
-        }else if (ips[0].ID33678 == '100'){
+        }else if (sym[13] == '100'){
             $('RolloKZPos1').innerHTML =  'zu'; 
         }else {
-            $('RolloKZPos1').innerHTML =  ips[0].ID33678;    
+            $('RolloKZPos1').innerHTML =  sym[13];    
         }
         if (ips[0].ID57797 == '1'){
                  $('RolloKZMode1').innerHTML =  'Auto'; 
@@ -752,17 +743,17 @@
  
      }
     
-        function Klima(ips){
+        function Klima(sym){
         //<!-- **************************  Feuchte Floorplan **************************  -->
   
-            VarDisHumidSZ_E.update(ips[0].ID50329);
-            VarDisHumidKZ_E.update(ips[0].ID56454);
+            VarDisHumidSZ_E.update(sym[11]);
+            VarDisHumidKZ_E.update(sym[10]);
         } 
         
-        function Security(ips){
+        function Security(sym){
         //<!-- **************************    Security **************************  -->
         /*
-            if (ips[0].ID36168 == '1'){
+            if (sym[8] == '1'){
                      $('humanD_E').innerHTML =  'Person anwensend'; 
                      let now = new Date();
                      var options = { weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -780,7 +771,7 @@
                      $('door_E').innerHTML =  'close'; 
             }
   */
-            VarDisMainDoor.update(ips[0].ID22196);
+            VarDisMainDoor.update(sym[9]);
             
  
            var alarmCode =  ips[0].ID54653;
@@ -797,9 +788,9 @@
             }
             
            
-           DisDoorOpen.update(ips[0].ID22196) ;
-           DisFloorPD.update(ips[0].ID36168);
-           DisBalkonDoorOpen.update(ips[0].ID37348);
+           DisDoorOpen.update(sym[9]) ;
+           DisFloorPD.update(sym[8]);
+           DisBalkonDoorOpen.update(sym[25]);
            KeyPadSecKey.update(ips[0].ID17052);
            
 
