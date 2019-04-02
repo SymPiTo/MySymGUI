@@ -59,7 +59,7 @@
      }
     
      function checkUsedVars(ips){
-             
+            var sym = []; 
             //Heizung
             sym[0] = ips[0].ID23116; //Temperatur SZ
             sym[1] = ips[0].ID37045; //Temperatur KZ
