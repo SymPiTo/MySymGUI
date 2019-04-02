@@ -59,32 +59,44 @@
      }
     
      function checkUsedVars(ips){
+             
             //Heizung
-            check(ips[0].ID23116, 1);
-            check(ips[0].ID37045, 2);
-            check(ips[0].ID51079, 3);
-            check(ips[0].ID54070, 4);
-            check(ips[0].ID18059, 5);    
-            check(ips[0].ID49335, 6);
-            check(ips[0].ID23116, 7);
-            check(ips[0].ID37045, 54); // Posittion Heizung Kueche
+            sym[0] = ips[0].ID23116; //Temperatur SZ
+            sym[1] = ips[0].ID37045; //Temperatur KZ
+            sym[2] = ips[0].ID51079; //Temperatur WZ
+            sym[3] = ips[0].ID54070; //Temperatur K
+            sym[4] = ips[0].ID18059; //Position WZ
+            sym[5] = ips[0].ID49335; //Position KZ
+            sym[6] = ips[0].ID36448; //Position SZ 
+            sym[7] = ips[0].ID51619; //Position K
             
-            check(ips[0].ID36448, 55); // Posittion Heizung Schlafzimmer
             
-            check(ips[0].ID51619, 8);
+            sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
+            sym[9] = ips[0].ID22196;  // Diele Haustür   
+            sym[10] = ips[0].ID56454;  // humidity KZ
+            sym[11] = ips[0].ID50329;  // humidity SZ           
+            sym[12] = ips[0].ID58797;  //Rollo KZ Mode
+            sym[13] = ips[0].ID33678;  //Rollo KZ Postion            
+            sym[14] = ips[0].ID46774;  //Rollo K Mode
+            sym[15] = ips[0].ID13174;  //Rollo K Postion     
+            
+            
+            return sym;
+            
+             
+            
+            
+            
+            
             //Security
-            check(ips[0].ID36168, 9);  // Diele Präsenzmelder
-            check(ips[0].ID22196, 10);  // Diele Haustür
+
             // Klima
-            check(ips[0].ID56454, 11);  // humidity KZ
-            check(ips[0].ID50329, 12);  // humidity SZ
+
             
              // Rollo           
-            check(ips[0].ID58797, 13);  //Rollo KZ Mode
-            check(ips[0].ID33678, 14);  //Rollo KZ Postion         
+        
             
-            check(ips[0].ID46774, 15);  //Rollo K Mode
-            check(ips[0].ID13174, 16);  //Rollo K Postion     
+    
             check(ips[0].ID20341, 47);  //Rollo K up/down
             check(ips[0].ID42555, 48);  //Rollo K Schaltzeit Mo-Fr
             check(ips[0].ID54826, 49); //Rollo K Schaltzeit Sa-So
@@ -386,37 +398,37 @@
         }
     }
 			
-    function Heizung(ips){
+    function Heizung(sym){
         //<!-- ******************** Temperatur   Werte Floorplan **************************  -->	                
-        $('tempK_E').innerHTML =  ips[0].ID54070 + '°C'  ;
-        $('tempWZ_E').innerHTML =  ips[0].ID51079 + '°C'  ;
-        $('tempSZ_E').innerHTML =  ips[0].ID23116 + '°C'  ;
-        $('tempKZ_E').innerHTML =  ips[0].ID37045 + '°C';
+        $('tempK_E').innerHTML =  sym[3] + '°C'  ;
+        $('tempWZ_E').innerHTML =  sym[2] + '°C'  ;
+        $('tempSZ_E').innerHTML =  sym[0] + '°C'  ;
+        $('tempKZ_E').innerHTML =  sym[1] + '°C';
         //<!-- Temperatur Glide Floorplan  -->
-        LeftMenuFP.update(ips[0].ID54070, "°C", ips[0].ID51079, "°C",  ips[0].ID23116, "°C",  ips[0].ID37045, "°C");
+        LeftMenuFP.update(sym[3], "°C", sym[2], "°C",  sym[0], "°C",  ips[0].ID37045, "°C");
         
  
         //<!-- Temperatur Werte Glide Button  -->
-        LeftMenuK.update(ips[0].ID54070, "°C","","","","","","" );
-        LeftMenuWZ.update(ips[0].ID54070, "°C","","","","","","" );
-        LeftMenuSZ.update(ips[0].ID54070, "°C","","","","","","" );
-        LeftMenuKZ.update(ips[0].ID54070, "°C","","","","","","");
+        LeftMenuK.update(sym[3], "°C","","","","","","" );
+        LeftMenuWZ.update(sym[3], "°C","","","","","","" );
+        LeftMenuSZ.update(sym[3], "°C","","","","","","" );
+        LeftMenuKZ.update(sym[3], "°C","","","","","","");
  
         //<!-- ************************ Heizung Wohnzimmer ************************  -->
 
-        MainTempHzWZ.update(ips[0].ID51079, 1);
-        MainPosHzWZ.update(ips[0].ID18059, 0);
+        MainTempHzWZ.update(sym[2], 1);
+        MainPosHzWZ.update(sym[4], 0);
 
         $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzWZ1').innerHTML =  "--" + '°C' ;
         $('SollTempHzWZ1').innerHTML =  ips[0].ID31769 + '°C'  ;
         $('SollTempAusHzWZ1').innerHTML =  ips[0].ID27789 + '°C' ;
 
-        iHzWZ.update(ips[0].ID18059);
+        iHzWZ.update(sym[4]);
        
         DisModeHzWZ.update(ips[0].ID53071);
-        DisTempHzWZ.update(ips[0].ID51079);
-        DisPosHzWZCtrl.update(ips[0].ID18059);
+        DisTempHzWZ.update(sym[2]);
+        DisPosHzWZCtrl.update(sym[4]);
         
         var BatHzWZ1 = ips[0].ID23472;
         if (BatHzWZ1){
@@ -427,23 +439,23 @@
            document.getElementById("BatHzWZ1").style.color = 'lime';
         }
         //<!-- ************************ Heizung Kinderzimmer ************************  -->
-     //   $('TempHzKZ1').innerHTML =  ips[0].ID37045 + '°C'  ;
-     //   $('PosHzKZ1').innerHTML =   Math.round(ips[0].ID49335).toFixed(0) + '%';
-        MainTempHzKZ.update(ips[0].ID37045, 1);
-        MainPosHzKZ.update(ips[0].ID49335, 0);        
-       // $('TempHzKZ2').innerHTML =  ips[0].ID37045 + '°C'  ;
-        //$('PosHzKZ2').innerHTML =   Math.round(ips[0].ID49335).toFixed(0) + '%';
+ 
+     //   $('PosHzKZ1').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
+        MainTempHzKZ.update(sym[1], 1);
+        MainPosHzKZ.update(sym[5], 0);        
+      
+        //$('PosHzKZ2').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
         $('TempVorHzKZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzKZ1').innerHTML =  "--" + '°C'  ;
         $('SollTempHzKZ1').innerHTML =  ips[0].ID36377 + '°C'  ;
         $('SollTempAusHzKZ1').innerHTML =  ips[0].ID38441 + '°C' ;
  
-        iHzKZ.update(ips[0].ID49335);
+        iHzKZ.update(sym[5]);
         
        
         DisModeHzKZCtrl.update(ips[0].ID34102);
-        DisTempHzKZCtrl.update(ips[0].ID37045);
-        DisPosHzKZCtrl.update(ips[0].ID49335);
+        DisTempHzKZCtrl.update(sym[1]);
+        DisPosHzKZCtrl.update(sym[5]);
         
         var BatHzKZ1 = ips[0].ID52085;
         if (BatHzKZ1){
@@ -454,23 +466,23 @@
            document.getElementById("BatHzKZ1").style.color = 'lime';
         }
          //<!-- ************************ Heizung Schlafzimmer ************************  -->
-      // $('TempHzSZ1').innerHTML =  ips[0].ID23116 + '°C'  ;
-      //  $('PosHzSZ1').innerHTML =   Math.round(ips[0].ID36448).toFixed(0) + '%';
-        MainTempHzSZ.update(ips[0].ID23116, 1);
-        MainPosHzSZ.update(ips[0].ID36448, 0); 
-      //  $('TempHzSZ2').innerHTML =  ips[0].ID23116 + '°C'  ;
-      //  $('PosHzSZ2').innerHTML =   Math.round(ips[0].ID36448).toFixed(0) + '%';
+      // $('TempHzSZ1').innerHTML =  sym[0] + '°C'  ;
+       
+        MainTempHzSZ.update(sym[0], 1);
+        MainPosHzSZ.update(sym[6], 0); 
+      
+      //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
         $('TempVorHzSZ1').innerHTML =  ips[0].ID26565 + '°C'  ;
         $('TempRueckHzSZ1').innerHTML = ips[0].ID32007 + '°C'  ;
         $('SollTempHzSZ1').innerHTML =  ips[0].ID17998 + '°C'  ;
         $('SollTempAusHzSZ1').innerHTML =  ips[0].ID51755 + '°C' ;
   
-        iHzSZ.update(ips[0].ID36448);
+        iHzSZ.update(sym[6]);
         
        
         DisModeHzSZCtrl.update(ips[0].ID31202);
-        DisTempHzSZCtrl.update(ips[0].ID23116);
-        DisPosHzSZCtrl.update(ips[0].ID36448);
+        DisTempHzSZCtrl.update(sym[0]);
+        DisPosHzSZCtrl.update(sym[6]);
 
         
         var BatHzSZ1 = ips[0].ID57118;
@@ -482,23 +494,23 @@
            document.getElementById("BatHzSZ1").style.color = 'lime';
         }
         //<!-- ************************ Heizung Kueche ************************  -->
-         $('TempHzK1').innerHTML =  ips[0].ID54070 + '°C'  ;
-         $('PosHzK1').innerHTML =   Math.round(ips[0].ID51619).toFixed(0) + '%';
-        MainTempHzK.update(ips[0].ID54070, 1);
-        MainPosHzK.update(ips[0].ID51619, 0);   
-     //    $('TempHzK2').innerHTML =  ips[0].ID54070 + '°C'  ;
-     //   $('PosHzK2').innerHTML =   Math.round(ips[0].ID51619).toFixed(0) + '%';
+         $('TempHzK1').innerHTML =  sym[3] + '°C'  ;
+         $('PosHzK1').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
+        MainTempHzK.update(sym[3], 1);
+        MainPosHzK.update(sym[7], 0);   
+      
+     //   $('PosHzK2').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
         $('TempVorHzK1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzK1').innerHTML =  "--" + '°C'  ;
         $('SollTempHzK1').innerHTML =  ips[0].ID54426 + '°C'  ;
         $('SollTempAusHzK1').innerHTML =  ips[0].ID21258 + '°C' ;
   
-        iHzK.update(ips[0].ID51619);
+        iHzK.update(sym[7]);
         
        
         DisModeHzKCtrl.update(ips[0].ID39562);
-        DisTempHzKCtrl.update(ips[0].ID54070);
-        DisPosHzKCtrl.update(ips[0].ID51619);
+        DisTempHzKCtrl.update(sym[3]);
+        DisPosHzKCtrl.update(sym[7]);
         
          var BatHzK1 = ips[0].ID22083;
         if (BatHzK1){
@@ -512,10 +524,10 @@
         
         
         //<!-- ************************ Heizung Uebersicht ************************  -->
-        $('tempkueche4').innerHTML =  'Kueche ' + ips[0].ID54070 + '°C'  ;
-        $('tempwohnzimmer4').innerHTML =  'Wohnzimmer ' + ips[0].ID51079 + '°C'  ;
-        $('tempschlafzimmer4').innerHTML =  'Schlafzimmer ' + ips[0].ID23116 + '°C'  ;
-        $('tempkinderzimmer4').innerHTML =  'Kinderzimmer ' + ips[0].ID37045 + '°C';        
+        $('tempkueche4').innerHTML =  'Kueche ' + sym[3] + '°C'  ;
+        $('tempwohnzimmer4').innerHTML =  'Wohnzimmer ' + sym[2] + '°C'  ;
+        $('tempschlafzimmer4').innerHTML =  'Schlafzimmer ' + sym[0] + '°C'  ;
+        $('tempkinderzimmer4').innerHTML =  'Kinderzimmer ' + sym[1] + '°C';        
     }
     
    //<!-- ************************ Übergabe nur eine Variable von IPS ************************  -->
@@ -533,7 +545,7 @@
    }
    
    
-    function updateValues(ips){
+    function updateValues(sym){
         
         //<!-- ******************** Kochbuch   **************************  -->
         RezeptName.update(ips[0].ID54563);

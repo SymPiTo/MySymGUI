@@ -86,12 +86,12 @@
                                                                             symvar = ips[0];
                                                                              //
                                                                               log(ips[0]);
-                                                                            checkUsedVars(ips);
+                                                                            var sym = checkUsedVars(ips);
                                                                              /////Media(ips);
-                                                                            Heizung(ips);
-                                                                            Security(ips);
-                                                                            Klima(ips); 
-                                                                            updateValues(ips);
+                                                                            Heizung(sym);
+                                                                            Security(sym);
+                                                                            Klima(sym); 
+                                                                            updateValues(sym);
                                                                              
                                                                             
                                                                         }
