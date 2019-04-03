@@ -60,15 +60,15 @@
     
      function checkUsedVars(ips){
             var sym = []; 
-            //Heizung
-            sym[0] = ips[0].ID23116; //Temperatur SZ
-            sym[1] = ips[0].ID37045; //Temperatur KZ
-            sym[2] = ips[0].ID51079; //Temperatur WZ
-            sym[3] = ips[0].ID54070; //Temperatur K
-            sym[4] = ips[0].ID18059; //Position WZ
-            sym[5] = ips[0].ID49335; //Position KZ
-            sym[6] = ips[0].ID36448; //Position SZ 
-            sym[7] = ips[0].ID51619; //Position K
+     
+                sym[0] = ips[0].ID23116; //Temperatur SZ
+                sym[1] = ips[0].ID37045; //Temperatur KZ
+                sym[2] = ips[0].ID51079; //Temperatur WZ
+                sym[3] = ips[0].ID54070; //Temperatur K
+                sym[4] = ips[0].ID18059; //Position WZ
+                sym[5] = ips[0].ID49335; //Position KZ
+                sym[6] = ips[0].ID36448; //Position SZ 
+                sym[7] = ips[0].ID51619; //Position K
             sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
             sym[9] = ips[0].ID22196;  // Diele Haustür   
             sym[10] = ips[0].ID56454;  // humidity KZ
@@ -84,16 +84,16 @@
             sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
             sym[21] = ips[0].ID29574; //Rollo B Mode
             sym[22] = ips[0].ID46035; //Rollo B Postion          
-            sym[23] = ips[0].ID57942;  //Sonnenuntergang
-            sym[24] = ips[0].ID11938;  //Sonnenaufgang
+                sym[23] = ips[0].ID57942;  //Sonnenuntergang
+                sym[24] = ips[0].ID11938;  //Sonnenaufgang
             sym[25] = ips[0].ID37348;  //Balkontür
             sym[26] = ips[0].ID53071;  //Soll Modus Hz WZ
             sym[27] = ips[0].ID31769;  //Soll Temp Hz WZ 
             sym[28] = ips[0].ID27789;  //Soll Temp Ausstehend Hz WZ
-            sym[29] = ips[0].ID23472;  //Bat Hz WZ
-            sym[30] = ips[0].ID52085;  //Bat Hz KZ
-            sym[31] = ips[0].ID57118;  //Bat Hz SZ
-            sym[32] = ips[0].ID22083;  //Bat Hz K
+                sym[29] = ips[0].ID23472;  //Bat Hz WZ
+                sym[30] = ips[0].ID52085;  //Bat Hz KZ
+                sym[31] = ips[0].ID57118;  //Bat Hz SZ
+                sym[32] = ips[0].ID22083;  //Bat Hz K
             sym[33] = ips[0].ID34102;  //Soll Modus Hz KZ
             sym[34] = ips[0].ID36377;  //Soll Temp Hz KZ 
             sym[35] = ips[0].ID38441;  //Soll Temp Ausstehend Hz KZ
