@@ -177,7 +177,9 @@
             sym[107] = ips[0].ID35590; //Lampe - Schalter current
             sym[108] = ips[0].ID43083; //Lampe - Schalter Power
             sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter
-         
+            sym[110] = ips[0].ID17052; // Security Code
+            
+            
             return sym;
             
              
@@ -715,7 +717,7 @@
         }else {
             $('RolloKZPos1').innerHTML =  sym[13];    
         }
-        if (ips[0].ID57797 == '1'){
+        if (sym[12] == '1'){
                  $('RolloKZMode1').innerHTML =  'Auto'; 
         }else{
                  $('RolloKZMode1').innerHTML =  'Man'; 
@@ -774,7 +776,7 @@
            DisDoorOpen.update(sym[9]) ;
            DisFloorPD.update(sym[8]);
            DisBalkonDoorOpen.update(sym[25]);
-           KeyPadSecKey.update(ips[0].ID17052);
+           KeyPadSecKey.update(sym[110]);
            
 
         } 
