@@ -138,8 +138,8 @@
             sym[72] = ips[0].ID58710;  //Wasser Sensor Bad Alarm
             sym[73] = ips[0].ID17453;  //Wasser Sensor Bad Feuchte
             sym[74] = ips[0].ID36414;  //Wasser Sensor Bad Wasserstand
-            sym[75] = ips[0].ID44956;  //TV Volume
-            sym[76] = ips[0].ID23548;  //TV Power
+            sym[75] = ips[0].ID23042;  //TV Volume
+            sym[76] = ips[0].ID34392;  //TV Power
             sym[77] = ips[0].ID43304;  //TV Channel - 15810
             sym[78] = ips[0].ID53698;  //TV Channel Name - 41307
             sym[79] = ips[0].ID26003;  //TV Source 24408
