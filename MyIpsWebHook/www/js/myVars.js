@@ -69,12 +69,12 @@
                 sym[5] = ips[0].ID49335; //Position KZ
                 sym[6] = ips[0].ID36448; //Position SZ 
                 sym[7] = ips[0].ID51619; //Position K
-            sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
-            sym[9] = ips[0].ID22196;  // Diele Haustür   
-            sym[10] = ips[0].ID56454;  // humidity KZ
-            sym[11] = ips[0].ID50329;  // humidity SZ           
-            sym[12] = ips[0].ID58797;  //Rollo KZ Mode
-            sym[13] = ips[0].ID33678;  //Rollo KZ Postion            
+                sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
+                sym[9] = ips[0].ID22196;  // Diele Haustür   
+                sym[10] = ips[0].ID56454;  // humidity KZ
+                sym[11] = ips[0].ID50329;  // humidity SZ           
+            sym[12] = ips[0].ID10834;  //Rollo KZ Mode
+            sym[13] = ips[0].ID21261;  //Rollo KZ Postion            
             sym[14] = ips[0].ID46774;  //Rollo K Mode
             sym[15] = ips[0].ID13174;  //Rollo K Postion     
             sym[16] = ips[0].ID13013;  //Rollo WZ up/down
@@ -111,97 +111,68 @@
             sym[47] = ips[0].ID27502;  //Humidity Balkon Aussen
             sym[48] = ips[0].ID20483;  //Alarm Anlage aktiv
             
+            sym[49] = ips[0].ID20341;  //Rollo K up/down
+            sym[50] = ips[0].ID42555;  //Rollo K Schaltzeit Mo-Fr
+            sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
+            sym[52] = ips[0].ID45141; //Rollo K SSunSet  
+            sym[53] = ips[0].ID49927; //Rollo WZ SSunSet           
+            sym[54] = ips[0].ID53721;  //Rollo B up/down
+            sym[55] = ips[0].ID48410;  //Rollo B Schaltzeit Mo-Fr
+            sym[56] = ips[0].ID12438; //Rollo B Schaltzeit Sa-So
+            sym[57] = ips[0].ID56785; //Rollo B SSunSet             
+            sym[58] = ips[0].ID54653;  //Alarm Anlage Code          
+            sym[59] = ips[0].ID30280;  //Bad Fenster Aktor LowBat
+            sym[60] = ips[0].ID49846;  //Bad Taster-Fenster LowBat
+            sym[61] = ips[0].ID33304;  //Balkon Temp Feuchte Sensor LowBat
+            sym[62] = ips[0].ID26399;  //Diele Präsenzmelder LowBat
+            sym[63] = ips[0].ID25322;  //Haustür Kontakt LowBat
+            sym[64] = ips[0].ID38784;  //Kinderzimmer Temp-Feuchte Sensor LowBat
+            sym[65] = ips[0].ID16681;  //Küche Wassermelder LowBat
+            sym[66] = ips[0].ID18803;  //Schlafzimmer Feuchte Sensor LowBat
+            
+            sym[67] = ips[0].ID50294;  //Sabotage Alarm Bewegungsmelder Diele
+            sym[68] = ips[0].ID54473;  //Wasser Sensor Küche Alarm
+            sym[69] = ips[0].ID23685;  //Wasser Sensor Küche Feuchte
+            sym[70] = ips[0].ID27499;  //Wasser Sensor Küche Wasserstand
+            sym[71] = ips[0].ID20350;  //Wasser Sensor Bad Batterie
+            sym[72] = ips[0].ID58710;  //Wasser Sensor Bad Alarm
+            sym[73] = ips[0].ID17453;  //Wasser Sensor Bad Feuchte
+            sym[74] = ips[0].ID36414;  //Wasser Sensor Bad Wasserstand
+            sym[75] = ips[0].ID44956;  //TV Volume
+            sym[76] = ips[0].ID23548;  //TV Power
+            sym[77] = ips[0].ID43304;  //TV Channel - 15810
+            sym[78] = ips[0].ID53698;  //TV Channel Name - 41307
+            sym[79] = ips[0].ID26003;  //TV Source 24408
+            sym[80] = ips[0].ID35428;  //TV SourceList 45960
+            sym[81] = ips[0].ID10567;  //SZ Lampe
+            sym[82] = ips[0].ID32160;  //SZ Sonos Artist
+            sym[83] = ips[0].ID23875;  //SZ Sonos Title
+            sym[84] = ips[0].ID38320;  //SZ Sonos Album
+            sym[85] = ips[0].ID36157;  //SZ Sonos Volume
+            sym[86] = ips[0].ID24061;  //SZ Sonos Mute
+            sym[87] = ips[0].ID44467;  //SZ Sonos Loudnes
+            sym[88] = ips[0].ID55859;  //SZ Sonos Bass
+            sym[89] = ips[0].ID29767;  //SZ Sonos Treble
+            sym[90] = ips[0].ID57771;  //SZ Sonos Playmode
+            sym[91] = ips[0].ID35731;  //SZ Sonos Cover image  
+            sym[92] = ips[0].ID34292;  //ArtisPicLastFM
+            sym[93] = ips[0].ID30505;  //DIDL Artist - Denon
+            sym[94] = ips[0].ID17922;  //DIDL Title - Denon
+            sym[95] = ips[0].ID31822;  //Line3 - Denon
+            sym[96] = ips[0].ID22520;  //Power - Denon
+            sym[97] = ips[0].ID19185;  //Volume - Denon
+            sym[98] = ips[0].ID33459;   //TVchProgList 31510
+            sym[99] = ips[0].ID35025; //TVProgList  49099
+            
+            
+            
+            
             return sym;
             
              
             
-            
-            
-            
-            //Security
+     
 
-            // Klima
-
-            
-             // Rollo           
-        
-            
-    
-            check(ips[0].ID20341, 47);  //Rollo K up/down
-            check(ips[0].ID42555, 48);  //Rollo K Schaltzeit Mo-Fr
-            check(ips[0].ID54826, 49); //Rollo K Schaltzeit Sa-So
-            check(ips[0].ID45141, 50); //Rollo K SSunSet
-           
-
-
-            check(ips[0].ID49927, 46); //Rollo WZ SSunSet
-            
-
-            check(ips[0].ID53721, 42);  //Rollo B up/down
-            check(ips[0].ID48410, 43);  //Rollo B Schaltzeit Mo-Fr
-            check(ips[0].ID12438, 44); //Rollo B Schaltzeit Sa-So
-            check(ips[0].ID56785, 45); //Rollo B SSunSet
-            
-            
-
-            check(ips[0].ID54653, 60);  //Alarm Anlage Code
-            
-            check(ips[0].ID34292, 56);  //ArtisPicLastFM
-            check(ips[0].ID30505, 57);  //DIDL Artist - Denon
-            check(ips[0].ID17922, 58);  //DIDL Title - Denon
-            check(ips[0].ID31822, 61);  //Line3 - Denon
-            check(ips[0].ID22520, 62);  //Power - Denon
-            check(ips[0].ID19185, 59);  //Volume - Denon
-            
-            check(ips[0].ID30280, 63);  //Bad Fenster Aktor
-            check(ips[0].ID49846, 64);  //Bad Taster-Fenster
-            check(ips[0].ID33304, 65);  //Balkon Temp Feuchte Sensor
-            
-            check(ips[0].ID26399, 66);  //Diele Präsenzmelder
-            check(ips[0].ID25322, 67);  //Haustür Kontakt
-             
-            check(ips[0].ID38784, 69);  //Kinderzimmer Temp-Feuchte Sensor
-            
-            check(ips[0].ID16681, 71);  //Küche Wassermelder
-            
-            check(ips[0].ID18803, 73);  //Schlafzimmer Feuchte Sensor
-            
-            
-           
-            
-            check(ips[0].ID50294,76);  //Sabotage Alarm Bewegungsmelder Diele
-            
-            check(ips[0].ID54473,77);  //Wasser Sensor Küche Alarm
-            check(ips[0].ID23685,78);  //Wasser Sensor Küche Feuchte
-            check(ips[0].ID27499,79);  //Wasser Sensor Küche Wasserstand
-            
-            check(ips[0].ID20350,80);  //Wasser Sensor Bad Batterie
-            check(ips[0].ID58710,81);  //Wasser Sensor Bad Alarm
-            check(ips[0].ID17453,82);  //Wasser Sensor Bad Feuchte
-            check(ips[0].ID36414,83);  //Wasser Sensor Bad Wasserstand
-            check(ips[0].ID44956,84);  //TV Volume
-            check(ips[0].ID23548,85);  //TV Power
-            check(ips[0].ID43304,86);  //TV Channel - 15810
-            check(ips[0].ID53698,87);  //TV Channel Name - 41307
-            check(ips[0].ID26003,88);  //TV Source 24408
-            //check(ips[0].ID25544,90);  //TV Guide
-            check(ips[0].ID35428,91);  //TV SourceList 45960
-            
-            check(ips[0].ID10567,92);  //SZ Lampe
-            
-            check(ips[0].ID32160,93);  //SZ Sonos Artist
-            check(ips[0].ID23875,94);  //SZ Sonos Title
-            check(ips[0].ID38320,95);  //SZ Sonos Album
-            check(ips[0].ID36157,96);  //SZ Sonos Volume
-            check(ips[0].ID24061,97);  //SZ Sonos Mute
-            check(ips[0].ID44467,98);  //SZ Sonos Loudnes
-            check(ips[0].ID55859,99);  //SZ Sonos Bass
-            check(ips[0].ID29767,100);  //SZ Sonos Treble
-            check(ips[0].ID57771,101);  //SZ Sonos Playmode
-            check(ips[0].ID35731,102);  //SZ Sonos Cover image
-            
-            check(ips[0].ID33459,103);   //TVchProgList 31510
-            check(ips[0].ID35025,104); //TVProgList  49099
      }
     function check(value, n){
         if (typeof value === "undefined") {$('fehler').innerHTML =  "Variable  wrong ID:" + n;} else {return value;}
@@ -268,13 +239,13 @@
         $('activeServer_B').innerHTML =  ips[0].ID40574;
         $('activeClient_B').innerHTML =  ips[0].ID16761; 
         $('sz2_A').innerHTML =  ips[0].ID14566;
-        $('sz3_A').innerHTML =  ips[0].ID31822;
+        $('sz3_A').innerHTML =  sym[95];
         $('FAV_A').innerHTML =  'Fav ' + ips[0].ID58379;
         $('DDILAlbum_B').innerHTML =  ips[0].ID59926;
         $('DIDLArtist_B').innerHTML =  ips[0].ID12457;
         $('DIDLTitle_B').innerHTML =  ips[0].ID10602;
         
-        $('vol_A').innerHTML =  ips[0].ID19185 + ' db';
+        $('vol_A').innerHTML =  sym[97] + ' db';
         $('vol_B').innerHTML =  ips[0].ID54000 + ' %';
         $('Playlist_B').innerHTML =  ips[0].ID22199;
         $('trackNo_A').innerHTML =  ips[0].ID25782.toString();
@@ -320,7 +291,7 @@
         else if (src == '5'){src = 'AUX D';}
         $('source_A').innerHTML =  src;  
          
-        var CeolPower = ips[0].ID22520;
+        var CeolPower = sym[96];
         if (CeolPower){
           document.getElementById('power_A').style.color = "lime";
           document.getElementById('pwrceol').innerHTML =  'Ceol '   +  'on'; 
@@ -545,22 +516,22 @@
         txtBox.update(ips[0].ID59260);
         RezepteBox.update(ips[0].ID16493);
         //<!-- ******************** Samsung TV **************************  -->
-        TVframe.update(ips[0].ID33459, 10000);
-        TVGuideframe.update(ips[0].IDID35025, 10000);
-        transVarPower.update(ips[0].ID23548,"state");
-        transVarVol.update(ips[0].ID44956);
-        transVarCh.update(ips[0].ID43304);
-        LedDisplayTV.update(ips[0].ID53698);
-        transVarSource.update(ips[0].ID26003);
+        TVframe.update(sym[98], 10000);
+        TVGuideframe.update(sym[99], 10000);
+        transVarPower.update(sym[76],"state");
+        transVarVol.update(sym[75]);
+        transVarCh.update(sym[77]);
+        LedDisplayTV.update(sym[78]);
+        transVarSource.update(sym[79]);
             
-        iDisArtistSsz.update(ips[0].ID35731, ips[0].ID38320, ips[0].ID32160, ips[0].ID23875);
-        transVarVolSsz.update(ips[0].ID36157,"");
-        var bassCalc = Math.round(5*(ips[0].ID55859 +10));
+        iDisArtistSsz.update(sym[91], sym[84], sym[82], sym[83]);
+        transVarVolSsz.update(sym[85],"");
+        var bassCalc = Math.round(5*(sym[88] +10));
         transVarBassSsz.update(bassCalc,"");
-        var trebleCalc = Math.round(5*(ips[0].ID29767 +10));
+        var trebleCalc = Math.round(5*(sym[89] +10));
         transVarTrebleSsz.update(trebleCalc,"");
         var PM = "";
-                switch (ips[0].ID57771) {
+                switch (sym[90]) {
                     case 0:
                       PM = "NORMAL";
                       break;
@@ -592,7 +563,7 @@
         //<!-- ********************   **************************  -->
             var sourceList = new Array(); 
         try{
-            sourceList = JSON.parse(ips[0].ID35428);
+            sourceList = JSON.parse(sym[80]);
             sourceList.forEach(function(item) { 
                 stat1 = item.CONNECTED;
                 stat2 = item.active;
@@ -645,32 +616,32 @@
 
             
             
-            iBat01.update(ips[0].ID30280);
-            iBat02.update(ips[0].ID49846);
-            iBat03.update(ips[0].ID33304);
-            iBat04.update(ips[0].ID26399);
-            iBat05.update(ips[0].ID25322);
+            iBat01.update(sym[59]);
+            iBat02.update(sym[60]);
+            iBat03.update(sym[61]);
+            iBat04.update(sym[62]);
+            iBat05.update(sym[63]);
             iBat06.update(sym[30]);
-            iBat07.update(ips[0].ID38784);
+            iBat07.update(sym[64]);
             iBat11.update(sym[32]);
-            iBat12.update(ips[0].ID16681);
+            iBat12.update(sym[65]);
             iBat13.update(sym[31]);
-            iBat14.update(ips[0].ID18803);
+            iBat14.update(sym[66]);
             iBat15.update(sym[29]);
-            iBat16.update(ips[0].ID20350);
+            iBat16.update(sym[71]);
             
             BatDis.update(sym[44]);
             
-            DisSabAlarm.update(ips[0].ID50294);
+            DisSabAlarm.update(sym[67]);
         
             
-            WashMDisAlarm.update(ips[0].ID54473); 
-            WashMDisFeuchte.update(ips[0].ID23685); 
-            WashMDisWater.update(ips[0].ID27499); 
+            WashMDisAlarm.update(sym[68]); 
+            WashMDisFeuchte.update(sym[69]); 
+            WashMDisWater.update(sym[70]); 
             
-            BathDisAlarm.update(ips[0].ID58710); 
-            BathDisFeuchte.update(ips[0].ID17453); 
-            BathDisWater.update(ips[0].ID36414);
+            BathDisAlarm.update(sym[72]); 
+            BathDisFeuchte.update(sym[73]); 
+            BathDisWater.update(sym[74]);
             
             
             //Dynamisches Bild Rolladen
@@ -685,33 +656,33 @@
 
             DisPosRolloB.update(sym[22]);   
             DisModeRolloB.update(sym[21]); 
-            DisST1RolloB.update(ips[0].ID48410); 
-            DisST2RolloB.update(ips[0].ID12438); 
+            DisST1RolloB.update(sym[54]); 
+            DisST2RolloB.update(sym[56]); 
 
             DisPosRolloK.update(sym[15]);   
-            DisModeRolloK.update(ips[0].ID54826); 
-            DisST1RolloK.update(ips[0].ID42555); 
+            DisModeRolloK.update(sym[51]); 
+            DisST1RolloK.update(sym[50]); 
             DisST2RolloK.update(ips[0].ID46774); 
-            CbSSrolloK.update(ips[0].ID45141);
+            CbSSrolloK.update(sym[52]);
 
 
-            CbSSrolloB.update(ips[0].ID56785);
-            CbSSrolloWZ.update(ips[0].ID49927);
+            CbSSrolloB.update(sym[57]);
+            CbSSrolloWZ.update(sym[53]);
             
             VarDisTempOutside.update(sym[46]);
             VarDisHumOutside.update(sym[47]);
             
             DisAlarmActiveSec.update(sym[48]); 
-            ABox.update(ips[0].ID54653);
+            ABox.update(sym[58]);
           
-            iDisArtist.update(ips[0].ID34292, ips[0].ID31822, ips[0].ID30505, ips[0].ID17922);
-            FontBtnIRadioPower.update(ips[0].ID22520);
-            IconVarDisVol.update(ips[0].ID19185,0);
+            iDisArtist.update(sym[92], sym[95], sym[93], sym[94]);
+            FontBtnIRadioPower.update(sym[96]);
+            IconVarDisVol.update(sym[97],0);
             IconVarDisSource.update(ips[0].ID46852,"state");
 
-            iDisArtistWZ.update(ips[0].ID34292, ips[0].ID31822, ips[0].ID30505, ips[0].ID17922);
-            FontBtnIRadioPowerWZ.update(ips[0].ID22520);
-            IconVarDisVolWZ.update(ips[0].ID19185,0);
+            iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
+            FontBtnIRadioPowerWZ.update(sym[96]);
+            IconVarDisVolWZ.update(sym[97],0);
             IconVarDisSourceWZ.update(ips[0].ID46852,"state");
             
       
@@ -774,7 +745,7 @@
             VarDisMainDoor.update(sym[9]);
             
  
-           var alarmCode =  ips[0].ID54653;
+           var alarmCode =  sym[58];
             
            switch(alarmCode) {
                 case 1:
