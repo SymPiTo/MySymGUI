@@ -171,7 +171,13 @@
             sym[102] = ips[0].ID29246; //Kochbuch Zutaten
             sym[103] = ips[0].ID59260; //Kochbuch Rezept
             sym[104] = ips[0].ID16493;  //Kochbuch Liste
-            
+            sym[105] = ips[0].ID46852; //Denon Source
+
+            sym[106] = ips[0].ID19506; //Lampe - Schalter State
+            sym[107] = ips[0].ID35590; //Lampe - Schalter current
+            sym[108] = ips[0].ID43083; //Lampe - Schalter Power
+            sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter
+         
             return sym;
             
              
@@ -198,7 +204,7 @@
 /*
 
 
-            var element = ips[0].ID46852;
+            var element = sym[105];
             switch(element) {
                 case 0:
                     document.getElementById('source_A').innerHTML =  'Radio';
@@ -280,7 +286,7 @@
         else if (pm == '3'){pm = 'REPEAT_ALL';}
         $('playmode').innerHTML =  pm; 
        
-        var src = ips[0].ID46852; 
+        var src = sym[105]; 
         if (src == '0'){
             src = 'IRadio';
             var radioStation = '000' + ips[0].ID58379 + '.png';
@@ -372,7 +378,7 @@
         $('tempSZ_E').innerHTML =  sym[0] + '°C'  ;
         $('tempKZ_E').innerHTML =  sym[1] + '°C';
         //<!-- Temperatur Glide Floorplan  -->
-        LeftMenuFP.update(sym[3], "°C", sym[2], "°C",  sym[0], "°C",  ips[0].ID37045, "°C");
+        LeftMenuFP.update(sym[3], "°C", sym[2], "°C",  sym[0], "°C",  sym[1], "°C");
         
  
         //<!-- Temperatur Werte Glide Button  -->
@@ -559,11 +565,11 @@
         transVarPlayModeSsz.update(PM, "");
         
         //<!-- ******************** Schlafzimmer Licht **************************  -->
-         LightSZ.update(ips[0].ID19506, "", ""); 
-        DisLightCurrentSZCtrl.update(ips[0].ID35590,2);
-        DisLightPowerSZCtrl.update(ips[0].ID43083,2);
-        DisLightEnergySZCtrl.update(ips[0].ID12561, 2);
-        iLightSz.update(ips[0].ID19506);
+        LightSZ.update(sym[106], "", ""); 
+        DisLightCurrentSZCtrl.update(sym[107],2);
+        DisLightPowerSZCtrl.update(sym[108],2);
+        DisLightEnergySZCtrl.update(sym[109], 2);
+        iLightSz.update(sym[106]);
         
         //<!-- ********************   **************************  -->
         /*
@@ -668,7 +674,7 @@
             DisPosRolloK.update(sym[15]);   
             DisModeRolloK.update(sym[51]); 
             DisST1RolloK.update(sym[50]); 
-            DisST2RolloK.update(ips[0].ID46774); 
+            DisST2RolloK.update(sym[14]); 
             CbSSrolloK.update(sym[52]);
 
 
@@ -684,12 +690,12 @@
             iDisArtist.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPower.update(sym[96]);
             IconVarDisVol.update(sym[97],0);
-            IconVarDisSource.update(ips[0].ID46852,"state");
+            IconVarDisSource.update(sym[105],"state");
 
             iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPowerWZ.update(sym[96]);
             IconVarDisVolWZ.update(sym[97],0);
-            IconVarDisSourceWZ.update(ips[0].ID46852,"state");
+            IconVarDisSourceWZ.update(sym[105],"state");
             
       
 
