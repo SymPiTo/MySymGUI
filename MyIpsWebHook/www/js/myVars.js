@@ -105,11 +105,11 @@
             sym[41] = ips[0].ID39562;  //Soll Modus Hz K
             sym[42] = ips[0].ID54426;  //Soll Temp Hz K 
             sym[43] = ips[0].ID21258;  //Soll Temp Ausstehend Hz K     
-            sym[44] = ips[0].ID48221;  //Battery Alarm  
-            sym[45] = ips[0].ID26213;  //Security Meldung
+            sym[44] = ips[0].ID41310;  //Battery Alarm  
+            sym[45] = ips[0].ID53083;  //Security Meldung
             sym[46] = ips[0].ID16709;  //Temperatur Balkon Aussen
             sym[47] = ips[0].ID27502;  //Humidity Balkon Aussen
-            sym[48] = ips[0].ID20483;  //Alarm Anlage aktiv
+            sym[48] = ips[0].ID44154;  //Alarm Anlage aktiv
             
             sym[49] = ips[0].ID20341;  //Rollo K up/down
             sym[50] = ips[0].ID42555;  //Rollo K Schaltzeit Mo-Fr
@@ -120,7 +120,7 @@
             sym[55] = ips[0].ID48410;  //Rollo B Schaltzeit Mo-Fr
             sym[56] = ips[0].ID12438; //Rollo B Schaltzeit Sa-So
             sym[57] = ips[0].ID56785; //Rollo B SSunSet             
-            sym[58] = ips[0].ID54653;  //Alarm Anlage Code          
+            sym[58] = "";  //       
             sym[59] = ips[0].ID30280;  //Bad Fenster Aktor LowBat
             sym[60] = ips[0].ID49846;  //Bad Taster-Fenster LowBat
             sym[61] = ips[0].ID33304;  //Balkon Temp Feuchte Sensor LowBat
@@ -144,7 +144,7 @@
             sym[78] = ips[0].ID53698;  //TV Channel Name - 41307
             sym[79] = ips[0].ID26003;  //TV Source 24408
             sym[80] = ips[0].ID35428;  //TV SourceList 45960
-            sym[81] = ips[0].ID10567;  //SZ Lampe
+            sym[81] = "" ; //
             sym[82] = ips[0].ID32160;  //SZ Sonos Artist
             sym[83] = ips[0].ID23875;  //SZ Sonos Title
             sym[84] = ips[0].ID38320;  //SZ Sonos Album
