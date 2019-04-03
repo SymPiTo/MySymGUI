@@ -166,6 +166,11 @@
             
             
             
+            sym[100] = ips[0].ID54563; //Kochbuch Titel
+            sym[101] = ips[0].ID18416; //Kochbuch Image
+            sym[102] = ips[0].ID29246; //Kochbuch Zutaten
+            sym[103] = ips[0].ID59260; //Kochbuch Rezept
+            sym[104] = ips[0].ID16493;  //Kochbuch Liste
             
             return sym;
             
@@ -510,11 +515,11 @@
     function updateValues(sym){
         
         //<!-- ******************** Kochbuch   **************************  -->
-        RezeptName.update(ips[0].ID54563);
-        RezeptImg.update(ips[0].ID18416);
-        IncredBox.update(ips[0].ID29246);
-        txtBox.update(ips[0].ID59260);
-        RezepteBox.update(ips[0].ID16493);
+        RezeptName.update(sym[100]);
+        RezeptImg.update(sym[101]);
+        IncredBox.update(sym[102]);
+        txtBox.update(sym[103]);
+        RezepteBox.update(sym[104]);
         //<!-- ******************** Samsung TV **************************  -->
         TVframe.update(sym[98], 10000);
         TVGuideframe.update(sym[99], 10000);
