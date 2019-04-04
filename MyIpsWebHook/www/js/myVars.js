@@ -60,19 +60,19 @@
     
      function checkUsedVars(ips){
             var sym = []; 
-     
-                sym[0] = ips[0].ID23116; //Temperatur SZ
-                sym[1] = ips[0].ID37045; //Temperatur KZ
-                sym[2] = ips[0].ID51079; //Temperatur WZ
-                sym[3] = ips[0].ID54070; //Temperatur K
-                sym[4] = ips[0].ID18059; //Position WZ
-                sym[5] = ips[0].ID49335; //Position KZ
-                sym[6] = ips[0].ID36448; //Position SZ 
-                sym[7] = ips[0].ID51619; //Position K
-                sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
-                sym[9] = ips[0].ID22196;  // Diele Haustür   
-                sym[10] = ips[0].ID56454;  // humidity KZ
-                sym[11] = ips[0].ID50329;  // humidity SZ           
+        try{    
+            sym[0] = ips[0].ID23116; //Temperatur SZ
+            sym[1] = ips[0].ID37045; //Temperatur KZ
+            sym[2] = ips[0].ID51079; //Temperatur WZ
+            sym[3] = ips[0].ID54070; //Temperatur K
+            sym[4] = ips[0].ID18059; //Position WZ
+            sym[5] = ips[0].ID49335; //Position KZ
+            sym[6] = ips[0].ID36448; //Position SZ 
+            sym[7] = ips[0].ID51619; //Position K
+            sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
+            sym[9] = ips[0].ID22196;  // Diele Haustür   
+            sym[10] = ips[0].ID56454;  // humidity KZ
+            sym[11] = ips[0].ID50329;  // humidity SZ           
             sym[12] = ips[0].ID10834;  //Rollo KZ Mode
             sym[13] = ips[0].ID21261;  //Rollo KZ Postion            
             sym[14] = ips[0].ID46774;  //Rollo K Mode
@@ -84,16 +84,16 @@
             sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
             sym[21] = ips[0].ID29574; //Rollo B Mode
             sym[22] = ips[0].ID46035; //Rollo B Postion          
-                sym[23] = ips[0].ID57942;  //Sonnenuntergang
-                sym[24] = ips[0].ID11938;  //Sonnenaufgang
+            sym[23] = ips[0].ID57942;  //Sonnenuntergang
+            sym[24] = ips[0].ID11938;  //Sonnenaufgang
             sym[25] = ips[0].ID37348;  //Balkontür
             sym[26] = ips[0].ID53071;  //Soll Modus Hz WZ
             sym[27] = ips[0].ID31769;  //Soll Temp Hz WZ 
             sym[28] = ips[0].ID27789;  //Soll Temp Ausstehend Hz WZ
-                sym[29] = ips[0].ID23472;  //Bat Hz WZ
-                sym[30] = ips[0].ID52085;  //Bat Hz KZ
-                sym[31] = ips[0].ID57118;  //Bat Hz SZ
-                sym[32] = ips[0].ID22083;  //Bat Hz K
+            sym[29] = ips[0].ID23472;  //Bat Hz WZ
+            sym[30] = ips[0].ID52085;  //Bat Hz KZ
+            sym[31] = ips[0].ID57118;  //Bat Hz SZ
+            sym[32] = ips[0].ID22083;  //Bat Hz K
             sym[33] = ips[0].ID34102;  //Soll Modus Hz KZ
             sym[34] = ips[0].ID36377;  //Soll Temp Hz KZ 
             sym[35] = ips[0].ID38441;  //Soll Temp Ausstehend Hz KZ
@@ -110,7 +110,6 @@
             sym[46] = ips[0].ID16709;  //Temperatur Balkon Aussen
             sym[47] = ips[0].ID27502;  //Humidity Balkon Aussen
             sym[48] = ips[0].ID44154;  //Alarm Anlage aktiv
-            
             sym[49] = ips[0].ID20341;  //Rollo K up/down
             sym[50] = ips[0].ID42555;  //Rollo K Schaltzeit Mo-Fr
             sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
@@ -129,7 +128,6 @@
             sym[64] = ips[0].ID38784;  //Kinderzimmer Temp-Feuchte Sensor LowBat
             sym[65] = ips[0].ID16681;  //Küche Wassermelder LowBat
             sym[66] = ips[0].ID18803;  //Schlafzimmer Feuchte Sensor LowBat
-            
             sym[67] = ips[0].ID50294;  //Sabotage Alarm Bewegungsmelder Diele
             sym[68] = ips[0].ID54473;  //Wasser Sensor Küche Alarm
             sym[69] = ips[0].ID23685;  //Wasser Sensor Küche Feuchte
@@ -163,22 +161,21 @@
             sym[97] = ips[0].ID19185;  //Volume - Denon
             sym[98] = ips[0].ID33459;   //TVchProgList 31510
             sym[99] = ips[0].ID35025; //TVProgList  49099
-            
-            
-            
             sym[100] = ips[0].ID54563; //Kochbuch Titel
             sym[101] = ips[0].ID18416; //Kochbuch Image
             sym[102] = ips[0].ID29246; //Kochbuch Zutaten
             sym[103] = ips[0].ID59260; //Kochbuch Rezept
             sym[104] = ips[0].ID16493;  //Kochbuch Liste
             sym[105] = ips[0].ID46852; //Denon Source
-
             sym[106] = ips[0].ID19506; //Lampe - Schalter State
             sym[107] = ips[0].ID35590; //Lampe - Schalter current
             sym[108] = ips[0].ID43083; //Lampe - Schalter Power
             sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter
             sym[110] = ips[0].ID17052; // Security Code
-            
+        }
+        catch(err){
+            document.getElementById("fehler").innerHTML = err.message;
+        }
             
             return sym;
             
