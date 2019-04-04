@@ -176,12 +176,12 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            if(! sym.every(function(element, index) {falsyIndex = index; return !!element;}))// returns true or false
+            if(sym.every(function(currentValue, index) {if(currentValue == "undefined"){return true;}}))   // returns true or false
              {
-                var x = falsyIndex;
+                var x = currentValue;
             }
             else{
-                var y = element;
+                var y = currentValue;
             }
             return sym;
             
