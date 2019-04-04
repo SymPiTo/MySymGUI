@@ -176,8 +176,8 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            var check = sym.every(element => element = "undefined");
-            if (check){var x = check.index;}
+            var wert = sym.every(element => element = "undefined");
+            if (wert){check(wert.index);}
             return sym;
             
              
@@ -185,8 +185,8 @@
      
 
      }
-    function check(el, index, arr) {
-        if (typeof el === "undefined") {$('fehler').innerHTML =  "Variable  wrong ID:" + index;} else {}
+    function check(index) {
+          $('fehler').innerHTML =  "Variable  wrong ID:" + index;  
         
     } 
      
