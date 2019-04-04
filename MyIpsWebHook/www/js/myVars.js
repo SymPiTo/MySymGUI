@@ -176,13 +176,8 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            if(sym.every(function(currentValue, index) {if(currentValue == "undefined"){return true;}}))   // returns true or false
-             {
-                var x = currentValue;
-            }
-            else{
-                var y = currentValue;
-            }
+             sym.every(check);   // returns true or false
+   
             return sym;
             
              
@@ -190,8 +185,9 @@
      
 
      }
-    function check(value, n){
-        if (typeof value === "undefined") {$('fehler').innerHTML =  "Variable  wrong ID:" + n;} else {return value;}
+    function check(el, index, arr) {
+        if (typeof el === "undefined") {$('fehler').innerHTML =  "Variable  wrong ID:" + index;} else {}
+        
     } 
      
     function MediaValues(ips){
