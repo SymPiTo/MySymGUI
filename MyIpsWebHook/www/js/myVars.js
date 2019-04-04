@@ -176,7 +176,13 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            
+            var check = sym.every(function(element) {return !!element;}); // returns true or false
+            if (check === false){
+                var x = element;
+            }
+            else{
+                
+            }
             return sym;
             
              
