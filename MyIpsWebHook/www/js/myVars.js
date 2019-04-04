@@ -177,7 +177,7 @@
             document.getElementById("fehler").innerHTML = err.message;
         }
            let pos = sym.indexOf(undefined);
-            if (pos){check(pos);}
+            if (pos != -1){check(pos);}
             return sym;
             
              
