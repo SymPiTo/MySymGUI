@@ -176,7 +176,7 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-           let pos = sym.indexOf('undefined');
+           let pos = sym.indexOf(undefined);
             if (pos){check(pos);}
             return sym;
             
