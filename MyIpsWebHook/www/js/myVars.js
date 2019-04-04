@@ -176,9 +176,9 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            var check = sym.every(function(element) {return !!element;}); // returns true or false
-            if (check === false){
-                var x = element;
+            if(! sym.every(function(element, index) {falsyIndex = index; return !!element;}))// returns true or false
+             {
+                var x = falsyIndex;
             }
             else{
                 
