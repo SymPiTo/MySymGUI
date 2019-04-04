@@ -181,7 +181,7 @@
                 var x = falsyIndex;
             }
             else{
-                
+                var y = element;
             }
             return sym;
             
