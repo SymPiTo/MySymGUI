@@ -176,7 +176,7 @@
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
         }
-            var wert = sym.every(element => element = "undefined");
+            var wert = sym.every(element => element = null);
             if (wert){check(wert.index);}
             return sym;
             
