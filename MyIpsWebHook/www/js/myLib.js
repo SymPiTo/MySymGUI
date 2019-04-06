@@ -2520,11 +2520,14 @@ class CtrlStatButton {
             var icon = document.createElement("figure");
 
             secA.append(icon);
-            var iconsrc = document.createElement("img");
-            iconsrc.style.width = "24px";
-            iconsrc.style.height = "24px";
-            this.source = iconsrc;
-            icon.append(iconsrc);
+            var img = document.createElement("img");
+            img.style.width = "50px";
+            img.style.height = "50px";
+            img.style.position = "relative";
+            img.style.top = "10px";
+            img.style.left = "10px";
+            this.source = img;
+            icon.append(img);
    
             
    
