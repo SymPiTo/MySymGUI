@@ -2500,7 +2500,7 @@ class CtrlStatButton {
         constructor() {
              
             this.source = ""; 
-             
+             this.day = "Sonntag"; 
         }
 
         create(ParentID){
@@ -2514,10 +2514,15 @@ class CtrlStatButton {
             secA.className = "weatherframe";
             container.append(secA);
             var titel = document.createElement("div");
+            titel.innerHTML = this.day;
+            this.day = titel;
             secA.append(titel);
             var icon = document.createElement("figure");
+            icon.style.width = "84px";
+            icon.style.height = "84px";
             secA.append(icon);
             var iconsrc = document.createElement("img");
+            
             this.source = iconsrc;
             icon.append(iconsrc);
    
@@ -2528,9 +2533,9 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconurl){
+        update(iconurl, day){
            this.source.src = iconurl; 
-             
+            this.day.innerHTML = day;
         }
         
   
