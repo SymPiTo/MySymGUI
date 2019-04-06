@@ -2504,12 +2504,10 @@ class CtrlStatButton {
         }
 
         create(ParentID){
-            var container = document.createElement("table");
+            var container = document.createElement("div");
             
-            var row = document.createElement("tr");
-            container.append(row);
-            var feld = document.createElement("td");
-            feld.className = "weathertablecell";
+ 
+            container.className = "weathertablecell";
             
             row.append(feld);
             var secA = document.createElement("section");
