@@ -2529,8 +2529,8 @@ class CtrlStatButton {
         }
         
         update(iconsrc){
-           this.source = iconsrc; 
-            
+           this.source.srcdoc = urlstring; 
+             
         }
         
   
