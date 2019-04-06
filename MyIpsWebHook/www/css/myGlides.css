@@ -242,6 +242,27 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	border-right-width: 1px; */
 }
 
+
+
+
+    /* ---------------- MAIN  Bereich ----------------- */
+    .MainArea{
+            position:absolute;
+            top: 5vh;
+            width: 0px;
+            height: 95vh;
+            left: 16.2vw;
+    }
+    /* ---------------  CTRL  Bereich --------------- */
+    .CtrlArea{
+            position:absolute;
+            top: 5vh;
+            width: 0px;
+            height: 95vh;
+            left: 74vw;
+    }
+
+
 .HeizungWZ{
 	position:absolute;
 	top: 5vh;
@@ -444,23 +465,7 @@ background: -webkit-linear-gradient(hsl(152, 70%, 15%), hsl(152,70%,25%),hsl(152
 	background: hsl(28, 100%, 10%);
 }
 
-/* Wetter Main and Ctrl window color =  */
-.Wetter{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 16.2vw;
-	 
-}
-.WetterCtrl{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 74vw;
-	background: hsl(38, 100%, 10%);
-}
+
 
 .Uhr{
 	position:absolute;
@@ -3051,6 +3056,9 @@ h1:after {
 .grey:active {
     background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
 }
+.greybg {
+    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%)); /* CHROME */
+} 
 
 .midgreen {
     background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%), hsl(152, 70%, 25%)); /* CHROME */ 
