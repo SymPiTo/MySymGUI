@@ -2525,6 +2525,24 @@ class CtrlStatButton {
             var img = document.createElement("img");
             img.style.width = "70px";
             img.style.height = "70px";
+            
+            var secB = document.createElement("section");
+            container.append(secB);
+            var tempMax = document.createElement("div");
+            secB.append(tempMax);
+            var tempMin = document.createElement("div");
+            secB.append(tempMin);
+            
+            var secC = document.createElement("section");
+            container.append(secC);
+            var windspeed = document.createElement("div");
+            secC.append(windspeed);
+            var windGust = document.createElement("div");
+            secC.append(windGust);
+            var cloudCover = document.createElement("div");
+            secC.append(cloudCover);
+            var humidity = document.createElement("div");
+            secC.append(humidity);
 
 
             this.source = img;
