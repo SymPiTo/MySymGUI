@@ -2498,7 +2498,7 @@ class CtrlStatButton {
      /* --------------------- Klasse WeatherLabel ---------------------------------------- */
     class WeatherLabel { 
         constructor() {
-            this.ID = "";
+             
             this.source = ""; 
              
         }

@@ -520,7 +520,8 @@
    
    
     function updateValues(sym){
-        
+        //<!-- ******************** Wetter   **************************  -->
+        WetterLabelA.
         //<!-- ******************** Kochbuch   **************************  -->
         RezeptName.update(sym[100]);
         RezeptImg.update(sym[101]);
