@@ -2520,7 +2520,7 @@ class CtrlStatButton {
             var Fig = document.createElement("figure");
             Fig.style.position = "relative";
             Fig.style.top = "30px";
-            Fig.style.left = "0px";
+            Fig.style.left = "-10px";
             secA.append(Fig);
             var img = document.createElement("img");
             img.style.width = "70px";
