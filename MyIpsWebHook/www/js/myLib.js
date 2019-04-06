@@ -2509,10 +2509,10 @@ class CtrlStatButton {
  
             container.className = "weathertablecell";
             
-            row.append(feld);
+            
             var secA = document.createElement("section");
             secA.className = "weatherframe";
-            feld.append(secA);
+            container.append(secA);
             var titel = document.createElement("div");
             secA.append(titel);
             var icon = document.createElement("figure");
