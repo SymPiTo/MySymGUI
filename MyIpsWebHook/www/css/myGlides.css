@@ -245,16 +245,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 
-    /* ---------------- MAIN  Bereich ----------------- */
-    .MainArea{
+    
+    .Wetter{
             position:absolute;
             top: 5vh;
             width: 0px;
             height: 95vh;
             left: 16.2vw;
-    }
-    /* ---------------  CTRL  Bereich --------------- */
-    .CtrlArea{
+
+    .WetterCtrl{
             position:absolute;
             top: 5vh;
             width: 0px;
