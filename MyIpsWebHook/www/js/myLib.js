@@ -2529,7 +2529,7 @@ class CtrlStatButton {
         }
         
         update(iconurl){
-           this.source.srcdoc = iconurl; 
+           this.source.src = iconurl; 
              
         }
         
