@@ -2528,8 +2528,8 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconsrc){
-           this.source.srcdoc = urlstring; 
+        update(iconurl){
+           this.source.srcdoc = iconurl; 
              
         }
         
