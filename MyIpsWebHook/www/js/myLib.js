@@ -2518,7 +2518,7 @@ class CtrlStatButton {
             this.day = titel;
             secA.append(titel);
             var Fig = document.createElement("figure");
-            Fig.style.position = "relativ";
+            Fig.style.position = "absolute";
             Fig.style.top = "10px";
             Fig.style.left = "1px";
             secA.append(Fig);
