@@ -2517,17 +2517,17 @@ class CtrlStatButton {
             titel.innerHTML = this.day;
             this.day = titel;
             secA.append(titel);
-            var icon = document.createElement("figure");
-
-            secA.append(icon);
+            var Fig = document.createElement("figure");
+            Fig.style.top = "10px";
+            Fig.style.left = "10px";
+            secA.append(Fig);
             var img = document.createElement("img");
-            img.style.width = "50px";
-            img.style.height = "50px";
+            img.style.width = "70px";
+            img.style.height = "70px";
             img.style.position = "relative";
-            img.style.top = "10px";
-            img.style.left = "10px";
+
             this.source = img;
-            icon.append(img);
+            Fig.append(img);
    
             
    
