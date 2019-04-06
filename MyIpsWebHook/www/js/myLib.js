@@ -2518,8 +2518,8 @@ class CtrlStatButton {
             this.day = titel;
             secA.append(titel);
             var icon = document.createElement("figure");
-            icon.style.width = "84px";
-            icon.style.height = "84px";
+            icon.style.width = "24px";
+            icon.style.height = "24px";
             secA.append(icon);
             var iconsrc = document.createElement("img");
             
