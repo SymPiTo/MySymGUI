@@ -2439,7 +2439,7 @@ class CtrlStatButton {
     } 
     
  
-               /* --------------------- Klasse Clock ---------------------------------------- */
+    /* --------------------- Klasse Clock ---------------------------------------- */
     class EierUhr { 
         constructor() {
             this.ID = "";
@@ -2495,6 +2495,47 @@ class CtrlStatButton {
         }
     }
  
- 
+     /* --------------------- Klasse WeatherLabel ---------------------------------------- */
+    class WeatherLabel { 
+        constructor() {
+            this.ID = "";
+            this.source = ""; 
+             
+        }
+
+        create(ParentID){
+            var container = document.createElement("table");
+            
+            var row = document.createElement("tr");
+            container.append(row);
+            var feld = document.createElement("td");
+            feld.className = "weathertablecell";
+            
+            row.append(feld);
+            var secA = document.createElement("section");
+            secA.className = "weatherframe";
+            feld.append(secA);
+            var titel = document.createElement("div");
+            secA.append(titel);
+            var icon = document.createElement("figure");
+            secA.append(icon);
+            var iconsrc = document.createElement("img");
+            this.source = iconsrc;
+            icon.append(iconsrc);
+   
+            
+   
+            
+            
+            document.getElementById(ParentID).appendChild(container);
+        }
+        
+        update(iconsrc){
+           this.source = iconsrc; 
+            
+        }
+        
+  
+    }
  
  

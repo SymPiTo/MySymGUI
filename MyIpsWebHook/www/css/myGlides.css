@@ -3065,3 +3065,33 @@ h1:after {
 .black {
     background: black;
 }
+
+
+/* *********************  Weather ********************************** */
+    .weathertablecell { 
+        width: 170px; 
+        text-shadow: 1px 1px 0px rgba(66,66,66,1.00); 
+        vertical-align: top; 
+        padding-bottom: 0px; 
+        padding-top: 0px; 
+        margin-top: 0px; 
+        margin-right: 0px; 
+        margin-bottom: 0px; 
+        margin-left: 0px; 
+    } 
+    .weatherframe { 
+        background-color: rgba(136,123,123,0.55); 
+        border-radius: 25px; 
+        padding-left: 0px; 
+        margin-left: 4px; 
+        margin-right: 4px; 
+        padding-top: 0px; 
+        margin-top: 3px; 
+        -webkit-box-shadow: 2px 2px 13px 0px rgba(50,49,49,1.00); 
+        box-shadow: 2px 2px 13px 0px rgba(50,49,49,1.00); 
+        padding-bottom: 0px; 
+        margin-bottom: 0px; 
+        position: relative; 
+        height: 275px; 
+    }
+        
