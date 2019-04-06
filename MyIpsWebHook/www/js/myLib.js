@@ -2518,14 +2518,14 @@ class CtrlStatButton {
             this.day = titel;
             secA.append(titel);
             var Fig = document.createElement("figure");
-            Fig.style.top = "10px";
-            Fig.style.left = "1px";
+
             secA.append(Fig);
             var img = document.createElement("img");
             img.style.width = "70px";
             img.style.height = "70px";
             img.style.position = "relative";
-
+            img.style.top = "10px";
+            img.style.left = "1px";
             this.source = img;
             Fig.append(img);
    
