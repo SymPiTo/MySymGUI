@@ -2503,6 +2503,11 @@ class CtrlStatButton {
             this.day = "Sonntag"; 
             this.tempMin_ID = "";
             this.tempMax_ID = "";
+            
+            this.windspeed_ID = "";
+            this.windGust_ID = "";
+            this.cloudCover_ID = "";
+            this.humidity_ID = "";
         }
 
         create(ParentID){
@@ -2521,8 +2526,8 @@ class CtrlStatButton {
             secA.append(titel);
             var Fig = document.createElement("figure");
             Fig.style.position = "absolute";
-            Fig.style.top = "20px";
-            Fig.style.left = "10px";
+            Fig.style.top = "10px";
+            Fig.style.left = "-10px";
             secA.append(Fig);
             var img = document.createElement("img");
             img.style.width = "70px";
@@ -2532,7 +2537,7 @@ class CtrlStatButton {
             secB.style.position = "absolute";
             secB.style.top = "100px";
             secB.style.left = "100px";
-            secB.style.fontSize = "18px";
+            secB.style.fontSize = "20px";
             container.append(secB);
             var tempMax = document.createElement("div");
             this.tempMax_ID = tempMax;
@@ -2544,12 +2549,16 @@ class CtrlStatButton {
             var secC = document.createElement("section");
             container.append(secC);
             var windspeed = document.createElement("div");
+            this.windspeed_ID = windspeed;
             secC.append(windspeed);
             var windGust = document.createElement("div");
+            this.windGust_ID = windGust;
             secC.append(windGust);
             var cloudCover = document.createElement("div");
+            this.cloudCover_ID = cloudCover;
             secC.append(cloudCover);
             var humidity = document.createElement("div");
+            this.humidity_ID = humidity;
             secC.append(humidity);
 
 
@@ -2563,12 +2572,15 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconurl, day, tempMax, tempMin){
+        update(iconurl, day, tempMax, tempMin,windspeed, windGust, cloudCover, humidity){
            this.source.src = iconurl; 
            this.day.innerHTML = day;
            this.tempMax_ID.innerHTML = tempMax;
            this.tempMin_ID.innerHTML = tempMin; 
-           
+           this.windspeed_ID = windspeed;
+           this.windGust_ID = windGust;
+           this.cloudCover_ID = cloudCover;
+           this.humidity_ID = humidity;
         }
         
   
