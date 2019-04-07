@@ -531,7 +531,7 @@
         WetterLabelE.update(sym[111][5]['icon'], sym[111][5]['weekday'], sym[111][5]['temperatureHigh'], sym[111][5]['temperatureLow'], sym[111][5]['windSpeed'], sym[111][5]['windGust'], sym[111][5]['cloudCover'], sym[111][5]['humidity'] );
         WetterLabelF.update(sym[111][6]['icon'], sym[111][6]['weekday'], sym[111][6]['temperatureHigh'], sym[111][6]['temperatureLow'], sym[111][6]['windSpeed'], sym[111][6]['windGust'], sym[111][6]['cloudCover'], sym[111][6]['humidity'] );
         WetterLabelG.update(sym[111][7]['icon'], sym[111][7]['weekday'], sym[111][7]['temperatureHigh'], sym[111][7]['temperatureLow'], sym[111][7]['windSpeed'], sym[111][7]['windGust'], sym[111][7]['cloudCover'], sym[111][7]['humidity'] );
-        WetterLabelNow.update(sym[112]['icon'], sym[112]['weekday'], sym[112]['temperatureHigh'], sym[112]['temperatureLow'], sym[112]['windSpeed'], sym[112]['windGust'], sym[112]['cloudCover'], sym[112]['humidity'] );
+        WetterLabelNow.update(sym[112]['icon'], "Aktuell", sym[112]['apparentTemperature'], "", sym[112]['ozone'], sym[112]['windSpeed'], sym[112]['windGust'], sym[112]['cloudCover'], sym[112]['humidity'] );
        
         
         
