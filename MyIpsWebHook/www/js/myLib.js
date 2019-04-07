@@ -2527,8 +2527,8 @@ class CtrlStatButton {
             img.style.width = "70px";
             img.style.height = "70px";
             
-            var secB = document.createElement("section");
-            secB.style.position = "absolute";
+            var secB = document.createElement("div");
+            secB.style.position = "relative";
             secB.style.top = "50px";
             container.append(secB);
             var tempMax = document.createElement("div");
