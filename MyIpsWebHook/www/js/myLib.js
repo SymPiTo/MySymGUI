@@ -2535,7 +2535,7 @@ class CtrlStatButton {
             
             var secB = document.createElement("section");
             secB.style.position = "absolute";
-            secB.style.top = "100px";
+            secB.style.top = "90px";
             secB.style.left = "100px";
             secB.style.fontSize = "20px";
             container.append(secB);
@@ -2548,9 +2548,9 @@ class CtrlStatButton {
             
             var secC = document.createElement("section");
             secC.style.position = "absolute";
-            secC.style.top = "150px";
-            secC.style.left = "100px";
-            secC.style.fontSize = "14px";
+            secC.style.top = "160px";
+            secC.style.left = "10px";
+            secC.style.fontSize = "12px";
             container.append(secC);
             var windspeed = document.createElement("div");
             this.windspeed_ID = windspeed;
