@@ -528,7 +528,7 @@
         WetterLabelB.update(sym[111][2]['icon'], sym[111][2]['weekday'], sym[111][2]['temperatureHigh'], sym[111][2]['temperatureLow'], sym[111][2]['windSpeed'], sym[111][2]['windGust'], sym[111][2]['cloudCover'], sym[111][2]['humidity'] );
         WetterLabelC.update(sym[111][3]['icon'], sym[111][3]['weekday'], sym[111][3]['temperatureHigh'], sym[111][3]['temperatureLow'], sym[111][3]['windSpeed'], sym[111][3]['windGust'], sym[111][3]['cloudCover'], sym[111][3]['humidity'] );
         WetterLabelD.update(sym[111][4]['icon'], sym[111][4]['weekday'], sym[111][4]['temperatureHigh'], sym[111][4]['temperatureLow'], sym[111][4]['windSpeed'], sym[111][4]['windGust'], sym[111][4]['cloudCover'], sym[111][4]['humidity'] );
-        WetterLabelEA.update(sym[111][5]['icon'], sym[111][5]['weekday'], sym[111][5]['temperatureHigh'], sym[111][5]['temperatureLow'], sym[111][5]['windSpeed'], sym[111][5]['windGust'], sym[111][5]['cloudCover'], sym[111][5]['humidity'] );
+        WetterLabelE.update(sym[111][5]['icon'], sym[111][5]['weekday'], sym[111][5]['temperatureHigh'], sym[111][5]['temperatureLow'], sym[111][5]['windSpeed'], sym[111][5]['windGust'], sym[111][5]['cloudCover'], sym[111][5]['humidity'] );
         WetterLabelF.update(sym[111][6]['icon'], sym[111][6]['weekday'], sym[111][6]['temperatureHigh'], sym[111][6]['temperatureLow'], sym[111][6]['windSpeed'], sym[111][6]['windGust'], sym[111][6]['cloudCover'], sym[111][6]['humidity'] );
         WetterLabelG.update(sym[111][7]['icon'], sym[111][7]['weekday'], sym[111][7]['temperatureHigh'], sym[111][7]['temperatureLow'], sym[111][7]['windSpeed'], sym[111][7]['windGust'], sym[111][7]['cloudCover'], sym[111][7]['humidity'] );
         
