@@ -172,6 +172,9 @@
             sym[108] = ips[0].ID43083; //Lampe - Schalter Power
             sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter
             sym[110] = ips[0].ID17052; // Security Code
+            sym[111] = JSON.parse(ips[0].ID44125) //Wetter Week Data
+            sym[112] = JSON.parse(ips[0].ID46593) //Wetter NowDay Data
+             
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -521,7 +524,7 @@
    
     function updateValues(sym){
         //<!-- ******************** Wetter   **************************  -->
-        WetterLabelA.update("https://darksky.net/images/weather-icons/rain.png");
+        WetterLabelA.update("https://darksky.net/images/weather-icons/rain.png", sym[111]);
         //<!-- ******************** Kochbuch   **************************  -->
         RezeptName.update(sym[100]);
         RezeptImg.update(sym[101]);
