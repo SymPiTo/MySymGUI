@@ -2520,9 +2520,9 @@ class CtrlStatButton {
             this.day = titel;
             secA.append(titel);
             var Fig = document.createElement("figure");
-            Fig.style.position = "relative";
+            Fig.style.position = "absolute";
             Fig.style.top = "20px";
-            Fig.style.left = "-40px";
+            Fig.style.left = "10px";
             secA.append(Fig);
             var img = document.createElement("img");
             img.style.width = "70px";
@@ -2530,9 +2530,9 @@ class CtrlStatButton {
             
             var secB = document.createElement("section");
             secB.style.position = "absolute";
-            secB.style.top = "150px";
-            secB.style.left = "50px";
-            secB.style.fontSize = "22px";
+            secB.style.top = "100px";
+            secB.style.left = "100px";
+            secB.style.fontSize = "18px";
             container.append(secB);
             var tempMax = document.createElement("div");
             this.tempMax_ID = tempMax;
