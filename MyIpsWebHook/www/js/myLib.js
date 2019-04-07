@@ -2507,8 +2507,9 @@ class CtrlStatButton {
 
         create(ParentID){
             var container = document.createElement("div");
-            
- 
+            container.style.position = "relative";
+            container.style.top = "5px";
+            container.style.left = "105px";
             container.className = "weathertablecell";
 
             var secA = document.createElement("section");
