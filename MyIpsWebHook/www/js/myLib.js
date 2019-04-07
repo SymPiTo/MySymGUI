@@ -2547,6 +2547,10 @@ class CtrlStatButton {
             this.tempMin_ID = tempMin;
             
             var secC = document.createElement("section");
+            secB.style.position = "absolute";
+            secB.style.top = "150px";
+            secB.style.left = "100px";
+            secB.style.fontSize = "14px";
             container.append(secC);
             var windspeed = document.createElement("div");
             this.windspeed_ID = windspeed;
