@@ -2500,7 +2500,9 @@ class CtrlStatButton {
         constructor() {
              
             this.source = ""; 
-             this.day = "Sonntag"; 
+            this.day = "Sonntag"; 
+            this.tempMin_ID = "";
+            this.tempMax_ID = "";
         }
 
         create(ParentID){
@@ -2508,8 +2510,7 @@ class CtrlStatButton {
             
  
             container.className = "weathertablecell";
-            
-            
+
             var secA = document.createElement("section");
             secA.className = "weatherframe";
             container.append(secA);
@@ -2529,9 +2530,11 @@ class CtrlStatButton {
             var secB = document.createElement("section");
             container.append(secB);
             var tempMax = document.createElement("div");
+            this.tempMax_ID = tempMax;
             secB.append(tempMax);
             var tempMin = document.createElement("div");
             secB.append(tempMin);
+            this.tempMin_ID = tempMin;
             
             var secC = document.createElement("section");
             container.append(secC);
@@ -2555,9 +2558,12 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconurl, day){
+        update(iconurl, day, tempMax){
            this.source.src = iconurl; 
-            this.day.innerHTML = day;
+           this.day.innerHTML = day;
+           this.tempMax_ID.innerHTML = tempMax;
+           this.tempMin_ID.innerHTML = tempMin; 
+           
         }
         
   
