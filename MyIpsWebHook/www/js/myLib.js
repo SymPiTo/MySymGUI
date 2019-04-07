@@ -2588,16 +2588,18 @@ class CtrlStatButton {
         }
         
         update(iconurl, day, tempMax, tempMin,windspeed, windGust, cloudCover, humidity, ozone, uvIndex ){
-           this.source.src = iconurl; 
-           this.day.innerHTML = day;
-           this.tempMax_ID.innerHTML = tempMax;
-           this.tempMin_ID.innerHTML = tempMin; 
-           this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed;
-           this.windGust_ID.innerHTML = "Wind Böen: " +  windGust;
-           this.cloudCover_ID.innerHTML = "Bewölkung: " +  cloudCover;
-           this.humidity_ID.innerHTML = "Feuchte.: " +  humidity;
-           this.ozone_ID.innerHTML = ozone;
-           this.uvIndex_ID.innerHTML = uvIndex;
+            this.source.src = iconurl; 
+            this.day.innerHTML = day;
+            this.tempMax_ID.innerHTML = tempMax;
+            this.tempMin_ID.innerHTML = tempMin; 
+            this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed;
+            this.windGust_ID.innerHTML = "Wind Böen: " +  windGust;
+            this.cloudCover_ID.innerHTML = "Bewölkung: " +  cloudCover;
+            this.humidity_ID.innerHTML = "Feuchte: " +  humidity;
+            if(ozone){
+                 this.ozone_ID.innerHTML = "Ozonwert: " + ozone;
+                 this.uvIndex_ID.innerHTML = "UV-Index: " + uvIndex;
+            }
         }
         
   
