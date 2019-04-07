@@ -524,7 +524,7 @@
    
     function updateValues(sym){
         //<!-- ******************** Wetter   **************************  -->
-        WetterLabelA.update("https://darksky.net/images/weather-icons/rain.png", sym[111]);
+        WetterLabelA.update(sym[111]['icon'], sym[111]['weekday']);
         //<!-- ******************** Kochbuch   **************************  -->
         RezeptName.update(sym[100]);
         RezeptImg.update(sym[101]);
