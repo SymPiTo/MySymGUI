@@ -87,7 +87,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuHz,
 .MenuRollo,
 .MenuNet,
-.HeizungAll,
+.Hz,
+.HzCtrl
 .Wetter,
 .WetterCtrl,
 .Uhr,
@@ -230,7 +231,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
         
 }
 
-.HeizungAll{
+.Hz{
 	position:absolute;
 	top: 5vh;
         left:8.6vw;
@@ -3036,6 +3037,16 @@ h1:after {
   
 
 /* *********************  COLORS ********************************** */
+.yellow {
+    background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%), hsl(51, 100%, 25%)); /* CHROME */
+}
+.yellow:hover {
+    background: -webkit-linear-gradient(hsl(51, 100%, 15%), hsl(51, 100%, 25%)); /* CHROME */
+}
+.yellow:active {
+    background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); /* CHROME */
+}
+
 .sandyLight {
     background: -webkit-linear-gradient(hsl(28, 100%, 75%), hsl(28, 100%, 95%), hsl(28, 100%, 75%))
 }
@@ -3043,7 +3054,7 @@ h1:after {
     background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%), hsl(28, 100%, 25%));
 }
 .sandy:active {
-	background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
+    background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
 }
  
 .grey {
