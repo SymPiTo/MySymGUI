@@ -2500,7 +2500,7 @@ class CtrlStatButton {
         constructor() {
              
             this.source = ""; 
-            this.day = "Sonntag"; 
+            this.day = ""; 
             this.tempMin_ID = "";
             this.tempMax_ID = "";
             
