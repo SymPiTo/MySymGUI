@@ -3077,7 +3077,7 @@ h1:after {
 /* *********************  Weather ********************************** */
     .weathertablecell { 
         width: 170px; 
-        text-shadow: 1px 1px 0px rgba(66,66,66,1.00); 
+         
         vertical-align: top; 
         padding-bottom: 0px; 
         padding-top: 0px; 

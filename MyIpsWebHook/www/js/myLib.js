@@ -2510,11 +2510,11 @@ class CtrlStatButton {
             this.humidity_ID = "";
         }
 
-        create(ParentID){
+        create(ParentID, top, left){
             var container = document.createElement("div");
             container.style.position = "relative";
-            container.style.top = "5px";
-            container.style.left = "105px";
+            container.style.top = top;
+            container.style.left = left;
             container.className = "weathertablecell";
 
             var secA = document.createElement("section");
@@ -2551,6 +2551,7 @@ class CtrlStatButton {
             secC.style.top = "160px";
             secC.style.left = "10px";
             secC.style.fontSize = "12px";
+             
             container.append(secC);
             var windspeed = document.createElement("div");
             this.windspeed_ID = windspeed;
@@ -2581,10 +2582,10 @@ class CtrlStatButton {
            this.day.innerHTML = day;
            this.tempMax_ID.innerHTML = tempMax;
            this.tempMin_ID.innerHTML = tempMin; 
-           this.windspeed_ID.innerHTML = "Windgeschw.:" + windspeed;
-           this.windGust_ID.innerHTML = "Wind Böen:" +  windGust;
-           this.cloudCover_ID.innerHTML = "Bewölkung.:" +  cloudCover;
-           this.humidity_ID.innerHTML = "Feuchte.:" +  humidity;
+           this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed;
+           this.windGust_ID.innerHTML = "Wind Böen: " +  windGust;
+           this.cloudCover_ID.innerHTML = "Bewölkung: " +  cloudCover;
+           this.humidity_ID.innerHTML = "Feuchte.: " +  humidity;
         }
         
   
