@@ -524,7 +524,7 @@
    
     function updateValues(sym){
         //<!-- ******************** Wetter   **************************  -->
-        WetterLabelA.update(sym[111]['icon'], sym[111]['weekday']);
+        WetterLabelA.update(sym[111][0]['icon'], sym[111][0]['weekday']);
         //<!-- ******************** Kochbuch   **************************  -->
         RezeptName.update(sym[100]);
         RezeptImg.update(sym[101]);
