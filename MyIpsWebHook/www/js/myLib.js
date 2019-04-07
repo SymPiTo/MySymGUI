@@ -2524,13 +2524,13 @@ class CtrlStatButton {
             container.append(secA);
             var titel = document.createElement("div");
             titel.innerHTML = this.day;
-            titel.style.fontSize = "28px";
+            titel.style.fontSize = "22px";
             this.day = titel;
             secA.append(titel);
             var Fig = document.createElement("figure");
             Fig.style.position = "absolute";
             Fig.style.top = "10px";
-            Fig.style.left = "-10px";
+            Fig.style.left = "-30px";
             secA.append(Fig);
             var img = document.createElement("img");
             img.style.width = "70px";
