@@ -2508,6 +2508,8 @@ class CtrlStatButton {
             this.windGust_ID = "";
             this.cloudCover_ID = "";
             this.humidity_ID = "";
+            this.ozone_ID = "";
+            this.uvIndex_ID = "";
         }
 
         create(ParentID, top, left, frameheight){
@@ -2568,7 +2570,12 @@ class CtrlStatButton {
             var humidity = document.createElement("div");
             this.humidity_ID = humidity;
             secC.append(humidity);
-
+            var ozone = document.createElement("div");
+            this.ozone_ID = ozone;
+            secC.append(ozone);
+            var uvIndex = document.createElement("div");
+            this.uvIndex_ID = uvIndex;
+            secC.append(uvIndex);
 
             this.source = img;
             Fig.append(img);
@@ -2580,7 +2587,7 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconurl, day, tempMax, tempMin,windspeed, windGust, cloudCover, humidity){
+        update(iconurl, day, tempMax, tempMin,windspeed, windGust, cloudCover, humidity, ozone, uvIndex ){
            this.source.src = iconurl; 
            this.day.innerHTML = day;
            this.tempMax_ID.innerHTML = tempMax;
@@ -2589,6 +2596,8 @@ class CtrlStatButton {
            this.windGust_ID.innerHTML = "Wind Böen: " +  windGust;
            this.cloudCover_ID.innerHTML = "Bewölkung: " +  cloudCover;
            this.humidity_ID.innerHTML = "Feuchte.: " +  humidity;
+           this.ozone_ID.innerHTML = ozone;
+           this.uvIndex_ID.innerHTML = uvIndex;
         }
         
   
