@@ -2510,7 +2510,7 @@ class CtrlStatButton {
             this.humidity_ID = "";
         }
 
-        create(ParentID, top, left){
+        create(ParentID, top, left, frameheight){
             var container = document.createElement("div");
             container.style.position = "absolute";
             container.style.top = top;
@@ -2519,6 +2519,7 @@ class CtrlStatButton {
 
             var secA = document.createElement("section");
             secA.className = "weatherframe";
+            secA.style.height = frameheight; 
             container.append(secA);
             var titel = document.createElement("div");
             titel.innerHTML = this.day;
