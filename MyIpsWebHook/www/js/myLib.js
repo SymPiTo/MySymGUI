@@ -2577,10 +2577,10 @@ class CtrlStatButton {
            this.day.innerHTML = day;
            this.tempMax_ID.innerHTML = tempMax;
            this.tempMin_ID.innerHTML = tempMin; 
-           this.windspeed_ID = windspeed;
-           this.windGust_ID = windGust;
-           this.cloudCover_ID = cloudCover;
-           this.humidity_ID = humidity;
+           this.windspeed_ID.innerHTML = "Windgeschw.:" + windspeed;
+           this.windGust_ID.innerHTML = "Wind Böen:" +  windGust;
+           this.cloudCover_ID.innerHTML = "Bewölkung.:" +  cloudCover;
+           this.humidity_ID.innerHTML = "Feuchte.:" +  humidity;
         }
         
   
