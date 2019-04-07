@@ -2528,6 +2528,8 @@ class CtrlStatButton {
             img.style.height = "70px";
             
             var secB = document.createElement("section");
+            secB.style.position = "relative";
+            secB.style.top = "50px";
             container.append(secB);
             var tempMax = document.createElement("div");
             this.tempMax_ID = tempMax;
@@ -2558,7 +2560,7 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        update(iconurl, day, tempMax){
+        update(iconurl, day, tempMax, tempMin){
            this.source.src = iconurl; 
            this.day.innerHTML = day;
            this.tempMax_ID.innerHTML = tempMax;
