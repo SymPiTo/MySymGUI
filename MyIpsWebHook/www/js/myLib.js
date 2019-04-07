@@ -2512,7 +2512,7 @@ class CtrlStatButton {
 
         create(ParentID, top, left){
             var container = document.createElement("div");
-            container.style.position = "relative";
+            container.style.position = "absolute";
             container.style.top = top;
             container.style.left = left;
             container.className = "weathertablecell";
