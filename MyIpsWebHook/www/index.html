@@ -430,21 +430,6 @@
 
 
 		<!-- ************************ Menue  Heizung  ************************  -->
-	<subMenu id="SubMenuHz" class="MenuHz"></subMenu>	
-        <script> 
-            var SubMenuHzAll = new GlideButton();
-            SubMenuHzAll.create("SubMenuHz","SubMenuHzAll", "yellow", "Heizung Uebersicht", "_Heizung_BW2.png", "MainHz","", "SM" ); 
-            var SubMenuHzWZ = new GlideButton();
-            SubMenuHzWZ.create("SubMenuHz","SubMenuHzWZ", "yellow", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHzWZ","", "SM" );
-            var SubMenuHzKZ = new GlideButton();
-            SubMenuHzKZ.create("SubMenuHz","SubMenuHzKZ", "yellow", "Heizung Kinderzimmer", "_Heizung_BW2.png", "MainHzKZ","", "SM" );
-            var SubMenuHzSZ = new GlideButton();
-            SubMenuHzSZ.create("SubMenuHz","SubMenuHzSZ", "yellow", "Heizung Schlafzimmer", "_Heizung_BW2.png", "MainHzSZ","", "SM" );
-            var SubMenuHzK = new GlideButton();
-            SubMenuHzK.create("SubMenuHz","SubMenuHzK", "yellow", "Heizung Küche", "_Heizung_BW2.png", "MainHzK","", "SM" );
-
-        </script>  
-        <!--
 		<subMenu id="SubMenuHz" class="MenuHz">
 			<div class="buttonglide" onclick="HeizungAll()" style="background:-webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%));">
 					<div>
@@ -497,7 +482,6 @@
 					</div>	
 			</div>
  		</subMenu>
-        -->
 		<!-- ************************Menu  Rolladen  ************************  -->
 		<subMenu id="SubMenuRollo" class="MenuRollo">
 			<div class="GlideButton brown" onclick="RolladenAll()" >
@@ -591,7 +575,7 @@
 
 
 		<!-- ************************ Heizung Uebersicht ************************  -->
-		<Main id="MainHz" class="Hz">  </Main>
+		<Main class="HeizungAll">	
 			<div class="reihe"  style="margin-right: 50px; margin-left: 50px">	
 				<div class="spalte" style="height: 45vh">
 		 			<div class="IconButton small cyan" onclick="HeizungWZAll()" style="margin-right: 40px" >
@@ -650,7 +634,7 @@
 	 	</Main>
 
 		<!-- ************************ Heizung Wohnzimmer ************************  -->
-		<Main id="MainHzWZ" class="HeizungWZ">	</Main>
+		<Main id="MainHeizungWZ" class="HeizungWZ">	</Main>
  
    <script>
  
@@ -683,7 +667,7 @@
  
 		<!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
 
-		<Ctrl id="MainHzWZCtrl"  class="HeizungCtrlWZ"></Ctrl>
+		<Ctrl id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"></Ctrl>
 
                 
    <script>

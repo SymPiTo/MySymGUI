@@ -20,7 +20,7 @@
                 document.getElementsByClassName("MenuMultimedia")[0].style.width = "0px";
                 document.getElementsByClassName("MenuHz")[0].style.width = "0px";
                 document.getElementsByClassName("MenuRollo")[0].style.width = "0px";
-                document.getElementsByClassName("Hz")[0].style.width = "0px";
+                document.getElementsByClassName("HeizungAll")[0].style.width = "0px";
                 document.getElementsByClassName("HeizungWZ")[0].style.width = "0px";
                 document.getElementsByClassName("HeizungCtrlWZ")[0].style.width = "0px";
                 document.getElementsByClassName("HeizungKZ")[0].style.width = "0px";
@@ -95,14 +95,12 @@
                 document.getElementsByClassName("Top")[0].style.color = "white";
                 document.getElementById("TopTitle").innerHTML = 'Rolladen';
         }	
-/*
+
         function HeizungAll(){ 
                 closeallglides();
                 document.getElementsByClassName("HeizungAll")[0].style.width = "calc(65vw - 40px)";
                 document.getElementsByClassName("HeizungCtrlWZ")[0].style.width = "calc(35vw - 0px)";
         }
-*/
-
         function HeizungWZAll(){ 
                 document.getElementsByClassName("HeizungCtrlSZ")[0].style.width = "0px";
                 document.getElementsByClassName("HeizungCtrlK")[0].style.width = "0px";
