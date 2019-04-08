@@ -1004,7 +1004,6 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
  /* --------------------- Klasse Menu Button (Glide) ---------------------------------------- */
     class GlideButton { 
         constructor(  ) {
-            this.ObjectID = "";
             this.unit1 = " ";
             this.unit2 = " ";
             this.unit3 = " ";
@@ -1013,10 +1012,13 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
             this.value2 = " ";
             this.value3 = " ";
             this.value4 = " ";
+            this.ObjValue1 = "";
+            this.ObjValue2 = "";
+            this.ObjValue3 = "";
+            this.ObjValue4 = "";
         }
  
-          create(ParentID, ObjID, farbe, titel, image, IDMain, IDFull, MenuType){
-            this.ObjectID = ObjID;
+          create(ParentID, farbe, titel, image, IDMain, IDFull, MenuType){
             var elem1 = document.createElement("div"); 
             elem1.className = "GlideButton"; 
             elem1.classList.add(farbe);
@@ -1107,19 +1109,19 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
             elem2a.append(elem4);
              
             var elem5 = document.createElement("div"); 
-            elem5.id = ObjID + "value1"; 
+            this.ObjValue1 = elem5; 
             elem4.append(elem5);
         
             var elem6 = document.createElement("div"); 
-            elem6.id = ObjID + "value2"; 
+            this.ObjValue2 = elem6;
             elem4.append(elem6);
         
             var elem7 = document.createElement("div"); 
-            elem7.id = ObjID + "value3"; 
+            this.ObjValue3 = elem7;
             elem4.append(elem7);
         
             var elem8 = document.createElement("div"); 
-            elem8.id =  ObjID + "value4"; 
+            this.ObjValue4 = elem8;
             elem4.append(elem8);
             
             document.getElementById(ParentID).appendChild(elem1);  
@@ -1135,10 +1137,10 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
             this.value2 = value2;
             this.value3 = value3;
             this.value4 = value4;
-            document.getElementById(this.ObjectID + "value1").innerHTML = this.value1 + this.unit1; 
-            document.getElementById(this.ObjectID + "value2").innerHTML = this.value2 + this.unit2;        
-            document.getElementById(this.ObjectID + "value3").innerHTML = this.value3 + this.unit3; 
-            document.getElementById(this.ObjectID + "value4").innerHTML = this.value4 + this.unit4;          
+            this.ObjValue1.innerHTML = this.value1 + this.unit1; 
+            this.ObjValue2.innerHTML = this.value2 + this.unit2;        
+            this.ObjValue3.innerHTML = this.value3 + this.unit3; 
+            this.ObjValue4.innerHTML = this.value4 + this.unit4;          
         };
     }  
     
