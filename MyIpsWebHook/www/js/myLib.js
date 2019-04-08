@@ -2470,6 +2470,13 @@ class CtrlStatButton {
             elemStop.style.height = "50px";
             elemStop.value = "Stop";
             container.append(elemStop);   
+
+            var elemInc = document.createElement("button");
+            elemInc.className = "start";
+            elemInc.style.width = "150px";
+            elemInc.style.height = "50px";
+            elemInc.value = "+";
+            container.append(elemInc);
             
             document.getElementById(ParentID).appendChild(container);
         }
@@ -2502,8 +2509,13 @@ class CtrlStatButton {
 
 		    	clock.stop();
 		    });
-		
-		
+                    
+		    jQuery('.inc').click(function(e) {
+                        var time = clock.getTime().time;
+                        clock.stop();
+                        clock.setTime(time+120);
+		    });
+                                       
         }
     }
  
