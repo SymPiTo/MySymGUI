@@ -87,7 +87,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuHz,
 .MenuRollo,
 .MenuNet,
-.HeizungAll,
+.HzAll,
 .Wetter,
 .WetterCtrl,
 .Uhr,
@@ -178,7 +178,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuHz::-webkit-scrollbar,
 .MenuRollo::-webkit-scrollbar,
 .MenuNet::-webkit-scrollbar,
-.HeizungAll::-webkit-scrollbar,
+.HzAll::-webkit-scrollbar,
 .RadioStation::-webkit-scrollbar,
 .RolladenAll::-webkit-scrollbar,
 .Network::-webkit-scrollbar,
@@ -230,19 +230,22 @@ WebKit inertia scrolling is being added here for any present/future devices that
         
 }
 
-.HeizungAll{
-	position:absolute;
-	top: 5vh;
-        left:8.6vw;
-	width: 0px;
-	height: 95vh;
-	background: hsl(174, 100%, 10%);
-	/*border-right-color: #FFFFFF;
-	border-right-style: solid;
-	border-right-width: 1px; */
+.HzAll{
+            position:absolute;
+            top: 5vh;
+            width: 0px;
+            height: 95vh;
+            left: 16.2vw;
+ 
 }
 
-
+    .HzAllCtrl{
+            position:absolute;
+            top: 5vh;
+            width: 0px;
+            height: 95vh;
+            left: 74vw;
+    }
 
 
     
