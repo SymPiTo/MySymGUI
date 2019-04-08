@@ -2472,7 +2472,7 @@ class CtrlStatButton {
             container.append(elemStop);   
 
             var elemInc = document.createElement("button");
-            elemInc.className = "start";
+            elemInc.className = "inc";
             elemInc.style.width = "150px";
             elemInc.style.height = "50px";
             elemInc.value = "+";
