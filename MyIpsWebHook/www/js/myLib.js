@@ -2459,14 +2459,16 @@ class CtrlStatButton {
             
             var elemStart = document.createElement("button");
             elemStart.className = "start";
-            elemStart.style.width = "250px";
+            elemStart.style.width = "150px";
             elemStart.style.height = "50px";
+            elemStart.value = "Start";
             container.append(elemStart); 
             
             var elemStop = document.createElement("button");
             elemStop.className = "stop";
-            elemStop.style.width = "250px";
+            elemStop.style.width = "150px";
             elemStop.style.height = "50px";
+            elemStop.value = "Stop";
             container.append(elemStop);   
             
             document.getElementById(ParentID).appendChild(container);
