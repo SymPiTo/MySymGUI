@@ -435,20 +435,18 @@
         <script>  
             var SubMenuHzAll = new GlideButton();
             SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", "_Heizung_BW2.png", "MainHzAll","", "SM" );  
+            var SubMenuHzWZ = new GlideButton();
+            SubMenuHzWZ.create("SubMenuHz", "cyan", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHeizungWZ","", "SM" );  
+             var SubMenuHzKZ = new GlideButton();
+            SubMenuHzKZ.create("SubMenuHz", "olive", "Heizung Kinderzimmer", "_Heizung_BW2.png", "MainHzKZ","", "SM" );
+            var SubMenuHzSZ = new GlideButton();
+            SubMenuHzSZ.create("SubMenuHz", "sandy", "Heizung Schlafzimmer", "_Heizung_BW2.png", "MainHzSZ","", "SM" );
+            var SubMenuHzK = new GlideButton();
+            SubMenuHzK.create("SubMenuHz", "midgreen", "Heizung Kueche", "_Heizung_BW2.png", "MainHzK","", "SM" ); 
         </script> 
         
         <!--        
-		<subMenu id="SubMenuHz" class="MenuHz">
-			<div class="buttonglide" onclick="HeizungAll()" style="background:-webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%));">
-					<div>
-						<img class="icon" src="images/_Heizung_BW2.png"  alt="image not found"/>
-					</div>
-					<div>
-						<div class="room">
-							<a >Heizung Uebersicht</a>
-						</div>
-					</div>	
-			</div>
+ 
 			<div class="buttonglide" onclick="HeizungWZ()" style="background:-webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%));">
 					<div>
 						<img class="icon" src="images/_Heizung_BW2.png"  alt="image not found"/>
