@@ -429,7 +429,15 @@
 		 
 
 
-		<!-- ************************ Menue  Heizung  ************************  -->
+	<!-- ************************ Menue  Heizung  ************************  -->
+	<subMenu id="SubMenuHz" class="MenuHz"></subMenu>
+  		
+        <script>  
+            var SubMenuHzAll = new GlideButton();
+            SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", "_Heizung_BW2.png", "HeizungAll","", "SM" );  
+        </script> 
+        
+        <!--        
 		<subMenu id="SubMenuHz" class="MenuHz">
 			<div class="buttonglide" onclick="HeizungAll()" style="background:-webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%));">
 					<div>
@@ -482,6 +490,7 @@
 					</div>	
 			</div>
  		</subMenu>
+        -->
 		<!-- ************************Menu  Rolladen  ************************  -->
 		<subMenu id="SubMenuRollo" class="MenuRollo">
 			<div class="GlideButton brown" onclick="RolladenAll()" >

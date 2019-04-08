@@ -95,12 +95,13 @@
                 document.getElementsByClassName("Top")[0].style.color = "white";
                 document.getElementById("TopTitle").innerHTML = 'Rolladen';
         }	
-
+/*
         function HeizungAll(){ 
                 closeallglides();
                 document.getElementsByClassName("HeizungAll")[0].style.width = "calc(65vw - 40px)";
                 document.getElementsByClassName("HeizungCtrlWZ")[0].style.width = "calc(35vw - 0px)";
         }
+*/
         function HeizungWZAll(){ 
                 document.getElementsByClassName("HeizungCtrlSZ")[0].style.width = "0px";
                 document.getElementsByClassName("HeizungCtrlK")[0].style.width = "0px";
