@@ -2588,6 +2588,7 @@ class CtrlStatButton {
 		    });
 		    jQuery('.decH').click(function(e) {
                         var time = clock.getTime().time;
+                        if (time < 3588){time = 3599};
                         clock.stop();
                         clock.setTime(time-3599);
 		    });
