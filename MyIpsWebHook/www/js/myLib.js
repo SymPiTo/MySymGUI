@@ -2475,6 +2475,7 @@ class CtrlStatButton {
                     elemDecH.style.width = "50px";
                     elemDecH.style.height = "50px";
                     elemDecH.style.fontSize = "20px";
+                    elemDecH.style.margin = "10px";
                     elemDecH.innerHTML = "-";
                 contH.append(elemDecH);
             
@@ -2486,6 +2487,7 @@ class CtrlStatButton {
                     elemIncMin.style.width = "50px";
                     elemIncMin.style.height = "50px";
                     elemIncMin.style.fontSize = "20px";
+                    elemIncMin.style.margin = "10px";
                     elemIncMin.innerHTML = "+";
                     contM.append(elemIncMin);
                     var elemDecMin = document.createElement("button");
@@ -2493,6 +2495,7 @@ class CtrlStatButton {
                     elemDecMin.style.width = "50px";
                     elemDecMin.style.height = "50px";
                     elemDecMin.style.fontSize = "20px";
+                    elemDecMin.style.margin = "10px";
                     elemDecMin.innerHTML = "-";
                 contM.append(elemDecMin);
             
@@ -2505,6 +2508,7 @@ class CtrlStatButton {
                     elemIncSec.style.width = "50px";
                     elemIncSec.style.height = "50px";
                     elemIncSec.style.fontSize = "20px";
+                    elemIncSec.style.margin = "10px";
                     elemIncSec.innerHTML = "+";
                     contS.append(elemIncSec);
                     var elemDecSec = document.createElement("button");
@@ -2512,6 +2516,7 @@ class CtrlStatButton {
                     elemDecSec.style.width = "50px";
                     elemDecSec.style.height = "50px";
                     elemDecSec.style.fontSize = "20px";
+                    elemDecSec.style.margin = "10px";
                     elemDecSec.innerHTML = "-";
                 contS.append(elemDecSec);
             contHMS.append(contS);
