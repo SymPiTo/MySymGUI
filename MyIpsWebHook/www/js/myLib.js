@@ -2457,35 +2457,23 @@ class CtrlStatButton {
             this.klasse = elem.className;
             container.append(elem); 
             
-            var elemStart = document.createElement("button");
-            elemStart.className = "start";
-            elemStart.style.width = "150px";
-            elemStart.style.height = "50px";
-            elemStart.innerHTML = "Start";
-            container.append(elemStart); 
-            
-            var elemStop = document.createElement("button");
-            elemStop.className = "stop";
-            elemStop.style.width = "150px";
-            elemStop.style.height = "50px";
-            elemStop.innerHTML = "Stop";
-            container.append(elemStop);   
+  
 
-            var elemIncSec = document.createElement("button");
-            elemIncSec.className = "incSec";
-            elemIncSec.style.width = "50px";
-            elemIncSec.style.height = "50px";
-            elemIncSec.style.fontSize = "20px";
-            elemIncSec.innerHTML = "+";
-            container.append(elemIncSec);
+            var elemIncH = document.createElement("button");
+            elemIncH.className = "incH";
+            elemIncH.style.width = "50px";
+            elemIncH.style.height = "50px";
+            elemIncH.style.fontSize = "20px";
+            elemIncH.innerHTML = "+";
+            container.append(elemIncH);
             
-            var elemDecSec = document.createElement("button");
-            elemDecSec.className = "decSec";
-            elemDecSec.style.width = "50px";
-            elemDecSec.style.height = "50px";
-            elemDecSec.style.fontSize = "20px";
-            elemDecSec.innerHTML = "-";
-            container.append(elemDecSec);
+            var elemDecH = document.createElement("button");
+            elemDecH.className = "decH";
+            elemDecH.style.width = "50px";
+            elemDecH.style.height = "50px";
+            elemDecH.style.fontSize = "20px";
+            elemDecH.innerHTML = "-";
+            container.append(elemDecH);
 
             var elemIncMin = document.createElement("button");
             elemIncMin.className = "incMin";
@@ -2502,6 +2490,36 @@ class CtrlStatButton {
             elemDecMin.style.fontSize = "20px";
             elemDecMin.innerHTML = "-";
             container.append(elemDecMin);
+
+            var elemIncSec = document.createElement("button");
+            elemIncSec.className = "incSec";
+            elemIncSec.style.width = "50px";
+            elemIncSec.style.height = "50px";
+            elemIncSec.style.fontSize = "20px";
+            elemIncSec.innerHTML = "+";
+            container.append(elemIncSec);
+            
+            var elemDecSec = document.createElement("button");
+            elemDecSec.className = "decSec";
+            elemDecSec.style.width = "50px";
+            elemDecSec.style.height = "50px";
+            elemDecSec.style.fontSize = "20px";
+            elemDecSec.innerHTML = "-";
+            container.append(elemDecSec);
+            
+            var elemStart = document.createElement("button");
+            elemStart.className = "start";
+            elemStart.style.width = "150px";
+            elemStart.style.height = "50px";
+            elemStart.innerHTML = "Start";
+            container.append(elemStart); 
+            
+            var elemStop = document.createElement("button");
+            elemStop.className = "stop";
+            elemStop.style.width = "150px";
+            elemStop.style.height = "50px";
+            elemStop.innerHTML = "Stop";
+            container.append(elemStop); 
             
             document.getElementById(ParentID).appendChild(container);
         }
@@ -2556,7 +2574,17 @@ class CtrlStatButton {
                         clock.stop();
                         clock.setTime(time-59);
 		    });
-                                       
+
+                    jQuery('.incH').click(function(e) {
+                        var time = clock.getTime().time;
+                        clock.stop();
+                        clock.setTime(time+361);
+		    });
+		    jQuery('.decH').click(function(e) {
+                        var time = clock.getTime().time;
+                        clock.stop();
+                        clock.setTime(time-359);
+		    });
         }
     }
  
