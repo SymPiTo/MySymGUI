@@ -2578,12 +2578,12 @@ class CtrlStatButton {
                     jQuery('.incH').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time+361);
+                        clock.setTime(time+3601);
 		    });
 		    jQuery('.decH').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time-359);
+                        clock.setTime(time-3509);
 		    });
         }
     }
