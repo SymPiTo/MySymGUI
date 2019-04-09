@@ -2575,6 +2575,7 @@ class CtrlStatButton {
 		    });
 		    jQuery('.decMin').click(function(e) {
                         var time = clock.getTime().time;
+                        if (time < 61){time = 60};
                         clock.stop();
                         clock.setTime(time-59);
 		    });
