@@ -2446,7 +2446,7 @@ class CtrlStatButton {
         constructor() {
             this.ID = "";
             this.klasse = "";
-             
+             this.wert = "";
         }
 
         create(ParentID){
@@ -2512,6 +2512,7 @@ class CtrlStatButton {
             elemStart.style.width = "150px";
             elemStart.style.height = "50px";
             elemStart.innerHTML = "Start";
+            this.wert = elemStart;
             container.append(elemStart); 
             
             var elemStop = document.createElement("button");
@@ -2555,6 +2556,7 @@ class CtrlStatButton {
 
 		    jQuery('.incSec').click(function(e) {
                         var time = clock.getTime().time;
+                        this.wert.innerHTML = time;
                         clock.stop();
                         clock.setTime(time+2);
 		    });
