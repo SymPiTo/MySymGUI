@@ -2458,14 +2458,17 @@ class CtrlStatButton {
             container.append(elem); 
             
   
-
+            var contH = document.createElement("div");
+            contH.style.postion = "relative";
+            contH.style.top = "50px";
+            contH.style.left = "50px";
             var elemIncH = document.createElement("button");
             elemIncH.className = "incH";
             elemIncH.style.width = "50px";
             elemIncH.style.height = "50px";
             elemIncH.style.fontSize = "20px";
             elemIncH.innerHTML = "+";
-            container.append(elemIncH);
+            contH.append(elemIncH);
             
             var elemDecH = document.createElement("button");
             elemDecH.className = "decH";
@@ -2473,8 +2476,10 @@ class CtrlStatButton {
             elemDecH.style.height = "50px";
             elemDecH.style.fontSize = "20px";
             elemDecH.innerHTML = "-";
-            container.append(elemDecH);
-
+            contH.append(elemDecH);
+            
+            container.append(contH);
+            
             var elemIncMin = document.createElement("button");
             elemIncMin.className = "incMin";
             elemIncMin.style.width = "50px";
