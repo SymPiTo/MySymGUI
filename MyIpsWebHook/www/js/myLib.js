@@ -2556,7 +2556,7 @@ class CtrlStatButton {
 
 		    jQuery('.incSec').click(function(e) {
                         var time = clock.getTime().time;
-                        
+                        if (time > 57){time = 58};
                         clock.stop();
                         clock.setTime(time+2);
 		    });
@@ -2568,6 +2568,7 @@ class CtrlStatButton {
                     
 		    jQuery('.incMin').click(function(e) {
                         var time = clock.getTime().time;
+                        if (time > 3538){time = 3539};
                         clock.stop();
                         clock.setTime(time+61);
 		    });
@@ -2579,6 +2580,7 @@ class CtrlStatButton {
 
                     jQuery('.incH').click(function(e) {
                         var time = clock.getTime().time;
+                        if (time > 82798){time = 82799};
                         clock.stop();
                         clock.setTime(time+3601);
 		    });
