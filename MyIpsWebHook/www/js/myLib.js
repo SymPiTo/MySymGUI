@@ -2532,21 +2532,21 @@ class CtrlStatButton {
             contSS.style.justifyContent = "center";
             var elemStart = document.createElement("button");
             elemStart.className = "start";
-            elemStart.style.width = "200px";
-            elemStart.style.height = "30px";
-            elemStart.style.marginRight = "20px";
+            elemStart.style.width = "70px";
+            elemStart.style.height = "50px";
+            elemStart.style.marginRight = "2px";
             elemStart.innerHTML = "Start";
             this.wert = elemStart;
             contSS.append(elemStart); 
             
             var elemStop = document.createElement("button");
             elemStop.className = "stop";
-            elemStop.style.width = "200px";
-            elemStop.style.height = "30px";
-            elemStop.style.marginLeft = "20px";
+            elemStop.style.width = "70px";
+            elemStop.style.height = "50px";
+            elemStop.style.marginLeft = "2px";
             elemStop.innerHTML = "Stop";
             contSS.append(elemStop); 
-            container.append(contSS);
+            contHMS.append(contSS);
             
             document.getElementById(ParentID).appendChild(container);
         }
