@@ -2469,7 +2469,7 @@ class CtrlStatButton {
                     elemIncH.style.width = "50px";
                     elemIncH.style.height = "50px";
                     elemIncH.style.fontSize = "20px";
-                    elemIncH.style.margin = "10px";
+                    elemIncH.style.marginRight = "5px";
                     elemIncH.innerHTML = "+";
                     contH.append(elemIncH);
                     var elemDecH = document.createElement("button");
@@ -2477,7 +2477,7 @@ class CtrlStatButton {
                     elemDecH.style.width = "50px";
                     elemDecH.style.height = "50px";
                     elemDecH.style.fontSize = "20px";
-                    elemDecH.style.margin = "10px";
+                    elemDecH.style.marginLeft = "5px";
                     elemDecH.innerHTML = "-";
                 contH.append(elemDecH);
             
@@ -2489,7 +2489,7 @@ class CtrlStatButton {
                     elemIncMin.style.width = "50px";
                     elemIncMin.style.height = "50px";
                     elemIncMin.style.fontSize = "20px";
-                    elemIncMin.style.margin = "10px";
+                    elemIncMin.style.marginRight = "5px";
                     elemIncMin.innerHTML = "+";
                     contM.append(elemIncMin);
                     var elemDecMin = document.createElement("button");
@@ -2497,7 +2497,7 @@ class CtrlStatButton {
                     elemDecMin.style.width = "50px";
                     elemDecMin.style.height = "50px";
                     elemDecMin.style.fontSize = "20px";
-                    elemDecMin.style.margin = "10px";
+                    elemDecMin.style.marginLeft = "50px";
                     elemDecMin.innerHTML = "-";
                 contM.append(elemDecMin);
             
@@ -2510,7 +2510,7 @@ class CtrlStatButton {
                     elemIncSec.style.width = "50px";
                     elemIncSec.style.height = "50px";
                     elemIncSec.style.fontSize = "20px";
-                    elemIncSec.style.margin = "10px";
+                    elemIncSec.style.marginRight = "5px";
                     elemIncSec.innerHTML = "+";
                     contS.append(elemIncSec);
                     var elemDecSec = document.createElement("button");
@@ -2518,7 +2518,7 @@ class CtrlStatButton {
                     elemDecSec.style.width = "50px";
                     elemDecSec.style.height = "50px";
                     elemDecSec.style.fontSize = "20px";
-                    elemDecSec.style.margin = "10px";
+                    elemDecSec.style.marginLeft = "50px";
                     elemDecSec.innerHTML = "-";
                 contS.append(elemDecSec);
             contHMS.append(contS);
