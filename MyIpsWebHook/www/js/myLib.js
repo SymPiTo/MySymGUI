@@ -2456,8 +2456,8 @@ class CtrlStatButton {
             elem.style.margin = "2em";
             this.klasse = elem.className;
             container.append(elem); 
-            
   
+            
             var contH = document.createElement("div");
             contH.style.postion = "absolute";
             contH.style.top = "50px";
@@ -2471,6 +2471,7 @@ class CtrlStatButton {
             elemIncH.innerHTML = "+";
             contH.append(elemIncH);
             
+            
             var elemDecH = document.createElement("button");
             elemDecH.className = "decH";
             elemDecH.style.width = "50px";
@@ -2481,13 +2482,15 @@ class CtrlStatButton {
             
             container.append(contH);
             
+            var contM = document.createElement("div");
+            
             var elemIncMin = document.createElement("button");
             elemIncMin.className = "incMin";
             elemIncMin.style.width = "50px";
             elemIncMin.style.height = "50px";
             elemIncMin.style.fontSize = "20px";
             elemIncMin.innerHTML = "+";
-            container.append(elemIncMin);
+            contM.append(elemIncMin);
             
             var elemDecMin = document.createElement("button");
             elemDecMin.className = "decMin";
@@ -2495,15 +2498,20 @@ class CtrlStatButton {
             elemDecMin.style.height = "50px";
             elemDecMin.style.fontSize = "20px";
             elemDecMin.innerHTML = "-";
-            container.append(elemDecMin);
-
+            contM.append(elemDecMin);
+            
+            container.append(contM);
+            
+            
+            var contS = document.createElement("div");
+            
             var elemIncSec = document.createElement("button");
             elemIncSec.className = "incSec";
             elemIncSec.style.width = "50px";
             elemIncSec.style.height = "50px";
             elemIncSec.style.fontSize = "20px";
             elemIncSec.innerHTML = "+";
-            container.append(elemIncSec);
+            contS.append(elemIncSec);
             
             var elemDecSec = document.createElement("button");
             elemDecSec.className = "decSec";
@@ -2511,7 +2519,15 @@ class CtrlStatButton {
             elemDecSec.style.height = "50px";
             elemDecSec.style.fontSize = "20px";
             elemDecSec.innerHTML = "-";
-            container.append(elemDecSec);
+            contS.append(elemDecSec);
+            
+            container.append(contS);
+            
+            
+            var contSS = document.createElement("div");
+            contSS.style.position = "absolute";
+            contSS.style.top = "300px";
+            contSS.style.left = "30px";
             
             var elemStart = document.createElement("button");
             elemStart.className = "start";
@@ -2519,14 +2535,15 @@ class CtrlStatButton {
             elemStart.style.height = "50px";
             elemStart.innerHTML = "Start";
             this.wert = elemStart;
-            container.append(elemStart); 
+            contSS.append(elemStart); 
             
             var elemStop = document.createElement("button");
             elemStop.className = "stop";
             elemStop.style.width = "150px";
             elemStop.style.height = "50px";
             elemStop.innerHTML = "Stop";
-            container.append(elemStop); 
+            contSS.append(elemStop); 
+            container.append(contSS);
             
             document.getElementById(ParentID).appendChild(container);
         }
