@@ -2543,7 +2543,7 @@ class CtrlStatButton {
 		    jQuery('.decSec').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time-1);
+                        clock.setTime(time-0);
 		    });
                     
 		    jQuery('.incMin').click(function(e) {
@@ -2554,7 +2554,7 @@ class CtrlStatButton {
 		    jQuery('.decMin').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time-61);
+                        clock.setTime(time-59);
 		    });
                                        
         }
