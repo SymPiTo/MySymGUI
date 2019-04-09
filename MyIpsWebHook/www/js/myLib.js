@@ -2461,12 +2461,13 @@ class CtrlStatButton {
             var contH = document.createElement("div");
             contH.style.postion = "relative";
             contH.style.top = "50px";
-            contH.style.left = "50px";
+            contH.style.left = "5px";
             var elemIncH = document.createElement("button");
             elemIncH.className = "incH";
             elemIncH.style.width = "50px";
             elemIncH.style.height = "50px";
             elemIncH.style.fontSize = "20px";
+            elemIncH.style.margin = "10px";
             elemIncH.innerHTML = "+";
             contH.append(elemIncH);
             
