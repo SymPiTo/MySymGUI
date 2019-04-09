@@ -2458,6 +2458,8 @@ class CtrlStatButton {
             container.append(elem); 
   
             var contHMS = document.createElement("div");
+            contHMS.style.flexDirection = "row";
+            
                 var contH = document.createElement("div");
                     var elemIncH = document.createElement("button");
                     elemIncH.className = "incH";
