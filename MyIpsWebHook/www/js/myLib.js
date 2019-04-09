@@ -2514,7 +2514,7 @@ class CtrlStatButton {
 		    jQuery('.inc').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time+60);
+                        clock.setTime(time+61);
 		    });
                                        
         }
