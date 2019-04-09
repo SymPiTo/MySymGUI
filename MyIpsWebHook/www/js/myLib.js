@@ -2525,9 +2525,10 @@ class CtrlStatButton {
         container.append(contHMS);            
     
             var contSS = document.createElement("div");
-            contSS.style.position = "absolute";
-            contSS.style.top = "300px";
-            contSS.style.left = "130px";
+            contSS.style.marginLeft = "10px";
+            contSS.style.marginRight = "10px";
+            contSS.style.display = "flex";
+            contSS.style.flexDirection = "row";
             
             var elemStart = document.createElement("button");
             elemStart.className = "start";
