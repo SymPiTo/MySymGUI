@@ -2460,7 +2460,7 @@ class CtrlStatButton {
             var contHMS = document.createElement("div");
             contHMS.style.display = "flex";
             contHMS.style.flexDirection = "row";
-            contHMS.style.alignContent = "space-between";
+            contHMS.style.justifyContent = "space-between";
                 var contH = document.createElement("div");
                     var elemIncH = document.createElement("button");
                     elemIncH.className = "incH";
