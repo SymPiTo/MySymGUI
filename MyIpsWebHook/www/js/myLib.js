@@ -2461,21 +2461,22 @@ class CtrlStatButton {
             elemStart.className = "start";
             elemStart.style.width = "150px";
             elemStart.style.height = "50px";
-            elemStart.value = "Start";
+            elemStart.innerHTML = "Start";
             container.append(elemStart); 
             
             var elemStop = document.createElement("button");
             elemStop.className = "stop";
             elemStop.style.width = "150px";
             elemStop.style.height = "50px";
-            elemStop.value = "Stop";
+            elemStop.innerHTML = "Stop";
             container.append(elemStop);   
 
             var elemInc = document.createElement("button");
             elemInc.className = "inc";
-            elemInc.style.width = "150px";
+            elemInc.style.width = "50px";
             elemInc.style.height = "50px";
-            elemInc.value = "+";
+            elemInc.style.fontSize = "20px";
+            elemInc.innerHTML = "+";
             container.append(elemInc);
             
             document.getElementById(ParentID).appendChild(container);
@@ -2490,7 +2491,7 @@ class CtrlStatButton {
  	
 			
 			var clock = jQuery('.clock').FlipClock(10, {
-		        clockFace: 'MinuteCounter',
+		        clockFace: 'HourlyCounter',
 		        countdown: true,
 		        autoStart: false,
 		        callbacks: {
@@ -2513,7 +2514,7 @@ class CtrlStatButton {
 		    jQuery('.inc').click(function(e) {
                         var time = clock.getTime().time;
                         clock.stop();
-                        clock.setTime(time+120);
+                        clock.setTime(time+60);
 		    });
                                        
         }
