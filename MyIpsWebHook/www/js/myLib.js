@@ -2461,7 +2461,7 @@ class CtrlStatButton {
             var contH = document.createElement("div");
             contH.style.postion = "relative";
             contH.style.top = "50px";
-            contH.style.left = "5px";
+            contH.style.left = "-50px";
             var elemIncH = document.createElement("button");
             elemIncH.className = "incH";
             elemIncH.style.width = "50px";
