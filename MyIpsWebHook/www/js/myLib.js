@@ -2532,8 +2532,8 @@ class CtrlStatButton {
             contSS.style.justifyContent = "center";
             var elemStart = document.createElement("button");
             elemStart.className = "start";
-            elemStart.style.width = "150px";
-            elemStart.style.height = "50px";
+            elemStart.style.width = "200px";
+            elemStart.style.height = "30px";
             elemStart.style.marginRight = "20px";
             elemStart.innerHTML = "Start";
             this.wert = elemStart;
@@ -2541,8 +2541,8 @@ class CtrlStatButton {
             
             var elemStop = document.createElement("button");
             elemStop.className = "stop";
-            elemStop.style.width = "150px";
-            elemStop.style.height = "50px";
+            elemStop.style.width = "200px";
+            elemStop.style.height = "30px";
             elemStop.style.marginLeft = "20px";
             elemStop.innerHTML = "Stop";
             contSS.append(elemStop); 
