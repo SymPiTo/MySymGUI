@@ -2527,7 +2527,7 @@ class CtrlStatButton {
             var contSS = document.createElement("div");
             contSS.style.position = "absolute";
             contSS.style.top = "300px";
-            contSS.style.left = "30px";
+            contSS.style.left = "130px";
             
             var elemStart = document.createElement("button");
             elemStart.className = "start";
