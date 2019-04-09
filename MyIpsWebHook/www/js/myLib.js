@@ -2534,6 +2534,7 @@ class CtrlStatButton {
             elemStart.className = "start";
             elemStart.style.width = "150px";
             elemStart.style.height = "50px";
+            elemStart.style.marginRight = "20px";
             elemStart.innerHTML = "Start";
             this.wert = elemStart;
             contSS.append(elemStart); 
@@ -2542,6 +2543,7 @@ class CtrlStatButton {
             elemStop.className = "stop";
             elemStop.style.width = "150px";
             elemStop.style.height = "50px";
+            elemStop.style.marginLeft = "20px";
             elemStop.innerHTML = "Stop";
             contSS.append(elemStop); 
             container.append(contSS);
