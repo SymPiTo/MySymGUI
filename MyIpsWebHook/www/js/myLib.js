@@ -2556,7 +2556,7 @@ class CtrlStatButton {
 
 		    jQuery('.incSec').click(function(e) {
                         var time = clock.getTime().time;
-                        if (time > 57){time = 58};
+                        if (time > 57){time = -2};
                         clock.stop();
                         clock.setTime(time+2);
 		    });
