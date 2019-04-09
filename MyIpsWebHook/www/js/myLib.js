@@ -2458,7 +2458,7 @@ class CtrlStatButton {
             container.append(elem); 
   
             var contHMS = document.createElement("div");
-            contHMS.style.width = "400px";
+            contHMS.style.width = "600px";
             contHMS.style.display = "flex";
             contHMS.style.flexDirection = "row";
             contHMS.style.justifyContent = "space-between";
