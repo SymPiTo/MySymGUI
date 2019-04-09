@@ -2459,7 +2459,7 @@ class CtrlStatButton {
             
   
             var contH = document.createElement("div");
-            contH.style.postion = "relative";
+            contH.style.postion = "absolute";
             contH.style.top = "50px";
             contH.style.left = "-50px";
             var elemIncH = document.createElement("button");
