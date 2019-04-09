@@ -2457,73 +2457,63 @@ class CtrlStatButton {
             this.klasse = elem.className;
             container.append(elem); 
   
+            var contHMS = document.createElement("div");
+                var contH = document.createElement("div");
+                    var elemIncH = document.createElement("button");
+                    elemIncH.className = "incH";
+                    elemIncH.style.width = "50px";
+                    elemIncH.style.height = "50px";
+                    elemIncH.style.fontSize = "20px";
+                    elemIncH.style.margin = "10px";
+                    elemIncH.innerHTML = "+";
+                    contH.append(elemIncH);
+                    var elemDecH = document.createElement("button");
+                    elemDecH.className = "decH";
+                    elemDecH.style.width = "50px";
+                    elemDecH.style.height = "50px";
+                    elemDecH.style.fontSize = "20px";
+                    elemDecH.innerHTML = "-";
+                contH.append(elemDecH);
             
-            var contH = document.createElement("div");
-            contH.style.postion = "absolute";
-            contH.style.top = "50px";
-            contH.style.left = "-50px";
-            var elemIncH = document.createElement("button");
-            elemIncH.className = "incH";
-            elemIncH.style.width = "50px";
-            elemIncH.style.height = "50px";
-            elemIncH.style.fontSize = "20px";
-            elemIncH.style.margin = "10px";
-            elemIncH.innerHTML = "+";
-            contH.append(elemIncH);
+            contHMS.append(contH);
             
+                var contM = document.createElement("div");
+                    var elemIncMin = document.createElement("button");
+                    elemIncMin.className = "incMin";
+                    elemIncMin.style.width = "50px";
+                    elemIncMin.style.height = "50px";
+                    elemIncMin.style.fontSize = "20px";
+                    elemIncMin.innerHTML = "+";
+                    contM.append(elemIncMin);
+                    var elemDecMin = document.createElement("button");
+                    elemDecMin.className = "decMin";
+                    elemDecMin.style.width = "50px";
+                    elemDecMin.style.height = "50px";
+                    elemDecMin.style.fontSize = "20px";
+                    elemDecMin.innerHTML = "-";
+                contM.append(elemDecMin);
             
-            var elemDecH = document.createElement("button");
-            elemDecH.className = "decH";
-            elemDecH.style.width = "50px";
-            elemDecH.style.height = "50px";
-            elemDecH.style.fontSize = "20px";
-            elemDecH.innerHTML = "-";
-            contH.append(elemDecH);
-            
-            container.append(contH);
-            
-            var contM = document.createElement("div");
-            
-            var elemIncMin = document.createElement("button");
-            elemIncMin.className = "incMin";
-            elemIncMin.style.width = "50px";
-            elemIncMin.style.height = "50px";
-            elemIncMin.style.fontSize = "20px";
-            elemIncMin.innerHTML = "+";
-            contM.append(elemIncMin);
-            
-            var elemDecMin = document.createElement("button");
-            elemDecMin.className = "decMin";
-            elemDecMin.style.width = "50px";
-            elemDecMin.style.height = "50px";
-            elemDecMin.style.fontSize = "20px";
-            elemDecMin.innerHTML = "-";
-            contM.append(elemDecMin);
-            
-            container.append(contM);
+            contHMS.append(contM);
             
             
-            var contS = document.createElement("div");
-            
-            var elemIncSec = document.createElement("button");
-            elemIncSec.className = "incSec";
-            elemIncSec.style.width = "50px";
-            elemIncSec.style.height = "50px";
-            elemIncSec.style.fontSize = "20px";
-            elemIncSec.innerHTML = "+";
-            contS.append(elemIncSec);
-            
-            var elemDecSec = document.createElement("button");
-            elemDecSec.className = "decSec";
-            elemDecSec.style.width = "50px";
-            elemDecSec.style.height = "50px";
-            elemDecSec.style.fontSize = "20px";
-            elemDecSec.innerHTML = "-";
-            contS.append(elemDecSec);
-            
-            container.append(contS);
-            
-            
+                var contS = document.createElement("div");
+                    var elemIncSec = document.createElement("button");
+                    elemIncSec.className = "incSec";
+                    elemIncSec.style.width = "50px";
+                    elemIncSec.style.height = "50px";
+                    elemIncSec.style.fontSize = "20px";
+                    elemIncSec.innerHTML = "+";
+                    contS.append(elemIncSec);
+                    var elemDecSec = document.createElement("button");
+                    elemDecSec.className = "decSec";
+                    elemDecSec.style.width = "50px";
+                    elemDecSec.style.height = "50px";
+                    elemDecSec.style.fontSize = "20px";
+                    elemDecSec.innerHTML = "-";
+                contS.append(elemDecSec);
+            contHMS.append(contS);
+        container.append(contHMS);            
+    
             var contSS = document.createElement("div");
             contSS.style.position = "absolute";
             contSS.style.top = "300px";
