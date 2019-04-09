@@ -2497,7 +2497,7 @@ class CtrlStatButton {
                     elemDecMin.style.width = "50px";
                     elemDecMin.style.height = "50px";
                     elemDecMin.style.fontSize = "20px";
-                    elemDecMin.style.marginLeft = "50px";
+                    elemDecMin.style.marginLeft = "5px";
                     elemDecMin.innerHTML = "-";
                 contM.append(elemDecMin);
             
@@ -2518,7 +2518,7 @@ class CtrlStatButton {
                     elemDecSec.style.width = "50px";
                     elemDecSec.style.height = "50px";
                     elemDecSec.style.fontSize = "20px";
-                    elemDecSec.style.marginLeft = "50px";
+                    elemDecSec.style.marginLeft = "5px";
                     elemDecSec.innerHTML = "-";
                 contS.append(elemDecSec);
             contHMS.append(contS);
