@@ -2529,7 +2529,7 @@ class CtrlStatButton {
             contSS.style.marginRight = "10px";
             contSS.style.display = "flex";
             contSS.style.flexDirection = "row";
-            
+            contSS.style.justifyContent = "center";
             var elemStart = document.createElement("button");
             elemStart.className = "start";
             elemStart.style.width = "150px";
