@@ -2679,6 +2679,68 @@ class CtrlStatButton {
                         clock2.setTime(time-3599);
 		    });
         }
+        
+        countdown3(){
+			var clock3 = jQuery('.clock3').FlipClock(10, {
+		        clockFace: 'HourlyCounter',
+		        countdown: true,
+		        autoStart: false,
+		        callbacks: {
+		        	start: function() {
+		        		
+		        	}
+		        }
+		    });
+
+		    jQuery('.start3').click(function(e) {
+
+		    	clock3.start();
+		    });
+
+		    jQuery('.stop3').click(function(e) {
+
+		    	clock3.stop();
+		    });
+
+		    jQuery('.incSec3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time > 57){time = -2};
+                        clock3.stop();
+                        clock3.setTime(time+2);
+		    });
+		    jQuery('.decSec3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time < 1){time = 0};
+                        clock3.stop();
+                        clock3.setTime(time-0);
+		    });
+                    
+		    jQuery('.incMin3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time > 3538){time = 3539};
+                        clock3.stop();
+                        clock3.setTime(time+61);
+		    });
+		    jQuery('.decMin3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time < 61){time = 60};
+                        clock3.stop();
+                        clock3.setTime(time-59);
+		    });
+
+                    jQuery('.incH3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time > 82798){time = 82799};
+                        clock3.stop();
+                        clock3.setTime(time+3601);
+		    });
+		    jQuery('.decH3').click(function(e) {
+                        var time = clock3.getTime().time;
+                        if (time < 3588){time = 3599};
+                        clock3.stop();
+                        clock3.setTime(time-3599);
+		    });
+        }
     }
  
      /* --------------------- Klasse WeatherLabel ---------------------------------------- */
