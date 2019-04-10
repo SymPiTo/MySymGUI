@@ -2449,10 +2449,10 @@ class CtrlStatButton {
              this.wert = "";
         }
 
-        create(ParentID){
+        create(ParentID, n){
             var container = document.createElement("div");
             var elem = document.createElement("div");
-            elem.className = "clock";
+            elem.className = "clock"+n;
             elem.style.margin = "2em";
             this.klasse = elem.className;
             container.append(elem); 
@@ -2465,7 +2465,7 @@ class CtrlStatButton {
             contHMS.style.justifyContent = "space-between";
                 var contH = document.createElement("div");
                     var elemIncH = document.createElement("button");
-                    elemIncH.className = "incH";
+                    elemIncH.className = "incH"+n;
                     elemIncH.style.width = "50px";
                     elemIncH.style.height = "50px";
                     elemIncH.style.fontSize = "20px";
@@ -2473,7 +2473,7 @@ class CtrlStatButton {
                     elemIncH.innerHTML = "+";
                     contH.append(elemIncH);
                     var elemDecH = document.createElement("button");
-                    elemDecH.className = "decH";
+                    elemDecH.className = "decH"+n;
                     elemDecH.style.width = "50px";
                     elemDecH.style.height = "50px";
                     elemDecH.style.fontSize = "20px";
@@ -2485,7 +2485,7 @@ class CtrlStatButton {
             
                 var contM = document.createElement("div");
                     var elemIncMin = document.createElement("button");
-                    elemIncMin.className = "incMin";
+                    elemIncMin.className = "incMin"+n;
                     elemIncMin.style.width = "50px";
                     elemIncMin.style.height = "50px";
                     elemIncMin.style.fontSize = "20px";
@@ -2493,7 +2493,7 @@ class CtrlStatButton {
                     elemIncMin.innerHTML = "+";
                     contM.append(elemIncMin);
                     var elemDecMin = document.createElement("button");
-                    elemDecMin.className = "decMin";
+                    elemDecMin.className = "decMin"+n;
                     elemDecMin.style.width = "50px";
                     elemDecMin.style.height = "50px";
                     elemDecMin.style.fontSize = "20px";
@@ -2506,7 +2506,7 @@ class CtrlStatButton {
             
                 var contS = document.createElement("div");
                     var elemIncSec = document.createElement("button");
-                    elemIncSec.className = "incSec";
+                    elemIncSec.className = "incSec"+n;
                     elemIncSec.style.width = "50px";
                     elemIncSec.style.height = "50px";
                     elemIncSec.style.fontSize = "20px";
@@ -2514,7 +2514,7 @@ class CtrlStatButton {
                     elemIncSec.innerHTML = "+";
                     contS.append(elemIncSec);
                     var elemDecSec = document.createElement("button");
-                    elemDecSec.className = "decSec";
+                    elemDecSec.className = "decSec"+n;
                     elemDecSec.style.width = "50px";
                     elemDecSec.style.height = "50px";
                     elemDecSec.style.fontSize = "20px";
@@ -2531,7 +2531,7 @@ class CtrlStatButton {
             contSS.style.flexDirection = "row";
             contSS.style.justifyContent = "center";
             var elemStart = document.createElement("button");
-            elemStart.className = "start";
+            elemStart.className = "start"+n;
             elemStart.style.width = "70px";
             elemStart.style.height = "50px";
             elemStart.style.marginRight = "2px";
@@ -2540,7 +2540,7 @@ class CtrlStatButton {
             contSS.append(elemStart); 
             
             var elemStop = document.createElement("button");
-            elemStop.className = "stop";
+            elemStop.className = "stop"+n;
             elemStop.style.width = "70px";
             elemStop.style.height = "50px";
             elemStop.style.marginLeft = "2px";
@@ -2556,10 +2556,8 @@ class CtrlStatButton {
             
         }
         
-        countdown(){
- 	
-			
-			var clock = jQuery('.clock').FlipClock(10, {
+        countdown1(){
+			var clock1 = jQuery('.clock1').FlipClock(10, {
 		        clockFace: 'HourlyCounter',
 		        countdown: true,
 		        autoStart: false,
@@ -2570,53 +2568,115 @@ class CtrlStatButton {
 		        }
 		    });
 
-		    jQuery('.start').click(function(e) {
+		    jQuery('.start1').click(function(e) {
 
-		    	clock.start();
+		    	clock1.start();
 		    });
 
-		    jQuery('.stop').click(function(e) {
+		    jQuery('.stop1').click(function(e) {
 
-		    	clock.stop();
+		    	clock1.stop();
 		    });
 
-		    jQuery('.incSec').click(function(e) {
-                        var time = clock.getTime().time;
+		    jQuery('.incSec1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time > 57){time = -2};
-                        clock.stop();
-                        clock.setTime(time+2);
+                        clock1.stop();
+                        clock1.setTime(time+2);
 		    });
-		    jQuery('.decSec').click(function(e) {
-                        var time = clock.getTime().time;
+		    jQuery('.decSec1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time < 1){time = 0};
-                        clock.stop();
-                        clock.setTime(time-0);
+                        clock1.stop();
+                        clock1.setTime(time-0);
 		    });
                     
-		    jQuery('.incMin').click(function(e) {
-                        var time = clock.getTime().time;
+		    jQuery('.incMin1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time > 3538){time = 3539};
-                        clock.stop();
-                        clock.setTime(time+61);
+                        clock1.stop();
+                        clock1.setTime(time+61);
 		    });
-		    jQuery('.decMin').click(function(e) {
-                        var time = clock.getTime().time;
+		    jQuery('.decMin1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time < 61){time = 60};
-                        clock.stop();
-                        clock.setTime(time-59);
+                        clock1.stop();
+                        clock1.setTime(time-59);
 		    });
 
-                    jQuery('.incH').click(function(e) {
-                        var time = clock.getTime().time;
+                    jQuery('.incH1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time > 82798){time = 82799};
-                        clock.stop();
-                        clock.setTime(time+3601);
+                        clock1.stop();
+                        clock1.setTime(time+3601);
 		    });
-		    jQuery('.decH').click(function(e) {
-                        var time = clock.getTime().time;
+		    jQuery('.decH1').click(function(e) {
+                        var time = clock1.getTime().time;
                         if (time < 3588){time = 3599};
-                        clock.stop();
-                        clock.setTime(time-3599);
+                        clock1.stop();
+                        clock1.setTime(time-3599);
+		    });
+        }
+        
+        countdown2(){
+			var clock2 = jQuery('.clock2').FlipClock(10, {
+		        clockFace: 'HourlyCounter',
+		        countdown: true,
+		        autoStart: false,
+		        callbacks: {
+		        	start: function() {
+		        		
+		        	}
+		        }
+		    });
+
+		    jQuery('.start2').click(function(e) {
+
+		    	clock2.start();
+		    });
+
+		    jQuery('.stop2').click(function(e) {
+
+		    	clock2.stop();
+		    });
+
+		    jQuery('.incSec2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time > 57){time = -2};
+                        clock2.stop();
+                        clock2.setTime(time+2);
+		    });
+		    jQuery('.decSec2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time < 1){time = 0};
+                        clock2.stop();
+                        clock2.setTime(time-0);
+		    });
+                    
+		    jQuery('.incMin2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time > 3538){time = 3539};
+                        clock2.stop();
+                        clock2.setTime(time+61);
+		    });
+		    jQuery('.decMin2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time < 61){time = 60};
+                        clock2.stop();
+                        clock2.setTime(time-59);
+		    });
+
+                    jQuery('.incH2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time > 82798){time = 82799};
+                        clock2.stop();
+                        clock2.setTime(time+3601);
+		    });
+		    jQuery('.decH2').click(function(e) {
+                        var time = clock2.getTime().time;
+                        if (time < 3588){time = 3599};
+                        clock2.stop();
+                        clock2.setTime(time-3599);
 		    });
         }
     }

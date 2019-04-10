@@ -1130,9 +1130,11 @@
        
         <script>
             var watch1 = new EierUhr();
-            watch1.create("MainClock");
-            watch1.countdown();
-
+            watch1.create("MainClock","1");
+            watch1.countdown1();
+            var watch2 = new EierUhr();
+            watch2.create("MainClock","2");
+            watch2.countdown2();
         </script> 
 
         <!-- ***********************************************************************************      -->
