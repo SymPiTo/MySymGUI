@@ -2559,7 +2559,7 @@ class CtrlStatButton {
         }
         
         countdown(){
- 	
+                        var watch = this.counter;
 			var clocks = [];
 			clocks.push(jQuery(this.counter).FlipClock(10, {
 		        clockFace: 'HourlyCounter',
@@ -2574,51 +2574,51 @@ class CtrlStatButton {
 
 		    jQuery('.start').click(function(e) {
 
-		    	this.clock.start();
+		    	clocks.push.start();
 		    });
 
 		    jQuery('.stop').click(function(e) {
 
-		    	this.clock.stop();
+		    	clocks.push.stop();
 		    });
 
 		    jQuery('.incSec').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time > 57){time = -2};
-                        this.clock.stop();
-                        this.clock.setTime(time+2);
+                        clocks.push.stop();
+                        clocks.push.setTime(time+2);
 		    });
 		    jQuery('.decSec').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time < 1){time = 0};
-                        this.clock.stop();
-                        this.clock.setTime(time-0);
+                        clocks.push.stop();
+                        clocks.push.setTime(time-0);
 		    });
                     
 		    jQuery('.incMin').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time > 3538){time = 3539};
-                        this.clock.stop();
-                        this.clock.setTime(time+61);
+                        clocks.push.stop();
+                        clocks.push.setTime(time+61);
 		    });
 		    jQuery('.decMin').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time < 61){time = 60};
-                        this.clock.stop();
-                        this.clock.setTime(time-59);
+                        clocks.push.stop();
+                        clocks.push.setTime(time-59);
 		    });
 
                     jQuery('.incH').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time > 82798){time = 82799};
-                        this.clock.stop();
-                        this.clock.setTime(time+3601);
+                        clocks.push.stop();
+                        clocks.push.setTime(time+3601);
 		    });
 		    jQuery('.decH').click(function(e) {
-                        var time = this.clock.getTime().time;
+                        var time = clocks.push.getTime().time;
                         if (time < 3588){time = 3599};
-                        this.clock.stop();
-                        this.clock.setTime(time-3599);
+                        clocks.push.stop();
+                        clocks.push.setTime(time-3599);
 		    });
         }
     }
