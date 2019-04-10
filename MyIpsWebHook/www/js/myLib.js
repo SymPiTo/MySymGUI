@@ -2525,8 +2525,8 @@ class CtrlStatButton {
         container.append(contHMS);            
     
             var contSS = document.createElement("div");
-            contSS.style.marginLeft = "10px";
-            contSS.style.marginRight = "10px";
+            contSS.style.marginLeft = "1px";
+            contSS.style.marginRight = "1px";
             contSS.style.display = "flex";
             contSS.style.flexDirection = "row";
             contSS.style.justifyContent = "center";
@@ -2543,7 +2543,7 @@ class CtrlStatButton {
             elemStop.className = "stop";
             elemStop.style.width = "70px";
             elemStop.style.height = "50px";
-            elemStop.style.marginLeft = "2px";
+            
             elemStop.innerHTML = "Stop";
             contSS.append(elemStop); 
             contHMS.append(contSS);
