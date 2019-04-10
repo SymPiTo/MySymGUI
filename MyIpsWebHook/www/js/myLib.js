@@ -2561,7 +2561,7 @@ class CtrlStatButton {
         countdown(){
  	
 			
-			var clock = jQuery(this.clock).FlipClock(10, {
+			this.clock = jQuery(this.clock).FlipClock(10, {
 		        clockFace: 'HourlyCounter',
 		        countdown: true,
 		        autoStart: false,
