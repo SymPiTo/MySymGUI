@@ -2447,14 +2447,14 @@ class CtrlStatButton {
             this.ID = "";
             this.klasse = "";
              this.wert = "";
-             this.clock = "";
+             this.counter = "";
         }
 
         create(ParentID, uhr){
             var container = document.createElement("div");
             var elem = document.createElement("div");
             elem.className = uhr;
-            this.clock = elem.className;
+            this.counter = elem.className;
             elem.style.margin = "2em";
             this.klasse = elem.className;
             container.append(elem); 
@@ -2560,8 +2560,8 @@ class CtrlStatButton {
         
         countdown(){
  	
-			
-			this.clock = jQuery(this.clock).FlipClock(10, {
+			var clocks = [];
+			clocks.push(jQuery(this.counter).FlipClock(10, {
 		        clockFace: 'HourlyCounter',
 		        countdown: true,
 		        autoStart: false,
@@ -2570,7 +2570,7 @@ class CtrlStatButton {
 		        		
 		        	}
 		        }
-		    });
+		    }));
 
 		    jQuery('.start').click(function(e) {
 
