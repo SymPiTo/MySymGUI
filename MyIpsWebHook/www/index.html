@@ -2182,21 +2182,7 @@
         var DisST2RolloWZCtrl = new StateDisplay();
         DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");    
         
-        
-        
-/*        
-        DisPosRolloWZCtrl=Object.create(Display);
-        DisPosRolloWZCtrl.create("MainRolloWZCtrl", "PosRolloWZCtrCtrl", "cyan", "%", "40px", "30px", "Position", "Number", "", "", "", "");
-        
-        DisModeRolloWZCtrl=Object.create(Display);
-        DisModeRolloWZCtrl.create("MainRolloWZCtrl", "ModeRolloWZCtrl", "cyan", "", "110px", "30px", "Mode", "Auto", "Man", "", "", "");
-        
-        DisST1RolloWZCtrl=Object.create(Display);
-        DisST1RolloWZCtrl.create("MainRolloWZCtrl", "MoFrRolloWZCtrl", "cyan", "", "180px", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        
-        DisST2RolloWZCtrl=Object.create(Display);
-        DisST2RolloWZCtrl.create("MainRolloWZCtrl", "SaSoRolloWZCtrl", "cyan", "", "250px", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");
- */      
+   
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
@@ -2209,18 +2195,19 @@
 		<Ctrl id = MainRolloKZCtrl  class="RolloCtrlKZ"> </Ctrl>
 		
     <script>
-        DisPosRolloKZ=Object.create(Display);
-        DisPosRolloKZ.create("MainRolloKZCtrl", "PosRolloKZ1", "olive", "%", "50px", "30px", "Position", "Number", "", "", "", "");
         
-        DisModeRolloKZ=Object.create(Display);
-        DisModeRolloKZ.create("MainRolloKZCtrl", "ModeRolloKZ1", "olive", "", "120px", "30px", "Mode", "Auto", "Man", "", "", "");
         
-        DisST1RolloKZ=Object.create(Display);
-        DisST1RolloKZ.create("MainRolloKZCtrl", "MoFrRolloKZ1", "olive", "", "190px", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        var DisPosRolloKZ = new StateDisplay();
+        DisPosRolloKZ.create("MainRolloKZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
         
-        DisST2RolloKZ=Object.create(Display);
-        DisST2RolloKZ.create("MainRolloKZCtrl", "SaSoRolloKZ1", "olive", "", "260px", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");
+        var DisModeRolloKZ = new StateDisplay();
+        DisModeRolloKZ.create("MainRolloKZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
         
+        var DisST1RolloKZ = new StateDisplay();
+        DisST1RolloKZ.create("MainRolloKZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloKZ = new StateDisplay();
+        DisST2RolloKZ.create("MainRolloKZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
    
         addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
         addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,KZ,stop)')");
@@ -2233,16 +2220,20 @@
 
                
     <script>
-        DisPosRolloB=Object.create(Display);
-        DisPosRolloB.create("MainRolloBCtrl", "PosRolloB1", "blue", "%", "40px", "30px", "Position", "Number", "", "", "", "");
         
-        DisModeRolloB=Object.create(Display);
-        DisModeRolloB.create("MainRolloBCtrl", "ModeRolloB1", "blue", "", "110px", "30px", "Mode", "Auto", "Man", "", "", "");
-        DisST1RolloB=Object.create(Display);
-        DisST1RolloB.create("MainRolloBCtrl", "MoFrRolloB1", "blue", "", "180px", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        var DisPosRolloB = new StateDisplay();
+        DisPosRolloB.create("MainRolloBCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
         
-        DisST2RolloB=Object.create(Display);
-        DisST2RolloB.create("MainRolloBCtrl", "SaSoRolloB1", "blue", "", "250px", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");
+        var DisModeRolloB = new StateDisplay();
+        DisModeRolloB.create("MainRolloBCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloB = new StateDisplay();
+        DisST1RolloB.create("MainRolloBCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloB = new StateDisplay();
+        DisST2RolloB.create("MainRolloBCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
+        
+        
 
         addFontButton("MainRolloBCtrl", "blue", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,B,up)')");
         addFontButton("MainRolloBCtrl", "blue", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,B,stop)')");
@@ -2256,16 +2247,21 @@
 		<!-- ************************** Rolladen Ctrl Kueche ************************** -->
 		<Ctrl id = MainRolloKCtrl  class="RolloCtrlK"></Ctrl>
     <script>
-        DisPosRolloK=Object.create(Display);
-        DisPosRolloK.create("MainRolloKCtrl", "PosRolloK1", "midgreen", "%", "50px", "30px", "Position", "Number", "", "", "", "");
-        DisModeRolloK=Object.create(Display);
-        DisModeRolloK.create("MainRolloKCtrl", "ModeRolloK1", "midgreen", "", "120px", "30px", "Mode", "Auto", "Man", "", "", "");
         
-        DisST1RolloK=Object.create(Display);
-        DisST1RolloK.create("MainRolloKCtrl", "MoFrRolloK1", "midgreen", "", "190px", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        DisST2RolloK=Object.create(Display);
-        DisST2RolloK.create("MainRolloKCtrl", "SaSoRolloK1", "midgreen", "", "260px", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");
-
+        var DisPosRolloK = new StateDisplay();
+        DisPosRolloK.create("MainRolloKCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloK = new StateDisplay();
+        DisModeRolloK.create("MainRolloKCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloK = new StateDisplay();
+        DisST1RolloK.create("MainRolloKCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloK = new StateDisplay();
+        DisST2RolloK.create("MainRolloKCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", ""); 
+        
+        
+ 
         addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,K,up)')");
         addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,K,stop)')");
         addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,K,down)')");
