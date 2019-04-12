@@ -979,11 +979,29 @@
 
         var ABox = new AlarmBox();
         ABox.create("MainSecCodeCtrl", "AlarmMeldung", "yellow", "10px" , "20px" ); 
-            
+
+        var DisAlarmActiveSec = new StateDisplay();
+        DisAlarmActiveSec.create("MainSecCodeCtrl", "", "", "50px", "30px", "normal", "20px", "Alarm Anlage", "aktiviert", "deaktiviert", "", "", "");
+ 
+    
+    /*
         DisAlarmActiveSec=Object.create(Display);
         DisAlarmActiveSec.create("MainSecCodeCtrl", "AlarmActiveSec", "red", "", "60px", "20px", "Alarm Anlage", "aktiviert", "deaktiviert", "", "", "");
+    */    
         var DisSabAlarm = new StateDisplay();
-        DisSabAlarm.create("MainSecCodeCtrl", "red", "", "140px", "20px",  "normal", "20px", "Sabotage", "manipuliert", "ok");
+        DisSabAlarm.create("MainSecCodeCtrl", "", "", "140px", "20px",  "normal", "20px", "Sabotage", "manipuliert", "ok");
+
+        var DisDoorOpen = new StateDisplay();
+        DisDoorOpen.create("MainSecCodeCtrl", "", "", "240px", "30px", "normal", "20px", "Eingangstür", "offen", "geschlossen", "", "", "");
+        
+        var DisBalkonDoorOpen = new StateDisplay();
+        DisBalkonDoorOpen.create("MainSecCodeCtrl", "", "", "320px", "30px", "normal", "20px", "Balkon Tür", "offen", "geschlossen", "", "", "");
+        
+        var DisFloorPD = new StateDisplay();
+        DisFloorPD.create("MainSecCodeCtrl", "", "", "500px", "30px", "normal", "20px", "Diele", "Person erkannt", "keine Person", "", "", "");
+        
+        
+    /*   
         DisDoorOpen=Object.create(Display);
         DisDoorOpen.create("MainSecCodeCtrl", "DoorOpen", "red", "", "240px", "20px", "Eingangstür", "offen", "geschlossen", "", "", "");
         DisBalkonDoorOpen=Object.create(Display);
@@ -991,7 +1009,7 @@
 
         DisFloorPD=Object.create(Display);
         DisFloorPD.create("MainSecCodeCtrl", "FloorPF", "red", "", "500px", "20px", "Diele", "Person erkannt", "keine Person", "", "", "");
-
+    */   
 
     </script>
    
