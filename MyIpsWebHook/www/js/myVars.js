@@ -579,6 +579,9 @@
               }
         transVarPlayModeSsz.update(PM, "");
         
+        //<!-- ******************** Person  **************************  -->
+        ihuman.update(sym[106]); 
+        
         //<!-- ******************** Schlafzimmer Licht **************************  -->
         LightSZ.update(sym[106], "", ""); 
         DisLightCurrentSZCtrl.update(sym[107],2);
