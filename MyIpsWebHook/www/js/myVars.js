@@ -119,7 +119,7 @@
             sym[55] = ips[0].ID48410;  //Rollo B Schaltzeit Mo-Fr
             sym[56] = ips[0].ID12438; //Rollo B Schaltzeit Sa-So
             sym[57] = ips[0].ID56785; //Rollo B SSunSet             
-            sym[58] = "";  //       
+            sym[58] = ips[0].ID36168; //Anwesenheit Stste Diele
             sym[59] = ips[0].ID30280;  //Bad Fenster Aktor LowBat
             sym[60] = ips[0].ID49846;  //Bad Taster-Fenster LowBat
             sym[61] = ips[0].ID33304;  //Balkon Temp Feuchte Sensor LowBat
@@ -580,7 +580,7 @@
         transVarPlayModeSsz.update(PM, "");
         
         //<!-- ******************** Person  **************************  -->
-        ihuman.update(sym[106]); 
+        ihuman.update(sym[58]); 
         
         //<!-- ******************** Schlafzimmer Licht **************************  -->
         LightSZ.update(sym[106], "", ""); 
