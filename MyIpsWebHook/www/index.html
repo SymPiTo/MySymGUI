@@ -784,7 +784,7 @@
 		</Ctrl>
    <script>
        addStatus("MainHzKCtrl", "BatHzK1", "midgreen", "5px", "30px", "Battery");      
-       addTempCtrl("MainHzKCtrl", "TempCtrl4", "midgreen", "260px", "30px", "Soll Temperatur", "AdjTempHzK1", "SollTempAusHzK1", "SollTempHzK1", "sollTempK");
+       addTempCtrl("MainHzKCtrl", "TempCtrl4", "midgreen", "325px", "30px", "Soll Temperatur", "AdjTempHzK1", "SollTempAusHzK1", "SollTempHzK1", "sollTempK");
        
         var DisModeHzKCtrl = new StateDisplay();
         DisModeHzKCtrl.create("MainHzKCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
@@ -2168,6 +2168,23 @@
 		<Ctrl id = "MainRolloWZCtrl" class="RolloCtrlWZ"></Ctrl>
 			 			
     <script>
+        
+        
+        var DisPosRolloWZCtrl = new StateDisplay();
+        DisPosRolloWZCtrl.create("MainRolloWZCtrl", "", "%", "40px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloWZCtrl = new StateDisplay();
+        DisModeRolloWZCtrl.create("MainRolloWZCtrl", "", "", "110px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloWZCtrl = new StateDisplay();
+        DisST1RolloWZCtrl.create("MainRolloWZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloWZCtrl = new StateDisplay();
+        DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "250px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");    
+        
+        
+        
+/*        
         DisPosRolloWZCtrl=Object.create(Display);
         DisPosRolloWZCtrl.create("MainRolloWZCtrl", "PosRolloWZCtrCtrl", "cyan", "%", "40px", "30px", "Position", "Number", "", "", "", "");
         
@@ -2179,7 +2196,7 @@
         
         DisST2RolloWZCtrl=Object.create(Display);
         DisST2RolloWZCtrl.create("MainRolloWZCtrl", "SaSoRolloWZCtrl", "cyan", "", "250px", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");
-       
+ */      
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
         addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
