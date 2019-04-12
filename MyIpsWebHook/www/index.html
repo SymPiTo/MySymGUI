@@ -690,7 +690,7 @@
 
    <script>
        addStatus("MainHzKZCtrl", "BatHzKZ1", "olive", "5px", "30px", "Battery");      
-       addTempCtrl("MainHzKZCtrl", "TempCtrl2", "olive", "260px", "30px", "Soll Temperatur", "AdjTempHzKZ1", "SollTempAusHzKZ1", "SollTempHzKZ1", "sollTempKZ");
+       addTempCtrl("MainHzKZCtrl", "TempCtrl2", "olive", "325px", "30px", "Soll Temperatur", "AdjTempHzKZ1", "SollTempAusHzKZ1", "SollTempHzKZ1", "sollTempKZ");
        
         var DisModeHzKZCtrl = new StateDisplay();
         DisModeHzKZCtrl.create("MainHzKZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
@@ -733,18 +733,17 @@
 		<Ctrl id="MainHzSZCtrl" class="HeizungCtrlSZ">  </Ctrl>
 
    <script>
-       addStatus("MainHzSZCtrl", "BatHzSZ1", "sandy", "5px", "30px", "Battery");      
-       addTempCtrl("MainHzSZCtrl", "TempCtrl3", "sandy", "260px", "30px", "Soll Temperatur", "AdjTempHzSZ1", "SollTempAusHzSZ1", "SollTempHzSZ1", "sollTempSZ");
-        DisModeHzSZCtrl=Object.create(Display);
-        DisModeHzSZCtrl.create("MainHzSZCtrl", "ModeHzSZCtrl", "sandy", "", "50px", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
-        
-        DisTempHzSZCtrl=Object.create(Display);
-        DisTempHzSZCtrl.create("MainHzSZCtrl", "TempHzSZCtrl", "sandy", "°C", "120px", "30px",  "Temperatur", "Number", "", "", "", "");
+        addStatus("MainHzSZCtrl", "BatHzSZ1", "sandy", "5px", "30px", "Battery");      
+        addTempCtrl("MainHzSZCtrl", "TempCtrl3", "sandy", "325px", "30px", "Soll Temperatur", "AdjTempHzSZ1", "SollTempAusHzSZ1", "SollTempHzSZ1", "sollTempSZ");
+       
+        var DisModeHzSZCtrl = new StateDisplay();
+        DisModeHzSZCtrl.create("MainHzSZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
+        var DisTempHzSZCtrl = new StateDisplay();
+        DisTempHzSZCtrl.create("MainHzSZCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number", "", "", "", "");
+        var DisPosHzSZCtrl = new StateDisplay();
+        DisPosHzSZCtrl.create("MainHzSZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+       
  
-        DisPosHzSZCtrl=Object.create(Display);
-        DisPosHzSZCtrl.create("MainHzSZCtrl", "PosHzSZCtrl", "sandy", "%", "190px", "30px", "Position", "Number", "", "", "", "");
-        
-
 
   </script>
 
@@ -786,15 +785,14 @@
    <script>
        addStatus("MainHzKCtrl", "BatHzK1", "midgreen", "5px", "30px", "Battery");      
        addTempCtrl("MainHzKCtrl", "TempCtrl4", "midgreen", "260px", "30px", "Soll Temperatur", "AdjTempHzK1", "SollTempAusHzK1", "SollTempHzK1", "sollTempK");
-        DisModeHzKCtrl = Object.create(Display);
-        DisModeHzKCtrl.create("MainHzKCtrl", "ModeHzKCtrl", "midgreen", "", "50px", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
+       
+        var DisModeHzKCtrl = new StateDisplay();
+        DisModeHzKCtrl.create("MainHzKCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
+        var DisTempHzKCtrl = new StateDisplay();
+        DisTempHzKCtrl.create("MainHzKCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number", "", "", "", "");
+        var DisPosHzKCtrl = new StateDisplay();
+        DisPosHzKCtrl.create("MainHzKCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
         
-        DisTempHzKCtrl=Object.create(Display);
-        DisTempHzKCtrl.create("MainHzKCtrl", "TempHzKCtrl", "midgreen", "°C", "120px", "30px",  "Temperatur", "Number", "", "", "", "");
- 
-        DisPosHzKCtrl=Object.create(Display);
-        DisPosHzKCtrl.create("MainHzKCtrl", "PosHzKCtrl", "midgreen", "%", "190px", "30px", "Position", "Number", "", "", "", "");
- 
      
 
   </script>
