@@ -537,7 +537,7 @@ function addTitle(TitleID, posTop, posLeft, fontsize, fontcolor, text){
     }
 }
 
-/* --------------------- ProtoType Klasse Display ---------------------------------------- */
+/* --------------------- ProtoType Klasse Display ---------------------------------------- 
  var Display = {
  
         Ident : "ID",
@@ -616,7 +616,7 @@ function addTitle(TitleID, posTop, posLeft, fontsize, fontcolor, text){
     
  };
 
-
+*/
 
 
 /* --------------------- class Display status of Variable ---------------------------------------- */
