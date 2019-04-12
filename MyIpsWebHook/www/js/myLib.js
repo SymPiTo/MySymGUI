@@ -901,6 +901,33 @@ function addStatus(ParentID, Ident, color, posTop, posLeft,   text){
     document.getElementById(ParentID).appendChild(elem);			 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------- ProtoType Klasse FontButton ---------------------------------------- */
  var FontButton = {
     create :  function(ParentID, color, size, posTop, posLeft, symbol, cmd){  

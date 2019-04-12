@@ -640,11 +640,15 @@
                 
    <script>
        addStatus("MainHeizungWZCtrl", "BatHzWZ1", "cyan", "5px", "30px", "Battery");      
-       addTempCtrl("MainHeizungWZCtrl", "TempCtrl1", "cyan", "260px", "30px", "Soll Temperatur", "AdjTempHzWZ1", "SollTempAusHzWZ1", "SollTempHzWZ1", "sollTempWZ");
+       addTempCtrl("MainHeizungWZCtrl", "TempCtrl1", "cyan", "260px", "30px", "Mode", "AdjTempHzWZ1", "SollTempAusHzWZ1", "SollTempHzWZ1", "sollTempWZ");
+       
+       
+        var DisModeHzWZ = new StateDisplay();
+        DisModeHzWZ.create("MainHeizungWZCtrl", "", "", "50px", "30px",  "Mode", "Auto", "Man", "Urlaub", "Party", "");
         
-        
-        DisModeHzWZ=Object.create(Display);
+   /*     DisModeHzWZ=Object.create(Display);
         DisModeHzWZ.create("MainHeizungWZCtrl", "ModeHzWZ1", "cyan", "", "50px", "30px", "Mode", "Auto", "Man", "Urlaub", "Party", "");
+    */
          DisTempHzWZ=Object.create(Display);
         DisTempHzWZ.create("MainHeizungWZCtrl", "TempHzWZ2", "cyan", "°C", "120px", "30px",  "Temperatur", "Number", "", "", "", "");
  
