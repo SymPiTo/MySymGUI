@@ -918,6 +918,36 @@
         var iRolloKZ = new DynIcon("rollo","ana",false);
         iRolloKZ.create("MainRolloKZ", "30px", "170px", "normal");         
         addTitle("MainRolloKZ", "210px", "100px", "18px", "white", "Presets");
+        
+        var btnRolloKZAuto = new CtrlButton();
+        btnRolloKZAuto.create("MainRolloKZ", "260px", "50px",  "normal", "olive", "Automatik", "command","", "send('command(Rollo,KZ,Auto)') ");
+        var btnRolloKZMan = new CtrlButton();
+        btnRolloKZMan.create("MainRolloKZ", "320px", "50px",  "normal", "olive", "Manual", "command","", "send('command(Rollo,KZ,Man)') "); 
+        var btnRolloKZ75 = new CtrlButton();
+        btnRolloKZ75.create("MainRolloKZ", "380px", "50px",  "normal", "olive", "75%", "command","",  "send('command(Rollo,KZ,dark)') ");
+        var btnRolloKZ50 = new CtrlButton();
+        btnRolloKZ50.create("MainRolloKZ", "440px", "50px",  "normal", "olive", "50%", "command","", "send('command(Rollo,KZ,mid)') ");
+        var btnRolloKZ25 = new CtrlButton();
+        btnRolloKZ25.create("MainRolloKZ", "500px", "50px",  "normal", "olive", "25%", "command","", "send('command(Rollo,KZ,bright)') ");
+      
+        addTitle("MainRolloKZ", "210px", "400px", "18px", "white", "Control");
+        
+        var btnRolloKZHoch = new CtrlButton();
+        btnRolloKZHoch.create("MainRolloKZ", "260px", "350px",  "normal", "olive", "Hoch", "command","",  "send('command(Rollo,KZ,up)') ");
+        var btnRolloKZStop = new CtrlButton();
+        btnRolloKZStop.create("MainRolloKZ", "320px", "350px",  "normal", "olive", "Stop", "command","",  "send('command(Rollo,KZ,stop)') ");
+        var btnRolloKZRunter = new CtrlButton();
+        btnRolloKZRunter.create("MainRolloKZ", "380px", "350px",  "normal", "olive", "Runter", "command","",  "send('command(Rollo,KZ,down)') ");
+        var btnRolloKZStepUp = new CtrlButton();
+        btnRolloKZStepUp.create("MainRolloKZ", "440px", "350px",  "normal", "olive", "Step Up", "command","", "send('command(Rollo,KZ,StepUp)') ");
+        var btnRolloKZStepDown = new CtrlButton();
+        btnRolloKZStepDown.create("MainRolloKZ", "500px", "350px",  "normal", "olive", "Step Down", "command","", "send('command(Rollo,KZ,StepDown)') ");
+    
+        
+        
+        
+ /*      
+        
         addCtrlButton("MainRolloKZ", "btn43", "260px", "50px", "normal", "olive", "Automatik", "send('command(Rollo,KZ,Auto)') ");
         addCtrlButton("MainRolloKZ", "btn44", "320px", "50px", "normal", "olive", "Manual", "send('command(Rollo,KZ,Man)') ");     
         addCtrlButton("MainRolloKZ", "btn45", "380px", "50px", "normal", "olive", "75%", "send('command(Rollo,KZ,dark)') ");
@@ -929,6 +959,8 @@
         addCtrlButton("MainRolloKZ", "btn50", "380px", "350px", "normal", "olive", "Runter", "send('command(Rollo,KZ,down)') ");
         addCtrlButton("MainRolloKZ", "btn51", "440px", "350px", "normal", "olive", "Step Up", "send('command(Rollo,KZ,StepUp)') ");
         addCtrlButton("MainRolloKZ", "btn52", "500px", "350px", "normal", "olive", "Step Down", "send('command(Rollo,KZ,StepDown)') ");
+ */       
+        
     </script>
  		<!-- ************************ Rolladen  Kueche ************************ -->
 		<Main id="MainRolloK"  class="RolloK">	</Main>
