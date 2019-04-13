@@ -146,7 +146,7 @@
  
  }
 
-/* ------------------- muss noch gegen klasse ausgetauscht werden ---------------------------------- */
+/* ------------------- löschenn ---------------------------------- 
 
 function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  command){
     var elem = document.createElement("div");
@@ -160,7 +160,7 @@ function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  com
     elem.setAttribute("onclick", command);
     document.getElementById(ParentID).appendChild(elem);			 
 }
-
+*/
 
  /* --------------------- Klasse Ctrl Button ---------------------------------------- */
 class CtrlButton { 

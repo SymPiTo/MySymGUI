@@ -608,7 +608,13 @@
  
         var iHzWZ = new DynIcon("heizkoerper","bin",false);
         iHzWZ.create("MainHeizungWZ", "40px", "70px", "wide"); 
+        /*
         addTitle("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
+        */
+        var labelModeWZ = new label();
+        labelModeWZ.create("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
+        var labelPresetWZ = new label();
+        labelPresetWZ.create("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
         
         var btnHzWZauto = new CtrlButton();
         btnHzWZauto.create("MainHeizungWZ", "300px", "50px",  "normal", "cyan", "Automatik", "command","",  "send('command(Heizung,WZ,auto)')");
@@ -619,8 +625,10 @@
         var btnHzWZParty = new CtrlButton();
         btnHzWZParty.create("MainHeizungWZ", "480px", "50px",  "normal", "cyan", "Party", "command","",  "send('command(Heizung,WZ,party)')");
         
-
+/*
         addTitle("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
+ */       
+
         
         var btnHzWZHeizen = new CtrlButton();
         btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px",  "normal", "cyan", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
@@ -674,8 +682,14 @@
         
         var iHzKZ = new DynIcon("heizkoerper","bin",false);
         iHzKZ.create("MainHzKZ", "40px", "70px", "wide"); 
+/*
         addTitle("MainHzKZ", "240px", "120px", "18px", "white", "Mode");
-        
+*/
+        var labelModeKZ = new label();
+        labelModeKZ.create("MainHzKZ", "240px", "120px", "18px", "white", "Mode");
+        var labelPresetKZ = new label();
+        labelPresetKZ.create("MainHzKZ", "240px", "400px", "18px", "white", "Presets");    
+    
         var btnHzKZauto = new CtrlButton();
         btnHzKZauto.create("MainHzKZ", "300px", "50px",  "normal", "olive", "Automatik", "command","",  "send('command(Heizung,KZ,auto)') ");
         var btnHzKZman = new CtrlButton();
@@ -685,9 +699,9 @@
         var btnHzKZParty = new CtrlButton();
         btnHzKZParty.create("MainHzKZ", "480px", "50px",  "normal", "olive", "Party", "command","",  "send('command(Heizung,KZ,party)') ");
         
-
+/*
         addTitle("MainHzKZ", "240px", "400px", "18px", "white", "Presets");
-        
+*/        
         var btnHzKZHeizen = new CtrlButton();
         btnHzKZHeizen.create("MainHzKZ", "300px", "350px",  "normal", "olive", "Heizen", "command","",  "{send('command(Heizung,KZ,heizen)'); document.getElementById('AdjTempHzKZ1').innerHTML='22.5';} ");
         var btnHzKZAbsenken = new CtrlButton();
@@ -735,8 +749,15 @@
         
         var iHzSZ = new DynIcon("heizkoerper","bin",false);
         iHzSZ.create("MainHzSZ", "40px", "70px", "wide"); 
+      /*
         addTitle("MainHzSZ", "240px", "120px", "18px", "white", "Mode");
+*/
+        var labelModeSZ = new label();
+        labelModeSZ.create("MainHzSZ", "240px", "120px", "18px", "white", "Mode");
+        var labelPresetSZ = new label();
+        labelPresetSZ.create("MainHzSZ", "240px", "400px", "18px", "white", "Presets");  
         
+
         var btnHzSZauto = new CtrlButton();
         btnHzSZauto.create("MainHzSZ", "300px", "50px",  "normal", "sandy", "Automatik", "command","",  "send('command(Heizung,SZ,auto)') ");
         var btnHzSZman = new CtrlButton();
@@ -746,9 +767,9 @@
         var btnHzSZParty = new CtrlButton();
         btnHzSZParty.create("MainHzSZ", "480px", "50px",  "normal", "sandy", "Party", "command","",  "send('command(Heizung,SZ,party)') ");
         
-
+/*
         addTitle("MainHzSZ", "240px", "400px", "18px", "white", "Presets");
-        
+*/        
         var btnHzSZHeizen = new CtrlButton();
         btnHzSZHeizen.create("MainHzSZ", "300px", "350px",  "normal", "sandy", "Heizen", "command","",  "{send('command(Heizung,SZ,heizen)'); document.getElementById('AdjTempHzSZ1').innerHTML='22.5';} ");
         var btnHzSZAbsenken = new CtrlButton();
@@ -798,8 +819,16 @@
         
         var iHzK = new DynIcon("heizkoerper","bin",false);
         iHzK.create("MainHzK", "40px", "70px", "wide");
+  /*
         addTitle("MainHzK", "240px", "120px", "18px", "white", "Mode");
+*/
+
+        var labelModeK = new label();
+        labelModeK.create("MainHzK", "240px", "120px", "18px", "white", "Mode");
+        var labelPresetK = new label();
+        labelPresetK.create("MainHzK", "240px", "400px", "18px", "white", "Presets"); 
         
+
         var btnHzKauto = new CtrlButton();
         btnHzKauto.create("MainHzK", "300px", "50px",  "normal", "midgreen", "Automatik", "command","",  "send('command(Heizung,K,auto)') ");
         var btnHzKman = new CtrlButton();
@@ -809,9 +838,9 @@
         var btnHzKParty = new CtrlButton();
         btnHzKParty.create("MainHzK", "480px", "50px",  "normal", "midgreen", "Party", "command","",  "send('command(Heizung,K,party)') ");
         
-
+/*
         addTitle("MainHzK", "240px", "400px", "18px", "white", "Presets");
-        
+ */       
         var btnHzKHeizen = new CtrlButton();
         btnHzKHeizen.create("MainHzK", "300px", "350px",  "normal", "midgreen", "Heizen", "command","",  "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
         var btnHzKAbsenken = new CtrlButton();
