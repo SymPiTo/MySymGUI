@@ -945,22 +945,7 @@
     
         
         
-        
- /*      
-        
-        addCtrlButton("MainRolloKZ", "btn43", "260px", "50px", "normal", "olive", "Automatik", "send('command(Rollo,KZ,Auto)') ");
-        addCtrlButton("MainRolloKZ", "btn44", "320px", "50px", "normal", "olive", "Manual", "send('command(Rollo,KZ,Man)') ");     
-        addCtrlButton("MainRolloKZ", "btn45", "380px", "50px", "normal", "olive", "75%", "send('command(Rollo,KZ,dark)') ");
-        addCtrlButton("MainRolloKZ", "btn46", "440px", "50px", "normal", "olive", "50%", "send('command(Rollo,KZ,mid)') ");
-        addCtrlButton("MainRolloKZ", "btn47", "500px", "50px", "normal", "olive", "25%", "send('command(Rollo,KZ,bright)') ");
-        addTitle("MainRolloKZ", "210px", "400px", "18px", "white", "Control");
-        addCtrlButton("MainRolloKZ", "btn48", "260px", "350px", "normal", "olive", "Hoch", "send('command(Rollo,KZ,up)') ");
-        addCtrlButton("MainRolloKZ", "btn49", "320px", "350px", "normal", "olive", "Stop", "send('command(Rollo,KZ,stop)') ");     
-        addCtrlButton("MainRolloKZ", "btn50", "380px", "350px", "normal", "olive", "Runter", "send('command(Rollo,KZ,down)') ");
-        addCtrlButton("MainRolloKZ", "btn51", "440px", "350px", "normal", "olive", "Step Up", "send('command(Rollo,KZ,StepUp)') ");
-        addCtrlButton("MainRolloKZ", "btn52", "500px", "350px", "normal", "olive", "Step Down", "send('command(Rollo,KZ,StepDown)') ");
- */       
-        
+  
     </script>
  		<!-- ************************ Rolladen  Kueche ************************ -->
 		<Main id="MainRolloK"  class="RolloK">	</Main>
@@ -969,17 +954,33 @@
         var iRolloK = new DynIcon("rollo","ana",false);
         iRolloK.create("MainRolloK", "30px", "170px", "normal");    
         addTitle("MainRolloK", "210px", "100px", "18px", "white", "Presets");
-        addCtrlButton("MainRolloK", "btn53", "260px", "50px", "normal", "midgreen", "Automatik", "send('command(Rollo,K,Auto)') ");
-        addCtrlButton("MainRolloK", "btn54", "320px", "50px", "normal", "midgreen", "Manual", "send('command(Rollo,K,Man)') ");     
-        addCtrlButton("MainRolloK", "btn55", "380px", "50px", "normal", "midgreen", "75%", "send('command(Rollo,K,dark)') ");
-        addCtrlButton("MainRolloK", "btn56", "440px", "50px", "normal", "midgreen", "50%", "send('command(Rollo,K,mid)') ");
-        addCtrlButton("MainRolloK", "btn57", "500px", "50px", "normal", "midgreen", "25%", "send('command(Rollo,K,bright)') ");
+        
+        var btnRolloKAuto = new CtrlButton();
+        btnRolloKAuto.create("MainRolloK", "260px", "50px",  "normal", "midgreen", "Automatik", "command","", "send('command(Rollo,K,Auto)') ");
+        var btnRolloKMan = new CtrlButton();
+        btnRolloKMan.create("MainRolloK", "320px", "50px",  "normal", "midgreen", "Manual", "command","", "send('command(Rollo,K,Man)') ");
+        var btnRolloK75 = new CtrlButton();
+        btnRolloK75.create("MainRolloK", "380px", "50px",  "normal", "midgreen", "75%", "command","",  "send('command(Rollo,K,dark)') ");
+        var btnRolloK50 = new CtrlButton();
+        btnRolloK50.create("MainRolloK", "440px", "50px",  "normal", "midgreen", "50%", "command","", "send('command(Rollo,K,mid)') ");
+        var btnRolloK25 = new CtrlButton();
+        btnRolloK25.create("MainRolloK", "500px", "50px",  "normal", "midgreen", "25%", "command","", "send('command(Rollo,K,bright)') ");
+      
         addTitle("MainRolloK", "210px", "400px", "18px", "white", "Control");
-        addCtrlButton("MainRolloK", "btn58", "260px", "350px", "normal", "midgreen", "Hoch", "send('command(Rollo,K,up)') ");
-        addCtrlButton("MainRolloK", "btn59", "320px", "350px", "normal", "midgreen", "Stop", "send('command(Rollo,K,stop)') ");     
-        addCtrlButton("MainRolloK", "btn60", "380px", "350px", "normal", "midgreen", "Runter", "send('command(Rollo,K,down)') ");
-        addCtrlButton("MainRolloK", "btn61", "440px", "350px", "normal", "midgreen", "Step Up", "send('command(Rollo,K,StepUp)') ");
-        addCtrlButton("MainRolloK", "btn62", "500px", "350px", "normal", "midgreen", "Step Down", "send('command(Rollo,K,StepDown)') ");
+        
+        var btnRolloKHoch = new CtrlButton();
+        btnRolloKHoch.create("MainRolloK", "260px", "350px",  "normal", "midgreen", "Hoch", "command","",  "send('command(Rollo,K,up)') ");
+        var btnRolloKStop = new CtrlButton();
+        btnRolloKStop.create("MainRolloK", "320px", "350px",  "normal", "midgreen", "Stop", "command","",  "send('command(Rollo,K,stop)') ");  
+        var btnRolloKRunter = new CtrlButton();
+        btnRolloKRunter.create("MainRolloK", "380px", "350px",  "normal", "midgreen", "Runter", "command","",  "send('command(Rollo,K,down)') ");
+        var btnRolloKStepUp = new CtrlButton();
+        btnRolloKStepUp.create("MainRolloK", "440px", "350px",  "normal", "midgreen", "Step Up", "command","",  "send('command(Rollo,K,StepUp)') ");
+        var btnRolloKStepDown = new CtrlButton();
+        btnRolloKStepDown.create("MainRolloK", "500px", "350px",  "normal", "midgreen", "Step Down", "command","", "send('command(Rollo,K,StepDown)') ");
+    
+
+   
     </script>
 
  		<!-- ************************ Light  Schlafzimmer ************************ -->
