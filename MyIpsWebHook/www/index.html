@@ -626,6 +626,16 @@
         addCtrlButton("MainHeizungWZ", "btn4", "480px", "50px", "normal", "cyan", "Party", "send('command(Heizung,WZ,party)') ");
     */
         addTitle("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
+        
+        var btnHzWZHeizen = new CtrlButton();
+        btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px",  "normal", "cyan", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
+        var btnHzWZAbsenken = new CtrlButton();
+        btnHzWZAbsenken.create("MainHeizungWZ", "360px", "350px",  "normal", "cyan", "Absenken", "command","",  "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
+        var btnHzWZAus = new CtrlButton();
+        btnHzWZAus.create("MainHeizungWZ", "420px", "350px",  "normal", "cyan", "Aus", "command","",  "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
+        var btnHzWZAuf = new CtrlButton();
+        btnHzWZAuf.create("MainHeizungWZ", "480px", "350px",  "normal", "cyan", "Auf", "command","",  "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
+        
         /*
         addCtrlButton("MainHeizungWZ", "btn5", "300px", "350px", "normal", "cyan", "Heizen", "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
         addCtrlButton("MainHeizungWZ", "btn6", "360px", "350px", "normal", "cyan", "Absenken", "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
