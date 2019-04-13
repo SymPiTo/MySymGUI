@@ -848,6 +848,34 @@
         var iRolloWZ = new DynIcon("rollo","ana",false);
         iRolloWZ.create("MainRolloWZ", "30px", "170px", "normal"); 
         addTitle("MainRolloWZ", "200px", "100px", "18px", "white", "Presets");
+        
+        var btnRolloWZAuto = new CtrlButton();
+        btnRolloWZAuto.create("MainRolloWZ", "260px", "50px",  "normal", "cyan", "Automatik", "command","",  "send('command(Rollo,WZ,Auto)') ");
+        var btnRolloWZMan = new CtrlButton();
+        btnRolloWZMan.create("MainRolloWZ", "320px", "50px",  "normal", "cyan", "Manual", "command","",  "send('command(Rollo,WZ,Man)') ");  
+        var btnRolloWZ75 = new CtrlButton();
+        btnRolloWZ75.create("MainRolloWZ", "380px", "50px",  "normal", "cyan", "75%", "command","",  "send('command(Rollo,WZ,dark)') ");
+        var btnRolloWZ50 = new CtrlButton();
+        btnRolloWZ50.create("MainRolloWZ", "440px", "50px",  "normal", "cyan", "50%", "command","", "send('command(Rollo,WZ,mid)') ");
+        var btnRolloWZ25 = new CtrlButton();
+        btnRolloWZ25.create("MainRolloWZ", "500px", "50px",  "normal", "cyan", "25%", "command","", "send('command(Rollo,WZ,bright)') ");
+      
+        addTitle("MainRolloWZ", "210px", "400px", "18px", "white", "Control");
+        
+        var btnRolloWZHoch = new CtrlButton();
+        btnRolloWZHoch.create("MainRolloWZ", "260px", "350px",  "normal", "cyan", "Automatik", "command","",  "send('command(Rollo,WZ,up)') ");
+        var btnRolloWZStop = new CtrlButton();
+        btnRolloWZStop.create("MainRolloWZ", "320px", "350px",  "normal", "cyan", "Manual", "command","",  "send('command(Rollo,WZ,stop)') "); 
+        var btnRolloWZRunter = new CtrlButton();
+        btnRolloWbtnRolloWZRunterZ75.create("MainRolloWZ", "380px", "350px",  "normal", "cyan", "75%", "command","",  "send('command(Rollo,WZ,down)') ");
+        var btnRolloWZStepUp = new CtrlButton();
+        btnRolloWZStepUp.create("MainRolloWZ", "440px", "350px",  "normal", "cyan", "50%", "command","", "send('command(Rollo,WZ,StepUp)') ");
+        var btnRolloWZStepDown = new CtrlButton();
+        btnRolloWZStepDown.create("MainRolloWZ", "500px", "350px",  "normal", "cyan", "25%", "command","", "send('command(Rollo,WZ,StepDown)') ");
+    
+    
+    
+ /*       
         addCtrlButton("MainRolloWZ", "btn33", "260px", "50px", "normal", "cyan", "Automatik", "send('command(Rollo,WZ,Auto)') ");
         addCtrlButton("MainRolloWZ", "btn34", "320px", "50px", "normal", "cyan", "Manual", "send('command(Rollo,WZ,Man)') ");     
         addCtrlButton("MainRolloWZ", "btn35", "380px", "50px", "normal", "cyan", "75%", "send('command(Rollo,WZ,dark)') ");
@@ -859,6 +887,8 @@
         addCtrlButton("MainRolloWZ", "btn40", "380px", "350px", "normal", "cyan", "Runter", "send('command(Rollo,WZ,down)') ");
         addCtrlButton("MainRolloWZ", "btn41", "440px", "350px", "normal", "cyan", "Step Up", "send('command(Rollo,WZ,StepUp)') ");
         addCtrlButton("MainRolloWZ", "btn42", "500px", "350px", "normal", "cyan", "Step Down", "send('command(Rollo,WZ,StepDown)') ");
+    
+    */
     </script>
  		<!-- ************************ Rolladen  BalkonTuer ************************  -->
 		<Main id="MainRolloB"  class="RolloB">	</Main>
