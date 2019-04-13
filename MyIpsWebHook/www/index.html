@@ -799,16 +799,30 @@
         var iHzK = new DynIcon("heizkoerper","bin",false);
         iHzK.create("MainHzK", "40px", "70px", "wide");
         addTitle("MainHzK", "240px", "120px", "18px", "white", "Mode");
-        addCtrlButton("MainHzK", "btnHzKauto", "300px", "50px", "normal", "midgreen", "Automatik", "send('command(Heizung,K,auto)') ");
-        addCtrlButton("MainHzK", "btn26", "360px", "50px", "normal", "midgreen", "Manual", "send('command(Heizung,K,man)') ");
-        addCtrlButton("MainHzK", "btn27", "420px", "50px", "normal", "midgreen", "Urlaub", "send('command(Heizung,K,urlaub)') ");
-        addCtrlButton("MainHzK", "btn28", "480px", "50px", "normal", "midgreen", "Party", "send('command(Heizung,K,party)') ");
+        
+        var btnHzKauto = new CtrlButton();
+        btnHzKauto.create("MainHzK", "300px", "50px",  "normal", "midgreen", "Automatik", "command","",  "send('command(Heizung,K,auto)') ");
+        var btnHzKman = new CtrlButton();
+        btnHzKman.create("MainHzK", "360px", "50px",  "normal", "midgreen", "Manual", "command","",  "send('command(Heizung,K,man)') ");
+        var btnHzSZUrlaub = new CtrlButton();
+        btnHzKUrlaub.create("MainHzK", "420px", "50px",  "normal", "midgreen", "Urlaub", "command","", "send('command(Heizung,K,urlaub)') ");
+        var btnHzKParty = new CtrlButton();
+        btnHzKParty.create("MainHzK", "480px", "50px",  "normal", "midgreen", "Party", "command","",  "send('command(Heizung,K,party)') ");
+        
+
         addTitle("MainHzK", "240px", "400px", "18px", "white", "Presets");
-        addCtrlButton("MainHzK", "btn29", "300px", "350px", "normal", "midgreen", "Heizen", "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
-        addCtrlButton("MainHzK", "btn30", "360px", "350px", "normal", "midgreen", "Absenken", "{send('command(Heizung,K,absenken)'); document.getElementById('AdjTempHzK1').innerHTML='16.0';} ");
-        addCtrlButton("MainHzK", "btn31", "420px", "350px", "normal", "midgreen", "Aus", "{send('command(Heizung,K,aus)'); document.getElementById('AdjTempHzK1').innerHTML='6.0';} ");
-        addCtrlButton("MainHzK", "btn32", "480px", "350px", "normal", "midgreen", "Auf", "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
-  </script>
+        
+        var btnHzKHeizen = new CtrlButton();
+        btnHzKHeizen.create("MainHzK", "300px", "350px",  "normal", "midgreen", "Heizen", "command","",  "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
+        var btnHzKAbsenken = new CtrlButton();
+        btnHzKZAbsenken.create("MainHzK", "360px", "350px",  "normal", "midgreen", "Absenken", "command","",  "{send('command(Heizung,K,absenken)'); document.getElementById('AdjTempHzK1').innerHTML='16.0';} ");
+        var btnHzKAus = new CtrlButton();
+        btnHzKAus.create("MainHzK", "420px", "350px",  "normal", "midgreen", "Aus", "command","",  "{send('command(Heizung,K,aus)'); document.getElementById('AdjTempHzK1').innerHTML='6.0';} ");
+        var btnHzKAuf = new CtrlButton();
+        btnHzKAuf.create("MainHzK", "480px", "350px",  "normal", "midgreen", "Auf", "command","", "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
+        
+        
+   </script>
 		<!-- ************************ Heizung Ctrl Kueche ************************  -->
 		<Ctrl  id="MainHzKCtrl"  class="HeizungCtrlK">
 
