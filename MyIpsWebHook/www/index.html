@@ -608,9 +608,7 @@
  
         var iHzWZ = new DynIcon("heizkoerper","bin",false);
         iHzWZ.create("MainHeizungWZ", "40px", "70px", "wide"); 
-        /*
-        addTitle("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
-        */
+
         var labelModeWZ = new label();
         labelModeWZ.create("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
         var labelPresetWZ = new label();
@@ -625,9 +623,7 @@
         var btnHzWZParty = new CtrlButton();
         btnHzWZParty.create("MainHeizungWZ", "480px", "50px",  "normal", "cyan", "Party", "command","",  "send('command(Heizung,WZ,party)')");
         
-/*
-        addTitle("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
- */       
+     
 
         
         var btnHzWZHeizen = new CtrlButton();
@@ -682,9 +678,7 @@
         
         var iHzKZ = new DynIcon("heizkoerper","bin",false);
         iHzKZ.create("MainHzKZ", "40px", "70px", "wide"); 
-/*
-        addTitle("MainHzKZ", "240px", "120px", "18px", "white", "Mode");
-*/
+
         var labelModeKZ = new label();
         labelModeKZ.create("MainHzKZ", "240px", "120px", "18px", "white", "Mode");
         var labelPresetKZ = new label();
@@ -699,9 +693,7 @@
         var btnHzKZParty = new CtrlButton();
         btnHzKZParty.create("MainHzKZ", "480px", "50px",  "normal", "olive", "Party", "command","",  "send('command(Heizung,KZ,party)') ");
         
-/*
-        addTitle("MainHzKZ", "240px", "400px", "18px", "white", "Presets");
-*/        
+       
         var btnHzKZHeizen = new CtrlButton();
         btnHzKZHeizen.create("MainHzKZ", "300px", "350px",  "normal", "olive", "Heizen", "command","",  "{send('command(Heizung,KZ,heizen)'); document.getElementById('AdjTempHzKZ1').innerHTML='22.5';} ");
         var btnHzKZAbsenken = new CtrlButton();
@@ -749,9 +741,7 @@
         
         var iHzSZ = new DynIcon("heizkoerper","bin",false);
         iHzSZ.create("MainHzSZ", "40px", "70px", "wide"); 
-      /*
-        addTitle("MainHzSZ", "240px", "120px", "18px", "white", "Mode");
-*/
+
         var labelModeSZ = new label();
         labelModeSZ.create("MainHzSZ", "240px", "120px", "18px", "white", "Mode");
         var labelPresetSZ = new label();
@@ -767,9 +757,7 @@
         var btnHzSZParty = new CtrlButton();
         btnHzSZParty.create("MainHzSZ", "480px", "50px",  "normal", "sandy", "Party", "command","",  "send('command(Heizung,SZ,party)') ");
         
-/*
-        addTitle("MainHzSZ", "240px", "400px", "18px", "white", "Presets");
-*/        
+      
         var btnHzSZHeizen = new CtrlButton();
         btnHzSZHeizen.create("MainHzSZ", "300px", "350px",  "normal", "sandy", "Heizen", "command","",  "{send('command(Heizung,SZ,heizen)'); document.getElementById('AdjTempHzSZ1').innerHTML='22.5';} ");
         var btnHzSZAbsenken = new CtrlButton();
@@ -819,9 +807,6 @@
         
         var iHzK = new DynIcon("heizkoerper","bin",false);
         iHzK.create("MainHzK", "40px", "70px", "wide");
-  /*
-        addTitle("MainHzK", "240px", "120px", "18px", "white", "Mode");
-*/
 
         var labelModeK = new label();
         labelModeK.create("MainHzK", "240px", "120px", "18px", "white", "Mode");
@@ -838,9 +823,7 @@
         var btnHzKParty = new CtrlButton();
         btnHzKParty.create("MainHzK", "480px", "50px",  "normal", "midgreen", "Party", "command","",  "send('command(Heizung,K,party)') ");
         
-/*
-        addTitle("MainHzK", "240px", "400px", "18px", "white", "Presets");
- */       
+     
         var btnHzKHeizen = new CtrlButton();
         btnHzKHeizen.create("MainHzK", "300px", "350px",  "normal", "midgreen", "Heizen", "command","",  "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
         var btnHzKAbsenken = new CtrlButton();
@@ -876,9 +859,6 @@
     <script>     
         var iRolloWZ = new DynIcon("rollo","ana",false);
         iRolloWZ.create("MainRolloWZ", "30px", "170px", "normal"); 
-        /*
-        addTitle("MainRolloWZ", "200px", "100px", "18px", "white", "Presets");
-        */
        
         var labelPresetWZ = new label();
         labelPresetWZ.create("MainRolloWZ", "200px", "100px", "18px", "white", "Presets");
@@ -896,9 +876,7 @@
         btnRolloWZ50.create("MainRolloWZ", "440px", "50px",  "normal", "cyan", "50%", "command","", "send('command(Rollo,WZ,mid)') ");
         var btnRolloWZ25 = new CtrlButton();
         btnRolloWZ25.create("MainRolloWZ", "500px", "50px",  "normal", "cyan", "25%", "command","", "send('command(Rollo,WZ,bright)') ");
-     /* 
-        addTitle("MainRolloWZ", "210px", "400px", "18px", "white", "Control");
-     */   
+ 
         var btnRolloWZHoch = new CtrlButton();
         btnRolloWZHoch.create("MainRolloWZ", "260px", "350px",  "normal", "cyan", "Hoch", "command","",  "send('command(Rollo,WZ,up)') ");
         var btnRolloWZStop = new CtrlButton();
@@ -919,9 +897,7 @@
      <script>    
         var iRolloB = new DynIcon("rollo","ana",false);
         iRolloB.create("MainRolloB", "30px", "170px", "normal");   
-        /*
-        addTitle("MainRolloB", "200px", "100px", "24px", "white", "Presets");
-        */
+
        
         var labelPresetB = new label();
         labelPresetB.create("MainRolloB", "200px", "100px", "18px", "white", "Presets");
@@ -939,9 +915,7 @@
         btnRolloB50.create("MainRolloB", "440px", "50px",  "normal", "blue", "50%", "command","", "send('command(Rollo,B,mid)') ");
         var btnRolloB25 = new CtrlButton();
         btnRolloB25.create("MainRolloB", "500px", "50px",  "normal", "blue", "25%", "command","", "send('command(Rollo,B,bright)') ");
-      /*
-        addTitle("MainRolloB", "200px", "400px", "24px", "white", "Control");
-       */
+
       
         var btnRolloBHoch = new CtrlButton();
         btnRolloBHoch.create("MainRolloB", "260px", "350px",  "normal", "blue", "Hoch", "command","",  "send('command(Rollo,B,up)') ");
@@ -963,9 +937,7 @@
     <script>      
         var iRolloKZ = new DynIcon("rollo","ana",false);
         iRolloKZ.create("MainRolloKZ", "30px", "170px", "normal");    
-        /*
-        addTitle("MainRolloKZ", "210px", "100px", "18px", "white", "Presets");
-        */
+
        
         var labelPresetKZ = new label();
         labelPresetKZ.create("MainRolloKZ", "200px", "100px", "18px", "white", "Presets");
@@ -983,9 +955,7 @@
         btnRolloKZ50.create("MainRolloKZ", "440px", "50px",  "normal", "olive", "50%", "command","", "send('command(Rollo,KZ,mid)') ");
         var btnRolloKZ25 = new CtrlButton();
         btnRolloKZ25.create("MainRolloKZ", "500px", "50px",  "normal", "olive", "25%", "command","", "send('command(Rollo,KZ,bright)') ");
-      /*
-        addTitle("MainRolloKZ", "210px", "400px", "18px", "white", "Control");
-      */  
+
         var btnRolloKZHoch = new CtrlButton();
         btnRolloKZHoch.create("MainRolloKZ", "260px", "350px",  "normal", "olive", "Hoch", "command","",  "send('command(Rollo,KZ,up)') ");
         var btnRolloKZStop = new CtrlButton();
@@ -1007,9 +977,7 @@
     <script>     
         var iRolloK = new DynIcon("rollo","ana",false);
         iRolloK.create("MainRolloK", "30px", "170px", "normal");  
-        /*
-        addTitle("MainRolloK", "210px", "100px", "18px", "white", "Presets");
-        */
+
        
         var labelPresetK = new label();
         labelPresetK.create("MainRolloK", "200px", "100px", "18px", "white", "Presets");
@@ -1027,9 +995,7 @@
         btnRolloK50.create("MainRolloK", "440px", "50px",  "normal", "midgreen", "50%", "command","", "send('command(Rollo,K,mid)') ");
         var btnRolloK25 = new CtrlButton();
         btnRolloK25.create("MainRolloK", "500px", "50px",  "normal", "midgreen", "25%", "command","", "send('command(Rollo,K,bright)') ");
-      /*
-        addTitle("MainRolloK", "210px", "400px", "18px", "white", "Control");
-      */  
+
         var btnRolloKHoch = new CtrlButton();
         btnRolloKHoch.create("MainRolloK", "260px", "350px",  "normal", "midgreen", "Hoch", "command","",  "send('command(Rollo,K,up)') ");
         var btnRolloKStop = new CtrlButton();
