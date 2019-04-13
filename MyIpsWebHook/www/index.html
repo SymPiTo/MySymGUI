@@ -891,6 +891,38 @@
     
 
     </script>
+    
+    
+ 
+		<!-- **************************  Rolladen Ctrl Wohnzimmer **************************  -->
+		<Ctrl id = "MainRolloWZCtrl" class="RolloCtrlWZ"></Ctrl>
+			 			
+    <script>
+        
+        
+        var DisPosRolloWZCtrl = new StateDisplay();
+        DisPosRolloWZCtrl.create("MainRolloWZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloWZCtrl = new StateDisplay();
+        DisModeRolloWZCtrl.create("MainRolloWZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloWZCtrl = new StateDisplay();
+        DisST1RolloWZCtrl.create("MainRolloWZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloWZCtrl = new StateDisplay();
+        DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");    
+        
+   
+        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
+        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
+        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
+        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,WZ,StepUp)')");
+        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,WZ,StepDown)')");
+        CbSSrolloWZ = Object.create(CheckBox);
+        CbSSrolloWZ.create("MainRolloWZCtrl", "SSRolloWZ", "cyan" ,"520px", "10px",  "SunRise-SunSet", "command(Rollo,WZ,SSXX");  
+    </script>     
+    
+    
  		<!-- ************************ Rolladen  BalkonTuer ************************  -->
 		<Main id="MainRolloB"  class="RolloB">	</Main>
 
@@ -931,6 +963,40 @@
        
 
     </script>
+    
+ 
+		<!-- ************************** Rolladen Ctrl BalkontTuer **************************  -->
+		<Ctrl id = MainRolloBCtrl  class="RolloCtrlB">  </Ctrl> 
+
+               
+    <script>
+        
+        var DisPosRolloB = new StateDisplay();
+        DisPosRolloB.create("MainRolloBCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloB = new StateDisplay();
+        DisModeRolloB.create("MainRolloBCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloB = new StateDisplay();
+        DisST1RolloB.create("MainRolloBCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloB = new StateDisplay();
+        DisST2RolloB.create("MainRolloBCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
+        
+        
+
+        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,B,up)')");
+        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,B,stop)')");
+        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,B,down)')");
+        addFontButton("MainRolloBCtrl", "blue", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,B,StepUp)')");
+        addFontButton("MainRolloBCtrl", "blue", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,B,StepDown)')");
+        
+        CbSSrolloB = Object.create(CheckBox);
+        CbSSrolloB.create("MainRolloBCtrl", "SSRolloB", "blue",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,B,SSXX");  
+    </script>  
+    
+    
+    
  		<!-- ************************ Rolladen  Kinderzimmer ************************  -->
 		<Main id="MainRolloKZ"  class="RolloKZ">	</Main>
 
@@ -971,6 +1037,35 @@
         
   
     </script>
+    
+ 
+		<!-- ************************** Rolladen Ctrl Kinderzimmer **************************  -->
+		<Ctrl id = MainRolloKZCtrl  class="RolloCtrlKZ"> </Ctrl>
+		
+    <script>
+        
+        
+        var DisPosRolloKZ = new StateDisplay();
+        DisPosRolloKZ.create("MainRolloKZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloKZ = new StateDisplay();
+        DisModeRolloKZ.create("MainRolloKZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloKZ = new StateDisplay();
+        DisST1RolloKZ.create("MainRolloKZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloKZ = new StateDisplay();
+        DisST2RolloKZ.create("MainRolloKZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
+   
+        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
+        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,KZ,stop)')");
+        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,KZ,down)')");
+        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,KZ,StepUp)')");
+        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,KZ,StepDown)')");
+    </script>  
+    
+    
+    
  		<!-- ************************ Rolladen  Kueche ************************ -->
 		<Main id="MainRolloK"  class="RolloK">	</Main>
  		
@@ -1011,6 +1106,38 @@
    
     </script>
 
+		<!-- ************************** Rolladen Ctrl Kueche ************************** -->
+		<Ctrl id = MainRolloKCtrl  class="RolloCtrlK"></Ctrl>
+    <script>
+        
+        var DisPosRolloK = new StateDisplay();
+        DisPosRolloK.create("MainRolloKCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
+        
+        var DisModeRolloK = new StateDisplay();
+        DisModeRolloK.create("MainRolloKCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
+        
+        var DisST1RolloK = new StateDisplay();
+        DisST1RolloK.create("MainRolloKCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
+        
+        var DisST2RolloK = new StateDisplay();
+        DisST2RolloK.create("MainRolloKCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", ""); 
+        
+        
+ 
+        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,K,up)')");
+        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,K,stop)')");
+        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,K,down)')");
+        addFontButton("MainRolloKCtrl", "midgreen", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,K,StepUp)')");
+        addFontButton("MainRolloKCtrl", "midgreen", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,K,StepDown)')");
+        CbSSrolloK = Object.create(CheckBox);
+        CbSSrolloK.create("MainRolloKCtrl", "SSRolloK", "midgreen",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,K,SSXX");  
+    </script>  
+ 
+ 
+
+    
+    
+    
  		<!-- ************************ Light  Schlafzimmer ************************ -->
 		<Main id="MainLightSZ"  class="LightSZ"></Main>
  		
@@ -2308,114 +2435,6 @@
 			<img  id="CDclientimg" src='images/DenonCeolAnlage.png' style=" width: 200px; height: 100px;"/>
 		</Ctrl>
 
-		<!-- **************************  Rolladen Ctrl Wohnzimmer **************************  -->
-		<Ctrl id = "MainRolloWZCtrl" class="RolloCtrlWZ"></Ctrl>
-			 			
-    <script>
-        
-        
-        var DisPosRolloWZCtrl = new StateDisplay();
-        DisPosRolloWZCtrl.create("MainRolloWZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
-        
-        var DisModeRolloWZCtrl = new StateDisplay();
-        DisModeRolloWZCtrl.create("MainRolloWZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
-        
-        var DisST1RolloWZCtrl = new StateDisplay();
-        DisST1RolloWZCtrl.create("MainRolloWZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        
-        var DisST2RolloWZCtrl = new StateDisplay();
-        DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");    
-        
-   
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,WZ,StepUp)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,WZ,StepDown)')");
-        CbSSrolloWZ = Object.create(CheckBox);
-        CbSSrolloWZ.create("MainRolloWZCtrl", "SSRolloWZ", "cyan" ,"520px", "10px",  "SunRise-SunSet", "command(Rollo,WZ,SSXX");  
-    </script>    
-		<!-- ************************** Rolladen Ctrl Kinderzimmer **************************  -->
-		<Ctrl id = MainRolloKZCtrl  class="RolloCtrlKZ"> </Ctrl>
-		
-    <script>
-        
-        
-        var DisPosRolloKZ = new StateDisplay();
-        DisPosRolloKZ.create("MainRolloKZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
-        
-        var DisModeRolloKZ = new StateDisplay();
-        DisModeRolloKZ.create("MainRolloKZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
-        
-        var DisST1RolloKZ = new StateDisplay();
-        DisST1RolloKZ.create("MainRolloKZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        
-        var DisST2RolloKZ = new StateDisplay();
-        DisST2RolloKZ.create("MainRolloKZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
-   
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,KZ,stop)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,KZ,down)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,KZ,StepUp)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,KZ,StepDown)')");
-    </script>   
-		<!-- ************************** Rolladen Ctrl BalkontTuer **************************  -->
-		<Ctrl id = MainRolloBCtrl  class="RolloCtrlB">  </Ctrl> 
-
-               
-    <script>
-        
-        var DisPosRolloB = new StateDisplay();
-        DisPosRolloB.create("MainRolloBCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
-        
-        var DisModeRolloB = new StateDisplay();
-        DisModeRolloB.create("MainRolloBCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
-        
-        var DisST1RolloB = new StateDisplay();
-        DisST1RolloB.create("MainRolloBCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        
-        var DisST2RolloB = new StateDisplay();
-        DisST2RolloB.create("MainRolloBCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
-        
-        
-
-        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,B,up)')");
-        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,B,stop)')");
-        addFontButton("MainRolloBCtrl", "blue", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,B,down)')");
-        addFontButton("MainRolloBCtrl", "blue", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,B,StepUp)')");
-        addFontButton("MainRolloBCtrl", "blue", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,B,StepDown)')");
-        
-        CbSSrolloB = Object.create(CheckBox);
-        CbSSrolloB.create("MainRolloBCtrl", "SSRolloB", "blue",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,B,SSXX");  
-    </script>   
-		<!-- ************************** Rolladen Ctrl Kueche ************************** -->
-		<Ctrl id = MainRolloKCtrl  class="RolloCtrlK"></Ctrl>
-    <script>
-        
-        var DisPosRolloK = new StateDisplay();
-        DisPosRolloK.create("MainRolloKCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "", "", "", "");
-        
-        var DisModeRolloK = new StateDisplay();
-        DisModeRolloK.create("MainRolloKCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "", "", "");
-        
-        var DisST1RolloK = new StateDisplay();
-        DisST1RolloK.create("MainRolloKCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr", "String", "", "", "", "");
-        
-        var DisST2RolloK = new StateDisplay();
-        DisST2RolloK.create("MainRolloKCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", ""); 
-        
-        
- 
-        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,K,up)')");
-        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,K,stop)')");
-        addFontButton("MainRolloKCtrl", "midgreen", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,K,down)')");
-        addFontButton("MainRolloKCtrl", "midgreen", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,K,StepUp)')");
-        addFontButton("MainRolloKCtrl", "midgreen", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,K,StepDown)')");
-        CbSSrolloK = Object.create(CheckBox);
-        CbSSrolloK.create("MainRolloKCtrl", "SSRolloK", "midgreen",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,K,SSXX");  
-    </script>   
-
-    
 
     
     
