@@ -420,13 +420,18 @@
         }
         //<!-- ************************ Heizung Kinderzimmer ************************  -->
  
-     //   $('PosHzKZ1').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
-        MainTempHzKZ.update(sym[1], 1);
-        MainPosHzKZ.update(sym[5], 0);        
       
+        MainTempHzKZ.update(sym[1], 1);
+        MainPosHzKZ.update(sym[5], 0);     
+        MainTempVHzKZ.update("0.0", 1);
+        MainTempRHzKZ.update("0.0", 1);
+        
         //$('PosHzKZ2').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
+        
+        /*
         $('TempVorHzKZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzKZ1').innerHTML =  "--" + '°C'  ;
+       */
         $('SollTempHzKZ1').innerHTML =  sym[34] + '°C'  ;
         $('SollTempAusHzKZ1').innerHTML =  sym[35] + '°C' ;
  
@@ -446,12 +451,15 @@
            document.getElementById("BatHzKZ1").style.color = 'lime';
         }
          //<!-- ************************ Heizung Schlafzimmer ************************  -->
-      // $('TempHzSZ1').innerHTML =  sym[0] + '°C'  ;
        
         MainTempHzSZ.update(sym[0], 1);
         MainPosHzSZ.update(sym[6], 0); 
-      
+        MainTempVHzSZ.update("0.0", 1);
+        MainTempRHzSZ.update("0.0", 1);
+        
+        
       //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
+      
         $('TempVorHzSZ1').innerHTML =  sym[39] + '°C'  ;
         $('TempRueckHzSZ1').innerHTML = sym[40] + '°C'  ;
         $('SollTempHzSZ1').innerHTML =  sym[37] + '°C'  ;
@@ -476,12 +484,17 @@
         //<!-- ************************ Heizung Kueche ************************  -->
          $('TempHzK1').innerHTML =  sym[3] + '°C'  ;
          $('PosHzK1').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
+         
         MainTempHzK.update(sym[3], 1);
         MainPosHzK.update(sym[7], 0);   
+        MainTempVHzK.update("0.0", 1);
+        MainTempRHzK.update("0.0", 1);
       
      //   $('PosHzK2').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
+     /*
         $('TempVorHzK1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzK1').innerHTML =  "--" + '°C'  ;
+     */
         $('SollTempHzK1').innerHTML =  sym[42] + '°C'  ;
         $('SollTempAusHzK1').innerHTML =  sym[43] + '°C' ;
   
