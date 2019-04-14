@@ -638,11 +638,12 @@ class StateDisplay {
 
             var elem = document.createElement("div");
             elem.className = "var";  
-            elem.classList.add(this.bgColor, size);
+            elem.classList.add(size);
             elem.style.position = "absolute";
             elem.style.left = posLeft;
             elem.style.top = posTop;
             elem.style.color = this.textcolor;
+            elem.style.backgroundColor = bgColor;
 
             this.ID = elem;
 
