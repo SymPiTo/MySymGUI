@@ -1060,12 +1060,20 @@
         
         var DisST2RolloKZ = new StateDisplay();
         DisST2RolloKZ.create("MainRolloKZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");  
-   
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,KZ,stop)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,KZ,down)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,KZ,StepUp)')");
-        addFontButton("MainRolloKZCtrl", "olive", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,KZ,StepDown)')");
+
+ 
+
+        var FontBtnRolloKZup = new FontButtonNew();
+        FontBtnRolloKZup.create("MainRolloKZCtrl", "olive", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
+        var FontBtnRolloKZstop = new FontButtonNew();
+        FontBtnRolloKZstop.create("MainRolloKZCtrl", "olive", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,KZ,stop)')");
+        var FontBtnRolloKZdown = new FontButtonNew();
+        FontBtnRolloKZdown.create("MainRolloKZCtrl", "olive", "big", "350px", "170px", "fa fa-chevron-downp", "send('command(Rollo,KZ,down)')");
+        var FontBtnRolloKZstepUp = new FontButtonNew();
+        FontBtnRolloKZstepUp.create("MainRolloKZCtrl", "olive", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,KZ,StepUp)')");
+        var FontBtnRolloKZstepDown = new FontButtonNew();
+        FontBtnRolloKZstepDown.create("MainRolloKZCtrl", "olive", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,KZ,StepDown)')");
+        
     </script>  
     
     
