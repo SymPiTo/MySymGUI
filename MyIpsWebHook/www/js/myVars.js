@@ -393,11 +393,14 @@
  
         //<!-- ************************ Heizung Wohnzimmer ************************  -->
         MainTempHzWZ.update(sym[2], 1);
-         
         MainPosHzWZ.update(sym[4], 0);
-
+        MainTempVHzWZ.update("0.0", 1);
+        MainTempRHzWZ.update("0.0", 1);
+        
+/*
         $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzWZ1').innerHTML =  "--" + '°C' ;
+   */
         $('SollTempHzWZ1').innerHTML =  sym[27] + '°C'  ;
         $('SollTempAusHzWZ1').innerHTML =  sym[28] + '°C' ;
 
