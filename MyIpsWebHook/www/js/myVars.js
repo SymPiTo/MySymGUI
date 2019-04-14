@@ -392,8 +392,8 @@
         LeftMenuKZ.update(sym[3], "°C","","","","","","");
  
         //<!-- ************************ Heizung Wohnzimmer ************************  -->
-
         MainTempHzWZ.update(sym[2], 1);
+         
         MainPosHzWZ.update(sym[4], 0);
 
         $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
