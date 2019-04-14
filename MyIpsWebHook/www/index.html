@@ -593,8 +593,17 @@
 		<Main id="MainHeizungWZ" class="HeizungWZ">	</Main>
  
    <script>
- 
-        
+        var MainTempVHzWZ = new label();
+        MainTempVHzWZ.create("MainHeizungWZ", "cyan","50px", "350px", "normal", "°C");
+        var MainTempRHzWZ = new label();
+        MainTempRHzWZ.create("MainHeizungWZ", "cyan","190px", "350px", "normal", "°C");
+        var MainTempHzWZ = new label();
+        MainTempHzWZ.create("MainHeizungWZ", "cyan","20px", "100px", "normal", "°C");
+        var MainPosHzWZ = new label();
+        MainPosHzWZ.create("MainHeizungWZ", "cyan","20px", "200px", "normal", "%");
+            
+            
+     /*
         MainTempVHzWZ = Object.create(VarDisplay);
         MainTempVHzWZ.create("MainHeizungWZ", "TempVorHzWZ1", "cyan","50px", "350px", "normal", "°C");
         MainTempRHzWZ = Object.create(VarDisplay);
@@ -604,7 +613,7 @@
         MainTempHzWZ.create("MainHeizungWZ", "TempHzWZ1", "cyan","20px", "100px", "normal", "°C");
         MainPosHzWZ = Object.create(VarDisplay);
         MainPosHzWZ.create("MainHeizungWZ", "PosHzWZ11", "cyan","20px", "200px", "normal", "%");
-        
+       */ 
  
         var iHzWZ = new DynIcon("heizkoerper","bin",false);
         iHzWZ.create("MainHeizungWZ", "40px", "70px", "wide"); 
@@ -663,8 +672,16 @@
 
  		</Main>
    <script>
- 
+        var MainTempVHzKZ = new label();
+        MainTempVHzKZ.create("MainHzKZ", "olive","50px", "350px", "normal", "°C");
+        var MainTempRHzKZ = new label();
+        MainTempRHzKZ.create("MainHzKZ", "olive","190px", "350px", "normal", "°C");
+        var MainTempHzKZ = new label();
+        MainTempHzKZ.create("MainHzKZ", "olive","20px", "100px", "normal", "°C");
+        var MainPosHzKZ = new label();
+        MainPosHzKZ.create("MainHzKZ", "olive","20px", "200px", "normal", "%");
         
+        /*
         
         MainTempVHzKZ = Object.create(VarDisplay);
         MainTempVHzKZ.create("MainHzKZ", "TempVorHzKZ1", "olive", "50px", "350px", "normal", "°C");
@@ -675,7 +692,7 @@
         MainTempHzKZ.create("MainHzKZ", "TempHzKZ1", "olive","20px", "100px", "normal", "°C");
         MainPosHzKZ = Object.create(VarDisplay);
         MainPosHzKZ.create("MainHzKZ", "PosHzKZ1", "olive","20px", "200px", "normal", "%");        
-        
+    */    
         var iHzKZ = new DynIcon("heizkoerper","bin",false);
         iHzKZ.create("MainHzKZ", "40px", "70px", "wide"); 
 
@@ -727,7 +744,16 @@
 		<Main id="MainHzSZ"   class="HeizungSZ">	</Main>
                 
    <script>
- 
+        var MainTempVHzSZ = new label();
+        MainTempVHzSZ.create("MainHzSZ", "sandy","50px", "350px", "normal", "°C");
+        var MainTempRHzSZ = new label();
+        MainTempRHzSZ.create("MainHzSZ", "sandy","190px", "350px", "normal", "°C");
+        var MainTempHzSZ = new label();
+        MainTempHzSZ.create("MainHzSZ", "sandy","20px", "100px", "normal", "°C");
+        var MainTempHzSZ = new label();
+        MainTempHzSZ.create("MainHzSZ", "sandy","20px", "200px", "normal", "%");
+        
+        /*
         
         MainTempVHzSZ = Object.create(VarDisplay);
         MainTempVHzSZ.create("MainHzSZ", "TempVorHzSZ1", "sandy", "50px", "350px", "normal", "°C");
@@ -738,7 +764,7 @@
         MainTempHzSZ.create("MainHzSZ", "TempHzSZ1", "sandy","20px", "100px", "normal", "°C");
         MainPosHzSZ = Object.create(VarDisplay);
         MainPosHzSZ.create("MainHzSZ", "PosHzSZ1", "sandy","20px", "200px", "normal", "%");     
-        
+    */    
         var iHzSZ = new DynIcon("heizkoerper","bin",false);
         iHzSZ.create("MainHzSZ", "40px", "70px", "wide"); 
 
@@ -793,8 +819,16 @@
 
  	 
    <script>
- 
+        var MainTempVHzK = new label();
+        MainTempVHzK.create("MainHzK", "midgreen","50px", "350px", "normal", "°C");
+        var MainTempRHzK = new label();
+        MainTempRHzK.create("MainHzK", "midgreen","190px", "350px", "normal", "°C");
+        var MainTempHzK = new label();
+        MainTempHzK.create("MainHzK", "midgreen","20px", "100px", "normal", "°C");
+        var MainPosHzK = new label();
+        MainPosHzK.create("MainHzK", "midgreen","20px", "200px", "normal", "%");
         
+        /*
         MainTempVHzK = Object.create(VarDisplay);
         MainTempVHzK.create("MainHzK", "TempVorHzK1", "midgreen", "50px", "350px", "normal", "°C");
         MainTempRHzK = Object.create(VarDisplay);
@@ -804,7 +838,8 @@
         MainTempHzK.create("MainHzK", "TempHzK1", "midgreen","20px", "100px", "normal", "°C");
         MainPosHzK = Object.create(VarDisplay);
         MainPosHzK.create("MainHzK", "PosHzK1", "midgreen","20px", "200px", "normal", "%");
-        
+    */
+   
         var iHzK = new DynIcon("heizkoerper","bin",false);
         iHzK.create("MainHzK", "40px", "70px", "wide");
 

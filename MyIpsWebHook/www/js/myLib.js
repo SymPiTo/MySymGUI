@@ -617,7 +617,60 @@ class StateDisplay {
 
 
 
+/* --------------------- Class VarDis ---------------------------------------- */
+ 
+    class VarDis {
+        constructor() {
+            this.ID = "";
+            this.unit = "";
+            this.textColor = "white";
+            this.state1 = "";
+            this.state2 = "";
+            this.bgColor = "black";
+        }
 
+        create(ParentID, bgColor, posTop, posLeft, size,  einheit, zus0, zus1){
+
+            this.bgColor = bgColor;
+            this.unit = einheit;
+            this.state1 = zus0;
+            this.state2 = zus1;
+
+            var elem = document.createElement("div");
+            elem.className = "var";  
+            elem.classList.add(this.bgColor, size);
+            elem.style.position = "absolute";
+            elem.style.left = posLeft;
+            elem.style.top = posTop;
+            elem.style.color = this.textcolor;
+
+            this.ID = elem;
+
+            document.getElementById(ParentID).appendChild(elem);   
+        }
+
+        update(value, n){
+            try { 
+                if (value === false){
+                   this.ID.innerHTML = this.state1; 
+                }
+                else if (value === true) {
+                    this.ID.innerHTML = this.state2; 
+                }
+                else if (n === 0 || n > 0){
+                    //var wert = Math.round(value).toFixed(n);
+                    var wert = value.toFixed(n);
+                    this.ID.innerHTML = wert + this.unit;
+                }
+                else {
+                    this.ID.innerHTML = value + this.unit;
+                }
+            } catch (error) {
+               // alert("error");
+            }
+
+        }
+    }  
 
 
 
@@ -675,7 +728,7 @@ class StateDisplay {
         }
         
      }
-  }  ; 
+  }  
   
 
 
