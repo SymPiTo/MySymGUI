@@ -377,12 +377,11 @@
 			
     function Heizung(sym){
         //<!-- ******************** Temperatur   Werte Floorplan **************************  -->
-        /*
-        $('tempK_E').innerHTML =  sym[3] + '°C'  ;
-        $('tempWZ_E').innerHTML =  sym[2] + '°C'  ;
-        $('tempSZ_E').innerHTML =  sym[0] + '°C'  ;
-        $('tempKZ_E').innerHTML =  sym[1] + '°C';
-        */
+        VarDisTempK_E.update(sym[3], 1);
+        VarDisTempWZ_E.update(sym[2], 1);
+        VarDisTempSZ_E.update(sym[0], 1);
+        VarDisTempKZ_E.update(sym[1], 1);
+
         //<!-- Temperatur Glide Floorplan  -->
         LeftMenuFP.update(sym[3], "°C", sym[2], "°C",  sym[0], "°C",  sym[1], "°C");
         
