@@ -459,12 +459,12 @@
         
         
       //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
-      
+     /* 
         $('TempVorHzSZ1').innerHTML =  sym[39] + '°C'  ;
         $('TempRueckHzSZ1').innerHTML = sym[40] + '°C'  ;
         $('SollTempHzSZ1').innerHTML =  sym[37] + '°C'  ;
         $('SollTempAusHzSZ1').innerHTML =  sym[38] + '°C' ;
-  
+  */
         iHzSZ.update(sym[6]);
         
        
@@ -494,10 +494,10 @@
      /*
         $('TempVorHzK1').innerHTML =  "--"  + '°C'  ;
         $('TempRueckHzK1').innerHTML =  "--" + '°C'  ;
-     */
+  
         $('SollTempHzK1').innerHTML =  sym[42] + '°C'  ;
         $('SollTempAusHzK1').innerHTML =  sym[43] + '°C' ;
-  
+     */
         iHzK.update(sym[7]);
         
        
