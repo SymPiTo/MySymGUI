@@ -641,7 +641,7 @@ background: -webkit-linear-gradient(hsl(152, 70%, 15%), hsl(152,70%,25%),hsl(152
 	width: 0px;
         height:95vh;
 	background-color: #FFFFFF;
-	background-image: url('../images/Wohnung_Grundriss.png');
+	background-image: url('../images/Wohnung_Grundriss.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -1936,6 +1936,10 @@ width:40%;
 .fontbutton.big{
 	width: 80px;
 	margin:2px;
+}
+.fontbutton.big>span{
+    position: relative;
+    top: 20%;
 }
 .fontbutton.wide{
 	width: 130px;

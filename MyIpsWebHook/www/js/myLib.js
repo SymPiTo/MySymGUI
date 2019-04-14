@@ -680,7 +680,7 @@ class StateDisplay {
 
 
 
-/* --------------------- ProtoType Klasse VarDisplay ---------------------------------------- */
+/* --------------------- ProtoType Klasse VarDisplay ---------------------------------------- 
  var VarDisplay = {
     Ident : "ID",
     color : "white",
@@ -731,7 +731,7 @@ class StateDisplay {
      }
   }  
   
-
+*/
 
 
 function addTempCtrl(ParentID, Ident, color, posTop, posLeft, Titel, valueID, valueLeftID, valueRightID, room){
@@ -891,7 +891,7 @@ function addStatus(ParentID, Ident, color, posTop, posLeft,   text){
 
 
 
-/* --------------------- ProtoType Klasse FontButton ---------------------------------------- */
+/* --------------------- ProtoType Klasse FontButton ---------------------------------------- 
  var FontButton = {
     create :  function(ParentID, color, size, posTop, posLeft, symbol, cmd){  
                 var elem = document.createElement("div");
@@ -913,7 +913,8 @@ function addStatus(ParentID, Ident, color, posTop, posLeft,   text){
     }    
 
  };
- 
+ */
+
 function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
     var elem = document.createElement("div");
     elem.className = "fontbutton";   
