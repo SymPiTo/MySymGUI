@@ -642,7 +642,7 @@ class StateDisplay {
             elem.style.position = "absolute";
             elem.style.left = posLeft;
             elem.style.top = posTop;
-            elem.style.color = this.textcolor;
+            elem.style.color = this.textColor;
             elem.style.backgroundColor = bgColor;
 
             this.ID = elem;
