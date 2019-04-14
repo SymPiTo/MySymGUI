@@ -903,12 +903,20 @@
         var DisST2RolloWZCtrl = new StateDisplay();
         DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", "");    
         
-   
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,WZ,StepUp)')");
-        addFontButton("MainRolloWZCtrl", "cyan", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,WZ,StepDown)')");
+ 
+        
+        var FontBtnRolloSZup = new FontButtonNew();
+        FontBtnRolloSZup.create("MainRolloWZCtrl", "cyan", "big", "340px", "10px", "fa fa-chevron-up", "send('command(Rollo,WZ,up)')");
+        var FontBtnRolloSZstop = new FontButtonNew();
+        FontBtnRolloSZstop.create("MainRolloWZCtrl", "cyan", "big", "340px", "90px", "fa fa-stop", "send('command(Rollo,WZ,stop)')");
+        var FontBtnRolloSZdown = new FontButtonNew();
+        FontBtnRolloSZdown.create("MainRolloWZCtrl", "cyan", "big", "340px", "170px", "fa fa-chevron-up", "send('command(Rollo,WZ,down)')");
+        var FontBtnRolloSZstepUp = new FontButtonNew();
+        FontBtnRolloSZstepUp.create("MainRolloWZCtrl", "cyan", "big", "420px", "10px", "fa fa-plus", "send('command(Rollo,WZ,StepUp)')");
+        var FontBtnRolloSZstepDown = new FontButtonNew();
+        FontBtnRolloSZstepDown.create("MainRolloWZCtrl", "cyan", "big", "420px", "170px", "fa fa-minus", "send('command(Rollo,WZ,StepDown)')");
+         
+         
         CbSSrolloWZ = Object.create(CheckBox);
         CbSSrolloWZ.create("MainRolloWZCtrl", "SSRolloWZ", "cyan" ,"520px", "10px",  "SunRise-SunSet", "command(Rollo,WZ,SSXX");  
     </script>     
