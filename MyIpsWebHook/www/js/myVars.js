@@ -482,9 +482,10 @@
            document.getElementById("BatHzSZ1").style.color = 'lime';
         }
         //<!-- ************************ Heizung Kueche ************************  -->
+        /*
          $('TempHzK1').innerHTML =  sym[3] + '°C'  ;
          $('PosHzK1').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
-         
+       */  
         MainTempHzK.update(sym[3], 1);
         MainPosHzK.update(sym[7], 0);   
         MainTempVHzK.update("0.0", 1);
