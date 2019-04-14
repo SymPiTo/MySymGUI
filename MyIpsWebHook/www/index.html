@@ -601,19 +601,7 @@
         MainTempHzWZ.create("MainHeizungWZ", "black","20px", "100px", "normal", "°C");
         var MainPosHzWZ = new VarDis();
         MainPosHzWZ.create("MainHeizungWZ", "black","20px", "200px", "normal", "%");
-            
-            
-     /*
-        MainTempVHzWZ = Object.create(VarDisplay);
-        MainTempVHzWZ.create("MainHeizungWZ", "TempVorHzWZ1", "cyan","50px", "350px", "normal", "°C");
-        MainTempRHzWZ = Object.create(VarDisplay);
-        MainTempRHzWZ.create("MainHeizungWZ", "TempRueckHzWZ1", "cyan", "190px", "350px", "normal", "°C");
-        
-        MainTempHzWZ = Object.create(VarDisplay);
-        MainTempHzWZ.create("MainHeizungWZ", "TempHzWZ1", "cyan","20px", "100px", "normal", "°C");
-        MainPosHzWZ = Object.create(VarDisplay);
-        MainPosHzWZ.create("MainHeizungWZ", "PosHzWZ11", "cyan","20px", "200px", "normal", "%");
-       */ 
+ 
  
         var iHzWZ = new DynIcon("heizkoerper","bin",false);
         iHzWZ.create("MainHeizungWZ", "40px", "70px", "wide"); 
@@ -828,17 +816,7 @@
         var MainPosHzK = new VarDis();
         MainPosHzK.create("MainHzK", "black","20px", "200px", "normal", "%");
         
-        /*
-        MainTempVHzK = Object.create(VarDisplay);
-        MainTempVHzK.create("MainHzK", "TempVorHzK1", "midgreen", "50px", "350px", "normal", "°C");
-        MainTempRHzK = Object.create(VarDisplay);
-        MainTempRHzK.create("MainHzK", "TempRueckHzK1", "midgreen", "190px", "350px", "normal", "°C");
-
-        MainTempHzK = Object.create(VarDisplay);
-        MainTempHzK.create("MainHzK", "TempHzK1", "midgreen","20px", "100px", "normal", "°C");
-        MainPosHzK = Object.create(VarDisplay);
-        MainPosHzK.create("MainHzK", "PosHzK1", "midgreen","20px", "200px", "normal", "%");
-    */
+ 
    
         var iHzK = new DynIcon("heizkoerper","bin",false);
         iHzK.create("MainHzK", "40px", "70px", "wide");
@@ -1576,17 +1554,48 @@
 		<Main id ="Grundriss" class="floorplan"></Main>
 		
    <script>
+        var VarDisTempK_E = new VarDis();
+        VarDisTempK_E.create("Grundriss", "black","55vh", "15vw", "normal", "°C");
+       
+        var VarDisTempWZ_E = new VarDis();
+        VarDisTempWZ_E.create("Grundriss", "black","60vH", "60vw", "normal", "°C");
+        
+        var VarDisTempSZ_E = new VarDis();
+        VarDisTempSZ_E.create("Grundriss", "black","200px", "20vw", "normal", "°C");
+       
+        var VarDisTempKZ_E = new VarDis();
+        VarDisTempKZ_E.create("Grundriss", "black","100px", "65vw", "normal", "°C");     
+        
+        var VarDisHumidSZ_E = new VarDis();
+        VarDisHumidSZ_E.create("Grundriss", "black","70px", "9vw", "normal", "°C");
+       
+        var VarDisHumidKZ_E = new VarDis();
+        VarDisHumidKZ_E.create("Grundriss", "black","70px", "65vw", "normal", "°C");
+        
+        var VarDisTempOutside = new VarDis();
+        VarDisTempOutside.create("Grundriss", "black","10vh", "80vw", "normal", "°C");
+       
+        var VarDisHumOutside = new VarDis();
+        VarDisHumOutside.create("Grundriss", "black","90vh", "24vw", "normal", "°C");     
+
+        var VarDisMainDoor = new VarDis();
+        VarDisMainDoor.create("Grundriss", "black","55vh", "15vw", "normal", "°C");   
+   /*    
         VarDisTempK_E = Object.create(VarDisplay);
         VarDisTempK_E.create("Grundriss", "tempK_E", "cyan","55vh", "15vw", "normal", "°C");
+    
         VarDisTempWZ_E = Object.create(VarDisplay);
-        VarDisTempWZ_E.create("Grundriss", "tempWZ_E", "cyan","60vH", "60vw", "normal", "°C");        
+        VarDisTempWZ_E.create("Grundriss", "tempWZ_E", "cyan","60vH", "60vw", "normal", "°C"); 
+    
         VarDisTempSZ_E = Object.create(VarDisplay);
         VarDisTempSZ_E.create("Grundriss", "tempSZ_E", "cyan","200px", "20vw", "normal", "°C");
+    
         VarDisTempKZ_E = Object.create(VarDisplay);
         VarDisTempKZ_E.create("Grundriss", "tempKZ_E", "cyan","100px", "65vw", "normal", "°C"); 
     
         VarDisHumidSZ_E = Object.create(VarDisplay);
         VarDisHumidSZ_E.create("Grundriss", "FeuchteSZ_E", "cyan","70px", "9vw", "normal", "%");
+    
         VarDisHumidKZ_E = Object.create(VarDisplay);
         VarDisHumidKZ_E.create("Grundriss", "FeuchteKZ_E", "cyan","70px", "65vw", "normal", "%");        
  
@@ -1597,7 +1606,7 @@
         
         VarDisMainDoor = Object.create(VarDisplay);
         VarDisMainDoor.create("Grundriss", "door_E", "cyan","90vh", "24vw", "normal", "", "close", "open");
-        
+  */      
         var iLightSz = new DynIcon("Light","bin",false);
         iLightSz.create("Grundriss", "100px", "180px", "size2");
         
