@@ -1135,7 +1135,7 @@
         DisST2RolloK.create("MainRolloKCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", ""); 
         
         
-         var FontBtnRolloKup = new FontButtonNew();
+        var FontBtnRolloKup = new FontButtonNew();
         FontBtnRolloKup.create("MainRolloKCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,K,up)')");
         var FontBtnRolloKstop = new FontButtonNew();
         FontBtnRolloKstop.create("MainRolloKCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,K,stop)')");
@@ -1220,13 +1220,18 @@
         var DisST2RolloSZ = new StateDisplay();
         DisST2RolloSZ.create("MainRolloSZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so", "String", "", "", "", ""); 
         
-        
+        var FontBtnRolloSZup = new FontButtonNew();
+        FontBtnRolloSZup.create("MainRolloSZCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,SZ,up)')");
+        var FontBtnRolloSZstop = new FontButtonNew();
+        FontBtnRolloSZstop.create("MainRolloSZCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,SZ,stop)')");
+        var FontBtnRolloSZdown = new FontButtonNew();
+        FontBtnRolloSZdown.create("MainRolloSZCtrl", "midgreen", "big", "350px", "170px", "fa fa-chevron-down", "send('command(Rollo,SZ,down)')");
+        var FontBtnRolloSZstepUp = new FontButtonNew();
+        FontBtnRolloSZstepUp.create("MainRolloSZCtrl", "midgreen", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,SZ,StepUp)')");
+        var FontBtnRolloSZstepDown = new FontButtonNew();
+        FontBtnRolloSZstepDown.create("MainRolloSZCtrl", "midgreen", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,SZ,StepDown)')");
  
-        addFontButton("MainRolloSZCtrl", "midgreen", "big", "350px", "10px", "fa fa-chevron-up", "send('command(Rollo,SZ,up)')");
-        addFontButton("MainRolloSZCtrl", "midgreen", "big", "350px", "90px", "fa fa-stop", "send('command(Rollo,SZ,stop)')");
-        addFontButton("MainRolloSZCtrl", "midgreen", "big", "350px", "170px", "fa fa-chevron-up", "send('command(Rollo,SZ,down)')");
-        addFontButton("MainRolloSZCtrl", "midgreen", "big", "430px", "10px", "fa fa-plus", "send('command(Rollo,SZ,StepUp)')");
-        addFontButton("MainRolloSZCtrl", "midgreen", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,SZ,StepDown)')");
+
         CbSSrolloK = Object.create(CheckBox);
         CbSSrolloK.create("MainRolloSZCtrl", "SSRolloK", "midgreen",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,SZ,SSXX");  
     </script>  
