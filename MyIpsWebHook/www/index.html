@@ -335,7 +335,7 @@
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Rolladen Wohnzimmer", "_Rolladen_BW_web.png", "MainRolloWZ","", "SM" ); 
             
-             var SubMenuRolloWZ = new GlideButton();
+            var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", "DenonCeolIcon.jpg", "MainCeolWZ","", "SM" ); 
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuWZ", "cyan", "Samsung TV", "_TV_BW.png", "MainTV","", "SM" ); 
@@ -1975,7 +1975,15 @@
             var FontBtnIRadioPowerWZ = new FontButtonNew();
             FontBtnIRadioPowerWZ.create("MainCeolWZ", "purple", "normal", "83vh", "75%", "fa fa-power-off", "send('command(DenonCeol,power,toggle)')");
         </script>  
-            
+
+	<!-- ************************** Internet Radio Stationen  **************************  -->
+	<Ctrl id = MainCeolWZCtrl class="RadioStation"></Ctrl>
+        
+        <script> 
+            var CtrlIRadiochannels = new IconList();
+            CtrlIRadiochannels.create("MainCeolWZCtrl", "IRadio"  );  
+        </script> 
+        
  <!--           
             <div class="col"> 
                 
@@ -2577,13 +2585,7 @@
             CtrlTVchannels.create("MainTVCtrl", "TV"  );  
         </script> 
         
-	<!-- ************************** Internet Radio Stationen  **************************  -->
-	<Ctrl id = MainIRadioCtrl class="RadioStation"></Ctrl>
-        
-        <script> 
-            var CtrlIRadiochannels = new IconList();
-            CtrlIRadiochannels.create("MainIRadioCtrl", "IRadio"  );  
-        </script> 
+
 
 		
 
