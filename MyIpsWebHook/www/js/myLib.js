@@ -913,7 +913,7 @@ function addStatus(ParentID, Ident, color, posTop, posLeft,   text){
     }    
 
  };
- */
+
 
 function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
     var elem = document.createElement("div");
@@ -934,7 +934,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
     document.getElementById(ParentID).appendChild(elem);	
 }
 
-
+ */
 
  
 
