@@ -2855,7 +2855,7 @@ class CtrlStatButton {
             this.ID = "";
         }
 
-        createMain(MainID, bgcolor){
+        createMain(MainID, bgcolor, klasse){
             var elem1 = document.createElement("Main");
             elem1.id = MainID;
             elem1.className = klasse;
