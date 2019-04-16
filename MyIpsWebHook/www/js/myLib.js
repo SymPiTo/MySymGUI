@@ -1009,7 +1009,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
             this.ObjValue4 = "";
         }
  
-          create(ParentID, farbe, titel, image, IDMain, IDFull, MenuType){
+        create(ParentID, farbe, titel, image, IDMain, IDFull, MenuType){
             var elem1 = document.createElement("div"); 
             elem1.className = "GlideButton"; 
             elem1.classList.add(farbe);
@@ -2849,3 +2849,29 @@ class CtrlStatButton {
     }
  
  
+    /* --------------------- Klasse Area ---------------------------------------- */
+    class Area { 
+        constructor() {
+            this.ID = "";
+        }
+
+        createMain(MainID, bgcolor){
+            var elem1 = document.createElement("Main");
+            elem1.id = MainID;
+            elem1.style.position = "absolute";
+            elem1.style.top = "5vh";	 
+            elem1.style.left = "16.2vw";
+            elem1.style.width = "0px";
+            elem1.style.height = "95vh";
+	 
+            elem1.style.backgroundColor = bgcolor;
+
+           
+           document.getElementById("Container").appendChild(elem1);
+        }
+        
+        createCtrl(){
+            var elem11 = document.createElement("Ctrl");
+            document.getElementById("Container").appendChild(elem11);
+        }
+    } 
