@@ -2855,9 +2855,10 @@ class CtrlStatButton {
             this.ID = "";
         }
 
-        createMain(MainID, bgcolor){
+        createMain(MainID, bgcolor, klasse){
             var elem1 = document.createElement("Main");
             elem1.id = MainID;
+            elem1.className = klasse;
             elem1.style.position = "absolute";
             elem1.style.top = "5vh";	 
             elem1.style.left = "16.2vw";
