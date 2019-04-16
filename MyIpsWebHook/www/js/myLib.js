@@ -2855,10 +2855,10 @@ class CtrlStatButton {
             this.ID = "";
         }
 
-        createMain(MainID, bgcolor, klasse){
+        createMain(MainID, bgcolor){
             var elem1 = document.createElement("Main");
             elem1.id = MainID;
-            elem1.className = klasse;
+            elem1.className = MainID + "Klasse";
             elem1.style.position = "absolute";
             elem1.style.top = "5vh";	 
             elem1.style.left = "16.2vw";
@@ -2870,8 +2870,7 @@ class CtrlStatButton {
             elem1.style.padding = ".0rem";
             elem1.style.transition = "all 0.5s ease";
     //-webkit-overflow-scrolling: touch;
-    
-	
+    //::-webkit-scrollbar {display: none;}	
  
            document.getElementById("Container").appendChild(elem1);
         }
