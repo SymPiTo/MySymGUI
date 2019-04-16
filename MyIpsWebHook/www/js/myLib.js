@@ -2858,14 +2858,14 @@ class CtrlStatButton {
         createMain(MainID, bgcolor){
             var elem1 = document.createElement("Main");
             elem1.id = MainID;
-            elem1.className = MainID + "Main";
+            elem1.className = MainID;
             elem1.classList.add(bgcolor);
             elem1.style.position = "absolute";
             elem1.style.top = "5vh";	 
             elem1.style.left = "16.2vw";
             elem1.style.width = "0px";
             elem1.style.height = "95vh";
-            // elem1.style.backgroundColor = bgcolor;
+             
             elem1.style.overflow = "auto";
             elem1.style.padding = ".0rem";
             elem1.style.transition = "all 0.5s ease";
@@ -2878,14 +2878,14 @@ class CtrlStatButton {
         createCtrl(CtrlID, bgcolor){
             var elem2 = document.createElement("Ctrl");
             elem2.id = CtrlID;
-            elem2.className = CtrlID + "Ctrl";
+            elem2.className = CtrlID;
             elem2.classList.add(bgcolor);
             elem2.style.position = "absolute";
             elem2.style.top = "5vh";	 
             elem2.style.left = "74vw";
             elem2.style.width = "0px";
             elem2.style.height = "95vh";
-            // elem1.style.backgroundColor = bgcolor;
+             
             elem2.style.overflow = "auto";
             elem2.style.padding = ".0rem";
             elem2.style.transition = "all 0.5s ease";
