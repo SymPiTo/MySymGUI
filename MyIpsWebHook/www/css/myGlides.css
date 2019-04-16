@@ -3089,6 +3089,13 @@ h1:after {
     background: black;
 }
 
+/* *********************  Background COLORS ********************************** */
+.bgCpurple {
+    background: hsl(300, 100%, 10%);
+} 
+
+
+
 
 /* *********************  Weather ********************************** */
     .weathertablecell { 

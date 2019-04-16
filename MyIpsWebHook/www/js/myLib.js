@@ -2859,13 +2859,14 @@ class CtrlStatButton {
             var elem1 = document.createElement("Main");
             elem1.id = MainID;
             elem1.className = MainID + "Klasse";
+            elem1.classList.add(bgcolor);
             elem1.style.position = "absolute";
             elem1.style.top = "5vh";	 
             elem1.style.left = "16.2vw";
             elem1.style.width = "0px";
             elem1.style.height = "95vh";
 	 
-            elem1.style.backgroundColor = bgcolor;
+           // elem1.style.backgroundColor = bgcolor;
             elem1.style.overflow = "auto";
             elem1.style.padding = ".0rem";
             elem1.style.transition = "all 0.5s ease";
