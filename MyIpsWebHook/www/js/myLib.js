@@ -2869,7 +2869,7 @@ class CtrlStatButton {
             var elem2 = document.createElement("Ctrl");
             elem2.id = CtrlID;
             elem2.className = CtrlID;
-            elem2.classList.add(bgcolor, "area" , "areaMain");
+            elem2.classList.add(bgcolor, "area" , "areCtrl");
 
             
             document.getElementById("Container").appendChild(elem2);
