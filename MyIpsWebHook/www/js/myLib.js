@@ -436,8 +436,8 @@ var ToggleCtrlBtn = {
     
     update(value1, value2, value3, value4, active){
         if(active){
-            this.elem.style.WebkitTransition = "all 2s";
-            this.elem.style.height = "200px";
+            this.ID.style.WebkitTransition = "all 2s";
+            this.ID.style.height = "200px";
             this.imgID.src =  value1;
             this.elemA.innerHTML =   value2;
             this.elemB.innerHTML = value3;
