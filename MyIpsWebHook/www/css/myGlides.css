@@ -150,7 +150,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .RezepteCtrlList,
 .IRadio,
 .WSS,
-.TV
+.TV,
+.area
 {
     overflow: auto;
     padding: .0rem;
@@ -207,10 +208,27 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .TimePickerX::-webkit-scrollbar,
 .IRadio::-webkit-scrollbar,
 .WSS::-webkit-scrollbar,
-.TV::-webkit-scrollbar {
+.TV::-webkit-scrollbar, 
+.area::-webkit-scrollbar {
     display: none;
 }
 /*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+.areaMain{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:16.2vw;
+}
+
+.areaCtrl{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:74vw;
+}
+
 .StartScreen {
 	position: absolute;
 	top: 5vh;
