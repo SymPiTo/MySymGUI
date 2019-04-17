@@ -401,6 +401,7 @@ var ToggleCtrlBtn = {
         elem1.style.marginRight = "30px";
         elem1.src = "";
         elem1.style.opacity = "0.0";
+        elem1.style.WebkitTransition = "all 3s ease";
         this.imgID = elem1;
          
         elem.append(elem1);
