@@ -401,6 +401,7 @@ var ToggleCtrlBtn = {
         elem1.style.marginRight = "30px";
         elem1.src = "";
         this.imgID = elem1;
+        elem1.style.display = "none";
         elem.append(elem1);
         
         var elem2 = document.createElement("div");
