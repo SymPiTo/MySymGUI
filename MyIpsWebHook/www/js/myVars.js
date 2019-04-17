@@ -708,9 +708,9 @@
             DisST2RolloB.update(sym[56]); 
 
             DisPosRolloK.update(sym[15]);   
-            DisModeRolloK.update(sym[51]); 
+            DisModeRolloK.update(sym[14]); 
             DisST1RolloK.update(sym[50]); 
-            DisST2RolloK.update(sym[14]); 
+            DisST2RolloK.update(sym[51]); 
             CbSSrolloK.update(sym[52]);
 
 
