@@ -444,6 +444,7 @@ var ToggleCtrlBtn = {
             
             this.ID.style.height = "200px";
             this.SubID.style.display = "block";
+            this.imgID.style.display = "block";
             this.imgID.src =  value1;
             this.elemA.innerHTML =   value2;
             this.elemB.innerHTML = value3;
