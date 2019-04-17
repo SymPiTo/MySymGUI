@@ -372,7 +372,8 @@ var ToggleCtrlBtn = {
     
     
     constructor() {
-        this.ID ="";
+        this.ID = "";
+        this.SubID = "";
         this.imgID = "";
         this.elemA = "";
         this.elemB = "";
@@ -404,6 +405,8 @@ var ToggleCtrlBtn = {
         
         var elem2 = document.createElement("div");
         elem2.className = "spalteLeft";
+        elem2.style.display = "none";
+        this.SubID = elem2;
         
         elem.append(elem2);
         
@@ -439,6 +442,7 @@ var ToggleCtrlBtn = {
         if(active){
             
             this.ID.style.height = "200px";
+            this.SubID.style.display = "block";
             this.imgID.src =  value1;
             this.elemA.innerHTML =   value2;
             this.elemB.innerHTML = value3;
