@@ -373,7 +373,6 @@ var ToggleCtrlBtn = {
     
     constructor() {
         this.ID = "";
-        this.SubID = "";
         this.imgID = "";
         this.elemA = "";
         this.elemB = "";
@@ -389,9 +388,8 @@ var ToggleCtrlBtn = {
         elem.style.top = posTop;
         elem.style.marginLeft = "5px";
         elem.style.marginRight = "5px";
-        elem.style.height = "0px"
+        elem.style.height = "200px"
         elem.style.width = "510px" 
-        elem.style.WebkitTransition = "all 2s ease";
         this.ID = elem;
         
         var elem1 = document.createElement("img");
@@ -400,16 +398,12 @@ var ToggleCtrlBtn = {
         elem1.style.margin = "10px";
         elem1.style.marginRight = "30px";
         elem1.src = "";
-        elem1.style.opacity = "0.0";
-        elem1.style.WebkitTransition = "all 3s ease";
         this.imgID = elem1;
          
         elem.append(elem1);
         
         var elem2 = document.createElement("div");
         elem2.className = "spalteLeft";
-        elem2.style.display = "none";
-        this.SubID = elem2;
         
         elem.append(elem2);
         
@@ -441,17 +435,12 @@ var ToggleCtrlBtn = {
         document.getElementById(ParentID).appendChild(elem);
     }
     
-    update(value1, value2, value3, value4, active){
-        if(active){
-            
-            this.ID.style.height = "200px";
-            this.SubID.style.display = "block";
-            this.imgID.style.opacity = "1";
+    update(value1, value2, value3, value4){
             this.imgID.src =  value1;
             this.elemA.innerHTML =   value2;
             this.elemB.innerHTML = value3;
             this.elemC.innerHTML = value4;
-        }
+   
     }
 }
 
