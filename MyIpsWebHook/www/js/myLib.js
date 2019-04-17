@@ -390,6 +390,7 @@ var ToggleCtrlBtn = {
         elem.style.marginRight = "5px";
         elem.style.height = "0px"
         elem.style.width = "510px" 
+        elem.style.WebkitTransition = "height 2s";
         this.ID = elem;
         
         var elem1 = document.createElement("img");
@@ -436,7 +437,7 @@ var ToggleCtrlBtn = {
     
     update(value1, value2, value3, value4, active){
         if(active){
-            this.ID.style.WebkitTransition = "all 2s";
+            
             this.ID.style.height = "200px";
             this.imgID.src =  value1;
             this.elemA.innerHTML =   value2;
