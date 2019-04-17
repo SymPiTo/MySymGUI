@@ -391,7 +391,7 @@ var ToggleCtrlBtn = {
         elem.style.marginRight = "5px";
         elem.style.height = "0px"
         elem.style.width = "510px" 
-        elem.style.WebkitTransition = "height 2s";
+        elem.style.WebkitTransition = "all 2s ease";
         this.ID = elem;
         
         var elem1 = document.createElement("img");
