@@ -372,6 +372,7 @@ var ToggleCtrlBtn = {
     
     
     constructor() {
+        this.ID ="";
         this.imgID = "";
         this.elemA = "";
         this.elemB = "";
@@ -387,9 +388,10 @@ var ToggleCtrlBtn = {
         elem.style.top = posTop;
         elem.style.marginLeft = "5px";
         elem.style.marginRight = "5px";
-        elem.style.height = "200px"
+        elem.style.height = "0px"
         elem.style.width = "510px" 
- 
+        this.ID = elem;
+        
         var elem1 = document.createElement("img");
         elem1.className = "icon";
         elem1.classList.add(size);
@@ -432,11 +434,15 @@ var ToggleCtrlBtn = {
         document.getElementById(ParentID).appendChild(elem);
     }
     
-    update(value1, value2, value3, value4){
-        this.imgID.src =  value1;
-        this.elemA.innerHTML =   value2;
-        this.elemB.innerHTML = value3;
-        this.elemC.innerHTML = value4;
+    update(value1, value2, value3, value4, active){
+        if(active){
+            this.elem.style.transition = "all 2s";
+            this.elem.style.height = "200px";
+            this.imgID.src =  value1;
+            this.elemA.innerHTML =   value2;
+            this.elemB.innerHTML = value3;
+            this.elemC.innerHTML = value4;
+        }
     }
 }
 
