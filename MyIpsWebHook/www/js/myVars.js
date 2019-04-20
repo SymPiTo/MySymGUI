@@ -115,10 +115,10 @@
             sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
             sym[52] = ips[0].ID45141; //Rollo K SSunSet  
             sym[53] = ips[0].ID49927; //Rollo WZ SSunSet           
-            sym[54] = ips[0].ID53721;  //Rollo B up/down
-            sym[55] = "";  //Rollo B Schaltzeit Mo-Fr
-            sym[56] = ips[0].ID58546; //Rollo B Schaltzeit Sa-So
-            sym[57] = true; //Rollo B SSunSet             
+            sym[54] = ips[0].ID25733;  //
+            sym[55] = ips[0].ID25733;;  //Rollo B Schaltzeit Mo-Fr
+            sym[56] = ips[0].ID58546;  //Rollo B Schaltzeit Sa-So
+            sym[57] = true; //           
             sym[58] = ips[0].ID36168; //Anwesenheit Stste Diele
             sym[59] = ips[0].ID30280;  //Bad Fenster Aktor LowBat
             sym[60] = ips[0].ID49846;  //Bad Taster-Fenster LowBat
