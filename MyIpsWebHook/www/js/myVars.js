@@ -115,7 +115,7 @@
             sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
             sym[52] = ips[0].ID45141; //Rollo K SSunSet  
             sym[53] = ips[0].ID49927; //Rollo WZ SSunSet           
-            sym[54] = ips[0].ID25733;  //
+            sym[54] = ips[0].ID11539;  //Rollo B up/Down
             sym[55] = ips[0].ID25733;;  //Rollo B Schaltzeit Mo-Fr
             sym[56] = ips[0].ID58546;  //Rollo B Schaltzeit Sa-So
             sym[57] = true; //           
