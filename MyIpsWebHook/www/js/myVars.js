@@ -83,7 +83,7 @@
             sym[19] = ips[0].ID29948;  //Rollo WZ Schaltzeit Mo-Fr
             sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
             sym[21] = ips[0].ID29574; //Rollo B Mode
-            sym[22] = ips[0].ID46035; //Rollo B Postion          
+            sym[22] = ips[0].ID25065; //Rollo B Postion          
             sym[23] = ips[0].ID57942;  //Sonnenuntergang
             sym[24] = ips[0].ID11938;  //Sonnenaufgang
             sym[25] = ips[0].ID37348;  //Balkontür
@@ -116,9 +116,9 @@
             sym[52] = ips[0].ID45141; //Rollo K SSunSet  
             sym[53] = ips[0].ID49927; //Rollo WZ SSunSet           
             sym[54] = ips[0].ID53721;  //Rollo B up/down
-            sym[55] = ips[0].ID48410;  //Rollo B Schaltzeit Mo-Fr
-            sym[56] = ips[0].ID12438; //Rollo B Schaltzeit Sa-So
-            sym[57] = ips[0].ID56785; //Rollo B SSunSet             
+            sym[55] = "";  //Rollo B Schaltzeit Mo-Fr
+            sym[56] = ips[0].ID58546; //Rollo B Schaltzeit Sa-So
+            sym[57] = true; //Rollo B SSunSet             
             sym[58] = ips[0].ID36168; //Anwesenheit Stste Diele
             sym[59] = ips[0].ID30280;  //Bad Fenster Aktor LowBat
             sym[60] = ips[0].ID49846;  //Bad Taster-Fenster LowBat
