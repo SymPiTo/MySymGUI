@@ -80,7 +80,7 @@
             sym[16] = ips[0].ID13013;  //Rollo WZ up/down
             sym[17] = ips[0].ID39896;  //Rollo WZ Position
             sym[18] = ips[0].ID50459; //Rollo WZ Mode
-            sym[19] = ips[0].ID29948;  //Rollo WZ Schaltzeit Mo-Fr
+            sym[19] = ips[0].ID25733;  //Rollo WZ Schaltzeit Mo-Fr
             sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
             sym[21] = ips[0].ID57642; //Rollo B Mode
             sym[22] = ips[0].ID25065; //Rollo B Postion          
@@ -704,7 +704,7 @@
 
             DisPosRolloB.update(sym[22]);   
             DisModeRolloB.update(sym[21]); 
-            DisST1RolloB.update(sym[54]); 
+            DisST1RolloB.update(sym[55]); 
             DisST2RolloB.update(sym[56]); 
 
             DisPosRolloK.update(sym[15]);   
