@@ -82,7 +82,7 @@
             sym[18] = ips[0].ID50459; //Rollo WZ Mode
             sym[19] = ips[0].ID29948;  //Rollo WZ Schaltzeit Mo-Fr
             sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
-            sym[21] = ips[0].ID29574; //Rollo B Mode
+            sym[21] = ips[0].ID57642; //Rollo B Mode
             sym[22] = ips[0].ID25065; //Rollo B Postion          
             sym[23] = ips[0].ID57942;  //Sonnenuntergang
             sym[24] = ips[0].ID11938;  //Sonnenaufgang
