@@ -24,10 +24,7 @@
             
 	 
 		
-$state = $_POST['variableID']; 
-$color = $_POST['value'];          
-$method = $_POST['method'];  
- SetValue((int)$_POST["variableID"],$_POST["value"]);
+
  
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
