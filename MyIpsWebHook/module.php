@@ -24,9 +24,9 @@
             
 	 
 		
-$state = $_GET['variableID']; 
-$color = $_GET['value'];          
-$method = $_GET['methSetValue((int)$_POST["variableID"],$_POST["value"]);od'];  
+$state = $_POST['variableID']; 
+$color = $_POST['value'];          
+$method = $_POST['methSetValue((int)$_POST["variableID"],$_POST["value"]);od'];  
  SetValue((int)$_POST["variableID"],$_POST["value"]);
  
 if(!isset($_SERVER['PHP_AUTH_USER']))
