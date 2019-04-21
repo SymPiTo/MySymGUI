@@ -13,37 +13,37 @@
 
 function SetValue(variableID,value)
 {
-        var url = "http://192.168.178.28:3777/hook/myipshook/";
+        var url = "http://192.168.178.28:3777/hook/myGUIhook/";
 	jQuery.post( url, {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueBoolean(variableID,value)
 {
-	jQuery.post(  {"method" : "SetValueBoolean", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( url {"method" : "SetValueBoolean", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueFloat(variableID,value)
 {
-	jQuery.post(  {"method" : "SetValueFloat", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( url {"method" : "SetValueFloat", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 
 function SetValueString(variableID,value)
 {
-	jQuery.post(  {"method" : "SetValueString", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post(url  {"method" : "SetValueString", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueInteger(variableID,value)
 {
-	jQuery.post(  {"method" : "SetValueInteger", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post(url {"method" : "SetValueInteger", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function IPS_Execute(programmpfad,parameter,dummy,warten)
 {
-	jQuery.post(  {"method" : "IPS_Execute", "programmpfad" : programmpfad, "parameter" : parameter, "dummy" : dummy, "warten" : warten},function( data ) { console.log(data); });
+	jQuery.post( url {"method" : "IPS_Execute", "programmpfad" : programmpfad, "parameter" : parameter, "dummy" : dummy, "warten" : warten},function( data ) { console.log(data); });
 }
 
 function IPS_RunScript(scriptID)
 {
-	jQuery.post( {"method" : "IPS_RunScript", "scriptID" : scriptID},function( data ) { console.log(data); });
+	jQuery.post(url {"method" : "IPS_RunScript", "scriptID" : scriptID},function( data ) { console.log(data); });
 }
