@@ -13,36 +13,36 @@
 
 function SetValue(variableID,value)
 {
-	$.post( "ips_injector.php", {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueBoolean(variableID,value)
 {
-	$.post( "ips_injector.php", {"method" : "SetValueBoolean", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "SetValueBoolean", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueFloat(variableID,value)
 {
-	$.post( "ips_injector.php", {"method" : "SetValueFloat", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "SetValueFloat", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 
 function SetValueString(variableID,value)
 {
-	$.post( "/ips_injector.php", {"method" : "SetValueString", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "/ips_injector.php", {"method" : "SetValueString", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueInteger(variableID,value)
 {
-	$.post( "ips_injector.php", {"method" : "SetValueInteger", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "SetValueInteger", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function IPS_Execute(programmpfad,parameter,dummy,warten)
 {
-	$.post( "ips_injector.php", {"method" : "IPS_Execute", "programmpfad" : programmpfad, "parameter" : parameter, "dummy" : dummy, "warten" : warten},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "IPS_Execute", "programmpfad" : programmpfad, "parameter" : parameter, "dummy" : dummy, "warten" : warten},function( data ) { console.log(data); });
 }
 
 function IPS_RunScript(scriptID)
 {
-	$.post( "ips_injector.php", {"method" : "IPS_RunScript", "scriptID" : scriptID},function( data ) { console.log(data); });
+	jQuery.post( "ips_injector.php", {"method" : "IPS_RunScript", "scriptID" : scriptID},function( data ) { console.log(data); });
 }
