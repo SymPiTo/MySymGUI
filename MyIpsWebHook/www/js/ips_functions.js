@@ -13,7 +13,7 @@
 
 function SetValue(variableID,value)
 {
-	jQuery.post(  {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
+	jQuery.post( "", {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
 
 function SetValueBoolean(variableID,value)
