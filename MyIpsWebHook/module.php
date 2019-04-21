@@ -22,6 +22,22 @@
         */
         protected function ProcessHookData() { 
             
+	if ($_POST["method"] == "SetValue")
+		SetValue((int)$_POST["variableID"],$_POST["value"]);
+	else if ($_POST["method"] == "SetValueBoolean")
+		SetValueBoolean((int)$_POST["variableID"],$_POST["value"]);
+	else if ($_POST["method"] == "SetValueFloat")
+		SetValueFloat((int)$_POST["variableID"],$_POST["value"]);
+	else if ($_POST["method"] == "SetValueInteger")
+		SetValueInteger((int)$_POST["variableID"],$_POST["value"]);
+	else if ($_POST["method"] == "SetValueString")
+		SetValueString((int)$_POST["variableID"],$_POST["value"]);
+	else if ($_POST["method"] == "IPS_Execute")
+		IPS_Execute($_POST["programmpfad"],$_POST["parameter"],$_POST["dummy"],$_POST["warten"]);
+	else if ($_POST["method"] == "IPS_RunScript")
+		IPS_RunScript((int)$_POST["scriptID"]);
+	else
+		IPS_MessageLog("IPS JS Injector","Command unknown!");            
             
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
