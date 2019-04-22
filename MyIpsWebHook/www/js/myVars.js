@@ -76,12 +76,15 @@
             sym[12] = ips[0].ID10834;  //Rollo KZ Mode
             sym[13] = ips[0].ID21261;  //Rollo KZ Postion            
             sym[14] = ips[0].ID46774;  //Rollo K Mode
-            sym[15] = ips[0].ID13174;  //Rollo K Postion     
-            sym[16] = ips[0].ID13013;  //Rollo WZ up/down
-            sym[17] = ips[0].ID39896;  //Rollo WZ Position
-            sym[18] = ips[0].ID50459; //Rollo WZ Mode
-            sym[19] = ips[0].ID29948;  //Rollo WZ Schaltzeit Mo-Fr
-            sym[20] = ips[0].ID56266; //Rollo WZ Schaltzeit Sa-So        
+            sym[15] = ips[0].ID13174;  //Rollo K Postion 
+            
+            sym[16] = ips[0].ID53773;  //Rollo WZ up/down
+            sym[17] = ips[0].ID49991;  //Rollo WZ Position
+            sym[18] = ips[0].ID13953; //Rollo WZ Mode
+            sym[19] = ips[0].ID21488;  //Rollo WZ Schaltzeit Mo-Fr
+            sym[20] = ips[0].ID37176; //Rollo WZ Schaltzeit Sa-So 
+            sym[53] = ips[0].ID15822; //Rollo WZ SSunSet  
+            
             sym[21] = ips[0].ID57642; //Rollo B Mode
             sym[22] = ips[0].ID25065; //Rollo B Postion          
             sym[23] = ips[0].ID57942;  //Sonnenuntergang
@@ -117,7 +120,7 @@
             sym[50] = ips[0].ID42555;  //Rollo K Schaltzeit Mo-Fr
             sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
             sym[52] = ips[0].ID45141; //Rollo K SSunSet  
-            sym[53] = ips[0].ID49927; //Rollo WZ SSunSet  
+
             
             sym[21] = ips[0].ID25457; //Rollo B Mode
             sym[22] = ips[0].ID26881; //Rollo B Postion 
