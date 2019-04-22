@@ -1016,7 +1016,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
         create(ParentID, farbe, titel, image, IDMain, IDFull, MenuType){
             var elem1 = document.createElement("div"); 
             elem1.className = "GlideButton"; 
-            elem1.classList.add(farbe);
+            elem1.classList.add(farbe, "area");
             elem1.onclick = function(){
                 // alle subMenus auf 0px verkleinern 
                 var subs = document.getElementsByTagName("SubMenu");
