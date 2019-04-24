@@ -2864,12 +2864,13 @@ class CtrlStatButton {
             elem1.id = MainID;
             elem1.className = MainID;
             elem1.classList.add(bgcolor, "area" , "areaMain");
+            /*
             elem1.style.position = "absolute";
             elem1.style.top = "5vh";	
             elem1.style.width = "0px";	
             elem1.style.height = "95vh";	
             elem1.style.left = "2vw";	
-            
+            */
 	
  
            document.getElementById("Container").appendChild(elem1);

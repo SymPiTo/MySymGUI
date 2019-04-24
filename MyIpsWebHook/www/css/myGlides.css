@@ -210,6 +210,21 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	height: 95vh;
         left:74vw;
 }
+.MainHeizungWZ{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:16.2vw;
+}
+
+.MainHeizungWZCtrl{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:74vw;
+}
 
 .StartScreen {
 	position: absolute;
