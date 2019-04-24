@@ -83,8 +83,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WetterCtrl,
 .Uhr,
 .UhrCtrl,
-.HeizungKZ,
-.HeizungCtrlKZ,
 .HeizungSZ,
 .HeizungCtrlSZ,
 .HeizungK,
@@ -266,26 +264,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 
-.HeizungKZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 16.2vw;
-	background: hsl(82, 100%, 10%);
-	/*border-right-color: #FFFFFF;
-	border-right-style: solid;
-	border-right-width: 1px; */
-}
-
-.HeizungCtrlKZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:74vw;
-	background: hsl(82, 100%, 10%);
-}
 .HeizungSZ{
 	position:absolute;
 	top: 5vh;

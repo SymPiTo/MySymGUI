@@ -621,9 +621,13 @@
 		
 
 		<!-- ************************ Heizung Kinderzimmer ************************  -->
-		<Main id="MainHzKZ"  class="HeizungKZ">	
+		<!-- <Main id="MainHzKZ"  class="HeizungKZ"></Main>	  -->
 
- 		</Main>
+ 		
+    <script> 
+       var windowHzWz = new Area();
+       windowHzWz.createMain("MainHzKZ", "bgCyan");
+   </script> 
    <script>
         var MainTempVHzKZ = new VarDis();
         MainTempVHzKZ.create("MainHzKZ", "black","50px", "350px", "normal", "°C");
@@ -667,9 +671,11 @@
    </script>
 		<!-- ************************ Heizung Ctrl Kinderzimmer ************************ -->
 
-		<Ctrl id="MainHzKZCtrl"  class="HeizungCtrlKZ"></Ctrl>
-		
-
+		<!-- <Ctrl id="MainHzKZCtrl"  class="HeizungCtrlKZ"></Ctrl> -->
+    <script> 
+       var CtrlwindowHzWz = new Area();
+       CtrlwindowHzWz.createCtrl("MainHzKZCtrl", "bgCyan");
+   </script>
    <script>
        addStatus("MainHzKZCtrl", "BatHzKZ1", "olive", "5px", "30px", "Battery");      
        addTempCtrl("MainHzKZCtrl", "TempCtrl2", "olive", "325px", "30px", "Soll Temperatur", "AdjTempHzKZ1", "SollTempAusHzKZ1", "SollTempHzKZ1", "sollTempKZ");
