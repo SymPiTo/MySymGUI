@@ -52,9 +52,10 @@
                                                                         var a = 0;
                                                                            if(this.readyState === 1){ 
                                                                                 a = 'connected';
-                                                                                var sym;
-                                                                                sym[0] = 11111;
-                                                                                sym[1] = 11112;
+                                                                                var sym =[
+                                                                                "11111",
+                                                                                "11112"
+                                                                                ]
                                                                                 var symString = JSON.stringify(sym);
                                                                                 send('setvalue(44859,' + symString + "')");
                                                                             }
