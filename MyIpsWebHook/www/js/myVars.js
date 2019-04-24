@@ -114,12 +114,12 @@
             sym[47] = ips[0].ID27502;  //Humidity Balkon Aussen
             sym[48] = ips[0].ID44154;  //Alarm Anlage aktiv
             
-            sym[14] = ips[0].ID46774;  //Rollo K Mode
-            sym[15] = ips[0].ID13174;  //Rollo K Postion 
-            sym[49] = ips[0].ID20341;  //Rollo K up/down
-            sym[50] = ips[0].ID42555;  //Rollo K Schaltzeit Mo-Fr
-            sym[51] = ips[0].ID54826; //Rollo K Schaltzeit Sa-So
-            sym[52] = ips[0].ID45141; //Rollo K SSunSet  
+            sym[14] = ips[0].ID53769;  //Rollo K Mode
+            sym[15] = ips[0].ID11004;  //Rollo K Postion 
+            sym[49] = ips[0].ID13003;  //Rollo K up/down
+            sym[50] = ips[0].ID34905;  //Rollo K Schaltzeit Mo-Fr
+            sym[51] = ips[0].ID52660; //Rollo K Schaltzeit Sa-So
+            sym[52] = ips[0].ID28605; //Rollo K SSunSet  
 
             
             sym[21] = ips[0].ID25457; //Rollo B Mode
