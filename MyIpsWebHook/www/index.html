@@ -50,7 +50,13 @@
                                 state('WebSocket: '+socket.readyState);
                                 socket.onopen    = function(msg)    {      
                                                                         var a = 0;
-                                                                           if(this.readyState === 1){ a = 'connected';}
+                                                                           if(this.readyState === 1){ 
+                                                                                a = 'connected';
+                                                                                sym[0] = 11111;
+                                                                                sym[1] = 11112;
+                                                                                JSON.stringify(sym); 
+                                                                                send('setvalue(44859,sym)');
+                                                                            }
                                                                            else if (this.readyState === 2){a = 'connecting';}
                                                                            else if (this.readyState === 0){a = 'not connecting';}
                                                                            else {a = 'Connection closed';}
