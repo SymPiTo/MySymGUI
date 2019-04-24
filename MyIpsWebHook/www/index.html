@@ -55,7 +55,7 @@
                                                                                 var sym = new Array ({Nr: 0,  ID: 11111},{Nr: 1,  ID: 11112})
                                                                                
                                                                                 var symString = JSON.stringify(sym);
-                                                                                send('setvalue(44859,' + sym + "')");
+                                                                                send('setvalue(44859,' + symString + "')");
                                                                             }
                                                                            else if (this.readyState === 2){a = 'connecting';}
                                                                            else if (this.readyState === 0){a = 'not connecting';}
