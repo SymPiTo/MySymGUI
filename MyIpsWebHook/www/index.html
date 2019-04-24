@@ -57,8 +57,8 @@
                                                                                         {No: 1,  ID: 11112}
                                                                                 )
                                                                                
-                                                                                JSON.stringify(sym); 
-                                                                                send('setvalue(44859,sym)');
+                                                                                var symJson = JSON.stringify(sym); 
+                                                                                send('setvalue(44859,' + symJson + "')");
                                                                             }
                                                                            else if (this.readyState === 2){a = 'connecting';}
                                                                            else if (this.readyState === 0){a = 'not connecting';}
