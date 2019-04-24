@@ -52,12 +52,6 @@
                                                                         var a = 0;
                                                                            if(this.readyState === 1){ 
                                                                                 a = 'connected';
-                                                                                var sym =[
-                                                                                "11111",
-                                                                                "11112"
-                                                                                ]
-                                                                                var symString = JSON.stringify(sym);
-                                                                                send('setvalue(44859,' + symString + "')");
                                                                             }
                                                                            else if (this.readyState === 2){a = 'connecting';}
                                                                            else if (this.readyState === 0){a = 'not connecting';}
@@ -1197,8 +1191,8 @@
         FontBtnRolloSZstepDown.create("MainRolloSZCtrl", "sandy", "big", "430px", "170px", "fa fa-minus", "send('command(Rollo,SZ,StepDown)')");
  
 
-        CbSSrolloK = Object.create(CheckBox);
-        CbSSrolloK.create("MainRolloSZCtrl", "SSRolloK", "sandy",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,SZ,SSXX");  
+        CbSSrolloSZ = Object.create(CheckBox);
+        CbSSrolloSZ.create("MainRolloSZCtrl", "SSRolloK", "sandy",  "520px", "10px",  "SunRise-SunSet", "command(Rollo,SZ,SSXX");  
     </script>  
  
  
