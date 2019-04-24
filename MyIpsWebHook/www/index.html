@@ -549,8 +549,11 @@
 
     
 		<!-- ************************ Heizung Wohnzimmer ************************  -->
-		<Main id="MainHeizungWZ" class="HeizungWZ">	</Main>
- 
+		//<Main id="MainHeizungWZ" class="HeizungWZ">	</Main>
+    <script> 
+       var windowHzWz = new Area();
+       windowHzWz.createMain("MainHeizungWZ", "cyanbg");
+   </script> 
    <script>
         var MainTempVHzWZ = new VarDis();
         MainTempVHzWZ.create("MainHeizungWZ", "black","50px", "350px", "normal", "°C");
@@ -597,8 +600,11 @@
  
 		<!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
 
-		<Ctrl id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"></Ctrl>
-
+		//<Ctrl id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"></Ctrl>
+    <script> 
+       var CtrlwindowHzWz = new Area();
+       CtrlwindowHzWz.createCtrl("MainHeizungWZCtrl", "cyanbg");
+   </script>
                 
    <script>
        addStatus("MainHeizungWZCtrl", "BatHzWZ1", "cyan", "5px", "30px", "Battery");      
