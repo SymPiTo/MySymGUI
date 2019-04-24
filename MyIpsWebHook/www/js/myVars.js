@@ -184,7 +184,13 @@
             sym[110] = ips[0].ID17052; // Security Code
             sym[111] = JSON.parse(ips[0].ID44125) //Wetter Week Data
             sym[112] = JSON.parse(ips[0].ID46593) //Wetter NowDay Data
-             
+            
+            sym[113] = ips[0].ID22052;  //Rollo SZ Mode
+            sym[114] = ips[0].ID18298;  //Rollo SZ Postion 
+            sym[115] = ips[0].ID58302;  //Rollo SZ up/down
+            sym[116] = ips[0].ID18740;  //Rollo SZ Schaltzeit Mo-Fr
+            sym[117] = ips[0].ID53883; //Rollo SZ Schaltzeit Sa-So
+            sym[118] = ips[0].ID12349; //Rollo SZ SSunSet     
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -722,6 +728,15 @@
             DisST1RolloK.update(sym[50]); 
             DisST2RolloK.update(sym[51]); 
             CbSSrolloK.update(sym[52]);
+
+            DisPosRolloSZ.update(sym[114]);   
+            DisModeRolloSZ.update(sym[113]); 
+            DisST1RolloSZ.update(sym[116]); 
+            DisST2RolloSZ.update(sym[117]); 
+            CbSSrolloSZ.update(sym[118]);
+
+ 
+
 
 
             CbSSrolloB.update(sym[57]);

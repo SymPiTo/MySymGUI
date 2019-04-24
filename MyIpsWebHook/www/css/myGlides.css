@@ -3125,4 +3125,74 @@ h1:after {
         position: relative; 
        
     }
-        
+     
+
+    /* *********************  Toggle Switch - Schiebe Schalter ********************************** */
+ .MoveSwitch {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+
+  border: solid 1px black;
+
+}
+
+.MoveSwitch input {display:none;}
+
+.MoveSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.MoveSlider:before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 30px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+Input:checked + .MoveSlider {
+  background-color: transparent;
+   
+}
+
+Input:focus + .MoveSlider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+Input:checked + .MoveSlider:before {
+  -webkit-transform: translateX(161px);
+  -ms-transform: translateX(161px);
+  transform: translateX(161px);
+}
+.MoveSlider:after
+{
+ content:'Manual';
+ color: red;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 20px;
+ font-family: Verdana, sans-serif;
+}
+
+Input:checked + .MoveSlider:after
+{  
+  color: lime;
+  content:'Automatic';
+}
