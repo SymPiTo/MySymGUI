@@ -76,7 +76,6 @@ button :active {
 /*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
 WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
 */
-
 .StartScreen,
 .Left,
 .HzAll,
@@ -84,6 +83,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WetterCtrl,
 .Uhr,
 .UhrCtrl,
+.HeizungWZ,
+.HeizungCtrlWZ,
 .HeizungKZ,
 .HeizungCtrlKZ,
 .HeizungSZ,
@@ -210,21 +211,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	height: 95vh;
         left:74vw;
 }
-.MainHeizungWZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:16.2vw;
-}
-
-.MainHeizungWZCtrl{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:74vw;
-}
 
 .StartScreen {
 	position: absolute;
@@ -279,8 +265,27 @@ WebKit inertia scrolling is being added here for any present/future devices that
             left: 74vw;
     }
 
- 
 
+.HeizungWZ{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:16.2vw;
+	background: hsl(174, 100%, 10%);
+	/*border-right-color: #FFFFFF;
+	border-right-style: solid;
+	border-right-width: 1px; */
+}
+
+.HeizungCtrlWZ{
+	position:absolute;
+	top: 5vh;
+	width: 0px;
+	height: 95vh;
+        left:74vw;
+	background: hsl(174, 100%, 10%);
+}
 
 .HeizungKZ{
 	position:absolute;
@@ -3038,11 +3043,6 @@ h1:after {
   
 
 /* *********************  COLORS ********************************** */
- 
-.cyanbg {
-    background: -webkit-linear-gradient(hsl(174, 100%, 10%), hsl(174, 100%, 10%), hsl(174, 100%, 10%)); /* CHROME */
-} 
-
 .yellow {
     background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%), hsl(51, 100%, 25%)); /* CHROME */
 }
@@ -3094,7 +3094,9 @@ h1:after {
 .bgCpurple {
     background: hsl(300, 100%, 10%);
 } 
-
+.bgCyan {
+    background: hsl(174, 100%, 10%);
+}
 
 
 
