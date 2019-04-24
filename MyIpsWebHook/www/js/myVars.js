@@ -712,6 +712,7 @@
             iRolloB.update(sym[22]);
             iRolloWZ.update(sym[17]);
             iRolloK.update(sym[15]);
+            iRolloSZ.update(sym[114]);
             
             DisPosRolloWZCtrl.update(sym[17]);   
             DisModeRolloWZCtrl.update(sym[18]); 
