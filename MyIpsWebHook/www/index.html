@@ -673,8 +673,8 @@
 
 		<!-- <Ctrl id="MainHzKZCtrl"  class="HeizungCtrlKZ"></Ctrl> -->
     <script> 
-       var CtrlwindowHzWz = new Area();
-       CtrlwindowHzWz.createCtrl("MainHzKZCtrl", "bgCyan");
+       var CtrlwindowHzKz = new Area();
+       CtrlwindowHzKz.createCtrl("MainHzKZCtrl", "bgOlive");
    </script>
    <script>
        addStatus("MainHzKZCtrl", "BatHzKZ1", "olive", "5px", "30px", "Battery");      
@@ -689,8 +689,11 @@
 
   </script>
 		<!-- ************************ Heizung Schlafzimmer ************************  -->
-		<Main id="MainHzSZ"   class="HeizungSZ">	</Main>
-                
+		<!-- <Main id="MainHzSZ"   class="HeizungSZ">	</Main>  -->
+    <script> 
+       var windowHzSz = new Area();
+       windowHzSz.createMain("MainHzSZ", "bgCyan");
+   </script>       
    <script>
         var MainTempVHzSZ = new VarDis();
         MainTempVHzSZ.create("MainHzSZ", "black","50px", "350px", "normal", "°C");
@@ -733,8 +736,11 @@
 
    </script>
 		<!-- ************************ Heizung Ctrl Schlafzimmer ************************  -->
-		<Ctrl id="MainHzSZCtrl" class="HeizungCtrlSZ">  </Ctrl>
-
+		<!-- <Ctrl id="MainHzSZCtrl" class="HeizungCtrlSZ">  </Ctrl>  -->
+    <script> 
+       var CtrlwindowHzSZ = new Area();
+       CtrlwindowHzSZ.createCtrl("MainHzSZCtrl", "bgSandy");
+   </script>
    <script>
         addStatus("MainHzSZCtrl", "BatHzSZ1", "sandy", "5px", "30px", "Battery");      
         addTempCtrl("MainHzSZCtrl", "TempCtrl3", "sandy", "325px", "30px", "Soll Temperatur", "AdjTempHzSZ1", "SollTempAusHzSZ1", "SollTempHzSZ1", "sollTempSZ");
@@ -751,10 +757,12 @@
   </script>
 
 		<!-- ************************ Heizung Kueche ************************ -->
-		<Main  id="MainHzK"   class="HeizungK">   </Main>	
+		<!--  <Main  id="MainHzK"   class="HeizungK">   </Main>	-->
 
-
- 	 
+    <script> 
+       var windowHzK = new Area();
+       windowHzK.createMain("MainHzK", "bgMidgreen");
+   </script> 
    <script>
         var MainTempVHzK = new VarDis();
         MainTempVHzK.create("MainHzK", "black","50px", "350px", "normal", "°C");
@@ -798,9 +806,13 @@
         
    </script>
 		<!-- ************************ Heizung Ctrl Kueche ************************  -->
-		<Ctrl  id="MainHzKCtrl"  class="HeizungCtrlK">
+		<!-- <Ctrl  id="MainHzKCtrl"  class="HeizungCtrlK"></Ctrl> -->
 
-		</Ctrl>
+		
+    <script> 
+       var CtrlwindowHzK = new Area();
+       CtrlwindowHzK.createCtrl("MainHzKCtrl", "bgOlive");
+   </script>    
    <script>
        addStatus("MainHzKCtrl", "BatHzK1", "midgreen", "5px", "30px", "Battery");      
        addTempCtrl("MainHzKCtrl", "TempCtrl4", "midgreen", "325px", "30px", "Soll Temperatur", "AdjTempHzK1", "SollTempAusHzK1", "SollTempHzK1", "sollTempK");

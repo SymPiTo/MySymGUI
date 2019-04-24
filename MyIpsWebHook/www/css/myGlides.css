@@ -83,10 +83,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WetterCtrl,
 .Uhr,
 .UhrCtrl,
-.HeizungSZ,
-.HeizungCtrlSZ,
-.HeizungK,
-.HeizungCtrlK,
 .RolloWZ,
 .RolloCtrlWZ,
 .RolloKZ,
@@ -264,46 +260,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 
-.HeizungSZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:16.2vw;
-	background: hsl(28, 100%, 10%);
-	/* border-right-color: #FFFFFF;
-	border-right-style: solid;
-	border-right-width: 1px; */
-}
-
-.HeizungCtrlSZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:74vw;
-	background: hsl(28, 100%, 10%);
-}
-.HeizungK{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:16.2vw;
-background: -webkit-linear-gradient(hsl(152, 70%, 15%), hsl(152,70%,25%),hsl(152, 70%, 15%)); /* CHROME */
-	/* border-right-color: #FFFFFF;
-	border-right-style: solid;
-	border-right-width: 1px; */
-}
-
-.HeizungCtrlK{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left:74vw;
-background: -webkit-linear-gradient(hsl(152, 70%, 15%), hsl(152,70%,25%),hsl(152, 70%, 15%)); /* CHROME */
-}
 /* MID */
 .RolloWZ{
 	position:absolute;
@@ -3054,8 +3010,16 @@ h1:after {
 .bgCyan {
     background: hsl(174, 100%, 10%);
 }
-
-
+.bgOlive {
+    background: hsl(82, 100%, 10%);
+}
+ 
+.bgSandy {
+    background: hsl(28, 100%, 10%);
+}
+.bgMidgreen {
+    background: hsl(152, 70%, 15%); 
+}
 
 /* *********************  Weather ********************************** */
     .weathertablecell { 
