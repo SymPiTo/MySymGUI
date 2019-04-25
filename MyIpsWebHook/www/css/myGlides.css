@@ -1877,9 +1877,7 @@ width:40%;
 */
  
 
-.ctrlbutton:hover {
  
-}
 .ctrlbutton:active {
 	background: -webkit-linear-gradient(hsl(274, 100%, 5%), hsl(274, 100%, 15%));
 }
