@@ -1271,14 +1271,21 @@
     
     
  		<!-- ************************ Light  Schlafzimmer ************************ -->
-		<Main id="MainLightSZ"  class="LightSZ"></Main>
- 		
+		<!-- <Main id="MainLightSZ"  class="LightSZ"></Main> -->
+    <script> 
+       var windowLightSZ = new Area();
+       windowLightSZ.createMain("MainLightSZ", "bgSandy");
+   </script> 	
     <script>  
         var LightSZ = new CtrlTile();
         LightSZ.create("MainLightSZ", "10px", "10px", "Schlafzimmer", "sandy", "Light", "send('command(Light,SZ,false)')", "send('command(Light,SZ,true)')");
     </script>
  		<!-- ************************ Light Ctrl  Schlafzimmer ************************ -->
-		<Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl>
+		<!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+    <script> 
+       var CtrlwindowLightSZ = new Area();
+       CtrlwindowLightSZ.createCtrl("MainLightSZCtrl", "bgSandy");
+   </script> 
     <script> 
         var DisLightEnergySZCtrl = new StateDisplay();
         DisLightEnergySZCtrl.create("MainLightSZCtrl", "", "Wh", "50px", "20px",  "normal", "20px", "Energy", "Number", "");
@@ -1344,8 +1351,11 @@
         <!-- ***********************************************************************************      -->
 	<!--  ************************          INDEX S - Security    ************************      -->   
         <!-- ***********************************************************************************      -->
-		<Main id ="MainSecCode" class="SecurityCode"></Main>
-		
+		 <!--  <Main id ="MainSecCode" class="SecurityCode"></Main>  -->
+    <script> 
+       var windowSecCode = new Area();
+       windowSecCode.createMain("MainSecCode", "bgRed");
+   </script> 	
     <script>
         var KeyPadSecKey = new KeyPad();
         KeyPadSecKey.create("MainSecCode", "KeyCode", "security" , "grey", "1", "10vh" , "120px" );  
@@ -1369,7 +1379,11 @@
         <!-- ***********************************************************************************      -->
 	<!--  ************************    Security Ctrl                 ************************      -->   
         <!-- ***********************************************************************************      -->
-		<Ctrl id ="MainSecCodeCtrl" class="SecCodeCtrl"></Ctrl>  
+		<!--  <Ctrl id ="MainSecCodeCtrl" class="SecCodeCtrl"></Ctrl>   -->
+    <script> 
+       var CtrlwindowSecCde = new Area();
+       CtrlwindowSecCde.createCtrl("MainSecCodeCtrl", "bgRed");
+   </script>
     <script>
 
         var ABox = new AlarmBox();

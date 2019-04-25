@@ -83,8 +83,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WetterCtrl,
 .Uhr,
 .UhrCtrl,
-.LightSZ,
-.LightSZCtrl,
 .SonosSZ,
 .SonosSZCtrl,
 .floorplan,
@@ -112,8 +110,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .ScrollReihe,
 .TimePicker,
 .TimePickerX,
-.SecurityCode,
-.SecCodeCtrl,
 .WaterAlarm,
 .WaterAlarmCtrl,
 .BatAlarm,
@@ -249,23 +245,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 
-/* Schlafzimmer Main and Ctrl window color = sandy*/
-.LightSZ, .SonosSZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 16.2vw;
-	background: hsl(28, 100%, 10%);
-}
-.LightSZCtrl, .SonosSZCtrl{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 74vw;
-	background: hsl(28, 100%, 10%);
-}
 
 
 
@@ -571,16 +550,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
   	background: hsl(30, 56%, 25%); */
 }
 
-.SecurityCode{
-	position:absolute;
-	top: 5vh;
-        left: 16vw;
-        width: 0vw;
-	height: 95vh;	
-	background-color: maroon;
-        color: white;
-}
- 
+
 
 .WaterAlarm{
 	position:absolute;
@@ -2710,15 +2680,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
  
 
 /* ****************** Controls ***************************************** */
-.SecCodeCtrl {
-	position:absolute;
-	top:  5vh;
-        left: 74vw;
-	width: 0px;
-	height: 95vh;
-        background-color: maroon;
-       
-}
+
 
 .WaterAlarmCtrl {
 	position:absolute;
@@ -2884,7 +2846,9 @@ h1:after {
 .midgreen:active {
     background: -webkit-linear-gradient(hsl(152, 70%, 5%), hsl(152,70%,15%),hsl(152, 70%, 5%)); /* CHROME */
 }
-
+.bgRed:active {
+    background-color: maroon;
+}
 .black {
     background: black;
 }
