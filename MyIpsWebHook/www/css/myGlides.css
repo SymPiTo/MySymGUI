@@ -775,10 +775,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	  /*Gradient*/
 	  background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%), hsl(120, 56%, 25%)); /* CHROME */
 }
-.GlideButton.midgreen{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%), hsl(152, 70%, 25%)); /* CHROME */
-}
+ 
 
 .GlideButton:hover {
 }	 
@@ -828,10 +825,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	  /*Gradient*/
 	  background: -webkit-linear-gradient(hsl(120, 56%, 15%), hsl(120, 56%, 25%)); /* CHROME */
 }
-.GlideButton.midgreen:hover{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(152, 70%, 15%), hsl(152,70%,25%),hsl(152, 70%, 15%)); /* CHROME */
-}
+ 
 
 .GlideButton:active {
 	 
@@ -880,10 +874,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 	  /*Gradient*/
 	  background: -webkit-linear-gradient(hsl(120, 56%, 5%), hsl(120, 56%, 15%)); /* CHROME */
 }
-.GlideButton.midgreen:active{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(152, 70%, 5%), hsl(152,70%,15%),hsl(152, 70%, 5%)); /* CHROME */
-}
+ 
 
 
 

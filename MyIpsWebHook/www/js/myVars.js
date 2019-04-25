@@ -65,18 +65,20 @@
             sym[1] = ips[0].ID37045; //Temperatur KZ
             sym[2] = ips[0].ID51079; //Temperatur WZ
             sym[3] = ips[0].ID54070; //Temperatur K
-            sym[4] = ips[0].ID18059; //Position WZ
-            sym[5] = ips[0].ID49335; //Position KZ
-            sym[6] = ips[0].ID36448; //Position SZ 
-            sym[7] = ips[0].ID51619; //Position K
+            sym[4] = ips[0].ID18059; //Position HZ WZ
+            sym[5] = ips[0].ID49335; //Position HZ KZ
+            sym[6] = ips[0].ID36448; //Position HZ SZ 
+            sym[7] = ips[0].ID51619; //Position HZ K   
             sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
             sym[9] = ips[0].ID22196;  // Diele Haustür   
             sym[10] = ips[0].ID56454;  // humidity KZ
             sym[11] = ips[0].ID50329;  // humidity SZ           
             sym[12] = ips[0].ID10834;  //Rollo KZ Mode
-            sym[13] = ips[0].ID21261;  //Rollo KZ Postion            
-            sym[14] = ips[0].ID46774;  //Rollo K Mode
-            sym[15] = ips[0].ID13174;  //Rollo K Postion 
+            sym[13] = ips[0].ID21261;  //Rollo KZ Postion 
+            
+         
+            sym[14] = "";  //
+            sym[15] = "";  //
             
             sym[16] = ips[0].ID53773;  //Rollo WZ up/down
             sym[17] = ips[0].ID49991;  //Rollo WZ Position
