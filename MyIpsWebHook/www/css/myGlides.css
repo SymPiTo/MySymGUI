@@ -83,8 +83,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WetterCtrl,
 .Uhr,
 .UhrCtrl,
-.LightSZ,
-.LightSZCtrl,
 .SonosSZ,
 .SonosSZCtrl,
 .floorplan,
@@ -245,25 +243,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
             left: 74vw;
     }
 
-
-
-/* Schlafzimmer Main and Ctrl window color = sandy*/
-.LightSZ, .SonosSZ{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 16.2vw;
-	background: hsl(28, 100%, 10%);
-}
-.LightSZCtrl, .SonosSZCtrl{
-	position:absolute;
-	top: 5vh;
-	width: 0px;
-	height: 95vh;
-        left: 74vw;
-	background: hsl(28, 100%, 10%);
-}
 
 
 
