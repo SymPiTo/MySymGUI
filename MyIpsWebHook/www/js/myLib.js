@@ -1830,7 +1830,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
         this.textcolor = textcolor;
         this.textsize = textsize;
         this.unit = einheit;
-        this.state = status;
+        this.state = arguments;
         
         
         var elem = document.createElement("div");
