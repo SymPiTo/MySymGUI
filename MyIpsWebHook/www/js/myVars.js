@@ -72,14 +72,15 @@
             sym[8] = ips[0].ID36168;  // Diele Präsenzmelder
             sym[9] = ips[0].ID22196;  // Diele Haustür   
             sym[10] = ips[0].ID56454;  // humidity KZ
-            sym[11] = ips[0].ID50329;  // humidity SZ           
-            sym[12] = ips[0].ID10834;  //Rollo KZ Mode
-            sym[13] = ips[0].ID21261;  //Rollo KZ Postion 
+            sym[11] = ips[0].ID50329;  // humidity SZ  
             
-         
-            sym[14] = "";  //
-            sym[15] = "";  //
-            
+            sym[12] = ips[0].ID54298;  //Rollo KZ Mode
+            sym[13] = ips[0].ID59964;  //Rollo KZ Postion 
+            sym[14] = ips[0].ID54434;  //Rollo KZ up/down
+            sym[15] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
+            sym[119] = ips[0].ID25277; //Rollo KZ Schaltzeit Sa-So
+            sym[120] = ips[0].ID53747; //Rollo KZ SSunSet 
+
             sym[16] = ips[0].ID53773;  //Rollo WZ up/down
             sym[17] = ips[0].ID49991;  //Rollo WZ Position
             sym[18] = ips[0].ID13953; //Rollo WZ Mode
@@ -193,6 +194,8 @@
             sym[116] = ips[0].ID18740;  //Rollo SZ Schaltzeit Mo-Fr
             sym[117] = ips[0].ID53883; //Rollo SZ Schaltzeit Sa-So
             sym[118] = ips[0].ID12349; //Rollo SZ SSunSet     
+            
+            sym[121] = "";  //
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -720,12 +723,14 @@
             DisModeRolloWZCtrl.update(sym[18]); 
             DisST1RolloWZCtrl.update(sym[19]); 
             DisST2RolloWZCtrl.update(sym[20]); 
-
+            CbSSrolloWZ.update(sym[53]);
+            
             DisPosRolloB.update(sym[22]);   
             DisModeRolloB.update(sym[21]); 
             DisST1RolloB.update(sym[55]); 
             DisST2RolloB.update(sym[56]); 
-
+            CbSSrolloB.update(sym[57]);
+            
             DisPosRolloK.update(sym[15]);   
             DisModeRolloK.update(sym[14]); 
             DisST1RolloK.update(sym[50]); 
@@ -738,12 +743,16 @@
             DisST2RolloSZ.update(sym[117]); 
             CbSSrolloSZ.update(sym[118]);
 
+            DisPosRolloKZ.update(sym[13]);   
+            DisModeRolloKZ.update(sym[12]); 
+            DisST1RolloKZ.update(sym[15]); 
+            DisST2RolloKZ.update(sym[119]); 
+            CbSSrolloKZ.update(sym[120]);
+
  
 
 
 
-            CbSSrolloB.update(sym[57]);
-            CbSSrolloWZ.update(sym[53]);
             
             VarDisTempOutside.update(sym[46]);
             VarDisHumOutside.update(sym[47]);
@@ -768,27 +777,7 @@
      
     }
 			
-     function Rollo(sym){
- 
 
-        //<!-- **************************  Rolladen Ctrl Kinderzimmer **************************  -->
-        if (sym[13] == '0'){
-            $('RolloKZPos1').innerHTML =  'offen'; 
-        }else if (sym[13] == '100'){
-            $('RolloKZPos1').innerHTML =  'zu'; 
-        }else {
-            $('RolloKZPos1').innerHTML =  sym[13];    
-        }
-        if (sym[12] == '1'){
-                 $('RolloKZMode1').innerHTML =  'Auto'; 
-        }else{
-                 $('RolloKZMode1').innerHTML =  'Man'; 
-        }
-  
-
-        //<!-- ************************** Rolladen Ctrl Kueche ************************** -->
- 
-     }
     
         function Klima(sym){
         //<!-- **************************  Feuchte Floorplan **************************  -->
