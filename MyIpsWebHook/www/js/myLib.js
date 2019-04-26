@@ -1502,6 +1502,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
     class FontButtonNew {
            constructor(  ) {
                this.ID = "";
+               this.ID1 = "";
            }
         create (ParentID, color, size, posTop, posLeft, symbol, cmd){  
                    var elem = document.createElement("div");
@@ -1518,7 +1519,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                    elem1.style.fontSize = "30px";
                    elem1.style.padding = "5px";
                    elem1.style.color = "white";
-            
+                   this.ID1 = elem1;
                    
                    elem.append(elem1);
                    document.getElementById(ParentID).appendChild(elem);
@@ -1526,10 +1527,10 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
        
         update (value){
             if (value === true){
-               this.ID.style.color = "lime"; 
+               this.ID1.style.color = "lime"; 
             }
             else {
-                this.ID.style.color = "white";
+                this.ID1.style.color = "white";
             }
        }
     };
