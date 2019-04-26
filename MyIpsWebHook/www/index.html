@@ -2031,15 +2031,28 @@
             iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "normal");        
 
 
+            
+            var rahm = new Rahmen();
+            rahm.create("MainCeolWZ", "49vh", "3%", "70px", "527px", "black");
 
-
+            var IconVarDisVolWZ = new TransVarDisplay(); 
+            IconVarDisVolWZ.create("MainCeolWZ", "50vh", "0%", "lime", "28px", "Source", "", );
+            var IconVarDisSourceWZ = new TransVarDisplay();
+            IconVarDisSourceWZ.create("MainCeolWZ", "50vh", "20%", "lime", "28px", "Volume", "", );
+            
+/*             
+            var transVarCh = new TransVarDisplay();
+            transVarCh.create("MainTV", "50vh", "40%", "lime", "28px", "Channel", "", );
+            var transVarSource = new TransVarDisplay();
+            transVarSource.create("MainTV", "50vh", "60%", "lime", "28px", "Source", "", );
+    
             var IconVarDisVolWZ = new IconVarDisplay();
             IconVarDisVolWZ.create("MainCeolWZ", "cyan", "50vh", "10%", "fa fa-volume-off", "dB", "", "");
             var IconVarDisSourceWZ = new IconVarDisplay();
             IconVarDisSourceWZ.create("MainCeolWZ", "cyan", "50vh", "40%", "fa fa-code-fork", "", "IRadio", "MediaServer", "USB", "IPod", "AuxA", "AuxD");
             var transVartest = new TransVarDisplay();
             transVartest.create("MainCeolWZ", "50vh", "70%", "lime", "28px", "Volume", "dB", "", "");
- 
+*/
             var CtrlBtnIRadioWZ = new CtrlButton();
             CtrlBtnIRadioWZ.create("MainCeolWZ", "63vh", "3%",  "normal", "purple", "IRadio", "ctrlWindow", "MainCeolWZCtrl");
             var CtrlBtnCDWZ = new CtrlButton();
