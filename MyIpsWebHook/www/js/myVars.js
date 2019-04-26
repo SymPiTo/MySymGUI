@@ -773,7 +773,7 @@
             iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPowerWZ.update(sym[96]);
             IconVarDisVolWZ.update(sym[97],0);
-            IconVarDisSourceWZ.update(sym[105],"state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
+            IconVarDisSourceWZ.update(sym[105],"states", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
             
       
 
