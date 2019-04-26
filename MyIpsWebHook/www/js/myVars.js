@@ -76,10 +76,7 @@
             
             sym[12] = ips[0].ID54298;  //Rollo KZ Mode
             sym[13] = ips[0].ID59964;  //Rollo KZ Postion 
-            sym[121] = ips[0].ID54434;  //Rollo KZ up/down
-            sym[122] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
-            sym[119] = ips[0].ID25277; //Rollo KZ Schaltzeit Sa-So
-            sym[120] = ips[0].ID53747; //Rollo KZ SSunSet 
+
 
             sym[16] = ips[0].ID53773;  //Rollo WZ up/down
             sym[17] = ips[0].ID49991;  //Rollo WZ Position
@@ -193,9 +190,14 @@
             sym[115] = ips[0].ID58302;  //Rollo SZ up/down
             sym[116] = ips[0].ID18740;  //Rollo SZ Schaltzeit Mo-Fr
             sym[117] = ips[0].ID53883; //Rollo SZ Schaltzeit Sa-So
-            sym[118] = ips[0].ID12349; //Rollo SZ SSunSet     
+            sym[118] = ips[0].ID12349; //Rollo SZ SSunSet  
             
-            sym[123] = "";  //
+            sym[119] = ips[0].ID25277; //Rollo KZ Schaltzeit Sa-So
+            sym[120] = ips[0].ID53747; //Rollo KZ SSunSet            
+            sym[121] = ips[0].ID54434;  //Rollo KZ up/down
+            sym[122] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
+
+     
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
