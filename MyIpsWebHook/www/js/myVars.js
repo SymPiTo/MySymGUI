@@ -231,28 +231,7 @@
 /*
 
 
-            var element = sym[105];
-            switch(element) {
-                case 0:
-                    document.getElementById('source_A').innerHTML =  'Radio';
-                    break;
-                case 1:
-                    document.getElementById('source_A').innerHTML = 'Media';
-                    break;
-                case 2:
-                    document.getElementById('source_A').innerHTML = 'USB';
-                    break;
-                case3:
-                    document.getElementById('source_A').innerHTML = 'IPOD';
-                    break;
-                case 4:
-                    document.getElementById('source_A').innerHTML =  'AUX A';
-                    break;
-                case 5:
-                    document.getElementById('source_A').innerHTML =  'AUX D';
-                    break;
-                default:
-            }
+
        
 
 
@@ -761,6 +740,30 @@
             
             DisAlarmActiveSec.update(sym[48]); 
             ABox.update(sym[58]);
+       /*   
+            var element = sym[105];
+            switch(element) {
+                case 0:
+                    document.getElementById('source_A').innerHTML =  'Radio';
+                    break;
+                case 1:
+                    document.getElementById('source_A').innerHTML = 'Media';
+                    break;
+                case 2:
+                    document.getElementById('source_A').innerHTML = 'USB';
+                    break;
+                case3:
+                    document.getElementById('source_A').innerHTML = 'IPOD';
+                    break;
+                case 4:
+                    document.getElementById('source_A').innerHTML =  'AUX A';
+                    break;
+                case 5:
+                    document.getElementById('source_A').innerHTML =  'AUX D';
+                    break;
+                default:
+            }
+        */  
           
             iDisArtist.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPower.update(sym[96]);
@@ -770,7 +773,7 @@
             iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPowerWZ.update(sym[96]);
             IconVarDisVolWZ.update(sym[97],0);
-            IconVarDisSourceWZ.update(sym[105],"state");
+            IconVarDisSourceWZ.update(sym[105],"state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
             
       
 
