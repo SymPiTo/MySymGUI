@@ -1863,11 +1863,12 @@ width:40%;
 .ctrlbutton.red {
 	background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%), hsl(0, 100%, 25%));
 }
+/*
 .ctrlbutton.purple {
 	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%), hsl(300, 100%, 25%));
 	padding-bottom: 20px;
 }
-
+*/
 .ctrlbutton.blue {
 	background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 35%), hsl(200, 100%, 45%), hsl(200, 100%, 35%),hsl(200, 100%, 25%));
 }
@@ -1898,9 +1899,11 @@ width:40%;
 .ctrlbutton.red:active {
 	background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%));
 }
+/*
 .ctrlbutton.purple:active {
 	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(300, 100%, 5%));
 }
+*/
 .ctrlbutton.blue:active {
 	background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%), hsl(200, 100%, 5%));
 }
