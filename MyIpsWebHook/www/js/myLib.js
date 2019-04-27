@@ -1830,7 +1830,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
         this.textcolor = textcolor;
         this.textsize = textsize;
         this.unit = einheit;
-        this.state = arguments;
+        this.state = status;
         
         
         var elem = document.createElement("div");
@@ -1874,7 +1874,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                 this.ID.innerHTML = this.state[i]; 
             }
             else if(n === "states"){
-               var a = this.state;
+                this.ID.innerHTML = this.state[value];
                 
             }
             else if (n === 0 || n > 0){
