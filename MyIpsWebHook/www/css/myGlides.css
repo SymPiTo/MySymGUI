@@ -1741,9 +1741,7 @@ width:40%;
 .fontbutton.red{
 	background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%));
 }
-.fontbutton.purple{
-	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%));
-}
+
 .fontbutton.blue{
 	background:-webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%)); /* CHROME */
 }
@@ -1765,16 +1763,21 @@ width:40%;
 .fontbutton.red:active {
 	background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%));
 }
-.fontbutton.purple:active {
-	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%));
-}
+
 .fontbutton.blue:active {
 	background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%));
 }
 .fontbutton.grey:active {
     background: -webkit-linear-gradient(hsl(200, 0%, 5%), hsl(200, 0%, 15%), hsl(200, 0%, 5%));
 }
-
+/*
+.fontbutton.purple{
+	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%));
+}
+.fontbutton.purple:active {
+	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%));
+}
+*/
 .ctrlbutton{
 	border: thin #000000 solid;
         border-radius: 5px;
@@ -2857,6 +2860,13 @@ h1:after {
 
 .black {
     background: black;
+}
+
+.purple{
+	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%));
+}
+.purple:active {
+	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%));
 }
 
 /* *********************  Background COLORS ********************************** */
