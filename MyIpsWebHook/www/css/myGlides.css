@@ -1679,6 +1679,7 @@ width:40%;
 
 .fontbutton{
 	border: thin #000000 solid;
+        border-radius: 5px;
 	height: 70px;
 	width: 100px;
 	-webkit-transition: All 0.5s ease;
