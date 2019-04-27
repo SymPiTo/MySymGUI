@@ -3008,10 +3008,9 @@ Input:checked + .MoveSlider:after
 /* Radial ------------------------- */
 
 .radial.metal {
-  width: 160px;
-  height: 160px;
+
   line-height: 160px;
-  border-radius: 80px;
+
   background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
     -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
     -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
@@ -3064,12 +3063,9 @@ Input:checked + .MoveSlider:after
 /* Oval ------------------------- */
 
 .metal.linear.oval {
-  margin-top: 100px;
-  width: 70px;
-  height: 60px;
+
   line-height: 60px !important;
-  border-radius: 50%;
-  font: italic bold 3em/50px Georgia, "Times New Roman", Times, serif;
+
 }
 
 
