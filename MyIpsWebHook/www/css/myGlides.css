@@ -1943,8 +1943,7 @@ width:40%;
       inset hsla(0,0%,15%, .8) 0 -1px 5px 2px, /* soft SD */
       inset hsla(0,0%,0%, .25) 0 -1px 0px 4px, /* bottom SD */
       inset hsla(0,0%,100%,.7) 0  2px 1px 4px, /* top HL */
-      hsla(0,0%, 0%,.15) 0 -2px 3px 2px, /* outer SD */
-      hsla(0,0%,100%,.5) 0  2px 3px 2px; /* outer HL */ 
+
       transition: color .2s;
 }
 
