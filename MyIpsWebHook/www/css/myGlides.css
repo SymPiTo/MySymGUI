@@ -1939,6 +1939,10 @@ width:40%;
 
 .rahmen{
     border-radius:  4px;
+    
+          border: 1px #C0C0C0;
+           border-style: ridge;
+	 borderColor: #777777;
     box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
       inset hsla(0,0%,15%, .8) 0 -1px 5px 2px, /* soft SD */
       inset hsla(0,0%,0%, .25) 0 -1px 0px 4px, /* bottom SD */
