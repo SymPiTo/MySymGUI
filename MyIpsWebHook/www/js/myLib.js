@@ -354,7 +354,9 @@ var ToggleCtrlBtn = {
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
-        elem.className = colorclass;
+        elem.className = "rahmen";
+        elem.classList.add(colorclass);
+        
         elem.style.height = h;
         elem.style.width = w;
         
