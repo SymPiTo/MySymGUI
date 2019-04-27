@@ -3007,6 +3007,6 @@ Input:checked + .MoveSlider:after
 }
 
 .grit {
-  -webkit-mask-image: url("grit.png");
+  -webkit-mask-image: url("../images/grit.png");
   mask-image: url("../images/grit.png");
 }
