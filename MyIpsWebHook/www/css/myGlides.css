@@ -451,13 +451,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
+    background-color: hsl(82, 100%, 10%);
 }
 
 .MenuSZ{
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 125vh;	
+    height: 125vh;
+    background-color: hsl(82, 100%, 10%);
 }
 
 .MenuKZ{
@@ -473,6 +475,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
+    background-color: hsl(82, 100%, 10%);
  }
  
 .MenuSec{
@@ -480,6 +483,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
+    background-color: hsl(82, 100%, 10%);
  }
  
 .MenuStart{
@@ -494,6 +498,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
+    background-color: hsl(82, 100%, 10%);
  }
 
 .MenuMultimedia{
@@ -501,13 +506,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
+    background-color: hsl(82, 100%, 10%);
 }
 
 .MenuHz{
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 450px;	 
+    height: 450px;
+    background-color: hsl(82, 100%, 10%);
 }
 
 .MenuRollo{
@@ -515,7 +522,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 530px;
-
+    background-color: hsl(82, 100%, 10%);
 }
 
 .MenuNet{
@@ -523,7 +530,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 450px;
-
+    background-color: hsl(82, 100%, 10%);
 }
 
 
@@ -2856,16 +2863,16 @@ h1:after {
 }
 
 .purple{
-	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%));
+	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%), hsl(300, 100%, 25%));
 }
 .purple:active {
-	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%));
+	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(300, 100%, 5%));
 }
 .olive {
-	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%));
+	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
 } 
 .olive:active {
-	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%));
+	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
 }
 
 
