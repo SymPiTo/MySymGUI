@@ -1378,7 +1378,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                     elem.src = "images/RadioStation/" + icon;
                 }
                 else if (source === "CD"){
-                    elem.src = "CDs/" + + icon;
+                    elem.src = "CDs/" + icon;
                 }
                 elem.onclick = function(){
                         var index = SourceList.findIndex((item) => item.selected === true);
