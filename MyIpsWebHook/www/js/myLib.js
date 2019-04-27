@@ -1826,11 +1826,11 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
         }
 
     
-    create (ParentID, posTop, posLeft, textcolor, textsize,  title, einheit, ...status){  
+    create (ParentID, posTop, posLeft, textcolor, textsize,  title, einheit, ...restArgs){  
         this.textcolor = textcolor;
         this.textsize = textsize;
         this.unit = einheit;
-        this.state = status;
+        this.state.array = restArgs;
         
         
         var elem = document.createElement("div");
