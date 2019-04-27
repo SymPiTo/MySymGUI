@@ -1826,7 +1826,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
         }
 
     
-    create (ParentID, posTop, posLeft, textcolor, textsize,  title, einheit, ...restArgs){  
+    create (ParentID, posTop, posLeft, textcolor, textsize,  title, einheit ){  
         this.textcolor = textcolor;
         this.textsize = textsize;
         this.unit = einheit;
@@ -1866,17 +1866,12 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
      
         document.getElementById(ParentID).appendChild(elem);   
     };
-    update(value, n){
+    update(value, n, ...restArgs){
         try { 
             if(n === "state"){ 
-                var i=0;
-                if (value === false){i = 0;}
-                else if (value === true){i = 1;}
-                this.ID.innerHTML = this.state[i]; 
-            }
-            else if(n === "states"){
-                var b = this.state;
-                this.ID.innerHTML = this.state[value];
+  
+                
+                this.ID.innerHTML = restArgs[value];
                 
             }
             else if (n === 0 || n > 0){
