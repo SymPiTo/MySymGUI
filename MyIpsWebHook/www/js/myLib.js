@@ -1399,8 +1399,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                             var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
                         }
                         else if (source === "CD"){
-                            var wert = item;
-                            cmd("command(" + wert.substring(4, wert.length) + ",loadCDPlaylist," + wert.substring(0, 4) + ")") ;
+                            var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
                         }
                         send(cmd);
                     } ; 
