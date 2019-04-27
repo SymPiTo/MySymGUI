@@ -1776,6 +1776,7 @@ width:40%;
 
 .ctrlbutton{
 	border: thin #000000 solid;
+        border-radius: 25px;
 	height: 80px;
 	width: 202px;
 	color: white;
