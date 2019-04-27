@@ -1324,7 +1324,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
 
         create(ParentID, source ){ 
              
-            if (source == "CD"){
+            if (source == "xxxxCD"){
                 var SourceList = [];
                 for (var i=1; i<99; i++) {
                     SourceList[i] = {
@@ -1339,6 +1339,9 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                 // Liste einlesen
                 var Liste = new data();
                 switch(source) {
+                   case "CD":
+                       var SourceList = Liste.getCDLib();
+                       break;
                    case "TV":
                        var SourceList = Liste.getTVchannels();
                        break;
