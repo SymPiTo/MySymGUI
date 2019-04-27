@@ -348,7 +348,7 @@ var ToggleCtrlBtn = {
     }
  
 
-    create(ParentID, posTop, posLeft, h, w, color, colorclass){
+    create(ParentID, posTop, posLeft, h, w, colorclass){
         var elem = document.createElement("div");
 
         elem.style.position = "absolute";
@@ -361,7 +361,7 @@ var ToggleCtrlBtn = {
         elem.style.border= "1px #C0C0C0 outset";
 	elem.style.borderColor = "#777777";
 	 
-	elem.style.backgroundColor = color;
+	//elem.style.backgroundColor = color;
         
         document.getElementById(ParentID).appendChild(elem);
     }
