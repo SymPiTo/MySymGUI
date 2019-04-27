@@ -1504,9 +1504,9 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                this.ID = "";
                this.ID1 = "";
            }
-        create (ParentID, color, size, posTop, posLeft, symbol, cmd){  
+        create (ParentID, btnClass, color, size, posTop, posLeft, symbol, cmd){  
                    var elem = document.createElement("div");
-                   elem.className = "metal linear";   
+                   elem.className = btnClass;   
                    elem.classList.add(size, color);
                    this.ID = elem;
                    elem.style.position = "absolute";
