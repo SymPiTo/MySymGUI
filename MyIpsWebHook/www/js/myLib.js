@@ -1362,22 +1362,7 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                         var icon = item["icon"];
                         break;
                     case "CD":
-                         
-                            var n = item["icon"];
-                            var laenge = n.toString().length;
-
-                            if (laenge == 1) {
-                                    n = "000" + n.toString();
-                            }	
-                            if (laenge == 2) {
-                                    n = "00" + n.toString();
-                            }	
-                            if (laenge == 3) {
-                                    n = "0" + n.toString();
-                            }
-                            if (laenge == 4) {
-                                    n = n.toString();
-                            }
+                        var icon = item["icon"];
                         break;
                         
                     default:
