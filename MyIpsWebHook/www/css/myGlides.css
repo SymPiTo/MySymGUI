@@ -2322,53 +2322,53 @@ background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl
   height: 50px;
   width: 180px;
 }
-
+/*
 .IconButton.cyan {
-	/*Gradient*/
+	
 	  background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 45%));
 }
 .IconButton.olive {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%)); 
 }
 .IconButton.sandy {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%)); 
 }
 .IconButton.red {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%)); 
 }
 .IconButton.yellow {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%)); 
 }
 .IconButton.purple {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl(300, 100%, 25%)); 
 }
 .IconButton.grey {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%)); 
 }
 .IconButton .pink {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 65%), hsl(350, 100%, 85%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(350, 100%, 65%), hsl(350, 100%, 85%));
 }
 .IconButton.blue{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%)); 
 }
 .IconButton.brown{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 25%), hsl(30, 56%, 45%)); /* CHROME */
+	
+	  background: -webkit-linear-gradient(hsl(30, 56%, 25%), hsl(30, 56%, 45%)); 
 }
 .IconButton.green{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%)); /* CHROME */
+	
+	  background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%)); 
 }
 .IconButton.midgreen {
-    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%)); /* CHROME */
+    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%));
 } 
 
 .IconButton:hover {
@@ -2378,47 +2378,47 @@ background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl
 	background: -webkit-linear-gradient(hsl(174, 100%, 15%), hsl(174, 100%, 25%));
 }
 .IconButton.olive:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 15%), hsl(82, 100%, 25%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(82, 100%, 15%), hsl(82, 100%, 25%)); 
 }
 .IconButton.sandy:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 15%), hsl(28, 100%, 25%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(28, 100%, 15%), hsl(28, 100%, 25%)); 
 }
 .IconButton.red:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 15%), hsl(0, 100%, 25%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(0, 100%, 15%), hsl(0, 100%, 25%)); 
 }
 .IconButton.yellow:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 15%), hsl(51, 100%, 25%)); /* CHROME */
+	
+	  background: -webkit-linear-gradient(hsl(51, 100%, 15%), hsl(51, 100%, 25%));
 }
 .IconButton.purple:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 15%), hsl(300, 100%, 25%),hsl(300, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(300, 100%, 15%), hsl(300, 100%, 25%),hsl(300, 100%, 15%)); 
 }
 .IconButton.grey:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(205, 10%, 15%), hsl(204, 10%, 25%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(205, 10%, 15%), hsl(204, 10%, 25%)); 
 }
 .IconButton.pink:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 75%), hsl(350, 100%, 85%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(350, 100%, 75%), hsl(350, 100%, 85%)); 
 }
 .IconButton.blue:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 15%), hsl(200, 100%, 25%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(200, 100%, 15%), hsl(200, 100%, 25%)); 
 }
 .IconButton.brown:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 15%), hsl(30, 56%, 25%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(30, 56%, 15%), hsl(30, 56%, 25%)); 
 }
 .IconButton.green:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 15%), hsl(120, 56%, 25%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(120, 56%, 15%), hsl(120, 56%, 25%));
 }
 .IconButton.midgreen:hover {
-    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%)); /* CHROME */
+    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%)); 
 } 
 
 .IconButton:active {
@@ -2429,50 +2429,50 @@ background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%),hsl
 }
 
 .IconButton.olive:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%)); 
 }
 .IconButton.sandy:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 15%)); 
 }
 .IconButton.red:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%)); 
 }
 .IconButton.yellow:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); 
 }
 .IconButton.purple:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%)); 
 }
 .IconButton.grey:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(205, 10%, 25%), hsl(205, 10%, 35%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(205, 10%, 25%), hsl(205, 10%, 35%));
 }
 .IconButton.pink:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 45%), hsl(350, 100%, 55%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(350, 100%, 45%), hsl(350, 100%, 55%)); 
 }
 .IconButton.blue:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%)); /* CHROME */
+	  
+	  background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%)); 
 }
 .IconButton.brown:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 5%), hsl(30, 56%, 15%)); /* CHROME */
+	 
+	  background: -webkit-linear-gradient(hsl(30, 56%, 5%), hsl(30, 56%, 15%)); 
 }
 .IconButton.green:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 5%), hsl(120, 56%, 15%)); /* CHROME */
+	
+	  background: -webkit-linear-gradient(hsl(120, 56%, 5%), hsl(120, 56%, 15%)); 
 }
 .IconButton.midgreen:active {
-    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%)); /* CHROME */
+    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%)); 
 } 
 
-
+*/
 
 
 
