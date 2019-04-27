@@ -3127,3 +3127,11 @@ Input:checked + .MoveSlider:after
     hsla(210,50%,40%, .25) 0 -5px 6px 4px, /* outer SD */
     hsla(210,80%,95%,   1) 0  5px 6px 4px; /* outer HL */
 }
+
+.metal.normal {
+	height: 50px;
+	width: 175px;
+	font-size: 20px;
+        margin-bottom: 2px;
+	padding-top: 10px;
+}
