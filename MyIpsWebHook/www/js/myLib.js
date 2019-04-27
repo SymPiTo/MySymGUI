@@ -170,7 +170,7 @@ class CtrlButton {
 
     create(ParentID, posTop, posLeft, size, color, text, ctrltype, ctrlWin, command){
         var elem = document.createElement("div");
-        elem.className = "ctrlbutton";
+        elem.className = "metal linear";
         elem.classList.add(size, color);
         this.ID = elem;
         elem.innerHTML = text;
