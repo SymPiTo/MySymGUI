@@ -2833,6 +2833,7 @@ h1:after {
  
 .grey {
     background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
+    box-shadow: 6px 6px 10px hsla(205,10%,75%,0.3) inset;
 } 
 .grey:hover {
     background: -webkit-linear-gradient(hsl(205, 10%, 25%), hsl(204, 10%, 45%), hsl(205, 10%, 25%));  
