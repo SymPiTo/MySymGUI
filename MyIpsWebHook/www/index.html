@@ -472,9 +472,9 @@
   
         <script>             
             var CtrlBtnGoodNight = new CtrlButton();
-            CtrlBtnGoodNight.create("MainStarScreen", "63vh", "80%",  "normal", "grey", "Good Night", "command", "","goodNight();");
+            CtrlBtnGoodNight.create("MainStarScreen", "63vh", "80%", "ctrlbutton",  "normal", "grey", "Good Night", "command", "","goodNight();");
             var CtrlBtnBye = new CtrlButton();
-            CtrlBtnBye.create("MainStarScreen", "53vh", "80%",  "normal", "grey", "Bye", "command", "","Bye();");
+            CtrlBtnBye.create("MainStarScreen", "53vh", "80%", "ctrlbutton",  "normal", "grey", "Bye", "command", "","Bye();");
             
         </script>
 <!-- ************************ Container  ************************  -->
@@ -574,25 +574,25 @@
         labelPresetWZ.create("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
         
         var btnHzWZauto = new CtrlButton();
-        btnHzWZauto.create("MainHeizungWZ", "300px", "50px",  "normal", "cyan", "Automatik", "command","",  "send('command(Heizung,WZ,auto)')");
+        btnHzWZauto.create("MainHeizungWZ", "300px", "50px", "ctrlbutton",  "normal", "cyan", "Automatik", "command","",  "send('command(Heizung,WZ,auto)')");
         var btnHzWZman = new CtrlButton();
-        btnHzWZman.create("MainHeizungWZ", "360px", "50px",  "normal", "cyan", "Manual", "command","",  "send('command(Heizung,WZ,man)')");
+        btnHzWZman.create("MainHeizungWZ", "360px", "50px", "ctrlbutton",  "normal", "cyan", "Manual", "command","",  "send('command(Heizung,WZ,man)')");
         var btnHzWZUrlaub = new CtrlButton();
-        btnHzWZUrlaub.create("MainHeizungWZ", "420px", "50px",  "normal", "cyan", "Urlaub", "command","",  "send('command(Heizung,WZ,urlaub)')");
+        btnHzWZUrlaub.create("MainHeizungWZ", "420px", "50px", "ctrlbutton",  "normal", "cyan", "Urlaub", "command","",  "send('command(Heizung,WZ,urlaub)')");
         var btnHzWZParty = new CtrlButton();
-        btnHzWZParty.create("MainHeizungWZ", "480px", "50px",  "normal", "cyan", "Party", "command","",  "send('command(Heizung,WZ,party)')");
+        btnHzWZParty.create("MainHeizungWZ", "480px", "50px", "ctrlbutton",  "normal", "cyan", "Party", "command","",  "send('command(Heizung,WZ,party)')");
         
      
 
         
         var btnHzWZHeizen = new CtrlButton();
-        btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px",  "normal", "cyan", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
+        btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px", "ctrlbutton",  "normal", "cyan", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
         var btnHzWZAbsenken = new CtrlButton();
-        btnHzWZAbsenken.create("MainHeizungWZ", "360px", "350px",  "normal", "cyan", "Absenken", "command","",  "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
+        btnHzWZAbsenken.create("MainHeizungWZ", "360px", "350px", "ctrlbutton",  "normal", "cyan", "Absenken", "command","",  "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
         var btnHzWZAus = new CtrlButton();
-        btnHzWZAus.create("MainHeizungWZ", "420px", "350px",  "normal", "cyan", "Aus", "command","",  "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
+        btnHzWZAus.create("MainHeizungWZ", "420px", "350px", "ctrlbutton",  "normal", "cyan", "Aus", "command","",  "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
         var btnHzWZAuf = new CtrlButton();
-        btnHzWZAuf.create("MainHeizungWZ", "480px", "350px",  "normal", "cyan", "Auf", "command","",  "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
+        btnHzWZAuf.create("MainHeizungWZ", "480px", "350px", "ctrlbutton",  "normal", "cyan", "Auf", "command","",  "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
         
 
    </script>
@@ -648,23 +648,23 @@
         labelPresetKZ.create("MainHzKZ", "240px", "400px", "18px", "white", "Presets");    
     
         var btnHzKZauto = new CtrlButton();
-        btnHzKZauto.create("MainHzKZ", "300px", "50px",  "normal", "olive", "Automatik", "command","",  "send('command(Heizung,KZ,auto)') ");
+        btnHzKZauto.create("MainHzKZ", "300px", "50px", "ctrlbutton",  "normal", "olive", "Automatik", "command","",  "send('command(Heizung,KZ,auto)') ");
         var btnHzKZman = new CtrlButton();
-        btnHzKZman.create("MainHzKZ", "360px", "50px",  "normal", "olive", "Manual", "command","",  "send('command(Heizung,KZ,man)') ");
+        btnHzKZman.create("MainHzKZ", "360px", "50px", "ctrlbutton",  "normal", "olive", "Manual", "command","",  "send('command(Heizung,KZ,man)') ");
         var btnHzKZUrlaub = new CtrlButton();
-        btnHzKZUrlaub.create("MainHzKZ", "420px", "50px",  "normal", "olive", "Urlaub", "command","",  "send('command(Heizung,KZ,urlaub)') ");
+        btnHzKZUrlaub.create("MainHzKZ", "420px", "50px", "ctrlbutton",  "normal", "olive", "Urlaub", "command","",  "send('command(Heizung,KZ,urlaub)') ");
         var btnHzKZParty = new CtrlButton();
-        btnHzKZParty.create("MainHzKZ", "480px", "50px",  "normal", "olive", "Party", "command","",  "send('command(Heizung,KZ,party)') ");
+        btnHzKZParty.create("MainHzKZ", "480px", "50px", "ctrlbutton",  "normal", "olive", "Party", "command","",  "send('command(Heizung,KZ,party)') ");
         
        
         var btnHzKZHeizen = new CtrlButton();
-        btnHzKZHeizen.create("MainHzKZ", "300px", "350px",  "normal", "olive", "Heizen", "command","",  "{send('command(Heizung,KZ,heizen)'); document.getElementById('AdjTempHzKZ1').innerHTML='22.5';} ");
+        btnHzKZHeizen.create("MainHzKZ", "300px", "350px", "ctrlbutton",  "normal", "olive", "Heizen", "command","",  "{send('command(Heizung,KZ,heizen)'); document.getElementById('AdjTempHzKZ1').innerHTML='22.5';} ");
         var btnHzKZAbsenken = new CtrlButton();
-        btnHzKZAbsenken.create("MainHzKZ", "360px", "350px",  "normal", "olive", "Absenken", "command","",  "{send('command(Heizung,KZ,absenken)');  document.getElementById('AdjTempHzKZ1').innerHTML='16.0';} ");
+        btnHzKZAbsenken.create("MainHzKZ", "360px", "350px", "ctrlbutton",  "normal", "olive", "Absenken", "command","",  "{send('command(Heizung,KZ,absenken)');  document.getElementById('AdjTempHzKZ1').innerHTML='16.0';} ");
         var btnHzKZAus = new CtrlButton();
-        btnHzKZAus.create("MainHzKZ", "420px", "350px",  "normal", "olive", "Aus", "command","",  "{send('command(Heizung,KZ,aus)'); document.getElementById('AdjTempHzKZ1').innerHTML='6.0';} ");
+        btnHzKZAus.create("MainHzKZ", "420px", "350px", "ctrlbutton",  "normal", "olive", "Aus", "command","",  "{send('command(Heizung,KZ,aus)'); document.getElementById('AdjTempHzKZ1').innerHTML='6.0';} ");
         var btnHzKZAuf = new CtrlButton();
-        btnHzKZAuf.create("MainHzKZ", "480px", "350px",  "normal", "olive", "Auf", "command","",  "{send('command(Heizung,KZ,auf)'); document.getElementById('AdjTempHzKZ1').innerHTML='30.0';}");
+        btnHzKZAuf.create("MainHzKZ", "480px", "350px", "ctrlbutton",  "normal", "olive", "Auf", "command","",  "{send('command(Heizung,KZ,auf)'); document.getElementById('AdjTempHzKZ1').innerHTML='30.0';}");
         
 
    
@@ -715,23 +715,23 @@
         
 
         var btnHzSZauto = new CtrlButton();
-        btnHzSZauto.create("MainHzSZ", "300px", "50px",  "normal", "sandy", "Automatik", "command","",  "send('command(Heizung,SZ,auto)') ");
+        btnHzSZauto.create("MainHzSZ", "300px", "50px", "ctrlbutton",  "normal", "sandy", "Automatik", "command","",  "send('command(Heizung,SZ,auto)') ");
         var btnHzSZman = new CtrlButton();
-        btnHzSZman.create("MainHzSZ", "360px", "50px",  "normal", "sandy", "Manual", "command","",  "send('command(Heizung,SZ,man)') ");
+        btnHzSZman.create("MainHzSZ", "360px", "50px", "ctrlbutton",  "normal", "sandy", "Manual", "command","",  "send('command(Heizung,SZ,man)') ");
         var btnHzSZUrlaub = new CtrlButton();
-        btnHzSZUrlaub.create("MainHzSZ", "420px", "50px",  "normal", "sandy", "Urlaub", "command","",  "send('command(Heizung,SZ,urlaub)') ");
+        btnHzSZUrlaub.create("MainHzSZ", "420px", "50px", "ctrlbutton",  "normal", "sandy", "Urlaub", "command","",  "send('command(Heizung,SZ,urlaub)') ");
         var btnHzSZParty = new CtrlButton();
-        btnHzSZParty.create("MainHzSZ", "480px", "50px",  "normal", "sandy", "Party", "command","",  "send('command(Heizung,SZ,party)') ");
+        btnHzSZParty.create("MainHzSZ", "480px", "50px", "ctrlbutton",  "normal", "sandy", "Party", "command","",  "send('command(Heizung,SZ,party)') ");
         
       
         var btnHzSZHeizen = new CtrlButton();
-        btnHzSZHeizen.create("MainHzSZ", "300px", "350px",  "normal", "sandy", "Heizen", "command","",  "{send('command(Heizung,SZ,heizen)'); document.getElementById('AdjTempHzSZ1').innerHTML='22.5';} ");
+        btnHzSZHeizen.create("MainHzSZ", "300px", "350px", "ctrlbutton",  "normal", "sandy", "Heizen", "command","",  "{send('command(Heizung,SZ,heizen)'); document.getElementById('AdjTempHzSZ1').innerHTML='22.5';} ");
         var btnHzSZAbsenken = new CtrlButton();
-        btnHzSZAbsenken.create("MainHzSZ", "360px", "350px",  "normal", "sandy", "Absenken", "command","",  "{send('command(Heizung,SZ,absenken)'); document.getElementById('AdjTempHzSZ1').innerHTML='16.0';} ");
+        btnHzSZAbsenken.create("MainHzSZ", "360px", "350px", "ctrlbutton",  "normal", "sandy", "Absenken", "command","",  "{send('command(Heizung,SZ,absenken)'); document.getElementById('AdjTempHzSZ1').innerHTML='16.0';} ");
         var btnHzSZAus = new CtrlButton();
-        btnHzSZAus.create("MainHzSZ", "420px", "350px",  "normal", "sandy", "Aus", "command","",  "{send('command(Heizung,SZ,aus)'); document.getElementById('AdjTempHzSZ1').innerHTML='6.0';} ");
+        btnHzSZAus.create("MainHzSZ", "420px", "350px", "ctrlbutton",  "normal", "sandy", "Aus", "command","",  "{send('command(Heizung,SZ,aus)'); document.getElementById('AdjTempHzSZ1').innerHTML='6.0';} ");
         var btnHzSZAuf = new CtrlButton();
-        btnHzSZAuf.create("MainHzSZ", "480px", "350px",  "normal", "sandy", "Auf", "command","", "{send('command(Heizung,SZ,auf)'); document.getElementById('AdjTempHzSZ1').innerHTML='30.0';}");
+        btnHzSZAuf.create("MainHzSZ", "480px", "350px", "ctrlbutton",  "normal", "sandy", "Auf", "command","", "{send('command(Heizung,SZ,auf)'); document.getElementById('AdjTempHzSZ1').innerHTML='30.0';}");
         
 
    </script>
@@ -785,23 +785,23 @@
         
 
         var btnHzKauto = new CtrlButton();
-        btnHzKauto.create("MainHzK", "300px", "50px",  "normal", "midgreen", "Automatik", "command","",  "send('command(Heizung,K,auto)') ");
+        btnHzKauto.create("MainHzK", "300px", "50px", "ctrlbutton",  "normal", "midgreen", "Automatik", "command","",  "send('command(Heizung,K,auto)') ");
         var btnHzKman = new CtrlButton();
-        btnHzKman.create("MainHzK", "360px", "50px",  "normal", "midgreen", "Manual", "command","",  "send('command(Heizung,K,man)') ");
+        btnHzKman.create("MainHzK", "360px", "50px", "ctrlbutton",  "normal", "midgreen", "Manual", "command","",  "send('command(Heizung,K,man)') ");
         var btnHzKUrlaub = new CtrlButton();
-        btnHzKUrlaub.create("MainHzK", "420px", "50px",  "normal", "midgreen", "Urlaub", "command","", "send('command(Heizung,K,urlaub)') ");
+        btnHzKUrlaub.create("MainHzK", "420px", "50px", "ctrlbutton",  "normal", "midgreen", "Urlaub", "command","", "send('command(Heizung,K,urlaub)') ");
         var btnHzKParty = new CtrlButton();
-        btnHzKParty.create("MainHzK", "480px", "50px",  "normal", "midgreen", "Party", "command","",  "send('command(Heizung,K,party)') ");
+        btnHzKParty.create("MainHzK", "480px", "50px", "ctrlbutton",  "normal", "midgreen", "Party", "command","",  "send('command(Heizung,K,party)') ");
         
      
         var btnHzKHeizen = new CtrlButton();
-        btnHzKHeizen.create("MainHzK", "300px", "350px",  "normal", "midgreen", "Heizen", "command","",  "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
+        btnHzKHeizen.create("MainHzK", "300px", "350px", "ctrlbutton",  "normal", "midgreen", "Heizen", "command","",  "{send('command(Heizung,K,heizen)'); document.getElementById('AdjTempHzK1').innerHTML='22.5';} ");
         var btnHzKAbsenken = new CtrlButton();
-        btnHzKZAbsenken.create("MainHzK", "360px", "350px",  "normal", "midgreen", "Absenken", "command","",  "{send('command(Heizung,K,absenken)'); document.getElementById('AdjTempHzK1').innerHTML='16.0';} ");
+        btnHzKZAbsenken.create("MainHzK", "360px", "350px", "ctrlbutton",  "normal", "midgreen", "Absenken", "command","",  "{send('command(Heizung,K,absenken)'); document.getElementById('AdjTempHzK1').innerHTML='16.0';} ");
         var btnHzKAus = new CtrlButton();
-        btnHzKAus.create("MainHzK", "420px", "350px",  "normal", "midgreen", "Aus", "command","",  "{send('command(Heizung,K,aus)'); document.getElementById('AdjTempHzK1').innerHTML='6.0';} ");
+        btnHzKAus.create("MainHzK", "420px", "350px", "ctrlbutton",  "normal", "midgreen", "Aus", "command","",  "{send('command(Heizung,K,aus)'); document.getElementById('AdjTempHzK1').innerHTML='6.0';} ");
         var btnHzKAuf = new CtrlButton();
-        btnHzKAuf.create("MainHzK", "480px", "350px",  "normal", "midgreen", "Auf", "command","", "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
+        btnHzKAuf.create("MainHzK", "480px", "350px", "ctrlbutton",  "normal", "midgreen", "Auf", "command","", "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
         
         
    </script>
@@ -844,26 +844,26 @@
         
        
         var btnRolloWZAuto = new CtrlButton();
-        btnRolloWZAuto.create("MainRolloWZ", "260px", "50px",  "normal", "cyan", "Automatik", "command","",  "send('command(Rollo,WZ,Auto)') ");
+        btnRolloWZAuto.create("MainRolloWZ", "260px", "50px", "ctrlbutton",  "normal", "cyan", "Automatik", "command","",  "send('command(Rollo,WZ,Auto)') ");
         var btnRolloWZMan = new CtrlButton();
-        btnRolloWZMan.create("MainRolloWZ", "320px", "50px",  "normal", "cyan", "Manual", "command","",  "send('command(Rollo,WZ,Man)') ");  
+        btnRolloWZMan.create("MainRolloWZ", "320px", "50px", "ctrlbutton",  "normal", "cyan", "Manual", "command","",  "send('command(Rollo,WZ,Man)') ");  
         var btnRolloWZ75 = new CtrlButton();
-        btnRolloWZ75.create("MainRolloWZ", "380px", "50px",  "normal", "cyan", "75%", "command","",  "send('command(Rollo,WZ,dark)') ");
+        btnRolloWZ75.create("MainRolloWZ", "380px", "50px", "ctrlbutton",  "normal", "cyan", "75%", "command","",  "send('command(Rollo,WZ,dark)') ");
         var btnRolloWZ50 = new CtrlButton();
-        btnRolloWZ50.create("MainRolloWZ", "440px", "50px",  "normal", "cyan", "50%", "command","", "send('command(Rollo,WZ,mid)') ");
+        btnRolloWZ50.create("MainRolloWZ", "440px", "50px", "ctrlbutton",  "normal", "cyan", "50%", "command","", "send('command(Rollo,WZ,mid)') ");
         var btnRolloWZ25 = new CtrlButton();
-        btnRolloWZ25.create("MainRolloWZ", "500px", "50px",  "normal", "cyan", "25%", "command","", "send('command(Rollo,WZ,bright)') ");
+        btnRolloWZ25.create("MainRolloWZ", "500px", "50px", "ctrlbutton",  "normal", "cyan", "25%", "command","", "send('command(Rollo,WZ,bright)') ");
  
         var btnRolloWZHoch = new CtrlButton();
-        btnRolloWZHoch.create("MainRolloWZ", "260px", "350px",  "normal", "cyan", "Hoch", "command","",  "send('command(Rollo,WZ,up)') ");
+        btnRolloWZHoch.create("MainRolloWZ", "260px", "350px", "ctrlbutton",  "normal", "cyan", "Hoch", "command","",  "send('command(Rollo,WZ,up)') ");
         var btnRolloWZStop = new CtrlButton();
-        btnRolloWZStop.create("MainRolloWZ", "320px", "350px",  "normal", "cyan", "Stop", "command","",  "send('command(Rollo,WZ,stop)') "); 
+        btnRolloWZStop.create("MainRolloWZ", "320px", "350px", "ctrlbutton",  "normal", "cyan", "Stop", "command","",  "send('command(Rollo,WZ,stop)') "); 
         var btnRolloWZRunter = new CtrlButton();
-        btnRolloWZRunter.create("MainRolloWZ", "380px", "350px",  "normal", "cyan", "Runter", "command","",  "send('command(Rollo,WZ,down)') ");
+        btnRolloWZRunter.create("MainRolloWZ", "380px", "350px", "ctrlbutton",  "normal", "cyan", "Runter", "command","",  "send('command(Rollo,WZ,down)') ");
         var btnRolloWZStepUp = new CtrlButton();
-        btnRolloWZStepUp.create("MainRolloWZ", "440px", "350px",  "normal", "cyan", "Step Up", "command","", "send('command(Rollo,WZ,StepUp)') ");
+        btnRolloWZStepUp.create("MainRolloWZ", "440px", "350px", "ctrlbutton",  "normal", "cyan", "Step Up", "command","", "send('command(Rollo,WZ,StepUp)') ");
         var btnRolloWZStepDown = new CtrlButton();
-        btnRolloWZStepDown.create("MainRolloWZ", "500px", "350px",  "normal", "cyan", "Step Down", "command","", "send('command(Rollo,WZ,StepDown)') ");
+        btnRolloWZStepDown.create("MainRolloWZ", "500px", "350px", "ctrlbutton",  "normal", "cyan", "Step Down", "command","", "send('command(Rollo,WZ,StepDown)') ");
     
     
 
@@ -929,27 +929,27 @@
         
         
         var btnRolloBAuto = new CtrlButton();
-        btnRolloBAuto.create("MainRolloB", "260px", "50px",  "normal", "blue", "Automatik", "command","",  "send('command(Rollo,B,Auto)') ");
+        btnRolloBAuto.create("MainRolloB", "260px", "50px", "ctrlbutton",  "normal", "blue", "Automatik", "command","",  "send('command(Rollo,B,Auto)') ");
         var btnRolloBMan = new CtrlButton();
-        btnRolloBMan.create("MainRolloB", "320px", "50px",  "normal", "blue", "Manual", "command","",  "send('command(Rollo,B,Man)') ");
+        btnRolloBMan.create("MainRolloB", "320px", "50px", "ctrlbutton",  "normal", "blue", "Manual", "command","",  "send('command(Rollo,B,Man)') ");
         var btnRolloB75 = new CtrlButton();
-        btnRolloB75.create("MainRolloB", "380px", "50px",  "normal", "blue", "75%", "command","",  "send('command(Rollo,B,dark)') ");
+        btnRolloB75.create("MainRolloB", "380px", "50px", "ctrlbutton",  "normal", "blue", "75%", "command","",  "send('command(Rollo,B,dark)') ");
         var btnRolloB50 = new CtrlButton();
-        btnRolloB50.create("MainRolloB", "440px", "50px",  "normal", "blue", "50%", "command","", "send('command(Rollo,B,mid)') ");
+        btnRolloB50.create("MainRolloB", "440px", "50px",  "ctrlbutton", "normal", "blue", "50%", "command","", "send('command(Rollo,B,mid)') ");
         var btnRolloB25 = new CtrlButton();
-        btnRolloB25.create("MainRolloB", "500px", "50px",  "normal", "blue", "25%", "command","", "send('command(Rollo,B,bright)') ");
+        btnRolloB25.create("MainRolloB", "500px", "50px", "ctrlbutton",  "normal", "blue", "25%", "command","", "send('command(Rollo,B,bright)') ");
 
       
         var btnRolloBHoch = new CtrlButton();
-        btnRolloBHoch.create("MainRolloB", "260px", "350px",  "normal", "blue", "Hoch", "command","",  "send('command(Rollo,B,up)') ");
+        btnRolloBHoch.create("MainRolloB", "260px", "350px", "ctrlbutton",  "normal", "blue", "Hoch", "command","",  "send('command(Rollo,B,up)') ");
         var btnRolloBStop = new CtrlButton();
-        btnRolloBStop.create("MainRolloB", "320px", "350px",  "normal", "blue", "Stop", "command","",  "send('command(Rollo,B,stop)') "); 
+        btnRolloBStop.create("MainRolloB", "320px", "350px", "ctrlbutton", "normal", "blue", "Stop", "command","",  "send('command(Rollo,B,stop)') "); 
         var btnRolloBRunter = new CtrlButton();
-        btnRolloBRunter.create("MainRolloB", "380px", "350px",  "normal", "blue", "Runter", "command","",  "send('command(Rollo,B,down)') ");
+        btnRolloBRunter.create("MainRolloB", "380px", "350px", "ctrlbutton",  "normal", "blue", "Runter", "command","",  "send('command(Rollo,B,down)') ");
         var btnRolloBStepUp = new CtrlButton();
-        btnRolloBStepUp.create("MainRolloB", "440px", "350px",  "normal", "blue", "Step Up", "command","", "send('command(Rollo,B,StepUp)') ");
+        btnRolloBStepUp.create("MainRolloB", "440px", "350px", "ctrlbutton",  "normal", "blue", "Step Up", "command","", "send('command(Rollo,B,StepUp)') ");
         var btnRolloBStepDown = new CtrlButton();
-        btnRolloBStepDown.create("MainRolloB", "500px", "350px",  "normal", "blue", "Step Down", "command","", "send('command(Rollo,B,StepDown)') ");
+        btnRolloBStepDown.create("MainRolloB", "500px", "350px", "ctrlbutton",  "normal", "blue", "Step Down", "command","", "send('command(Rollo,B,StepDown)') ");
     
        
 
@@ -1014,26 +1014,26 @@
         
         
         var btnRolloKZAuto = new CtrlButton();
-        btnRolloKZAuto.create("MainRolloKZ", "260px", "50px",  "normal", "olive", "Automatik", "command","", "send('command(Rollo,KZ,Auto)') ");
+        btnRolloKZAuto.create("MainRolloKZ", "260px", "50px", "ctrlbutton",  "normal", "olive", "Automatik", "command","", "send('command(Rollo,KZ,Auto)') ");
         var btnRolloKZMan = new CtrlButton();
-        btnRolloKZMan.create("MainRolloKZ", "320px", "50px",  "normal", "olive", "Manual", "command","", "send('command(Rollo,KZ,Man)') "); 
+        btnRolloKZMan.create("MainRolloKZ", "320px", "50px", "ctrlbutton",  "normal", "olive", "Manual", "command","", "send('command(Rollo,KZ,Man)') "); 
         var btnRolloKZ75 = new CtrlButton();
-        btnRolloKZ75.create("MainRolloKZ", "380px", "50px",  "normal", "olive", "75%", "command","",  "send('command(Rollo,KZ,dark)') ");
+        btnRolloKZ75.create("MainRolloKZ", "380px", "50px", "ctrlbutton",  "normal", "olive", "75%", "command","",  "send('command(Rollo,KZ,dark)') ");
         var btnRolloKZ50 = new CtrlButton();
-        btnRolloKZ50.create("MainRolloKZ", "440px", "50px",  "normal", "olive", "50%", "command","", "send('command(Rollo,KZ,mid)') ");
+        btnRolloKZ50.create("MainRolloKZ", "440px", "50px", "ctrlbutton",  "normal", "olive", "50%", "command","", "send('command(Rollo,KZ,mid)') ");
         var btnRolloKZ25 = new CtrlButton();
-        btnRolloKZ25.create("MainRolloKZ", "500px", "50px",  "normal", "olive", "25%", "command","", "send('command(Rollo,KZ,bright)') ");
+        btnRolloKZ25.create("MainRolloKZ", "500px", "50px", "ctrlbutton",  "normal", "olive", "25%", "command","", "send('command(Rollo,KZ,bright)') ");
 
         var btnRolloKZHoch = new CtrlButton();
-        btnRolloKZHoch.create("MainRolloKZ", "260px", "350px",  "normal", "olive", "Hoch", "command","",  "send('command(Rollo,KZ,up)') ");
+        btnRolloKZHoch.create("MainRolloKZ", "260px", "350px", "ctrlbutton",  "normal", "olive", "Hoch", "command","",  "send('command(Rollo,KZ,up)') ");
         var btnRolloKZStop = new CtrlButton();
-        btnRolloKZStop.create("MainRolloKZ", "320px", "350px",  "normal", "olive", "Stop", "command","",  "send('command(Rollo,KZ,stop)') ");
+        btnRolloKZStop.create("MainRolloKZ", "320px", "350px", "ctrlbutton",  "normal", "olive", "Stop", "command","",  "send('command(Rollo,KZ,stop)') ");
         var btnRolloKZRunter = new CtrlButton();
-        btnRolloKZRunter.create("MainRolloKZ", "380px", "350px",  "normal", "olive", "Runter", "command","",  "send('command(Rollo,KZ,down)') ");
+        btnRolloKZRunter.create("MainRolloKZ", "380px", "350px", "ctrlbutton",  "normal", "olive", "Runter", "command","",  "send('command(Rollo,KZ,down)') ");
         var btnRolloKZStepUp = new CtrlButton();
-        btnRolloKZStepUp.create("MainRolloKZ", "440px", "350px",  "normal", "olive", "Step Up", "command","", "send('command(Rollo,KZ,StepUp)') ");
+        btnRolloKZStepUp.create("MainRolloKZ", "440px", "350px", "ctrlbutton",  "normal", "olive", "Step Up", "command","", "send('command(Rollo,KZ,StepUp)') ");
         var btnRolloKZStepDown = new CtrlButton();
-        btnRolloKZStepDown.create("MainRolloKZ", "500px", "350px",  "normal", "olive", "Step Down", "command","", "send('command(Rollo,KZ,StepDown)') ");
+        btnRolloKZStepDown.create("MainRolloKZ", "500px", "350px", "ctrlbutton",  "normal", "olive", "Step Down", "command","", "send('command(Rollo,KZ,StepDown)') ");
     
         
         
@@ -1100,26 +1100,26 @@
         
         
         var btnRolloKAuto = new CtrlButton();
-        btnRolloKAuto.create("MainRolloK", "260px", "50px",  "normal", "midgreen", "Automatik", "command","", "send('command(Rollo,K,Auto)') ");
+        btnRolloKAuto.create("MainRolloK", "260px", "50px", "ctrlbutton",  "normal", "midgreen", "Automatik", "command","", "send('command(Rollo,K,Auto)') ");
         var btnRolloKMan = new CtrlButton();
-        btnRolloKMan.create("MainRolloK", "320px", "50px",  "normal", "midgreen", "Manual", "command","", "send('command(Rollo,K,Man)') ");
+        btnRolloKMan.create("MainRolloK", "320px", "50px", "ctrlbutton",  "normal", "midgreen", "Manual", "command","", "send('command(Rollo,K,Man)') ");
         var btnRolloK75 = new CtrlButton();
-        btnRolloK75.create("MainRolloK", "380px", "50px",  "normal", "midgreen", "75%", "command","",  "send('command(Rollo,K,dark)') ");
+        btnRolloK75.create("MainRolloK", "380px", "50px", "ctrlbutton",  "normal", "midgreen", "75%", "command","",  "send('command(Rollo,K,dark)') ");
         var btnRolloK50 = new CtrlButton();
-        btnRolloK50.create("MainRolloK", "440px", "50px",  "normal", "midgreen", "50%", "command","", "send('command(Rollo,K,mid)') ");
+        btnRolloK50.create("MainRolloK", "440px", "50px", "ctrlbutton",  "normal", "midgreen", "50%", "command","", "send('command(Rollo,K,mid)') ");
         var btnRolloK25 = new CtrlButton();
-        btnRolloK25.create("MainRolloK", "500px", "50px",  "normal", "midgreen", "25%", "command","", "send('command(Rollo,K,bright)') ");
+        btnRolloK25.create("MainRolloK", "500px", "50px", "ctrlbutton",  "normal", "midgreen", "25%", "command","", "send('command(Rollo,K,bright)') ");
 
         var btnRolloKHoch = new CtrlButton();
-        btnRolloKHoch.create("MainRolloK", "260px", "350px",  "normal", "midgreen", "Hoch", "command","",  "send('command(Rollo,K,up)') ");
+        btnRolloKHoch.create("MainRolloK", "260px", "350px", "ctrlbutton",  "normal", "midgreen", "Hoch", "command","",  "send('command(Rollo,K,up)') ");
         var btnRolloKStop = new CtrlButton();
-        btnRolloKStop.create("MainRolloK", "320px", "350px",  "normal", "midgreen", "Stop", "command","",  "send('command(Rollo,K,stop)') ");  
+        btnRolloKStop.create("MainRolloK", "320px", "350px", "ctrlbutton",  "normal", "midgreen", "Stop", "command","",  "send('command(Rollo,K,stop)') ");  
         var btnRolloKRunter = new CtrlButton();
-        btnRolloKRunter.create("MainRolloK", "380px", "350px",  "normal", "midgreen", "Runter", "command","",  "send('command(Rollo,K,down)') ");
+        btnRolloKRunter.create("MainRolloK", "380px", "350px", "ctrlbutton",  "normal", "midgreen", "Runter", "command","",  "send('command(Rollo,K,down)') ");
         var btnRolloKStepUp = new CtrlButton();
-        btnRolloKStepUp.create("MainRolloK", "440px", "350px",  "normal", "midgreen", "Step Up", "command","",  "send('command(Rollo,K,StepUp)') ");
+        btnRolloKStepUp.create("MainRolloK", "440px", "350px", "ctrlbutton",  "normal", "midgreen", "Step Up", "command","",  "send('command(Rollo,K,StepUp)') ");
         var btnRolloKStepDown = new CtrlButton();
-        btnRolloKStepDown.create("MainRolloK", "500px", "350px",  "normal", "midgreen", "Step Down", "command","", "send('command(Rollo,K,StepDown)') ");
+        btnRolloKStepDown.create("MainRolloK", "500px", "350px", "ctrlbutton",  "normal", "midgreen", "Step Down", "command","", "send('command(Rollo,K,StepDown)') ");
     
 
    
@@ -1193,26 +1193,26 @@
         
         
         var btnRolloSZAuto = new CtrlButton();
-        btnRolloSZAuto.create("MainRolloSZ", "260px", "50px",  "normal", "sandy", "Automatik", "command","", "send('command(Rollo,SZ,Auto)') ");
+        btnRolloSZAuto.create("MainRolloSZ", "260px", "50px", "ctrlbutton",  "normal", "sandy", "Automatik", "command","", "send('command(Rollo,SZ,Auto)') ");
         var btnRolloSZMan = new CtrlButton();
-        btnRolloSZMan.create("MainRolloSZ", "320px", "50px",  "normal", "sandy", "Manual", "command","", "send('command(Rollo,SZ,Man)') ");
+        btnRolloSZMan.create("MainRolloSZ", "320px", "50px", "ctrlbutton",  "normal", "sandy", "Manual", "command","", "send('command(Rollo,SZ,Man)') ");
         var btnRolloSZ75 = new CtrlButton();
-        btnRolloSZ75.create("MainRolloSZ", "380px", "50px",  "normal", "sandy", "75%", "command","",  "send('command(Rollo,SZ,dark)') ");
+        btnRolloSZ75.create("MainRolloSZ", "380px", "50px", "ctrlbutton",  "normal", "sandy", "75%", "command","",  "send('command(Rollo,SZ,dark)') ");
         var btnRolloSZ50 = new CtrlButton();
-        btnRolloSZ50.create("MainRolloSZ", "440px", "50px",  "normal", "sandy", "50%", "command","", "send('command(Rollo,SZ,mid)') ");
+        btnRolloSZ50.create("MainRolloSZ", "440px", "50px", "ctrlbutton",  "normal", "sandy", "50%", "command","", "send('command(Rollo,SZ,mid)') ");
         var btnRolloSZ25 = new CtrlButton();
-        btnRolloSZ25.create("MainRolloSZ", "500px", "50px",  "normal", "sandy", "25%", "command","", "send('command(Rollo,SZ,bright)') ");
+        btnRolloSZ25.create("MainRolloSZ", "500px", "50px", "ctrlbutton",  "normal", "sandy", "25%", "command","", "send('command(Rollo,SZ,bright)') ");
 
         var btnRolloSZHoch = new CtrlButton();
-        btnRolloSZHoch.create("MainRolloSZ", "260px", "350px",  "normal", "sandy", "Hoch", "command","",  "send('command(Rollo,SZ,up)') ");
+        btnRolloSZHoch.create("MainRolloSZ", "260px", "350px", "ctrlbutton",  "normal", "sandy", "Hoch", "command","",  "send('command(Rollo,SZ,up)') ");
         var btnRolloSZStop = new CtrlButton();
-        btnRolloSZStop.create("MainRolloSZ", "320px", "350px",  "normal", "sandy", "Stop", "command","",  "send('command(Rollo,SZ,stop)') ");  
+        btnRolloSZStop.create("MainRolloSZ", "320px", "350px", "ctrlbutton",  "normal", "sandy", "Stop", "command","",  "send('command(Rollo,SZ,stop)') ");  
         var btnRolloSZRunter = new CtrlButton();
-        btnRolloSZRunter.create("MainRolloSZ", "380px", "350px",  "normal", "sandy", "Runter", "command","",  "send('command(Rollo,SZ,down)') ");
+        btnRolloSZRunter.create("MainRolloSZ", "380px", "350px", "ctrlbutton",  "normal", "sandy", "Runter", "command","",  "send('command(Rollo,SZ,down)') ");
         var btnRolloSZStepUp = new CtrlButton();
-        btnRolloSZStepUp.create("MainRolloSZ", "440px", "350px",  "normal", "sandy", "Step Up", "command","",  "send('command(Rollo,SZ,StepUp)') ");
+        btnRolloSZStepUp.create("MainRolloSZ", "440px", "350px", "ctrlbutton",  "normal", "sandy", "Step Up", "command","",  "send('command(Rollo,SZ,StepUp)') ");
         var btnRolloSZStepDown = new CtrlButton();
-        btnRolloSZStepDown.create("MainRolloSZ", "500px", "350px",  "normal", "sandy", "Step Down", "command","", "send('command(Rollo,SZ,StepDown)') ");
+        btnRolloSZStepDown.create("MainRolloSZ", "500px", "350px", "ctrlbutton",  "normal", "sandy", "Step Down", "command","", "send('command(Rollo,SZ,StepDown)') ");
     
 
    
@@ -1318,11 +1318,11 @@
         transVarTrebleSsz.create("MainSonosSZ", "50vh", "60%", "lime", "28px", "Trebble", "%");
         
         var CtrlBtnIRadioSZ = new CtrlButton();
-        CtrlBtnIRadioSZ.create("MainSonosSZ", "63vh", "3%",  "normal", "sandy", "IRadio", "ctrlWindow", "RadioStation","");
+        CtrlBtnIRadioSZ.create("MainSonosSZ", "63vh", "3%", "ctrlbutton",  "normal", "sandy", "IRadio", "ctrlWindow", "RadioStation","");
         var CtrlBtnCDSZ = new CtrlButton();
-        CtrlBtnCDSZ.create("MainSonosSZ",  "63vh", "35%",  "normal", "sandy", "CD", "ctrlWindow", "SonosSZCtrl","");
+        CtrlBtnCDSZ.create("MainSonosSZ",  "63vh", "35%", "ctrlbutton",  "normal", "sandy", "CD", "ctrlWindow", "SonosSZCtrl","");
         var CtrlBtnAudioSZ = new CtrlButton();
-        CtrlBtnAudioSZ.create("MainSonosSZ",  "63vh", "67%",  "normal", "sandy", "AudioBook", "ctrlWindow", "SonosSZCtrl",  "");
+        CtrlBtnAudioSZ.create("MainSonosSZ",  "63vh", "67%", "ctrlbutton",  "normal", "sandy", "AudioBook", "ctrlWindow", "SonosSZCtrl",  "");
         
         var FontBtnASsz = new FontButtonNew();
         FontBtnASsz.create("MainSonosSZ", "sandy", "mid", "83vh", "2%", "fa fa-backward", "send('command(SonosSZ,Key,PREVIOUS)')");
@@ -1368,13 +1368,13 @@
         
         
         var CtrlBtnAlarmActive = new CtrlButton();
-        CtrlBtnAlarmActive.create("MainSecCode", "500px", "10px",  "normal", "red", "activate Alarm", "command","",  "send('command(security,AA,activate)') ");
+        CtrlBtnAlarmActive.create("MainSecCode", "500px", "10px", "ctrlbutton",  "normal", "red", "activate Alarm", "command","",  "send('command(security,AA,activate)') ");
         
         var CtrlBtnShowAlarmList = new CtrlButton();
-        CtrlBtnShowAlarmList.create("MainSecCode", "500px", "200px",  "normal", "red", "Alarm List", "command", "", "showAlarmList()");
+        CtrlBtnShowAlarmList.create("MainSecCode", "500px", "200px", "ctrlbutton",  "normal", "red", "Alarm List", "command", "", "showAlarmList()");
 
         var CtrlBtnShowkeypad = new CtrlButton()
-        CtrlBtnShowkeypad.create("MainSecCode", "500px", "390px",  "normal", "red", "KeyPad", "command", "", "showkeypad()");
+        CtrlBtnShowkeypad.create("MainSecCode", "500px", "390px", "ctrlbutton",  "normal", "red", "KeyPad", "command", "", "showkeypad()");
         
     </script>
    
@@ -1647,9 +1647,9 @@
             var FontBtnRL = new FontButtonNew();
             FontBtnRL.create("MainRezepte", "midgreen", "mid", "83vh", "5%", "fa fa-caret-left", "send('command(Cook,key,prev)')");
             var CtrlBtnRezeptList = new CtrlButton();
-            CtrlBtnRezeptList.create("MainRezepte", "83vh", "22%",  "big", "midgreen", "Rezepte", "ctrlWindow", "RezepteCtrlList");
+            CtrlBtnRezeptList.create("MainRezepte", "83vh", "22%", "ctrlbutton",  "big", "midgreen", "Rezepte", "ctrlWindow", "RezepteCtrlList");
             var CtrlBtnZutaten = new CtrlButton();
-            CtrlBtnZutaten.create("MainRezepte", "83vh", "53%",  "big", "midgreen", "Zutaten", "ctrlWindow", "RezepteCtrl");
+            CtrlBtnZutaten.create("MainRezepte", "83vh", "53%", "ctrlbutton",  "big", "midgreen", "Zutaten", "ctrlWindow", "RezepteCtrl");
             var FontBtnRR = new FontButtonNew();
             FontBtnRR.create("MainRezepte", "midgreen", "mid", "83vh", "85%", "fa fa-caret-right", "send('command(Cook,key,next)')");
         </script>
@@ -1721,17 +1721,17 @@
 
             
             var CtrlBtnTVList = new CtrlButton();
-            CtrlBtnTVList.create("MainTV", "63vh", "2%",  "normal", "purple", "Channel", "ctrlWindow", "TVChannel");
+            CtrlBtnTVList.create("MainTV", "63vh", "2%", "ctrlbutton",  "normal", "purple", "Channel", "ctrlWindow", "TVChannel");
             var CtrlBtnTVCh = new CtrlButton();
-            CtrlBtnTVCh.create("MainTV", "63vh", "34%",  "normal", "purple", "Program", "CtrlCmd", "TVGuide", "command(TV,Guide,update)");
+            CtrlBtnTVCh.create("MainTV", "63vh", "34%", "ctrlbutton",  "normal", "purple", "Program", "CtrlCmd", "TVGuide", "command(TV,Guide,update)");
             var CtrlBtnTVx = new CtrlButton();
-            CtrlBtnTVx.create("MainTV", "63vh", "66%",  "normal", "purple", "Source", "ctrlWindow",   "TVSourceCtrl");
+            CtrlBtnTVx.create("MainTV", "63vh", "66%", "ctrlbutton",  "normal", "purple", "Source", "ctrlWindow",   "TVSourceCtrl");
             var CtrlBtnTVa = new CtrlButton();
-            CtrlBtnTVa.create("MainTV",  "73vh", "2%",  "normal", "purple", "", "command", "",  "send('command(TV,AA,activate)') ");
+            CtrlBtnTVa.create("MainTV",  "73vh", "2%", "ctrlbutton",  "normal", "purple", "", "command", "",  "send('command(TV,AA,activate)') ");
             var CtrlBtnTVb = new CtrlButton();
-            CtrlBtnTVb.create("MainTV", "73vh", "34%",  "normal", "purple", "", "command", "",  "send('command(TV,AA,activate)') ");
+            CtrlBtnTVb.create("MainTV", "73vh", "34%", "ctrlbutton",  "normal", "purple", "", "command", "",  "send('command(TV,AA,activate)') ");
             var CtrlBtnTVc = new CtrlButton();
-            CtrlBtnTVc.create("MainTV", "73vh", "66%",  "normal", "purple", "", "CtrlCmd", "TVGuide", "command(TV,Guide,update)");
+            CtrlBtnTVc.create("MainTV", "73vh", "66%", "ctrlbutton",  "normal", "purple", "", "CtrlCmd", "TVGuide", "command(TV,Guide,update)");
            
             var FontBtnA = new FontButtonNew();
             FontBtnA.create("MainTV", "purple", "mid", "83vh", "2%", "fa fa-backward", "send('command(TV,key,KEY_REWIND)')");
@@ -2043,11 +2043,11 @@
             var rahm1 = new Rahmen();
             rahm1.create("MainCeolWZ", "71vh", "2%", "135px", "557px", "transparent");
             var CtrlBtnIRadioWZ = new CtrlButton();
-            CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "3%",  "normal", "purple", "IRadio", "ctrlWindow", "MainCeolWZCtrl");
+            CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "3%", "ctrlbutton", "normal", "purple", "IRadio", "ctrlWindow", "MainCeolWZCtrl");
             var CtrlBtnCDWZ = new CtrlButton();
-            CtrlBtnCDWZ.create("MainCeolWZ",  "73vh", "35%",  "normal", "purple", "CD", "ctrlWindow", "CoverCD");
+            CtrlBtnCDWZ.create("MainCeolWZ",  "73vh", "35%", "ctrlbutton",  "normal", "purple", "CD", "ctrlWindow", "CoverCD");
             var CtrlBtnAudioWZ = new CtrlButton();
-            CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "67%",  "normal", "purple", "AudioBook", "ctrlWindow", "CoverCD",  "");
+            CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "67%", "ctrlbutton",  "normal", "purple", "AudioBook", "ctrlWindow", "CoverCD",  "");
             
             var FontBtnIRadioVolDwnWZ = new FontButtonNew();
             FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "purple", "normal", "83vh", "5%", "fa fa-volume-down", "send('command(DenonCeol,vol,dec)')");  
