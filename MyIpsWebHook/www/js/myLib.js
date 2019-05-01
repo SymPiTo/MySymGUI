@@ -344,27 +344,29 @@ var ToggleCtrlBtn = {
     
     
     constructor() {
-
+        this.ID = "";
     }
  
 
     create(ParentID, posTop, posLeft, h, w, colorclass){
         var elem = document.createElement("div");
-
+        this.ID = elem;
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
         elem.className = "rahmen";
         elem.classList.add(colorclass);
-        
         elem.style.height = h;
         elem.style.width = w;
-        
-  
-	 
 	//elem.style.backgroundColor = color;
-        
+
         document.getElementById(ParentID).appendChild(elem);
+    }
+    
+    off(){
+        
+        this.ID.style.transition = "all 2s ease-in";
+        this.ID.style.height = "0px";
     }
 }
 
