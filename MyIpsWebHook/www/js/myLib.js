@@ -344,12 +344,15 @@ var ToggleCtrlBtn = {
     
     
     constructor() {
+        this.idname ="";
         this.ID = "";
+        
     }
  
 
     create(ParentID, posTop, posLeft, h, w, colorclass){
         var elem = document.createElement("div");
+        elem.id = this.idname;
         this.ID = elem;
         elem.style.position = "absolute";
         elem.style.left = posLeft;
