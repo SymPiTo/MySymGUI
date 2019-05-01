@@ -1,4 +1,6 @@
-  
+    function hiderahmen(){
+        rahm1.off();
+    }  
     
     function Navigation(){ 
         document.getElementsByClassName("CEOLctrl")[0].style.width = "0px";
