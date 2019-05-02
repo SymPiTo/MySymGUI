@@ -1,4 +1,11 @@
-   
+    function showCDPanel(){
+        FontBtnCDA.on();
+        FontBtnCDB.on();
+        FontBtnCDC.on();
+        FontBtnCDD.on();
+        FontBtnCDE.on();
+        rahmCD.on();
+    }  
     
     function Navigation(){ 
         document.getElementsByClassName("CEOLctrl")[0].style.width = "0px";
