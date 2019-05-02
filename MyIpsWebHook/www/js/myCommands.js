@@ -1,14 +1,12 @@
     function ShowHidePanel(no){
         switch(no){
             case '1on':
-                if (state === 'on'){
-                    FontBtnCDA.on();
-                    FontBtnCDB.on();
-                    FontBtnCDC.on();
-                    FontBtnCDD.on();
-                    FontBtnCDE.on();
-                    rahmCD.on();
-                }
+                FontBtnCDA.on();
+                FontBtnCDB.on();
+                FontBtnCDC.on();
+                FontBtnCDD.on();
+                FontBtnCDE.on();
+                rahmCD.on();
                 break;
         }
     }  
