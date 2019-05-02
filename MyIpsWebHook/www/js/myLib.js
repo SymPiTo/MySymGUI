@@ -2862,7 +2862,7 @@ class CtrlStatButton {
            document.getElementById(ParentID).appendChild(elem);
         }
         off(){
-            this.ID.childNodes.height = "0px";
+            this.ID.childNodes.color = "red";
             this.ID.style.transition = "all 2s ease-in";
             this.ID.style.height = "0px";
         }
