@@ -220,6 +220,7 @@ class CtrlButton {
     off(){
         this.ID.style.transition = "all 2s ease-in";
         this.ID.style.height = "0px";
+        this.ID.style.opacity = "0";
         this.ID.style.visibility = "hidden";
         
     }
