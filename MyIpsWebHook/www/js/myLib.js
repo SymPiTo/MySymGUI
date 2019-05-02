@@ -219,7 +219,7 @@ class CtrlButton {
     }
     off(){
         this.ID.style.transition = "all 2s ease-in";
-        this.id.style.width = "0px";
+        this.ID.style.height = "0px";
         
     }
  
