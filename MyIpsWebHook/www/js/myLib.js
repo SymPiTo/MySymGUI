@@ -352,12 +352,13 @@ var ToggleCtrlBtn = {
     constructor() {
         this.idname = "";
         this.ID = "";
-        
+        this.h = "";
     }
  
 
     create(ParentID, posTop, posLeft, h, w, colorclass){
         var elem = document.createElement("div");
+        this.h = h;
         elem.id = this.idname;
         this.ID = elem;
         elem.style.position = "absolute";
@@ -372,9 +373,11 @@ var ToggleCtrlBtn = {
 
         document.getElementById(ParentID).appendChild(elem);
     }
-    
+    on(){
+        this.ID.style.transition = "all 2s ease-in";
+        this.ID.style.height = this.h;
+    }
     off(){
-        
         this.ID.style.transition = "all 2s ease-in";
         this.ID.style.height = "0px";
     }
