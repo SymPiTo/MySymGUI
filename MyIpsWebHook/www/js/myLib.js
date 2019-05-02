@@ -214,7 +214,7 @@ class CtrlButton {
             }
         }
         else if(ctrltype === "CtrlFunc"){
-                elem.onclick = function(){
+                elem.onclick = command; function(){
  
                 // alle Ctrl auf 0px verkleinern 
                 var Ctrl = document.getElementsByTagName("Ctrl");
@@ -228,7 +228,7 @@ class CtrlButton {
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";  
                 
                 
-            }; command;
+            }; 
         }
         document.getElementById(ParentID).appendChild(elem);
     }
