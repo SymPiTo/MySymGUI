@@ -361,7 +361,7 @@ var ToggleCtrlBtn = {
         elem.classList.add(colorclass);
         elem.style.height = h;
         elem.style.width = w;
-        elem.style.zIndex = "1";
+        elem.style.zIndex = "0";
 	//elem.style.backgroundColor = color;
 
         document.getElementById(ParentID).appendChild(elem);
