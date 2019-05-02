@@ -1,6 +1,6 @@
-    function ShowHidePanel(no, state){
+    function ShowHidePanel(no){
         switch(no){
-            case '1':
+            case '1on':
                 if (state === 'on'){
                     FontBtnCDA.on();
                     FontBtnCDB.on();
