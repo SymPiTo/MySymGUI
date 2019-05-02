@@ -1,5 +1,5 @@
     function hiderahmen(){
-        rahm1.off();
+        cont.off();
     }  
     
     function Navigation(){ 
