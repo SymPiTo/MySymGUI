@@ -343,8 +343,8 @@ var ToggleCtrlBtn = {
  class Rahmen {
     
     
-    constructor() {
-        this.idname ="";
+    constructor( idName ) {
+        this.idname = idName;
         this.ID = "";
         
     }
