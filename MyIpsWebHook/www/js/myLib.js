@@ -2847,7 +2847,21 @@ class CtrlStatButton {
   
     }
  
- 
+     /* --------------------- Klasse Area ---------------------------------------- */
+    class container { 
+        constructor() {
+             
+        }
+
+        createMain(ParentID, contID){
+            var elem = document.createElement("div");
+            elem.id = contID;
+            elem.className = contID;
+
+           document.getElementById(ParentID).appendChild(elem);
+        }
+    }   
+        
     /* --------------------- Klasse Area ---------------------------------------- */
     class Area { 
         constructor() {

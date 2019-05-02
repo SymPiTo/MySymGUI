@@ -2024,13 +2024,13 @@
             var mainwindowCeol = new Area();
             mainwindowCeol.createMain("MainCeolWZ", "bgPurple");
         </script>  
-        
+         
         <script>  
             
             var iDisArtistWZ = new ImageDisplay();
             iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "normal");        
 
-
+            
             
             var rahm = new Rahmen();
             rahm.create("MainCeolWZ", "49vh", "3%", "70px", "527px", "black");
@@ -2040,12 +2040,16 @@
             var IconVarDisSourceWZ = new TransVarDisplay();
             IconVarDisSourceWZ.create("MainCeolWZ", "50vh", "20%", "lime", "28px", "Source", "", );
             
+            
+            var cont = new Container();
+            cont.create("MainCeolWZ", "hallo");   
+            
             var rahm1 = new Rahmen();
-            rahm1.create("MainCeolWZ", "71vh", "2%", "135px", "557px", "bgGrey");
+            rahm1.create("hallo", "71vh", "2%", "135px", "557px", "bgGrey");
             var CtrlBtnIRadioWZ = new CtrlButton();
-            CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "3%", "ctrlbutton", "normal", "greyBtn", "IRadio", "ctrlWindow", "MainCeolWZCtrl");
+            CtrlBtnIRadioWZ.create("hallo", "73vh", "3%", "ctrlbutton", "normal", "greyBtn", "IRadio", "ctrlWindow", "MainCeolWZCtrl");
             var CtrlBtnCDWZ = new CtrlButton();
-            CtrlBtnCDWZ.create("MainCeolWZ",  "73vh", "35%", "ctrlbutton",  "normal", "greyBtn", "CD", "ctrlWindow", "MainCDCtrl");
+            CtrlBtnCDWZ.create("hallo",  "73vh", "35%", "ctrlbutton",  "normal", "greyBtn", "CD", "ctrlWindow", "MainCDCtrl");
             var CtrlBtnAudioWZ = new CtrlButton();
             CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "67%", "ctrlbutton",  "normal", "greyBtn",  "AudioBook", "command", "",  "hiderahmen()");
             
