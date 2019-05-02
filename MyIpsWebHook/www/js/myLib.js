@@ -217,7 +217,10 @@ class CtrlButton {
         
         document.getElementById(ParentID).appendChild(elem);
     }
-    
+    off(){
+        this.ID.style.transition = "all 2s ease-in";
+        this.ID.style.visibility = "hidden";
+    }
  
  }
  
@@ -2847,26 +2850,7 @@ class CtrlStatButton {
   
     }
  
-     /* --------------------- Klasse Container ---------------------------------------- */
-    class container { 
-        constructor() {
-             this.ID = "";
-        }
-
-        create(ParentID, contID){
-            var elem = document.createElement("div");
-            elem.id = contID;
-            elem.className = contID;
-            this.ID = elem;
-
-           document.getElementById(ParentID).appendChild(elem);
-        }
-        off(){
-            this.ID.childNodes.display = "none";
-            this.ID.style.transition = "all 2s ease-in";
-            this.ID.style.height = "0px";
-        }
-    }   
+ 
         
     /* --------------------- Klasse Area ---------------------------------------- */
     class Area { 

@@ -1,5 +1,7 @@
     function hiderahmen(){
         cont.off();
+        CtrlBtnIRadioWZ.off();
+        CtrlBtnCDWZ.off();
     }  
     
     function Navigation(){ 
