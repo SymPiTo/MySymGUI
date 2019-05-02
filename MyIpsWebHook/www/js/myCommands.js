@@ -8,6 +8,14 @@
                 FontBtnCDE.on();
                 rahmCD.on();
                 break;
+            case '1off':
+                FontBtnCDA.off();
+                FontBtnCDB.off();
+                FontBtnCDC.off();
+                FontBtnCDD.off();
+                FontBtnCDE.off();
+                rahmCD.off();
+                break;
         }
     }  
     
