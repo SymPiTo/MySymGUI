@@ -1,8 +1,4 @@
-    function hiderahmen(){
-        rahmCD.off();
-        CtrlBtnIRadioWZ.off();
-        CtrlBtnCDWZ.off();
-    }  
+   
     
     function Navigation(){ 
         document.getElementsByClassName("CEOLctrl")[0].style.width = "0px";

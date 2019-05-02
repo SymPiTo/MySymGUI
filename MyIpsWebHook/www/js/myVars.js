@@ -297,10 +297,24 @@
             src = 'IRadio';
             var radioStation = '000' + ips[0].ID58379 + '.png';
             document.getElementById("CDimg_A").src='images/RadioStation/' + radioStation;
+            //CD Leiste ausblenden
+            FontBtnCDA.off();
+            FontBtnCDB.off();
+            FontBtnCDC.off();
+            FontBtnCDD.off();
+            FontBtnCDE.off();
+            rahmCD.off();
         }
         else if (src == '1'){
             src = 'Media';
             document.getElementById("CDimg_A").src = ips[0].ID57135;
+            //CD Leiste einblenden
+            FontBtnCDA.on();
+            FontBtnCDB.on();
+            FontBtnCDC.on();
+            FontBtnCDD.on();
+            FontBtnCDE.on();
+            rahmCD.on();
         }
         else if (src == '2'){src = 'USB';}
         else if (src == '3'){src = 'IPOD';}

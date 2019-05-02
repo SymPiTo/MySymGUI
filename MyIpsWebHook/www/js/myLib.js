@@ -1533,6 +1533,19 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                 this.ID1.style.color = "white";
             }
        }
+       
+       off(){
+        this.ID.style.transition = "all 2s ease-in";
+         
+        this.ID.style.opacity = "0";
+        this.ID.style.visibility = "hidden";
+       }
+       on(){
+        this.ID.style.transition = "all 2s ease-in";
+         
+        this.ID.style.opacity = "1";
+        this.ID.style.visibility = "visible";  
+       }
     };
 
       /* --------------------- Klasse Navigation Pad ---------------------------------------- */
