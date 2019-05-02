@@ -2853,7 +2853,7 @@ class CtrlStatButton {
              
         }
 
-        createMain(ParentID, contID){
+        create(ParentID, contID){
             var elem = document.createElement("div");
             elem.id = contID;
             elem.className = contID;
