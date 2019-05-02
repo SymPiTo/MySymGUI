@@ -219,7 +219,8 @@ class CtrlButton {
     }
     off(){
         this.ID.style.transition = "all 2s ease-in";
-        this.ID.style.visibility = "hidden";
+        this.id.style.opacity = "0";
+        this.ID.style.display = "none";
     }
  
  }
