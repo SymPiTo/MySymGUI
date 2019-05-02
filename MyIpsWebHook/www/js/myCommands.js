@@ -1,10 +1,16 @@
-    function showCDPanel(){
-        FontBtnCDA.on();
-        FontBtnCDB.on();
-        FontBtnCDC.on();
-        FontBtnCDD.on();
-        FontBtnCDE.on();
-        rahmCD.on();
+    function ShowHidePanel(no, state){
+        switch(no){
+            case '1':
+                if (state === 'on'){
+                    FontBtnCDA.on();
+                    FontBtnCDB.on();
+                    FontBtnCDC.on();
+                    FontBtnCDD.on();
+                    FontBtnCDE.on();
+                    rahmCD.on();
+                }
+                break;
+        }
     }  
     
     function Navigation(){ 
