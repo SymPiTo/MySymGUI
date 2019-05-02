@@ -227,8 +227,8 @@ class CtrlButton {
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";  
                 
-                command;
-            }
+                
+            }, command;
         }
         document.getElementById(ParentID).appendChild(elem);
     }
