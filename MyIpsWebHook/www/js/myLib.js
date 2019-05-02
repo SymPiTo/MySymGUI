@@ -344,7 +344,7 @@ var ToggleCtrlBtn = {
     
     
     constructor() {
-        this.idname = idName;
+        this.idname = "";
         this.ID = "";
         
     }
