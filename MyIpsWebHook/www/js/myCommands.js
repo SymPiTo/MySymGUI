@@ -1,5 +1,5 @@
     function hiderahmen(){
-        cont.off();
+        rahm1.off();
         CtrlBtnIRadioWZ.off();
         CtrlBtnCDWZ.off();
     }  
