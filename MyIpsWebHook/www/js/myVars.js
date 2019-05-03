@@ -152,7 +152,7 @@
             sym[78] = ips[0].ID53698;  //TV Channel Name - 41307
             sym[79] = ips[0].ID26003;  //TV Source 24408
             sym[80] = ips[0].ID35428;  //TV SourceList 45960
-            sym[81] = "" ; //
+            sym[81] = ips[0].ID16753;  //Denon Server Name
             sym[82] = ips[0].ID32160;  //SZ Sonos Artist
             sym[83] = ips[0].ID23875;  //SZ Sonos Title
             sym[84] = ips[0].ID38320;  //SZ Sonos Album
@@ -292,36 +292,7 @@
         else if (pm == '3'){pm = 'REPEAT_ALL';}
         $('playmode').innerHTML =  pm; 
        
-        var src = sym[105]; 
-        if (src == '0'){
-            src = 'IRadio';
-            var radioStation = '000' + ips[0].ID58379 + '.png';
-            document.getElementById("CDimg_A").src='images/RadioStation/' + radioStation;
-            //CD Leiste ausblenden
-            FontBtnCDA.off();
-            FontBtnCDB.off();
-            FontBtnCDC.off();
-            FontBtnCDD.off();
-            FontBtnCDE.off();
-            rahmCD.off();
-        }
-        else if (src == '1'){
-            src = 'Media';
-            document.getElementById("CDimg_A").src = ips[0].ID57135;
-            //CD Leiste einblenden
-            FontBtnCDA.on();
-            FontBtnCDB.on();
-            FontBtnCDC.on();
-            FontBtnCDD.on();
-            FontBtnCDE.on();
-            rahmCD.on();
-        }
-        else if (src == '2'){src = 'USB';}
-        else if (src == '3'){src = 'IPOD';}
-        else if (src == '4'){src = 'AUX A';}
-        else if (src == '5'){src = 'AUX D';}
-        $('source_A').innerHTML =  src;  
-         
+
         var CeolPower = sym[96];
         if (CeolPower){
           document.getElementById('power_A').style.color = "lime";
@@ -755,35 +726,13 @@
             
             DisAlarmActiveSec.update(sym[48]); 
             ABox.update(sym[58]);
-       /*   
-            var element = sym[105];
-            switch(element) {
-                case 0:
-                    document.getElementById('source_A').innerHTML =  'Radio';
-                    break;
-                case 1:
-                    document.getElementById('source_A').innerHTML = 'Media';
-                    break;
-                case 2:
-                    document.getElementById('source_A').innerHTML = 'USB';
-                    break;
-                case3:
-                    document.getElementById('source_A').innerHTML = 'IPOD';
-                    break;
-                case 4:
-                    document.getElementById('source_A').innerHTML =  'AUX A';
-                    break;
-                case 5:
-                    document.getElementById('source_A').innerHTML =  'AUX D';
-                    break;
-                default:
-            }
-        */  
+ 
           
             iDisArtist.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPower.update(sym[96]);
             IconVarDisVol.update(sym[97],0);
             IconVarDisSource.update(sym[105],"state");
+            IconVarDisServerWZ.update(sym(81),0);
 
             iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPowerWZ.update(sym[96]);
