@@ -732,7 +732,7 @@
             FontBtnIRadioPower.update(sym[96]);
             IconVarDisVol.update(sym[97],0);
             IconVarDisSource.update(sym[105],"state");
-            IconVarDisServerWZ.update(sym[81],0);
+            IconVarDisServerWZ.update(sym[81]);
 
             iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
             FontBtnIRadioPowerWZ.update(sym[96]);
