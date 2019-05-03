@@ -196,7 +196,7 @@
             sym[120] = ips[0].ID53747; //Rollo KZ SSunSet            
             sym[121] = ips[0].ID54434;  //Rollo KZ up/down
             sym[122] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
-
+            sym[123] = ips[0].ID57135;  //Denon DIDL AlbumArt URL
      
         }
         catch(err){
@@ -734,7 +734,13 @@
             IconVarDisSource.update(sym[105],"state");
             IconVarDisServerWZ.update(sym[81]);
 
-            iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
+            if(sym[105] === 'IRADIO'){
+                iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
+            }
+            else{
+               iDisArtistWZ.update(sym[123], sym[95], sym[93], sym[94]); 
+            }
+            
             FontBtnIRadioPowerWZ.update(sym[96]);
             IconVarDisVolWZ.update(sym[97],0);
             IconVarDisSourceWZ.update(sym[105],"state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
