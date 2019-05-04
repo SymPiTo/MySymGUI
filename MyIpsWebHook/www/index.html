@@ -1785,11 +1785,17 @@
 	<!--  ************************          Main - WebSocketServer    ************************      -->   
         <!-- ***********************************************************************************   -->
 		 
-        <Main id="MainWSS" class="WSS">  </Main>
-
+   
+        <script> 
+            var mainwindowCeol = new Area();
+            mainwindowCeol.createMain("MainWSS", "bgMidgreen");
+        </script>  
         <script>  
-	     
-        
+            var rahmWss = new Rahmen();
+            rahmWss.create("MainWSS", "24vh", "3%", "400px", "240px", "transparent");
+
+            var IconVarWSS = new TransVarDisplay(); 
+            IconVarWSS.create("MainCeolWZ", "45vh", "", "lime", "28px", "WebSocket Server", "", );
         </script>    	
 		  
         <!-- ***********************************************************************************      -->
