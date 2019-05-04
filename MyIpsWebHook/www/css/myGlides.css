@@ -118,6 +118,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .RezepteCtrl,
 .RezepteCtrlList,
 .IRadio,
+.WSS,
 .TV,
 .area
 {
@@ -167,6 +168,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .TimePicker::-webkit-scrollbar,
 .TimePickerX::-webkit-scrollbar,
 .IRadio::-webkit-scrollbar,
+.WSS::-webkit-scrollbar,
 .TV::-webkit-scrollbar, 
 .area::-webkit-scrollbar {
     display: none;
@@ -511,7 +513,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 95vh;
+    height: 450px;
     background-color: hsl(82, 100%, 10%);
 }
 
@@ -519,7 +521,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 95vh;
+    height: 530px;
     background-color: hsl(82, 100%, 10%);
 }
 
@@ -527,7 +529,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 95vh;
+    height: 450px;
     background-color: hsl(82, 100%, 10%);
 }
 
@@ -601,7 +603,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
         left: 16.2vw;
         width: 0px;
 	height: 95vh;	
-	background-color: red;
+	background-color: black;
 }
 .IRadio {
 	position:absolute;
@@ -1020,7 +1022,6 @@ overflow: hidden;
 	margin-top: 10px;
 	width: 70px;
 	height: 70px;
-        z-index: 3;
 }
 .icon.big{
 	margin-top: 10px;
@@ -1047,12 +1048,7 @@ overflow: hidden;
 	width: 50px;
 	height: 50px;   
 }
-.icon.size3{
-	margin-top: 10px;
-	width: 200px;
-	height: 200px;
-	
-}
+
 .iconRadio{
 	margin-top: 10px;
 	width: 95px;
@@ -2023,9 +2019,7 @@ width:40%;
 .anzeige.size07{
     height: 70px;
 }
-.anzeige.size08{
-    height: 200px;
-}
+
 .status{
 	border-color:#666666;
 	border-style: solid;
