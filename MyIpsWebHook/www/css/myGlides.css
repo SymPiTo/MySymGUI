@@ -1068,6 +1068,11 @@ overflow: hidden;
 	width: 50px;
 	height: 50px;   
 }
+.icon.size3{
+	margin-top: 10px;
+	width: 200px;
+	height: 200px;   
+}
 
 .iconRadio{
 	margin-top: 10px;
@@ -2039,7 +2044,7 @@ width:40%;
 .anzeige.size07{
     height: 70px;
 }
-
+ 
 .status{
 	border-color:#666666;
 	border-style: solid;
@@ -2940,6 +2945,9 @@ h1:after {
 .bgGrey {
     background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%)); /* CHROME */
 } 
+
+/* *********************  Background COLORS ********************************** */
+
 
 /* *********************  Weather ********************************** */
     .weathertablecell { 
