@@ -118,7 +118,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .RezepteCtrl,
 .RezepteCtrlList,
 .IRadio,
-.WSS,
 .TV,
 .area
 {
@@ -168,7 +167,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .TimePicker::-webkit-scrollbar,
 .TimePickerX::-webkit-scrollbar,
 .IRadio::-webkit-scrollbar,
-.WSS::-webkit-scrollbar,
 .TV::-webkit-scrollbar, 
 .area::-webkit-scrollbar {
     display: none;
