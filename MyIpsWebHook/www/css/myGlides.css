@@ -513,7 +513,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 450px;
+    height: 95vh;
     background-color: hsl(82, 100%, 10%);
 }
 
@@ -521,7 +521,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position:relative;
     top: 5vh;
     width: 0px;
-    height: 530px;
+    height: 95vh;
     background-color: hsl(82, 100%, 10%);
 }
 
