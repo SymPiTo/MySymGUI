@@ -197,7 +197,7 @@
             sym[121] = ips[0].ID54434;  //Rollo KZ up/down
             sym[122] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
             sym[123] = ips[0].ID57135;  //Denon DIDL AlbumArt URL
-            sym[124] = ips[0].ID424675;  //WSS active
+            sym[124] = ips[0].ID42467;  //WSS active
             sym[125] = ips[0].ID56321;  //WSS Client 1
             sym[126] = ips[0].ID43949;  //WSS Client 2
             sym[127] = ips[0].ID15131;  //WSS Client 3
