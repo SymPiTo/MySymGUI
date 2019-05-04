@@ -197,7 +197,11 @@
             sym[121] = ips[0].ID54434;  //Rollo KZ up/down
             sym[122] = ips[0].ID28071;  //Rollo KZ Schaltzeit Mo-Fr
             sym[123] = ips[0].ID57135;  //Denon DIDL AlbumArt URL
-     
+            sym[124] = ips[0].ID424675;  //WSS active
+            sym[125] = ips[0].ID56321;  //WSS Client 1
+            sym[126] = ips[0].ID43949;  //WSS Client 2
+            sym[127] = ips[0].ID15131;  //WSS Client 3
+            sym[128] = ips[0].ID56321;  //WSS Client 4
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -528,6 +532,12 @@
    
    
     function updateValues(sym){
+        //<!-- ******************** Web Socket Server   **************************  -->
+        DisWSSCL1.update(sym[125]);
+        DisWSSCL2.update(sym[126]);
+        DisWSSCL3.update(sym[127]);
+        DisWSSCL4.update(sym[128]);
+        
         //<!-- ******************** Wetter   **************************  -->
         WetterLabelA.update(sym[111][1]['icon'], sym[111][1]['weekday'], sym[111][1]['temperatureHigh'], sym[111][1]['temperatureLow'], sym[111][1]['windSpeed'], sym[111][1]['windGust'], sym[111][1]['cloudCover'], sym[111][1]['humidity'] );
         WetterLabelB.update(sym[111][2]['icon'], sym[111][2]['weekday'], sym[111][2]['temperatureHigh'], sym[111][2]['temperatureLow'], sym[111][2]['windSpeed'], sym[111][2]['windGust'], sym[111][2]['cloudCover'], sym[111][2]['humidity'] );
