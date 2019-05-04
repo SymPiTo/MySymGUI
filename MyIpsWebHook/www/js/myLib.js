@@ -495,6 +495,8 @@ var ToggleCtrlBtn = {
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
+        
+       
 
         document.getElementById(ParentID).appendChild(elem);			 
     }
