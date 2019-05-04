@@ -2020,7 +2020,9 @@ width:40%;
 .anzeige.size07{
     height: 70px;
 }
-
+.anzeige.size08{
+    height: 200px;
+}
 .status{
 	border-color:#666666;
 	border-style: solid;
