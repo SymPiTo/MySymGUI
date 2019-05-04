@@ -414,19 +414,54 @@
             var SubMenuBlueRay = new GlideButton();
             SubMenuBlueRay.create("SubMenuMedia", "purple", "BlueRay Player", "BlueRay.png", "MainBlueRay","", "SM" );
         </script>   
+
+
+	<!-- ************************ Menue  Heizung  ************************  -->
+	<subMenu id="SubMenuHz" class="MenuHz"></subMenu>
+  		
+        <script>  
+            var SubMenuHzAll = new GlideButton();
+            SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", "_Heizung_BW2.png", "MainHzAll","", "SM" );  
+            var SubMenuHzWZ = new GlideButton();
+            SubMenuHzWZ.create("SubMenuHz", "cyan", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHeizungWZ","", "SM" );  
+             var SubMenuHzKZ = new GlideButton();
+            SubMenuHzKZ.create("SubMenuHz", "olive", "Heizung Kinderzimmer", "_Heizung_BW2.png", "MainHzKZ","", "SM" );
+            var SubMenuHzSZ = new GlideButton();
+            SubMenuHzSZ.create("SubMenuHz", "sandy", "Heizung Schlafzimmer", "_Heizung_BW2.png", "MainHzSZ","", "SM" );
+            var SubMenuHzK = new GlideButton();
+            SubMenuHzK.create("SubMenuHz", "midgreen", "Heizung Kueche", "_Heizung_BW2.png", "MainHzK","", "SM" ); 
+        </script> 
+
+		<!-- ************************Menu  Rolladen  ************************  -->
+	<subMenu id="SubMenuRollo" class="MenuRollo"></subMenu>
+                    
+        <script>  
+            var SubMenuRolloAll = new GlideButton();
+            SubMenuRolloAll.create("SubMenuRollo", "brown", "Rolladen Uebersicht", "_Rolladen_BW.png", "MainRolloAll","", "SM" );  
+            var SubMenuRolloWZ = new GlideButton();
+            SubMenuRolloWZ.create("SubMenuRollo", "cyan", "Rolladen Wohnzimmer", "_Rolladen_BW.png", "MainRolloWZ","", "SM" );  
+             var SubMenuRolloKZ = new GlideButton();
+            SubMenuRolloKZ.create("SubMenuRollo", "olive", "Rolladen Kinderzimmer", "_Rolladen_BW.png", "MainRolloKZ","", "SM" );
+            var SubMenuRolloSZ = new GlideButton();
+            SubMenuRolloSZ.create("SubMenuRollo", "sandy", "Rolladen Schlafzimmer", "_Rolladen_BW.png", "MainRolloSZ","", "SM" );
+            var SubMenuRolloK = new GlideButton();
+            SubMenuRolloK.create("SubMenuRollo", "red", "Rolladen Kueche", "_Rolladen_BW.png", "MainRolloK","", "SM" ); 
+            var SubMenuRolloB = new GlideButton();
+            SubMenuRolloB.create("SubMenuRollo", "blue", "Rolladen Balkon", "_Rolladen_BW.png", "MainRolloK","", "SM" ); 
+        </script> 
+        
+     
+ 		
                 
 	<!-- ************************ Sub Menu Netzwerk  ************************  -->
 	<subMenu id="SubMenuNet" class="MenuNet"></subMenu>
   		
         <script>   
             var SubMenuWSS = new GlideButton();
-            SubMenuWSS.create("SubMenuNet", "midgreen", "WSS Server", "WSS.png", "MainWSS","", "SM" ); 
-            var SubMenuWSS1 = new GlideButton();
-            SubMenuWSS1.create("SubMenuNet", "midgreen", "IPS Server", "WSS.png", "MainNet","", "SM" ); 
+            SubMenuWSS.create("SubMenuNet", "midgreen", "WSS Server", "WSS.png", "","MainWSS", "SM" ); 
+            var SubMenuWSS = new GlideButton();
+            SubMenuWSS.create("SubMenuNet", "midgreen", "WSS Server", "WSS.png", "MainNet","", "SM" ); 
         </script>
-
-
-
   
  	 
                 
@@ -1752,44 +1787,23 @@
 		 
    
         <script> 
-            var mainwindowWSS = new Area();
-            mainwindowWSS.createMain("MainWSS", "bgMidgreen");
+            var mainwindowCeol = new Area();
+            mainwindowCeol.createMain("MainWSS", "bgMidgreen");
         </script>  
         <script>  
             var rahmWss = new Rahmen();
-            rahmWss.create("MainWSS", "100px", "10px", "400px", "250px", "transparent");
+            rahmWss.create("MainWSS", "100px", "10px", "400px", "200px", "transparent");
             var iWSS = new DynIcon("WSS","bin",false);
-            iWSS.create("MainWSS", "225px", "30px", "size3");
+            iWSS.create("MainWSS", "200px", "30px", "size2");
         
             var IconVarWSS = new TransVarDisplay(); 
-            IconVarWSS.create("MainWSS", "125px", "50px", "lime", "28px", "WebSocket Server", "", );
+            IconVarWSS.create("MainWSS", "45vh", "15px", "lime", "28px", "WebSocket Server", "", );
             
             var DisWSSCL1 = new StateDisplay();
-            DisWSSCL1.create("MainWSS", "", "", "50px", "380px", "size07", "30px", "WS Client 1", "String", "", "", "", "");
-            var DisWSSCL2 = new StateDisplay();
-            DisWSSCL2.create("MainWSS", "", "", "170px", "380px", "size07", "30px", "WS Client 2", "String", "", "", "", ""); 
-            var DisWSSCL3 = new StateDisplay();
-            DisWSSCL3.create("MainWSS", "", "", "290px", "380px", "size07", "30px", "WS Client 3", "String", "", "", "", "");
-            var DisWSSCL4 = new StateDisplay();
-            DisWSSCL4.create("MainWSS", "", "", "410px", "380px", "size07", "30px", "WS Client 4", "String", "", "", "", ""); 
+            DisWSSCL1.create("MainWSS", "", "", "50px", "400px", "size07", "30px", "WS Client 1", "String", "", "", "", "");
+            
         </script>    	
-		
-        <!-- ***********************************************************************************   -->
-	<!--  ************************          CTRL - WebSocketServer    ************************      -->   
-        <!-- ***********************************************************************************   -->
-        <script> 
-            var CtrlwindowWSS = new Area();
-            CtrlwindowWSS.createCtrl("MainWSSCtrl", "bgMidgreen");
-        </script> 
-        
-        <script> 
-      
-        </script> 
-        
-        
-        
-        
-        
+		  
         <!-- ***********************************************************************************      -->
 	<!--  ************************ INDEX C - UPNP ************************ -->   
         <!-- ***********************************************************************************      -->
