@@ -452,16 +452,7 @@
         
      
  		
-                
-	<!-- ************************ Sub Menu Netzwerk  ************************  -->
-	<subMenu id="SubMenuNet" class="MenuNet"></subMenu>
-  		
-        <script>   
-            var SubMenuWSS = new GlideButton();
-            SubMenuWSS.create("SubMenuNet", "midgreen", "WSS Server", "WSS.png", "","MainWSS", "SM" ); 
-            var SubMenuWSS = new GlideButton();
-            SubMenuWSS.create("SubMenuNet", "midgreen", "WSS Server", "WSS.png", "MainNet","", "SM" ); 
-        </script>
+
   
  	 
                 
@@ -1785,13 +1776,46 @@
 	<!--  ************************          Main - WebSocketServer    ************************      -->   
         <!-- ***********************************************************************************   -->
 		 
-        <Main id="MainWSS" class="WSS">  </Main>
-
+   
+        <script> 
+            var mainwindowWSS = new Area();
+            mainwindowWSS.createMain("MainWSS", "bgMidgreen");
+        </script>  
         <script>  
-	     
+            var rahmWss = new Rahmen();
+            rahmWss.create("MainWSS", "100px", "10px", "400px", "250px", "transparent");
+            var iWSS = new DynIcon("WSS","bin",false);
+            iWSS.create("MainWSS", "225px", "30px", "size3");
         
+            var IconVarWSS = new TransVarDisplay(); 
+            IconVarWSS.create("MainWSS", "125px", "50px", "lime", "28px", "WebSocket Server", "", );
+            
+            var DisWSSCL1 = new StateDisplay();
+            DisWSSCL1.create("MainWSS", "", "", "50px", "380px", "size07", "30px", "WS Client 1", "String", "", "", "", "");
+            var DisWSSCL2 = new StateDisplay();
+            DisWSSCL2.create("MainWSS", "", "", "170px", "380px", "size07", "30px", "WS Client 2", "String", "", "", "", ""); 
+            var DisWSSCL3 = new StateDisplay();
+            DisWSSCL3.create("MainWSS", "", "", "290px", "380px", "size07", "30px", "WS Client 3", "String", "", "", "", "");
+            var DisWSSCL4 = new StateDisplay();
+            DisWSSCL4.create("MainWSS", "", "", "410px", "380px", "size07", "30px", "WS Client 4", "String", "", "", "", ""); 
         </script>    	
-		  
+		
+        <!-- ***********************************************************************************   -->
+	<!--  ************************          CTRL - WebSocketServer    ************************      -->   
+        <!-- ***********************************************************************************   -->
+        <script> 
+            var CtrlwindowWSS = new Area();
+            CtrlwindowWSS.createCtrl("MainWSSCtrl", "bgMidgreen");
+        </script> 
+        
+        <script> 
+      
+        </script> 
+        
+        
+        
+        
+        
         <!-- ***********************************************************************************      -->
 	<!--  ************************ INDEX C - UPNP ************************ -->   
         <!-- ***********************************************************************************      -->

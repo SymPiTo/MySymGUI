@@ -121,6 +121,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .WSS,
 .TV,
 .MenuWZ,
+.MenuKZ,
+.MenuSec,
+.MenuSZ,
+.MenuK,
+.MenuB,
+.MenuMultimedia,
+.MenuHz,
+.MenuRollo,
+.MenuNet,
 .area
 {
     overflow: auto;
