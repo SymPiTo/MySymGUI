@@ -201,7 +201,7 @@
             sym[125] = ips[0].ID56321;  //WSS Client 1
             sym[126] = ips[0].ID43949;  //WSS Client 2
             sym[127] = ips[0].ID15131;  //WSS Client 3
-            sym[128] = ips[0].ID56321;  //WSS Client 4
+            sym[128] = ips[0].ID38435;  //WSS Client 4
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
