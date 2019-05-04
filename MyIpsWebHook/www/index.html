@@ -1793,9 +1793,12 @@
         <script>  
             var rahmWss = new Rahmen();
             rahmWss.create("MainWSS", "24vh", "3%", "400px", "240px", "transparent");
-
+            var iWSS = new DynIcon("WSS","bin",false);
+            iWSS.create("MainWSS", "40px", "70px", "wide");
+        
             var IconVarWSS = new TransVarDisplay(); 
-            IconVarWSS.create("MainCeolWZ", "45vh", "", "lime", "28px", "WebSocket Server", "", );
+            IconVarWSS.create("MainWSS", "45vh", "50vw", "lime", "28px", "WebSocket Server", "", );
+            
         </script>    	
 		  
         <!-- ***********************************************************************************      -->
