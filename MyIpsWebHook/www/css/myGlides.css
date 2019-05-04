@@ -180,6 +180,16 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .IRadio::-webkit-scrollbar,
 .WSS::-webkit-scrollbar,
 .TV::-webkit-scrollbar, 
+.MenuWZ::-webkit-scrollbar, 
+.MenuKZ::-webkit-scrollbar, 
+.MenuSec::-webkit-scrollbar, 
+.MenuSZ::-webkit-scrollbar, 
+.MenuK::-webkit-scrollbar, 
+.MenuB::-webkit-scrollbar, 
+.MenuMultimedia::-webkit-scrollbar, 
+.MenuHz::-webkit-scrollbar, 
+.MenuRollo::-webkit-scrollbar, 
+.MenuNet::-webkit-scrollbar, 
 .area::-webkit-scrollbar {
     display: none;
 }
