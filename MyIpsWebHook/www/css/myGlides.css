@@ -2867,7 +2867,20 @@ h1:after {
 .sandy:active {
     background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
 }
- 
+.cyanBtn {
+    background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 35%), hsl(174, 100%, 45%), hsl(174, 100%, 35%), hsl(174, 100%, 25%)); /* CHROME */
+  box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
+    inset hsla(0,0%,15%, .8) 0 -1px 5px 2px, /* soft SD */
+    inset hsla(0,0%,0%, .25) 0 -1px 0px 4px, /* bottom SD */
+    inset hsla(0,0%,100%,.7) 0  2px 1px 4px, /* top HL */
+    hsla(0,0%, 0%,.15) 0 -2px 3px 2px, /* outer SD */
+    hsla(0,0%,100%,.5) 0  2px 3px 2px; /* outer HL */ 
+    transition: color .2s;
+}  
+.cyanBtn:active {
+ background: -webkit-linear-gradient(hsl(174, 100%, 5%), hsl(174, 100%, 15%),hsl(174, 100%, 5%));
+}
+
 .greyBtn {
     background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
   box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
