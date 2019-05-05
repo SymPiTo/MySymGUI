@@ -1382,6 +1382,9 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                    case "IRadio":
                        var SourceList = Liste.getIRadiochannels();
                        break;
+                   case "AudioBook":
+                       var SourceList = Liste.AudioBook();
+                       break;
                    default:
                 }
             }
@@ -1398,7 +1401,9 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                     case "CD":
                         var icon = item["icon"];
                         break;
-                        
+                    case "AudioBook":
+                        var icon = item["icon"];
+                        break   
                     default:
                 }
                 
@@ -1413,6 +1418,9 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
                 }
                 else if (source === "CD"){
                     elem.src = "CDs/" + icon;
+                }
+                else if (source === "AudioBook"){
+                    elem.src = "AudioBooks/" + icon;
                 }
                 elem.onclick = function(){
                         var index = SourceList.findIndex((item) => item.selected === true);
