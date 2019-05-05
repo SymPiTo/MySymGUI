@@ -2096,7 +2096,7 @@
             var CtrlBtnCDWZ = new CtrlButton();
             CtrlBtnCDWZ.create("MainCeolWZ",  "73vh", "35%", "ctrlbutton",  "normal", "greyBtn", "CD", "CtrlFunc", "MainCDCtrl", "1on");
             var CtrlBtnAudioWZ = new CtrlButton();
-            CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "67%", "ctrlbutton",  "normal", "greyBtn",  "AudioBook", "command", "",  "showCDPanel()");
+            CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "67%", "ctrlbutton",  "normal", "greyBtn",  "AudioBook", "CtrlFunc", "MainAudioBookCtrl",  "1on()");
             
             var FontBtnIRadioVolDwnWZ = new FontButtonNew();
             FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton",  "greyBtn", "normal", "83vh", "5%", "fa fa-volume-down", "send('command(DenonCeol,vol,dec)')");  
@@ -2134,7 +2134,16 @@
             CtrlCDList.create("MainCDCtrl", "CD"   );  
         </script>     
         
+	<!-- ************************** Right AudioBooks Player **************************  -->
+        <script> 
+            var CtrlwindowCeolAudio = new Area();
+            CtrlwindowCeolAudio.createCtrl("MainAudioBookCtrl", "bgPurple");
+        </script>
         
+        <script> 
+            var CtrlCDList = new IconList();
+            CtrlAudioList.create("MainAudioBookCtrl", "AudioBook"   );  
+        </script>      
         
         
         
