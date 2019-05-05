@@ -569,8 +569,7 @@
         var iHzWZ = new DynIcon("heizkoerper","bin",false);
         iHzWZ.create("MainHeizungWZ", "40px", "70px", "wide"); 
 
-        var rahmWZHz = new Rahmen();
-        rahmWZHz.create("MainHeizungWZ", "250px", "10px", "350px", "527px", "bgGreyBtn");
+ 
             
         var labelModeWZ = new label();
         labelModeWZ.create("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
@@ -578,25 +577,22 @@
         labelPresetWZ.create("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
         
         var btnHzWZauto = new CtrlButton();
-        btnHzWZauto.create("MainHeizungWZ", "300px", "50px", "ctrlbutton",  "normal", "cyanBtn", "Automatik", "command","",  "send('command(Heizung,WZ,auto)')");
+        btnHzWZauto.create("MainHeizungWZ", "300px", "50px", "ctrlbutton",  "normal", "cyan", "Automatik", "command","",  "send('command(Heizung,WZ,auto)')");
         var btnHzWZman = new CtrlButton();
-        btnHzWZman.create("MainHeizungWZ", "360px", "50px", "ctrlbutton",  "normal", "cyanBtn", "Manual", "command","",  "send('command(Heizung,WZ,man)')");
+        btnHzWZman.create("MainHeizungWZ", "360px", "50px", "ctrlbutton",  "normal", "cyan", "Manual", "command","",  "send('command(Heizung,WZ,man)')");
         var btnHzWZUrlaub = new CtrlButton();
-        btnHzWZUrlaub.create("MainHeizungWZ", "420px", "50px", "ctrlbutton",  "normal", "cyanBtn", "Urlaub", "command","",  "send('command(Heizung,WZ,urlaub)')");
+        btnHzWZUrlaub.create("MainHeizungWZ", "420px", "50px", "ctrlbutton",  "normal", "cyan", "Urlaub", "command","",  "send('command(Heizung,WZ,urlaub)')");
         var btnHzWZParty = new CtrlButton();
-        btnHzWZParty.create("MainHeizungWZ", "480px", "50px", "ctrlbutton",  "normal", "cyanBtn", "Party", "command","",  "send('command(Heizung,WZ,party)')");
-        
-     
-
+        btnHzWZParty.create("MainHeizungWZ", "480px", "50px", "ctrlbutton",  "normal", "cyan", "Party", "command","",  "send('command(Heizung,WZ,party)')");
         
         var btnHzWZHeizen = new CtrlButton();
-        btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px", "ctrlbutton",  "normal", "cyanBtn", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
+        btnHzWZHeizen.create("MainHeizungWZ", "300px", "350px", "ctrlbutton",  "normal", "cyan", "Heizen", "command","",  "{send('command(Heizung,WZ,heizen)'); document.getElementById('AdjTempHzWZ1').innerHTML='22.5';} ");
         var btnHzWZAbsenken = new CtrlButton();
-        btnHzWZAbsenken.create("MainHeizungWZ", "360px", "350px", "ctrlbutton",  "normal", "cyanBtn", "Absenken", "command","",  "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
+        btnHzWZAbsenken.create("MainHeizungWZ", "360px", "350px", "ctrlbutton",  "normal", "cyan", "Absenken", "command","",  "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
         var btnHzWZAus = new CtrlButton();
-        btnHzWZAus.create("MainHeizungWZ", "420px", "350px", "ctrlbutton",  "normal", "cyanBtn", "Aus", "command","",  "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
+        btnHzWZAus.create("MainHeizungWZ", "420px", "350px", "ctrlbutton",  "normal", "cyan", "Aus", "command","",  "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
         var btnHzWZAuf = new CtrlButton();
-        btnHzWZAuf.create("MainHeizungWZ", "480px", "350px", "ctrlbutton",  "normal", "cyanBtn", "Auf", "command","",  "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
+        btnHzWZAuf.create("MainHeizungWZ", "480px", "350px", "ctrlbutton",  "normal", "cyan", "Auf", "command","",  "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
         
 
    </script>
