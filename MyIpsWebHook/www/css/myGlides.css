@@ -3225,32 +3225,22 @@ Input:checked + .MoveSlider:after
 
 
 
-/* Button Slider-- */
-
-.slider {
+/* -------- Button Slider --------- */
+.Btnslider {
   width: 150px;
   height: 50px;
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
    scroll-snap-type: x mandatory;  
-
- scroll-behavior: smooth;
-
+   scroll-behavior: smooth;
 }
-
-.slide {
+.Btnslide {
   width: 150px;
-  flex-shrink: 50;
+  flex-shrink: 0;
   height: 100%;
 }
-
-.slider > div {
-  /* CURRENT way. */
+.Btnslider > div {
   scroll-snap-align: start;
-  
 }
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
+/* -------- End --------- */

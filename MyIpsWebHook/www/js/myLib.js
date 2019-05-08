@@ -2953,4 +2953,22 @@ class CtrlStatButton {
         }
     }	 
 	 
- 
+  /* --------------------- Klasse ButtonSlider -------------------------------------- */
+    class ButtonSlider { 
+        constructor() {
+            
+        }
+        create(ParentID, posTop, posLeft, TagArray){
+            var container = document.createElement("div");
+            container.style.position = "absolute";
+            container.style.left = posLeft;
+            container.style.top = posTop;   
+            container.className = "Btnslider";
+            TagArray.forEach ( function(item){
+                var elem = document.createElement("div");
+                elem.className = "Btnslide";
+                }
+            )
+        }
+    }
+    
