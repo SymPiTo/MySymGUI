@@ -3240,7 +3240,7 @@ Input:checked + .MoveSlider:after
 }
 
 .slide {
-  width: 150px;
+  width: 1050px;
   flex-shrink: 0;
   height: 100%;
 }
@@ -3251,6 +3251,6 @@ Input:checked + .MoveSlider:after
   
 }
 
-.slide::-webkit-scrollbar {
+.slider::-webkit-scrollbar {
     display: none;
 }
