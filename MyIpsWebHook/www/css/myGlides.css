@@ -3239,7 +3239,7 @@ Input:checked + .MoveSlider:after
   width: 150px;
   flex-shrink: 0;
   height: 100%;
-  vertical-align: middle;
+  padding-top: 50%;
 }
 .Btnslider > div {
   scroll-snap-align: start;
