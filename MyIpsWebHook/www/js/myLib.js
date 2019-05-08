@@ -2969,6 +2969,7 @@ class CtrlStatButton {
             TagArray.forEach ( function(item){
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
+                elem.innerHTML = item;
                 container.append(elem);
                 }
             )
