@@ -3238,9 +3238,7 @@ Input:checked + .MoveSlider:after
  
 
 }
-.slider::-webkit-scrollbar {
-    display: none;
-}
+
 .slide {
   width: 300px;
   flex-shrink: 0;
