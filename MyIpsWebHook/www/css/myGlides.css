@@ -3228,12 +3228,12 @@ Input:checked + .MoveSlider:after
 /* Button Slider-- */
 
 .slider {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 70px;
   display: flex;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   
-    -webkit-overflow-scrolling: touch;
 
   /* CURRENT way. */
   scroll-snap-type: x mandatory;  
