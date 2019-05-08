@@ -3251,6 +3251,6 @@ Input:checked + .MoveSlider:after
   
 }
 
-.slider::-webkit-scrollbar {
+.slide::-webkit-scrollbar {
     display: none;
 }
