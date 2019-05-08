@@ -3240,7 +3240,7 @@ Input:checked + .MoveSlider:after
 }
 
 .slide {
-  width: 300px;
+  width: 150px;
   flex-shrink: 0;
   height: 100%;
 }
