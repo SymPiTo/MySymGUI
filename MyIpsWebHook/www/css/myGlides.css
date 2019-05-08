@@ -3246,8 +3246,3 @@ Input:checked + .MoveSlider:after
   height: 100%;
 }
 
-
-.slides > div {
-  /* CURRENT way. */
-  scroll-snap-align: start;
-}
