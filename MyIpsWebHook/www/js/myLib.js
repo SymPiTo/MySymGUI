@@ -2940,6 +2940,7 @@ class CtrlStatButton {
             container.style.position = "absolute";
             container.style.left = posLeft;
             container.style.top = posTop;
+            
             var elem = document.createElement("label");
             elem.className = "MoveSwitch";
             container.append(elem);
@@ -2958,12 +2959,13 @@ class CtrlStatButton {
         constructor() {
             
         }
-        create(ParentID, posTop, posLeft, TagArray){
+        create(ParentID, posTop, posLeft, farbe, TagArray){
             var container = document.createElement("div");
             container.style.position = "absolute";
             container.style.left = posLeft;
             container.style.top = posTop;   
             container.className = "Btnslider";
+            container.classList.add(farbe);
             TagArray.forEach ( function(item){
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
