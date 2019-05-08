@@ -3231,12 +3231,15 @@ Input:checked + .MoveSlider:after
   width: 150px;
   height: 70px;
   display: flex;
- 
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   
 
  
 
+}
+.slider::-webkit-scrollbar {
+    display: none;
 }
 .slide {
   width: 300px;
