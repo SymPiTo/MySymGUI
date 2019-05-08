@@ -3248,5 +3248,9 @@ Input:checked + .MoveSlider:after
 .slider > div {
   /* CURRENT way. */
   scroll-snap-align: start;
-  scroll-behavior: smooth;
+  
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
