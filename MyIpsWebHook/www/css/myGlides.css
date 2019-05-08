@@ -3229,18 +3229,18 @@ Input:checked + .MoveSlider:after
 
 .slider {
   width: 150px;
-  height: 70px;
+  height: 50px;
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
    scroll-snap-type: x mandatory;  
-
+-webkit-transition: All 0.5s ease;
  scroll-behavior: smooth;
 
 }
 
 .slide {
-  width: 50px;
+  width: 150px;
   flex-shrink: 0;
   height: 100%;
 }
