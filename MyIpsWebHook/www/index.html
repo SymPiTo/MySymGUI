@@ -37,9 +37,7 @@
         <!--  ..............................................................  -->
         <script type='text/javascript'>
             var socket;
-            var client = 'CEOL';
-            var albumpic = 'CDs/0001.jpg';
-            var albumno = '0001';
+
             var symvar = []; 
 
                 function init() {
@@ -1826,99 +1824,30 @@
         
         
         <!-- ***********************************************************************************      -->
-	<!--  ************************ INDEX C - UPNP ************************ -->   
+	<!--  **************************** UPNP                     ****************************      -->   
         <!-- ***********************************************************************************      -->
-		  
-		<Main class="upnp">
-	 
-					<div class="reihe" >
-							<div class="status cyan" style="width: 150px  ">
-						 		<span class="fa fa-music" style="font-size:24px; color: #00FF00;  ">   
-								<span style="margin-left: 20px" id="ClientName8">Client</span> </span>	
-						 	</div>
-						 	<div class="status cyan" style="width: 150px">
-						 		<span class="fa fa-server" style="font-size:24px; color: #00FF00;  ">   
-								<span style="margin-left: 20px" id="ServerName8">Server</span> </span>	
-						 	</div>
-						 	<div class="status cyan" style="width: 150px">
-						 		<span class="fa fa-server" style="font-size:24px; color: #00FF00;  ">   
-								<span style="margin-left: 20px">Server</span> </span>	
-						 	</div>
-
-					</div>
-
- 
-				<div id="Bradioselector" style="border: thin solid #808080; position: relative; left: 100px; top:60px; ">
-					<label class="purple">
-						<input type="radio" name="toggle2" id="RadioSel21" onclick="send('command(upnp,setClient,CEOL)') ;"> 
-						<span>
-						<span class="reihe">
-							<img  src="images/DenonCeolAnlage.png" alt="no image found"  style="padding-left:4px; height:50px; width:70px">
-							Denon Ceol
-						</span>	
-						</span>					 
-					</label>
-					<label class="purple">
-						<input type="radio" name="toggle2" id="RadioSel22" onclick="send('command(upnp,setClient,MusicPal)') ;">
-						<span>
-						<span class="reihe">
-							<img  src="images/musikpal.png" alt="no image found"  style="padding-left: 4px; height:50px; width:70px">
-							Music Pal
-						</span>	
-						</span>				  
-					</label>
-					<label class="purple">
-						<input type="radio" name="toggle2" id="RadioSel23" onclick="send('command(upnp,setClient,[TV]UE40D8)') ;">
-						<span>
-						<span class="reihe">
-							<img  src="images/samsungtv.png" alt="no image found" style="padding-left: 4px; width:70px; height:50px">
-							TV
-						</span>	
-						</span>	
-					</label>
-					<label class="purple">
-						<input type="radio" name="toggle2" id="RadioSel24" onclick="send('command(upnp,setClient,SonosSZ)') ;">
-						<span>
-						<span class="reihe">
-							<img  src="images/SonosS.png" alt="no image found"  style="padding-left: 4px; height:50px; width:40px">
-							Sonos SZ
-						</span>	
-						</span>					</label>
-					<label class="purple">
-					  <input type="radio" name="toggle2" id="RadioSel25" onclick="send('command(upnp,setClient,SonosK)') ;"> 
-						<span>
-						<span class="reihe">
-							<img  src="images/SonosK.png" alt="no image found"  style="padding-left: 4px; height:50px; width:60px">
-							Sonos K
-						</span>	
-						</span>	 
-					</label>
-				</div>
- 	
- 
-	
-			<div id="Bradioselector" style="border: thin solid #808080; position: relative; left: 100px; top:60px; ">
-				<label class="purple">
-					<input type="radio" name="toggle3" id="RadioSel31" onclick="send('UPNP' + '*' + 'setServer' + '*' +'AVM')">  
-					<span>
-					<span class="reihe">
-						<img  src="images/FrizNas.png" alt="no image found" style="padding-left: 4px; height:50px; width:70px">
-						Fritz NAS
-					</span>	
-					</span>					 
-				</label>
-				<label class="purple">
-					<input type="radio" name="toggle3" id="RadioSel32" onclick="send('UPNP' + '*' + 'setServer' + '*' +'Plex')">
-					<span>
-					<span class="reihe">
-						<img  src="images/SynNas.png" alt="no image found" style="padding-left: 4px; height:50px; width:70px">
-						PLEX
-					</span>	
-					</span>				  
-				</label>
-			</div>
-		</Main>
-
+        <script> 
+            var mainwindowUpnp = new Area();
+            mainwindowUpnp.createMain("MainUpnp", "bgpurple");
+        </script> 
+        <div class="slider">
+  <div class="slide" id="slide-1"></div>
+  <div class="slide" id="slide-2"></div>
+  <div class="slide" id="slide-3"></div>
+  <div class="slide" id="slide-4"></div>
+  <div class="slide" id="slide-5"></div>
+</div>
+        
+        <!-- ***********************************************************************************   -->
+	<!--  ************************          CTRL - UPNP    ******************************      -->   
+        <!-- ***********************************************************************************   -->
+        <script> 
+            var CtrlwindowUpnp = new Area();
+            CtrlwindowUpnp.createCtrl("MainUpnpCtrl", "bgpurple");
+        </script> 
+        
+        
+        
  		
         <!-- *********************************************************************************** -->
 	<!--  ************************** INDEX B - UPNP CD Musik ******************************* -->   
