@@ -3230,7 +3230,8 @@ Input:checked + .MoveSlider:after
 .slider {
   width: 150px;
   height: 70px;
-
+  display: flex;
+ 
   -webkit-overflow-scrolling: touch;
   
 
