@@ -220,7 +220,7 @@
      
      
     function setup(sym){
-        ServerBtn.init(sym[120]);
+        ServerBtn.init(sym[129]);
         ClientBtn.init(sym[130]);
     }
 
