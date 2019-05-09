@@ -202,8 +202,8 @@
             sym[126] = ips[0].ID43949;  //WSS Client 2
             sym[127] = ips[0].ID15131;  //WSS Client 3
             sym[128] = ips[0].ID38435;  //WSS Client 4
-            sym[129] = JSON.parse(ips[0].ID26335);  //UPNP Server Array
-            sym[130] = JSON.parse(ips[0].ID59157);  //UPNP Client Array
+            sym[129] =   ips[0].ID26335 ;  //UPNP Server Array
+            sym[130] =  ips[0].ID59157 ;  //UPNP Client Array
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
