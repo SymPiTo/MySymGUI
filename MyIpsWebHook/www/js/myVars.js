@@ -222,6 +222,7 @@
     function setup(sym){
         ServerBtn.init(sym[129]);
         ClientBtn.init(sym[130]);
+        initialisierung = false;
     }
 
     function check(index) {
