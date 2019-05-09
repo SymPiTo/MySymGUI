@@ -2899,6 +2899,20 @@ h1:after {
 .greyBtn:active {
     background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
 }
+.purpleBtn {
+    background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 35%), hsl(300, 100%, 45%), hsl(300, 100%, 35%), hsl(300, 100%, 25%)); /* CHROME */
+  box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
+    inset hsla(0,0%,15%, .8) 0 -1px 5px 2px, /* soft SD */
+    inset hsla(0,0%,0%, .25) 0 -1px 0px 4px, /* bottom SD */
+    inset hsla(0,0%,100%,.7) 0  2px 1px 4px, /* top HL */
+    hsla(0,0%, 0%,.15) 0 -2px 3px 2px, /* outer SD */
+    hsla(0,0%,100%,.5) 0  2px 3px 2px; /* outer HL */ 
+    transition: color .2s;
+} 
+.purpleBtn:active {
+    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
+}
+
 .grey {
     background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
 }
@@ -3229,6 +3243,7 @@ Input:checked + .MoveSlider:after
 .Btnslider {
   width: 150px;
   height: 50px;
+  font-size: 24px;
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
