@@ -3249,8 +3249,11 @@ Input:checked + .MoveSlider:after
   -webkit-overflow-scrolling: touch;
    scroll-snap-type: x mandatory;  
    scroll-behavior: smooth;
-   -webkit-scrollbar: none;
+
 }
+.Btnslider::-webkit-scrollbar { 
+    display: none; 
+   }
 .Btnslide {
   width: 150px;
   flex-shrink: 0;
