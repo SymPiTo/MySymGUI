@@ -62,13 +62,14 @@
                                                                    };
 
                                 socket.onmessage = function(msg) { 
+                                                                        var jsontext = msg.data;
                                                                         if(initialisierung){
                                                                             ips = JSON.parse(jsontext); 
                                                                             symvar = ips[0];
                                                                             var sym = checkUsedVars(ips);
                                                                             setup(sym);
                                                                         } 
-                                                                        var jsontext = msg.data;
+
                                                                         if(jsontext.substring(0, 6) == "REPLY:"){
                                                                             
                                                                             var feedback = jsontext.substr(6,jsontext.length-6) ;
