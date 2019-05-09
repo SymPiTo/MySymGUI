@@ -1,4 +1,8 @@
-    function ShowHidePanel(no){
+function setup(sym){
+    ServerBtn.init(sym[125]);
+    ClientBtn.init(sym[125]);
+}
+function ShowHidePanel(no){
         switch(no){
             case '1on':
                 FontBtnCDA.on();

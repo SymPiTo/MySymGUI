@@ -2951,7 +2951,7 @@ h1:after {
 
 /* *********************  Background COLORS ********************************** */
 .bgPurple {
-    background: hsl(300, 100%, 75%);
+    background: hsl(300, 100%, 10%);
 } 
 .bgCyan {
     background: hsl(174, 100%, 10%);
@@ -3241,8 +3241,8 @@ Input:checked + .MoveSlider:after
 
 /* -------- Button Slider --------- */
 .Btnslider {
-  width: 150px;
-  height: 50px;
+  /*width: 150px;
+  height: 50px; */
   font-size: 24px;
   display: flex;
   overflow-x: auto;

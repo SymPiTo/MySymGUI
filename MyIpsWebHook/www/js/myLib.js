@@ -2956,25 +2956,33 @@ class CtrlStatButton {
 	 
   /* --------------------- Klasse ButtonSlider -------------------------------------- */
     class ButtonSlider { 
-        constructor() {
+        constructor(){
+            this.TagArray = [];
+            this.container = "";
             
         }
-        create(ParentID, posTop, posLeft, farbe, TagArray){
+        create(ParentID, posTop, posLeft, breite, hoehe, farbe){
             var container = document.createElement("div");
             container.style.position = "absolute";
             container.style.left = posLeft;
-            container.style.top = posTop;   
+            container.style.top = posTop; 
+            container.style.width = breite;
+            container.style.height = hoehe;
             container.className = "Btnslider";
             container.classList.add(farbe);
-            TagArray.forEach ( function(item){
+            this.container = container;
+            document.getElementById(ParentID).appendChild(container);
+        }
+        
+        init(NameArray){
+            this.TagArray = NameArray;
+            this.TagArray.forEach ( function(item){
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
-                
                 elem.innerHTML = item;
-                container.append(elem);
+                this.container.append(elem);
                 }
-            )
-            document.getElementById(ParentID).appendChild(container);
+            )   
         }
     }
     
