@@ -217,6 +217,13 @@
      
 
      }
+     
+     
+    function setup(sym){
+        ServerBtn.init(sym[120]);
+        ClientBtn.init(sym[130]);
+    }
+
     function check(index) {
           $('fehler').innerHTML =  "Variable  wrong ID:" + index;  
         
