@@ -205,7 +205,7 @@
             sym[128] = ips[0].ID38435;  //WSS Client 4
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
              
-            sym[129].forEach(function(item, i) { 
+            sym[129].forEach(function(item) { 
                 var ServerArray  = item ;
                 
                 }
@@ -213,7 +213,7 @@
             sym[131] = ServerArray;
             sym[130] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
              
-            sym[130].forEach(function(item, i) { 
+            sym[130].forEach(function(item) { 
                 var DeviceArray  = item ;
                  
                 }
