@@ -204,18 +204,18 @@
             sym[127] = ips[0].ID15131;  //WSS Client 3
             sym[128] = ips[0].ID38435;  //WSS Client 4
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
-            var i = 0;
-            sym[129].forEach(function(item) { 
-                var ServerArray[i] = item['FriendlyName'];
-                i = i + 1;
+             
+            sym[129].forEach(function(item, i) { 
+                var ServerArray[++i] = item['FriendlyName'];
+                
                 }
             )
             sym[131] = ServerArray;
             sym[130] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
-            var i = 0;
-            sym[130].forEach(function(item) { 
-                var DeviceArray[i] = item['FriendlyName'];
-                i = i + 1;
+             
+            sym[130].forEach(function(item, i) { 
+                var DeviceArray[++i] = item['FriendlyName'];
+                 
                 }
             )
             sym[132] = DeviceArray;
