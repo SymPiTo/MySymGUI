@@ -206,10 +206,10 @@
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
              
              
-            var Server = ""; 
+            var Server = []; 
             var task_names = sym[129].map(function (task, index, array) {
 
-                Server = task.name; 
+                Server = task.FriendlyName; 
 
             });
         }
