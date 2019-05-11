@@ -206,18 +206,12 @@
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
              
              
-            var ServerArray = '';
-            for (var arrayIndex in sym[129]) {
-              ServerArray += ' ' + sym[129][arrayIndex];
-            }
-            sym[131] = ServerArray;
-            sym[130] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
-             
-            var DeviceArray = '';
-            for (var arrayIndex in sym[130]) {
-              DeviceArray += ' ' + sym[130][arrayIndex];
-            }
-            sym[132] = DeviceArray;
+            var Server = ""; 
+            var task_names = tasks.map(function (task, index, sym[129]) {
+
+                Server = task.name; 
+
+            });
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
