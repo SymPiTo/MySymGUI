@@ -208,14 +208,16 @@
             sym[129].forEach(function(item) { 
                 ServerArray[i] = item['FriendlyName'];
                 i = i + 1;
-            }
+                }
+            )
             sym[131] = ServerArray;
             sym[130] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
             var i = 0;
             sym[130].forEach(function(item) { 
                 DeviceArray[i] = item['FriendlyName'];
                 i = i + 1;
-            }
+                }
+            )
             sym[132] = DeviceArray;
         }
         catch(err){
