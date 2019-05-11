@@ -207,7 +207,7 @@
              
              
             var Server = ""; 
-            var task_names = sym[129].map(function (task, index, array]) {
+            var task_names = sym[129].map(function (task, index, array) {
 
                 Server = task.name; 
 
