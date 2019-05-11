@@ -1860,10 +1860,14 @@
         <script> 
             var CtrlwindowUpnp = new Area();
             CtrlwindowUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
+ 
         </script> 
-        
-        
-        
+        <script> 
+            var btnSearchServer = new CtrlButton();
+            btnSearchServer.create("MainUpnpCtrl", "100px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(UPNP,search,server)')");
+            var btnSearchClient = new CtrlButton();
+            btnSearchClient.create("MainUpnpCtrl", "200px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(UPNP,search,device)')");
+        </script>
  		
         <!-- *********************************************************************************** -->
 	<!--  ************************** INDEX B - UPNP CD Musik ******************************* -->   
