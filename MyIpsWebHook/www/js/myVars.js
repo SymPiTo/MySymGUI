@@ -173,7 +173,8 @@
             sym[99] = ips[0].ID35025; //TVProgList  49099
             sym[100] = ips[0].ID54563; //Kochbuch Titel
             sym[101] = ips[0].ID18416; //Kochbuch Image
-            sym[102] = ips[0].ID29246; //Kochbuch Zutaten
+            sym[102] = JSON.parse(ips[0].ID29246); //Kochbuch Zutaten
+            
             sym[103] = ips[0].ID59260; //Kochbuch Rezept
             sym[104] = ips[0].ID16493;  //Kochbuch Liste
             sym[105] = ips[0].ID46852; //Denon Source
@@ -203,8 +204,19 @@
             sym[127] = ips[0].ID15131;  //WSS Client 3
             sym[128] = ips[0].ID38435;  //WSS Client 4
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
-            
+            var i = 0;
+            sym[129].forEach(function(item) { 
+                ServerArray[i] = item['FriendlyName'];
+                i = i + 1;
+            }
+            sym[131] = ServerArray;
             sym[130] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
+            var i = 0;
+            sym[130].forEach(function(item) { 
+                DeviceArray[i] = item['FriendlyName'];
+                i = i + 1;
+            }
+            sym[132] = DeviceArray;
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -543,6 +555,12 @@
    
    
     function updateValues(sym){
+        
+        
+        //<!-- ******************** UPNP   **************************  -->
+        ServerBox.update(sym[131]);
+        DeviceBox.update(sym[132]);
+        
         //<!-- ******************** Web Socket Server   **************************  -->
         DisWSSCL1.update(sym[125]);
         DisWSSCL2.update(sym[126]);
