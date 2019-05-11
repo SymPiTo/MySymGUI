@@ -208,13 +208,13 @@
             var task_names = sym[129].map(function (task, index, array) {
                 Server[index] = task.FriendlyName; 
             });
-            sym[130] = Server[index];
+            sym[130] = Server;
             sym[131] =  JSON.parse(ips[0].ID59157);  //UPNP Cöient Array
             var Client = []; 
             var task_names = sym[131].map(function (task, index, array) {
                 Client[index] = task.FriendlyName; 
             });
-            sym[132] = Client[index];
+            sym[132] = Client;
                     
         }
         catch(err){
