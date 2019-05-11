@@ -204,14 +204,18 @@
             sym[127] = ips[0].ID15131;  //WSS Client 3
             sym[128] = ips[0].ID38435;  //WSS Client 4
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
-             
-             
             var Server = []; 
             var task_names = sym[129].map(function (task, index, array) {
-
                 Server[index] = task.FriendlyName; 
-
             });
+            sym[130] = Server[index];
+            sym[131] =  JSON.parse(ips[0].ID59157);  //UPNP Cöient Array
+            var Client = []; 
+            var task_names = sym[131].map(function (task, index, array) {
+                Client[index] = task.FriendlyName; 
+            });
+            sym[132] = Client[index];
+                    
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -553,7 +557,7 @@
         
         
         //<!-- ******************** UPNP   **************************  -->
-        ServerBox.update(sym[131]);
+        ServerBox.update(sym[130]);
         DeviceBox.update(sym[132]);
         
         //<!-- ******************** Web Socket Server   **************************  -->
