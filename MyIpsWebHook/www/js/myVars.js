@@ -205,9 +205,9 @@
             sym[128] = ips[0].ID38435;  //WSS Client 4
             sym[129] =  JSON.parse(ips[0].ID26335);  //UPNP Server Array
              
-             
+            var Array = sym[129];
             var Server = ""; 
-            var task_names = tasks.map(function (task, index, sym[129]) {
+            var task_names = SArray.map(function (task, index, array]) {
 
                 Server = task.name; 
 
