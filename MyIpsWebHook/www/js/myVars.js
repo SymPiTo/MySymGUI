@@ -781,28 +781,7 @@
             FontBtnIRadioPowerWZ.update(sym[96]);
             IconVarDisVolWZ.update(sym[97],0);
             IconVarDisSourceWZ.update(sym[105],"state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
-            var src = sym[105];
-            if (src == '0'){
-                src = 'IRadio';
-                //CD Leiste ausblenden
-                FontBtnCDA.off();
-                FontBtnCDB.off();
-                FontBtnCDC.off();
-                FontBtnCDD.off();
-                FontBtnCDE.off();
-                rahmCD.off();
-            }
-            else if (src == '1'){
-                src = 'Media';
-                //CD Leiste einblenden
-                FontBtnCDA.on();
-                FontBtnCDB.on();
-                FontBtnCDC.on();
-                FontBtnCDD.on();
-                FontBtnCDE.on();
-                rahmCD.on();
-            }
-            else{}
+
       
 
             
