@@ -2295,7 +2295,7 @@ class CtrlStatButton {
             img.src = SourceUrl;
             img.style.width = sizeW;
             img.style.height = sizeH;
-            img.style.position = "relative";
+            img.style.position = "absolut";
             img.style.top = posTop;
             img.style.left = posLeft;
             this.ID = img; 
