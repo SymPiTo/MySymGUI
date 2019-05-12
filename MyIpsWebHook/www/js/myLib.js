@@ -2967,6 +2967,7 @@ class CtrlStatButton {
         }
         create(ParentID, posTop, posLeft, breite, hoehe, farbe){
             var container = document.createElement("div");
+            container.id = "btnSlideCont";
             container.style.position = "absolute";
             container.style.left = posLeft;
             container.style.top = posTop; 
