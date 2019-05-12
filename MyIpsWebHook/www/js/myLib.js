@@ -2996,13 +2996,13 @@ class CtrlStatButton {
             var content = document.createElement("div");
             this.TagArray = NameArray;
             this.TagArray.forEach ( function(item){
-                var elem = document.createElement("div");
+                var elem = document.createElement("span");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
                 content.append(elem);
                 }
             )  
-            //this.BtnID.parentNode.replaceChild(content, this.BtnID);
+             this.BtnID.parentNode.replaceChild(content, this.BtnID);
         }
     }
     
