@@ -2981,7 +2981,6 @@ class CtrlStatButton {
             elem1.innerHTML = "empty1";
             this.BtnID = elem1;
             container.append(elem1)
-
             document.getElementById(ParentID).appendChild(container);
         }
         
@@ -2989,7 +2988,7 @@ class CtrlStatButton {
             var content = document.createElement("div");
             content.className = "Btnslider";
             this.TagArray = NameArray;
-            this.TagArray.forEach ( function(item){
+            this.TagArray.forEach ( function(item, i){
                 var elem = document.createElement("span");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
