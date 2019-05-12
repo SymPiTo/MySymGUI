@@ -209,12 +209,13 @@
                 Server[index] = task.FriendlyName; 
             });
             sym[130] = Server;
-            sym[131] =  JSON.parse(ips[0].ID59157);  //UPNP Cöient Array
+            sym[131] =  JSON.parse(ips[0].ID59157);  //UPNP Client Array
             var Client = []; 
             var task_names = sym[131].map(function (task, index, array) {
                 Client[index] = task.FriendlyName; 
             });
             sym[132] = Client;
+            
             sym[133] = ips[0].ID31626;  //UPNP Server Icon
             sym[134] = ips[0].ID14390;  //UPNP Client Icon   
         }
