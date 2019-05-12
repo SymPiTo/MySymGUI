@@ -67,8 +67,8 @@
                                                                             ips = JSON.parse(jsontext); 
                                                                             symvar = ips[0];
                                                                             var sym = checkUsedVars(ips);
-                                                                            setup(sym);
-                                                                            initialisierung = false;
+                                                                            
+                                                                            initialisierung = setup(sym);
                                                                         } 
 
                                                                         if(jsontext.substring(0, 6) == "REPLY:"){

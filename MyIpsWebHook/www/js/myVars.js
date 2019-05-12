@@ -233,7 +233,7 @@
      
     function setup(sym){
         ServerBtn.init(sym[130]);
-         
+        return (initialisierung = false);
     }
 
     function check(index) {
