@@ -232,7 +232,7 @@
      
      
     function setup(sym){
-        ServerBtn.init(sym[130]);
+        ServerBtn.init(sym[130], "setServer");
         return (initialisierung = false);
     }
 

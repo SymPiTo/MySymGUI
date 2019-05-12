@@ -2984,7 +2984,7 @@ class CtrlStatButton {
             document.getElementById(ParentID).appendChild(container);
         }
         
-        init(NameArray){
+        init(NameArray, cmd){
             var content = document.createElement("div");
             content.className = "Btnslider";
             this.TagArray = NameArray;
@@ -2992,6 +2992,9 @@ class CtrlStatButton {
                 var elem = document.createElement("span");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
+                elem.onclick = function(){
+                    send('command(upnp,' + cmd + ','+ i + ')');
+                }
                 content.append(elem);
                 }
             )  
