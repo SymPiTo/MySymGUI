@@ -2322,7 +2322,7 @@ class CtrlStatButton {
             arrBox.style.color = txtColor;
             arrBox.style.width = breite;
             arrBox.style.height = hoehe;
-            arr.Box.style.paddingLeft = "10px";
+            arrBox.style.paddingLeft = "10px";
             arrBox.style.border = "1px solid white";
             this.ID = arrBox; 
             
