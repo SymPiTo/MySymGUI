@@ -2967,34 +2967,26 @@ class CtrlStatButton {
         }
         create(ParentID, posTop, posLeft, breite, hoehe, farbe){
             var container = document.createElement("div");
-            container.className = "Btnslider";
-            container.classList.add(farbe);
+            container.id = "btnSlideCont";
             container.style.position = "absolute";
             container.style.left = posLeft;
             container.style.top = posTop; 
             container.style.width = breite;
             container.style.height = hoehe;
+            container.className = "Btnslider";
+            container.classList.add(farbe);
             
-            var content = document.createElement("div");
-            content.className = "Btnslider";
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
             elem1.innerHTML = "empty1";
             this.BtnID = elem1;
-            content.append(elem1)
-            var elem2 = document.createElement("div");
-            elem2.className = "Btnslide";
-            elem2.innerHTML = "empty2";
-            content.append(elem2)
-            var elem3 = document.createElement("div");
-            elem3.className = "Btnslide";
-            elem3.innerHTML = "empty3";
-            content.append(elem3)
+ 
             document.getElementById(ParentID).appendChild(container);
         }
         
         init(NameArray){
             var content = document.createElement("div");
+            content.className = "Btnslider";
             this.TagArray = NameArray;
             this.TagArray.forEach ( function(item){
                 var elem = document.createElement("span");
@@ -3003,7 +2995,7 @@ class CtrlStatButton {
                 content.append(elem);
                 }
             )  
-            // this.BtnID.parentNode.replaceChild(content, this.BtnID);
+           this.BtnID.parentNode.replaceChild(content, this.BtnID);
         }
     }
     
