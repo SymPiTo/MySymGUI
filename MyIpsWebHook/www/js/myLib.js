@@ -2978,9 +2978,17 @@ class CtrlStatButton {
             
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
-            elem1.innerHTML = "empty";
+            elem1.innerHTML = "empty1";
             this.BtnID = elem1;
             container.append(elem1)
+            var elem2 = document.createElement("div");
+            elem2.className = "Btnslide";
+            elem2.innerHTML = "empty2";
+            container.append(elem2)
+            var elem3 = document.createElement("div");
+            elem3.className = "Btnslide";
+            elem3.innerHTML = "empty3";
+            container.append(elem3)
             document.getElementById(ParentID).appendChild(container);
         }
         
@@ -2994,7 +3002,7 @@ class CtrlStatButton {
                 content.append(elem);
                 }
             )  
-            this.BtnID.parentNode.replaceChild(content, this.BtnID);
+            //this.BtnID.parentNode.replaceChild(content, this.BtnID);
         }
     }
     
