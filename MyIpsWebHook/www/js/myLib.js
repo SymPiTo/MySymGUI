@@ -2976,8 +2976,7 @@ class CtrlStatButton {
             container.style.height = hoehe;
             
             var content = document.createElement("div");
-
-            
+            content.className = "Btnslider";
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
             elem1.innerHTML = "empty1";
