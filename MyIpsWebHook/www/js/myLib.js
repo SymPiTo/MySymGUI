@@ -2320,6 +2320,7 @@ class CtrlStatButton {
             arrBox.style.top = posTop;
             arrBox.style.left = posLeft;
             arrBox.style.color = txtColor;
+            arrBox.style.border = "1px solid white";
             this.ID = arrBox; 
             
             var elem1  = document.createElement("tr");  
