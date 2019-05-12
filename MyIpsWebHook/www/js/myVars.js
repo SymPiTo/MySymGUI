@@ -234,6 +234,7 @@
      
     function setup(sym){
         ServerBtn.init(sym[130], "setServer");
+        ClientBtn.init(sym[132], "setClient");
         return (initialisierung = false);
     }
 
