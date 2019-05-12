@@ -2967,7 +2967,8 @@ class CtrlStatButton {
         }
         create(ParentID, posTop, posLeft, breite, hoehe, farbe){
             var container = document.createElement("div");
-            container.id = "btnSlideCont";
+            container.className = "Btnslider";
+            container.classList.add(farbe);
             container.style.position = "absolute";
             container.style.left = posLeft;
             container.style.top = posTop; 
@@ -2975,8 +2976,7 @@ class CtrlStatButton {
             container.style.height = hoehe;
             
             var content = document.createElement("div");
-            content.className = "Btnslider";
-            content.classList.add(farbe);
+
             
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
