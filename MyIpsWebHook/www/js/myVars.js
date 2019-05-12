@@ -215,7 +215,8 @@
                 Client[index] = task.FriendlyName; 
             });
             sym[132] = Client;
-                    
+            sym[133] = ips[0].ID31626;  //UPNP Server Icon
+            sym[134] = ips[0].ID14390;  //UPNP Client Icon   
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -558,6 +559,8 @@
         //<!-- ******************** UPNP   **************************  -->
         ServerBox.update(sym[130]);
         DeviceBox.update(sym[132]);
+        ServerImg.update(sym[133]);
+        ClientImg.update(sym[134]);
         
         //<!-- ******************** Web Socket Server   **************************  -->
         DisWSSCL1.update(sym[125]);
