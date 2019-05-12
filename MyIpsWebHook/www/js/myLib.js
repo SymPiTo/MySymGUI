@@ -2962,7 +2962,7 @@ class CtrlStatButton {
     class ButtonSlider { 
         constructor(){
             this.TagArray = [];
-            this.ID = "";
+            this.BtnID = "";
             
         }
         create(ParentID, posTop, posLeft, breite, hoehe, farbe){
@@ -2975,7 +2975,7 @@ class CtrlStatButton {
             container.style.height = hoehe;
             container.className = "Btnslider";
             container.classList.add(farbe);
-            this.ID = container.id.value;
+            this.BtnID = container;
             document.getElementById(ParentID).appendChild(container);
         }
         
@@ -2985,7 +2985,8 @@ class CtrlStatButton {
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
-                document.getElementById(this.ID).appendChild(elem);
+                
+                this.BtnID.appendChild(elem);
                
                 }
             )   
