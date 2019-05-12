@@ -2979,7 +2979,7 @@ class CtrlStatButton {
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
             elem1.innerHTML = "empty";
-            this.BtnID = container;
+            this.BtnID = elem1;
             container.append(elem1)
             document.getElementById(ParentID).appendChild(container);
         }
