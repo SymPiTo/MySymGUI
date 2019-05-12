@@ -2985,7 +2985,7 @@ class CtrlStatButton {
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
-                document.getElementById(this.ID).appendChild(elem);
+                 this.ID.appendChild(elem);
                
                 }
             )   
