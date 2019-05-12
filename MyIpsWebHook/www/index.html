@@ -1848,11 +1848,11 @@
  
              
             var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "100px", "50px", "150px", "150px", "purpleBtn");
+            ServerBtn.create("MainUpnp", "100px", "50px", "150px", "50px", "purpleBtn");
 
              
             var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "100px", "350px", "150px", "150px", "purpleBtn");
+            ClientBtn.create("MainUpnp", "100px", "350px", "150px", "50px", "purpleBtn");
         </script>  
         
         <!-- ***********************************************************************************   -->
@@ -1869,7 +1869,7 @@
             var btnSearchServer = new CtrlButton();
             btnSearchServer.create("MainUpnpCtrl", "210px", "25px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(upnp,discover,server)')");
             var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpCtrl", "100px", "5px", "200px", "1900px",  "white" );
+            DeviceBox.create("MainUpnpCtrl", "100px", "5px", "200px", "190px",  "white" );
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpCtrl", "510px", "25px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(upnp,discover,client)')");
         </script>
