@@ -1864,13 +1864,13 @@
         </script> 
         <script> 
             var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpCtrl", "5px", "5px", "150px", "300px",  "white" );
+            ServerBox.create("MainUpnpCtrl", "5px", "5px", "300px", "200px",  "white" );
             var btnSearchServer = new CtrlButton();
-            btnSearchServer.create("MainUpnpCtrl", "300px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(upnp,discover,server)')");
+            btnSearchServer.create("MainUpnpCtrl", "220px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(upnp,discover,server)')");
             var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpCtrl", "150px", "5px", "100px", "300px",  "white" );
+            DeviceBox.create("MainUpnpCtrl", "150px", "5px", "30px", "200px",  "white" );
             var btnSearchClient = new CtrlButton();
-            btnSearchClient.create("MainUpnpCtrl", "600px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(upnp,discover,client)')");
+            btnSearchClient.create("MainUpnpCtrl", "750px", "5px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(upnp,discover,client)')");
         </script>
  		
         <!-- *********************************************************************************** -->
