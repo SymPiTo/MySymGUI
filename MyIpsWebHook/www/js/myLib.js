@@ -2976,6 +2976,9 @@ class CtrlStatButton {
             container.className = "Btnslider";
             container.classList.add(farbe);
             this.BtnID = container;
+            var elem1 = document.createElement("div");
+            elem1.className = "Btnslide";
+            elem1.innerHTML = "empty";
             document.getElementById(ParentID).appendChild(container);
         }
         
@@ -2986,7 +2989,7 @@ class CtrlStatButton {
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
                 
-                this.BtnID.appendChild(elem);
+                //this.BtnID.appendChild(elem);
                
                 }
             )   
