@@ -2984,14 +2984,13 @@ class CtrlStatButton {
         }
         
         init(NameArray){
+            var content = document.createElement("div");
             this.TagArray = NameArray;
             this.TagArray.forEach ( function(item){
                 var elem = document.createElement("div");
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
-                
-                this.BtnID.append(elem);
-               
+                content.append(elem);
                 }
             )   
         }
