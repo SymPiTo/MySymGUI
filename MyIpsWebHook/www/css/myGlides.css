@@ -2957,6 +2957,9 @@ h1:after {
 .bgCyan {
     background: hsl(174, 100%, 10%);
 }
+.bgCyanLight {
+    background: hsl(174, 100%, 50%);
+}
 .bgOlive {
     background: hsl(82, 100%, 10%);
 }
