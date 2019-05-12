@@ -232,9 +232,9 @@
      
      
     function setup(sym){
-        ServerBtn.init(sym[129]);
-        ClientBtn.init(sym[130]);
-        initialisierung = false;
+        ServerBtn.init(sym[130]);
+        ClientBtn.init(sym[132]);
+         
     }
 
     function check(index) {
@@ -557,8 +557,7 @@
         
         
         //<!-- ******************** UPNP   **************************  -->
-        ServerBox.update(sym[130]);
-        DeviceBox.update(sym[132]);
+ 
         
         //<!-- ******************** Web Socket Server   **************************  -->
         DisWSSCL1.update(sym[125]);
