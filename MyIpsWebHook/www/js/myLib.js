@@ -2990,7 +2990,7 @@ class CtrlStatButton {
                 elem.className = "Btnslide";
                 elem.innerHTML = item;
                 
-                //this.BtnID.appendChild(elem);
+                this.BtnID.append(elem);
                
                 }
             )   
