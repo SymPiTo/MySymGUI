@@ -3257,7 +3257,7 @@ Input:checked + .MoveSlider:after
 
 }
 .Btnslider::-webkit-scrollbar { 
-   
+   display: none; 
    }
 .Btnslide {
   width: 150px;
