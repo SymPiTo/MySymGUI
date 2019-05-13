@@ -3006,7 +3006,7 @@ class CtrlStatButton {
             var x = this.containerID.scrollWidth;
             var xscale = x / this.noArray;
             var xpos = value * xscale;
-            this.BtnID.scrollTop = xpos;
+            this.containerID.scrollTop = xpos;
         }
     }
     
