@@ -2963,7 +2963,8 @@ class CtrlStatButton {
         constructor(){
             this.TagArray = [];
             this.BtnID = "";
-            
+            this.containerID = "";
+            this.noArray = 0;
         }
         create(ParentID, posTop, posLeft, breite, hoehe, farbe){
             var container = document.createElement("div");
@@ -2975,7 +2976,7 @@ class CtrlStatButton {
             container.style.height = hoehe;
             container.className = "Btnslider";
             container.classList.add(farbe);
-            
+            this.containerID = container;
             var elem1 = document.createElement("div");
             elem1.className = "Btnslide";
             elem1.innerHTML = "empty1";
@@ -2988,6 +2989,7 @@ class CtrlStatButton {
             var content = document.createElement("div");
             content.className = "Btnslider";
             this.TagArray = NameArray;
+            this.noArray = this.TagArray.length;
             this.TagArray.forEach ( function(item, i){
                 var elem = document.createElement("span");
                 elem.className = "Btnslide";
@@ -2999,6 +3001,12 @@ class CtrlStatButton {
                 }
             )  
            this.BtnID.parentNode.replaceChild(content, this.BtnID);
+        }
+        update(value){
+            var x = this.containerID.scrollWidth;
+            var xscale = x / this.noArray;
+            var xpos = value * xscale;
+            this.containerID.scrollTop = xpos;
         }
     }
     

@@ -218,6 +218,7 @@
             
             sym[133] = ips[0].ID31626;  //UPNP Server Icon
             sym[134] = ips[0].ID14390;  //UPNP Client Icon   
+            sym[135] = ips[0].ID31981;  //UPNP Server key
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -563,6 +564,7 @@
         DeviceBox.update(sym[132]);
         ServerImg.update(sym[133]);
         ClientImg.update(sym[134]);
+        ServerBtn.update(sym[135]);
         
         //<!-- ******************** Web Socket Server   **************************  -->
         DisWSSCL1.update(sym[125]);
