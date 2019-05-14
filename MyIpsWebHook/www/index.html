@@ -1859,13 +1859,13 @@
             
             
             var rahm2 = new Rahmen();
-            rahm2.create("MainUpnp", "50vh", "5px", "100px", "552px", "bgPurpleLight");
+            rahm2.create("MainUpnp", "52vh", "5px", "95px", "552px", "bgPurpleLight");
             var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "53vh", "15px", "ctrlbutton", "normal", "purpleBtn", "Discover", "CtrlFunc", "MainUpnpCtrl", "1off");
+            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "normal", "purpleBtn", "Discover", "ctrlWindow", "MainUpnpDiscoverCtrl", "");
             var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp",  "53vh", "195px", "ctrlbutton",  "normal", "purpleBtn", "Browse", "CtrlFunc", "MainCDCtrl", "1on");
+            CtrlBtnupnp2.create("MainUpnp",  "54vh", "195px", "ctrlbutton",  "normal", "purpleBtn", "Browse", "ctrlWindow", "MainUpnpBrowseCtrl", "");
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp",  "53vh", "375px", "ctrlbutton",  "normal", "purpleBtn",  "AudioBook", "CtrlFunc", "MainAudioBookCtrl",  "1on");
+            CtrlBtnupnp3.create("MainUpnp",  "54vh", "375px", "ctrlbutton",  "normal", "purpleBtn",  "AudioBook", "ctrlWindow", "MainAudioBookCtrl",  "");
             
             
             var rahmCtrl = new Rahmen();   
@@ -1895,24 +1895,57 @@
         </script>  
         
         <!-- ***********************************************************************************   -->
-	<!--  ************************          CTRL - UPNP    ******************************      -->   
+	<!--  ************************       Discover   CTRL - UPNP    ******************************      -->   
         <!-- ***********************************************************************************   -->
         <script> 
-            var CtrlwindowUpnp = new Area();
-            CtrlwindowUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
+            var CtrlwindowDiscoverUpnp = new Area();
+            CtrlwindowDiscoverUpnp.createCtrl("MainUpnpDiscoverCtrl", "bgPurple");
  
         </script> 
         <script> 
             var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpCtrl", "5px", "5px", "200px", "190px",  "white" );
+            ServerBox.create("MainUpnpDiscoverCtrl", "5px", "5px", "200px", "190px",  "white" );
             var btnSearchServer = new CtrlButton();
-            btnSearchServer.create("MainUpnpCtrl", "210px", "20px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(upnp,discover,server)')");
+            btnSearchServer.create("MainUpnpDiscoverCtrl", "210px", "20px", "ctrlbutton",  "normal", "purpleBtn", "Get Server", "command","",  "send('command(upnp,discover,server)')");
             var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpCtrl", "100px", "5px", "200px", "190px",  "white" );
+            DeviceBox.create("MainUpnpDiscoverCtrl", "100px", "5px", "200px", "190px",  "white" );
             var btnSearchClient = new CtrlButton();
-            btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(upnp,discover,client)')");
+            btnSearchClient.create("MainUpnpDiscoverCtrl", "490px", "20px", "ctrlbutton",  "normal", "purpleBtn", "Get Devices", "command","",  "send('command(upnp,discover,client)')");
         </script>
  		
+        <!-- ***********************************************************************************   -->
+	<!--  ************************      Browse   CTRL - UPNP    ******************************      -->   
+        <!-- ***********************************************************************************   -->
+        <script> 
+            var CtrlwindowBrowseUpnp = new Area();
+            CtrlwindowBrowseUpnp.createCtrl("MainUpnpBrowseCtrl", "bgPurple");
+ 
+        </script> 
+        <script> 
+
+        </script>      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <!-- *********************************************************************************** -->
 	<!--  ************************** INDEX B - UPNP CD Musik ******************************* -->   
         <!-- *********************************************************************************** -->	
