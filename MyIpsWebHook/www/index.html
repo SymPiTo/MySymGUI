@@ -1858,12 +1858,8 @@
             
             
             
-            var rahmCD = new Rahmen();
-            
-            
-            
-            rahmCD.create("MainCeolWZ", "57vh", "5px", "85px", "552px", "bgCyanLight");
-            rahm1.create("MainCeolWZ", "71vh", "5px", "135px", "552px", "bgCyanLight");
+            var rahm2 = new Rahmen();
+            rahm2.create("MainCeolWZ", "71vh", "5px", "135px", "552px", "bgCyanLight");
             var CtrlBtnIRadioWZ = new CtrlButton();
             CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "normal", "cyanBtn", "IRadio", "CtrlFunc", "MainCeolWZCtrl", "1off");
             var CtrlBtnCDWZ = new CtrlButton();
@@ -1872,8 +1868,8 @@
             CtrlBtnAudioWZ.create("MainCeolWZ",  "73vh", "375px", "ctrlbutton",  "normal", "cyanBtn",  "AudioBook", "CtrlFunc", "MainAudioBookCtrl",  "1on");
             
             
-            var rahm1 = new Rahmen();   
-            rahm1.create("MainUpnp", "71vh", "5px", "135px", "552px", "bgCyanLight");
+            var rahmCtrl = new Rahmen();   
+            rahmCtrl.create("MainUpnp", "71vh", "5px", "135px", "552px", "bgCyanLight");
             
             var FontBtnPrev = new FontButtonNew();
             FontBtnPrev.create("MainUpnp", "fontbutton",  "cyanBtn", "mid", "73vh", "4%", "fa fa-backward", "send('command(DenonCeol,play,previous)')");
@@ -1888,7 +1884,7 @@
             
            
             var FontBtnVolDwn = new FontButtonNew();
-            FontBtnVolDwn.create("", "fontbutton",  "cyanBtn", "normal", "83vh", "5%", "fa fa-volume-down", "send('command(upnp,vol,dec)')");  
+            FontBtnVolDwn.create("MainUpnp", "fontbutton",  "cyanBtn", "normal", "83vh", "5%", "fa fa-volume-down", "send('command(upnp,vol,dec)')");  
             var FontBtnMute = new FontButtonNew();
             FontBtnMute.create("MainUpnp", "fontbutton",  "cyanBtn", "normal", "83vh", "25%", "fa fa-volume-off", "send('command(upnp,mute,toggle)')");
             var FontBtnVolUp = new FontButtonNew();
