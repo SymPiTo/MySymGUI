@@ -2955,6 +2955,9 @@ h1:after {
 .bgPurple {
     background: hsl(300, 100%, 10%);
 } 
+.bgPurpleLight {
+    background: hsl(300, 100%, 35%);
+} 
 .bgCyan {
     background: hsl(174, 100%, 10%);
 }
