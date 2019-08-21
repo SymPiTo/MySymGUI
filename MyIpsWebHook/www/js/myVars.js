@@ -459,9 +459,10 @@
         DisTempHzKZCtrl.update(sym[1]);
         DisPosHzKZCtrl.update(sym[5]);
         
+        //Batteriestatus Kinderzimmer
         var BatHzKZ1 = sym[30];
         if (BatHzKZ1){
-            document.getElementById("BatHzKWZ1").style.color  = 'red';
+            document.getElementById("BatHzKZ1").style.color  = 'red';
           
         }
         else {
