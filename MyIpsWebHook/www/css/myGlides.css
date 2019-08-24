@@ -1806,9 +1806,9 @@ width:40%;
 */
 .ctrlbutton{
 	border: thin #000000 solid;
-        border-radius: 5px;
-	height: 80px;
-	width: 202px;
+    border-radius: 5px;
+    height: 80px;
+    width: 202px;
 	color: white;
 	-webkit-transition: All 0.5s ease;
 	-moz-transition: All 0.5s ease;
@@ -2869,6 +2869,44 @@ h1:after {
 .sandy:active {
     background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
 }
+.purpleBtn:active {
+    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
+}
+.grey {
+    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
+}
+.grey:active {
+    background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
+}
+.midgreen {
+    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152, 70%, 35%), hsl(152,70%, 45%), hsl(152, 70%, 35%), hsl(152, 70%, 25%)); /* CHROME */ 
+}
+/*
+.midgreen:hover {
+    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%));  
+     
+} 
+*/
+.midgreen:active {
+    background: -webkit-linear-gradient(hsl(152, 70%, 5%), hsl(152,70%,25%),hsl(152, 70%, 5%)); /* CHROME */
+}
+
+.black {
+    background: black;
+}
+
+.purple{
+	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%), hsl(300, 100%, 25%));
+}
+.purple:active {
+	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(300, 100%, 5%));
+}
+.olive {
+	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
+} 
+.olive:active {
+	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
+}
 .cyanBtn {
     background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 35%), hsl(174, 100%, 45%), hsl(174, 100%, 35%), hsl(174, 100%, 25%)); /* CHROME */
   box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
@@ -2911,44 +2949,7 @@ h1:after {
     hsla(0,0%,100%,.5) 0  2px 3px 2px; /* outer HL */ 
     transition: color .2s;
 } 
-.purpleBtn:active {
-    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
-}
 
-.grey {
-    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
-}
-.grey:active {
-    background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
-}
-.midgreen {
-    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%, 45%), hsl(152, 70%, 25%)); /* CHROME */ 
-}
-/*
-.midgreen:hover {
-    background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152,70%,45%),hsl(152, 70%, 25%));  
-} 
-*/
-.midgreen:active {
-    background: -webkit-linear-gradient(hsl(152, 70%, 5%), hsl(152,70%,25%),hsl(152, 70%, 5%)); /* CHROME */
-}
-
-.black {
-    background: black;
-}
-
-.purple{
-	background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%), hsl(300, 100%, 25%));
-}
-.purple:active {
-	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(300, 100%, 5%));
-}
-.olive {
-	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
-} 
-.olive:active {
-	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
-}
 
 
 /* *********************  Background COLORS ********************************** */

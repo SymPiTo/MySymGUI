@@ -2463,8 +2463,10 @@ class CtrlStatButton {
             this.ID = "";
         }
 
-        create(ParentID, bgcolor, headline){
+        create(ParentID, posTop, bgcolor, headline){
             var elem1 = document.createElement("header");
+            elem1.style.position = "relative";
+            elem1.style.top = posTop;
             elem1.style.backgroundColor = bgcolor;
             var elem2 = document.createElement("h1");
             elem2.innerHTML = headline;
@@ -3012,42 +3014,45 @@ class CtrlStatButton {
     
 /* --------------------- class Icon Button ---------------------------------------- */
 class BtnIcon {
-    constructor(IName, label) {
+    constructor() {
         this.ID = "";
-        this.ImageName = IName;
-        this.label = label;
+        this.labelcolor = "lime";
     }
     
-    create(ParentID, posTop, posLeft){
+    create(ParentID, posTop, posLeft, color, IName, Iscale, label, fkt){
 
         var container = document.createElement("div");
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.className = color;
+        container.style.fontSize = "24px";
+        container.style.width = "200px";
+        container.style.height = "100px";
+        container.style.color = this.labelcolor;
+        
+        container.setAttribute("onclick", fkt);
 
         var elem1 = document.createElement("div");
-        this.label = label;
-        this.ID = elem1;
-        elem1.style.position = "absolute";
-        elem1.style.left = posLeft;
-        elem1.style.top = posTop;
-        elem1.style.width = "100px";
-        elem1.style.height = "50px";
-        elem1.innerHTML = this.label;
-        elem1.setAttribute("onclick", command);
+         
+        elem1.style.height = "25px";
+        elem1.style.backgroundColor = color;
+        elem1.innerHTML = label;
         container.append(elem1)
 
-        var elem = document.createElement("img");
-        this.ID = elem;
-        elem2.className = "icon";
-        elem2.classList.add(size);
-        elem2.src = "images/" + this.ImageName;
-        elem2.style.position = "absolute";
-        elem2.style.left = posLeft;
-        elem2.style.top = posTop;
+        var elem2 = document.createElement("div");
         container.append(elem2)
-       
+
+        var elem3 = document.createElement("img");
+        elem3.style.transform = "scale("+ Iscale + ")";
+        elem3.style.paddingBottom = "10px";
+        elem3.className = "icon";
+        elem3.src = "images/" + IName;
+        container.append(elem3)
 
         document.getElementById(ParentID).appendChild(container);			 
     }
 
-    update(value){
+    update(){
     }
 }
