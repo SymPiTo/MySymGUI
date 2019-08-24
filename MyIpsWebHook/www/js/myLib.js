@@ -3010,3 +3010,44 @@ class CtrlStatButton {
         }
     }
     
+/* --------------------- class Icon Button ---------------------------------------- */
+class BtnIcon {
+    constructor(IName, label) {
+        this.ID = "";
+        this.ImageName = IName;
+        this.label = label;
+    }
+    
+    create(ParentID, posTop, posLeft){
+
+        var container = document.createElement("div");
+
+        var elem1 = document.createElement("div");
+        this.label = label;
+        this.ID = elem1;
+        elem1.style.position = "absolute";
+        elem1.style.left = posLeft;
+        elem1.style.top = posTop;
+        elem1.style.width = "100px";
+        elem1.style.height = "50px";
+        elem1.innerHTML = this.label;
+        elem1.setAttribute("onclick", command);
+        container.append(elem1)
+
+        var elem = document.createElement("img");
+        this.ID = elem;
+        elem2.className = "icon";
+        elem2.classList.add(size);
+        elem2.src = "images/" + this.ImageName;
+        elem2.style.position = "absolute";
+        elem2.style.left = posLeft;
+        elem2.style.top = posTop;
+        container.append(elem2)
+       
+
+        document.getElementById(ParentID).appendChild(container);			 
+    }
+
+    update(value){
+    }
+}

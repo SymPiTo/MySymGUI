@@ -64,6 +64,7 @@
 
                                 socket.onmessage = function(msg) { 
                                                                         var jsontext = msg.data;
+                                                                        //beim Ersten AUfruf der Webseite  
                                                                         if(initialisierung){
                                                                             ips = JSON.parse(jsontext); 
                                                                             symvar = ips[0];
@@ -91,7 +92,7 @@
                                                                             updateIPSValue(ipsID, IPSValue);
                                                                         }
                                                                         else{
-                                                                            
+                                                                            //alle Variable updaten
                                                                             ips = JSON.parse(jsontext); 
                                                                             symvar = ips[0];
                                                                              //
@@ -457,14 +458,14 @@
             SubMenuRolloB.create("SubMenuRollo", "blue", "Rolladen Balkon", "_Rolladen_BW.png", "MainRolloK","", "SM" ); 
         </script> 
 
-		<!-- ************************Menu  Rolladen  ************************  -->
+		<!-- ************************Menu  Netzwerk  ************************  -->
 	<subMenu id="SubMenuNet" class="MenuNet"></subMenu>
                     
         <script>  
             var SubMenuWSS = new GlideButton();
-            SubMenuWSS.create("SubMenuNet", "midgreen", "WebSocket Server", "WSS.png", "MainWSS","", "SM" );  
+            SubMenuWSS.create("SubMenuNet", "midgreen", "IPS Server", "IP_Symcon.png", "MainIPS","", "SM" );  
             var SubMenuIPS = new GlideButton();
-            SubMenuIPS.create("SubMenuNet", "midgreen", "IPS Server", "WSS.png", "MainWSS","", "SM" );  
+            SubMenuIPS.create("SubMenuNet", "midgreen", "Websocket Server", "WSS.png", "MainWSS","", "SM" );  
 
         </script> 
      
@@ -1792,12 +1793,33 @@
             var FontBtnIRadioPower = new FontButtonNew();
             FontBtnIRadioPower.create("MainIRadio", "fontbutton",  "purple", "normal", "73vh", "85%", "fa fa-power-off", "send('command(DenonCeol,power,toggle)')");
         </script>     
-			
-        <!-- ***********************************************************************************   -->
-	<!--  ************************          Main - WebSocketServer    ************************      -->   
-        <!-- ***********************************************************************************   -->
-		 
-   
+
+    <!-- *************************************************************************************   -->
+	<!--  ************************         Main - IP Symcon Server    ************************   -->   
+    <!-- *************************************************************************************   -->
+    <script> 
+        var mainwindoIPS = new Area();
+        mainwindoIPS.createMain("MainIPS", "bgMidgreen");
+    </script>  
+    <script> 
+        var server1 = new BtnIcon("IP_Symcon.png", "IPS Server");
+        server1.create("MainIPS", "90px", "10px");
+    </script>
+    <!-- *************************************************************************************   -->
+	<!--  ************************         CTRL - IP Symcon Server    ************************   -->   
+    <!-- *************************************************************************************   -->
+    <script> 
+        var CtrlwindowIPS = new Area();
+        CtrlwindowIPS.createCtrl("MainIPSCtrl", "bgMidgreen");
+    </script> 
+    <script> 
+
+    </script>
+
+
+    <!-- *************************************************************************************   -->
+	<!--  ************************          Main - WebSocketServer    ************************   -->   
+    <!-- *************************************************************************************   -->
         <script> 
             var mainwindowWSS = new Area();
             mainwindowWSS.createMain("MainWSS", "bgMidgreen");
@@ -1821,9 +1843,9 @@
             DisWSSCL4.create("MainWSS", "", "", "410px", "380px", "size07", "18px", "WS Client 4", "String", "", "", "", ""); 
         </script>    	
 		
-        <!-- ***********************************************************************************   -->
-	<!--  ************************          CTRL - WebSocketServer    ************************      -->   
-        <!-- ***********************************************************************************   -->
+    <!-- *************************************************************************************   -->
+	<!--  ************************          CTRL - WebSocketServer    ************************   -->   
+    <!-- *************************************************************************************   -->
         <script> 
             var CtrlwindowWSS = new Area();
             CtrlwindowWSS.createCtrl("MainWSSCtrl", "bgMidgreen");
