@@ -232,6 +232,12 @@
             sym[145] = ips[0].ID30080;  //Port WSS
             sym[146] = ips[0].ID30080;  //Mem SD Free
 
+            sym[147] = ips[0].ID23367;  //Error Code
+            sym[148] = ips[0].ID56516;  //Operating Voltage
+            sym[149] = ips[0].ID20750;  //RSSI Device
+            sym[150] = ips[0].ID48787;  //RSSI Peer
+            sym[151] = ips[0].ID37634;  //unreach
+            
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -571,6 +577,13 @@
    
    
     function updateValues(sym){
+      //<!-- ******************** IPS Server   **************************  -->
+      DiIPSA1.update(sym[147]);      
+      DiIPSA2.update(sym[148]);  
+      DiIPSA3.update(sym[149]);  
+      DiIPSA4.update(sym[150]);  
+      DiIPSA5.update(sym[151]);
+
         //<!-- ******************** IPS Server   **************************  -->
        
         DiIPS1.update(sym[140]);      
