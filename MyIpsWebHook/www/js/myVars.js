@@ -237,7 +237,11 @@
             sym[149] = ips[0].ID20750;  //RSSI Device
             sym[150] = ips[0].ID48787;  //RSSI Peer
             sym[151] = ips[0].ID37634;  //unreach
-            
+
+            sym[152] = ips[0].ID22446;  //RSSI Device
+            sym[153] = ips[0].ID53621;  //RSSI Peer
+            sym[154] = ips[0].ID51909;  //unreach
+
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -577,7 +581,12 @@
    
    
     function updateValues(sym){
-      //<!-- ******************** IPS Server   **************************  -->
+      //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
+      DiIPSB1.update(sym[152]);      
+      DiIPSB2.update(sym[153]);  
+      DiIPSB3.update(sym[154])
+      
+      //<!-- ******************** IPS Presenz Diele   **************************  -->
       DiIPSA1.update(sym[147]);      
       DiIPSA2.update(sym[148]);  
       DiIPSA3.update(sym[149]);  

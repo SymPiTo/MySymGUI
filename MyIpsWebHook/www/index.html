@@ -1809,7 +1809,7 @@
         var server3 = new BtnIcon();
         server3.create("MainIPS", "20px", "420px", "midgreen", "Plex.png", "1.0", "Media Server", "", "150px", "100px");  
         var HM1 = new BtnIcon();
-        HM1.create("MainIPS", "140px", "20px", "midgreen", "_HMIP_STHO.png", "0.5, 1.0", "Temp/Humid", "", "100px", "100px", "14px");
+        HM1.create("MainIPS", "140px", "20px", "midgreen", "_HMIP_STHO.png", "0.5, 1.0", "Temp/Humid", "switchCtrlArea('HMIP2Ctrl')", "100px", "100px", "14px");
         var HM2 = new BtnIcon();
         HM2.create("MainIPS", "140px", "150px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "", "100px", "100px", "14px");
         var HM3 = new BtnIcon();
@@ -1879,6 +1879,28 @@
         DiIPSA4.create("MainHMIP1Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
         var DiIPSA5 = new StateDisplay();
         DiIPSA5.create("MainHMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+    </script> 
+    <!-- ***********************************************************************************************   -->
+	<!--  ************************       CTRL - HMIP_STHO Temp/Humidity         ************************   -->   
+    <!-- ***********************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP2 = new Area();
+        CtrlwindowHMIP2.createCtrl("HMIP2Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadB1 = new HeadLine();
+        HeadB1.create("HMIP2Ctrl", "0px", "transparent", "Temp/Feuchte");
+        var labelB1 = new label();
+        labelB1.create("HMIP2Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0671702")
+        var labelB2 = new label();
+        labelB2.create("HMIP2Ctrl", "80px", "30px", "18px", "white", "Location: Kinderzimmer")
+
+        var DiIPSB1 = new StateDisplay();
+        DiIPSB1.create("HMIP2Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSB2 = new StateDisplay();
+        DiIPSB2.create("HMIP2Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        var DiIPSB3 = new StateDisplay();
+        DiIPSB3.create("HMIP2Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
     </script> 
 
     <!-- *************************************************************************************   -->
