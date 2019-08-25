@@ -1803,7 +1803,20 @@
     </script>  
     <script> 
         var server1 = new BtnIcon();
-        server1.create("MainIPS", "20px", "20px", "midgreen", "IP_Symcon.png", "1.0", "IPS Server");
+        server1.create("MainIPS", "20px", "20px", "midgreen", "IP_Symcon.png", "1.0", "IPS Server", "switchCtrlArea('MainIPSCtrl')", "150px", "100px");
+        var server2 = new BtnIcon();
+        server2.create("MainIPS", "20px", "220px", "midgreen", "Homematic.png", "1.0", "HM Server", "", "150px", "100px");  
+        var server3 = new BtnIcon();
+        server3.create("MainIPS", "20px", "420px", "midgreen", "Plex.png", "1.0", "Media Server", "", "150px", "100px");  
+        var HM1 = new BtnIcon();
+        HM1.create("MainIPS", "220px", "20px", "midgreen", "HMIP_STHO.png", "0.5, 1.0", "Temp/Humid", "", "100px", "100px", "14px");
+        var HM2 = new BtnIcon();
+        HM2.create("MainIPS", "220px", "170px", "midgreen", "HMIP_SWD.png", "1.0, 1.0", "Water", "", "100px", "100px", "14px");
+        var HM3 = new BtnIcon();
+        HM3.create("MainIPS", "220px", "320px", "midgreen", "_HMIP-Präsenzmelder.png", "1.0, 1.0", "Präsenz", "switchCtrlArea('MainHMIP1Ctrl')", "100px", "100px", "14px");
+        var HM4 = new BtnIcon();
+        HM4.create("MainIPS", "220px", "470px", "midgreen", "_HMIP-Türkontakt Optisch.png", "0.5, 1.0", "TürKontakt", "", "100px", "100px", "14px");
+
     </script>
     <!-- *************************************************************************************   -->
 	<!--  ************************         CTRL - IP Symcon Server    ************************   -->   
@@ -1834,15 +1847,39 @@
         var DiIPS8 = new StateDisplay();
         DiIPS8.create("MainIPSCtrl", "", "", "530px", "30px", "normal", "18px", "IPS Version", "String", "", "", "", "");
         var DiIPS9 = new StateDisplay();
-        DiIPS9.create("MainIPSCtrl", "", "", "590px", "30px", "normal", "18px", "Kernel Status", "String", "", "", "", "");
+        DiIPS9.create("MainIPSCtrl", "", "", "590px", "30px", "normal", "18px", "Kernel Status", "String", "", "", "", "", "202px", "80px");
         var DiIPS10 = new StateDisplay();
-        DiIPS10.create("MainIPSCtrl", "", "", "650px", "30px", "normal", "18px", "Port 3777", "String", "", "", "", "");
+        DiIPS10.create("MainIPSCtrl", "", "", "670px", "30px", "normal", "18px", "Port 3777", "String", "", "", "", "");
         var Head3 = new HeadLine();
-        Head3.create("MainIPSCtrl", "600px", "transparent", "WSS-Server");
+        Head3.create("MainIPSCtrl", "630px", "transparent", "WSS-Server");
         var DiIPS11 = new StateDisplay();
-        DiIPS11.create("MainIPSCtrl", "", "", "760px", "30px", "normal", "18px", "Port 9000", "String", "", "", "", "");
+        DiIPS11.create("MainIPSCtrl", "", "", "790px", "30px", "normal", "18px", "Port 9000", "String", "", "", "", "");
     </script>
-
+    <!-- *************************************************************************************   -->
+	<!--  ************************       CTRL - HMIP1 Präsenzmelder   ************************   -->   
+    <!-- *************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP1 = new Area();
+        CtrlwindowHMIP1.createCtrl("MainHMIP1Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadA1 = new HeadLine();
+        HeadA1.create("MainHMIP1Ctrl", "0px", "transparent", "Präsenzmelder");
+        var labelA1 = new label();
+        labelA1.create("MainHMIP1Ctrl", "50px", "30px", "18px", "white", "Adr.: 000C18A98B9990")
+        var labelA2 = new label();
+        labelA2.create("MainHMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele")
+        var DiIPSA1 = new StateDisplay();
+        DiIPSA1.create("MainHMIP1Ctrl", "", "", "140px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
+        var DiIPSA2 = new StateDisplay();
+        DiIPSA2.create("MainHMIP1Ctrl", "", "", "210px", "30px", "normal", "18px", "Operating Voltage", "", "", "", "");
+        var DiIPSA3 = new StateDisplay();
+        DiIPSA3.create("MainHMIP1Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSA4 = new StateDisplay();
+        DiIPSA4.create("MainHMIP1Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        var DiIPSA5 = new StateDisplay();
+        DiIPSA5.create("MainHMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+    </script> 
 
     <!-- *************************************************************************************   -->
 	<!--  ************************          Main - WebSocketServer    ************************   -->   

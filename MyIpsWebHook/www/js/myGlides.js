@@ -1,4 +1,19 @@
  
+        function switchCtrlArea(ctrlArea){
+                // alle offenen Ctrl auf 0px verkleinern 
+                var Ctrl = document.getElementsByTagName("Ctrl");
+                var MCtrlWindow = Array.from(Ctrl);
+                MCtrlWindow.forEach(function(element){
+                        var a = element.className;
+                        document.getElementsByClassName(a)[0].style.width = "0px";   
+                });
+                document.getElementsByClassName(ctrlArea)[0].style.width = "26vw";
+        }
+
+
+  
+     
+
         function Home(){ 
                 closeallglides();
                 document.getElementsByClassName("Left")[0].style.width = "30vw" ;
@@ -11,7 +26,7 @@
             document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                 document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                 document.getElementsByClassName("Left")[0].style.width = "8vw";
-                 document.getElementsByClassName("floorplan")[0].style.width = "0px";
+                document.getElementsByClassName("floorplan")[0].style.width = "0px";
                 document.getElementsByClassName("MenuWZ")[0].style.width = "0px";
                 document.getElementsByClassName("MenuSZ")[0].style.width = "0px";
                 document.getElementsByClassName("MenuKZ")[0].style.width = "0px";	

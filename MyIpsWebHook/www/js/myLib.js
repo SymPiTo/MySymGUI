@@ -578,9 +578,12 @@ class StateDisplay {
         this.state2 = "";
         this.state3 = "";
         this.bgColor = "black";
+        //Optionale Parameter
+        this.h = "60px";
+        this.b = "202px";
     }
  
-    create(ParentID, color, einheit,  posTop, posLeft, size, SchriftGr, titel, zus0, zus1, zus2, zus3, command){
+    create(ParentID, color, einheit,  posTop, posLeft, size, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param){
         this.unit = einheit, 
         this.bgColor = color;
         if(color === ""){
@@ -593,12 +596,23 @@ class StateDisplay {
         var elem1 = document.createElement("div");
         elem1.className = "anzeige";  
         elem1.classList.add( this.bgColor, size);
+        if (param.length > 0){
+            this.b = param[0];
+            this.h = param[1];
+            elem1.style.width = this.b;
+            elem1.style.height = this.h;
+        }else {
+           
+        }
+        
+
         elem1.style.color = "lime";
         elem1.style.position = "absolute";
         elem1.style.left = posLeft;
         elem1.style.top = posTop;
         elem1.innerHTML = titel;
         elem1.setAttribute("onclick", command);
+
         var elem3 = document.createElement("div");
         
         elem3.innerHTML = "----" + this.unit;
@@ -3017,18 +3031,26 @@ class BtnIcon {
     constructor() {
         this.ID = "";
         this.labelcolor = "lime";
+        //optionale Parameter
+        this.b = "200px";
+        this.h = "100px";
+        this.zeichengr = "24px";
     }
     
-    create(ParentID, posTop, posLeft, color, IName, Iscale, label, fkt){
+    create(ParentID, posTop, posLeft, color, IName, Iscale, label, fkt, ...param){
+
+        this.b = param[0];
+        this.h = param[1];
+        this.zeichengr = param[2];
 
         var container = document.createElement("div");
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
         container.className = color;
-        container.style.fontSize = "24px";
-        container.style.width = "200px";
-        container.style.height = "100px";
+        container.style.fontSize = this.zeichengr;
+        container.style.width = this.b;
+        container.style.height = this.h;
         container.style.color = this.labelcolor;
         
         container.setAttribute("onclick", fkt);
