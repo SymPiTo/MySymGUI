@@ -219,6 +219,19 @@
             sym[133] = ips[0].ID31626;  //UPNP Server Icon
             sym[134] = ips[0].ID14390;  //UPNP Client Icon   
             sym[135] = ips[0].ID31981;  //UPNP Server key
+
+            sym[136] = ips[0].ID16161;  //CPU Frequemcy
+            sym[137] = ips[0].ID12220;  //CPU load 15min
+            sym[138] = ips[0].ID41245;  //CPU Temperature
+            sym[139] = ips[0].ID54826;  //CPU Voltage
+            sym[140] = ips[0].ID19292;  //IP
+            sym[141] = ips[0].ID59797;  //IPS Kernel STatus
+            sym[142] = ips[0].ID41816;  //IPS Version
+            sym[143] = ips[0].ID29733;  //Memory Free
+            sym[144] = ips[0].ID39889;  //Port Symcon
+            sym[145] = ips[0].ID30080;  //Port WSS
+            sym[146] = ips[0].ID30080;  //Mem SD Free
+
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -558,10 +571,23 @@
    
    
     function updateValues(sym){
+        //<!-- ******************** IPS Server   **************************  -->
+       
+        DiIPS1.update(sym[140]);      
+        DiIPS2.update(sym[136]);  
+        DiIPS3.update(sym[137]);  
+        DiIPS4.update(sym[138]);  
+        DiIPS5.update(sym[139]);  
+        DiIPS6.update(sym[143]);  
+        DiIPS7.update(sym[146]);  
+        DiIPS8.update(sym[142]);  
+        DiIPS9.update(sym[141]);  
+        DiIPS10.update(sym[144]);  
+        DiIPS11.update(sym[145]);  
+    
         
-        
-        //<!-- ******************** UPNP   **************************  -->
-        ServerBox.update(sym[130]);
+        //<!-- ******************** Kochbuch   **************************  -->
+        RezeptName.update(sym[100]);
         DeviceBox.update(sym[132]);
         ServerImg.update(sym[133]);
         ClientImg.update(sym[134]);
