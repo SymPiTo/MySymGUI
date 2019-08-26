@@ -2174,9 +2174,20 @@ class CtrlTile {
         this.id5 = "";
         this.cmd1 = "";
         this.cmd2 = "";
+        // optionale Parameter
+        this.state0 = "off";
+        this.state1 = "on";
+        this.leftStat = "links";
+        this.rightStat = "rechts";
     }
 
-    create(ParentID, posTop, posLeft, label, color, BaseIcon, cmd1, cmd2) {
+    create(ParentID, posTop, posLeft, label, color, BaseIcon, cmd1, cmd2, ...param) {
+        if (param.length>0){
+            this.state0 = param[0];
+            this.state1 = param[1];
+            this.leftStat = param[2];
+            this.rightStat = param[3];   
+        }
         this.color = color;
         this.icon = BaseIcon;
         var elem = document.createElement("div");
@@ -2185,11 +2196,12 @@ class CtrlTile {
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
-
-
-
-        elem.innerHTML = label;
+        elem.style.flexDirection =   "column";
         this.ID = elem;
+
+        var elemL = document.createElement("div");
+        elemL.innerHTML = label;
+        elem.append(elemL);
 
         var Bild = document.createElement("IMG");
         Bild.src = "images/" + this.icon + "0" + ".png";
@@ -2208,13 +2220,13 @@ class CtrlTile {
         elem.append(elemTC);
 
         var elemTL = document.createElement("span");
-        elemTL.innerHTML = "left";
+        elemTL.innerHTML = this.leftStat;
         elemTL.style.paddingLeft = "5px";
         this.id2 = elemTL;
         elemTC.append(elemTL);
 
         var elemTR = document.createElement("span");
-        elemTR.innerHTML = "right";
+        elemTR.innerHTML = this.rightStat;
         elemTR.style.paddingRight = "5px";
         this.id3 = elemTR;
         elemTC.append(elemTR);
@@ -2233,7 +2245,7 @@ class CtrlTile {
         var elem2 = document.createElement("div");
         elem2.className = "ctrlbutton";
         elem2.classList.add(this.size, this.color);
-        elem2.innerHTML = "off";
+        elem2.innerHTML = this.state0;
         this.id4 = elem2;
         this.cmd1 = cmd1;
         elem2.setAttribute("onclick", this.cmd1);
@@ -2244,7 +2256,7 @@ class CtrlTile {
         var elem4 = document.createElement("div");
         elem4.className = "ctrlbutton";
         elem4.classList.add(this.size, this.color);
-        elem4.innerHTML = "on";
+        elem4.innerHTML = this.state1;
         this.id5 = elem4;
 
         this.cmd2 = cmd2;

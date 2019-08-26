@@ -280,6 +280,8 @@
 
             sym[184] = ips[0].ID14236;  // unreach
 
+            sym[185] = ips[0].ID32177;  // Fenster Position Bad
+
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -619,6 +621,8 @@
    
    
     function updateValues(sym){
+      //<!-- ******************** Fenster Aktor Bad **************************  -->
+      WindowBad.update(sym[185], "", ""); 
 
       //<!-- ******************** HMIP Taster Bad **************************  -->
       DiIPSJ1.update(sym[184]);       

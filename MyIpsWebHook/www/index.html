@@ -1284,7 +1284,9 @@
 
 
     
-    
+    <!-- *************************************************************************************   -->
+	<!--  ************************         Main - Fenster Bad         ************************   -->   
+    <!-- *************************************************************************************   -->
  		<!-- ************************ Fenster Bad ************************ -->
 		<!-- <Main id="MainFBad"  class="FBad"></Main> -->
         <script> 
@@ -1292,18 +1294,20 @@
             windowFBad.createMain("MainFBad", "bgSandy");
         </script> 	
          <script>  
-       
+            var WindowBad = new CtrlTile();
+            WindowBad.create("MainFBad", "10px", "10px", "Bad Fenster", "sandy", "Fenster", "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf" ,"", "");
          </script>
-              <!-- ************************ Fenster Ctrl  Bad ************************ -->
+    <!-- *************************************************************************************   -->
+	<!--  ************************         Ctrl - Fenster Bad         ************************   -->   
+    <!-- *************************************************************************************   -->
              <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
-         <script> 
-            var CtrlwindowFBad = new Area();
-            CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgSandy");
-        </script> 
-         <script> 
- 
-     
-         </script>     
+    <script> 
+        var CtrlwindowFBad = new Area();
+        CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgSandy");
+    </script> 
+    <script> 
+
+    </script>     
     
     
     
@@ -2093,6 +2097,30 @@
    </script> 
 
     <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL -   Wandtaster 6fach  HMIP_WRC6         ***********************   -->   
+    <!--  ************************       Wohnzimmer                                  ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP8 = new Area();
+        CtrlwindowHMIP8.createCtrl("HMIP8Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadH1 = new HeadLine();
+        HeadH1.create("HMIP8Ctrl", "0px", "transparent", "Taster 6fach");
+        var labelH1 = new label();
+        labelH1.create("HMIP8Ctrl", "50px", "30px", "18px", "white", "Adr.: 000B58A9AB6315")
+        var labelH2 = new label();
+        labelH2.create("HMIP8Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer")
+
+        var DiIPSH1 = new StateDisplay();
+        DiIPSH1.create("HMIP8Ctrl", "", "", "150px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+        var DiIPSH2 = new StateDisplay();
+        DiIPSH2.create("HMIP8Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSH3 = new StateDisplay();
+        DiIPSH3.create("HMIP8Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+   </script> 
+
+    <!-- ****************************************************************************************************   -->
     <!--  ************************       CTRL - HM-LC-Sw4 Aktor 4fach                 ***********************   -->   
     <!--  ************************       Bad                                         ************************   -->  
     <!-- ****************************************************************************************************   -->
@@ -2114,7 +2142,7 @@
 
 
     <!-- ****************************************************************************************************   -->
-    <!--  ************************       CTRL - HM-PB-2 Wandtaste                     ***********************   -->   
+    <!--  ************************       CTRL - HM-PB-2 Wandtaster                     ***********************   -->   
     <!--  ************************       Bad                                         ************************   -->  
     <!-- ****************************************************************************************************   -->
     <script> 
@@ -2129,8 +2157,8 @@
         var labelJ2 = new label();
         labelJ2.create("HMIP10Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
 
-        var DiIPSI1 = new StateDisplay();
-        DiIPSI1.create("HMIP10Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+        var DiIPSJ1 = new StateDisplay();
+        DiIPSJ1.create("HMIP10Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
    </script> 
 
 
