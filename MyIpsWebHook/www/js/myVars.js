@@ -242,6 +242,25 @@
             sym[153] = ips[0].ID53621;  //RSSI Peer
             sym[154] = ips[0].ID51909;  //unreach
 
+            sym[155] = ips[0].ID20695;  //RSSI Device
+            sym[156] = ips[0].ID17718;  //RSSI Peer
+            sym[157] = ips[0].ID25178;  //unreach
+
+            sym[158] = ips[0].ID51834;  //Duty Cycle
+            sym[159] = ips[0].ID36971;  // Error Code
+            sym[160] = ips[0].ID29563;  // Error Falt Position
+            sym[161] = ips[0].ID14045;  // Op voltage
+            sym[162] = ips[0].ID23035;  //RSSI Device
+            sym[163] = ips[0].ID48609;  //RSSI Peer
+            sym[164] = ips[0].ID42463;  //unreach
+            
+            sym[165] = ips[0].ID18797;  //Duty Cycle
+            sym[166] = ips[0].ID10775;  // Error Code
+            sym[167] = ips[0].ID36083;  // Error Falt Position
+            sym[168] = ips[0].ID35613;  // Op voltage
+            sym[169] = ips[0].ID48610;  //RSSI Device
+            sym[170] = ips[0].ID49852;  //RSSI Peer
+            sym[171] = ips[0].ID31856;  //unreach
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -581,10 +600,35 @@
    
    
     function updateValues(sym){
+
+
+      //<!-- ******************** HMIP Wasser Sensor Bad   **************************  -->
+      DiIPSE1.update(sym[165]);      
+      DiIPSE2.update(sym[166]);  
+      DiIPSE3.update(sym[167]);
+      DiIPSE4.update(sym[168]);      
+      DiIPSE5.update(sym[169]);  
+      DiIPSE6.update(sym[170]);
+      DiIPSE7.update(sym[171]);
+
+      //<!-- ******************** HMIP Wasser Sensor Küche   **************************  -->
+      DiIPSD1.update(sym[158]);      
+      DiIPSD2.update(sym[159]);  
+      DiIPSD3.update(sym[160]);
+      DiIPSD4.update(sym[161]);      
+      DiIPSD5.update(sym[162]);  
+      DiIPSD6.update(sym[163]);
+      DiIPSD7.update(sym[164]);
+
+      //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
+      DiIPSC1.update(sym[155]);      
+      DiIPSC2.update(sym[156]);  
+      DiIPSC3.update(sym[157]);
+
       //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
       DiIPSB1.update(sym[152]);      
       DiIPSB2.update(sym[153]);  
-      DiIPSB3.update(sym[154])
+      DiIPSB3.update(sym[154]);
       
       //<!-- ******************** IPS Presenz Diele   **************************  -->
       DiIPSA1.update(sym[147]);      

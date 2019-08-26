@@ -1809,14 +1809,17 @@
         var server3 = new BtnIcon();
         server3.create("MainIPS", "20px", "420px", "midgreen", "Plex.png", "1.0", "Media Server", "", "150px", "100px");  
         var HM1 = new BtnIcon();
-        HM1.create("MainIPS", "140px", "20px", "midgreen", "_HMIP_STHO.png", "0.5, 1.0", "Temp/Humid", "switchCtrlArea('HMIP2Ctrl')", "100px", "100px", "14px");
+        HM1.create("MainIPS", "140px", "50px", "midgreen", "HM-WDS40.png", "0.5, 1.0", "Temp/Humid", "switchCtrlArea('HMIP2Ctrl')", "100px", "100px", "14px");
         var HM2 = new BtnIcon();
-        HM2.create("MainIPS", "140px", "150px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "", "100px", "100px", "14px");
+        HM2.create("MainIPS", "140px", "180px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "switchCtrlArea('HMIP4Ctrl')", "100px", "100px", "14px");
         var HM3 = new BtnIcon();
-        HM3.create("MainIPS", "140px", "280px", "midgreen", "_HMIP_Präsenzmelder.png", "1.0, 1.0", "Präsenz", "switchCtrlArea('MainHMIP1Ctrl')", "100px", "100px", "14px");
+        HM3.create("MainIPS", "140px", "310px", "midgreen", "_HMIP_Präsenzmelder.png", "1.0, 1.0", "Präsenz", "switchCtrlArea('MainHMIP1Ctrl')", "100px", "100px", "14px");
         var HM4 = new BtnIcon();
-        HM4.create("MainIPS", "140px", "410px", "midgreen", "_HMIP_Türkontakt Optisch.png", "0.5, 1.0", "TürKontakt", "", "100px", "100px", "14px");
-
+        HM4.create("MainIPS", "140px", "440px", "midgreen", "_HMIP_Türkontakt Optisch.png", "0.5, 1.0", "TürKontakt", "", "100px", "100px", "14px");
+        var HM5 = new BtnIcon();
+        HM5.create("MainIPS", "260px", "50px", "midgreen", "HM-WDS40.png", "0.5, 1.0", "Temp/Humid", "switchCtrlArea('HMIP3Ctrl')", "100px", "100px", "14px");
+        var HM6 = new BtnIcon();
+        HM6.create("MainIPS", "260px", "180px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "switchCtrlArea('HMIP5Ctrl')", "100px", "100px", "14px");
     </script>
     <!-- *************************************************************************************   -->
 	<!--  ************************         CTRL - IP Symcon Server    ************************   -->   
@@ -1881,7 +1884,8 @@
         DiIPSA5.create("MainHMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
     </script> 
     <!-- ***********************************************************************************************   -->
-	<!--  ************************       CTRL - HMIP_STHO Temp/Humidity         ************************   -->   
+    <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->     
+    <!--  ************************       Kinderzimmer                           ************************   -->  
     <!-- ***********************************************************************************************   -->
     <script> 
         var CtrlwindowHMIP2 = new Area();
@@ -1902,6 +1906,91 @@
         var DiIPSB3 = new StateDisplay();
         DiIPSB3.create("HMIP2Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
     </script> 
+    <!-- ***********************************************************************************************   -->
+    <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->   
+    <!--  ************************       Schlafzimmer                           ************************   -->  
+    <!-- ***********************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP3 = new Area();
+        CtrlwindowHMIP3.createCtrl("HMIP3Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadC1 = new HeadLine();
+        HeadC1.create("HMIP3Ctrl", "0px", "transparent", "Temp/Feuchte");
+        var labelC1 = new label();
+        labelC1.create("HMIP3Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0670758")
+        var labelC2 = new label();
+        labelC2.create("HMIP3Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer")
+
+        var DiIPSC1 = new StateDisplay();
+        DiIPSC1.create("HMIP3Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSC2 = new StateDisplay();
+        DiIPSC2.create("HMIP3Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        var DiIPSC3 = new StateDisplay();
+        DiIPSC3.create("HMIP3Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+    </script>
+    <!-- ***********************************************************************************************   -->
+    <!--  ************************       CTRL - HMIP-SWD  Wasser Sensor          ***********************   -->   
+    <!--  ************************       Küche                                  ************************   -->  
+    <!-- ***********************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP4 = new Area();
+        CtrlwindowHMIP4.createCtrl("HMIP4Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadD1 = new HeadLine();
+        HeadD1.create("HMIP4Ctrl", "0px", "transparent", "Wasser Sensor");
+        var labelD1 = new label();
+        labelD1.create("HMIP4Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A99273C0")
+        var labelD2 = new label();
+        labelD2.create("HMIP4Ctrl", "80px", "30px", "18px", "white", "Location: Küche")
+
+        var DiIPSD1 = new StateDisplay();
+        DiIPSD1.create("HMIP4Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "", "");
+        var DiIPSD2 = new StateDisplay();
+        DiIPSD2.create("HMIP4Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
+        var DiIPSD3 = new StateDisplay();
+        DiIPSD3.create("HMIP4Ctrl", "", "", "290px", "30px", "normal", "18px", "Non Flat Position", "String", "", "", "", "");
+        var DiIPSD4 = new StateDisplay();
+        DiIPSD4.create("HMIP4Ctrl", "", "", "360px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+        var DiIPSD5 = new StateDisplay();
+        DiIPSD5.create("HMIP4Ctrl", "", "", "430px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSD6 = new StateDisplay();
+        DiIPSD6.create("HMIP4Ctrl", "", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        var DiIPSD7 = new StateDisplay();
+        DiIPSD7.create("HMIP4Ctrl", "", "", "570px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+    </script>
+    <!-- ***********************************************************************************************   -->
+    <!--  ************************       CTRL - HMIP-SWD  Wasser Sensor          ***********************   -->   
+    <!--  ************************       Bad                                  ************************   -->  
+    <!-- ***********************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP5 = new Area();
+        CtrlwindowHMIP5.createCtrl("HMIP5Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadE1 = new HeadLine();
+        HeadE1.create("HMIP5Ctrl", "0px", "transparent", "Wasser Sensor");
+        var labelE1 = new label();
+        labelE1.create("HMIP5Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A992728B")
+        var labelE2 = new label();
+        labelE2.create("HMIP5Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+
+        var DiIPSE1 = new StateDisplay();
+        DiIPSE1.create("HMIP5Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "", "");
+        var DiIPSE2 = new StateDisplay();
+        DiIPSE2.create("HMIP5Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
+        var DiIPSE3 = new StateDisplay();
+        DiIPSE3.create("HMIP5Ctrl", "", "", "290px", "30px", "normal", "18px", "Non Flat Position", "String", "", "", "", "");
+        var DiIPSE4 = new StateDisplay();
+        DiIPSE4.create("HMIP5Ctrl", "", "", "360px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+        var DiIPSE5 = new StateDisplay();
+        DiIPSE5.create("HMIP5Ctrl", "", "", "430px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        var DiIPSE6 = new StateDisplay();
+        DiIPSE6.create("HMIP5Ctrl", "", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        var DiIPSE7 = new StateDisplay();
+        DiIPSE7.create("HMIP5Ctrl", "", "", "570px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+    </script>
 
     <!-- *************************************************************************************   -->
 	<!--  ************************          Main - WebSocketServer    ************************   -->   
