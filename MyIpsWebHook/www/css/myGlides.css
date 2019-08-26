@@ -520,7 +520,13 @@ WebKit inertia scrolling is being added here for any present/future devices that
     height: 95vh;
     background-color: hsl(82, 100%, 10%);
  }
-
+ .MenuBad{
+    position:relative;
+    top: 5vh;
+    width: 0px;
+    height: 95vh;
+    background-color: hsl(82, 100%, 10%);
+ }
 .MenuMultimedia{
     position:relative;
     top: 5vh;
@@ -528,7 +534,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     height: 95vh;
     background-color: hsl(82, 100%, 10%);
 }
-
+ 
 .MenuHz{
     position:relative;
     top: 5vh;
@@ -755,153 +761,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
   -o-transition: All 0.5s ease;
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
-}
-.GlideButton.cyan {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 45%),hsl(174, 100%, 25%)); /* CHROME
-	  background: linear-gradient(0deg, hsl(174, 100%, 25%) 5%, hsl(174, 100%, 45%) 70%)); /* Standard syntax (must be last) */
-}
-.GlideButton.olive {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%)); /* CHROME */
-}
-.GlideButton.sandy {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%), hsl(28, 100%, 25%)); /* CHROME */
-}
-.GlideButton.red {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%), hsl(0, 100%, 25%)); /* CHROME */
-}
-.GlideButton.yellow {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%), hsl(51, 100%, 25%)); /* CHROME */
-}
-.GlideButton.purple {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 45%), hsl(300, 100%, 25%)); /* CHROME */
-}
-/*
-.GlideButton.grey {
-	   
-	  background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%));  
-}
-*/
-.GlideButton.pink {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 65%), hsl(350, 100%, 85%), hsl(350, 100%, 65%)); /* CHROME */
-}
-.GlideButton.blue{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%), hsl(200, 100%, 25%)); /* CHROME */
-}
-.GlideButton.brown{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 25%), hsl(30, 56%, 45%), hsl(30, 56%, 25%)); /* CHROME */
-}
-.GlideButton.green{
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%), hsl(120, 56%, 25%)); /* CHROME */
-}
- 
+ }
 
-.GlideButton:hover {
-}	 
-
-.GlideButton.cyan:hover {
-	background: -webkit-linear-gradient(hsl(174, 100%, 15%), hsl(174, 100%, 25%));
-}
-.GlideButton.olive:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 15%), hsl(82, 100%, 25%)); /* CHROME */
-}
-.GlideButton.sandy:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 15%), hsl(28, 100%, 25%)); /* CHROME */
-}
-.GlideButton.red:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 15%), hsl(0, 100%, 25%)); /* CHROME */
-}
-.GlideButton.yellow:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 15%), hsl(51, 100%, 25%)); /* CHROME */
-}
-.GlideButton.purple:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 15%), hsl(300, 100%, 25%),hsl(300, 100%, 15%)); /* CHROME */
-}
-/*
-.GlideButton.grey:hover {
-	
-	  background: -webkit-linear-gradient(hsl(205, 10%, 15%), hsl(204, 10%, 25%)); 
-}
-*/
-.GlideButton.pink:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 75%), hsl(350, 100%, 85%)); /* CHROME */
-}
-.GlideButton.blue:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 15%), hsl(200, 100%, 25%)); /* CHROME */
-}
-.GlideButton.brown:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 15%), hsl(30, 56%, 25%)); /* CHROME */
-}
-.GlideButton.green:hover {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 15%), hsl(120, 56%, 25%)); /* CHROME */
-}
- 
-
-.GlideButton:active {
-	 
-}
-.GlideButton.cyan:active {
-	background: -webkit-linear-gradient(hsl(174, 100%, 5%), hsl(174, 100%, 15%));
-}
-
-.GlideButton.olive:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%)); /* CHROME */
-}
-.GlideButton.sandy:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 15%)); /* CHROME */
-}
-.GlideButton.red:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%)); /* CHROME */
-}
-.GlideButton.yellow:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); /* CHROME */
-}
-.GlideButton.purple:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%),hsl(300, 100%, 5%)); /* CHROME */
-}
-.GlideButton.grey:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(205, 10%, 25%), hsl(205, 10%, 35%)); /* CHROME */
-}
-.GlideButton.pink:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(350, 100%, 45%), hsl(350, 100%, 55%)); /* CHROME */
-}
-.GlideButton.blue:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%)); /* CHROME */
-}
-.GlideButton.brown:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(30, 56%, 5%), hsl(30, 56%, 15%)); /* CHROME */
-}
-.GlideButton.green:active {
-	  /*Gradient*/
-	  background: -webkit-linear-gradient(hsl(120, 56%, 5%), hsl(120, 56%, 15%)); /* CHROME */
-}
  
 
 
@@ -2850,6 +2711,32 @@ h1:after {
 /* **************************************************************** */
 /* *********************  COLORS ********************************** */
 /* **************************************************************** */
+.red {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(0, 100%, 25%), hsl(0, 100%, 45%), hsl(0, 100%, 25%)); /* CHROME */
+}
+.red:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(0, 100%, 5%), hsl(0, 100%, 15%)); /* CHROME */
+}
+
+.sandy {
+    background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%), hsl(28, 100%, 25%));
+}
+.sandy:active {
+    background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
+}
+
+.brown{
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(30, 56%, 25%), hsl(30, 56%, 45%), hsl(30, 56%, 25%)); /* CHROME */
+}
+.brown:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(30, 56%, 5%), hsl(30, 56%, 15%)); /* CHROME */
+}
+
+
 .yellow {
     background: -webkit-linear-gradient(hsl(51, 100%, 25%), hsl(51, 100%, 45%), hsl(51, 100%, 25%)); /* CHROME */
 }
@@ -2860,23 +2747,21 @@ h1:after {
     background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); /* CHROME */
 }
 
-.sandyLight {
-    background: -webkit-linear-gradient(hsl(28, 100%, 75%), hsl(28, 100%, 95%), hsl(28, 100%, 75%))
+.olive {
+	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
+} 
+.olive:active {
+	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
 }
-.sandy {
-    background: -webkit-linear-gradient(hsl(28, 100%, 25%), hsl(28, 100%, 45%), hsl(28, 100%, 25%));
+
+
+.green{
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%), hsl(120, 56%, 25%)); /* CHROME */
 }
-.sandy:active {
-    background: -webkit-linear-gradient(hsl(28, 100%, 5%), hsl(28, 100%, 25%), hsl(28, 100%, 5%));
-}
-.purpleBtn:active {
-    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
-}
-.grey {
-    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
-}
-.grey:active {
-    background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
+.green:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(120, 56%, 5%), hsl(120, 56%, 15%)); /* CHROME */
 }
 .midgreen {
     background: -webkit-linear-gradient(hsl(152, 70%, 25%), hsl(152, 70%, 35%), hsl(152,70%, 45%), hsl(152, 70%, 35%), hsl(152, 70%, 25%)); /* CHROME */ 
@@ -2891,8 +2776,39 @@ h1:after {
     background: -webkit-linear-gradient(hsl(152, 70%, 5%), hsl(152,70%,25%),hsl(152, 70%, 5%)); /* CHROME */
 }
 
-.black {
-    background: black;
+.cyan {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 45%), hsl(174, 100%, 25%)); /* CHROME
+    background: linear-gradient(0deg, hsl(174, 100%, 25%) 5%, hsl(174, 100%, 45%) 70%)); /* Standard syntax (must be last) */
+}
+.cyan:active {
+    background: -webkit-linear-gradient(hsl(174, 100%, 5%), hsl(174, 100%, 15%));
+  }
+
+
+  .blue{
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%), hsl(200, 100%, 25%)); /* CHROME */
+}
+.blue:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(200, 100%, 5%), hsl(200, 100%, 15%)); /* CHROME */
+}
+
+.grey {
+    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 55%), hsl(205, 10%, 75%), hsl(205, 10%, 35%), hsl(205, 10%, 45%)); /* CHROME */
+}
+.grey:active {
+    background: -webkit-linear-gradient(hsl(205, 10%, 5%), hsl(205, 10%, 25%), hsl(205, 10%, 5%));
+}
+
+.violet {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(270, 100%, 45%), hsl(270, 100%, 65%), hsl(270, 100%, 75%), hsl(270, 100%, 65%), hsl(270, 100%, 45%)); /* CHROME */
+}
+.violet:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(270, 100%, 25%), hsl(270, 100%, 45%), hsl(270, 100%,25%)); /* CHROME */
 }
 
 .purple{
@@ -2901,12 +2817,40 @@ h1:after {
 .purple:active {
 	background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(300, 100%, 5%));
 }
-.olive {
-	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
-} 
-.olive:active {
-	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
+
+
+.pink {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(350, 100%, 65%), hsl(350, 100%, 85%), hsl(350, 100%, 65%)); /* CHROME */
 }
+
+.pink:active {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(350, 100%, 45%), hsl(350, 100%, 55%)); /* CHROME */
+}
+
+
+
+
+
+
+
+.sandyLight {
+    background: -webkit-linear-gradient(hsl(28, 100%, 75%), hsl(28, 100%, 95%), hsl(28, 100%, 75%))
+}
+
+.purpleBtn:active {
+    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
+}
+
+
+
+.black {
+    background: black;
+}
+
+
+
 .cyanBtn {
     background: -webkit-linear-gradient(hsl(174, 100%, 25%), hsl(174, 100%, 35%), hsl(174, 100%, 45%), hsl(174, 100%, 35%), hsl(174, 100%, 25%)); /* CHROME */
   box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 2px, /* border */
@@ -2949,6 +2893,40 @@ h1:after {
     hsla(0,0%,100%,.5) 0  2px 3px 2px; /* outer HL */ 
     transition: color .2s;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
 
 
 

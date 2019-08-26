@@ -294,6 +294,8 @@
             LeftMenuK.create("MainMenu", "midgreen", "Kueche", "_Kueche_BW_web.png", "MenuK","","MM" ); 
             var LeftMenuB = new GlideButton();
             LeftMenuB.create("MainMenu", "blue", "Balkon", "_Balkon_BW_web.png", "MenuB","","MM" ); 
+            var LeftMenuBad = new GlideButton();
+            LeftMenuBad.create("MainMenu", "violet", "Bad", "_Bad.png", "MenuBad","","MM" ); 
             var LeftMenuMM = new GlideButton();
             LeftMenuMM.create("MainMenu", "purple", "Multimedia", "_Multimedia_BW_web.png", "MenuMultimedia" ,"","MM"); 
             var LeftMenuHz = new GlideButton();
@@ -404,6 +406,14 @@
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", "_Rolladen_BW_web.png", "MainRolloB","", "SM" ); 
         </script> 
         
+	<!-- ************************ Menu Bad  ************************  -->
+	<subMenu id="SubMenuBad" class="MenuBad"></subMenu>
+  		
+        <script>   
+            var SubMenuFBad = new GlideButton();
+            SubMenuFBad.create("SubMenuBad", "purple", "Fenster Bad", "Fenster.png", "MainFBad","", "SM" ); 
+        </script>
+
 	<!-- ************************ Multimedia  ************************  -->
 	<subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>	
          <script>   
@@ -1275,7 +1285,25 @@
 
     
     
-    
+ 		<!-- ************************ Fenster Bad ************************ -->
+		<!-- <Main id="MainFBad"  class="FBad"></Main> -->
+        <script> 
+            var windowFBad = new Area();
+            windowFBad.createMain("MainFBad", "bgSandy");
+        </script> 	
+         <script>  
+       
+         </script>
+              <!-- ************************ Fenster Ctrl  Bad ************************ -->
+             <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+         <script> 
+            var CtrlwindowFBad = new Area();
+            CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgSandy");
+        </script> 
+         <script> 
+ 
+     
+         </script>     
     
     
     
@@ -1359,6 +1387,14 @@
     </script> 
     
     
+
+
+
+
+
+
+
+
         <!-- ***********************************************************************************      -->
 	<!--  ************************          INDEX S - Security    ************************      -->   
         <!-- ***********************************************************************************      -->
@@ -1797,6 +1833,9 @@
     <!-- *************************************************************************************   -->
 	<!--  ************************         Main - IP Symcon Server    ************************   -->   
     <!-- *************************************************************************************   -->
+    //TODO: FS20 Geräte ergänzen.
+    //TODO: Homematic Geräte vervollständigen.
+
     <script> 
         var mainwindoIPS = new Area();
         mainwindoIPS.createMain("MainIPS", "bgMidgreen");
@@ -1813,13 +1852,23 @@
         var HM2 = new BtnIcon();
         HM2.create("MainIPS", "140px", "180px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "switchCtrlArea('HMIP4Ctrl')", "100px", "100px", "14px");
         var HM3 = new BtnIcon();
-        HM3.create("MainIPS", "140px", "310px", "midgreen", "_HMIP_Präsenzmelder.png", "1.0, 1.0", "Präsenz", "switchCtrlArea('MainHMIP1Ctrl')", "100px", "100px", "14px");
+        HM3.create("MainIPS", "140px", "310px", "midgreen", "_HMIP_Präsenzmelder.png", "1.0, 1.0", "Präsenz", "switchCtrlArea('HMIP1Ctrl')", "100px", "100px", "14px");
         var HM4 = new BtnIcon();
-        HM4.create("MainIPS", "140px", "440px", "midgreen", "_HMIP_Türkontakt Optisch.png", "0.5, 1.0", "TürKontakt", "", "100px", "100px", "14px");
+        HM4.create("MainIPS", "140px", "440px", "midgreen", "_HMIP_Türkontakt Optisch.png", "0.5, 1.0", "TürKontakt", "switchCtrlArea('HMIP6Ctrl')", "100px", "100px", "14px");
         var HM5 = new BtnIcon();
         HM5.create("MainIPS", "260px", "50px", "midgreen", "HM-WDS40.png", "0.5, 1.0", "Temp/Humid", "switchCtrlArea('HMIP3Ctrl')", "100px", "100px", "14px");
         var HM6 = new BtnIcon();
         HM6.create("MainIPS", "260px", "180px", "midgreen", "_HMIP_SWD.png", "1.0, 1.0", "Water", "switchCtrlArea('HMIP5Ctrl')", "100px", "100px", "14px");
+        var HM7 = new BtnIcon();
+        HM7.create("MainIPS", "260px", "310px", "midgreen", "_HMIP_BSM.png", "1.0, 1.0", "Schalter/Mess", "switchCtrlArea('HMIP7Ctrl')", "100px", "100px", "14px");
+        var HM8 = new BtnIcon();
+        HM8.create("MainIPS", "260px", "440px", "midgreen", "_HMIP_WRC6.png", "1.0, 1.0", "Schalter 6fach", "switchCtrlArea('HMIP8Ctrl')", "100px", "100px", "14px");
+        var HM9 = new BtnIcon();
+        HM9.create("MainIPS", "380px", "50px", "midgreen", "_HM-LC-Sw4.png", "1.0, 1.0", "Aktor 4fach", "switchCtrlArea('HMIP9Ctrl')", "100px", "100px", "14px");
+        var HM10 = new BtnIcon();
+        HM10.create("MainIPS", "380px", "180px", "midgreen", "_HMIP-PB2.jpg", "1.0, 1.0", "Wandtaster", "switchCtrlArea('HMIP10Ctrl')", "100px", "100px", "14px");
+
+
     </script>
     <!-- *************************************************************************************   -->
 	<!--  ************************         CTRL - IP Symcon Server    ************************   -->   
@@ -1863,25 +1912,25 @@
     <!-- *************************************************************************************   -->
     <script> 
         var CtrlwindowHMIP1 = new Area();
-        CtrlwindowHMIP1.createCtrl("MainHMIP1Ctrl", "bgOlive");
+        CtrlwindowHMIP1.createCtrl("HMIP1Ctrl", "bgOlive");
     </script> 
     <script> 
         var HeadA1 = new HeadLine();
-        HeadA1.create("MainHMIP1Ctrl", "0px", "transparent", "Präsenzmelder");
+        HeadA1.create("HMIP1Ctrl", "0px", "transparent", "Präsenzmelder");
         var labelA1 = new label();
-        labelA1.create("MainHMIP1Ctrl", "50px", "30px", "18px", "white", "Adr.: 000C18A98B9990")
+        labelA1.create("HMIP1Ctrl", "50px", "30px", "18px", "white", "Adr.: 000C18A98B9990")
         var labelA2 = new label();
-        labelA2.create("MainHMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele")
+        labelA2.create("HMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele")
         var DiIPSA1 = new StateDisplay();
-        DiIPSA1.create("MainHMIP1Ctrl", "", "", "140px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
+        DiIPSA1.create("HMIP1Ctrl", "", "", "140px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
         var DiIPSA2 = new StateDisplay();
-        DiIPSA2.create("MainHMIP1Ctrl", "", "", "210px", "30px", "normal", "18px", "Operating Voltage", "String", "", "", "");
+        DiIPSA2.create("HMIP1Ctrl", "", "", "210px", "30px", "normal", "18px", "Operating Voltage", "String", "", "", "");
         var DiIPSA3 = new StateDisplay();
-        DiIPSA3.create("MainHMIP1Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
+        DiIPSA3.create("HMIP1Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
         var DiIPSA4 = new StateDisplay();
-        DiIPSA4.create("MainHMIP1Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
+        DiIPSA4.create("HMIP1Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "", "");
         var DiIPSA5 = new StateDisplay();
-        DiIPSA5.create("MainHMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+        DiIPSA5.create("HMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
     </script> 
     <!-- ***********************************************************************************************   -->
     <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->     
@@ -1991,6 +2040,113 @@
         var DiIPSE7 = new StateDisplay();
         DiIPSE7.create("HMIP5Ctrl", "", "", "570px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
     </script>
+    <!-- ***********************************************************************************************   -->
+    <!--  ************************       CTRL - HMIP-Sec-SCo  Tür Kontakt        ***********************   -->   
+    <!--  ************************       Haustür                                ************************   -->  
+    <!-- ***********************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP6 = new Area();
+        CtrlwindowHMIP6.createCtrl("HMIP6Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadF1 = new HeadLine();
+        HeadF1.create("HMIP6Ctrl", "0px", "transparent", "Tür Kontakt");
+        var labelF1 = new label();
+        labelF1.create("HMIP6Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1193907")
+        var labelF2 = new label();
+        labelF2.create("HMIP6Ctrl", "80px", "30px", "18px", "white", "Location: Haustür")
+
+        var DiIPSF1 = new StateDisplay();
+        DiIPSF1.create("HMIP6Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+        var DiIPSF2 = new StateDisplay();
+        DiIPSF2.create("HMIP6Ctrl", "", "", "220px", "30px", "normal", "18px", "Error", "String", "", "", "", "");
+    </script> 
+
+    <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL - HMIP-BSM  Schalter / Mess Aktor       ***********************   -->   
+    <!--  ************************       Schlafzimmer                                ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP7 = new Area();
+        CtrlwindowHMIP7.createCtrl("HMIP7Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadG1 = new HeadLine();
+        HeadG1.create("HMIP7Ctrl", "0px", "transparent", "Schalter/Mess");
+        var labelG1 = new label();
+        labelG1.create("HMIP7Ctrl", "50px", "30px", "18px", "white", "Adr.: 000858A9ABE28A")
+        var labelG2 = new label();
+        labelG2.create("HMIP7Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer")
+
+        var DiIPSG1 = new StateDisplay();
+        DiIPSG1.create("HMIP7Ctrl", "", "", "150px", "30px", "normal", "18px", "act. Temp", "String", "", "", "", "");
+        var DiIPSG2 = new StateDisplay();
+        DiIPSG2.create("HMIP7Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
+        var DiIPSG3 = new StateDisplay();
+        DiIPSG3.create("HMIP7Ctrl", "", "", "290px", "30px", "normal", "18px", "Overheat", "String", "", "", "", "");
+        var DiIPSG4 = new StateDisplay();
+        DiIPSG4.create("HMIP7Ctrl", "", "", "360px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");   
+        var DiIPSG5 = new StateDisplay();
+        DiIPSG5.create("HMIP7Ctrl", "", "", "430px", "30px", "normal", "18px", "Rssi Peer", "String", "", "", "", "");
+        var DiIPSG6 = new StateDisplay();
+        DiIPSG6.create("HMIP7Ctrl", "", "", "500px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");   
+   </script> 
+
+    <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL - HM-LC-Sw4 Aktor 4fach                 ***********************   -->   
+    <!--  ************************       Bad                                         ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP9 = new Area();
+        CtrlwindowHMIP9.createCtrl("HMIP9Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadI1 = new HeadLine();
+        HeadI1.create("HMIP9Ctrl", "0px", "transparent", "Schalter 6fach");
+        var labelI1 = new label();
+        labelI1.create("HMIP9Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1048227")
+        var labelI2 = new label();
+        labelI2.create("HMIP9Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+
+        var DiIPSI1 = new StateDisplay();
+        DiIPSI1.create("HMIP9Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+   </script> 
+
+
+    <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL - HM-PB-2 Wandtaste                     ***********************   -->   
+    <!--  ************************       Bad                                         ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP10 = new Area();
+        CtrlwindowHMIP10.createCtrl("HMIP10Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadJ1 = new HeadLine();
+        HeadJ1.create("HMIP10Ctrl", "0px", "transparent", "Wand Taster");
+        var labelJ1 = new label();
+        labelJ1.create("HMIP10Ctrl", "50px", "30px", "18px", "white", "Adr.: PEQ0192538")
+        var labelJ2 = new label();
+        labelJ2.create("HMIP10Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+
+        var DiIPSI1 = new StateDisplay();
+        DiIPSI1.create("HMIP10Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+   </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- *************************************************************************************   -->
 	<!--  ************************          Main - WebSocketServer    ************************   -->   
@@ -2017,7 +2173,29 @@
             var DisWSSCL4 = new StateDisplay();
             DisWSSCL4.create("MainWSS", "", "", "410px", "380px", "size07", "18px", "WS Client 4", "String", "", "", "", ""); 
         </script>    	
-		
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- *************************************************************************************   -->
 	<!--  ************************          CTRL - WebSocketServer    ************************   -->   
     <!-- *************************************************************************************   -->

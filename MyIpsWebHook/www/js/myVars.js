@@ -261,6 +261,25 @@
             sym[169] = ips[0].ID48610;  //RSSI Device
             sym[170] = ips[0].ID49852;  //RSSI Peer
             sym[171] = ips[0].ID31856;  //unreach
+
+            sym[172] = ips[0].ID10422;  // unreach
+            sym[173] = ips[0].ID27255;  // Error
+
+            sym[174] = ips[0].ID53298;  // act Temperature
+            sym[175] = ips[0].ID46213;  // Error Code
+            sym[176] = ips[0].ID53923;  // Error Overheat
+            sym[177] = ips[0].ID29520;  // RSSI Device
+            sym[178] = ips[0].ID31167;  // RSSI Peer
+            sym[179] = ips[0].ID19200;  // unreach
+
+            sym[180] = ips[0].ID42477;  // Op. voltage
+            sym[181] = ips[0].ID32916;  // RSSI Device
+            sym[182] = ips[0].ID12503;  // unreach
+
+            sym[183] = ips[0].ID28998;  // unreach
+
+            sym[184] = ips[0].ID14236;  // unreach
+
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -601,6 +620,28 @@
    
     function updateValues(sym){
 
+      //<!-- ******************** HMIP Taster Bad **************************  -->
+      DiIPSJ1.update(sym[184]);       
+      
+      //<!-- ******************** HMIP Aktor 4fach Bad **************************  -->
+      DiIPSI1.update(sym[183]);      
+      
+      //<!-- ******************** HMIP Lichtschalter 6fach Wohnzimmer **************************  -->
+      DiIPSH1.update(sym[180]);      
+      DiIPSH2.update(sym[181]);
+      DiIPSH3.update(sym[182]);
+
+      //<!-- ******************** HMIP Lichtschalter / Mess Aktor Schlafzimmer  **************************  -->
+      DiIPSG1.update(sym[174]);      
+      DiIPSG2.update(sym[175]);
+      DiIPSG3.update(sym[176]);      
+      DiIPSG4.update(sym[177]);
+      DiIPSG5.update(sym[178]);      
+      DiIPSG6.update(sym[179]);
+
+      //<!-- ******************** HMIP Tür Kontakt Haustür   **************************  -->
+      DiIPSF1.update(sym[172]);      
+      DiIPSF2.update(sym[173]);
 
       //<!-- ******************** HMIP Wasser Sensor Bad   **************************  -->
       DiIPSE1.update(sym[165]);      
