@@ -347,7 +347,9 @@
             SubMenuHzWZ.create("SubMenuWZ", "cyan", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHeizungWZ","", "SM" );  
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Rolladen Wohnzimmer", "_Rolladen_BW_web.png", "MainRolloWZ","", "SM" ); 
-            
+            var SubMenuLichtWZ = new GlideButton();
+            SubMenuLichtWZ.create("SubMenuWZ", "cyan", "Licht Wohnzimmer", "Light_BW_web.png", "MainLightWZ","", "SM" ); 
+
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", "DenonCeolIcon.jpg", "MainCeolWZ","", "SM" ); 
             var SubMenuTV = new GlideButton();
@@ -1310,10 +1312,61 @@
     </script>     
     
     
+    <!-- ***********************************************************************************      -->
+	<!--  ************************          Light  Wohnzimmer       ************************      -->   
+    <!-- ***********************************************************************************      -->
+	<!-- <Main id="MainLightWZ"  class="LightWZ"></Main> -->
+    <script> 
+        var windowLightWZ = new Area();
+        windowLightWZ.createMain("MainLightWZ", "bgCyan");
+    </script> 	
+    <script>  
+        var Light1WZ = new CtrlTile();
+        Light1WZ.create("MainLightWZ", "10px", "10px", "Lampe Fenster", "cyan", "Light", "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "");
+        var Light2WZ = new CtrlTile();
+        Light2WZ.create("MainLightWZ", "10px", "240px", "Lampe Mitte", "cyan", "Light", "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "");
+        var Light3WZ = new CtrlTile();
+        Light3WZ.create("MainLightWZ", "300px", "10px", "Lampe Schreibtisch", "cyan", "Light", "send('command(Light,WZA,false)')", "send('command(Light,WZA,true)')", "aus", "ein", "", "");
+    </script>
+    <!-- ***********************************************************************************      -->
+    <!-- ************************      Light Ctrl  Schlafzimmer     ************************      -->
+    <!-- ***********************************************************************************      -->
+    <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+    <script> 
+        var CtrlwindowLightWZ = new Area();
+        CtrlwindowLightWZ.createCtrl("MainLightWZCtrl", "bgCyan");
+
+    </script> 
+    <script> 
+        var HeadWZL1 = new HeadLine();
+        HeadWZL1.create("MainLightWZCtrl", "0px", "transparent", "Fenster Lampe");
+        var DisLightEnergy1WZCtrl = new StateDisplay();
+        DisLightEnergy1WZCtrl.create("MainLightWZCtrl", "", "Wh", "50px", "20px",  "normal", "20px", "Energy", "Number", "");
+        var DisLightCurrent1WZCtrl = new StateDisplay();
+        DisLightCurrent1WZCtrl.create("MainLightWZCtrl", "", "A", "120px", "20px",  "normal", "20px", "Strom", "Number", ""); 
+        var DisLightPower1WZCtrl = new StateDisplay();
+        DisLightPower1WZCtrl.create("MainLightWZCtrl", "", "W", "190px", "20px",  "normal", "20px", "Power", "Number", "");
+        var HeadWZL2 = new HeadLine();
+        HeadWZL2.create("MainLightWZCtrl", "220px", "transparent", "Mitte Lampe");
+        var DisLightEnergy2WZCtrl = new StateDisplay();
+        DisLightEnergy2WZCtrl.create("MainLightWZCtrl", "", "Wh", "330px", "20px",  "normal", "20px", "Energy", "Number", "");
+        var DisLightCurrent2WZCtrl = new StateDisplay();
+        DisLightCurrent2WZCtrl.create("MainLightWZCtrl", "", "A", "400px", "20px",  "normal", "20px", "Strom", "Number", ""); 
+        var DisLightPower2WZCtrl = new StateDisplay();
+        DisLightPower2WZCtrl.create("MainLightWZCtrl", "", "W", "470px", "20px",  "normal", "20px", "Power", "Number", "");
+        var HeadWZL3 = new HeadLine();
+        HeadWZL3.create("MainLightWZCtrl", "450px", "transparent", "Eingang Lampe");
+        var DisLightEnergy3WZCtrl = new StateDisplay();
+        DisLightEnergy3WZCtrl.create("MainLightWZCtrl", "", "Wh", "610px", "20px",  "normal", "20px", "Energy", "Number", "");
+        var DisLightCurrent3WZCtrl = new StateDisplay();
+        DisLightCurrent3WZCtrl.create("MainLightWZCtrl", "", "A", "680px", "20px",  "normal", "20px", "Strom", "Number", ""); 
+        var DisLightPower3WZCtrl = new StateDisplay();
+        DisLightPower3WZCtrl.create("MainLightWZCtrl", "", "W", "750px", "20px",  "normal", "20px", "Power", "Number", "");
+    </script> 
     
-    
-    
- 		<!-- ************************ Light  Schlafzimmer ************************ -->
+    <!-- ***********************************************************************************      -->
+	<!--  ************************          Light  Schlafzimmer     ************************      -->   
+    <!-- ***********************************************************************************      -->
 		<!-- <Main id="MainLightSZ"  class="LightSZ"></Main> -->
     <script> 
        var windowLightSZ = new Area();
@@ -1336,8 +1389,8 @@
         DisLightCurrentSZCtrl.create("MainLightSZCtrl", "", "A", "150px", "20px",  "normal", "20px", "Strom", "Number", ""); 
         var DisLightPowerSZCtrl = new StateDisplay();
         DisLightPowerSZCtrl.create("MainLightSZCtrl", "", "W", "250px", "20px",  "normal", "20px", "Power", "Number", "");
-
     </script> 
+
 
  		<!-- ************************ Sonos  Schlafzimmer ************************ -->
 		<Main id="MainSonosSZ"  class="SonosSZ"></Main>
@@ -1673,7 +1726,13 @@
      
         var iLightSz = new DynIcon("Light","bin",false);
         iLightSz.create("Grundriss", "100px", "180px", "size2");
+
+        var iLight1Wz = new DynIcon("Light","bin",false);
+        iLight1Wz.create("Grundriss", "460px", "740px", "size2");
         
+        var iLight2Wz = new DynIcon("Light","bin",false);
+        iLight2Wz.create("Grundriss", "460px", "580px", "size2");
+
         var ihuman = new DynIcon("person","bin",false); 
         ihuman.create("Grundriss", "450px", "230px", "size2"); 
    </script>
@@ -1871,7 +1930,10 @@
         HM9.create("MainIPS", "380px", "50px", "grey", "_HM-LC-Sw4.png", "0.8, 0-8", "Aktor 4fach", "switchCtrlArea('HMIP9Ctrl')", "100px", "100px", "14px");
         var HM10 = new BtnIcon();
         HM10.create("MainIPS", "380px", "180px", "grey", "_HMIP-PB2.jpg", "0.8, 0.8", "Wandtaster", "switchCtrlArea('HMIP10Ctrl')", "100px", "100px", "14px");
-
+        var HM11 = new BtnIcon();
+        HM11.create("MainIPS", "380px", "310px", "grey", "HMIP-FSM.png", "0.8, 0.8", "Licht-Aktor", "switchCtrlArea('HMIP11Ctrl')", "100px", "100px", "14px");
+        var HM12 = new BtnIcon();
+        HM12.create("MainIPS", "380px", "440px", "grey", "HMIP-FSM.png", "0.8, 0.8", "Licht-Aktor", "switchCtrlArea('HMIP12Ctrl')", "100px", "100px", "14px");
 
     </script>
     <!-- *************************************************************************************   -->
@@ -1922,9 +1984,9 @@
         var HeadA1 = new HeadLine();
         HeadA1.create("HMIP1Ctrl", "0px", "transparent", "Präsenzmelder");
         var labelA1 = new label();
-        labelA1.create("HMIP1Ctrl", "50px", "30px", "18px", "white", "Adr.: 000C18A98B9990")
+        labelA1.create("HMIP1Ctrl", "50px", "30px", "18px", "white", "Adr.: 000C18A98B9990");
         var labelA2 = new label();
-        labelA2.create("HMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele")
+        labelA2.create("HMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele");
         var DiIPSA1 = new StateDisplay();
         DiIPSA1.create("HMIP1Ctrl", "", "", "140px", "30px", "normal", "18px", "Error Code", "String", "", "", "", "");
         var DiIPSA2 = new StateDisplay();
@@ -1948,9 +2010,9 @@
         var HeadB1 = new HeadLine();
         HeadB1.create("HMIP2Ctrl", "0px", "transparent", "Temp/Feuchte");
         var labelB1 = new label();
-        labelB1.create("HMIP2Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0671702")
+        labelB1.create("HMIP2Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0671702");
         var labelB2 = new label();
-        labelB2.create("HMIP2Ctrl", "80px", "30px", "18px", "white", "Location: Kinderzimmer")
+        labelB2.create("HMIP2Ctrl", "80px", "30px", "18px", "white", "Location: Kinderzimmer");
 
         var DiIPSB1 = new StateDisplay();
         DiIPSB1.create("HMIP2Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
@@ -1971,9 +2033,9 @@
         var HeadC1 = new HeadLine();
         HeadC1.create("HMIP3Ctrl", "0px", "transparent", "Temp/Feuchte");
         var labelC1 = new label();
-        labelC1.create("HMIP3Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0670758")
+        labelC1.create("HMIP3Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0670758");
         var labelC2 = new label();
-        labelC2.create("HMIP3Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer")
+        labelC2.create("HMIP3Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer");
 
         var DiIPSC1 = new StateDisplay();
         DiIPSC1.create("HMIP3Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "", "");
@@ -1994,9 +2056,9 @@
         var HeadD1 = new HeadLine();
         HeadD1.create("HMIP4Ctrl", "0px", "transparent", "Wasser Sensor");
         var labelD1 = new label();
-        labelD1.create("HMIP4Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A99273C0")
+        labelD1.create("HMIP4Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A99273C0");
         var labelD2 = new label();
-        labelD2.create("HMIP4Ctrl", "80px", "30px", "18px", "white", "Location: Küche")
+        labelD2.create("HMIP4Ctrl", "80px", "30px", "18px", "white", "Location: Küche");
 
         var DiIPSD1 = new StateDisplay();
         DiIPSD1.create("HMIP4Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "", "");
@@ -2025,9 +2087,9 @@
         var HeadE1 = new HeadLine();
         HeadE1.create("HMIP5Ctrl", "0px", "transparent", "Wasser Sensor");
         var labelE1 = new label();
-        labelE1.create("HMIP5Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A992728B")
+        labelE1.create("HMIP5Ctrl", "50px", "30px", "18px", "white", "Adr.: 001898A992728B");
         var labelE2 = new label();
-        labelE2.create("HMIP5Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+        labelE2.create("HMIP5Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
         var DiIPSE1 = new StateDisplay();
         DiIPSE1.create("HMIP5Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "", "");
@@ -2056,9 +2118,9 @@
         var HeadF1 = new HeadLine();
         HeadF1.create("HMIP6Ctrl", "0px", "transparent", "Tür Kontakt");
         var labelF1 = new label();
-        labelF1.create("HMIP6Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1193907")
+        labelF1.create("HMIP6Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1193907");
         var labelF2 = new label();
-        labelF2.create("HMIP6Ctrl", "80px", "30px", "18px", "white", "Location: Haustür")
+        labelF2.create("HMIP6Ctrl", "80px", "30px", "18px", "white", "Location: Haustür");
 
         var DiIPSF1 = new StateDisplay();
         DiIPSF1.create("HMIP6Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
@@ -2108,9 +2170,9 @@
         var HeadH1 = new HeadLine();
         HeadH1.create("HMIP8Ctrl", "0px", "transparent", "Taster 6fach");
         var labelH1 = new label();
-        labelH1.create("HMIP8Ctrl", "50px", "30px", "18px", "white", "Adr.: 000B58A9AB6315")
+        labelH1.create("HMIP8Ctrl", "50px", "30px", "18px", "white", "Adr.: 000B58A9AB6315");
         var labelH2 = new label();
-        labelH2.create("HMIP8Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer")
+        labelH2.create("HMIP8Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
         var DiIPSH1 = new StateDisplay();
         DiIPSH1.create("HMIP8Ctrl", "", "", "150px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
@@ -2132,9 +2194,9 @@
         var HeadI1 = new HeadLine();
         HeadI1.create("HMIP9Ctrl", "0px", "transparent", "Schalter 6fach");
         var labelI1 = new label();
-        labelI1.create("HMIP9Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1048227")
+        labelI1.create("HMIP9Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ1048227");
         var labelI2 = new label();
-        labelI2.create("HMIP9Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+        labelI2.create("HMIP9Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
         var DiIPSI1 = new StateDisplay();
         DiIPSI1.create("HMIP9Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
@@ -2153,20 +2215,62 @@
         var HeadJ1 = new HeadLine();
         HeadJ1.create("HMIP10Ctrl", "0px", "transparent", "Wand Taster");
         var labelJ1 = new label();
-        labelJ1.create("HMIP10Ctrl", "50px", "30px", "18px", "white", "Adr.: PEQ0192538")
+        labelJ1.create("HMIP10Ctrl", "50px", "30px", "18px", "white", "Adr.: PEQ0192538");
         var labelJ2 = new label();
-        labelJ2.create("HMIP10Ctrl", "80px", "30px", "18px", "white", "Location: Bad")
+        labelJ2.create("HMIP10Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
         var DiIPSJ1 = new StateDisplay();
         DiIPSJ1.create("HMIP10Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
    </script> 
 
+    <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL - HM-FSM Lichtaktor Mitte               ***********************   -->   
+    <!--  ************************       Wohnzimmer                                  ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP11 = new Area();
+        CtrlwindowHMIP11.createCtrl("HMIP11Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadK1 = new HeadLine();
+        HeadK1.create("HMIP11Ctrl", "0px", "transparent", "Lampe Mitte");
+        var labelK1 = new label();
+        labelK1.create("HMIP11Ctrl", "50px", "30px", "18px", "white", "Adr.: 00089A498BE12D");
+        var labelK2 = new label();
+        labelK2.create("HMIP11Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");   
+;
+        var DiIPSK1 = new StateDisplay();
+        DiIPSK1.create("HMIP11Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "", "");
+        var DiIPSK2 = new StateDisplay();
+        DiIPSK2.create("HMIP11Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String", "", "", "", "");
+        var DiIPSK3 = new StateDisplay();
+        DiIPSK3.create("HMIP11Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+    </script> 
 
 
+    <!-- ****************************************************************************************************   -->
+    <!--  ************************       CTRL - HM-FSM Lichtaktor Hinten              ***********************   -->   
+    <!--  ************************       Wohnzimmer                                  ************************   -->  
+    <!-- ****************************************************************************************************   -->
+    <script> 
+        var CtrlwindowHMIP12 = new Area();
+        CtrlwindowHMIP12.createCtrl("HMIP12Ctrl", "bgOlive");
+    </script> 
+    <script> 
+        var HeadL1 = new HeadLine();
+        HeadL1.create("HMIP12Ctrl", "0px", "transparent", "Lampe Fenster");
+        var labelL1 = new label();
+        labelL1.create("HMIP12Ctrl", "50px", "30px", "18px", "white", "Adr.: 00089A498BDFE3");
+        var labelL2 = new label();
+        labelL2.create("HMIP12Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
-
-
-
+        var DiIPSL1 = new StateDisplay();
+        DiIPSL1.create("HMIP12Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "", "");
+        var DiIPSL2 = new StateDisplay();
+        DiIPSL2.create("HMIP12Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String", "", "", "", "");
+        var DiIPSL3 = new StateDisplay();
+        DiIPSL3.create("HMIP12Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+   </script> 
 
 
 

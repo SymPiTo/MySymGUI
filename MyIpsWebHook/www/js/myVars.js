@@ -178,10 +178,10 @@
             sym[103] = ips[0].ID59260; //Kochbuch Rezept
             sym[104] = ips[0].ID16493;  //Kochbuch Liste
             sym[105] = ips[0].ID46852; //Denon Source
-            sym[106] = ips[0].ID19506; //Lampe - Schalter State
-            sym[107] = ips[0].ID35590; //Lampe - Schalter current
-            sym[108] = ips[0].ID43083; //Lampe - Schalter Power
-            sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter
+            sym[106] = ips[0].ID19506; //Lampe - Schalter State Schlafzimmer
+            sym[107] = ips[0].ID35590; //Lampe - Schalter current Schlafzimmer
+            sym[108] = ips[0].ID43083; //Lampe - Schalter Power Schlafzimmer
+            sym[109] = ips[0].ID12561; //Lampe - Schalter EnergyCounter Schlafzimmer
             sym[110] = ips[0].ID17052; // Security Code
             sym[111] = JSON.parse(ips[0].ID44125) //Wetter Week Data
             sym[112] = JSON.parse(ips[0].ID46593) //Wetter NowDay Data
@@ -282,10 +282,23 @@
 
             sym[185] = ips[0].ID32177;  // Fenster Position Bad
 
+            sym[186] = ips[0].ID13580;  // RSSI Device
+            sym[187] = ips[0].ID38699;  // RSSI Peer
+            sym[188] = ips[0].ID47058;  // unreach
 
+            sym[189] = ips[0].ID39262;  // RSSI Device
+            sym[190] = ips[0].ID34051;  // RSSI Peer
+            sym[191] = ips[0].ID18170;  // unreach
 
+            sym[192] = ips[0].ID42279; //Lampe - Schalter State Wohnzimmer Fenster
+            sym[193] = ips[0].ID58362; //Lampe - Schalter current Wohnzimmer Fenster
+            sym[194] = ips[0].ID22672; //Lampe - Schalter Power Wohnzimmer Fenster
+            sym[195] = ips[0].ID27048; //Lampe - Schalter EnergyCounter Wohnzimmer Fenster
 
-
+            sym[196] = ips[0].ID12113; //Lampe - Schalter State Wohnzimmer Mitte
+            sym[197] = ips[0].ID45930; //Lampe - Schalter current Wohnzimmer Mitte
+            sym[198] = ips[0].ID57742; //Lampe - Schalter Power Wohnzimmer Mitte
+            sym[199] = ips[0].ID21225; //Lampe - Schalter EnergyCounter Wohnzimmer Mitte
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -627,10 +640,28 @@
     function updateValues(sym){
 
 
+      //<!-- ******************** Wohnzimmer Licht Fenster**************************  -->
+      Light1WZ.update(sym[192], "", ""); 
+      DisLightCurrent1WZCtrl.update(sym[193],2);
+      DisLightPower1WZCtrl.update(sym[194],2);
+      DisLightEnergy1WZCtrl.update(sym[195], 2);
+      iLight1Wz.update(sym[192]);
 
+      //<!-- ******************** Wohnzimmer Licht Mitte**************************  -->
+      Light2WZ.update(sym[196], "", ""); 
+      DisLightCurrent2WZCtrl.update(sym[197],2);
+      DisLightPower2WZCtrl.update(sym[198],2);
+      DisLightEnergy2WZCtrl.update(sym[199], 2);
+      iLight2Wz.update(sym[196]);
 
- 
-      
+      //<!-- ******************** Licht Aktor WZ Mitte **************************  -->
+      DiIPSK1.update(sym[186], "", "");  
+      DiIPSK2.update(sym[187], "", "");  
+      DiIPSK3.update(sym[188], "", "");  
+      //<!-- ******************** Licht Aktor WZ Fenster **************************  -->
+      DiIPSL1.update(sym[189], "", "");  
+      DiIPSL2.update(sym[190], "", "");  
+      DiIPSL3.update(sym[191], "", ""); 
       //<!-- ******************** Fenster Aktor Bad **************************  -->
       WindowBad.update(sym[185], "", ""); 
 

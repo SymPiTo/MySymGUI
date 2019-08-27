@@ -2834,7 +2834,9 @@ h1:after {
 
 
 
-
+.cyanLight {
+    background: -webkit-linear-gradient(hsl(174, 100%, 75%), hsl(174, 100%, 95%), hsl(174, 100%, 75%))
+}
 .sandyLight {
     background: -webkit-linear-gradient(hsl(28, 100%, 75%), hsl(28, 100%, 95%), hsl(28, 100%, 75%))
 }
@@ -2848,6 +2850,47 @@ h1:after {
 .black {
     background: black;
 }
+
+
+
+
+/* *********************  Background COLORS ********************************** */
+.bgPurple {
+    background: hsl(300, 100%, 10%);
+} 
+.bgPurpleLight {
+    background: hsl(300, 100%, 20%);
+} 
+.bgCyan {
+    background: hsl(174, 100%, 10%);
+}
+.bgCyanLight {
+    background: hsl(174, 100%, 15%);
+}
+.bgOlive {
+    background: hsl(82, 100%, 10%);
+}
+.bgCyan{
+    background: hsl(174, 100%, 10%);
+}
+.bgSandy {
+    background: hsl(28, 100%, 10%);
+}
+.bgMidgreen {
+    background: hsl(152, 70%, 15%); 
+}
+.bgRed {
+    background: maroon; 
+}
+.bgGrey {
+    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%)); /* CHROME */
+} 
+.bgGreyBtn {
+    background: -webkit-linear-gradient(hsl(174, 100%, 45%), hsl(174, 100%, 75%), hsl(174, 100%, 45%)); /* CHROME */
+} 
+/* *********************  Background COLORS ********************************** */
+
+
 
 
 
@@ -2930,39 +2973,6 @@ h1:after {
 
 
 
-/* *********************  Background COLORS ********************************** */
-.bgPurple {
-    background: hsl(300, 100%, 10%);
-} 
-.bgPurpleLight {
-    background: hsl(300, 100%, 20%);
-} 
-.bgCyan {
-    background: hsl(174, 100%, 10%);
-}
-.bgCyanLight {
-    background: hsl(174, 100%, 15%);
-}
-.bgOlive {
-    background: hsl(82, 100%, 10%);
-}
- 
-.bgSandy {
-    background: hsl(28, 100%, 10%);
-}
-.bgMidgreen {
-    background: hsl(152, 70%, 15%); 
-}
-.bgRed {
-    background: maroon; 
-}
-.bgGrey {
-    background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%)); /* CHROME */
-} 
-.bgGreyBtn {
-    background: -webkit-linear-gradient(hsl(174, 100%, 45%), hsl(174, 100%, 75%), hsl(174, 100%, 45%)); /* CHROME */
-} 
-/* *********************  Background COLORS ********************************** */
 
 
 /* *********************  Weather ********************************** */
