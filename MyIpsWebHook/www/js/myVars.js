@@ -282,6 +282,10 @@
 
             sym[185] = ips[0].ID32177;  // Fenster Position Bad
 
+
+
+
+
         }
         catch(err){
             document.getElementById("fehler").innerHTML = err.message;
@@ -621,19 +625,29 @@
    
    
     function updateValues(sym){
+
+
+
+
+ 
+      
       //<!-- ******************** Fenster Aktor Bad **************************  -->
       WindowBad.update(sym[185], "", ""); 
 
       //<!-- ******************** HMIP Taster Bad **************************  -->
-      DiIPSJ1.update(sym[184]);       
+      DiIPSJ1.update(sym[184]);    
+      HM10.update(sym[184]); 
       
       //<!-- ******************** HMIP Aktor 4fach Bad **************************  -->
-      DiIPSI1.update(sym[183]);      
+      DiIPSI1.update(sym[183]);   
+      HM9.update(sym[183]);
+
       
       //<!-- ******************** HMIP Lichtschalter 6fach Wohnzimmer **************************  -->
       DiIPSH1.update(sym[180]);      
       DiIPSH2.update(sym[181]);
       DiIPSH3.update(sym[182]);
+      HM8.update(sym[182]);
 
       //<!-- ******************** HMIP Lichtschalter / Mess Aktor Schlafzimmer  **************************  -->
       DiIPSG1.update(sym[174]);      
@@ -642,10 +656,14 @@
       DiIPSG4.update(sym[177]);
       DiIPSG5.update(sym[178]);      
       DiIPSG6.update(sym[179]);
+      HM7.update(sym[179]);
+
 
       //<!-- ******************** HMIP Tür Kontakt Haustür   **************************  -->
       DiIPSF1.update(sym[172]);      
       DiIPSF2.update(sym[173]);
+      HM4.update(sym[172]);
+
 
       //<!-- ******************** HMIP Wasser Sensor Bad   **************************  -->
       DiIPSE1.update(sym[165]);      
@@ -655,6 +673,8 @@
       DiIPSE5.update(sym[169]);  
       DiIPSE6.update(sym[170]);
       DiIPSE7.update(sym[171]);
+      HM6.update(sym[171]);
+
 
       //<!-- ******************** HMIP Wasser Sensor Küche   **************************  -->
       DiIPSD1.update(sym[158]);      
@@ -664,23 +684,30 @@
       DiIPSD5.update(sym[162]);  
       DiIPSD6.update(sym[163]);
       DiIPSD7.update(sym[164]);
+      HM2.update(sym[164]);
 
-      //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
+
+      //<!-- ******************** HMIP Tem/Feuchte Sensor Schlafzimmer   **************************  -->
       DiIPSC1.update(sym[155]);      
       DiIPSC2.update(sym[156]);  
       DiIPSC3.update(sym[157]);
+      HM5.update(sym[157]);
+
 
       //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
       DiIPSB1.update(sym[152]);      
       DiIPSB2.update(sym[153]);  
       DiIPSB3.update(sym[154]);
+      HM1.update(sym[154]);
       
-      //<!-- ******************** IPS Presenz Diele   **************************  -->
+      //<!-- ******************** IPS Präsenz Diele   **************************  -->
       DiIPSA1.update(sym[147]);      
       DiIPSA2.update(sym[148]);  
       DiIPSA3.update(sym[149]);  
       DiIPSA4.update(sym[150]);  
       DiIPSA5.update(sym[151]);
+      HM3.update(sym[151]);
+
 
         //<!-- ******************** IPS Server   **************************  -->
        

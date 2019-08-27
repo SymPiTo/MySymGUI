@@ -3064,6 +3064,7 @@ class BtnIcon {
         this.zeichengr = param[2];
 
         var container = document.createElement("div");
+        this.ID = container;
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
@@ -3072,13 +3073,13 @@ class BtnIcon {
         container.style.width = this.b;
         container.style.height = this.h;
         container.style.color = this.labelcolor;
-
+        
         container.setAttribute("onclick", fkt);
 
         var elem1 = document.createElement("div");
-
+        elem1.style.paddingTop = "5px";
         elem1.style.height = "25px";
-        elem1.style.backgroundColor = color;
+        elem1.style.backgroundColor = "black";
         elem1.innerHTML = label;
         container.append(elem1)
 
@@ -3095,6 +3096,14 @@ class BtnIcon {
         document.getElementById(ParentID).appendChild(container);
     }
 
-    update() {
+    update(value) {
+        if(value){
+            this.labelcolor = "red";
+            this.ID.style.color = this.labelcolor;
+        }
+        else {
+            this.labelcolor = "lime";
+            this.ID.style.color = this.labelcolor;
+        }
     }
 }
