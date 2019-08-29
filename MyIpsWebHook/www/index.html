@@ -294,7 +294,7 @@
             var LeftMenuBad = new GlideButton();
             LeftMenuBad.create("MainMenu", "violet", "Bad", "_Bad.png", "MenuBad", "", "MM");
             var LeftMenuDiele = new GlideButton();
-            LeftMenuDiele.create("MainMenu", "violet", "Diele", "Diele.png", "MenuDiele", "", "MM");
+            LeftMenuDiele.create("MainMenu", "yellowgreen", "Diele", "Diele.png", "MenuDiele", "", "MM");
             var LeftMenuMM = new GlideButton();
             LeftMenuMM.create("MainMenu", "purple", "Multimedia", "_Multimedia_BW_web.png", "MenuMultimedia", "", "MM");
             var LeftMenuHz = new GlideButton();
@@ -426,7 +426,8 @@
 
         <script>
             var SubMenuDiele = new GlideButton();
-            SubMenuDiele.create("SubMenuDiele", "purple", "Licht Diele", "Light_BW_web.png", "MainLightD", "", "SM");
+            SubMenuDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+                "SM");
         </script>
 
         <!-- ************************ Multimedia  ************************  -->
@@ -1524,11 +1525,11 @@
         <!-- ***********************************************************************************      -->
         <script>
             var windowLightD = new Area();
-            windowLightD.createMain("MainLightD", "bgSandy");
+            windowLightD.createMain("MainLightD", "bgYellowGreen");
         </script>
         <script>
             var LightD = new CtrlTile();
-            LightD.create("MainLightD", "10px", "10px", "Diele", "sandy", "Light",
+            LightD.create("MainLightD", "10px", "10px", "Diele", "yellowgreen", "Light",
                 "send('command(Light,D,false)')", "send('command(Light,D,true)')");
         </script>
 
@@ -1537,7 +1538,7 @@
         <!-- ***********************************************************************************      -->
         <script>
             var CtrlwindowLightD = new Area();
-            CtrlwindowLightD.createCtrl("MainLightDCtrl", "bgSandy");
+            CtrlwindowLightD.createCtrl("MainLightDCtrl", "bgYellowGreen");
         </script>
         <script>
             var DisLightEnergyDCtrl = new StateDisplay();
@@ -1940,7 +1941,7 @@
             iLight2Wz.create("Grundriss", "360px", "530px", "size2");
 
             var iLightD = new DynIcon("Light", "bin", false);
-            iLightD.create("Grundriss", "660px", "230px", "size2");
+            iLightD.create("Grundriss", "450px", "150px", "size2");
 
             var ihuman = new DynIcon("person", "bin", false);
             ihuman.create("Grundriss", "450px", "230px", "size2");

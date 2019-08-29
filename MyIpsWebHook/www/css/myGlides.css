@@ -2669,6 +2669,12 @@ h1:after {
 .yellow:active {
     background: -webkit-linear-gradient(hsl(51, 100%, 5%), hsl(51, 100%, 15%)); /* CHROME */
 }
+.yellowgreen {
+    background: -webkit-linear-gradient(hsl(55, 100%, 25%), hsl(55, 100%, 45%), hsl(55, 100%, 25%)); /* CHROME */
+}
+.yellowgreen:active {
+    background: -webkit-linear-gradient(hsl(55, 100%, 5%), hsl(55, 100%, 15%)); /* CHROME */
+}
 
 .olive {
 	background: -webkit-linear-gradient(hsl(82, 100%, 25%), hsl(82, 100%, 45%), hsl(82, 100%, 25%));
@@ -2763,7 +2769,9 @@ h1:after {
 .sandyLight {
     background: -webkit-linear-gradient(hsl(28, 100%, 75%), hsl(28, 100%, 95%), hsl(28, 100%, 75%))
 }
-
+.yellowgreenLight {
+    background: -webkit-linear-gradient(hsl(55, 100%, 75%), hsl(55, 100%, 95%), hsl(55, 100%, 75%))
+}
 .purpleBtn:active {
     background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
 }
@@ -2798,6 +2806,9 @@ h1:after {
 }
 .bgSandy {
     background: hsl(28, 100%, 10%);
+}
+.bgYellowGreen {
+    background: hsl(55, 100%, 10%);
 }
 .bgMidgreen {
     background: hsl(152, 70%, 15%); 
