@@ -309,6 +309,19 @@
         sym[205] = ips[0].ID41504; //Lampe - Schalter Power Diele
         sym[206] = ips[0].ID16840; //Lampe - Schalter EnergyCounter Diele
 
+        sym[207] = ips[0].ID10829; //Lampe - LOW BAT Schalterkontakt Diele
+        sym[208] = ips[0].ID42787; //Lampe - Voltage Schalterkontakt Diele
+        sym[209] = ips[0].ID25438; //Lampe - RSSI Device Schalterkontakt Diele
+        sym[210] = ips[0].ID44332; //Lampe - UNREACH Schalterkontakt Diele
+
+        sym[211] = ips[0].ID57825; //D Temp SZ Kanal 3
+        sym[212] = ips[0].ID29076; //D Temp SZ Kanal 4
+        sym[213] = ips[0].ID13507; //D Temp WZ Kanal 3
+        sym[214] = ips[0].ID52998; //D Temp WZ Kanal 4
+        sym[215] = ips[0].ID29170; //Temp Vor Hz WZ
+        sym[216] = ips[0].ID47576; //Temp Rueck Hz WZ 
+
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -512,8 +525,8 @@
       //<!-- ************************ Heizung Wohnzimmer ************************  -->
       MainTempHzWZ.update(sym[2], 1);
       MainPosHzWZ.update(sym[4], 0);
-      MainTempVHzWZ.update("0.0", 1);
-      MainTempRHzWZ.update("0.0", 1);
+      MainTempVHzWZ.update(sym[215], 1);
+      MainTempRHzWZ.update(sym[216], 1);
 
       /*
               $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
@@ -571,8 +584,8 @@
 
       MainTempHzSZ.update(sym[0], 1);
       MainPosHzSZ.update(sym[6], 0);
-      MainTempVHzSZ.update("0.0", 1);
-      MainTempRHzSZ.update("0.0", 1);
+      MainTempVHzSZ.update(sym[39], 1);
+      MainTempRHzSZ.update(sym[40], 1);
 
 
       //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
@@ -655,6 +668,20 @@
 
 
     function updateValues(sym) {
+      //<!-- ******************** Temp Difff Heizung Wohnzimmer **************************  -->
+      DiIPSP1.update(sym[215], "", "");
+      DiIPSP2.update(sym[216], "", "");
+      DiIPSP3.update(sym[213], "", "");
+      DiIPSP4.update(sym[214], "", "");
+      //<!-- ******************** Temp Difff Heizung Schlafzimmer **************************  -->
+      DiIPSO1.update(sym[39], "", "");
+      DiIPSO2.update(sym[40], "", "");
+      DiIPSO3.update(sym[211], "", "");
+      DiIPSO4.update(sym[212], "", "");
+
+      //<!-- ******************** Licht Schalter Kontakt Diele **************************  -->
+      DiIPSN1.update(sym[209], "", "");
+      DiIPSN2.update(sym[210], "", "");
 
       //<!-- ******************** Licht Aktor Diele **************************  -->
       DiIPSM1.update(sym[200], "", "");

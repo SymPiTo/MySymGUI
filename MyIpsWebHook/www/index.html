@@ -1941,7 +1941,7 @@
             iLight2Wz.create("Grundriss", "360px", "530px", "size2");
 
             var iLightD = new DynIcon("Light", "bin", false);
-            iLightD.create("Grundriss", "450px", "150px", "size2");
+            iLightD.create("Grundriss", "450px", "170px", "size2");
 
             var ihuman = new DynIcon("person", "bin", false);
             ihuman.create("Grundriss", "450px", "230px", "size2");
@@ -1949,7 +1949,7 @@
 
 
         <!-- ***********************************************************************************   -->
-        <!--  ************************          Main - Rezepte    ************************      -->
+        <!--  ************************          Main - Rezepte       ************************      -->
         <!-- ***********************************************************************************   -->
         <!-- <Main id="MainRezepte" class="Rezepte"> </Main>  -->
         <script>
@@ -2186,6 +2186,15 @@
             var HM13 = new BtnIcon();
             HM13.create("MainIPS", "500px", "50px", "grey", "HMIP-FSM.png", "0.8, 0.8", "Licht-Aktor",
                 "switchCtrlArea('HMIP13Ctrl')", "100px", "100px", "14px");
+            var HM14 = new BtnIcon();
+            HM14.create("MainIPS", "500px", "180px", "grey", "HMIP-FCI1.png", "0.8, 0.8", "Licht-Schalter",
+                "switchCtrlArea('HMIP14Ctrl')", "100px", "100px", "14px");
+            var HM15 = new BtnIcon();
+            HM15.create("MainIPS", "500px", "310px", "grey", "HM-WDS30.jpg", "0.8, 0.8", "Diff-Temp Sensor",
+                "switchCtrlArea('HMIP15Ctrl')", "100px", "100px", "14px");
+            var HM16 = new BtnIcon();
+            HM16.create("MainIPS", "500px", "440px", "grey", "HM-WDS30.jpg", "0.8, 0.8", "Diff-Temp Sensor",
+                "switchCtrlArea('HMIP16Ctrl')", "100px", "100px", "14px");
         </script>
         <!-- *************************************************************************************   -->
         <!--  ************************         CTRL - IP Symcon Server    ************************   -->
@@ -2592,6 +2601,98 @@
                 "", "",
                 "");
         </script>
+
+
+        <!-- ****************************************************************************************************   -->
+        <!--  ************************       CTRL - HMIP-FCI 1 Schater Kontakt            ***********************   -->
+        <!--  ************************       Diele                                        ***********************   -->
+        <!-- ****************************************************************************************************   -->
+        <script>
+            var CtrlwindowHMIP14 = new Area();
+            CtrlwindowHMIP14.createCtrl("HMIP14Ctrl", "bgOlive");
+        </script>
+        <script>
+            var HeadN1 = new HeadLine();
+            HeadN1.create("HMIP14Ctrl", "0px", "transparent", "Schalter Diele");
+            var labelN1 = new label();
+            labelN1.create("HMIP14Ctrl", "50px", "30px", "18px", "white", "Adr.: 001FD8A9A9ACDD");
+            var labelN2 = new label();
+            labelN2.create("HMIP14Ctrl", "80px", "30px", "18px", "white", "Location: Diele");
+
+            var DiIPSN1 = new StateDisplay();
+            DiIPSN1.create("HMIP14Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "",
+                "");
+            var DiIPSN2 = new StateDisplay();
+            DiIPSN2.create("HMIP14Ctrl", "", "", "220px", "30px", "normal", "18px", "Unreach", "String", "", "", "",
+                "");
+        </script>
+
+
+        <!-- ****************************************************************************************************   -->
+        <!--  ************************       CTRL - HM-WDS30 Tem Diff Sensor              ***********************   -->
+        <!--  ************************       Schlafzimmer                                 ***********************   -->
+        <!-- ****************************************************************************************************   -->
+        <script>
+            var CtrlwindowHMIP15 = new Area();
+            CtrlwindowHMIP15.createCtrl("HMIP15Ctrl", "bgOlive");
+        </script>
+        <script>
+            var HeadO1 = new HeadLine();
+            HeadO1.create("HMIP15Ctrl", "0px", "transparent", "D-Temp Sensor");
+            var labelO1 = new label();
+            labelO1.create("HMIP15Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0674318");
+            var labelO2 = new label();
+            labelO2.create("HMIP15Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer");
+
+            var DiIPSO1 = new StateDisplay();
+            DiIPSO1.create("HMIP15Ctrl", "", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "", "", "",
+                "");
+            var DiIPSO2 = new StateDisplay();
+            DiIPSO2.create("HMIP15Ctrl", "", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "", "", "",
+                "");
+            var DiIPSO3 = new StateDisplay();
+            DiIPSO3.create("HMIP15Ctrl", "", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "", "", "",
+                "");
+            var DiIPSO4 = new StateDisplay();
+            DiIPSO4.create("HMIP15Ctrl", "", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "", "", "",
+                "");
+        </script>
+
+
+        <!-- ****************************************************************************************************   -->
+        <!--  ************************       CTRL - HM-WDS30 Tem Diff Sensor              ***********************   -->
+        <!--  ************************       Wohnzimmer                                   ***********************   -->
+        <!-- ****************************************************************************************************   -->
+        <script>
+            var CtrlwindowHMIP16 = new Area();
+            CtrlwindowHMIP16.createCtrl("HMIP16Ctrl", "bgOlive");
+        </script>
+        <script>
+            var HeadP1 = new HeadLine();
+            HeadP1.create("HMIP16Ctrl", "0px", "transparent", "D-Temp Sensor");
+            var labelP1 = new label();
+            labelP1.create("HMIP16Ctrl", "50px", "30px", "18px", "white", "Adr.: OEQ0674345");
+            var labelP2 = new label();
+            labelP2.create("HMIP16Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
+
+            var DiIPSP1 = new StateDisplay();
+            DiIPSP1.create("HMIP16Ctrl", "", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "", "", "",
+                "");
+            var DiIPSP2 = new StateDisplay();
+            DiIPSP2.create("HMIP16Ctrl", "", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "", "", "",
+                "");
+            var DiIPSP3 = new StateDisplay();
+            DiIPSP3.create("HMIP16Ctrl", "", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "", "", "",
+                "");
+            var DiIPSP4 = new StateDisplay();
+            DiIPSP4.create("HMIP16Ctrl", "", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "", "", "",
+                "");
+        </script>
+
+
+
+
+
 
 
 
