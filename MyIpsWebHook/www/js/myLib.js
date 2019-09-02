@@ -1619,7 +1619,7 @@ class RolloCtrl {
 
         //optionale Parameter
         this.b = "202px";
-        this.h = "260px";
+        this.h = "240px";
 
         this.btnTextColor = "black";
         this.labelcolor = "lime";
@@ -1654,7 +1654,7 @@ class RolloCtrl {
 
         var btnCont1 = document.createElement("div");
         btnCont1.style.width = this.b;
-        btnCont1.style.marginTop = "5px";
+        btnCont1.style.marginTop = "2px";
         btnCont1.style.padding = "2px";
         btnCont1.style.display = "flex";
         btnCont1.style.flexDirection = "row";
@@ -1713,7 +1713,7 @@ class RolloCtrl {
         btnCont1.append(btn3);
 
         var btnCont2 = document.createElement("div");
-        btnCont2.style.marginTop = "10px";
+        btnCont2.style.marginTop = "5px";
         btnCont2.style.width = this.b;
         btnCont2.style.display = "flex";
         btnCont2.style.flexDirection = "row";
@@ -1761,7 +1761,7 @@ class RolloCtrl {
 
         var btnCont3 = document.createElement("div");
         btnCont3.style.width = this.b;
-        btnCont3.style.marginTop = "20px";
+        btnCont3.style.marginTop = "10px";
         btnCont3.style.padding = "2px";
         btnCont3.style.display = "flex";
         btnCont3.style.flexDirection = "row";
