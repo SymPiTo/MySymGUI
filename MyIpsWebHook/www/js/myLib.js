@@ -1618,7 +1618,7 @@ class RolloCtrl {
 
 
         //optionale Parameter
-        this.b = "240px";
+        this.b = "202px";
         this.h = "260px";
 
         this.btnTextColor = "black";
