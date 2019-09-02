@@ -1661,6 +1661,7 @@ class RolloCtrl {
 
         var btnCont1 = document.createElement("div");
         btnCont1.style.width = this.b;
+        btnCont1.style.height = "25%";
         btnCont1.style.marginTop = "2px";
         btnCont1.style.padding = "2px";
         btnCont1.style.display = "flex";
@@ -1722,6 +1723,7 @@ class RolloCtrl {
         var btnCont2 = document.createElement("div");
         btnCont2.style.marginTop = "5px";
         btnCont2.style.width = this.b;
+        btnCont2.style.height = "25%";
         btnCont2.style.display = "flex";
         btnCont2.style.flexDirection = "row";
         btnCont2.style.justifyContent = "space-around";
@@ -1768,6 +1770,7 @@ class RolloCtrl {
 
         var btnCont3 = document.createElement("div");
         btnCont3.style.width = this.b;
+        btnCont3.style.height = "30%";
         btnCont3.style.marginTop = "10px";
         btnCont3.style.padding = "2px";
         btnCont3.style.display = "flex";
@@ -1779,7 +1782,6 @@ class RolloCtrl {
         elem1.className = "CBcontainer";
         elem1.classList.add(color);
         elem1.innerHTML = "SunRise-SunSet";
-
 
         btnCont3.append(elem1);
 
