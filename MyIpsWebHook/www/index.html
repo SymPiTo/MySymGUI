@@ -925,11 +925,10 @@
             var iRolloWZ = new DynIcon("rollo", "ana", false);
             iRolloWZ.create("MainRolloWZ", "30px", "170px", "normal");
 
-            var labelPresetWZ = new label();
-            labelPresetWZ.create("MainRolloWZ", "200px", "100px", "18px", "white", "Presets");
-            var labelControlWZ = new label();
-            labelControlWZ.create("MainRolloWZ", "210px", "400px", "18px", "white", "Control");
 
+
+            var Rahmen1WZ = new Kachel();
+            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "350px", "cyan", "Preset");
 
             var btnRolloWZAuto = new CtrlButton();
             btnRolloWZAuto.create("MainRolloWZ", "260px", "50px", "ctrlbutton", "normal", "cyan", "Automatik",
@@ -946,6 +945,9 @@
             var btnRolloWZ25 = new CtrlButton();
             btnRolloWZ25.create("MainRolloWZ", "500px", "50px", "ctrlbutton", "normal", "cyan", "25%", "command", "",
                 "send('command(Rollo,WZ,bright)') ");
+
+            var Rahmen2WZ = new Kachel();
+            Rahmen2WZ.create("MainRolloWZ", "220px", "340px", "200px", "350px", "cyan", "Control");
 
             var btnRolloWZHoch = new CtrlButton();
             btnRolloWZHoch.create("MainRolloWZ", "260px", "350px", "ctrlbutton", "normal", "cyan", "Hoch", "command",
@@ -990,27 +992,8 @@
                 "String", "", "", "", "");
 
 
-
-            var FontBtnRolloSZup = new FontButtonNew();
-            FontBtnRolloSZup.create("MainRolloWZCtrl", "fontbutton", "cyan", "big", "340px", "10px", "fa fa-chevron-up",
-                "send('command(Rollo,WZ,up)')");
-            var FontBtnRolloSZstop = new FontButtonNew();
-            FontBtnRolloSZstop.create("MainRolloWZCtrl", "fontbutton", "cyan", "big", "340px", "90px", "fa fa-stop",
-                "send('command(Rollo,WZ,stop)')");
-            var FontBtnRolloSZdown = new FontButtonNew();
-            FontBtnRolloSZdown.create("MainRolloWZCtrl", "fontbutton", "cyan", "big", "340px", "170px",
-                "fa fa-chevron-down", "send('command(Rollo,WZ,down)')");
-            var FontBtnRolloSZstepUp = new FontButtonNew();
-            FontBtnRolloSZstepUp.create("MainRolloWZCtrl", "fontbutton", "cyan", "big", "420px", "10px", "fa fa-plus",
-                "send('command(Rollo,WZ,StepUp)')");
-            var FontBtnRolloSZstepDown = new FontButtonNew();
-            FontBtnRolloSZstepDown.create("MainRolloWZCtrl", "fontbutton", "cyan", "big", "420px", "170px",
-                "fa fa-minus", "send('command(Rollo,WZ,StepDown)')");
-
-
-            CbSSrolloWZ = Object.create(CheckBox);
-            CbSSrolloWZ.create("MainRolloWZCtrl", "SSRolloWZ", "cyan", "520px", "10px", "SunRise-SunSet",
-                "command(Rollo,WZ,SSXX");
+            var rolloCtrlWZ = new RolloCtrl();
+            rolloCtrlWZ.create("MainRolloWZCtrl", "340px", "10px", "cyan", "Rolladen WZ", "WZ");
         </script>
 
 

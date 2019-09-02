@@ -1560,13 +1560,255 @@ class CDLibrary {
 
 
 
+/* --------------------- Class Kachel -------------------------------------- */
+class Kachel {
+    constructor() {
+        this.ID = "";
+
+
+        //optionale Parameter
+        this.b = "200px";
+        this.h = "350px";
+
+        this.btnTextColor = "black";
+        this.labelcolor = "lime";
+    }
+    create(ParentID, posTop, posLeft, breite, hoehe, color, title, ...param) {
+        this.color = color;
+        this.b = breite;
+        this.h = hoehe;
+        if (param.length > 1) {
+            this.b = param[0];
+            this.h = param[1];
+
+            this.btnTextColor = param[2];
+            this.labelcolor = param[3];
+        }
+        var container = document.createElement("div");
+        this.ID = container;
+        container.style.flexDirection = "column";
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.className = color + "Light";
+        container.style.width = this.b;
+        container.style.height = this.h;
+        container.style.color = this.labelcolor;
+
+        // Label 
+        var label = document.createElement("div");
+        label.style.paddingTop = "2px";
+        label.style.height = "30px";
+        label.style.backgroundColor = "black";
+        label.innerHTML = title;
+        container.append(label);
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+}
 
 
 
 
+//TODO: Noch auszutauschen für alle Rollande Steuerungen
+/* --------------------- Class Rollo Ctrl -------------------------------------- */
+class RolloCtrl {
+    constructor() {
+        this.ID = "";
+
+
+        //optionale Parameter
+        this.b = "240px";
+        this.h = "260px";
+
+        this.btnTextColor = "black";
+        this.labelcolor = "lime";
+    }
+    create(ParentID, posTop, posLeft, color, title, room, ...param) {
+        this.color = color;
+        if (param.length > 1) {
+            this.b = param[0];
+            this.h = param[1];
+
+            this.btnTextColor = param[2];
+            this.labelcolor = param[3];
+        }
+        var container = document.createElement("div");
+        this.ID = container;
+        container.style.flexDirection = "column";
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.className = color + "Light";
+        container.style.width = this.b;
+        container.style.height = this.h;
+        container.style.color = this.labelcolor;
+
+        // Label 
+        var label = document.createElement("div");
+        label.style.paddingTop = "2px";
+        label.style.height = "30px";
+        label.style.backgroundColor = "black";
+        label.innerHTML = title;
+        container.append(label);
+
+        var btnCont1 = document.createElement("div");
+        btnCont1.style.width = this.b;
+        btnCont1.style.marginTop = "5px";
+        btnCont1.style.padding = "2px";
+        btnCont1.style.display = "flex";
+        btnCont1.style.flexDirection = "row";
+        btnCont1.style.justifyContent = "space-between";
+        container.append(btnCont1);
+
+        var btn1 = document.createElement("div");
+        btn1.style.width = "33%";
+        btn1.className = "fontbutton";
+        btn1.classList.add(color);
+        btn1.style.display = "flex";
+        btn1.style.alignItems = "center";
+        btn1.style.justifyContent = "center";
+        btn1.setAttribute("onclick", cmd);
+        var btn1Sign = document.createElement("span");
+        btn1Sign.className = "fa fa-chevron-up";
+        btn1Sign.style.fontSize = "30px";
+
+        btn1Sign.style.color = "white";
+        this.ID1 = btn1Sign;
+        btn1.append(btn1Sign);
+        btnCont1.append(btn1);
+
+        var btn2 = document.createElement("div");
+        btn2.style.width = "33%";
+        btn2.className = "fontbutton";
+        btn2.classList.add(color);
+        btn2.style.display = "flex";
+        btn2.style.alignItems = "center";
+        btn2.style.justifyContent = "center";
+        btn2.setAttribute("onclick", cmd);
+        var btn2Sign = document.createElement("span");
+        btn2Sign.className = "fa fa-stop";
+        btn2Sign.style.fontSize = "30px";
+        btn2Sign.style.padding = "5px";
+        btn2Sign.style.color = "white";
+        this.ID1 = btn2Sign;
+        btn2.append(btn2Sign);
+        btnCont1.append(btn2);
+
+        var btn3 = document.createElement("div");
+        btn3.style.width = "33%";
+        btn3.className = "fontbutton";
+        btn3.classList.add(color);
+        btn3.style.display = "flex";
+        btn3.style.alignItems = "center";
+        btn3.style.justifyContent = "center";
+        btn3.setAttribute("onclick", cmd);
+        var btn3Sign = document.createElement("span");
+        btn3Sign.className = "fa fa-chevron-down";
+        btn3Sign.style.fontSize = "30px";
+        btn3Sign.style.padding = "5px";
+        btn3Sign.style.color = "white";
+        this.ID1 = btn3Sign;
+        btn3.append(btn3Sign);
+        btnCont1.append(btn3);
+
+        var btnCont2 = document.createElement("div");
+        btnCont2.style.marginTop = "10px";
+        btnCont2.style.width = this.b;
+        btnCont2.style.display = "flex";
+        btnCont2.style.flexDirection = "row";
+        btnCont2.style.justifyContent = "space-around";
+        container.append(btnCont2);
+
+        var btn4 = document.createElement("div");
+        btn4.style.width = "30%";
+        btn4.className = "fontbutton";
+        btn4.classList.add(color);
+        btn4.style.display = "flex";
+        btn4.style.alignItems = "center";
+        btn4.style.justifyContent = "center";
+        var cmd4 = "send('command(Rollo," + room + ",StepUp)')"
+        btn4.setAttribute("onclick", cmd4);
+        var btn4Sign = document.createElement("span");
+        btn4Sign.className = "fa fa-plus";
+        btn4Sign.style.fontSize = "30px";
+        btn4Sign.style.padding = "5px";
+        btn4Sign.style.color = "white";
+        this.ID1 = btn4Sign;
+        btn4.append(btn4Sign);
+        btnCont2.append(btn4);
 
 
 
+        var btn5 = document.createElement("div");
+        btn5.style.width = "30%";
+        btn5.className = "fontbutton";
+        btn5.classList.add(color);
+        btn5.style.display = "flex";
+        btn5.style.alignItems = "center";
+        btn5.style.justifyContent = "center";
+        var cmd5 = "send('command(Rollo," + room + ",StepDown)')"
+        btn5.setAttribute("onclick", cmd5);
+        var btn5Sign = document.createElement("span");
+        btn5Sign.className = "fa fa-minus";
+        btn5Sign.style.fontSize = "30px";
+        btn5Sign.style.padding = "5px";
+        btn5Sign.style.color = "white";
+        this.ID1 = btn5Sign;
+        btn5.append(btn5Sign);
+        btnCont2.append(btn5);
+
+
+        var btnCont3 = document.createElement("div");
+        btnCont3.style.width = this.b;
+        btnCont3.style.marginTop = "20px";
+        btnCont3.style.padding = "2px";
+        btnCont3.style.display = "flex";
+        btnCont3.style.flexDirection = "row";
+        btnCont3.style.justifyContent = "space-around";
+        container.append(btnCont3);
+
+        var elem1 = document.createElement("label");
+        elem1.className = "CBcontainer";
+        elem1.classList.add(color);
+        elem1.innerHTML = "SunRise-SunSet";
+
+
+        btnCont3.append(elem1);
+
+
+        var elem2 = document.createElement("input");
+        elem2.setAttribute("type", "checkbox");
+        elem2.checked = false;
+        elem2.id = this.Ident;
+        elem1.append(elem2);
+
+        var elem3 = document.createElement("span");
+        elem3.className = "checkmark";
+        elem1.append(elem3);
+
+
+        elem2.addEventListener('change', function () {
+            var sendCmd = "command(Rollo," + room + ",SSX)";
+            if (this.checked) {
+                // Checkbox is checked..
+                elem1.style.color = "white";
+                //var n = sendCmd.search("X"); 
+                var res = sendCmd.replace("X", "on");
+                send(res);
+            } else {
+                // Checkbox is not checked..
+                elem1.style.color = "blue";
+                var res = sendCmd.replace("X", "off");
+                send(res);
+            }
+        });
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+
+}
 
 
 
