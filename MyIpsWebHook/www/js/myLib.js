@@ -60,15 +60,24 @@ class TimePicker {
         var a = 0;
         for (var i = 0; i < 29; i++) {
             var elem = document.createElement("div");
-            if (i === 0) { a = 22; }
-            else if (i === 1) { a = 23; }
-            else if (i === 26) { a = 0; }
-            else if (i === 27) { a = 1; }
-            else if (i === 28) { a = 2; }
-            else {
+            if (i === 0) {
+                a = 22;
+            } else if (i === 1) {
+                a = 23;
+            } else if (i === 26) {
+                a = 0;
+            } else if (i === 27) {
+                a = 1;
+            } else if (i === 28) {
+                a = 2;
+            } else {
                 a = i - 2;
             };
-            if (a < 10) { var zahl = "0" + a; } else { zahl = a; }
+            if (a < 10) {
+                var zahl = "0" + a;
+            } else {
+                zahl = a;
+            }
             elem.innerHTML = zahl;
             elem2.append(elem);
         }
@@ -93,15 +102,24 @@ class TimePicker {
         for (var i = 0; i < 17; i++) {
             var elem5 = document.createElement("div");
 
-            if (i === 0) { a = 50; }
-            else if (i === 1) { a = 55; }
-            else if (i === 14) { a = 0; }
-            else if (i === 15) { a = 5; }
-            else if (i === 16) { a = 0; }
-            else {
+            if (i === 0) {
+                a = 50;
+            } else if (i === 1) {
+                a = 55;
+            } else if (i === 14) {
+                a = 0;
+            } else if (i === 15) {
+                a = 5;
+            } else if (i === 16) {
+                a = 0;
+            } else {
                 a = (i - 2) * 5;
             };
-            if (a < 10) { zahl = "0" + a; } else { zahl = a; }
+            if (a < 10) {
+                zahl = "0" + a;
+            } else {
+                zahl = a;
+            }
             elem5.innerHTML = zahl;
             elem4.append(elem5);
         }
@@ -120,7 +138,9 @@ class TimePicker {
         Aelem.style.left = "20px";
         Aelem.id = "btn" + ObId;
         Aelem.classList.add("smallwide", "grey");
-        Aelem.addEventListener("click", function () { setScrollTime(); });
+        Aelem.addEventListener("click", function () {
+            setScrollTime();
+        });
 
         var Aelem1 = document.createElement("span");
         Aelem1.id = ObId + "hour";
@@ -192,16 +212,13 @@ class CtrlButton {
                 MCtrlWindow.forEach(function (element) {
                     var a = element.className;
                     document.getElementsByClassName(a)[0].style.width = "0px";
-                }
-                );
+                });
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
             };
-        }
-        else if (ctrltype === "command") {
+        } else if (ctrltype === "command") {
             elem.setAttribute("onclick", command);
-        }
-        else if (ctrltype === "CtrlCmd") {
+        } else if (ctrltype === "CtrlCmd") {
             elem.onclick = function () {
 
                 // alle Ctrl auf 0px verkleinern 
@@ -210,15 +227,13 @@ class CtrlButton {
                 MCtrlWindow.forEach(function (element) {
                     var a = element.className;
                     document.getElementsByClassName(a)[0].style.width = "0px";
-                }
-                );
+                });
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
 
                 send(command);
             }
-        }
-        else if (ctrltype === "CtrlFunc") {
+        } else if (ctrltype === "CtrlFunc") {
             elem.onclick = function () {
 
                 // alle Ctrl auf 0px verkleinern 
@@ -227,8 +242,7 @@ class CtrlButton {
                 MCtrlWindow.forEach(function (element) {
                     var a = element.className;
                     document.getElementsByClassName(a)[0].style.width = "0px";
-                }
-                );
+                });
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
 
@@ -275,8 +289,7 @@ var ToggleCtrlBtn = {
                     document.getElementsByClassName(class2)[0].style.width = "26vw";
 
                 }
-            }
-            else {
+            } else {
                 elem.innerHTML = text1;
                 elem.classList.add("blueToggle");
                 elem.classList.remove("blue");
@@ -325,8 +338,7 @@ class ToggleBtn {
                     document.getElementsByClassName(class2)[0].style.width = "26vw";
 
                 }
-            }
-            else {
+            } else {
                 elem.innerHTML = text1;
                 elem.classList.add("blueToggle");
                 elem.classList.remove("blue");
@@ -510,57 +522,42 @@ class DynIcon {
         if (this.typ === "ana") {
             if (value === 0) {
                 this.ID.src = "images/" + this.ImageBaseName + "0.png";
-            }
-            else if (value === 1) {
+            } else if (value === 1) {
                 this.ID.src = "images/" + this.ImageBaseName + "1.png";
-            }
-            else if (value > 1 && value < 11) {
+            } else if (value > 1 && value < 11) {
                 this.ID.src = "images/" + this.ImageBaseName + "10.png";
-            }
-            else if (value > 10 && value < 21) {
+            } else if (value > 10 && value < 21) {
                 this.ID.src = "images/" + this.ImageBaseName + "20.png";
-            }
-            else if (value > 20 && value < 31) {
+            } else if (value > 20 && value < 31) {
                 this.ID.src = "images/" + this.ImageBaseName + "30.png";
-            }
-            else if (value > 30 && value < 41) {
+            } else if (value > 30 && value < 41) {
                 this.ID.src = "images/" + this.ImageBaseName + "40.png";
-            }
-            else if (value > 40 && value < 51) {
+            } else if (value > 40 && value < 51) {
                 this.ID.src = "images/" + this.ImageBaseName + "50.png";
-            }
-            else if (value > 50 && value < 61) {
+            } else if (value > 50 && value < 61) {
                 this.ID.src = "images/" + this.ImageBaseName + "60.png";
-            }
-            else if (value > 60 && value < 71) {
+            } else if (value > 60 && value < 71) {
                 this.ID.src = "images/" + this.ImageBaseName + "70.png";
-            }
-            else if (value > 70 && value < 81) {
+            } else if (value > 70 && value < 81) {
                 this.ID.src = "images/" + this.ImageBaseName + "80.png";
-            }
-            else if (value > 80 && value < 91) {
+            } else if (value > 80 && value < 91) {
                 this.ID.src = "images/" + this.ImageBaseName + "90.png";
-            }
-            else if (value > 90 && value < 101) {
+            } else if (value > 90 && value < 101) {
                 this.ID.src = "images/" + this.ImageBaseName + "100.png";
-            }
-            else { }
+            } else {}
         }
         if (this.typ === "bin") {
             value = value + 0;
             if (this.revers) {
                 if (value === 0) {
                     this.ID.src = "images/" + this.ImageBaseName + "1.png";
-                }
-                else {
+                } else {
                     this.ID.src = "images/" + this.ImageBaseName + "0.png";
                 }
-            }
-            else {
+            } else {
                 if (value === 0) {
                     this.ID.src = "images/" + this.ImageBaseName + "0.png";
-                }
-                else {
+                } else {
                     this.ID.src = "images/" + this.ImageBaseName + "1.png";
                 }
             }
@@ -635,11 +632,9 @@ class StateDisplay {
             if (this.state0 === "Number") {
                 var wert = value.toFixed(n);
                 this.ID.innerHTML = (wert.toString() + this.unit);
-            }
-            else if (this.state0 === "String") {
+            } else if (this.state0 === "String") {
                 this.ID.innerHTML = (value.toString() + this.unit);
-            }
-            else {
+            } else {
                 switch (value) {
                     case 0:
                         this.ID.innerHTML = this.state0;
@@ -662,8 +657,11 @@ class StateDisplay {
                 }
             }
         } catch (error) {
-            alert("value in Display error" + this.ID);
+            $('fehler').innerHTML = "Variable  fehlt:";
+            //alert("value in Display error" + this.ID);
         }
+
+
     }
 
     setTextColor(farbe) {
@@ -712,16 +710,13 @@ class VarDis {
         try {
             if (value === false) {
                 this.ID.innerHTML = this.state1;
-            }
-            else if (value === true) {
+            } else if (value === true) {
                 this.ID.innerHTML = this.state2;
-            }
-            else if (n === 0 || n > 0) {
+            } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
                 var wert = value.toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
-            }
-            else {
+            } else {
                 this.ID.innerHTML = value + this.unit;
             }
         } catch (error) {
@@ -791,116 +786,161 @@ class VarDis {
   
 */
 
+/* --------------------- Class Heating Ctrl -------------------------------------- */
+class HeatCtrl {
+    constructor() {
+        this.ID = "";
+        this.value1ID = "";
+        this.value2ID = "";
+        this.color = "";
+        this.state0 = "+";
+        this.state1 = "-";
+        this.state2 = "set";
+        this.unit = "°C";
+        this.leftStat = "00";
+        this.rightStat = "00";
 
-function addTempCtrl(ParentID, Ident, color, posTop, posLeft, Titel, valueID, valueLeftID, valueRightID, room) {
-    var elem1 = document.createElement("div");
-    elem1.className = "tempcontrol";
-    elem1.classList.add(color);
-    elem1.style.color = "lime";
-    elem1.id = Ident;
-    elem1.style.position = "absolute";
-    elem1.style.left = posLeft;
-    elem1.style.top = posTop;
+        //optionale Parameter
+        this.b = "200px";
+        this.h = "220px";
+        this.zeichengr = "15px";
+        this.btnTextColor = "black";
+        this.labelcolor = "lime";
+    }
+    create(ParentID, posTop, posLeft, color, label, room, ...param) {
+        this.color = color;
+        if (param.length > 1) {
+            this.b = param[0];
+            this.h = param[1];
+            this.zeichengr = param[2];
+            this.btnTextColor = param[3];
+            this.labelcolor = param[4];
+        }
+        var container = document.createElement("div");
+        this.ID = container;
+        container.style.flexDirection = "column";
+
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.className = color + "Light";
+        container.style.width = this.b;
+        container.style.height = this.h;
+        container.style.color = this.labelcolor;
+
+        // Label 
+        var elem1 = document.createElement("div");
+        elem1.style.paddingTop = "5px";
+        elem1.style.height = "30px";
+        elem1.style.backgroundColor = "black";
+        elem1.innerHTML = label;
+        container.append(elem1)
+
+        //ausstehender Soll - Einstell Wert - Soll WERT
+        var elemTC = document.createElement("div");
+        elemTC.style.width = this.b;
+        elemTC.style.padding = "5px";
+        elemTC.style.height = "35%";
+        elemTC.style.color = "black";
+        elemTC.style.display = "flex";
+        elemTC.style.alignItems = "flex-end";
+        elemTC.style.flexDirection = "row";
+        elemTC.style.justifyContent = "space-between";
+        container.append(elemTC);
+
+        var elemTL = document.createElement("span");
+        this.value1ID = elemTL;
+        elemTL.innerHTML = this.leftStat + this.unit;
+        elemTC.append(elemTL);
+
+        var elemTM = document.createElement("span");
+        elemTM.style.paddingBottom = "10%";
+        elemTM.innerHTML = "22.0" + this.unit;
+        elemTM.style.fontSize = "30px";
+        elemTC.append(elemTM);
+
+        var elemTR = document.createElement("span");
+        this.value2ID = elemTR;
+        elemTR.innerHTML = this.rightStat + this.unit;
+        elemTC.append(elemTR);
+
+        // + / - buttons
+        var elem1 = document.createElement("div");
+        elem1.style.width = this.b;
+        elem1.style.height = "25%";
+        elem1.style.display = "flex";
+        elem1.style.flexDirection = "row";
+        elem1.style.justifyContent = "space-around";
+        elem1.style.position = "absolute";
+        elem1.style.top = "51%";
+        elem1.style.padding = "2px";
+        elem1.style.fontsize = this.fs1;
+        container.append(elem1);
+
+        var elem2 = document.createElement("div");
+        elem2.style.width = "50%";
+        elem2.style.color = this.btnTextColor;
+        elem2.className = "ctrlbutton";
+        elem2.classList.add(this.color);
+        elem2.innerHTML = this.state0;
+        elem2.style.flexGrow = "1";
+        elem2.onclick = function () {
+            var solltemp = parseFloat(elemTM.innerHTML) + 0.5;
+            elemTM.innerHTML = solltemp + "°C";
+        }
+        elem1.append(elem2);
 
 
-    elem1.innerHTML = Titel;
-    elem1.style.paddingTop = "5px";
+        var elem4 = document.createElement("div");
+        elem4.style.width = "50%";
+        elem4.style.flexGrow = "1";
+        elem4.style.color = this.btnTextColor;
+        elem4.className = "ctrlbutton";
+        elem4.classList.add(this.color);
+        elem4.innerHTML = this.state1;
+        elem4.onclick = function () {
+            var solltemp = parseFloat(elemTM.innerHTML) - 0.5;
+            elemTM.innerHTML = solltemp + "°C";
+        }
+        elem1.append(elem4);
 
-    var elem3 = document.createElement("div");
-    elem3.style.display = "flex";
-    elem3.style.flexDirection = "row";
-    elem3.style.justifyContent = "space-between";
-    elem3.style.paddingTop = "15px";
-    elem3.style.marginBottom = "5px";
-    elem3.style.color = "white";
-    var elem4 = document.createElement("span");
-    elem4.id = valueLeftID;
-    elem4.innerHTML = "--";
-    elem4.style.fontSize = "14px";
-    elem4.style.paddingTop = "25px";
-    elem4.style.paddingLeft = "5px";
+        var elem5 = document.createElement("div");
+        elem5.style.width = this.b;
+        elem5.style.height = "25%";
+        elem5.style.padding = "2px";
+        elem5.style.display = "flex";
+        elem5.style.flexDirection = "row";
+        elem5.style.justifyContent = "space-around";
+        elem5.style.position = "absolute";
+        elem5.style.top = "75%";
+        container.append(elem5);
 
-    var elem5 = document.createElement("span");
-    elem5.id = valueID;
-    elem5.innerHTML = "22.0";
-    elem5.style.fontSize = "28px";
+        var elem6 = document.createElement("div");
+        elem6.style.flexGrow = "1";
+        elem6.className = "ctrlbutton";
+        elem6.classList.add(this.color);
+        elem6.innerHTML = this.state2;
+        elem6.style.color = this.btnTextColor;
+        elem6.onclick = function () {
+            var solltemp = parseFloat(elemTM.innerHTML);
+            var cmd = "command(Heizung," + room + "," + solltemp + ")";
+            send(cmd);
+        }
+        elem5.append(elem6);
 
-
-    var elem6 = document.createElement("span");
-    elem6.id = valueRightID;
-    elem6.innerHTML = "--";
-    elem6.style.fontSize = "14px";
-    elem6.style.paddingTop = "25px";
-    elem6.style.paddingRight = "5px";
-
-    elem7 = document.createElement("div");
-    elem7.style.display = "flex";
-    elem7.style.flexDirection = "row";
-    elem7.style.justifyContent = "space-between";
-
-
-    elem8 = document.createElement("div");
-    elem8.className = "fontbutton";
-    elem8.classList.add(color, "normal");
-    elem9 = document.createElement("span");
-    elem9.className = "fa fa-plus";
-    elem9.style.fontSize = "24px";
-    elem9.style.padding = "12px";
-    var cmd1 = "incTemp('" + valueID + "')";
-    elem8.setAttribute("onclick", cmd1);
-    elem8.append(elem9);
-    elem7.append(elem8);
+        document.getElementById(ParentID).appendChild(container);
+    }
 
 
-    elem10 = document.createElement("div");
-    elem10.className = "fontbutton";
-    elem10.classList.add(color, "normal");
-    elem11 = document.createElement("span");
-    elem11.className = "fa fa-minus";
-    elem11.style.fontSize = "24px";
-    elem11.style.padding = "12px";
-    var cmd2 = "decTemp('" + valueID + "')";
-    elem10.setAttribute("onclick", cmd2);
-    elem10.append(elem11);
-    elem7.append(elem10);
-
-    var elem12 = document.createElement("div");
-    elem12.className = "ctrlbutton";
-    elem12.classList.add("normal", color);
-    elem12.innerHTML = "set";
-
-    var cmd3 = "setSollTemp('" + valueID + "', '" + room + "');";
-    elem12.setAttribute("onclick", cmd3);
-    elem12.style.width = "199px";
-    elem3.append(elem4);
-    elem3.append(elem5);
-    elem3.append(elem6);
-
-    elem1.append(elem3);
-    elem1.append(elem7);
-    elem1.append(elem12);
-
-    document.getElementById(ParentID).appendChild(elem1);
+    update(value1, value2) {
+        this.value1ID.innerHTML = value1 + this.unit;
+        this.value2ID.innerHTML = value2 + this.unit;
+    }
 }
 
-function incTemp(valueID) {
-    var solltempS = document.getElementById(valueID).innerHTML;
-    var solltemp = parseFloat(solltempS) + 0.5;
-    document.getElementById(valueID).innerHTML = solltemp;
-}
 
-function decTemp(valueID) {
-    var solltempS = document.getElementById(valueID).innerHTML;
-    var solltemp = parseFloat(solltempS) - 0.5;
-    document.getElementById(valueID).innerHTML = solltemp;
-}
 
-function setSollTemp(valueID, room) {
-    var sollTemp = document.getElementById(valueID).innerHTML;
-    var cmd = "command(Heizung," + room + "," + sollTemp + ")";
 
-    send(cmd);
-}
 
 function addStatus(ParentID, Ident, color, posTop, posLeft, text) {
     var elem = document.createElement("div");
@@ -1079,41 +1119,36 @@ class GlideButton {
             SubMenus.forEach(function (element) {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
-            }
-            );
+            });
             // alle Main auf 0px verkleinern 
             var Main = document.getElementsByTagName("Main");
             var MainWindow = Array.from(Main);
             MainWindow.forEach(function (element) {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
-            }
-            );
+            });
             // alle Ctrl auf 0px verkleinern 
             var Ctrl = document.getElementsByTagName("Ctrl");
             var MCtrlWindow = Array.from(Ctrl);
             MCtrlWindow.forEach(function (element) {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
-            }
-            );
+            });
             if (MenuType === "MM") {
-                
+
                 //benötigte Fenster einblenden für Main Menu
                 document.getElementById(ParentID).style.width = "8vw";
                 if (IDMain !== "") {
                     document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28vw";
                     document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
-                }
-                else {
+                } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName("StartScreen")[0].style.left = "8vw";
                     document.getElementsByClassName(IDFull)[0].style.width = "92vw";
 
                 }
-            }
-            else {
+            } else {
                 if (IDMain !== "") {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
@@ -1122,8 +1157,7 @@ class GlideButton {
                     document.getElementById(IDMain).style.width = "58vw";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26vw";
-                }
-                else {
+                } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "8vw";
@@ -1178,7 +1212,7 @@ class GlideButton {
         document.getElementById(ParentID).appendChild(elem1);
 
 
-        
+
     };
 
     update(value1, unit1, value2, unit2, value3, unit3, value4, unit4) {
@@ -1365,8 +1399,7 @@ class AlarmBox {
     update(value) {
         if (value == 2) {
             document.getElementById(this.ID).style.display = "block";
-        }
-        else {
+        } else {
             document.getElementById(this.ID).style.display = "none";
         }
     }
@@ -1391,8 +1424,7 @@ class IconList {
                 };
             }
 
-        }
-        else {
+        } else {
             // Liste einlesen
             var Liste = new data();
             switch (source) {
@@ -1435,14 +1467,11 @@ class IconList {
             elem.style.padding = "2px";
             if (source === "TV") {
                 elem.src = "images/Sender/" + icon;
-            }
-            else if (source === "IRadio") {
+            } else if (source === "IRadio") {
                 elem.src = "images/RadioStation/" + icon;
-            }
-            else if (source === "CD") {
+            } else if (source === "CD") {
                 elem.src = "CDs/" + icon;
-            }
-            else if (source === "AudioBook") {
+            } else if (source === "AudioBook") {
                 elem.src = "AudioBooks/" + icon;
             }
             elem.onclick = function () {
@@ -1459,14 +1488,11 @@ class IconList {
                 item['selected'] = true;
                 if (source === "TV") {
                     var cmd = "command(TV,Channel," + item['Sender'] + ")";
-                }
-                else if (source === "IRadio") {
+                } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
-                }
-                else if (source === "CD") {
+                } else if (source === "CD") {
                     var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
-                }
-                else if (source === "AudioBook") {
+                } else if (source === "AudioBook") {
                     var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
                 }
                 send(cmd);
@@ -1523,8 +1549,7 @@ class CDLibrary {
             }
 
             document.getElementById(ParentID).appendChild(elem);
-        }
-        )
+        })
     }
 
 
@@ -1584,8 +1609,7 @@ class FontButtonNew {
     update(value) {
         if (value === true) {
             this.ID1.style.color = "lime";
-        }
-        else {
+        } else {
             this.ID1.style.color = "white";
         }
     }
@@ -1712,14 +1736,11 @@ class NavPad {
             symbol.style.fontSize = "38px";
             if (i == 7) {
                 symbol.style.top = "25px";
-            }
-            else if (i == 1) {
+            } else if (i == 1) {
                 symbol.style.top = "-10px";
-            }
-            else if (i == 3) {
+            } else if (i == 3) {
                 symbol.style.left = "-15px";
-            }
-            else if (i == 5) {
+            } else if (i == 5) {
                 symbol.style.left = "15px";
             }
             taste.append(symbol);
@@ -1800,8 +1821,7 @@ class TextScrollBox {
         try {
             if (text !== "") {
                 this.ID.value = text;
-            }
-            else {
+            } else {
                 this.ID.value = "no Alarm List";
             }
         } catch (error) {
@@ -1865,14 +1885,11 @@ class IconVarDisplay {
         try {
             if (n === "state") {
                 this.ID.innerHTML = this.state[value];
-            }
-
-            else if (n === 0 || n > 0) {
+            } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
                 var wert = value.toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
-            }
-            else {
+            } else {
                 this.ID.innerHTML = value + this.unit;
             }
         } catch (error) {
@@ -1919,8 +1936,7 @@ class TransVarDisplay {
         elem1.style.fontSize = "18px";
         elem1.style.justifyContent = "center";
         elem1.style.paddingBottom = "5px"
-        elem.append(elem1);
-        ;
+        elem.append(elem1);;
         var elem2 = document.createElement("div");
         elem.append(elem2);
 
@@ -1942,13 +1958,11 @@ class TransVarDisplay {
 
                 this.ID.innerHTML = restArgs[value];
 
-            }
-            else if (n === 0 || n > 0) {
+            } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
                 var wert = value.toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
-            }
-            else {
+            } else {
                 this.ID.innerHTML = value + this.unit;
             }
         } catch (error) {
@@ -2009,8 +2023,7 @@ class flashLed {
     update(state) {
         if (state == true) {
             this.ID.style.WebkitAnimationDuration = "1s";
-        }
-        else {
+        } else {
             this.ID.style.WebkitAnimationDuration = "0s";
         }
     }
@@ -2097,13 +2110,11 @@ class CtrlStatButton {
                 MCtrlWindow.forEach(function (element) {
                     var a = element.className;
                     document.getElementsByClassName(a)[0].style.width = "0px";
-                }
-                );
+                });
                 // ctrlWindow umschalten
                 document.getElementsByClassName(command)[0].style.width = "26vw";
             }
-        }
-        else if (cmdType == "command") {
+        } else if (cmdType == "command") {
             elem.setAttribute("onclick", command);
         }
 
@@ -2144,16 +2155,14 @@ class CtrlStatButton {
         if (stat1 === true || stat1 === "Yes") {
             this.statcolor = "lime";
             this.id1.style.color = this.statcolor;
-        }
-        else if (stat1 === false || stat1 === "No") {
+        } else if (stat1 === false || stat1 === "No") {
             this.statcolor = "red";
             this.id1.style.color = this.statcolor;
         }
         if (stat2 === true || stat1 === "Yes") {
             this.statcolor = "lime";
             this.id3.style.color = this.statcolor;
-        }
-        else if (stat2 === false || stat2 === "No") {
+        } else if (stat2 === false || stat2 === "No") {
             this.statcolor = "red";
             this.id3.style.color = this.statcolor;
         }
@@ -2179,27 +2188,35 @@ class CtrlTile {
         this.state1 = "on";
         this.leftStat = "links";
         this.rightStat = "rechts";
+        this.b = "200px";
+        this.h = "210px";
     }
 
     create(ParentID, posTop, posLeft, label, color, BaseIcon, cmd1, cmd2, ...param) {
-        if (param.length>0){
+        if (param.length > 0) {
             this.state0 = param[0];
             this.state1 = param[1];
             this.leftStat = param[2];
-            this.rightStat = param[3];   
+            this.rightStat = param[3];
         }
         this.color = color;
         this.icon = BaseIcon;
         var elem = document.createElement("div");
-        elem.className = "Tile";
+        //elem.className = "Tile";
         elem.classList.add(color + "Light");
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
-        elem.style.flexDirection =   "column";
+        elem.style.width = this.b;
+        elem.style.height = this.h;
+        elem.style.flexDirection = "column";
         this.ID = elem;
 
         var elemL = document.createElement("div");
+        elemL.style.paddingTop = "5px";
+        elemL.style.height = "30px";
+        elemL.style.backgroundColor = "black";
+        elemL.style.color = "lime";
         elemL.innerHTML = label;
         elem.append(elemL);
 
@@ -2208,8 +2225,7 @@ class CtrlTile {
         Bild.style.width = "100px";
         Bild.style.height = "100px";
         Bild.style.position = "relative";
-        Bild.style.left = "50%x";
-        Bild.style.paddingTop = "5px";
+        Bild.style.paddingTop = "10px";
         this.id1 = Bild;
         elem.append(Bild);
 
@@ -2231,16 +2247,16 @@ class CtrlTile {
         this.id3 = elemTR;
         elemTC.append(elemTR);
 
+
         var elem1 = document.createElement("div");
+        elem1.style.width = this.b;
         elem1.style.display = "flex";
         elem1.style.flexDirection = "row";
-        elem1.style.justifyContent = "space-between";
+        elem1.style.justifyContent = "space-around";
+        elem1.style.padding = "2px";
         elem1.style.position = "absolute";
-        elem1.style.top = "75%";
-
+        elem1.style.top = "70%";
         elem.append(elem1);
-
-
 
         var elem2 = document.createElement("div");
         elem2.className = "ctrlbutton";
@@ -2249,19 +2265,15 @@ class CtrlTile {
         this.id4 = elem2;
         this.cmd1 = cmd1;
         elem2.setAttribute("onclick", this.cmd1);
-
         elem1.append(elem2);
-
 
         var elem4 = document.createElement("div");
         elem4.className = "ctrlbutton";
         elem4.classList.add(this.size, this.color);
         elem4.innerHTML = this.state1;
         this.id5 = elem4;
-
         this.cmd2 = cmd2;
         elem4.setAttribute("onclick", this.cmd2);
-
         elem1.append(elem4);
 
         document.getElementById(ParentID).appendChild(elem);
@@ -2273,8 +2285,7 @@ class CtrlTile {
             this.id1.src = "images/" + this.icon + "1" + ".png";
             this.id4.style.color = "white";
             this.id5.style.color = "lime"
-        }
-        else {
+        } else {
             this.id1.src = "images/" + this.icon + "0" + ".png";
             this.id4.style.color = "lime";
             this.id5.style.color = "white"
@@ -2514,8 +2525,7 @@ class HeadLine {
     update(headline) {
         if (typeof (headline) != 'undefined' && headline != null) {
             this.ID.innerHTML = headline;
-        }
-        else {
+        } else {
             $('fehler').innerHTML = "Variable wrong or missing:";
         }
 
@@ -2662,39 +2672,51 @@ class EierUhr {
 
         jQuery('.incSec1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time > 57) { time = -2 };
+            if (time > 57) {
+                time = -2
+            };
             clock1.stop();
             clock1.setTime(time + 2);
         });
         jQuery('.decSec1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time < 1) { time = 0 };
+            if (time < 1) {
+                time = 0
+            };
             clock1.stop();
             clock1.setTime(time - 0);
         });
 
         jQuery('.incMin1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time > 3538) { time = 3539 };
+            if (time > 3538) {
+                time = 3539
+            };
             clock1.stop();
             clock1.setTime(time + 61);
         });
         jQuery('.decMin1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time < 61) { time = 60 };
+            if (time < 61) {
+                time = 60
+            };
             clock1.stop();
             clock1.setTime(time - 59);
         });
 
         jQuery('.incH1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time > 82798) { time = 82799 };
+            if (time > 82798) {
+                time = 82799
+            };
             clock1.stop();
             clock1.setTime(time + 3601);
         });
         jQuery('.decH1').click(function (e) {
             var time = clock1.getTime().time;
-            if (time < 3588) { time = 3599 };
+            if (time < 3588) {
+                time = 3599
+            };
             clock1.stop();
             clock1.setTime(time - 3599);
         });
@@ -2724,39 +2746,51 @@ class EierUhr {
 
         jQuery('.incSec2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time > 57) { time = -2 };
+            if (time > 57) {
+                time = -2
+            };
             clock2.stop();
             clock2.setTime(time + 2);
         });
         jQuery('.decSec2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time < 1) { time = 0 };
+            if (time < 1) {
+                time = 0
+            };
             clock2.stop();
             clock2.setTime(time - 0);
         });
 
         jQuery('.incMin2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time > 3538) { time = 3539 };
+            if (time > 3538) {
+                time = 3539
+            };
             clock2.stop();
             clock2.setTime(time + 61);
         });
         jQuery('.decMin2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time < 61) { time = 60 };
+            if (time < 61) {
+                time = 60
+            };
             clock2.stop();
             clock2.setTime(time - 59);
         });
 
         jQuery('.incH2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time > 82798) { time = 82799 };
+            if (time > 82798) {
+                time = 82799
+            };
             clock2.stop();
             clock2.setTime(time + 3601);
         });
         jQuery('.decH2').click(function (e) {
             var time = clock2.getTime().time;
-            if (time < 3588) { time = 3599 };
+            if (time < 3588) {
+                time = 3599
+            };
             clock2.stop();
             clock2.setTime(time - 3599);
         });
@@ -2786,39 +2820,51 @@ class EierUhr {
 
         jQuery('.incSec3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time > 57) { time = -2 };
+            if (time > 57) {
+                time = -2
+            };
             clock3.stop();
             clock3.setTime(time + 2);
         });
         jQuery('.decSec3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time < 1) { time = 0 };
+            if (time < 1) {
+                time = 0
+            };
             clock3.stop();
             clock3.setTime(time - 0);
         });
 
         jQuery('.incMin3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time > 3538) { time = 3539 };
+            if (time > 3538) {
+                time = 3539
+            };
             clock3.stop();
             clock3.setTime(time + 61);
         });
         jQuery('.decMin3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time < 61) { time = 60 };
+            if (time < 61) {
+                time = 60
+            };
             clock3.stop();
             clock3.setTime(time - 59);
         });
 
         jQuery('.incH3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time > 82798) { time = 82799 };
+            if (time > 82798) {
+                time = 82799
+            };
             clock3.stop();
             clock3.setTime(time + 3601);
         });
         jQuery('.decH3').click(function (e) {
             var time = clock3.getTime().time;
-            if (time < 3588) { time = 3599 };
+            if (time < 3588) {
+                time = 3599
+            };
             clock3.stop();
             clock3.setTime(time - 3599);
         });
@@ -3034,8 +3080,7 @@ class ButtonSlider {
                 send('command(upnp,' + cmd + ',' + i + ')');
             }
             content.append(elem);
-        }
-        )
+        })
         this.BtnID.parentNode.replaceChild(content, this.BtnID);
     }
     update(value) {
@@ -3073,7 +3118,7 @@ class BtnIcon {
         container.style.width = this.b;
         container.style.height = this.h;
         container.style.color = this.labelcolor;
-        
+
         container.setAttribute("onclick", fkt);
 
         var elem1 = document.createElement("div");
@@ -3097,11 +3142,10 @@ class BtnIcon {
     }
 
     update(value) {
-        if(value){
+        if (value) {
             this.labelcolor = "red";
             this.ID.style.color = this.labelcolor;
-        }
-        else {
+        } else {
             this.labelcolor = "lime";
             this.ID.style.color = this.labelcolor;
         }

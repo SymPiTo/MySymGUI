@@ -328,6 +328,7 @@
       let pos = sym.indexOf(undefined);
       if (pos != -1) {
         check(pos);
+
       }
       return sym;
 
@@ -346,6 +347,7 @@
 
     function check(index) {
       $('fehler').innerHTML = "Variable  wrong ID:" + index;
+
 
     }
 
@@ -528,12 +530,9 @@
       MainTempVHzWZ.update(sym[215], 1);
       MainTempRHzWZ.update(sym[216], 1);
 
-      /*
-              $('TempVorHzWZ1').innerHTML =  "--"  + '°C'  ;
-              $('TempRueckHzWZ1').innerHTML =  "--" + '°C' ;
-         */
-      $('SollTempHzWZ1').innerHTML = sym[27] + '°C';
-      $('SollTempAusHzWZ1').innerHTML = sym[28] + '°C';
+
+
+      HzCtrlWZ.update(sym[28], sym[27]);
 
       iHzWZ.update(sym[4]);
 
@@ -556,17 +555,10 @@
       MainTempVHzKZ.update("0.0", 1);
       MainTempRHzKZ.update("0.0", 1);
 
-      //$('PosHzKZ2').innerHTML =   Math.round(sym[5]).toFixed(0) + '%';
 
-      /*
-        $('TempVorHzKZ1').innerHTML =  "--"  + '°C'  ;
-        $('TempRueckHzKZ1').innerHTML =  "--" + '°C'  ;
-       */
-      $('SollTempHzKZ1').innerHTML = sym[34] + '°C';
-      $('SollTempAusHzKZ1').innerHTML = sym[35] + '°C';
 
       iHzKZ.update(sym[5]);
-
+      HzCtrlKZ.update(sym[35], sym[34]);
 
       DisModeHzKZCtrl.update(sym[33]);
       DisTempHzKZCtrl.update(sym[1]);
@@ -588,15 +580,9 @@
       MainTempRHzSZ.update(sym[40], 1);
 
 
-      //  $('PosHzSZ2').innerHTML =   Math.round(sym[6]).toFixed(0) + '%';
-      /* 
-        $('TempVorHzSZ1').innerHTML =  sym[39] + '°C'  ;
-        $('TempRueckHzSZ1').innerHTML = sym[40] + '°C'  ;
-        $('SollTempHzSZ1').innerHTML =  sym[37] + '°C'  ;
-        $('SollTempAusHzSZ1').innerHTML =  sym[38] + '°C' ;
-  */
-      iHzSZ.update(sym[6]);
 
+      iHzSZ.update(sym[6]);
+      HzCtrlSZ.update(sym[38], sym[37]);
 
       DisModeHzSZCtrl.update(sym[36]);
       DisTempHzSZCtrl.update(sym[0]);
@@ -620,16 +606,9 @@
       MainTempVHzK.update("0.0", 1);
       MainTempRHzK.update("0.0", 1);
 
-      //   $('PosHzK2').innerHTML =   Math.round(sym[7]).toFixed(0) + '%';
-      /*
-        $('TempVorHzK1').innerHTML =  "--"  + '°C'  ;
-        $('TempRueckHzK1').innerHTML =  "--" + '°C'  ;
-  
-        $('SollTempHzK1').innerHTML =  sym[42] + '°C'  ;
-        $('SollTempAusHzK1').innerHTML =  sym[43] + '°C' ;
-     */
-      iHzK.update(sym[7]);
 
+      iHzK.update(sym[7]);
+      HzCtrlK.update(sym[43], sym[42]);
 
       DisModeHzKCtrl.update(sym[41]);
       DisTempHzKCtrl.update(sym[3]);
@@ -668,6 +647,7 @@
 
 
     function updateValues(sym) {
+
       //<!-- ******************** Temp Difff Heizung Wohnzimmer **************************  -->
       DiIPSP1.update(sym[215], "", "");
       DiIPSP2.update(sym[216], "", "");
@@ -1035,7 +1015,6 @@
       FontBtnIRadioPowerWZ.update(sym[96]);
       IconVarDisVolWZ.update(sym[97], 0);
       IconVarDisSourceWZ.update(sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
-
 
 
 

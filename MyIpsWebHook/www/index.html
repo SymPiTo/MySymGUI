@@ -657,8 +657,7 @@
 
         <script>
             addStatus("MainHeizungWZCtrl", "BatHzWZ1", "cyan", "5px", "30px", "Battery");
-            addTempCtrl("MainHeizungWZCtrl", "TempCtrl1", "cyan", "325px", "30px", "Mode", "AdjTempHzWZ1",
-                "SollTempAusHzWZ1", "SollTempHzWZ1", "sollTempWZ");
+
 
             var DisModeHzWZ = new StateDisplay();
             DisModeHzWZ.create("MainHeizungWZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
@@ -669,6 +668,9 @@
             var DisPosHzWZCtrl = new StateDisplay();
             DisPosHzWZCtrl.create("MainHeizungWZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number",
                 "", "", "", "");
+
+            var HzCtrlWZ = new HeatCtrl();
+            HzCtrlWZ.create("MainHeizungWZCtrl", "325px", "30px", "cyan", "Heat-Control", "sollTempWZ");
         </script>
 
 
@@ -737,8 +739,7 @@
         </script>
         <script>
             addStatus("MainHzKZCtrl", "BatHzKZ1", "olive", "5px", "30px", "Battery");
-            addTempCtrl("MainHzKZCtrl", "TempCtrl2", "olive", "325px", "30px", "Soll Temperatur", "AdjTempHzKZ1",
-                "SollTempAusHzKZ1", "SollTempHzKZ1", "sollTempKZ");
+
 
             var DisModeHzKZCtrl = new StateDisplay();
             DisModeHzKZCtrl.create("MainHzKZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
@@ -749,6 +750,9 @@
             var DisPosHzKZCtrl = new StateDisplay();
             DisPosHzKZCtrl.create("MainHzKZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
                 "", "", "");
+
+            var HzCtrlKZ = new HeatCtrl();
+            HzCtrlKZ.create("MainHzKZCtrl", "325px", "30px", "olive", "Heat-Control", "sollTempKZ");
         </script>
         <!-- ************************ Heizung Schlafzimmer ************************  -->
         <!-- <Main id="MainHzSZ"   class="HeizungSZ">	</Main>  -->
@@ -813,8 +817,7 @@
         </script>
         <script>
             addStatus("MainHzSZCtrl", "BatHzSZ1", "sandy", "5px", "30px", "Battery");
-            addTempCtrl("MainHzSZCtrl", "TempCtrl3", "sandy", "325px", "30px", "Soll Temperatur", "AdjTempHzSZ1",
-                "SollTempAusHzSZ1", "SollTempHzSZ1", "sollTempSZ");
+
 
             var DisModeHzSZCtrl = new StateDisplay();
             DisModeHzSZCtrl.create("MainHzSZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
@@ -825,6 +828,9 @@
             var DisPosHzSZCtrl = new StateDisplay();
             DisPosHzSZCtrl.create("MainHzSZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
                 "", "", "");
+
+            var HzCtrlSZ = new HeatCtrl();
+            HzCtrlSZ.create("MainHzSZCtrl", "325px", "30px", "sandy", "Heat-Control", "sollTempSZ");
         </script>
 
         <!-- ************************ Heizung Kueche ************************ -->
@@ -894,8 +900,7 @@
         </script>
         <script>
             addStatus("MainHzKCtrl", "BatHzK1", "midgreen", "5px", "30px", "Battery");
-            addTempCtrl("MainHzKCtrl", "TempCtrl4", "midgreen", "325px", "30px", "Soll Temperatur", "AdjTempHzK1",
-                "SollTempAusHzK1", "SollTempHzK1", "sollTempK");
+
 
             var DisModeHzKCtrl = new StateDisplay();
             DisModeHzKCtrl.create("MainHzKCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
@@ -906,6 +911,9 @@
             var DisPosHzKCtrl = new StateDisplay();
             DisPosHzKCtrl.create("MainHzKCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
                 "", "", "");
+
+            var HzCtrlK = new HeatCtrl();
+            HzCtrlK.create("MainHzKCtrl", "325px", "30px", "midgreen", "Heat-Control", "sollTempK");
         </script>
         <!-- ************************ Rolladen  Wohnzimmer ************************ -->
         <!-- <Main id="MainRolloWZ"   class="RolloWZ"> </Main> -->
