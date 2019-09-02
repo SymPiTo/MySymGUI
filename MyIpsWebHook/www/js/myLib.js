@@ -191,13 +191,20 @@ function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  com
 class CtrlButton {
     constructor() {
         this.ID = "";
+
+        //optionale Parameter
+        this.FontFarbe = "black";
     }
 
-    create(ParentID, posTop, posLeft, btnClass, size, color, text, ctrltype, ctrlWin, command) {
+    create(ParentID, posTop, posLeft, btnClass, size, color, text, ctrltype, ctrlWin, command, ...param) {
+        if (param.length > 0) {
+            this.FontFarbe = param[0];
+        }
         var elem = document.createElement("div");
         elem.className = btnClass;
         elem.classList.add(size, color);
         this.ID = elem;
+        elem.style.color = this.FontFarbe;
         elem.innerHTML = text;
         elem.style.position = "absolute";
         elem.style.left = posLeft;
