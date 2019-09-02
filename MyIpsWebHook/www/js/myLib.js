@@ -1658,10 +1658,10 @@ class RolloCtrl {
         label.style.backgroundColor = "black";
         label.innerHTML = title;
         container.append(label);
-
+        // 1. Button Reihe
         var btnCont1 = document.createElement("div");
         btnCont1.style.width = this.b;
-        btnCont1.style.height = "25%";
+        btnCont1.style.height = "27%";
         btnCont1.style.marginTop = "2px";
         btnCont1.style.padding = "2px";
         btnCont1.style.display = "flex";
@@ -1719,11 +1719,11 @@ class RolloCtrl {
         this.ID1 = btn3Sign;
         btn3.append(btn3Sign);
         btnCont1.append(btn3);
-
+        //2. Button Reihe
         var btnCont2 = document.createElement("div");
         btnCont2.style.marginTop = "5px";
         btnCont2.style.width = this.b;
-        btnCont2.style.height = "30%";
+        btnCont2.style.height = "27%";
         btnCont2.style.display = "flex";
         btnCont2.style.flexDirection = "row";
         btnCont2.style.justifyContent = "space-around";
