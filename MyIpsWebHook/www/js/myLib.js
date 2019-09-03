@@ -1676,11 +1676,11 @@ class RolloCtrl {
         btn1.style.display = "flex";
         btn1.style.alignItems = "center";
         btn1.style.justifyContent = "center";
-        btn1.setAttribute("onclick", cmd);
+        var cmd1 = "send('command(Rollo," + room + ",up)')"
+        btn1.setAttribute("onclick", cmd1);
         var btn1Sign = document.createElement("span");
         btn1Sign.className = "fa fa-chevron-up";
         btn1Sign.style.fontSize = "30px";
-
         btn1Sign.style.color = "white";
         this.ID1 = btn1Sign;
         btn1.append(btn1Sign);
@@ -1693,7 +1693,8 @@ class RolloCtrl {
         btn2.style.display = "flex";
         btn2.style.alignItems = "center";
         btn2.style.justifyContent = "center";
-        btn2.setAttribute("onclick", cmd);
+        var cmd2 = "send('command(Rollo," + room + ",stop)')"
+        btn2.setAttribute("onclick", cmd2);
         var btn2Sign = document.createElement("span");
         btn2Sign.className = "fa fa-stop";
         btn2Sign.style.fontSize = "30px";
@@ -1710,7 +1711,8 @@ class RolloCtrl {
         btn3.style.display = "flex";
         btn3.style.alignItems = "center";
         btn3.style.justifyContent = "center";
-        btn3.setAttribute("onclick", cmd);
+        var cmd3 = "send('command(Rollo," + room + ",down)')"
+        btn3.setAttribute("onclick", cmd3);
         var btn3Sign = document.createElement("span");
         btn3Sign.className = "fa fa-chevron-down";
         btn3Sign.style.fontSize = "30px";
@@ -1719,6 +1721,7 @@ class RolloCtrl {
         this.ID1 = btn3Sign;
         btn3.append(btn3Sign);
         btnCont1.append(btn3);
+
         //2. Button Reihe
         var btnCont2 = document.createElement("div");
         btnCont2.style.marginTop = "5px";
@@ -1816,6 +1819,9 @@ class RolloCtrl {
         document.getElementById(ParentID).appendChild(container);
     }
 
+    update(value) {
+
+    }
 
 }
 

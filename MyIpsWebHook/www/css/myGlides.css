@@ -2718,7 +2718,7 @@ h1:after {
   }
 
 
-  .blue{
+.blue{
     /*Gradient*/
     background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%), hsl(200, 100%, 25%)); /* CHROME */
 }
@@ -2781,9 +2781,9 @@ h1:after {
 .oliveLight {
 	background: -webkit-linear-gradient(hsl(82, 100%, 75%), hsl(82, 100%, 95%), hsl(82, 100%, 75%));
 } 
-
-
-
+.blueLight {
+    background: -webkit-linear-gradient(hsl(200, 100%, 75%), hsl(200, 100%, 95%), hsl(200, 100%, 75%));  
+}
 
 .purpleBtn:active {
     background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
@@ -2832,6 +2832,9 @@ h1:after {
 .bgGrey {
     background: -webkit-linear-gradient(hsl(205, 10%, 45%), hsl(205, 10%, 75%), hsl(205, 10%, 45%)); /* CHROME */
 } 
+.bgBlue{
+    background: hsl(200, 100%, 10%); 
+}
 .bgGreyBtn {
     background: -webkit-linear-gradient(hsl(174, 100%, 45%), hsl(174, 100%, 75%), hsl(174, 100%, 45%)); /* CHROME */
 } 

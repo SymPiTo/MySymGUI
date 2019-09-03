@@ -407,8 +407,6 @@
         <subMenu id="SubMenuB" class="MenuB"></subMenu>
 
         <script>
-            var SubMenuHzB = new GlideButton();
-            SubMenuHzB.create("SubMenuB", "blue", "Heizung Balkon", "_Heizung_BW2.png", "MainHzB", "", "SM");
             var SubMenuRolloB = new GlideButton();
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", "_Rolladen_BW_web.png", "MainRolloB", "", "SM");
         </script>
@@ -612,10 +610,12 @@
 
 
 
-            var labelModeWZ = new label();
-            labelModeWZ.create("MainHeizungWZ", "240px", "120px", "18px", "white", "Mode");
-            var labelPresetWZ = new label();
-            labelPresetWZ.create("MainHeizungWZ", "240px", "400px", "18px", "white", "Presets");
+
+            var Rahmen1WZ = new Kachel();
+            Rahmen1WZ.create("MainHeizungWZ", "250px", "40px", "200px", "300px", "cyan", "Preset");
+            var Rahmen2WZ = new Kachel();
+            Rahmen2WZ.create("MainHeizungWZ", "250px", "335px", "200px", "300px", "cyan", "Control")
+
 
             var btnHzWZauto = new CtrlButton();
             btnHzWZauto.create("MainHeizungWZ", "300px", "50px", "ctrlbutton", "normal", "cyan", "Automatik", "command",
@@ -696,10 +696,10 @@
             var iHzKZ = new DynIcon("heizkoerper", "bin", false);
             iHzKZ.create("MainHzKZ", "40px", "70px", "wide");
 
-            var labelModeKZ = new label();
-            labelModeKZ.create("MainHzKZ", "240px", "120px", "18px", "white", "Mode");
-            var labelPresetKZ = new label();
-            labelPresetKZ.create("MainHzKZ", "240px", "400px", "18px", "white", "Presets");
+            var Rahmen1KZ = new Kachel();
+            Rahmen1KZ.create("MainHzKZ", "250px", "40px", "200px", "300px", "olive", "Preset");
+            var Rahmen2KZ = new Kachel();
+            Rahmen2KZ.create("MainHzKZ", "250px", "335px", "200px", "300px", "olive", "Control")
 
             var btnHzKZauto = new CtrlButton();
             btnHzKZauto.create("MainHzKZ", "300px", "50px", "ctrlbutton", "normal", "olive", "Automatik", "command", "",
@@ -774,10 +774,10 @@
             var iHzSZ = new DynIcon("heizkoerper", "bin", false);
             iHzSZ.create("MainHzSZ", "40px", "70px", "wide");
 
-            var labelModeSZ = new label();
-            labelModeSZ.create("MainHzSZ", "240px", "120px", "18px", "white", "Mode");
-            var labelPresetSZ = new label();
-            labelPresetSZ.create("MainHzSZ", "240px", "400px", "18px", "white", "Presets");
+            var Rahmen1SZ = new Kachel();
+            Rahmen1SZ.create("MainHzSZ", "250px", "40px", "200px", "300px", "sandy", "Preset");
+            var Rahmen2SZ = new Kachel();
+            Rahmen2SZ.create("MainHzSZ", "250px", "335px", "200px", "300px", "sandy", "Control")
 
 
             var btnHzSZauto = new CtrlButton();
@@ -855,10 +855,10 @@
             var iHzK = new DynIcon("heizkoerper", "bin", false);
             iHzK.create("MainHzK", "40px", "70px", "wide");
 
-            var labelModeK = new label();
-            labelModeK.create("MainHzK", "240px", "120px", "18px", "white", "Mode");
-            var labelPresetK = new label();
-            labelPresetK.create("MainHzK", "240px", "400px", "18px", "white", "Presets");
+            var Rahmen1K = new Kachel();
+            Rahmen1K.create("MainHzK", "250px", "40px", "200px", "300px", "midgreen", "Preset");
+            var Rahmen2K = new Kachel();
+            Rahmen2K.create("MainHzK", "250px", "335px", "200px", "300px", "midgreen", "Control")
 
 
             var btnHzKauto = new CtrlButton();
@@ -928,7 +928,7 @@
 
 
             var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "350px", "cyan", "Preset");
+            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "345px", "cyan", "Preset");
 
             var btnRolloWZAuto = new CtrlButton();
             btnRolloWZAuto.create("MainRolloWZ", "260px", "50px", "ctrlbutton", "normal", "cyan", "Automatik",
@@ -947,7 +947,7 @@
                 "send('command(Rollo,WZ,bright)') ");
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainRolloWZ", "220px", "340px", "200px", "350px", "cyan", "Control");
+            Rahmen2WZ.create("MainRolloWZ", "220px", "335px", "200px", "345px", "cyan", "Control");
 
             var btnRolloWZHoch = new CtrlButton();
             btnRolloWZHoch.create("MainRolloWZ", "260px", "350px", "ctrlbutton", "normal", "cyan", "Hoch", "command",
@@ -1002,18 +1002,19 @@
         <!-- <Main id="MainRolloB"  class="RolloB">	</Main>  -->
         <script>
             var windowRolloB = new Area();
-            windowRolloB.createMain("MainRolloB", "bgMidgreen");
+            windowRolloB.createMain("MainRolloB", "bgBlue");
         </script>
         <script>
             var iRolloB = new DynIcon("rollo", "ana", false);
             iRolloB.create("MainRolloB", "30px", "170px", "normal");
 
 
-            var labelPresetB = new label();
-            labelPresetB.create("MainRolloB", "200px", "100px", "18px", "white", "Presets");
-            var labelControlB = new label();
-            labelControlB.create("MainRolloB", "210px", "400px", "18px", "white", "Control");
 
+
+            var Rahmen1B = new Kachel();
+            Rahmen1B.create("MainRolloB", "220px", "35px", "200px", "345px", "blue", "Preset");
+            var Rahmen2B = new Kachel();
+            Rahmen2B.create("MainRolloB", "220px", "335px", "200px", "345px", "blue", "Control")
 
             var btnRolloBAuto = new CtrlButton();
             btnRolloBAuto.create("MainRolloB", "260px", "50px", "ctrlbutton", "normal", "blue", "Automatik", "command",
@@ -1055,7 +1056,7 @@
 
         <script>
             var CtrlwindowRolloB = new Area();
-            CtrlwindowRolloB.createCtrl("MainRolloBCtrl", "bgMidgreen");
+            CtrlwindowRolloB.createCtrl("MainRolloBCtrl", "bgBlue");
         </script>
         <script>
             var DisPosRolloB = new StateDisplay();
@@ -1075,26 +1076,8 @@
                 "String", "", "", "", "");
 
 
-            var FontBtnRolloBup = new FontButtonNew();
-            FontBtnRolloBup.create("MainRolloBCtrl", "fontbutton", "blue", "big", "340px", "10px", "fa fa-chevron-up",
-                "send('command(Rollo,B,up)')");
-            var FontBtnRolloBstop = new FontButtonNew();
-            FontBtnRolloBstop.create("MainRolloBCtrl", "fontbutton", "blue", "big", "340px", "90px", "fa fa-stop",
-                "send('command(Rollo,B,stop)')");
-            var FontBtnRolloBdown = new FontButtonNew();
-            FontBtnRolloBdown.create("MainRolloBCtrl", "fontbutton", "blue", "big", "340px", "170px",
-                "fa fa-chevron-down", "send('command(Rollo,B,down)')");
-            var FontBtnRolloBstepUp = new FontButtonNew();
-            FontBtnRolloBstepUp.create("MainRolloBCtrl", "fontbutton", "blue", "big", "420px", "10px", "fa fa-plus",
-                "send('command(Rollo,B,StepUp)')");
-            var FontBtnRolloBstepDown = new FontButtonNew();
-            FontBtnRolloBstepDown.create("MainRolloBCtrl", "fontbutton", "blue", "big", "420px", "170px", "fa fa-minus",
-                "send('command(Rollo,B,StepDown)')");
-
-
-            CbSSrolloB = Object.create(CheckBox);
-            CbSSrolloB.create("MainRolloBCtrl", "SSRolloB", "blue", "520px", "10px", "SunRise-SunSet",
-                "command(Rollo,B,SSXX");
+            var rolloCtrlB = new RolloCtrl();
+            rolloCtrlB.create("MainRolloBCtrl", "340px", "30px", "blue", "Rolladen Balkontür", "B");
         </script>
 
 
@@ -1110,10 +1093,10 @@
             iRolloKZ.create("MainRolloKZ", "30px", "170px", "normal");
 
 
-            var labelPresetKZ = new label();
-            labelPresetKZ.create("MainRolloKZ", "200px", "100px", "18px", "white", "Presets");
-            var labelControlKZ = new label();
-            labelControlKZ.create("MainRolloKZ", "210px", "400px", "18px", "white", "Control");
+            var RahmenKZ = new Kachel();
+            RahmenKZ.create("MainRolloKZ", "220px", "35px", "200px", "345px", "olive", "Preset");
+            var Rahmen2KZ = new Kachel();
+            Rahmen2KZ.create("MainRolloKZ", "220px", "335px", "200px", "345px", "olive", "Control")
 
 
             var btnRolloKZAuto = new CtrlButton();
@@ -1175,25 +1158,8 @@
 
 
 
-            var FontBtnRolloKZup = new FontButtonNew();
-            FontBtnRolloKZup.create("MainRolloKZCtrl", "fontbutton", "olive", "big", "350px", "10px",
-                "fa fa-chevron-up", "send('command(Rollo,KZ,up)')");
-            var FontBtnRolloKZstop = new FontButtonNew();
-            FontBtnRolloKZstop.create("MainRolloKZCtrl", "fontbutton", "olive", "big", "350px", "90px", "fa fa-stop",
-                "send('command(Rollo,KZ,stop)')");
-            var FontBtnRolloKZdown = new FontButtonNew();
-            FontBtnRolloKZdown.create("MainRolloKZCtrl", "fontbutton", "olive", "big", "350px", "170px",
-                "fa fa-chevron-down", "send('command(Rollo,KZ,down)')");
-            var FontBtnRolloKZstepUp = new FontButtonNew();
-            FontBtnRolloKZstepUp.create("MainRolloKZCtrl", "fontbutton", "olive", "big", "430px", "10px", "fa fa-plus",
-                "send('command(Rollo,KZ,StepUp)')");
-            var FontBtnRolloKZstepDown = new FontButtonNew();
-            FontBtnRolloKZstepDown.create("MainRolloKZCtrl", "fontbutton", "olive", "big", "430px", "170px",
-                "fa fa-minus", "send('command(Rollo,KZ,StepDown)')");
-
-            CbSSrolloKZ = Object.create(CheckBox);
-            CbSSrolloKZ.create("MainRolloKZCtrl", "SSRolloKZ", "olive", "520px", "10px", "SunRise-SunSet",
-                "command(Rollo,KZ,SSXX");
+            var rolloCtrlKZ = new RolloCtrl();
+            rolloCtrlKZ.create("MainRolloKZCtrl", "340px", "30px", "olive", "Rolladen Kinderzimmer", "KZ");
         </script>
 
 
@@ -1209,10 +1175,10 @@
             iRolloK.create("MainRolloK", "30px", "170px", "normal");
 
 
-            var labelPresetK = new label();
-            labelPresetK.create("MainRolloK", "200px", "100px", "18px", "white", "Presets");
-            var labelControlK = new label();
-            labelControlK.create("MainRolloK", "210px", "400px", "18px", "white", "Control");
+            var Rahmen1K = new Kachel();
+            Rahmen1K.create("MainRolloK", "220px", "35px", "200px", "345px", "midgreen", "Preset");
+            var Rahmen2K = new Kachel();
+            Rahmen2K.create("MainRolloK", "220px", "335px", "200px", "345px", "midgreen", "Control")
 
 
             var btnRolloKAuto = new CtrlButton();
@@ -1272,26 +1238,8 @@
                 "String", "", "", "", "");
 
 
-            var FontBtnRolloKup = new FontButtonNew();
-            FontBtnRolloKup.create("MainRolloKCtrl", "fontbutton", "midgreen", "big", "350px", "10px",
-                "fa fa-chevron-up", "send('command(Rollo,K,up)')");
-            var FontBtnRolloKstop = new FontButtonNew();
-            FontBtnRolloKstop.create("MainRolloKCtrl", "fontbutton", "midgreen", "big", "350px", "90px", "fa fa-stop",
-                "send('command(Rollo,K,stop)')");
-            var FontBtnRolloKdown = new FontButtonNew();
-            FontBtnRolloKdown.create("MainRolloKCtrl", "fontbutton", "midgreen", "big", "350px", "170px",
-                "fa fa-chevron-down", "send('command(Rollo,K,down)')");
-            var FontBtnRolloKstepUp = new FontButtonNew();
-            FontBtnRolloKstepUp.create("MainRolloKCtrl", "fontbutton", "midgreen", "big", "430px", "10px", "fa fa-plus",
-                "send('command(Rollo,K,StepUp)')");
-            var FontBtnRolloKstepDown = new FontButtonNew();
-            FontBtnRolloKstepDown.create("MainRolloKCtrl", "fontbutton", "midgreen", "big", "430px", "170px",
-                "fa fa-minus", "send('command(Rollo,K,StepDown)')");
-
-
-            CbSSrolloK = Object.create(CheckBox);
-            CbSSrolloK.create("MainRolloKCtrl", "SSRolloK", "midgreen", "520px", "10px", "SunRise-SunSet",
-                "command(Rollo,K,SSXX");
+            var rolloCtrlK = new RolloCtrl();
+            rolloCtrlK.create("MainRolloKCtrl", "340px", "30px", "midgreen", "Rolladen Küche", "K");
         </script>
 
 
@@ -1306,10 +1254,10 @@
             iRolloSZ.create("MainRolloSZ", "30px", "170px", "normal");
 
 
-            var labelPresetSZ = new label();
-            labelPresetSZ.create("MainRolloSZ", "200px", "100px", "18px", "white", "Presets");
-            var labelControlSZ = new label();
-            labelControlSZ.create("MainRolloSZ", "210px", "400px", "18px", "white", "Control");
+            var Rahmen1SZ = new Kachel();
+            Rahmen1SZ.create("MainRolloSZ", "220px", "35px", "200px", "345px", "sandy", "Preset");
+            var Rahmen2SZ = new Kachel();
+            Rahmen2SZ.create("MainRolloSZ", "220px", "335px", "200px", "345px", "sandy", "Control")
 
 
             var btnRolloSZAuto = new CtrlButton();
@@ -1368,25 +1316,8 @@
             DisST2RolloSZ.create("MainRolloSZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
-            var FontBtnRolloSZup = new FontButtonNew();
-            FontBtnRolloSZup.create("MainRolloSZCtrl", "fontbutton", "sandy", "big", "350px", "10px",
-                "fa fa-chevron-up", "send('command(Rollo,SZ,up)')");
-            var FontBtnRolloSZstop = new FontButtonNew();
-            FontBtnRolloSZstop.create("MainRolloSZCtrl", "fontbutton", "sandy", "big", "350px", "90px", "fa fa-stop",
-                "send('command(Rollo,SZ,stop)')");
-            var FontBtnRolloSZdown = new FontButtonNew();
-            FontBtnRolloSZdown.create("MainRolloSZCtrl", "fontbutton", "sandy", "big", "350px", "170px",
-                "fa fa-chevron-down", "send('command(Rollo,SZ,down)')");
-            var FontBtnRolloSZstepUp = new FontButtonNew();
-            FontBtnRolloSZstepUp.create("MainRolloSZCtrl", "fontbutton", "sandy", "big", "430px", "10px", "fa fa-plus",
-                "send('command(Rollo,SZ,StepUp)')");
-            var FontBtnRolloSZstepDown = new FontButtonNew();
-            FontBtnRolloSZstepDown.create("MainRolloSZCtrl", "fontbutton", "sandy", "big", "430px", "170px",
-                "fa fa-minus", "send('command(Rollo,SZ,StepDown)')");
-
-            CbSSrolloSZ = Object.create(CheckBox);
-            CbSSrolloSZ.create("MainRolloSZCtrl", "SSRolloSZ", "sandy", "520px", "10px", "SunRise-SunSet",
-                "command(Rollo,SZ,SSXX");
+            var rolloCtrlSZ = new RolloCtrl();
+            rolloCtrlSZ.create("MainRolloSZCtrl", "340px", "30px", "sandy", "Rolladen Schlafzimmer", "SZ");
         </script>
 
 
@@ -2134,7 +2065,8 @@
             server1.create("MainIPS", "20px", "20px", "midgreen", "IP_Symcon.png", "1.0", "IPS Server",
                 "switchCtrlArea('MainIPSCtrl')", "150px", "100px");
             var server2 = new BtnIcon();
-            server2.create("MainIPS", "20px", "220px", "midgreen", "Homematic.png", "1.0", "HM Server", "", "150px",
+            server2.create("MainIPS", "20px", "220px", "midgreen", "Homematic.png", "1.0", "HM Server",
+                "switchCtrlArea('MainHMCtrl')", "150px",
                 "100px");
             var server3 = new BtnIcon();
             server3.create("MainIPS", "20px", "420px", "midgreen", "Plex.png", "1.0", "Media Server", "", "150px",
@@ -2187,6 +2119,9 @@
             var HM16 = new BtnIcon();
             HM16.create("MainIPS", "500px", "440px", "grey", "HM-WDS30.jpg", "0.8, 0.8", "Diff-Temp Sensor",
                 "switchCtrlArea('HMIP16Ctrl')", "100px", "100px", "14px");
+            var HM17 = new BtnIcon();
+            HM17.create("MainIPS", "620px", "50px", "grey", "HMIP-PS.jpg", "1, 1", "SchaltSteckdose",
+                "switchCtrlArea('HMIP17Ctrl')", "100px", "100px", "14px");
         </script>
         <!-- *************************************************************************************   -->
         <!--  ************************         CTRL - IP Symcon Server    ************************   -->
@@ -2236,6 +2171,48 @@
             DiIPS11.create("MainIPSCtrl", "", "", "790px", "30px", "normal", "18px", "Port 9000", "String", "", "", "",
                 "");
         </script>
+
+        <!-- *************************************************************************************   -->
+        <!--  ************************         CTRL - Homematic Server    ************************   -->
+        <!-- *************************************************************************************   -->
+        <script>
+            var CtrlwindowHM = new Area();
+            CtrlwindowHM.createCtrl("MainHMCtrl", "bgOlive");
+        </script>
+        <script>
+            var HeadHM1 = new HeadLine();
+            HeadHM1.create("MainHMCtrl", "0px", "transparent", "HM - Server");
+            var labelHM1 = new label();
+            labelHM1.create("MainHMCtrl", "50px", "30px", "18px", "white", "Adr.: 192.168.178.42");
+
+            var DiHM1 = new StateDisplay();
+            DiHM1.create("MainHMCtrl", "", "", "110px", "30px", "normal", "18px", "Connected", "String", "", "", "",
+                "");
+            var DiHM2 = new StateDisplay();
+            DiHM2.create("MainHMCtrl", "", "", "170px", "30px", "normal", "18px", "Default", "String", "", "", "",
+                "");
+            var DiHM3 = new StateDisplay();
+            DiHM3.create("MainHMCtrl", "", "", "230px", "30px", "normal", "18px", "Duty Cycle", "String", "", "",
+                "", "");
+
+            var HeadHM2 = new HeadLine();
+            HeadHM2.create("MainHMCtrl", "260px", "transparent", "HM IP - Server");
+            var DiHM4 = new StateDisplay();
+            DiHM4.create("MainHMCtrl", "", "", "360px", "30px", "normal", "18px", "Connected", "String", "", "", "",
+                "");
+            var DiHM5 = new StateDisplay();
+            DiHM5.create("MainHMCtrl", "", "", "420px", "30px", "normal", "18px", "Default", "String", "", "",
+                "", "", "202px", "80px");
+            var DiHM6 = new StateDisplay();
+            DiHM6.create("MainHMCtrl", "", "", "480px", "30px", "normal", "18px", "Version", "String", "", "", "",
+                "");
+
+            var DiHM7 = new StateDisplay();
+            DiHM7.create("MainHMCtrl", "", "", "540px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "",
+                "");
+        </script>
+
+
         <!-- *************************************************************************************   -->
         <!--  ************************       CTRL - HMIP1 Präsenzmelder   ************************   -->
         <!-- *************************************************************************************   -->
@@ -2682,6 +2659,32 @@
         </script>
 
 
+        <!-- ****************************************************************************************************   -->
+        <!--  ************************       CTRL - HMIP.PS Funk Schalt Steckdose         ***********************   -->
+        <!--  ************************       Wohnzimmer      Repeater                     ***********************   -->
+        <!-- ****************************************************************************************************   -->
+        <script>
+            var CtrlwindowHMIP17 = new Area();
+            CtrlwindowHMIP17.createCtrl("HMIP17Ctrl", "bgOlive");
+        </script>
+        <script>
+            var HeadQ1 = new HeadLine();
+            HeadQ1.create("HMIP17Ctrl", "0px", "transparent", "Steckdose - Repeater");
+            var labelQ1 = new label();
+            labelQ1.create("HMIP17Ctrl", "50px", "30px", "18px", "white", "Adr.: 00021A498F8F6A");
+            var labelQ2 = new label();
+            labelQ2.create("HMIP17Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
+
+            var DiIPSQ1 = new StateDisplay();
+            DiIPSQ1.create("HMIP17Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI_Device", "String", "", "", "",
+                "");
+            var DiIPSQ2 = new StateDisplay();
+            DiIPSQ2.create("HMIP17Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+                "");
+            var DiIPSQ3 = new StateDisplay();
+            DiIPSQ3.create("HMIP17Ctrl", "", "", "290px", "30px", "normal", "18px", "Unreach", "String", "", "", "",
+                "");
+        </script>
 
 
 

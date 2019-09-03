@@ -321,6 +321,18 @@
         sym[215] = ips[0].ID29170; //Temp Vor Hz WZ
         sym[216] = ips[0].ID47576; //Temp Rueck Hz WZ 
 
+        sym[217] = ips[0].ID14488; // RSSI Device Steckdose
+        sym[218] = ips[0].ID16447; // RSSI Peer Steckdose
+        sym[219] = ips[0].ID26377; // unreach Steckdose
+
+        sym[220] = ips[0].ID16201; // Homematic Server connected HM   
+        sym[221] = ips[0].ID58903; // Homematic Server default HM  
+        sym[222] = ips[0].ID44062; // Homematic Server duty cycle  HM
+        sym[223] = ips[0].ID16055; // Homematic Server connected  HMIP
+        sym[224] = ips[0].ID39565; // Homematic Server default HMIP  
+        sym[225] = ips[0].ID29679; // Homematic Server description HMIP  
+        sym[226] = ips[0].ID36540; // Homematic Server duty cycle HMIP  
+
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -648,25 +660,41 @@
 
     function updateValues(sym) {
 
+
+      //<!-- ******************** Homematic Server **************************  -->
+      DiHM1.update(sym[220]);
+      DiHM2.update(sym[221]);
+      DiHM3.update(sym[222]);
+      DiHM4.update(sym[223]);
+      DiHM5.update(sym[224]);
+      var wert = sym[225].substr(10, 4);
+      DiHM6.update(wert);
+      DiHM7.update(sym[226]);
+
+      //<!-- ******************** Funk Schalt Steckdose und Repeater Wohnzimmer **************************  -->
+      DiIPSQ1.update(sym[217]);
+      DiIPSQ2.update(sym[218]);
+      DiIPSQ3.update(sym[219]);
+
       //<!-- ******************** Temp Difff Heizung Wohnzimmer **************************  -->
-      DiIPSP1.update(sym[215], "", "");
-      DiIPSP2.update(sym[216], "", "");
-      DiIPSP3.update(sym[213], "", "");
-      DiIPSP4.update(sym[214], "", "");
+      DiIPSP1.update(sym[215]);
+      DiIPSP2.update(sym[216]);
+      DiIPSP3.update(sym[213]);
+      DiIPSP4.update(sym[214]);
       //<!-- ******************** Temp Difff Heizung Schlafzimmer **************************  -->
-      DiIPSO1.update(sym[39], "", "");
-      DiIPSO2.update(sym[40], "", "");
-      DiIPSO3.update(sym[211], "", "");
-      DiIPSO4.update(sym[212], "", "");
+      DiIPSO1.update(sym[39]);
+      DiIPSO2.update(sym[40]);
+      DiIPSO3.update(sym[211]);
+      DiIPSO4.update(sym[212]);
 
       //<!-- ******************** Licht Schalter Kontakt Diele **************************  -->
-      DiIPSN1.update(sym[209], "", "");
-      DiIPSN2.update(sym[210], "", "");
+      DiIPSN1.update(sym[209]);
+      DiIPSN2.update(sym[210]);
 
       //<!-- ******************** Licht Aktor Diele **************************  -->
-      DiIPSM1.update(sym[200], "", "");
-      DiIPSM2.update(sym[201], "", "");
-      DiIPSM3.update(sym[202], "", "");
+      DiIPSM1.update(sym[200]);
+      DiIPSM2.update(sym[201]);
+      DiIPSM3.update(sym[202]);
       LightD.update(sym[203], "", "");
       DisLightCurrentDCtrl.update(sym[204], 2);
       DisLightPowerDCtrl.update(sym[205], 2);
@@ -687,13 +715,13 @@
       iLight2Wz.update(sym[196]);
 
       //<!-- ******************** Licht Aktor WZ Mitte **************************  -->
-      DiIPSK1.update(sym[186], "", "");
-      DiIPSK2.update(sym[187], "", "");
-      DiIPSK3.update(sym[188], "", "");
+      DiIPSK1.update(sym[186]);
+      DiIPSK2.update(sym[187]);
+      DiIPSK3.update(sym[188]);
       //<!-- ******************** Licht Aktor WZ Fenster **************************  -->
-      DiIPSL1.update(sym[189], "", "");
-      DiIPSL2.update(sym[190], "", "");
-      DiIPSL3.update(sym[191], "", "");
+      DiIPSL1.update(sym[189]);
+      DiIPSL2.update(sym[190]);
+      DiIPSL3.update(sym[191]);
       //<!-- ******************** Fenster Aktor Bad **************************  -->
       WindowBad.update(sym[185], "", "");
 
