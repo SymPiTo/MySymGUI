@@ -2784,18 +2784,18 @@ h1:after {
 .blueLight {
     background: -webkit-linear-gradient(hsl(200, 100%, 75%), hsl(200, 100%, 95%), hsl(200, 100%, 75%));  
 }
-
-.purpleBtn:active {
-    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
+.violetLight {
+    background: -webkit-linear-gradient(hsl(270, 100%, 75%), hsl(270, 100%, 95%), hsl(270, 100%, 75%)); 
 }
-
 
 
 .black {
     background: black;
 }
 
-
+.purpleBtn:active {
+    background: -webkit-linear-gradient(hsl(300, 100%, 5%), hsl(300, 100%, 15%), hsl(205, 100%, 5%));
+}
 
 
 /* *********************  Background COLORS ********************************** */
@@ -2835,6 +2835,10 @@ h1:after {
 .bgBlue{
     background: hsl(200, 100%, 10%); 
 }
+.bgViolet {
+    background: hsl(270, 100%, 10%);
+}
+
 .bgGreyBtn {
     background: -webkit-linear-gradient(hsl(174, 100%, 45%), hsl(174, 100%, 75%), hsl(174, 100%, 45%)); /* CHROME */
 } 
