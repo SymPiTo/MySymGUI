@@ -1162,6 +1162,8 @@ class GlideButton {
                     document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28vw";
                     document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
+                    //TODO:übersicht für den Raum einblenden
+                    // anstatt dem StartScreen ein Fenster IDMAIN + overview einblenden
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName("StartScreen")[0].style.left = "8vw";
@@ -1208,11 +1210,11 @@ class GlideButton {
         elem2a.append(elem3);
 
         var elem4 = document.createElement("div");
-        elem4.style.fontSize = "1.0rem";
+        elem4.style.fontSize = "0.8rem";
         elem4.style.display = "flex";
         elem4.style.justifyContent = "space-between";
         elem4.style.width = "200px";
-        elem4.style.paddingLeft = "30px";
+        elem4.style.paddingLeft = "20px";
         elem2a.append(elem4);
 
         var elem5 = document.createElement("div");

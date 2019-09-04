@@ -273,6 +273,7 @@
             // SetValue("32031","Text");
         </script>
 
+
         <!-- ----------------------------------------------------------------------- -->
         <!--                           Haupt Menues                                  -->
         <!-- ----------------------------------------------------------------------- -->
@@ -309,8 +310,6 @@
             var LeftMenuNet = new GlideButton();
             LeftMenuNet.create("MainMenu", "green", "Netzwerk", "_Network_BW_web.png", "MenuNet", "", "MM");
 
-
-
             var MenuSecurity1 = new GlideButton();
             MenuSecurity1.create("MainMenu", "cyan", "Security", "_GuestroomBW.jpg", "", "", "MM");
         </script>
@@ -333,7 +332,9 @@
         </script>
 -->
 
-        <!-- *********************** Security  **************************  -->
+
+
+        <!-- ------------------------- Sub Menu: Security -------------------------- -->
         <subMenu id="SubMenuSec" class="MenuSec"></subMenu>
 
         <script>
@@ -346,7 +347,7 @@
             SubMenuBatAlarm.create("SubMenuSec", "red", "Battery Alarm", "BatAlarm.png", "MainBatAlarm", "", "SM");
         </script>
 
-        <!-- ************************* SubMenu - Wohnzimmer **************************  -->
+        <!-- ------------------------ Sub Menu: Wohnzimmer ------------------------- -->
         <subMenu id="SubMenuWZ" class="MenuWZ"> </subMenu>
 
 
@@ -370,7 +371,7 @@
 
 
 
-        <!-- *********************** Kinderzimmer  **************************  -->
+        <!-- ----------------------- Sub Menu: Kinderzimmer ------------------------ -->
         <subMenu id="SubMenuKZ" class="MenuKZ"></subMenu>
 
         <script>
@@ -381,7 +382,7 @@
                 "", "SM");
         </script>
 
-        <!-- ************************ Schlafzimmer  ************************  -->
+        <!-- ----------------------- Sub Menu: Schlafzimmer ------------------------ -->
         <subMenu id="SubMenuSZ" class="MenuSZ"></subMenu>
 
         <script>
@@ -397,7 +398,7 @@
             SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", "Sonos_BW_web.png", "MainSonosSZ", "", "SM");
         </script>
 
-        <!-- ************************ Kueche  ************************  -->
+        <!-- -------------------------- Sub Menu: Kueche --------------------------- -->
         <subMenu id="SubMenuK" class="MenuK"></subMenu>
 
         <script>
@@ -412,7 +413,7 @@
             SubMenuClock.create("SubMenuK", "midgreen", "Clock", "Uhr_BW_web.png", "MainClock", "", "SM");
         </script>
 
-        <!-- ************************ Menu Balkon  ************************  -->
+        <!-- -------------------------- Sub Menu: Balkon --------------------------- -->
         <subMenu id="SubMenuB" class="MenuB"></subMenu>
 
         <script>
@@ -420,7 +421,7 @@
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", "_Rolladen_BW_web.png", "MainRolloB", "", "SM");
         </script>
 
-        <!-- ************************ Menu Bad  ************************  -->
+        <!-- ---------------------------- Sub Menu: Bad ---------------------------- -->
         <subMenu id="SubMenuBad" class="MenuBad"></subMenu>
 
         <script>
@@ -428,7 +429,7 @@
             SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", "Fenster.png", "MainFBad", "", "SM");
         </script>
 
-        <!-- ************************ Menu Diele  ************************  -->
+        <!-- --------------------------- Sub Menu: Diele --------------------------- -->
         <subMenu id="SubMenuDiele" class="MenuDiele"></subMenu>
 
         <script>
@@ -437,8 +438,9 @@
                 "SM");
         </script>
 
-        <!-- ************************ Multimedia  ************************  -->
+        <!-- ------------------------ <Sub Menu: Multimedia ------------------------ -->
         <subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>
+
         <script>
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", "_TV_BW.png", "MainTV", "", "SM");
@@ -458,7 +460,7 @@
         </script>
 
 
-        <!-- ************************ Menue  Heizung  ************************  -->
+        <!-- -------------------------- Sub Menu: Heizung -------------------------- -->
         <subMenu id="SubMenuHz" class="MenuHz"></subMenu>
 
         <script>
@@ -475,7 +477,7 @@
             SubMenuHzK.create("SubMenuHz", "midgreen", "Heizung Kueche", "_Heizung_BW2.png", "MainHzK", "", "SM");
         </script>
 
-        <!-- ************************Menu  Rolladen  ************************  -->
+        <!-- ------------------------- Sub Menu: Rolladen -------------------------- -->
         <subMenu id="SubMenuRollo" class="MenuRollo"></subMenu>
 
         <script>
@@ -497,7 +499,7 @@
             SubMenuRolloB.create("SubMenuRollo", "blue", "Rolladen Balkon", "_Rolladen_BW.png", "MainRolloK", "", "SM");
         </script>
 
-        <!-- ************************Menu  Netzwerk  ************************  -->
+        <!-- ------------------------- Sub Menu: Netzwerk -------------------------- -->
         <subMenu id="SubMenuNet" class="MenuNet"></subMenu>
 
         <script>
@@ -509,25 +511,28 @@
 
 
 
-
-
-
-
+        <!-- -------------------------- Start Bildschirm --------------------------- -->
         <div id="MainStarScreen" class="StartScreen">
             <img src="images/MyHomeControl.png" alt="image not found" style="width: 400px; padding-top:50px" />
         </div>
 
         <script>
+            var CtrlBtnGoodMorningt = new CtrlButton();
+            CtrlBtnGoodMorningt.create("MainStarScreen", "80vh", "10%", "ctrlbutton", "normal", "grey", "Good Morning",
+                "command", "", "goodMorning();");
             var CtrlBtnGoodNight = new CtrlButton();
-            CtrlBtnGoodNight.create("MainStarScreen", "80vh", "30%", "ctrlbutton", "normal", "grey", "Good Night",
+            CtrlBtnGoodNight.create("MainStarScreen", "80vh", "40%", "ctrlbutton", "normal", "grey", "Good Night",
                 "command", "", "goodNight();");
             var CtrlBtnBye = new CtrlButton();
-            CtrlBtnBye.create("MainStarScreen", "80vh", "60%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
+            CtrlBtnBye.create("MainStarScreen", "80vh", "70%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
                 "Bye();");
         </script>
-        <!-- ************************ Container  ************************  -->
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                       Haupt und Kontroll Fenster                        -->
+        <!-- ----------------------------------------------------------------------- -->
+        //TODO: muss noch in JS umgewandelt werden
         <!-- ************************ Heizung Uebersicht ************************  -->
         <Main id="MainHzAll" class="HzAll">
             <div class="reihe" style="margin-right: 50px; margin-left: 50px">
@@ -588,6 +593,7 @@
             </div>
         </Main>
 
+        //TODO: Noch zu bearbeiten.
         <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
         <Ctrl id="MainHzAllCtrl" class="HzAllCtrl"></Ctrl>
 
@@ -595,10 +601,12 @@
         <script>
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                           Heizung Wohnzimmer                            -->
+        <!-- ----------------------------------------------------------------------- -->
 
+        <!-- -------------------- Main Area: Heizung Wohnzimmer -------------------- -->
 
-        <!-- ************************ Heizung Wohnzimmer ************************  -->
-        <!--<Main id="MainHeizungWZ" class="HeizungWZ">	</Main> -->
         <script>
             var windowHzWz = new Area();
             windowHzWz.createMain("MainHeizungWZ", "bgCyan");
@@ -656,8 +664,7 @@
         </script>
 
 
-        <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
-
+        <!-- -------------------- Ctrl Area: Heizung Wohnzimmer -------------------- -->
         <!--	//<Ctrl id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"></Ctrl> -->
         <script>
             var CtrlwindowHzWz = new Area();
@@ -682,8 +689,11 @@
             HzCtrlWZ.create("MainHeizungWZCtrl", "325px", "30px", "cyan", "Heat-Control", "sollTempWZ");
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                          Heizung Kinderzimmer                           -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Heizung Kinderzimmer ************************  -->
+        <!-- -------------------- Main Area: Heizung Kinderzimmer -------------------- -->
         <!-- <Main id="MainHzKZ"  class="HeizungKZ"></Main>	  -->
 
 
@@ -739,8 +749,8 @@
             btnHzKZAuf.create("MainHzKZ", "480px", "350px", "ctrlbutton", "normal", "olive", "Auf", "command", "",
                 "{send('command(Heizung,KZ,auf)'); document.getElementById('AdjTempHzKZ1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Kinderzimmer ************************ -->
 
+        <!-- -------------------- Ctrl Area: Heizung Kinderzimmer -------------------- -->
         <!-- <Ctrl id="MainHzKZCtrl"  class="HeizungCtrlKZ"></Ctrl> -->
         <script>
             var CtrlwindowHzKz = new Area();
@@ -763,7 +773,12 @@
             var HzCtrlKZ = new HeatCtrl();
             HzCtrlKZ.create("MainHzKZCtrl", "325px", "30px", "olive", "Heat-Control", "sollTempKZ");
         </script>
-        <!-- ************************ Heizung Schlafzimmer ************************  -->
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                          Heizung Kinderzimmer                           -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- -------------------- Main Area: Heizung Schlafzimmer -------------------- -->
         <!-- <Main id="MainHzSZ"   class="HeizungSZ">	</Main>  -->
         <script>
             var windowHzSz = new Area();
@@ -818,7 +833,8 @@
             btnHzSZAuf.create("MainHzSZ", "480px", "350px", "ctrlbutton", "normal", "sandy", "Auf", "command", "",
                 "{send('command(Heizung,SZ,auf)'); document.getElementById('AdjTempHzSZ1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Schlafzimmer ************************  -->
+
+        <!-- -------------------- Ctrl Area: Heizung Schlafzimmer -------------------- -->
         <!-- <Ctrl id="MainHzSZCtrl" class="HeizungCtrlSZ">  </Ctrl>  -->
         <script>
             var CtrlwindowHzSZ = new Area();
@@ -842,9 +858,12 @@
             HzCtrlSZ.create("MainHzSZCtrl", "325px", "30px", "sandy", "Heat-Control", "sollTempSZ");
         </script>
 
-        <!-- ************************ Heizung Kueche ************************ -->
-        <!--  <Main  id="MainHzK"   class="HeizungK">   </Main>	-->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              Heizung Küche                              -->
+        <!-- ----------------------------------------------------------------------- -->
 
+        <!-- -------------------- Main Area: Heizung Küche -------------------- -->
+        <!--  <Main  id="MainHzK"   class="HeizungK">   </Main>	-->
         <script>
             var windowHzK = new Area();
             windowHzK.createMain("MainHzK", "bgMidgreen");
@@ -899,10 +918,9 @@
             btnHzKAuf.create("MainHzK", "480px", "350px", "ctrlbutton", "normal", "midgreen", "Auf", "command", "",
                 "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Kueche ************************  -->
+
+        <!-- -------------------- Ctrl Area: Heizung Küche -------------------- -->
         <!-- <Ctrl  id="MainHzKCtrl"  class="HeizungCtrlK"></Ctrl> -->
-
-
         <script>
             var CtrlwindowHzK = new Area();
             CtrlwindowHzK.createCtrl("MainHzKCtrl", "bgMidgreen");
@@ -924,7 +942,12 @@
             var HzCtrlK = new HeatCtrl();
             HzCtrlK.create("MainHzKCtrl", "325px", "30px", "midgreen", "Heat-Control", "sollTempK");
         </script>
-        <!-- ************************ Rolladen  Wohnzimmer ************************ -->
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                           Rolladen Wohnzimmer                           -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- -------------------- Main Area: Rolladen Wohnzimmer -------------------- -->
         <!-- <Main id="MainRolloWZ"   class="RolloWZ"> </Main> -->
         <script>
             var windowRolloWZ = new Area();
@@ -1007,7 +1030,11 @@
         </script>
 
 
-        <!-- ************************ Rolladen  BalkonTuer ************************  -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                           Rolladen Balkontür                            -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- -------------------- Main Area: Rolladen Balkon Tür -------------------- -->
         <!-- <Main id="MainRolloB"  class="RolloB">	</Main>  -->
         <script>
             var windowRolloB = new Area();
@@ -1090,8 +1117,11 @@
         </script>
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                         Rolladen Kinderzimmmer                          -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Kinderzimmer ************************  -->
+        <!-- -------------------- Main Area: Rolladen Kinderzimmer -------------------- -->
         <!-- <Main id="MainRolloKZ"  class="RolloKZ">	</Main>  -->
         <script>
             var windowRolloKZ = new Area();
@@ -1172,8 +1202,11 @@
         </script>
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             Rolladen Küche                              -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Kueche ************************ -->
+        <!-- -------------------- Main Area: Rolladen Küche -------------------- -->
         <!-- <Main id="MainRolloK"  class="RolloK">	</Main> -->
         <script>
             var windowRolloK = new Area();
@@ -1251,8 +1284,11 @@
             rolloCtrlK.create("MainRolloKCtrl", "340px", "30px", "midgreen", "Rolladen Küche", "K");
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                          Rolladen Schlafzimmer                          -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Schlafzimmer ************************ -->
+        <!-- -------------------- Main Area: Rolladen Schlafzimmer -------------------- -->
         <!-- <Main id="MainRolloSZ"  class="RolloSZ">	</Main> -->
         <script>
             var windowRolloSZ = new Area();
@@ -1329,12 +1365,11 @@
             rolloCtrlSZ.create("MainRolloSZCtrl", "340px", "30px", "sandy", "Rolladen Schlafzimmer", "SZ");
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Fenster Aktor Bad                            -->
+        <!-- ----------------------------------------------------------------------- -->
 
-
-        <!-- *************************************************************************************   -->
-        <!--  ************************         Main - Fenster Bad         ************************   -->
-        <!-- *************************************************************************************   -->
-        <!-- ************************ Fenster Bad ************************ -->
+        <!-- -------------------- Main Area: Fenster Bad -------------------- -->
         <!-- <Main id="MainFBad"  class="FBad"></Main> -->
         <script>
             var windowFBad = new Area();
@@ -1357,10 +1392,11 @@
 
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Licht Wohnzimmer                             -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          Light  Wohnzimmer       ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Licht Wohnzimmer -------------------- -->
         <!-- <Main id="MainLightWZ"  class="LightWZ"></Main> -->
         <script>
             var windowLightWZ = new Area();
@@ -1421,9 +1457,7 @@
                 "Number", "");
         </script>
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          Light  Schlafzimmer     ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Licht Schlafzimmer -------------------- -->
         <!-- <Main id="MainLightSZ"  class="LightSZ"></Main> -->
         <script>
             var windowLightSZ = new Area();
@@ -1452,9 +1486,7 @@
                 "");
         </script>
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          Light  Diele            ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Licht Diele -------------------- -->
         <script>
             var windowLightD = new Area();
             windowLightD.createMain("MainLightD", "bgYellowGreen");
@@ -1484,7 +1516,7 @@
                 "");
         </script>
 
-        <!-- ************************ Sonos  Schlafzimmer ************************ -->
+        <!-- -------------------- Main Area: Sonos Wohnzimmer -------------------- -->
         <!-- <Main id="MainSonosSZ" class="SonosSZ"></Main> -->
         <script>
             var windowSonosSZ = new Area();
@@ -1557,9 +1589,7 @@
 
 
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          INDEX S - Security    ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Security -------------------- -->
         <!--  <Main id ="MainSecCode" class="SecurityCode"></Main>  -->
         <script>
             var windowSecCode = new Area();
@@ -1622,9 +1652,7 @@
         </script>
 
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          Water Alarm             ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Wasser Alarm -------------------- -->
         <!-- <Main id ="MainWaterAlarm" class="WaterAlarm"></Main> -->
         <script>
             var windowWaterAlarm = new Area();
@@ -1674,9 +1702,7 @@
         </script>
 
 
-        <!-- ***********************************************************************************      -->
-        <!-- ************************           Battery Alarm           ************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- -------------------- Main Area: Batterie Meldungen -------------------- -->
 
         <!-- <Main id ="MainBatAlarm" class="BatAlarm"></Main> -->
         <script>
