@@ -1125,10 +1125,10 @@ class GlideButton {
             if (MenuType === "R") {
                 // Main-Menus aufklappen  
                 var MainMenu = document.getElementsByTagName("mainMenu");
-                MainMenu[0].style.width = "26vw";
+                MainMenu[0].style.width = "28vw";
                 //Startbild vergößern
-                document.getElementsByClassName("StartScreen")[0].style.left = "26vw";
-                document.getElementsByClassName("StartScreen")[0].style.width = "74vw";
+                document.getElementsByClassName("StartScreen")[0].style.left = "28vw";
+                document.getElementsByClassName("StartScreen")[0].style.width = "72vw";
             }
 
             // alle subMenus auf 0px verkleinern 
@@ -1204,6 +1204,7 @@ class GlideButton {
         var elem3 = document.createElement("div");
         elem3.className = "room";
         elem3.innerHTML = titel;
+        elem3.style.textAlign = "left";
         elem2a.append(elem3);
 
         var elem4 = document.createElement("div");

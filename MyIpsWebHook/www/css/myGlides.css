@@ -673,8 +673,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
   padding-right: 50px;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  flex-direction: row;
   line-height: 40px;
   font-size:2.0em;
   color:white;
