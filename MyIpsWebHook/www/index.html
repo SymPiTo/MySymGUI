@@ -544,6 +544,8 @@
             document.getElementById('MenuWZOV').appendChild(img);
             img.height = 570;
             img.width = 620;
+            var HzCtrlWZ = new HeatCtrl();
+            HzCtrlWZ.create("MenuWZOV", "325px", "30px", "transparent", "Heat-Control", "sollTempWZ");
         </script>
 
         <!-- ------------------------------ Overview: Security ------------------------------- -->
@@ -552,6 +554,11 @@
             OVwindowSec.createOverview("MenuSecOV", "bgRed");
         </script>
         <script>
+            var img = document.createElement('img');
+            img.src = 'images/Security.jpeg';
+            document.getElementById('MenuSecOV').appendChild(img);
+            img.height = 570;
+            img.width = 620;
         </script>
 
 
@@ -601,6 +608,13 @@
             OVwindowHzB.createOverview("MenuBOV", "bgBlue");
         </script>
         <script>
+            var OVwindowSec = new Area();
+            OVwindowSec.createOverview("MenuSecOV", "bgRed");
+            var img = document.createElement('img');
+            img.src = 'images/Balkon.jpg';
+            document.getElementById('MenuBOV').appendChild(img);
+            img.height = 570;
+            img.width = 620;
         </script>
 
         <!-- ---------------------------- Overview: Bad ---------------------------- -->
@@ -635,6 +649,11 @@
             OVwindowMM.createOverview("MenuMultimediaOV", "bgPurple");
         </script>
         <script>
+            var img = document.createElement('img');
+            img.src = 'images/Multimedia.jpg';
+            document.getElementById('MenuMultimediaOV').appendChild(img);
+            img.height = 570;
+            img.width = 620;
         </script>
 
         <!-- --------------------------- Overview: Heizung --------------------------- -->
@@ -661,6 +680,11 @@
             OVwindowNW.createOverview("MenuNetOV", "bgGreen");
         </script>
         <script>
+            var img = document.createElement('img');
+            img.src = 'images/Netzwerk.jpg';
+            document.getElementById('MenuNetOV').appendChild(img);
+            img.height = 570;
+            img.width = 620;
         </script>
 
 
