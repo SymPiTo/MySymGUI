@@ -233,6 +233,7 @@
         }
 
 
+
         function VarsNetwork(ips) {
             $('ws1').innerHTML = ips[0].WS0001 + ' connected: ' + ips[0].WS0011;
             $('ws2').innerHTML = ips[0].WS0002 + ' connected: ' + ips[0].WS0021;
@@ -247,7 +248,10 @@
 
 <body onload='init();'>
 
-    <!-- .................................. Gesamt Container ...............................  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Gesamt Container                             -->
+    <!-- ----------------------------------------------------------------------- -->
+
     <div id="Container" class="Container">
 
         <div id="kopfleiste" class="Top">
@@ -269,14 +273,15 @@
             // SetValue("32031","Text");
         </script>
 
-        <!-- ****************************** Main Menue ********************************************  -->
-        <div id="MainMenu" class="Left">
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                           Haupt Menues                                  -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        </div>
+        <mainMenu id="MainMenu" class="Left"> </mainMenu>
 
         <script>
             var MenuHome = new GlideButton();
-            MenuHome.create("MainMenu", "grey", "Home", "_Home_BW_web.png", "MenuStart", "", "MM");
+            MenuHome.create("MainMenu", "grey", "Home", "_Home_BW_web.png", "MenuStart", "", "R");
             var LeftMenuFP = new GlideButton();
             LeftMenuFP.create("MainMenu", "pink", "Floorplan", "_Floorplan_BW_web.png", "", "floorplan", "MM");
             var LeftMenuSec = new GlideButton();
@@ -310,19 +315,23 @@
             MenuSecurity1.create("MainMenu", "cyan", "Security", "_GuestroomBW.jpg", "", "", "MM");
         </script>
 
-        <!-- ********************************************* Unter Menus ***********************************************************  -->
 
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                               sub Menues                                -->
+        <!-- ----------------------------------------------------------------------- -->
 
         <!-- *********************** StartScreen  **************************  -->
+        <!--
         <subMenu id="SubMenuStart" class="MenuStart"></subMenu>
-
+   
         <script>
             var SubMenuWetter = new GlideButton();
             SubMenuWetter.create("SubMenuStart", "grey", "Wetter", "Wetter_BW_web.png", "MainWetter", "", "SM");
             var SubMenuShort = new GlideButton();
             SubMenuShort.create("SubMenuStart", "grey", "ShortCuts", "Sequence_BW_web.png", "MainShorts", "", "SM");
         </script>
-
+-->
 
         <!-- *********************** Security  **************************  -->
         <subMenu id="SubMenuSec" class="MenuSec"></subMenu>
@@ -504,16 +513,16 @@
 
 
 
-        <div id=MainStarScreen class="StartScreen">
+        <div id="MainStarScreen" class="StartScreen">
             <img src="images/MyHomeControl.png" alt="image not found" style="width: 400px; padding-top:50px" />
         </div>
 
         <script>
             var CtrlBtnGoodNight = new CtrlButton();
-            CtrlBtnGoodNight.create("MainStarScreen", "63vh", "80%", "ctrlbutton", "normal", "grey", "Good Night",
+            CtrlBtnGoodNight.create("MainStarScreen", "80vh", "30%", "ctrlbutton", "normal", "grey", "Good Night",
                 "command", "", "goodNight();");
             var CtrlBtnBye = new CtrlButton();
-            CtrlBtnBye.create("MainStarScreen", "53vh", "80%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
+            CtrlBtnBye.create("MainStarScreen", "80vh", "60%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
                 "Bye();");
         </script>
         <!-- ************************ Container  ************************  -->

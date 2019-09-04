@@ -1096,8 +1096,10 @@ var CheckBox = {
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                         Klasse: Menu Button (Glide)                         */
+/* -------------------------------------------------------------------------- */
 
-/* --------------------- Klasse Menu Button (Glide) ---------------------------------------- */
 class GlideButton {
     constructor() {
         this.unit1 = " ";
@@ -1120,6 +1122,15 @@ class GlideButton {
         elem1.className = "GlideButton";
         elem1.classList.add(farbe, "area");
         elem1.onclick = function () {
+            if (MenuType === "R") {
+                // Main-Menus aufklappen  
+                var MainMenu = document.getElementsByTagName("mainMenu");
+                MainMenu[0].style.width = "26vw";
+                //Startbild vergößern
+                document.getElementsByClassName("StartScreen")[0].style.left = "26vw";
+                document.getElementsByClassName("StartScreen")[0].style.width = "74vw";
+            }
+
             // alle subMenus auf 0px verkleinern 
             var subs = document.getElementsByTagName("SubMenu");
             var SubMenus = Array.from(subs);
@@ -1127,6 +1138,7 @@ class GlideButton {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
             });
+
             // alle Main auf 0px verkleinern 
             var Main = document.getElementsByTagName("Main");
             var MainWindow = Array.from(Main);
@@ -1141,6 +1153,7 @@ class GlideButton {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
             });
+
             if (MenuType === "MM") {
 
                 //benötigte Fenster einblenden für Main Menu
@@ -1155,7 +1168,8 @@ class GlideButton {
                     document.getElementsByClassName(IDFull)[0].style.width = "92vw";
 
                 }
-            } else {
+            }
+            if (MenuType === "SM") {
                 if (IDMain !== "") {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
