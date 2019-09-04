@@ -539,17 +539,11 @@
             OVwindowHzWz.createOverview("MenuWZOV", "bgCyan");
         </script>
         <script>
-            var HzCtrlWZOV = new HeatCtrl();
-            HzCtrlWZOV.create("MenuWZOV", "10px", "10px", "cyan", "Heat-Control", "sollTempWZ");
-            var Light1WZOV = new CtrlTile();
-            Light1WZOV.create("MenuWZOV", "300px", "10px", "Lampe Fenster", "cyan", "Light",
-                "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "");
-            var Light2WZOV = new CtrlTile();
-            Light2WZOV.create("MenuWZOV", "300px", "215px", "Lampe Mitte", "cyan", "Light",
-                "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "");
-            var Light3WZOV = new CtrlTile();
-            Light3WZOV.create("MenuWZOV", "300px", "420px", "Lampe Mitte", "cyan", "Light",
-                "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "");
+            var img = document.createElement('img');
+            img.src = 'images/wohnzimmer.jpg';
+            document.getElementById('MenuWZOV').appendChild(img);
+            img.height = 550;
+            img.width = 650;
         </script>
 
         <!-- ------------------------------ Overview: Security ------------------------------- -->
