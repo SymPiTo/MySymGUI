@@ -668,7 +668,7 @@
         <!-- --------------------------- Overview: Rolladen --------------------------- -->
         <script>
             var OVwindowRollo = new Area();
-            OVwindOVwindowRolloowHz.createOverview("MenuRolloOV", "bgBrown");
+            OVwindowRollo.createOverview("MenuRolloOV", "bgBrown");
         </script>
         <script>
         </script>
@@ -837,13 +837,16 @@
 
 
             var DisModeHzWZ = new StateDisplay();
-            DisModeHzWZ.create("MainHeizungWZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeHzWZ.create("MainHeizungWZCtrl", "cyanLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+                "Man",
                 "Urlaub", "Party", "");
             var DisTempHzWZ = new StateDisplay();
-            DisTempHzWZ.create("MainHeizungWZCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number",
+            DisTempHzWZ.create("MainHeizungWZCtrl", "cyanLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+                "Number",
                 "", "", "", "");
             var DisPosHzWZCtrl = new StateDisplay();
-            DisPosHzWZCtrl.create("MainHeizungWZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number",
+            DisPosHzWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%", "200px", "30px", "size07", "30px", "Position",
+                "Number",
                 "", "", "", "");
 
             var HzCtrlWZ = new HeatCtrl();
@@ -919,13 +922,16 @@
 
 
             var DisModeHzKZCtrl = new StateDisplay();
-            DisModeHzKZCtrl.create("MainHzKZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+                "Man",
                 "Urlaub", "Party", "");
             var DisTempHzKZCtrl = new StateDisplay();
-            DisTempHzKZCtrl.create("MainHzKZCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number",
+            DisTempHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+                "Number",
                 "", "", "", "");
             var DisPosHzKZCtrl = new StateDisplay();
-            DisPosHzKZCtrl.create("MainHzKZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "%", "200px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var HzCtrlKZ = new HeatCtrl();
@@ -997,13 +1003,16 @@
 
 
             var DisModeHzSZCtrl = new StateDisplay();
-            DisModeHzSZCtrl.create("MainHzSZCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+                "Man",
                 "Urlaub", "Party", "");
             var DisTempHzSZCtrl = new StateDisplay();
-            DisTempHzSZCtrl.create("MainHzSZCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number",
+            DisTempHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+                "Number",
                 "", "", "", "");
             var DisPosHzSZCtrl = new StateDisplay();
-            DisPosHzSZCtrl.create("MainHzSZCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "200px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var HzCtrlSZ = new HeatCtrl();
@@ -1080,13 +1089,16 @@
 
 
             var DisModeHzKCtrl = new StateDisplay();
-            DisModeHzKCtrl.create("MainHzKCtrl", "", "", "50px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeHzKCtrl.create("MainHzKCtrl", "midgreenLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+                "Man",
                 "Urlaub", "Party", "");
             var DisTempHzKCtrl = new StateDisplay();
-            DisTempHzKCtrl.create("MainHzKCtrl", "", "°C", "125px", "30px", "size07", "30px", "Temperatur", "Number",
+            DisTempHzKCtrl.create("MainHzKCtrl", "midgreenLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+                "Number",
                 "", "", "", "");
             var DisPosHzKCtrl = new StateDisplay();
-            DisPosHzKCtrl.create("MainHzKCtrl", "", "%", "200px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosHzKCtrl.create("MainHzKCtrl", "midgreenLight", "%", "200px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var HzCtrlK = new HeatCtrl();
@@ -1154,19 +1166,23 @@
         </script>
         <script>
             var DisPosRolloWZCtrl = new StateDisplay();
-            DisPosRolloWZCtrl.create("MainRolloWZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number",
+            DisPosRolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "%", "20px", "30px", "size07", "30px", "Position",
+                "Number",
                 "", "", "", "");
 
             var DisModeRolloWZCtrl = new StateDisplay();
-            DisModeRolloWZCtrl.create("MainRolloWZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto",
+            DisModeRolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "100px", "30px", "size07", "30px", "Mode",
+                "Auto",
                 "Man", "", "", "");
 
             var DisST1RolloWZCtrl = new StateDisplay();
-            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr",
+            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "180px", "30px", "size07", "30px",
+                "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloWZCtrl = new StateDisplay();
-            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
+            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "260px", "30px", "size07", "30px",
+                "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
 
@@ -1237,19 +1253,23 @@
         </script>
         <script>
             var DisPosRolloB = new StateDisplay();
-            DisPosRolloB.create("MainRolloBCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosRolloB.create("MainRolloBCtrl", "blueLight", "%", "20px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var DisModeRolloB = new StateDisplay();
-            DisModeRolloB.create("MainRolloBCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "",
+            DisModeRolloB.create("MainRolloBCtrl", "blueLight", "", "100px", "30px", "size07", "30px", "Mode", "Auto",
+                "Man", "",
                 "", "");
 
             var DisST1RolloB = new StateDisplay();
-            DisST1RolloB.create("MainRolloBCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr",
+            DisST1RolloB.create("MainRolloBCtrl", "blueLight", "", "180px", "30px", "size07", "30px",
+                "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloB = new StateDisplay();
-            DisST2RolloB.create("MainRolloBCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
+            DisST2RolloB.create("MainRolloBCtrl", "blueLight", "", "260px", "30px", "size07", "30px",
+                "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
 
@@ -1318,19 +1338,23 @@
         </script>
         <script>
             var DisPosRolloKZ = new StateDisplay();
-            DisPosRolloKZ.create("MainRolloKZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosRolloKZ.create("MainRolloKZCtrl", "oliveLight", "%", "20px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var DisModeRolloKZ = new StateDisplay();
-            DisModeRolloKZ.create("MainRolloKZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeRolloKZ.create("MainRolloKZCtrl", "oliveLight", "", "100px", "30px", "size07", "30px", "Mode",
+                "Auto", "Man",
                 "", "", "");
 
             var DisST1RolloKZ = new StateDisplay();
-            DisST1RolloKZ.create("MainRolloKZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr",
+            DisST1RolloKZ.create("MainRolloKZCtrl", "oliveLight", "", "180px", "30px", "size07", "30px",
+                "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloKZ = new StateDisplay();
-            DisST2RolloKZ.create("MainRolloKZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
+            DisST2RolloKZ.create("MainRolloKZCtrl", "oliveLight", "", "260px", "30px", "size07", "30px",
+                "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
 
@@ -1399,19 +1423,23 @@
         </script>
         <script>
             var DisPosRolloK = new StateDisplay();
-            DisPosRolloK.create("MainRolloKCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosRolloK.create("MainRolloKCtrl", "midgreenLight", "%", "20px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var DisModeRolloK = new StateDisplay();
-            DisModeRolloK.create("MainRolloKCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man", "",
+            DisModeRolloK.create("MainRolloKCtrl", "midgreenLight", "", "100px", "30px", "size07", "30px", "Mode",
+                "Auto", "Man", "",
                 "", "");
 
             var DisST1RolloK = new StateDisplay();
-            DisST1RolloK.create("MainRolloKCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr",
+            DisST1RolloK.create("MainRolloKCtrl", "midgreenLight", "", "180px", "30px", "size07", "30px",
+                "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloK = new StateDisplay();
-            DisST2RolloK.create("MainRolloKCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
+            DisST2RolloK.create("MainRolloKCtrl", "midgreenLight", "", "260px", "30px", "size07", "30px",
+                "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
 
@@ -1478,19 +1506,23 @@
         </script>
         <script>
             var DisPosRolloSZ = new StateDisplay();
-            DisPosRolloSZ.create("MainRolloSZCtrl", "", "%", "20px", "30px", "size07", "30px", "Position", "Number", "",
+            DisPosRolloSZ.create("MainRolloSZCtrl", "sandyLight", "%", "20px", "30px", "size07", "30px", "Position",
+                "Number", "",
                 "", "", "");
 
             var DisModeRolloSZ = new StateDisplay();
-            DisModeRolloSZ.create("MainRolloSZCtrl", "", "", "100px", "30px", "size07", "30px", "Mode", "Auto", "Man",
+            DisModeRolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "100px", "30px", "size07", "30px", "Mode",
+                "Auto", "Man",
                 "", "", "");
 
             var DisST1RolloSZ = new StateDisplay();
-            DisST1RolloSZ.create("MainRolloSZCtrl", "", "", "180px", "30px", "size07", "30px", "Schaltzeiten Mo-Fr",
+            DisST1RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "180px", "30px", "size07", "30px",
+                "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloSZ = new StateDisplay();
-            DisST2RolloSZ.create("MainRolloSZCtrl", "", "", "260px", "30px", "size07", "30px", "Schaltzeiten Sa-so",
+            DisST2RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "260px", "30px", "size07", "30px",
+                "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
             var rolloCtrlSZ = new RolloCtrl();
@@ -1557,35 +1589,41 @@
             var HeadWZL1 = new HeadLine();
             HeadWZL1.create("MainLightWZCtrl", "0px", "transparent", "Fenster Lampe");
             var DisLightEnergy1WZCtrl = new StateDisplay();
-            DisLightEnergy1WZCtrl.create("MainLightWZCtrl", "", "Wh", "50px", "20px", "normal", "20px", "Energy",
+            DisLightEnergy1WZCtrl.create("MainLightWZCtrl", "cyanLight", "Wh", "50px", "20px", "normal", "20px",
+                "Energy",
                 "Number", "");
             var DisLightCurrent1WZCtrl = new StateDisplay();
-            DisLightCurrent1WZCtrl.create("MainLightWZCtrl", "", "mA", "120px", "20px", "normal", "20px", "Strom",
+            DisLightCurrent1WZCtrl.create("MainLightWZCtrl", "cyanLight", "mA", "120px", "20px", "normal", "20px",
+                "Strom",
                 "Number", "");
             var DisLightPower1WZCtrl = new StateDisplay();
-            DisLightPower1WZCtrl.create("MainLightWZCtrl", "", "W", "190px", "20px", "normal", "20px", "Power",
+            DisLightPower1WZCtrl.create("MainLightWZCtrl", "cyanLight", "W", "190px", "20px", "normal", "20px", "Power",
                 "Number", "");
             var HeadWZL2 = new HeadLine();
             HeadWZL2.create("MainLightWZCtrl", "220px", "transparent", "Mitte Lampe");
             var DisLightEnergy2WZCtrl = new StateDisplay();
-            DisLightEnergy2WZCtrl.create("MainLightWZCtrl", "", "Wh", "330px", "20px", "normal", "20px", "Energy",
+            DisLightEnergy2WZCtrl.create("MainLightWZCtrl", "cyanLight", "Wh", "330px", "20px", "normal", "20px",
+                "Energy",
                 "Number", "");
             var DisLightCurrent2WZCtrl = new StateDisplay();
-            DisLightCurrent2WZCtrl.create("MainLightWZCtrl", "", "mA", "400px", "20px", "normal", "20px", "Strom",
+            DisLightCurrent2WZCtrl.create("MainLightWZCtrl", "cyanLight", "mA", "400px", "20px", "normal", "20px",
+                "Strom",
                 "Number", "");
             var DisLightPower2WZCtrl = new StateDisplay();
-            DisLightPower2WZCtrl.create("MainLightWZCtrl", "", "W", "470px", "20px", "normal", "20px", "Power",
+            DisLightPower2WZCtrl.create("MainLightWZCtrl", "cyanLight", "W", "470px", "20px", "normal", "20px", "Power",
                 "Number", "");
             var HeadWZL3 = new HeadLine();
             HeadWZL3.create("MainLightWZCtrl", "450px", "transparent", "Eingang Lampe");
             var DisLightEnergy3WZCtrl = new StateDisplay();
-            DisLightEnergy3WZCtrl.create("MainLightWZCtrl", "", "Wh", "610px", "20px", "normal", "20px", "Energy",
+            DisLightEnergy3WZCtrl.create("MainLightWZCtrl", "cyanLight", "Wh", "610px", "20px", "normal", "20px",
+                "Energy",
                 "Number", "");
             var DisLightCurrent3WZCtrl = new StateDisplay();
-            DisLightCurrent3WZCtrl.create("MainLightWZCtrl", "", "mA", "680px", "20px", "normal", "20px", "Strom",
+            DisLightCurrent3WZCtrl.create("MainLightWZCtrl", "cyanLight", "mA", "680px", "20px", "normal", "20px",
+                "Strom",
                 "Number", "");
             var DisLightPower3WZCtrl = new StateDisplay();
-            DisLightPower3WZCtrl.create("MainLightWZCtrl", "", "W", "750px", "20px", "normal", "20px", "Power",
+            DisLightPower3WZCtrl.create("MainLightWZCtrl", "cyanLight", "W", "750px", "20px", "normal", "20px", "Power",
                 "Number", "");
         </script>
 
@@ -1610,13 +1648,16 @@
         </script>
         <script>
             var DisLightEnergySZCtrl = new StateDisplay();
-            DisLightEnergySZCtrl.create("MainLightSZCtrl", "", "Wh", "50px", "20px", "normal", "20px", "Energy",
+            DisLightEnergySZCtrl.create("MainLightSZCtrl", "sandyLight", "Wh", "50px", "20px", "normal", "20px",
+                "Energy",
                 "Number", "");
             var DisLightCurrentSZCtrl = new StateDisplay();
-            DisLightCurrentSZCtrl.create("MainLightSZCtrl", "", "mA", "150px", "20px", "normal", "20px", "Strom",
+            DisLightCurrentSZCtrl.create("MainLightSZCtrl", "sandyLight", "mA", "150px", "20px", "normal", "20px",
+                "Strom",
                 "Number", "");
             var DisLightPowerSZCtrl = new StateDisplay();
-            DisLightPowerSZCtrl.create("MainLightSZCtrl", "", "W", "250px", "20px", "normal", "20px", "Power", "Number",
+            DisLightPowerSZCtrl.create("MainLightSZCtrl", "sandyLight", "W", "250px", "20px", "normal", "20px", "Power",
+                "Number",
                 "");
         </script>
 
@@ -1642,13 +1683,16 @@
         </script>
         <script>
             var DisLightEnergyDCtrl = new StateDisplay();
-            DisLightEnergyDCtrl.create("MainLightDCtrl", "", "Wh", "50px", "20px", "normal", "20px", "Energy",
+            DisLightEnergyDCtrl.create("MainLightDCtrl", "yellowgreenLight", "Wh", "50px", "20px", "normal", "20px",
+                "Energy",
                 "Number", "");
             var DisLightCurrentDCtrl = new StateDisplay();
-            DisLightCurrentDCtrl.create("MainLightDCtrl", "", "mA", "150px", "20px", "normal", "20px", "Strom",
+            DisLightCurrentDCtrl.create("MainLightDCtrl", "yellowgreenLight", "mA", "150px", "20px", "normal", "20px",
+                "Strom",
                 "Number", "");
             var DisLightPowerDCtrl = new StateDisplay();
-            DisLightPowerDCtrl.create("MainLightDCtrl", "", "W", "250px", "20px", "normal", "20px", "Power", "Number",
+            DisLightPowerDCtrl.create("MainLightDCtrl", "yellowgreenLight", "W", "250px", "20px", "normal", "20px",
+                "Power", "Number",
                 "");
         </script>
 
@@ -1768,24 +1812,28 @@
             ABox.create("MainSecCodeCtrl", "AlarmMeldung", "yellow", "10px", "20px");
 
             var DisAlarmActiveSec = new StateDisplay();
-            DisAlarmActiveSec.create("MainSecCodeCtrl", "", "", "50px", "30px", "normal", "20px", "Alarm Anlage",
+            DisAlarmActiveSec.create("MainSecCodeCtrl", "redLight", "", "50px", "30px", "normal", "20px",
+                "Alarm Anlage",
                 "aktiviert", "deaktiviert", "", "", "");
 
 
             var DisSabAlarm = new StateDisplay();
-            DisSabAlarm.create("MainSecCodeCtrl", "", "", "140px", "30px", "normal", "20px", "Sabotage", "manipuliert",
+            DisSabAlarm.create("MainSecCodeCtrl", "redLight", "", "140px", "30px", "normal", "20px", "Sabotage",
+                "manipuliert",
                 "ok");
 
             var DisDoorOpen = new StateDisplay();
-            DisDoorOpen.create("MainSecCodeCtrl", "", "", "240px", "30px", "normal", "20px", "Eingangstür", "offen",
+            DisDoorOpen.create("MainSecCodeCtrl", "redLight", "", "240px", "30px", "normal", "20px", "Eingangstür",
+                "offen",
                 "geschlossen", "", "", "");
 
             var DisBalkonDoorOpen = new StateDisplay();
-            DisBalkonDoorOpen.create("MainSecCodeCtrl", "", "", "320px", "30px", "normal", "20px", "Balkon Tür",
+            DisBalkonDoorOpen.create("MainSecCodeCtrl", "redLight", "", "320px", "30px", "normal", "20px", "Balkon Tür",
                 "offen", "geschlossen", "", "", "");
 
             var DisFloorPD = new StateDisplay();
-            DisFloorPD.create("MainSecCodeCtrl", "", "", "500px", "30px", "normal", "20px", "Diele", "Person erkannt",
+            DisFloorPD.create("MainSecCodeCtrl", "redLight", "", "500px", "30px", "normal", "20px", "Diele",
+                "Person erkannt",
                 "keine Person", "", "", "");
         </script>
 
@@ -1821,23 +1869,25 @@
 
         <script>
             var BathDisAlarm = new StateDisplay();
-            BathDisAlarm.create("MainWaterAlarmCtrl", "red", "", "20px", "20px", "normal", "20px", "Alarm", "Warnung",
+            BathDisAlarm.create("MainWaterAlarmCtrl", "redLight", "", "20px", "20px", "normal", "20px", "Alarm",
+                "Warnung",
                 "");
             var BathDisFeuchte = new StateDisplay();
-            BathDisFeuchte.create("MainWaterAlarmCtrl", "red", "", "90px", "20px", "normal", "20px", "Feuchte",
+            BathDisFeuchte.create("MainWaterAlarmCtrl", "redLight", "", "90px", "20px", "normal", "20px", "Feuchte",
                 "Warnung", "");
             var BathDisWater = new StateDisplay();
-            BathDisWater.create("MainWaterAlarmCtrl", "red", "", "160px", "20px", "normal", "20px", "Wasserstand",
+            BathDisWater.create("MainWaterAlarmCtrl", "redLight", "", "160px", "20px", "normal", "20px", "Wasserstand",
                 "Warnung", "");
 
             var WashMDisAlarm = new StateDisplay();
-            WashMDisAlarm.create("MainWaterAlarmCtrl", "red", "", "300px", "20px", "normal", "20px", "Alarm", "Warnung",
+            WashMDisAlarm.create("MainWaterAlarmCtrl", "redLight", "", "300px", "20px", "normal", "20px", "Alarm",
+                "Warnung",
                 "");
             var WashMDisFeuchte = new StateDisplay();
-            WashMDisFeuchte.create("MainWaterAlarmCtrl", "red", "", "370px", "20px", "normal", "20px", "Feuchte",
+            WashMDisFeuchte.create("MainWaterAlarmCtrl", "redLight", "", "370px", "20px", "normal", "20px", "Feuchte",
                 "Warnung", "");
             var WashMDisWater = new StateDisplay();
-            WashMDisWater.create("MainWaterAlarmCtrl", "red", "", "440px", "20px", "normal", "20px", "Wasserstand",
+            WashMDisWater.create("MainWaterAlarmCtrl", "redLight", "", "440px", "20px", "normal", "20px", "Wasserstand",
                 "Warnung", "");
         </script>
 
@@ -1921,7 +1971,8 @@
         </script>
         <script>
             var BatDis = new StateDisplay();
-            BatDis.create("MainBatAlarmCtrl", "red", "", "50px", "20px", "long", "20px", "Battery Alarm", "String");
+            BatDis.create("MainBatAlarmCtrl", "redLight", "", "50px", "20px", "long", "20px", "Battery Alarm",
+                "String");
         </script>
 
 
@@ -2305,47 +2356,63 @@
         <!-- *************************************************************************************   -->
         <script>
             var CtrlwindowIPS = new Area();
-            CtrlwindowIPS.createCtrl("MainIPSCtrl", "bgOlive");
+            CtrlwindowIPS.createCtrl("MainIPSCtrl", "bgMidgreen");
         </script>
         <script>
             var Head1 = new HeadLine();
             Head1.create("MainIPSCtrl", "0px", "transparent", "IPS-RASPI");
             var DiIPS1 = new StateDisplay();
-            DiIPS1.create("MainIPSCtrl", "", "", "50px", "30px", "normal", "18px", "IP Adress", "String", "", "", "",
+            DiIPS1.create("MainIPSCtrl", "midgreenLight", "", "50px", "30px", "normal", "18px", "IP Adress", "String",
+                "", "", "",
                 "");
             var DiIPS2 = new StateDisplay();
-            DiIPS2.create("MainIPSCtrl", "", "", "110px", "30px", "normal", "18px", "Frequency", "String", "", "", "",
+            DiIPS2.create("MainIPSCtrl", "midgreenLight", "", "110px", "30px", "normal", "18px", "Frequency", "String",
+                "",
+                "", "",
                 "");
             var DiIPS3 = new StateDisplay();
-            DiIPS3.create("MainIPSCtrl", "", "", "170px", "30px", "normal", "18px", "CPU load 15min", "String", "", "",
+            DiIPS3.create("MainIPSCtrl", "midgreenLight", "", "170px", "30px", "normal", "18px", "CPU load 15min",
+                "String", "", "",
                 "", "");
             var DiIPS4 = new StateDisplay();
-            DiIPS4.create("MainIPSCtrl", "", "", "230px", "30px", "normal", "18px", "CPU Temperature", "String", "", "",
+            DiIPS4.create("MainIPSCtrl", "midgreenLight", "", "230px", "30px", "normal", "18px", "CPU Temperature",
+                "String", "", "",
                 "", "");
             var DiIPS5 = new StateDisplay();
-            DiIPS5.create("MainIPSCtrl", "", "", "290px", "30px", "normal", "18px", "CPU Voltage", "String", "", "", "",
+            DiIPS5.create("MainIPSCtrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "CPU Voltage",
+                "String",
+                "", "", "",
                 "");
             var DiIPS6 = new StateDisplay();
-            DiIPS6.create("MainIPSCtrl", "", "", "350px", "30px", "normal", "18px", "Memory Free", "String", "", "", "",
+            DiIPS6.create("MainIPSCtrl", "midgreenLight", "", "350px", "30px", "normal", "18px", "Memory Free",
+                "String",
+                "", "", "",
                 "");
             var DiIPS7 = new StateDisplay();
-            DiIPS7.create("MainIPSCtrl", "", "", "410px", "30px", "normal", "18px", "Memory SD Free", "String", "", "",
+            DiIPS7.create("MainIPSCtrl", "midgreenLight", "", "410px", "30px", "normal", "18px", "Memory SD Free",
+                "String", "", "",
                 "", "");
             var Head2 = new HeadLine();
             Head2.create("MainIPSCtrl", "420px", "transparent", "IPS-Server");
             var DiIPS8 = new StateDisplay();
-            DiIPS8.create("MainIPSCtrl", "", "", "530px", "30px", "normal", "18px", "IPS Version", "String", "", "", "",
+            DiIPS8.create("MainIPSCtrl", "midgreenLight", "", "530px", "30px", "normal", "18px", "IPS Version",
+                "String",
+                "", "", "",
                 "");
             var DiIPS9 = new StateDisplay();
-            DiIPS9.create("MainIPSCtrl", "", "", "590px", "30px", "normal", "18px", "Kernel Status", "String", "", "",
+            DiIPS9.create("MainIPSCtrl", "midgreenLight", "", "590px", "30px", "normal", "18px", "Kernel Status",
+                "String",
+                "", "",
                 "", "", "202px", "80px");
             var DiIPS10 = new StateDisplay();
-            DiIPS10.create("MainIPSCtrl", "", "", "670px", "30px", "normal", "18px", "Port 3777", "String", "", "", "",
+            DiIPS10.create("MainIPSCtrl", "midgreenLight", "", "670px", "30px", "normal", "18px", "Port 3777", "String",
+                "", "", "",
                 "");
             var Head3 = new HeadLine();
             Head3.create("MainIPSCtrl", "630px", "transparent", "WSS-Server");
             var DiIPS11 = new StateDisplay();
-            DiIPS11.create("MainIPSCtrl", "", "", "790px", "30px", "normal", "18px", "Port 9000", "String", "", "", "",
+            DiIPS11.create("MainIPSCtrl", "midgreenLight", "", "790px", "30px", "normal", "18px", "Port 9000", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2354,7 +2421,7 @@
         <!-- *************************************************************************************   -->
         <script>
             var CtrlwindowHM = new Area();
-            CtrlwindowHM.createCtrl("MainHMCtrl", "bgOlive");
+            CtrlwindowHM.createCtrl("MainHMCtrl", "bgMidgreen");
         </script>
         <script>
             var HeadHM1 = new HeadLine();
@@ -2363,29 +2430,39 @@
             labelHM1.create("MainHMCtrl", "50px", "30px", "18px", "white", "Adr.: 192.168.178.42");
 
             var DiHM1 = new StateDisplay();
-            DiHM1.create("MainHMCtrl", "", "", "110px", "30px", "normal", "18px", "Connected", "String", "", "", "",
+            DiHM1.create("MainHMCtrl", "midgreenLight", "", "110px", "30px", "normal", "18px", "Connected", "String",
+                "",
+                "", "",
                 "");
             var DiHM2 = new StateDisplay();
-            DiHM2.create("MainHMCtrl", "", "", "170px", "30px", "normal", "18px", "Default", "String", "", "", "",
+            DiHM2.create("MainHMCtrl", "midgreenLight", "", "170px", "30px", "normal", "18px", "Default", "String", "",
+                "",
+                "",
                 "");
             var DiHM3 = new StateDisplay();
-            DiHM3.create("MainHMCtrl", "", "", "230px", "30px", "normal", "18px", "Duty Cycle", "String", "", "",
+            DiHM3.create("MainHMCtrl", "midgreenLight", "", "230px", "30px", "normal", "18px", "Duty Cycle", "String",
+                "",
+                "",
                 "", "");
 
             var HeadHM2 = new HeadLine();
             HeadHM2.create("MainHMCtrl", "260px", "transparent", "HM IP - Server");
             var DiHM4 = new StateDisplay();
-            DiHM4.create("MainHMCtrl", "", "", "360px", "30px", "normal", "18px", "Connected", "String", "", "", "",
+            DiHM4.create("MainHMCtrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "Connected", "String",
+                "", "", "",
                 "");
             var DiHM5 = new StateDisplay();
-            DiHM5.create("MainHMCtrl", "", "", "420px", "30px", "normal", "18px", "Default", "String", "", "",
+            DiHM5.create("MainHMCtrl", "midgreenLight", "", "420px", "30px", "normal", "18px", "Default", "String", "",
+                "",
                 "", "", "202px", "80px");
             var DiHM6 = new StateDisplay();
-            DiHM6.create("MainHMCtrl", "", "", "480px", "30px", "normal", "18px", "Version", "String", "", "", "",
+            DiHM6.create("MainHMCtrl", "midgreenLight", "", "480px", "30px", "normal", "18px", "Version", "String", "",
+                "", "",
                 "");
 
             var DiHM7 = new StateDisplay();
-            DiHM7.create("MainHMCtrl", "", "", "540px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "",
+            DiHM7.create("MainHMCtrl", "midgreenLight", "", "540px", "30px", "normal", "18px", "Duty Cycle", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2395,7 +2472,7 @@
         <!-- *************************************************************************************   -->
         <script>
             var CtrlwindowHMIP1 = new Area();
-            CtrlwindowHMIP1.createCtrl("HMIP1Ctrl", "bgOlive");
+            CtrlwindowHMIP1.createCtrl("HMIP1Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadA1 = new HeadLine();
@@ -2405,19 +2482,24 @@
             var labelA2 = new label();
             labelA2.create("HMIP1Ctrl", "80px", "30px", "18px", "white", "Location: Diele");
             var DiIPSA1 = new StateDisplay();
-            DiIPSA1.create("HMIP1Ctrl", "", "", "140px", "30px", "normal", "18px", "Error Code", "String", "", "", "",
+            DiIPSA1.create("HMIP1Ctrl", "midgreenLight", "", "140px", "30px", "normal", "18px", "Error Code", "String",
+                "", "", "",
                 "");
             var DiIPSA2 = new StateDisplay();
-            DiIPSA2.create("HMIP1Ctrl", "", "", "210px", "30px", "normal", "18px", "Operating Voltage", "String", "",
+            DiIPSA2.create("HMIP1Ctrl", "midgreenLight", "", "210px", "30px", "normal", "18px", "Operating Voltage",
+                "String", "",
                 "", "");
             var DiIPSA3 = new StateDisplay();
-            DiIPSA3.create("HMIP1Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSA3.create("HMIP1Ctrl", "midgreenLight", "", "280px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSA4 = new StateDisplay();
-            DiIPSA4.create("HMIP1Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSA4.create("HMIP1Ctrl", "midgreenLight", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSA5 = new StateDisplay();
-            DiIPSA5.create("HMIP1Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+            DiIPSA5.create("HMIP1Ctrl", "midgreenLight", "", "420px", "30px", "normal", "18px", "Unreach", "String", "",
+                "", "", "");
         </script>
         <!-- ***********************************************************************************************   -->
         <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->
@@ -2425,7 +2507,7 @@
         <!-- ***********************************************************************************************   -->
         <script>
             var CtrlwindowHMIP2 = new Area();
-            CtrlwindowHMIP2.createCtrl("HMIP2Ctrl", "bgOlive");
+            CtrlwindowHMIP2.createCtrl("HMIP2Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadB1 = new HeadLine();
@@ -2436,13 +2518,16 @@
             labelB2.create("HMIP2Ctrl", "80px", "30px", "18px", "white", "Location: Kinderzimmer");
 
             var DiIPSB1 = new StateDisplay();
-            DiIPSB1.create("HMIP2Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSB1.create("HMIP2Ctrl", "midgreenLight", "", "280px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSB2 = new StateDisplay();
-            DiIPSB2.create("HMIP2Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSB2.create("HMIP2Ctrl", "midgreenLight", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSB3 = new StateDisplay();
-            DiIPSB3.create("HMIP2Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+            DiIPSB3.create("HMIP2Ctrl", "midgreenLight", "", "420px", "30px", "normal", "18px", "Unreach", "String", "",
+                "", "", "");
         </script>
         <!-- ***********************************************************************************************   -->
         <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->
@@ -2450,7 +2535,7 @@
         <!-- ***********************************************************************************************   -->
         <script>
             var CtrlwindowHMIP3 = new Area();
-            CtrlwindowHMIP3.createCtrl("HMIP3Ctrl", "bgOlive");
+            CtrlwindowHMIP3.createCtrl("HMIP3Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadC1 = new HeadLine();
@@ -2461,13 +2546,16 @@
             labelC2.create("HMIP3Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer");
 
             var DiIPSC1 = new StateDisplay();
-            DiIPSC1.create("HMIP3Ctrl", "", "", "280px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSC1.create("HMIP3Ctrl", "midgreenLight", "", "280px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSC2 = new StateDisplay();
-            DiIPSC2.create("HMIP3Ctrl", "", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSC2.create("HMIP3Ctrl", "midgreenLight", "", "350px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSC3 = new StateDisplay();
-            DiIPSC3.create("HMIP3Ctrl", "", "", "420px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+            DiIPSC3.create("HMIP3Ctrl", "midgreenLight", "", "420px", "30px", "normal", "18px", "Unreach", "String", "",
+                "", "", "");
         </script>
         <!-- ***********************************************************************************************   -->
         <!--  ************************       CTRL - HMIP-SWD  Wasser Sensor          ***********************   -->
@@ -2475,7 +2563,7 @@
         <!-- ***********************************************************************************************   -->
         <script>
             var CtrlwindowHMIP4 = new Area();
-            CtrlwindowHMIP4.createCtrl("HMIP4Ctrl", "bgOlive");
+            CtrlwindowHMIP4.createCtrl("HMIP4Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadD1 = new HeadLine();
@@ -2486,21 +2574,27 @@
             labelD2.create("HMIP4Ctrl", "80px", "30px", "18px", "white", "Location: Küche");
 
             var DiIPSD1 = new StateDisplay();
-            DiIPSD1.create("HMIP4Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "",
+            DiIPSD1.create("HMIP4Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String",
+                "", "", "",
                 "");
             var DiIPSD2 = new StateDisplay();
-            DiIPSD2.create("HMIP4Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "",
+            DiIPSD2.create("HMIP4Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Error Code", "String",
+                "", "", "",
                 "");
             var DiIPSD3 = new StateDisplay();
-            DiIPSD3.create("HMIP4Ctrl", "", "", "290px", "30px", "normal", "18px", "Non Flat Position", "String", "",
+            DiIPSD3.create("HMIP4Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Non Flat Position",
+                "String", "",
                 "", "", "");
             var DiIPSD4 = new StateDisplay();
-            DiIPSD4.create("HMIP4Ctrl", "", "", "360px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+            DiIPSD4.create("HMIP4Ctrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "Voltage", "String", "",
+                "", "", "");
             var DiIPSD5 = new StateDisplay();
-            DiIPSD5.create("HMIP4Ctrl", "", "", "430px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSD5.create("HMIP4Ctrl", "midgreenLight", "", "430px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSD6 = new StateDisplay();
-            DiIPSD6.create("HMIP4Ctrl", "", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSD6.create("HMIP4Ctrl", "midgreenLight", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSD7 = new StateDisplay();
             DiIPSD7.create("HMIP4Ctrl", "", "", "570px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
@@ -2511,7 +2605,7 @@
         <!-- ***********************************************************************************************   -->
         <script>
             var CtrlwindowHMIP5 = new Area();
-            CtrlwindowHMIP5.createCtrl("HMIP5Ctrl", "bgOlive");
+            CtrlwindowHMIP5.createCtrl("HMIP5Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadE1 = new HeadLine();
@@ -2522,24 +2616,31 @@
             labelE2.create("HMIP5Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
             var DiIPSE1 = new StateDisplay();
-            DiIPSE1.create("HMIP5Ctrl", "", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String", "", "", "",
+            DiIPSE1.create("HMIP5Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "Duty Cycle", "String",
+                "", "", "",
                 "");
             var DiIPSE2 = new StateDisplay();
-            DiIPSE2.create("HMIP5Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "",
+            DiIPSE2.create("HMIP5Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Error Code", "String",
+                "", "", "",
                 "");
             var DiIPSE3 = new StateDisplay();
-            DiIPSE3.create("HMIP5Ctrl", "", "", "290px", "30px", "normal", "18px", "Non Flat Position", "String", "",
+            DiIPSE3.create("HMIP5Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Non Flat Position",
+                "String", "",
                 "", "", "");
             var DiIPSE4 = new StateDisplay();
-            DiIPSE4.create("HMIP5Ctrl", "", "", "360px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+            DiIPSE4.create("HMIP5Ctrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "Voltage", "String", "",
+                "", "", "");
             var DiIPSE5 = new StateDisplay();
-            DiIPSE5.create("HMIP5Ctrl", "", "", "430px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSE5.create("HMIP5Ctrl", "midgreenLight", "", "430px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSE6 = new StateDisplay();
-            DiIPSE6.create("HMIP5Ctrl", "", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSE6.create("HMIP5Ctrl", "midgreenLight", "", "500px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSE7 = new StateDisplay();
-            DiIPSE7.create("HMIP5Ctrl", "", "", "570px", "30px", "normal", "18px", "Unreach", "String", "", "", "", "");
+            DiIPSE7.create("HMIP5Ctrl", "midgreenLight", "", "570px", "30px", "normal", "18px", "Unreach", "String", "",
+                "", "", "");
         </script>
         <!-- ***********************************************************************************************   -->
         <!--  ************************       CTRL - HMIP-Sec-SCo  Tür Kontakt        ***********************   -->
@@ -2547,7 +2648,7 @@
         <!-- ***********************************************************************************************   -->
         <script>
             var CtrlwindowHMIP6 = new Area();
-            CtrlwindowHMIP6.createCtrl("HMIP6Ctrl", "bgOlive");
+            CtrlwindowHMIP6.createCtrl("HMIP6Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadF1 = new HeadLine();
@@ -2558,9 +2659,11 @@
             labelF2.create("HMIP6Ctrl", "80px", "30px", "18px", "white", "Location: Haustür");
 
             var DiIPSF1 = new StateDisplay();
-            DiIPSF1.create("HMIP6Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+            DiIPSF1.create("HMIP6Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "unreach", "String", "",
+                "", "", "");
             var DiIPSF2 = new StateDisplay();
-            DiIPSF2.create("HMIP6Ctrl", "", "", "220px", "30px", "normal", "18px", "Error", "String", "", "", "", "");
+            DiIPSF2.create("HMIP6Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Error", "String", "",
+                "", "", "");
         </script>
 
         <!-- ****************************************************************************************************   -->
@@ -2569,7 +2672,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP7 = new Area();
-            CtrlwindowHMIP7.createCtrl("HMIP7Ctrl", "bgOlive");
+            CtrlwindowHMIP7.createCtrl("HMIP7Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadG1 = new HeadLine();
@@ -2580,22 +2683,28 @@
             labelG2.create("HMIP7Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer")
 
             var DiIPSG1 = new StateDisplay();
-            DiIPSG1.create("HMIP7Ctrl", "", "", "150px", "30px", "normal", "18px", "act. Temp", "String", "", "", "",
+            DiIPSG1.create("HMIP7Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "act. Temp", "String",
+                "", "", "",
                 "");
             var DiIPSG2 = new StateDisplay();
-            DiIPSG2.create("HMIP7Ctrl", "", "", "220px", "30px", "normal", "18px", "Error Code", "String", "", "", "",
+            DiIPSG2.create("HMIP7Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Error Code", "String",
+                "", "", "",
                 "");
             var DiIPSG3 = new StateDisplay();
-            DiIPSG3.create("HMIP7Ctrl", "", "", "290px", "30px", "normal", "18px", "Overheat", "String", "", "", "",
+            DiIPSG3.create("HMIP7Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Overheat", "String",
+                "", "", "",
                 "");
             var DiIPSG4 = new StateDisplay();
-            DiIPSG4.create("HMIP7Ctrl", "", "", "360px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSG4.create("HMIP7Ctrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSG5 = new StateDisplay();
-            DiIPSG5.create("HMIP7Ctrl", "", "", "430px", "30px", "normal", "18px", "Rssi Peer", "String", "", "", "",
+            DiIPSG5.create("HMIP7Ctrl", "midgreenLight", "", "430px", "30px", "normal", "18px", "Rssi Peer", "String",
+                "", "", "",
                 "");
             var DiIPSG6 = new StateDisplay();
-            DiIPSG6.create("HMIP7Ctrl", "", "", "500px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+            DiIPSG6.create("HMIP7Ctrl", "midgreenLight", "", "500px", "30px", "normal", "18px", "unreach", "String", "",
+                "", "", "");
         </script>
 
         <!-- ****************************************************************************************************   -->
@@ -2604,7 +2713,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP8 = new Area();
-            CtrlwindowHMIP8.createCtrl("HMIP8Ctrl", "bgOlive");
+            CtrlwindowHMIP8.createCtrl("HMIP8Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadH1 = new HeadLine();
@@ -2615,12 +2724,15 @@
             labelH2.create("HMIP8Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
             var DiIPSH1 = new StateDisplay();
-            DiIPSH1.create("HMIP8Ctrl", "", "", "150px", "30px", "normal", "18px", "Voltage", "String", "", "", "", "");
+            DiIPSH1.create("HMIP8Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "Voltage", "String", "",
+                "", "", "");
             var DiIPSH2 = new StateDisplay();
-            DiIPSH2.create("HMIP8Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI Device", "String", "", "", "",
+            DiIPSH2.create("HMIP8Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "RSSI Device", "String",
+                "", "", "",
                 "");
             var DiIPSH3 = new StateDisplay();
-            DiIPSH3.create("HMIP8Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+            DiIPSH3.create("HMIP8Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "unreach", "String", "",
+                "", "", "");
         </script>
 
         <!-- ****************************************************************************************************   -->
@@ -2629,7 +2741,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP9 = new Area();
-            CtrlwindowHMIP9.createCtrl("HMIP9Ctrl", "bgOlive");
+            CtrlwindowHMIP9.createCtrl("HMIP9Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadI1 = new HeadLine();
@@ -2640,7 +2752,8 @@
             labelI2.create("HMIP9Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
             var DiIPSI1 = new StateDisplay();
-            DiIPSI1.create("HMIP9Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "", "");
+            DiIPSI1.create("HMIP9Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "unreach", "String", "",
+                "", "", "");
         </script>
 
 
@@ -2650,7 +2763,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP10 = new Area();
-            CtrlwindowHMIP10.createCtrl("HMIP10Ctrl", "bgOlive");
+            CtrlwindowHMIP10.createCtrl("HMIP10Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadJ1 = new HeadLine();
@@ -2661,7 +2774,8 @@
             labelJ2.create("HMIP10Ctrl", "80px", "30px", "18px", "white", "Location: Bad");
 
             var DiIPSJ1 = new StateDisplay();
-            DiIPSJ1.create("HMIP10Ctrl", "", "", "150px", "30px", "normal", "18px", "unreach", "String", "", "", "",
+            DiIPSJ1.create("HMIP10Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "unreach", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2671,7 +2785,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP11 = new Area();
-            CtrlwindowHMIP11.createCtrl("HMIP11Ctrl", "bgOlive");
+            CtrlwindowHMIP11.createCtrl("HMIP11Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadK1 = new HeadLine();
@@ -2681,13 +2795,16 @@
             var labelK2 = new label();
             labelK2.create("HMIP11Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");;
             var DiIPSK1 = new StateDisplay();
-            DiIPSK1.create("HMIP11Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "",
+            DiIPSK1.create("HMIP11Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "RSSI-Device",
+                "String", "", "", "",
                 "");
             var DiIPSK2 = new StateDisplay();
-            DiIPSK2.create("HMIP11Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String", "", "", "",
+            DiIPSK2.create("HMIP11Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String",
+                "", "", "",
                 "");
             var DiIPSK3 = new StateDisplay();
-            DiIPSK3.create("HMIP11Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "",
+            DiIPSK3.create("HMIP11Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "unreach", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2698,7 +2815,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP12 = new Area();
-            CtrlwindowHMIP12.createCtrl("HMIP12Ctrl", "bgOlive");
+            CtrlwindowHMIP12.createCtrl("HMIP12Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadL1 = new HeadLine();
@@ -2709,13 +2826,16 @@
             labelL2.create("HMIP12Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
             var DiIPSL1 = new StateDisplay();
-            DiIPSL1.create("HMIP12Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "",
+            DiIPSL1.create("HMIP12Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "RSSI-Device",
+                "String", "", "", "",
                 "");
             var DiIPSL2 = new StateDisplay();
-            DiIPSL2.create("HMIP12Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String", "", "", "",
+            DiIPSL2.create("HMIP12Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String",
+                "", "", "",
                 "");
             var DiIPSL3 = new StateDisplay();
-            DiIPSL3.create("HMIP12Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "", "", "",
+            DiIPSL3.create("HMIP12Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "unreach", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2726,7 +2846,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP13 = new Area();
-            CtrlwindowHMIP13.createCtrl("HMIP13Ctrl", "bgOlive");
+            CtrlwindowHMIP13.createCtrl("HMIP13Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadM1 = new HeadLine();
@@ -2737,13 +2857,16 @@
             labelM2.create("HMIP13Ctrl", "80px", "30px", "18px", "white", "Location: Diele");
 
             var DiIPSM1 = new StateDisplay();
-            DiIPSM1.create("HMIP13Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "",
+            DiIPSM1.create("HMIP13Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "RSSI-Device",
+                "String", "", "", "",
                 "");
             var DiIPSM2 = new StateDisplay();
-            DiIPSM2.create("HMIP13Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String", "", "", "",
+            DiIPSM2.create("HMIP13Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "RSSI-Peer", "String",
+                "", "", "",
                 "");
             var DiIPSM3 = new StateDisplay();
-            DiIPSM3.create("HMIP13Ctrl", "", "", "290px", "30px", "normal", "18px", "unreach", "String", "",
+            DiIPSM3.create("HMIP13Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "unreach", "String",
+                "",
                 "", "",
                 "");
         </script>
@@ -2755,7 +2878,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP14 = new Area();
-            CtrlwindowHMIP14.createCtrl("HMIP14Ctrl", "bgOlive");
+            CtrlwindowHMIP14.createCtrl("HMIP14Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadN1 = new HeadLine();
@@ -2766,10 +2889,12 @@
             labelN2.create("HMIP14Ctrl", "80px", "30px", "18px", "white", "Location: Diele");
 
             var DiIPSN1 = new StateDisplay();
-            DiIPSN1.create("HMIP14Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI-Device", "String", "", "", "",
+            DiIPSN1.create("HMIP14Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "RSSI-Device",
+                "String", "", "", "",
                 "");
             var DiIPSN2 = new StateDisplay();
-            DiIPSN2.create("HMIP14Ctrl", "", "", "220px", "30px", "normal", "18px", "Unreach", "String", "", "", "",
+            DiIPSN2.create("HMIP14Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Unreach", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2780,7 +2905,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP15 = new Area();
-            CtrlwindowHMIP15.createCtrl("HMIP15Ctrl", "bgOlive");
+            CtrlwindowHMIP15.createCtrl("HMIP15Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadO1 = new HeadLine();
@@ -2791,16 +2916,20 @@
             labelO2.create("HMIP15Ctrl", "80px", "30px", "18px", "white", "Location: Schlafzimmer");
 
             var DiIPSO1 = new StateDisplay();
-            DiIPSO1.create("HMIP15Ctrl", "", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "", "", "",
+            DiIPSO1.create("HMIP15Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "",
+                "", "",
                 "");
             var DiIPSO2 = new StateDisplay();
-            DiIPSO2.create("HMIP15Ctrl", "", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "", "", "",
+            DiIPSO2.create("HMIP15Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "",
+                "", "",
                 "");
             var DiIPSO3 = new StateDisplay();
-            DiIPSO3.create("HMIP15Ctrl", "", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "", "", "",
+            DiIPSO3.create("HMIP15Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "",
+                "", "",
                 "");
             var DiIPSO4 = new StateDisplay();
-            DiIPSO4.create("HMIP15Ctrl", "", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "", "", "",
+            DiIPSO4.create("HMIP15Ctrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "",
+                "", "",
                 "");
         </script>
 
@@ -2811,7 +2940,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP16 = new Area();
-            CtrlwindowHMIP16.createCtrl("HMIP16Ctrl", "bgOlive");
+            CtrlwindowHMIP16.createCtrl("HMIP16Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadP1 = new HeadLine();
@@ -2822,16 +2951,20 @@
             labelP2.create("HMIP16Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
             var DiIPSP1 = new StateDisplay();
-            DiIPSP1.create("HMIP16Ctrl", "", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "", "", "",
+            DiIPSP1.create("HMIP16Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "Kanal1", "String", "",
+                "", "",
                 "");
             var DiIPSP2 = new StateDisplay();
-            DiIPSP2.create("HMIP16Ctrl", "", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "", "", "",
+            DiIPSP2.create("HMIP16Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "Kanal2", "String", "",
+                "", "",
                 "");
             var DiIPSP3 = new StateDisplay();
-            DiIPSP3.create("HMIP16Ctrl", "", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "", "", "",
+            DiIPSP3.create("HMIP16Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Kanal3", "String", "",
+                "", "",
                 "");
             var DiIPSP4 = new StateDisplay();
-            DiIPSP4.create("HMIP16Ctrl", "", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "", "", "",
+            DiIPSP4.create("HMIP16Ctrl", "midgreenLight", "", "360px", "30px", "normal", "18px", "Kanal4", "String", "",
+                "", "",
                 "");
         </script>
 
@@ -2842,7 +2975,7 @@
         <!-- ****************************************************************************************************   -->
         <script>
             var CtrlwindowHMIP17 = new Area();
-            CtrlwindowHMIP17.createCtrl("HMIP17Ctrl", "bgOlive");
+            CtrlwindowHMIP17.createCtrl("HMIP17Ctrl", "bgMidgreen");
         </script>
         <script>
             var HeadQ1 = new HeadLine();
@@ -2853,13 +2986,16 @@
             labelQ2.create("HMIP17Ctrl", "80px", "30px", "18px", "white", "Location: Wohnzimmer");
 
             var DiIPSQ1 = new StateDisplay();
-            DiIPSQ1.create("HMIP17Ctrl", "", "", "150px", "30px", "normal", "18px", "RSSI_Device", "String", "", "", "",
+            DiIPSQ1.create("HMIP17Ctrl", "midgreenLight", "", "150px", "30px", "normal", "18px", "RSSI_Device",
+                "String", "", "", "",
                 "");
             var DiIPSQ2 = new StateDisplay();
-            DiIPSQ2.create("HMIP17Ctrl", "", "", "220px", "30px", "normal", "18px", "RSSI Peer", "String", "", "", "",
+            DiIPSQ2.create("HMIP17Ctrl", "midgreenLight", "", "220px", "30px", "normal", "18px", "RSSI Peer", "String",
+                "", "", "",
                 "");
             var DiIPSQ3 = new StateDisplay();
-            DiIPSQ3.create("HMIP17Ctrl", "", "", "290px", "30px", "normal", "18px", "Unreach", "String", "", "", "",
+            DiIPSQ3.create("HMIP17Ctrl", "midgreenLight", "", "290px", "30px", "normal", "18px", "Unreach", "String",
+                "", "", "",
                 "");
         </script>
 
@@ -2888,16 +3024,20 @@
             IconVarWSS.create("MainWSS", "115px", "50px", "lime", "28px", "WebSocket Server", "", );
 
             var DisWSSCL1 = new StateDisplay();
-            DisWSSCL1.create("MainWSS", "", "", "50px", "380px", "size07", "18px", "WS Client 1", "String", "", "", "",
+            DisWSSCL1.create("MainWSS", "midgreenLight", "", "50px", "380px", "size07", "18px", "WS Client 1", "String",
+                "", "", "",
                 "");
             var DisWSSCL2 = new StateDisplay();
-            DisWSSCL2.create("MainWSS", "", "", "170px", "380px", "size07", "18px", "WS Client 2", "String", "", "", "",
+            DisWSSCL2.create("MainWSS", "midgreenLight", "", "170px", "380px", "size07", "18px", "WS Client 2",
+                "String", "", "", "",
                 "");
             var DisWSSCL3 = new StateDisplay();
-            DisWSSCL3.create("MainWSS", "", "", "290px", "380px", "size07", "18px", "WS Client 3", "String", "", "", "",
+            DisWSSCL3.create("MainWSS", "midgreenLight", "", "290px", "380px", "size07", "18px", "WS Client 3",
+                "String", "", "", "",
                 "");
             var DisWSSCL4 = new StateDisplay();
-            DisWSSCL4.create("MainWSS", "", "", "410px", "380px", "size07", "18px", "WS Client 4", "String", "", "", "",
+            DisWSSCL4.create("MainWSS", "midgreenLight", "", "410px", "380px", "size07", "18px", "WS Client 4",
+                "String", "", "", "",
                 "");
         </script>
 

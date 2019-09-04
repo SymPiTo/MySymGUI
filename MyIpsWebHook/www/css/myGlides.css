@@ -1789,7 +1789,7 @@ width:40%;
 	
 	margin: 1px;
 	font-size: small;
-	padding: 5px;
+	padding: 0px;
         
 }
 .anzeige.cyan{
@@ -2786,7 +2786,13 @@ h1:after {
 .violetLight {
     background: -webkit-linear-gradient(hsl(270, 100%, 75%), hsl(270, 100%, 95%), hsl(270, 100%, 75%)); 
 }
-
+.yellowgreenLight {
+    background: -webkit-linear-gradient(hsl(55, 100%, 75%), hsl(55, 100%, 95%), hsl(55, 100%, 75%));  
+}
+.redLight {
+    /*Gradient*/
+    background: -webkit-linear-gradient(hsl(0, 100%, 75%), hsl(0, 100%, 95%), hsl(0, 100%, 75%)); /* CHROME */
+}
 
 .black {
     background: black;

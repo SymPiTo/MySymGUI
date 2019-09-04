@@ -581,7 +581,7 @@ class StateDisplay {
     constructor() {
         this.ID = "";
         this.unit = "";
-        this.textColor = "white";
+        this.textColor = "black";
         this.state0 = "";
         this.state1 = "";
         this.state2 = "";
@@ -614,20 +614,27 @@ class StateDisplay {
 
         }
 
-
         elem1.style.color = "lime";
         elem1.style.position = "absolute";
         elem1.style.left = posLeft;
         elem1.style.top = posTop;
-        elem1.innerHTML = titel;
+
         elem1.setAttribute("onclick", command);
+
+        var elem2 = document.createElement("div");
+        elem2.style.backgroundColor = "black";
+        elem2.style.height = "30%";
+        elem2.innerHTML = titel;
+        elem2.style.paddingTop = "2px"
+        elem1.append(elem2);
 
         var elem3 = document.createElement("div");
 
+        elem3.style.height = "70%"
         elem3.innerHTML = "----" + this.unit;
         elem3.style.fontSize = SchriftGr;
         elem3.style.paddingTop = "5px";
-        elem3.style.color = "white";
+
         this.ID = elem3;
         elem1.append(elem3);
         document.getElementById(ParentID).appendChild(elem1);
