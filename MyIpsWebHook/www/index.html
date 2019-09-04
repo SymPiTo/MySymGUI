@@ -518,15 +518,121 @@
 
         <script>
             var CtrlBtnGoodMorning = new CtrlButton();
-            CtrlBtnGoodMorning.create("MainStarScreen", "80vh", "20%", "ctrlbutton", "normal", "grey", "Good Morning",
+            CtrlBtnGoodMorning.create("MainStarScreen", "80vh", "10%", "ctrlbutton", "normal", "grey", "Good Morning",
                 "command", "", "goodMorning();");
             var CtrlBtnGoodNight = new CtrlButton();
-            CtrlBtnGoodNight.create("MainStarScreen", "80vh", "50%", "ctrlbutton", "normal", "grey", "Good Night",
+            CtrlBtnGoodNight.create("MainStarScreen", "80vh", "40%", "ctrlbutton", "normal", "grey", "Good Night",
                 "command", "", "goodNight();");
             var CtrlBtnBye = new CtrlButton();
-            CtrlBtnBye.create("MainStarScreen", "80vh", "80%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
+            CtrlBtnBye.create("MainStarScreen", "80vh", "70%", "ctrlbutton", "normal", "grey", "Bye", "command", "",
                 "Bye();");
         </script>
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Overview Fenster                             -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- ----------------------------- Overview: Wohnzimmer ------------------------------ -->
+        <script>
+            var OVwindowHzWz = new Area();
+            OVwindowHzWz.createOverview("MenuWZOV", "bgCyan");
+        </script>
+        <script>
+        </script>
+
+        <!-- ------------------------------ Overview: Security ------------------------------- -->
+        <script>
+            var OVwindowSec = new Area();
+            OVwindowSec.createOverview("MenuSecOV", "bgRed");
+        </script>
+        <script>
+        </script>
+
+
+        <!-- ----------------------- Overview: Kinderzimmer ------------------------ -->
+        <script>
+            var OVwindowHzKz = new Area();
+            OVwindowHzKz.createOverview("MenuKZOV", "bgOlive");
+        </script>
+        <script>
+        </script>
+
+        <!-- ----------------------- Overview: Schlafzimmer ------------------------ -->
+        <script>
+            var OVwindowHzSz = new Area();
+            OVwindowHzSz.createOverview("MenuSZOV", "bgSandy");
+        </script>
+        <script>
+        </script>
+
+        <!-- --------------------------- Overview:Küche ---------------------------- -->
+        <script>
+            var OVwindowHzK = new Area();
+            OVwindowHzK.createOverview("MenuKOV", "bgMidgreen");
+        </script>
+        <script>
+        </script>
+
+
+        <!-- -------------------------- Overview: Balkon --------------------------- -->
+        <script>
+            var OVwindowHzB = new Area();
+            OVwindowHzB.createOverview("MenuBOV", "bgBlue");
+        </script>
+        <script>
+        </script>
+
+        <!-- ---------------------------- Overview: Bad ---------------------------- -->
+        <script>
+            var OVwindowHzBad = new Area();
+            OVwindowHzBad.createOverview("MenuBadOV", "bgViolet");
+        </script>
+        <script>
+        </script>
+
+        <!-- --------------------------- Overview: Diele --------------------------- -->
+        <script>
+            var OVwindowHzD = new Area();
+            OVwindowHzD.createOverview("MenuDieleOV", "bgYellowgreen");
+        </script>
+        <script>
+        </script>
+
+        <!-- --------------------------- Overview: Multimedia --------------------------- -->
+        <script>
+            var OVwindowMM = new Area();
+            OVwindowMM.createOverview("MenuMultimediaOV", "bgPurple");
+        </script>
+        <script>
+        </script>
+
+        <!-- --------------------------- Overview: Heizung --------------------------- -->
+        <script>
+            var OVwindowHz = new Area();
+            OVwindowHz.createOverview("MenuHzOV", "bgYellow");
+        </script>
+        <script>
+        </script>
+
+
+        <!-- --------------------------- Overview: Rolladen --------------------------- -->
+        <script>
+            var OVwindowRollo = new Area();
+            OVwindOVwindowRolloowHz.createOverview("MenuRolloOV", "bgBrown");
+        </script>
+        <script>
+        </script>
+
+
+        <!-- --------------------------- Overview: Netzwerk --------------------------- -->
+        <script>
+            var OVwindowNW = new Area();
+            OVwindowNW.createOverview("MenuNetOV", "bgGreen");
+        </script>
+        <script>
+        </script>
+
 
 
 
@@ -601,9 +707,11 @@
         <script>
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                           Heizung Wohnzimmer                            -->
+        <!-- ----------------------------------------------------------------------- -->
 
-
-        <!-- ************************ Heizung Wohnzimmer ************************  -->
+        <!-- -------------------- Main Area: Heizung Wohnzimmer -------------------- -->
         <!--<Main id="MainHeizungWZ" class="HeizungWZ">	</Main> -->
         <script>
             var windowHzWz = new Area();

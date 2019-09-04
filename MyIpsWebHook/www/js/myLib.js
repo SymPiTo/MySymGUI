@@ -1159,9 +1159,13 @@ class GlideButton {
                 //benötigte Fenster einblenden für Main Menu
                 document.getElementById(ParentID).style.width = "8vw";
                 if (IDMain !== "") {
-                    document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
+                    //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
+                    document.getElementsByClassName(IDMain + "OV")[0].style.left = "36vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28vw";
-                    document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
+                    //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
+
+                    document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                    document.getElementsByClassName(IDMain + "OV")[0].style.width = "64vw";
                     //TODO:übersicht für den Raum einblenden
                     // anstatt dem StartScreen ein Fenster IDMAIN + overview einblenden
                 } else {
@@ -3273,7 +3277,6 @@ class Area {
         elem1.className = MainID;
         elem1.classList.add(bgcolor, "area", "areaMain");
 
-
         document.getElementById("Container").appendChild(elem1);
     }
 
@@ -3283,10 +3286,19 @@ class Area {
         elem2.className = CtrlID;
         elem2.classList.add(bgcolor, "area", "areaCtrl");
 
-
         document.getElementById("Container").appendChild(elem2);
     }
+
+    createOverview(OVID, bgcolor) {
+        var elem1 = document.createElement("Main");
+        elem1.id = OVID;
+        elem1.className = OVID;
+        elem1.classList.add(bgcolor, "area", "areaMain");
+
+        document.getElementById("Container").appendChild(elem1);
+    }
 }
+
 
 
 
