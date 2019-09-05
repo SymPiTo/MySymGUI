@@ -1143,42 +1143,41 @@
 
 
             var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "345px", "transparent", "Preset");
+            Rahmen1WZ.create("MainRolloWZ", "400px", "35px", "230px", "170px", "transparent", "Preset");
+            var Rahmen3WZ = new Kachel();
+            Rahmen3WZ.create("MainRolloWZ", "290px", "35px", "230px", "110px", "transparent", "Mode");
 
             var btnRolloWZAuto = new CtrlButton();
-            btnRolloWZAuto.create("MainRolloWZ", "260px", "50px", "ctrlbutton", "normal", "cyan", "Automatik",
+            btnRolloWZAuto.create("MainRolloWZ", "330px", "50px", "ctrlbutton", "smaller", "cyan", "Automatik",
                 "command", "", "send('command(Rollo,WZ,Auto)') ");
             var btnRolloWZMan = new CtrlButton();
-            btnRolloWZMan.create("MainRolloWZ", "320px", "50px", "ctrlbutton", "normal", "cyan", "Manual", "command",
+            btnRolloWZMan.create("MainRolloWZ", "330px", "150px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
                 "", "send('command(Rollo,WZ,Man)') ");
+            var btnRolloWZ99 = new CtrlButton();
+            btnRolloWZ99.create("MainRolloWZ", "440px", "150px", "ctrlbutton", "smaller", "cyan", "99%", "command", "",
+                "send('command(Rollo,WZ,nearlyClosed)') ");
             var btnRolloWZ75 = new CtrlButton();
-            btnRolloWZ75.create("MainRolloWZ", "380px", "50px", "ctrlbutton", "normal", "cyan", "75%", "command", "",
+            btnRolloWZ75.create("MainRolloWZ", "500px", "150px", "ctrlbutton", "smaller", "cyan", "75%", "command", "",
                 "send('command(Rollo,WZ,dark)') ");
             var btnRolloWZ50 = new CtrlButton();
-            btnRolloWZ50.create("MainRolloWZ", "440px", "50px", "ctrlbutton", "normal", "cyan", "50%", "command", "",
+            btnRolloWZ50.create("MainRolloWZ", "440px", "50px", "ctrlbutton", "smaller", "cyan", "50%", "command", "",
                 "send('command(Rollo,WZ,mid)') ");
             var btnRolloWZ25 = new CtrlButton();
-            btnRolloWZ25.create("MainRolloWZ", "500px", "50px", "ctrlbutton", "normal", "cyan", "25%", "command", "",
+            btnRolloWZ25.create("MainRolloWZ", "500px", "50px", "ctrlbutton", "smaller", "cyan", "25%", "command", "",
                 "send('command(Rollo,WZ,bright)') ");
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainRolloWZ", "220px", "335px", "200px", "345px", "transparent", "Control");
+            Rahmen2WZ.create("MainRolloWZ", "290px", "335px", "130px", "280px", "transparent", "Control");
 
             var btnRolloWZHoch = new CtrlButton();
-            btnRolloWZHoch.create("MainRolloWZ", "260px", "350px", "ctrlbutton", "normal", "cyan", "Hoch", "command",
+            btnRolloWZHoch.create("MainRolloWZ", "330px", "350px", "ctrlbutton", "smaller", "cyan", "Hoch", "command",
                 "", "send('command(Rollo,WZ,up)') ");
             var btnRolloWZStop = new CtrlButton();
-            btnRolloWZStop.create("MainRolloWZ", "320px", "350px", "ctrlbutton", "normal", "cyan", "Stop", "command",
+            btnRolloWZStop.create("MainRolloWZ", "410px", "350px", "ctrlbutton", "smaller", "cyan", "Stop", "command",
                 "", "send('command(Rollo,WZ,stop)') ");
             var btnRolloWZRunter = new CtrlButton();
-            btnRolloWZRunter.create("MainRolloWZ", "380px", "350px", "ctrlbutton", "normal", "cyan", "Runter",
+            btnRolloWZRunter.create("MainRolloWZ", "500px", "350px", "ctrlbutton", "smaller", "cyan", "Runter",
                 "command", "", "send('command(Rollo,WZ,down)') ");
-            var btnRolloWZStepUp = new CtrlButton();
-            btnRolloWZStepUp.create("MainRolloWZ", "440px", "350px", "ctrlbutton", "normal", "cyan", "Step Up",
-                "command", "", "send('command(Rollo,WZ,StepUp)') ");
-            var btnRolloWZStepDown = new CtrlButton();
-            btnRolloWZStepDown.create("MainRolloWZ", "500px", "350px", "ctrlbutton", "normal", "cyan", "Step Down",
-                "command", "", "send('command(Rollo,WZ,StepDown)') ");
         </script>
 
 
