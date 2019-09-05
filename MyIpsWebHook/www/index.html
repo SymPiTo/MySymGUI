@@ -1142,48 +1142,49 @@
 
 
 
-            var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainRolloWZ", "400px", "35px", "230px", "170px", "transparent", "Preset");
+
             var Rahmen3WZ = new Kachel();
-            Rahmen3WZ.create("MainRolloWZ", "290px", "35px", "230px", "110px", "transparent", "Mode");
+            Rahmen3WZ.create("MainRolloWZ", "290px", "60px", "230px", "100px", "transparent", "Mode");
 
             var btnRolloWZAuto = new CtrlButton();
-            btnRolloWZAuto.create("MainRolloWZ", "330px", "50px", "ctrlbutton", "smaller", "cyan", "Automatik",
+            btnRolloWZAuto.create("MainRolloWZ", "330px", "70px", "ctrlbutton", "smaller", "cyan", "Automatik",
                 "command", "", "send('command(Rollo,WZ,Auto)') ");
             var btnRolloWZMan = new CtrlButton();
-            btnRolloWZMan.create("MainRolloWZ", "330px", "150px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
+            btnRolloWZMan.create("MainRolloWZ", "330px", "175px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
                 "", "send('command(Rollo,WZ,Man)') ");
+
+            var Rahmen1WZ = new Kachel();
+            Rahmen1WZ.create("MainRolloWZ", "400px", "60px", "230px", "170px", "transparent", "Preset");
+
             var btnRolloWZ99 = new CtrlButton();
-            btnRolloWZ99.create("MainRolloWZ", "440px", "150px", "ctrlbutton", "smaller", "cyan", "99%", "command", "",
+            btnRolloWZ99.create("MainRolloWZ", "440px", "175px", "ctrlbutton", "smaller", "cyan", "99%", "command", "",
                 "send('command(Rollo,WZ,nearlyClosed)') ");
             var btnRolloWZ75 = new CtrlButton();
-            btnRolloWZ75.create("MainRolloWZ", "500px", "150px", "ctrlbutton", "smaller", "cyan", "75%", "command", "",
+            btnRolloWZ75.create("MainRolloWZ", "500px", "175px", "ctrlbutton", "smaller", "cyan", "75%", "command", "",
                 "send('command(Rollo,WZ,dark)') ");
             var btnRolloWZ50 = new CtrlButton();
-            btnRolloWZ50.create("MainRolloWZ", "440px", "50px", "ctrlbutton", "smaller", "cyan", "50%", "command", "",
+            btnRolloWZ50.create("MainRolloWZ", "440px", "72px", "ctrlbutton", "smaller", "cyan", "50%", "command", "",
                 "send('command(Rollo,WZ,mid)') ");
             var btnRolloWZ25 = new CtrlButton();
-            btnRolloWZ25.create("MainRolloWZ", "500px", "50px", "ctrlbutton", "smaller", "cyan", "25%", "command", "",
+            btnRolloWZ25.create("MainRolloWZ", "500px", "72px", "ctrlbutton", "smaller", "cyan", "25%", "command", "",
                 "send('command(Rollo,WZ,bright)') ");
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainRolloWZ", "290px", "335px", "130px", "280px", "transparent", "Control");
+            Rahmen2WZ.create("MainRolloWZ", "290px", "355px", "130px", "280px", "transparent", "Control");
 
             var btnRolloWZHoch = new CtrlButton();
-            btnRolloWZHoch.create("MainRolloWZ", "330px", "350px", "ctrlbutton", "smaller", "cyan", "Hoch", "command",
+            btnRolloWZHoch.create("MainRolloWZ", "330px", "370px", "ctrlbutton", "smaller", "cyan", "Hoch", "command",
                 "", "send('command(Rollo,WZ,up)') ");
             var btnRolloWZStop = new CtrlButton();
-            btnRolloWZStop.create("MainRolloWZ", "410px", "350px", "ctrlbutton", "smaller", "cyan", "Stop", "command",
+            btnRolloWZStop.create("MainRolloWZ", "410px", "370px", "ctrlbutton", "smaller", "cyan", "Stop", "command",
                 "", "send('command(Rollo,WZ,stop)') ");
             var btnRolloWZRunter = new CtrlButton();
-            btnRolloWZRunter.create("MainRolloWZ", "500px", "350px", "ctrlbutton", "smaller", "cyan", "Runter",
+            btnRolloWZRunter.create("MainRolloWZ", "500px", "370px", "ctrlbutton", "smaller", "cyan", "Runter",
                 "command", "", "send('command(Rollo,WZ,down)') ");
         </script>
 
 
-
-
-        <!-- **************************  Rolladen Ctrl Wohnzimmer **************************  -->
+        <!-- ------------------ Ctrl Area: Wohnzimmer - Rolladen ------------------- -->
         <!-- <Ctrl id = "MainRolloWZCtrl" class="RolloCtrlWZ"></Ctrl>  -->
         <script>
             var CtrlwindowRolloWZ = new Area();
@@ -1212,7 +1213,7 @@
 
 
             var rolloCtrlWZ = new RolloCtrl();
-            rolloCtrlWZ.create("MainRolloWZCtrl", "340px", "30px", "cyan", "Rolladen WZ", "WZ");
+            rolloCtrlWZ.create("MainRolloWZCtrl", "400px", "30px", "cyan", "Position", "WZ");
         </script>
 
         <!-- ------------------- Main Area: Rollasden Balkontür -------------------- -->
