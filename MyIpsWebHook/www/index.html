@@ -318,17 +318,19 @@
 
 
         <!-- ----------------------------------------------------------------------- -->
-        <!--                               sub Menues                                -->
+        <!--                               Sub Menues                                -->
         <!-- ----------------------------------------------------------------------- -->
 
         <!-- *********************** StartScreen  **************************  -->
         <subMenu id="SubMenuStart" class="MenuStart"></subMenu>
 
         <script>
+            /*
             var SubMenuWetter = new GlideButton();
             SubMenuWetter.create("SubMenuStart", "grey", "Wetter", "Wetter_BW_web.png", "MainWetter", "", "SM");
             var SubMenuShort = new GlideButton();
             SubMenuShort.create("SubMenuStart", "grey", "ShortCuts", "Sequence_BW_web.png", "MainShorts", "", "SM");
+            */
         </script>
 
 
@@ -380,7 +382,7 @@
                 "", "SM");
         </script>
 
-        <!-- ************************ Schlafzimmer  ************************  -->
+        <!-- ----------------------- Sub Menu: Schlafzimmer ------------------------ -->
         <subMenu id="SubMenuSZ" class="MenuSZ"></subMenu>
 
         <script>
@@ -762,10 +764,10 @@
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
-        <!--                           Heizung Wohnzimmer                            -->
+        <!--                            Wohnzimmer - Heizung                         -->
         <!-- ----------------------------------------------------------------------- -->
 
-        <!-- -------------------- Main Area: Heizung Wohnzimmer -------------------- -->
+        <!-- -------------------- Main Area:  Wohnzimmer - Heizung -------------------- -->
         <!--<Main id="MainHeizungWZ" class="HeizungWZ">	</Main> -->
         <script>
             var windowHzWz = new Area();
@@ -789,9 +791,9 @@
 
 
             var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainHeizungWZ", "250px", "40px", "200px", "300px", "cyan", "Preset");
+            Rahmen1WZ.create("MainHeizungWZ", "250px", "40px", "200px", "300px", "transparent", "Preset");
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainHeizungWZ", "250px", "335px", "200px", "300px", "cyan", "Control")
+            Rahmen2WZ.create("MainHeizungWZ", "250px", "335px", "200px", "300px", "transparent", "Control")
 
 
             var btnHzWZauto = new CtrlButton();
@@ -853,8 +855,13 @@
             HzCtrlWZ.create("MainHeizungWZCtrl", "325px", "30px", "cyan", "Heat-Control", "sollTempWZ");
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                      Area: Kinderzimmer - Heizung                       -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Heizung Kinderzimmer ************************  -->
+        <!-- ------------------ Main Area: Kinderzimmer - Heizung ------------------ -->
+
+
         <!-- <Main id="MainHzKZ"  class="HeizungKZ"></Main>	  -->
 
 
@@ -877,9 +884,9 @@
             iHzKZ.create("MainHzKZ", "40px", "70px", "wide");
 
             var Rahmen1KZ = new Kachel();
-            Rahmen1KZ.create("MainHzKZ", "250px", "40px", "200px", "300px", "olive", "Preset");
+            Rahmen1KZ.create("MainHzKZ", "250px", "40px", "200px", "300px", "transparent", "Preset");
             var Rahmen2KZ = new Kachel();
-            Rahmen2KZ.create("MainHzKZ", "250px", "335px", "200px", "300px", "olive", "Control")
+            Rahmen2KZ.create("MainHzKZ", "250px", "335px", "200px", "300px", "transparent", "Control")
 
             var btnHzKZauto = new CtrlButton();
             btnHzKZauto.create("MainHzKZ", "300px", "50px", "ctrlbutton", "normal", "olive", "Automatik", "command", "",
@@ -937,7 +944,13 @@
             var HzCtrlKZ = new HeatCtrl();
             HzCtrlKZ.create("MainHzKZCtrl", "325px", "30px", "olive", "Heat-Control", "sollTempKZ");
         </script>
-        <!-- ************************ Heizung Schlafzimmer ************************  -->
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                      Area: Schlafzimmer - Heizung                       -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- ------------------ Main Area: Schlafzimmer - Heizung ------------------ -->
+
         <!-- <Main id="MainHzSZ"   class="HeizungSZ">	</Main>  -->
         <script>
             var windowHzSz = new Area();
@@ -958,9 +971,9 @@
             iHzSZ.create("MainHzSZ", "40px", "70px", "wide");
 
             var Rahmen1SZ = new Kachel();
-            Rahmen1SZ.create("MainHzSZ", "250px", "40px", "200px", "300px", "sandy", "Preset");
+            Rahmen1SZ.create("MainHzSZ", "250px", "40px", "200px", "300px", "transparent", "Preset");
             var Rahmen2SZ = new Kachel();
-            Rahmen2SZ.create("MainHzSZ", "250px", "335px", "200px", "300px", "sandy", "Control")
+            Rahmen2SZ.create("MainHzSZ", "250px", "335px", "200px", "300px", "transparent", "Control")
 
 
             var btnHzSZauto = new CtrlButton();
@@ -1019,7 +1032,13 @@
             HzCtrlSZ.create("MainHzSZCtrl", "325px", "30px", "sandy", "Heat-Control", "sollTempSZ");
         </script>
 
-        <!-- ************************ Heizung Kueche ************************ -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                          Area: Küche - Heizung                          -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- --------------------- Main Area: Küche - Heizung ---------------------- -->
+
+
         <!--  <Main  id="MainHzK"   class="HeizungK">   </Main>	-->
 
         <script>
@@ -1042,9 +1061,9 @@
             iHzK.create("MainHzK", "40px", "70px", "wide");
 
             var Rahmen1K = new Kachel();
-            Rahmen1K.create("MainHzK", "250px", "40px", "200px", "300px", "midgreen", "Preset");
+            Rahmen1K.create("MainHzK", "250px", "40px", "200px", "300px", "transparent", "Preset");
             var Rahmen2K = new Kachel();
-            Rahmen2K.create("MainHzK", "250px", "335px", "200px", "300px", "midgreen", "Control")
+            Rahmen2K.create("MainHzK", "250px", "335px", "200px", "300px", "transparent", "Control")
 
 
             var btnHzKauto = new CtrlButton();
@@ -1104,7 +1123,14 @@
             var HzCtrlK = new HeatCtrl();
             HzCtrlK.create("MainHzKCtrl", "325px", "30px", "midgreen", "Heat-Control", "sollTempK");
         </script>
-        <!-- ************************ Rolladen  Wohnzimmer ************************ -->
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                        Area: Wohnzimmer - Rolladen                      -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- ------------------ Main Area: Wohnzimmer - Rolladen ------------------- -->
+
+
         <!-- <Main id="MainRolloWZ"   class="RolloWZ"> </Main> -->
         <script>
             var windowRolloWZ = new Area();
@@ -1117,7 +1143,7 @@
 
 
             var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "345px", "cyan", "Preset");
+            Rahmen1WZ.create("MainRolloWZ", "220px", "35px", "200px", "345px", "transparent", "Preset");
 
             var btnRolloWZAuto = new CtrlButton();
             btnRolloWZAuto.create("MainRolloWZ", "260px", "50px", "ctrlbutton", "normal", "cyan", "Automatik",
@@ -1136,7 +1162,7 @@
                 "send('command(Rollo,WZ,bright)') ");
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainRolloWZ", "220px", "335px", "200px", "345px", "cyan", "Control");
+            Rahmen2WZ.create("MainRolloWZ", "220px", "335px", "200px", "345px", "transparent", "Control");
 
             var btnRolloWZHoch = new CtrlButton();
             btnRolloWZHoch.create("MainRolloWZ", "260px", "350px", "ctrlbutton", "normal", "cyan", "Hoch", "command",
@@ -1190,8 +1216,7 @@
             rolloCtrlWZ.create("MainRolloWZCtrl", "340px", "30px", "cyan", "Rolladen WZ", "WZ");
         </script>
 
-
-        <!-- ************************ Rolladen  BalkonTuer ************************  -->
+        <!-- ------------------- Main Area: Rollasden Balkontür -------------------- -->
         <!-- <Main id="MainRolloB"  class="RolloB">	</Main>  -->
         <script>
             var windowRolloB = new Area();
@@ -1205,9 +1230,9 @@
 
 
             var Rahmen1B = new Kachel();
-            Rahmen1B.create("MainRolloB", "220px", "35px", "200px", "345px", "blue", "Preset");
+            Rahmen1B.create("MainRolloB", "220px", "35px", "200px", "345px", "transparent", "Preset");
             var Rahmen2B = new Kachel();
-            Rahmen2B.create("MainRolloB", "220px", "335px", "200px", "345px", "blue", "Control")
+            Rahmen2B.create("MainRolloB", "220px", "335px", "200px", "345px", "transparent", "Control")
 
             var btnRolloBAuto = new CtrlButton();
             btnRolloBAuto.create("MainRolloB", "260px", "50px", "ctrlbutton", "normal", "blue", "Automatik", "command",
@@ -1278,8 +1303,13 @@
         </script>
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                       Area: Rolladen Kinderzimmer                       -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Kinderzimmer ************************  -->
+        <!-- ------------------ Main Area: Rolladen Kinderzimmer ------------------- -->
+
+
         <!-- <Main id="MainRolloKZ"  class="RolloKZ">	</Main>  -->
         <script>
             var windowRolloKZ = new Area();
@@ -1291,9 +1321,9 @@
 
 
             var RahmenKZ = new Kachel();
-            RahmenKZ.create("MainRolloKZ", "220px", "35px", "200px", "345px", "olive", "Preset");
+            RahmenKZ.create("MainRolloKZ", "220px", "35px", "200px", "345px", "transparent", "Preset");
             var Rahmen2KZ = new Kachel();
-            Rahmen2KZ.create("MainRolloKZ", "220px", "335px", "200px", "345px", "olive", "Control")
+            Rahmen2KZ.create("MainRolloKZ", "220px", "335px", "200px", "345px", "transparent", "Control")
 
 
             var btnRolloKZAuto = new CtrlButton();
@@ -1364,8 +1394,12 @@
         </script>
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                         Area: Küche - Rolladen                          -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Kueche ************************ -->
+        <!-- --------------------- Main Area: Küche - Rolladen --------------------- -->
+
         <!-- <Main id="MainRolloK"  class="RolloK">	</Main> -->
         <script>
             var windowRolloK = new Area();
@@ -1377,9 +1411,9 @@
 
 
             var Rahmen1K = new Kachel();
-            Rahmen1K.create("MainRolloK", "220px", "35px", "200px", "345px", "midgreen", "Preset");
+            Rahmen1K.create("MainRolloK", "220px", "35px", "200px", "345px", "transparent", "Preset");
             var Rahmen2K = new Kachel();
-            Rahmen2K.create("MainRolloK", "220px", "335px", "200px", "345px", "midgreen", "Control")
+            Rahmen2K.create("MainRolloK", "220px", "335px", "200px", "345px", "transparent", "Control")
 
 
             var btnRolloKAuto = new CtrlButton();
@@ -1447,8 +1481,13 @@
             rolloCtrlK.create("MainRolloKCtrl", "340px", "30px", "midgreen", "Rolladen Küche", "K");
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                      Arae: Schalfzimmer - Rolladen                      -->
+        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ************************ Rolladen  Schlafzimmer ************************ -->
+        <!-- ----------------- Main Area; Schlafzimmer - Rolladen ------------------ -->
+
+
         <!-- <Main id="MainRolloSZ"  class="RolloSZ">	</Main> -->
         <script>
             var windowRolloSZ = new Area();
@@ -1460,9 +1499,9 @@
 
 
             var Rahmen1SZ = new Kachel();
-            Rahmen1SZ.create("MainRolloSZ", "220px", "35px", "200px", "345px", "sandy", "Preset");
+            Rahmen1SZ.create("MainRolloSZ", "220px", "35px", "200px", "345px", "transparent", "Preset");
             var Rahmen2SZ = new Kachel();
-            Rahmen2SZ.create("MainRolloSZ", "220px", "335px", "200px", "345px", "sandy", "Control")
+            Rahmen2SZ.create("MainRolloSZ", "220px", "335px", "200px", "345px", "transparent", "Control")
 
 
             var btnRolloSZAuto = new CtrlButton();
@@ -2049,9 +2088,10 @@
             WetterLabelNow.create("MainWetterCtrl", "250px", "35px", "270px");
         </script>
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          INDEX E - Floorplan     ************************      -->
-        <!-- ***********************************************************************************      -->
+
+
+        <!-- ------------------------ Main Area: Floorplan ------------------------- -->
+
         <Main id="Grundriss" class="floorplan"></Main>
 
         <script>
@@ -3349,9 +3389,7 @@
 
         <script>
             var iDisArtistWZ = new ImageDisplay();
-            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "normal");
-
-
+            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "normal", "bgcyan");
 
             var rahm = new Rahmen();
             rahm.create("MainCeolWZ", "44vh", "3%", "70px", "527px", "bgGrey");
@@ -3380,7 +3418,6 @@
             var FontBtnCDE = new FontButtonNew();
             FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "84%", "fa fa-forward",
                 "send('command(DenonCeol,play,next)')");
-
 
             var rahm1 = new Rahmen();
             rahm1.create("MainCeolWZ", "71vh", "5px", "135px", "552px", "bgCyanLight");

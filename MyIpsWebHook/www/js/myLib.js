@@ -386,7 +386,7 @@ class label {
 }
 
 
-/* --------------------- class Dynamic ImageDisplay ---------------------------------------- */
+/* --------------------- class Dynamic Rahmen ---------------------------------------- */
 class Rahmen {
 
 
@@ -437,9 +437,10 @@ class ImageDisplay {
     }
 
 
-    create(ParentID, posTop, posLeft, size) {
+    create(ParentID, posTop, posLeft, size, farbe) {
         var elem = document.createElement("div");
         elem.className = "DenonDisplay";
+        elem.classList.add(farbe);
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
@@ -614,7 +615,7 @@ class StateDisplay {
 
         }
 
-        elem1.style.color = "lime";
+        elem1.style.color = "white";
         elem1.style.position = "absolute";
         elem1.style.left = posLeft;
         elem1.style.top = posTop;
@@ -623,14 +624,14 @@ class StateDisplay {
 
         var elem2 = document.createElement("div");
         elem2.style.backgroundColor = "black";
-        elem2.style.height = "30%";
+        elem2.style.height = "20px";
         elem2.innerHTML = titel;
         elem2.style.paddingTop = "2px"
         elem1.append(elem2);
 
         var elem3 = document.createElement("div");
 
-        elem3.style.height = "70%"
+
         elem3.innerHTML = "----" + this.unit;
         elem3.style.fontSize = SchriftGr;
         elem3.style.paddingTop = "5px";
@@ -1121,6 +1122,7 @@ class GlideButton {
         this.ObjValue2 = "";
         this.ObjValue3 = "";
         this.ObjValue4 = "";
+
     }
 
     create(ParentID, farbe, titel, image, IDMain, IDFull, MenuType) {
@@ -1162,7 +1164,6 @@ class GlideButton {
             });
 
             if (MenuType === "MM") {
-
                 //benötigte Fenster einblenden für Main Menu
                 document.getElementById(ParentID).style.width = "8vw";
                 if (IDMain !== "") {
@@ -1173,13 +1174,10 @@ class GlideButton {
 
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName(IDMain + "OV")[0].style.width = "64vw";
-                    //TODO:übersicht für den Raum einblenden
-                    // anstatt dem StartScreen ein Fenster IDMAIN + overview einblenden
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName("StartScreen")[0].style.left = "8vw";
                     document.getElementsByClassName(IDFull)[0].style.width = "92vw";
-
                 }
             }
             if (MenuType === "SM") {
@@ -1199,9 +1197,11 @@ class GlideButton {
                     document.getElementById(IDFull).style.width = "92vw";
                 }
             }
+            var kopfleiste = document.getElementsByClassName("Top")[0];
 
-            document.getElementsByClassName("Top")[0].style.backgroundColor = farbe;
-            document.getElementsByClassName("Top")[0].style.color = "black";
+            kopfleiste.className = "Top";
+            kopfleiste.classList.add(farbe);
+            kopfleiste.style.color = "black";
             document.getElementById("TopTitle").innerHTML = titel;
         };
 
@@ -1629,6 +1629,7 @@ class Kachel {
         container.style.width = this.b;
         container.style.height = this.h;
         container.style.color = this.labelcolor;
+        container.style.border = "thin solid black";
 
         // Label 
         var label = document.createElement("div");

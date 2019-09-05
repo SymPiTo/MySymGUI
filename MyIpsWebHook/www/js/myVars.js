@@ -527,7 +527,7 @@
       VarDisTempKZ_E.update(sym[1], 1);
 
       //<!-- Temperatur Glide Floorplan  -->
-      LeftMenuFP.update(sym[3], "°C", sym[2], "°C", sym[0], "°C", sym[1], "°C");
+
 
 
       //<!-- Temperatur Werte Glide Button  -->
