@@ -1655,13 +1655,15 @@ class RolloCtrl {
 
         //optionale Parameter
         this.b = "202px";
-        this.h = "170px";
+        this.h = "130px";
 
         this.btnTextColor = "black";
         this.labelcolor = "white";
 
         this.AnzColor = "black";
         this.AnzSchriftgr = "30px"
+
+        this.unit = "%";
     }
     create(ParentID, posTop, posLeft, color, title, room, ...param) {
         this.color = color;
@@ -1687,21 +1689,23 @@ class RolloCtrl {
         // Label 
         var label = document.createElement("div");
         label.style.paddingTop = "5px";
-        label.style.height = "30px";
+        label.style.height = "25px";
         label.style.backgroundColor = "black";
         label.innerHTML = title;
         container.append(label);
-        // 1. Button Reihe
+
+        // Position Variable
         var anz = document.createElement("div");
         this.ID = anz;
         anz.style.width = this.b;
-        anz.style.height = "30%";
+        anz.style.height = "35%";
         anz.style.marginTop = "2px";
         anz.style.padding = "2px";
-        anz.innerHTML = "XXX" + "%";
+        anz.innerHTML = "XXX" + this.unit;
         anz.style.color = this.AnzColor;
         anz.style.fontSize = this.AnzSchriftgr;
         anz.style.paddingTop = "5px";
+
 
         container.append(anz);
 
@@ -1709,7 +1713,7 @@ class RolloCtrl {
         var btnCont2 = document.createElement("div");
         btnCont2.style.marginTop = "5px";
         btnCont2.style.width = this.b;
-        btnCont2.style.height = "40%";
+        btnCont2.style.height = "30%";
         btnCont2.style.display = "flex";
         btnCont2.style.flexDirection = "row";
         btnCont2.style.justifyContent = "space-around";
@@ -1801,7 +1805,7 @@ class RolloCtrl {
         document.getElementById(ParentID).appendChild(container);
     }
 
-    update(value) {
+    update(value, n) {
         try {
             var wert = value.toFixed(n);
             this.ID.innerHTML = (wert.toString() + this.unit);
@@ -3271,7 +3275,7 @@ class Area {
 
 
 
-/* --------------------- Klasse MoveSwitch - Schiebescahlter -------------------------------------- */
+/* --------------------- Klasse MoveSwitch - Schiebeschalter -------------------------------------- */
 class MoveSwitch {
     constructor() {
 
