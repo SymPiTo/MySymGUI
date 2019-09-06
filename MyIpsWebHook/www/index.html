@@ -1170,17 +1170,23 @@
                 "send('command(Rollo,WZ,bright)') ");
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainRolloWZ", "290px", "355px", "130px", "280px", "transparent", "Control");
+            Rahmen2WZ.create("MainRolloWZ", "290px", "355px", "150px", "280px", "transparent", "Control");
 
-            var btnRolloWZHoch = new CtrlButton();
-            btnRolloWZHoch.create("MainRolloWZ", "330px", "370px", "ctrlbutton", "smaller", "cyan", "Hoch", "command",
-                "", "send('command(Rollo,WZ,up)') ");
-            var btnRolloWZStop = new CtrlButton();
-            btnRolloWZStop.create("MainRolloWZ", "410px", "370px", "ctrlbutton", "smaller", "cyan", "Stop", "command",
-                "", "send('command(Rollo,WZ,stop)') ");
-            var btnRolloWZRunter = new CtrlButton();
-            btnRolloWZRunter.create("MainRolloWZ", "500px", "370px", "ctrlbutton", "smaller", "cyan", "Runter",
-                "command", "", "send('command(Rollo,WZ,down)') ");
+            //var btnRolloWZHoch = new CtrlButton();
+            //btnRolloWZHoch.create("MainRolloWZ", "330px", "370px", "ctrlbutton", "smaller", "cyan", "Hoch", "command","", "send('command(Rollo,WZ,up)') ");
+
+
+            var btnRolloWZHoch = new FontCtrlButton();
+            btnRolloWZHoch.create("MainRolloWZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
+                "send('command(Rollo,WZ,up)') ", "120px", "50px", "black", "22px");
+
+            var btnRolloWZStop = new FontCtrlButton();
+            btnRolloWZStop.create("MainRolloWZ", "cyan", "415px", "370px", "fa fa-stop", "Halt",
+                "send('command(Rollo,WZ,stop)') ", "120px", "50px", "black", "22px");
+
+            var btnRolloWZRunter = new FontCtrlButton();
+            btnRolloWZRunter.create("MainRolloWZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
+                "send('command(Rollo,WZ,down)') ", "120px", "50px", "black", "22px");
         </script>
 
 
@@ -1197,21 +1203,23 @@
                 "Man", "", "", "");
 
             var DisST1RolloWZCtrl = new StateDisplay();
-            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "100px", "30px", "size07", "30px",
+            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "130px", "30px", "size07", "30px",
                 "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloWZCtrl = new StateDisplay();
-            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "180px", "30px", "size07", "30px",
+            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "210px", "30px", "size07", "30px",
                 "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
             CbSSrolloWZ = new CheckBoxCtrlBtn();
-            CbSSrolloWZ.create("MainRolloWZCtrl", "cyan", "280px", "30px", "SunRise-SunSet",
+            CbSSrolloWZ.create("MainRolloWZCtrl", "cyan", "290px", "30px", "SunRise-SunSet",
                 "command(Rollo,WZ,SSXX");
 
+
             var rolloCtrlWZ = new RolloCtrl();
-            rolloCtrlWZ.create("MainRolloWZCtrl", "400px", "30px", "cyan", "Position", "WZ");
+            rolloCtrlWZ.create("MainRolloWZCtrl", "400px", "30px", "cyan",
+                "Position", "WZ");
         </script>
 
         <!-- ------------------- Main Area: Rollasden Balkontür -------------------- -->

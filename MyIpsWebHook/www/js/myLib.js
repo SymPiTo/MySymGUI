@@ -1055,8 +1055,8 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
 /* --------------------- Klasse CheckBoxCtrlBtn ---------------------------------------- */
 class CheckBoxCtrlBtn {
     constructor() {
-        this.ID = "",
-            this.color = "";
+        this.ID = "";
+        this.color = "";
 
         //optionale Parameter
         this.textColor1 = "black";
@@ -1076,22 +1076,20 @@ class CheckBoxCtrlBtn {
         elem1.style.width = "200px";
         elem1.style.height = "40px";
         elem1.style.color = c1;
+
         var elem2 = document.createElement("input");
         elem2.setAttribute("type", "checkbox");
         this.ID = elem2;
         elem2.checked = false;
-
         elem1.append(elem2);
 
         var elem3 = document.createElement("span");
         elem3.className = "checkmark";
-
         elem1.append(elem3);
 
         document.getElementById(ParentID).appendChild(elem1);
 
         elem2.addEventListener('change', function () {
-
             if (this.checked) {
                 // Checkbox is checked..
                 elem1.style.color = c1;
@@ -1833,7 +1831,77 @@ class RolloCtrl {
 
 
 
+/* ---------------------  Klasse FontCtrlButton   ---------------------------------------- */
+class FontCtrlButton {
+    constructor() {
+        this.ID = "";
 
+        //optionale Parameter
+        this.b = "200px";
+        this.h = "60px";
+        this.textfarbe = "black";
+        this.textgr = "20px";
+    }
+    create(ParentID, color, posTop, posLeft, symbol, text, cmd, ...param) {
+        if (param.length > 1) {
+            this.b = param[0];
+            this.h = param[1];
+            this.textfarbe = param[2];
+            this.textgr = param[3];
+
+        }
+        var container = document.createElement("div");
+        container.className = "ctrlbutton";
+        container.classList.add(color);
+        this.ID = container;
+        container.style.width = this.b;
+        container.style.height = this.h;
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.style.display = "flex";
+        container.style.flexDirection = "row";
+        container.style.justifyContent = "space-around";
+        container.setAttribute("onclick", cmd);
+
+
+        var elem = document.createElement("div");
+        elem.style.backgroundColor = "transparent";
+        elem.style.width = "20%";
+        elem.style.height = "75%";
+        elem.style.display = "flex";
+        elem.style.alignItems = "center";
+        elem.style.justifyContent = "center";
+        container.append(elem);
+
+        var elem1 = document.createElement("span");
+        elem1.className = symbol;
+        elem1.style.fontSize = this.textgr;
+        elem1.style.color = this.textfarbe;
+        elem.append(elem1);
+
+        var textContainer = document.createElement("div");
+        textContainer.style.width = "70%";
+        textContainer.style.height = "75%";
+        textContainer.style.backgroundColor = "transparent";
+        textContainer.style.display = "flex";
+        textContainer.style.alignItems = "center";
+        textContainer.style.justifyContent = "center";
+        container.append(textContainer);
+
+        var textelem = document.createElement("span");
+        textelem.style.color = this.textfarbe;
+        textelem.style.fontSize = this.textgr;
+        textelem.innerHTML = text;
+        textContainer.append(textelem);
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+
+
+
+};
 
 
 
