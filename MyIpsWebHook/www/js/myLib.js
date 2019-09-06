@@ -1052,16 +1052,20 @@ function addFontButton(ParentID, color, size, posTop, posLeft, symbol, cmd){
 
 
 
-/* --------------------- ProtoType Klasse CheckBox ---------------------------------------- */
-var CheckBox = {
+/* --------------------- Klasse CheckBoxCtrlBtn ---------------------------------------- */
+class CheckBoxCtrlBtn {
+    constructor() {
+        this.ID = "",
+            this.color = "";
 
-    Ident: "ID",
-    unit: "",
-    textColor: "white",
-    color: "cyan",
+        //optionale Parameter
+        this.textColor1 = "black";
+        this.textColor2 = "black";
+    }
 
-    create: function (ParentID, ID, farbe, posTop, posLeft, text, sendCmd) {
-        this.Ident = ID;
+    create(ParentID, farbe, posTop, posLeft, text, sendCmd, ...param) {
+        var c1 = this.textColor1;
+        var c2 = this.textColor2;
         this.color = farbe;
         var elem1 = document.createElement("label");
         elem1.className = "CBcontainer";
@@ -1069,38 +1073,45 @@ var CheckBox = {
         elem1.innerHTML = text;
         elem1.style.top = posTop;
         elem1.style.left = posLeft;
-
+        elem1.style.width = "200px";
+        elem1.style.height = "40px";
+        elem1.style.color = c1;
         var elem2 = document.createElement("input");
         elem2.setAttribute("type", "checkbox");
+        this.ID = elem2;
         elem2.checked = false;
-        elem2.id = this.Ident;
+
         elem1.append(elem2);
 
         var elem3 = document.createElement("span");
         elem3.className = "checkmark";
+
         elem1.append(elem3);
+
         document.getElementById(ParentID).appendChild(elem1);
 
         elem2.addEventListener('change', function () {
+
             if (this.checked) {
                 // Checkbox is checked..
-                elem1.style.color = "white";
+                elem1.style.color = c1;
+                elem2.style.color = c1;
                 //var n = sendCmd.search("X"); 
                 var res = sendCmd.replace("X", "on");
                 send(res);
             } else {
                 // Checkbox is not checked..
-                elem1.style.color = "blue";
+                elem1.style.color = c2;
                 var res = sendCmd.replace("X", "off");
                 send(res);
             }
         });
-    },
-
-    update: function (value) {
-        document.getElementById(this.Ident).checked = value;
     }
-};
+
+    update(value) {
+        this.ID.checked = value;
+    }
+}
 
 
 

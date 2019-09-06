@@ -2405,8 +2405,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     -ms-user-select: none;
     user-select: none;
  
-    width: 240px;
-    height: 40px;
+ 
 }
 .CBcontainer.blue {
     background: -webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 35%), hsl(200, 100%, 45%), hsl(200, 100%, 35%),hsl(200, 100%, 25%));
@@ -2471,7 +2470,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 3px;
     width: 5px;
     height: 20px;
-    border: solid white;
+    border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

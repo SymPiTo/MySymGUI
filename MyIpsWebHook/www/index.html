@@ -1192,20 +1192,23 @@
         </script>
         <script>
             var DisModeRolloWZCtrl = new StateDisplay();
-            DisModeRolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "100px", "30px", "size07", "30px", "Mode",
+            DisModeRolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "20px", "30px", "size07", "30px", "Mode",
                 "Auto",
                 "Man", "", "", "");
 
             var DisST1RolloWZCtrl = new StateDisplay();
-            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "180px", "30px", "size07", "30px",
+            DisST1RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "100px", "30px", "size07", "30px",
                 "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloWZCtrl = new StateDisplay();
-            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "260px", "30px", "size07", "30px",
+            DisST2RolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "180px", "30px", "size07", "30px",
                 "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
+            CbSSrolloWZ = new CheckBoxCtrlBtn();
+            CbSSrolloWZ.create("MainRolloWZCtrl", "cyan", "280px", "30px", "SunRise-SunSet",
+                "command(Rollo,WZ,SSXX");
 
             var rolloCtrlWZ = new RolloCtrl();
             rolloCtrlWZ.create("MainRolloWZCtrl", "400px", "30px", "cyan", "Position", "WZ");
