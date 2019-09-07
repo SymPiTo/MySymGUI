@@ -333,6 +333,7 @@
         sym[225] = ips[0].ID29679; // Homematic Server description HMIP  
         sym[226] = ips[0].ID36540; // Homematic Server duty cycle HMIP  
 
+        sym[227] = ips[0].ID37348; // Balkontür 
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -659,8 +660,12 @@
 
 
     function updateValues(sym) {
-
-
+      /* --------------------------- Haustür Position --------------------------- */
+      DynIconDoorD.update(sym[9]);
+      DisDoorDCtrl.update(sym[9]);
+      /* --------------------------- Balkontür Position --------------------------- */
+      DynIconDoorB.update(sym[227]);
+      DisDoorBCtrl.update(sym[227]);
       //<!-- ******************** Homematic Server **************************  -->
       DiHM1.update(sym[220]);
       DiHM2.update(sym[221]);

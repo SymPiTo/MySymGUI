@@ -413,12 +413,15 @@
             SubMenuClock.create("SubMenuK", "midgreen", "Clock", "Uhr_BW_web.png", "MainClock", "", "SM");
         </script>
 
-        <!-- ************************ Menu Balkon  ************************  -->
+
+        <!-- --------------------------- SubMenu: Balkon --------------------------- -->
         <subMenu id="SubMenuB" class="MenuB"></subMenu>
 
         <script>
             var SubMenuRolloB = new GlideButton();
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", "_Rolladen_BW_web.png", "MainRolloB", "", "SM");
+            var SubMenuDoorB = new GlideButton();
+            SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", "door.png", "MainDoorB", "", "SM");
         </script>
 
         <!-- ************************ Menu Bad  ************************  -->
@@ -429,12 +432,18 @@
             SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", "Fenster.png", "MainFBad", "", "SM");
         </script>
 
-        <!-- ************************ Menu Diele  ************************  -->
+
+
+        <!-- --------------------------- SubMenu: Diele ---------------------------- -->
+
         <subMenu id="SubMenuDiele" class="MenuDiele"></subMenu>
 
         <script>
-            var SubMenuDiele = new GlideButton();
-            SubMenuDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+            var SubMenuLightDiele = new GlideButton();
+            SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+                "SM");
+            var SubMenuDoorDiele = new GlideButton();
+            SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "",
                 "SM");
         </script>
 
@@ -1600,6 +1609,61 @@
         </script>
         <script>
 
+        </script>
+
+
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Area: Balkon - Tür                           -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- ----------------------- Main Area: Balkon - Tür ----------------------- -->
+        <script>
+            var windowDoorB = new Area();
+            windowDoorB.createMain("MainDoorB", "bgBlue");
+        </script>
+        <script>
+            var DynIconDoorB = new DynIcon("door", "bin", false);
+
+            DynIconDoorB.create("MainDoorB", "40px", "70px", "big");
+        </script>
+
+        <!-- ----------------------- Ctrl Area: Balkon - Tür ----------------------- -->
+        <script>
+            var CtrlwindowDoorB = new Area();
+            CtrlwindowDoorB.createCtrl("MainDoorBCtrl", "bgBlue");
+        </script>
+        <script>
+            var DisDoorBCtrl = new StateDisplay();
+            DisDoorBCtrl.create("MainDoorBCtrl", "blueLight", "", "50px", "20px", "normal", "20px", "Tür Position",
+                "offen", "geschlossen", "", "", "");
+        </script>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Area:  Diele - Tür                           -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- ----------------------- Main Area: Diele  - Tür ----------------------- -->
+        <script>
+            var windowDoorD = new Area();
+            windowDoorD.createMain("MainDoorD", "bgBlue");
+        </script>
+        <script>
+            var DynIconDoorD = new DynIcon("door", "bin", false);
+
+            DynIconDoorD.create("MainDoorD", "40px", "70px", "big");
+        </script>
+
+        <!-- ----------------------- Ctrl Area: Diele - Tür ----------------------- -->
+        <script>
+            var CtrlwindowDoorD = new Area();
+            CtrlwindowDoorD.createCtrl("MainDoorDCtrl", "bgBlue");
+        </script>
+        <script>
+            var DisDoorDCtrl = new StateDisplay();
+            DisDoorDCtrl.create("MainDoorDCtrl", "blueLight", "", "50px", "20px", "normal", "20px", "Tür Position",
+                "offen", "geschlossen", "", "", "");
         </script>
 
 
