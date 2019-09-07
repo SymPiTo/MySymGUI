@@ -991,31 +991,30 @@
       DisST1RolloWZCtrl.update(sym[19]);
       DisST2RolloWZCtrl.update(sym[20]);
 
-      //CbSSrolloWZ.update(sym[53]);
-
-      DisPosRolloB.update(sym[22]);
+      CbSSrolloWZ.update(sym[53]);
+      rolloCtrlB.update(sym[22], 0);
       DisModeRolloB.update(sym[21]);
       DisST1RolloB.update(sym[55]);
       DisST2RolloB.update(sym[56]);
-      //CbSSrolloB.update(sym[57]);
+      CbSSrolloB.update(sym[57]);
 
-      DisPosRolloK.update(sym[15]);
+      rolloCtrlK.update(sym[15], 0);
       DisModeRolloK.update(sym[14]);
       DisST1RolloK.update(sym[50]);
       DisST2RolloK.update(sym[51]);
-      //CbSSrolloK.update(sym[52]);
+      CbSSrolloK.update(sym[52]);
 
-      DisPosRolloSZ.update(sym[114]);
+      rolloCtrlSZ.update(sym[114], 0);
       DisModeRolloSZ.update(sym[113]);
       DisST1RolloSZ.update(sym[116]);
       DisST2RolloSZ.update(sym[117]);
-      //CbSSrolloSZ.update(sym[118]);
+      CbSSrolloSZ.update(sym[118]);
 
-      DisPosRolloKZ.update(sym[13]);
+      rolloCtrlKZ.update(sym[13], 0);
       DisModeRolloKZ.update(sym[12]);
       DisST1RolloKZ.update(sym[122]);
       DisST2RolloKZ.update(sym[119]);
-      //CbSSrolloKZ.update(sym[120]);
+      CbSSrolloKZ.update(sym[120]);
 
 
 

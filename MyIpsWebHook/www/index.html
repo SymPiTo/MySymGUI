@@ -1384,12 +1384,12 @@
                 "String", "", "", "", "");
 
             CbSSrolloKZ = new CheckBoxCtrlBtn();
-            CbSSrolloKZ.create("MainRolloWZCtrl", "olive", "290px", "30px", "SunRise-SunSet",
+            CbSSrolloKZ.create("MainRolloKZCtrl", "olive", "290px", "30px", "SunRise-SunSet",
                 "command(Rollo,KZ,SSXX");
 
 
             var rolloCtrlKZ = new RolloCtrl();
-            rolloCtrlKZ.create("MainRolloKZCtrl", "340px", "30px", "olive", "Rolladen Kinderzimmer", "KZ");
+            rolloCtrlKZ.create("MainRolloKZCtrl", "400px", "30px", "olive", "Rolladen Kinderzimmer", "KZ");
         </script>
 
 
@@ -1476,7 +1476,7 @@
                 "String", "", "", "", "");
 
             CbSSrolloK = new CheckBoxCtrlBtn();
-            CbSSrolloK.create("MainRolloWZCtrl", "cyan", "290px", "30px", "SunRise-SunSet",
+            CbSSrolloK.create("MainRolloKCtrl", "midgreen", "290px", "30px", "SunRise-SunSet",
                 "command(Rollo,K,SSXX");
 
 
@@ -1485,7 +1485,7 @@
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
-        <!--                      Arae: Schalfzimmer - Rolladen                      -->
+        <!--                      Arae: Schlafzimmer - Rolladen                      -->
         <!-- ----------------------------------------------------------------------- -->
 
         <!-- ----------------- Main Area; Schlafzimmer - Rolladen ------------------ -->
@@ -1513,7 +1513,7 @@
                 "", "send('command(Rollo,SZ,Man)') ");
 
             var Rahmen2SZ = new Kachel();
-            Rahmen2SZ.create("MainRolloSZ", "400px", "60px", "230px", "170px", "transparent", "Preset")
+            Rahmen2SZ.create("MainRolloSZ", "400px", "60px", "230px", "170px", "transparent", "Preset");
 
             var btnRolloSZ99 = new CtrlButton();
             btnRolloSZ99.create("MainRolloSZ", "440px", "175px", "ctrlbutton", "smaller", "sandy", "99%", "command", "",
@@ -1530,17 +1530,17 @@
                 "send('command(Rollo,SZ,bright)') ");
 
             var Rahmen3SZ = new Kachel();
-            Rahmen3SZ.create("MainRolloSZ", "290px", "355px", "150px", "280px", "transparent", "Control")
+            Rahmen3SZ.create("MainRolloSZ", "290px", "355px", "150px", "280px", "transparent", "Control");
 
 
-            var btnRolloSZHoch = new CtrlButton();
-            btnRolloSZHoch.create("MainRolloSZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
+            var btnRolloSZHoch = new FontCtrlButton();
+            btnRolloSZHoch.create("MainRolloSZ", "sandy", "330px", "370px", "fa fa-chevron-up", "Hoch",
                 "send('command(Rollo,SZ,up)') ", "120px", "50px", "black", "22px");
-            var btnRolloSZStop = new CtrlButton();
-            btnRolloSZStop.create("MainRolloSZ", "cyan", "415px", "370px", "fa fa-stop", "Halt",
+            var btnRolloSZStop = new FontCtrlButton();
+            btnRolloSZStop.create("MainRolloSZ", "sandy", "415px", "370px", "fa fa-stop", "Halt",
                 "send('command(Rollo,SZ,stop)') ", "120px", "50px", "black", "22px");
-            var btnRolloSZRunter = new CtrlButton();
-            btnRolloSZRunter.create("MainRolloSZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
+            var btnRolloSZRunter = new FontCtrlButton();
+            btnRolloSZRunter.create("MainRolloSZ", "sandy", "500px", "370px", "fa fa-chevron-down", "Runter",
                 "send('command(Rollo,SZ,down)') ", "120px", "50px", "black", "22px");
         </script>
 
