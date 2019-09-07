@@ -1265,6 +1265,8 @@
             btnRolloB25.create("MainRolloB", "500px", "72px", "ctrlbutton", "smaller", "blue", "25%", "command", "",
                 "send('command(Rollo,B,bright)') ");
 
+            var Rahmen3B = new Kachel();
+            Rahmen3B.create("MainRolloB", "290px", "355px", "150px", "280px", "transparent", "Control");
 
             var btnRolloBHoch = new FontCtrlButton();
             btnRolloBHoch.create("MainRolloB", "blue", "330px", "370px", "fa fa-chevron-up", "Hoch",
@@ -1357,10 +1359,13 @@
             btnRolloKZ25.create("MainRolloKZ", "500px", "72px", "ctrlbutton", "smaller", "olive", "25%", "command", "",
                 "send('command(Rollo,KZ,bright)') ");
 
+
+            var Rahmen3KZ = new Kachel();
+            Rahmen3KZ.create("MainRolloKZ", "290px", "355px", "150px", "280px", "transparent", "Control");
+
             var btnRolloKZHoch = new FontCtrlButton();
             btnRolloKZHoch.create("MainRolloKZ", "olive", "330px", "370px", "fa fa-chevron-up", "Hoch",
                 "send('command(Rollo,KZ,up)') ", "120px", "50px", "black", "22px");
-
             var btnRolloKZStop = new FontCtrlButton();
             btnRolloKZStop.create("MainRolloKZ", "olive", "415px", "370px", "fa fa-stop", "Halt",
                 "send('command(Rollo,KZ,stop)') ", "120px", "50px", "black", "22px");
@@ -1596,8 +1601,9 @@
         </script>
         <script>
             var WindowBad = new CtrlTile();
-            WindowBad.create("MainFBad", "10px", "10px", "Bad Fenster", "violet", "Fenster",
-                "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf", "", "");
+            WindowBad.create("MainFBad", "10px", "10px", "Bad Fenster", "violet", "transparent", "Fenster",
+                "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf", "", "",
+                "200px", "210px", "black", "white");
         </script>
         <!-- *************************************************************************************   -->
         <!--  ************************         Ctrl - Fenster Bad         ************************   -->
@@ -1677,14 +1683,17 @@
         </script>
         <script>
             var Light1WZ = new CtrlTile();
-            Light1WZ.create("MainLightWZ", "10px", "10px", "Lampe Fenster", "cyan", "Light",
-                "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "");
+            Light1WZ.create("MainLightWZ", "10px", "10px", "Lampe Fenster", "cyan", "transparent", "Light",
+                "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "",
+                "200px", "210px", "black", "white");
             var Light2WZ = new CtrlTile();
-            Light2WZ.create("MainLightWZ", "10px", "240px", "Lampe Mitte", "cyan", "Light",
-                "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "");
+            Light2WZ.create("MainLightWZ", "10px", "240px", "Lampe Mitte", "cyan", "transparent", "Light",
+                "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "",
+                "200px", "210px", "black", "white");
             var Light3WZ = new CtrlTile();
-            Light3WZ.create("MainLightWZ", "300px", "10px", "Lampe Schreibtisch", "cyan", "Light",
-                "send('command(Light,WZA,false)')", "send('command(Light,WZA,true)')", "aus", "ein", "", "");
+            Light3WZ.create("MainLightWZ", "300px", "10px", "Lampe Schreibtisch", "cyan", "transparent", "Light",
+                "send('command(Light,WZA,false)')", "send('command(Light,WZA,true)')", "aus", "ein", "", "",
+                "200px", "210px", "black", "white");
         </script>
         <!-- ***********************************************************************************      -->
         <!-- ************************      Light Ctrl  Wohnzimmer     ************************      -->
@@ -1746,7 +1755,7 @@
         </script>
         <script>
             var LightSZ = new CtrlTile();
-            LightSZ.create("MainLightSZ", "10px", "10px", "Schlafzimmer", "sandy", "Light",
+            LightSZ.create("MainLightSZ", "10px", "10px", "Schlafzimmer", "sandy", "transparent", "Light",
                 "send('command(Light,SZ,false)')", "send('command(Light,SZ,true)')");
         </script>
         <!-- ************************ Light Ctrl  Schlafzimmer ************************ -->
@@ -1779,7 +1788,7 @@
         </script>
         <script>
             var LightD = new CtrlTile();
-            LightD.create("MainLightD", "10px", "10px", "Diele", "yellowgreen", "Light",
+            LightD.create("MainLightD", "10px", "10px", "Diele", "yellowgreen", "transparent", "Light",
                 "send('command(Light,D,false)')", "send('command(Light,D,true)')");
         </script>
 

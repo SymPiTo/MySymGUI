@@ -2504,6 +2504,7 @@ class CtrlTile {
     constructor() {
         this.ID = "";
         this.color = "cyan";
+        this.tileColor = "transparent";
         this.size = "size5";
         this.icon = "";
         this.id1 = "";
@@ -2520,25 +2521,33 @@ class CtrlTile {
         this.rightStat = "rechts";
         this.b = "200px";
         this.h = "210px";
+        this.btnTextColor0 = "white";
+        this.btnTextColor1 = "lime";
     }
 
-    create(ParentID, posTop, posLeft, label, color, BaseIcon, cmd1, cmd2, ...param) {
+    create(ParentID, posTop, posLeft, label, color, tilecolor, BaseIcon, cmd1, cmd2, ...param) {
         if (param.length > 0) {
             this.state0 = param[0];
             this.state1 = param[1];
             this.leftStat = param[2];
             this.rightStat = param[3];
+            this.b = param[4];
+            this.h = param[5];
+            this.btnTextColor0 = param[6];
+            this.btnTextColor1 = param[7];
         }
         this.color = color;
+        this.tileColor = tilecolor;
         this.icon = BaseIcon;
         var elem = document.createElement("div");
         //elem.className = "Tile";
-        elem.classList.add(color + "Light");
+        elem.style.backgroundColor = this.tileColor;
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
         elem.style.width = this.b;
         elem.style.height = this.h;
+        elem.style.border = "thin solid black";
         elem.style.flexDirection = "column";
         this.ID = elem;
 
@@ -2610,15 +2619,16 @@ class CtrlTile {
     }
 
     update(value, valueLeft, valueRight) {
-
+        var colorOff = this.btnTextColor0;
+        var colorOn = this.btnTextColor1;
         if (value === true) {
             this.id1.src = "images/" + this.icon + "1" + ".png";
-            this.id4.style.color = "white";
-            this.id5.style.color = "lime"
+            this.id4.style.color = colorOff;
+            this.id5.style.color = colorOn;
         } else {
             this.id1.src = "images/" + this.icon + "0" + ".png";
-            this.id4.style.color = "lime";
-            this.id5.style.color = "white"
+            this.id4.style.color = colorOn;
+            this.id5.style.color = colorOff;
         }
         this.id2.innerHTML = valueLeft;
         this.id3.innerHTML = valueRight;
