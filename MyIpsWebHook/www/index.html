@@ -1432,7 +1432,7 @@
                 "",
                 "send('command(Rollo,K,dark)') ");
             var btnRolloK50 = new CtrlButton();
-            btnRolloK50.create("MainRolloK", "440px", "72px", "ctrlbutton", "normsmalleral", "midgreen", "50%",
+            btnRolloK50.create("MainRolloK", "440px", "72px", "ctrlbutton", "smaller", "midgreen", "50%",
                 "command", "",
                 "send('command(Rollo,K,mid)') ");
             var btnRolloK25 = new CtrlButton();
@@ -1502,42 +1502,46 @@
 
 
             var Rahmen1SZ = new Kachel();
-            Rahmen1SZ.create("MainRolloSZ", "220px", "35px", "200px", "345px", "transparent", "Preset");
-            var Rahmen2SZ = new Kachel();
-            Rahmen2SZ.create("MainRolloSZ", "220px", "335px", "200px", "345px", "transparent", "Control")
+            Rahmen1SZ.create("MainRolloSZ", "290px", "60px", "230px", "100px", "transparent", "Mode");
 
 
             var btnRolloSZAuto = new CtrlButton();
-            btnRolloSZAuto.create("MainRolloSZ", "260px", "50px", "ctrlbutton", "normal", "sandy", "Automatik",
+            btnRolloSZAuto.create("MainRolloSZ", "330px", "70px", "ctrlbutton", "smaller", "sandy", "Automatik",
                 "command", "", "send('command(Rollo,SZ,Auto)') ");
             var btnRolloSZMan = new CtrlButton();
-            btnRolloSZMan.create("MainRolloSZ", "320px", "50px", "ctrlbutton", "normal", "sandy", "Manual", "command",
+            btnRolloSZMan.create("MainRolloSZ", "330px", "175px", "ctrlbutton", "smaller", "sandy", "Manual", "command",
                 "", "send('command(Rollo,SZ,Man)') ");
+
+            var Rahmen2SZ = new Kachel();
+            Rahmen2SZ.create("MainRolloSZ", "220px", "335px", "200px", "345px", "transparent", "Preset")
+
+            var btnRolloSZ99 = new CtrlButton();
+            btnRolloSZ99.create("MainRolloSZ", "440px", "175px", "ctrlbutton", "smaller", "sandy", "99%", "command", "",
+                "send('command(Rollo,SZ,nearlyClosed)') ");
+
             var btnRolloSZ75 = new CtrlButton();
-            btnRolloSZ75.create("MainRolloSZ", "380px", "50px", "ctrlbutton", "normal", "sandy", "75%", "command", "",
+            btnRolloSZ75.create("MainRolloSZ", "500px", "175px", "ctrlbutton", "smaller", "sandy", "75%", "command", "",
                 "send('command(Rollo,SZ,dark)') ");
             var btnRolloSZ50 = new CtrlButton();
-            btnRolloSZ50.create("MainRolloSZ", "440px", "50px", "ctrlbutton", "normal", "sandy", "50%", "command", "",
+            btnRolloSZ50.create("MainRolloSZ", "440px", "72px", "ctrlbutton", "smaller", "sandy", "50%", "command", "",
                 "send('command(Rollo,SZ,mid)') ");
             var btnRolloSZ25 = new CtrlButton();
-            btnRolloSZ25.create("MainRolloSZ", "500px", "50px", "ctrlbutton", "normal", "sandy", "25%", "command", "",
+            btnRolloSZ25.create("MainRolloSZ", "500px", "72px", "ctrlbutton", "smaller", "sandy", "25%", "command", "",
                 "send('command(Rollo,SZ,bright)') ");
 
+            var Rahmen3SZ = new Kachel();
+            Rahmen3SZ.create("MainRolloSZ", "290px", "355px", "150px", "280px", "transparent", "Control")
+
+
             var btnRolloSZHoch = new CtrlButton();
-            btnRolloSZHoch.create("MainRolloSZ", "260px", "350px", "ctrlbutton", "normal", "sandy", "Hoch", "command",
-                "", "send('command(Rollo,SZ,up)') ");
+            btnRolloSZHoch.create("MainRolloSZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
+                "send('command(Rollo,SZ,up)') ");
             var btnRolloSZStop = new CtrlButton();
-            btnRolloSZStop.create("MainRolloSZ", "320px", "350px", "ctrlbutton", "normal", "sandy", "Stop", "command",
-                "", "send('command(Rollo,SZ,stop)') ");
+            btnRolloSZStop.create("MainRolloSZ", "cyan", "415px", "370px", "fa fa-stop", "Halt",
+                "send('command(Rollo,SZ,stop)') ");
             var btnRolloSZRunter = new CtrlButton();
-            btnRolloSZRunter.create("MainRolloSZ", "380px", "350px", "ctrlbutton", "normal", "sandy", "Runter",
-                "command", "", "send('command(Rollo,SZ,down)') ");
-            var btnRolloSZStepUp = new CtrlButton();
-            btnRolloSZStepUp.create("MainRolloSZ", "440px", "350px", "ctrlbutton", "normal", "sandy", "Step Up",
-                "command", "", "send('command(Rollo,SZ,StepUp)') ");
-            var btnRolloSZStepDown = new CtrlButton();
-            btnRolloSZStepDown.create("MainRolloSZ", "500px", "350px", "ctrlbutton", "normal", "sandy", "Step Down",
-                "command", "", "send('command(Rollo,SZ,StepDown)') ");
+            btnRolloSZRunter.create("MainRolloSZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
+                "send('command(Rollo,SZ,down)') ");
         </script>
 
         <!-- ************************** Rolladen Ctrl Schlafzimmer ************************** -->
@@ -1547,28 +1551,27 @@
             CtrlwindowRolloSZ.createCtrl("MainRolloSZCtrl", "bgSandy");
         </script>
         <script>
-            var DisPosRolloSZ = new StateDisplay();
-            DisPosRolloSZ.create("MainRolloSZCtrl", "sandyLight", "%", "20px", "30px", "size07", "30px", "Position",
-                "Number", "",
-                "", "", "");
-
             var DisModeRolloSZ = new StateDisplay();
-            DisModeRolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "100px", "30px", "size07", "30px", "Mode",
+            DisModeRolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "20px", "30px", "size07", "30px", "Mode",
                 "Auto", "Man",
                 "", "", "");
 
             var DisST1RolloSZ = new StateDisplay();
-            DisST1RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "180px", "30px", "size07", "30px",
+            DisST1RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "130px", "30px", "size07", "30px",
                 "Schaltzeiten Mo-Fr",
                 "String", "", "", "", "");
 
             var DisST2RolloSZ = new StateDisplay();
-            DisST2RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "260px", "30px", "size07", "30px",
+            DisST2RolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "210px", "30px", "size07", "30px",
                 "Schaltzeiten Sa-so",
                 "String", "", "", "", "");
 
+            CbSSrolloSZ = new CheckBoxCtrlBtn();
+            CbSSrolloSZ.create("MainRolloSZCtrl", "sandy", "290px", "30px", "SunRise-SunSet",
+                "command(Rollo,SZ,SSXX");
+
             var rolloCtrlSZ = new RolloCtrl();
-            rolloCtrlSZ.create("MainRolloSZCtrl", "340px", "30px", "sandy", "Rolladen Schlafzimmer", "SZ");
+            rolloCtrlSZ.create("MainRolloSZCtrl", "400px", "30px", "sandy", "Position", "SZ");
         </script>
 
 
