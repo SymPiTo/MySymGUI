@@ -511,15 +511,17 @@ class DynIcon {
         this.revers = revers;
     }
 
-    create(ParentID, posTop, posLeft, size) {
+    create(ParentID, posTop, posLeft, b, h) {
         var elem = document.createElement("img");
         this.ID = elem;
         elem.className = "icon";
-        elem.classList.add(size);
+
         elem.src = "images/" + this.ImageBaseName + "0.png";
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
+        elem.style.width = b;
+        elem.style.height = h;
 
 
 
