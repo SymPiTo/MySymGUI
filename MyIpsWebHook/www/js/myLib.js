@@ -1841,6 +1841,7 @@ class FontCtrlButton {
         this.h = "60px";
         this.textfarbe = "black";
         this.textgr = "20px";
+        this.textfarbeAF = "black";
     }
     create(ParentID, color, posTop, posLeft, symbol, text, cmd, ...param) {
         if (param.length > 1) {
@@ -1848,7 +1849,7 @@ class FontCtrlButton {
             this.h = param[1];
             this.textfarbe = param[2];
             this.textgr = param[3];
-
+            this.textfarbeAF = param[4];
         }
         var container = document.createElement("div");
         container.className = "ctrlbutton";
@@ -1877,7 +1878,7 @@ class FontCtrlButton {
         var elem1 = document.createElement("span");
         elem1.className = symbol;
         elem1.style.fontSize = this.textgr;
-        elem1.style.color = this.textfarbe;
+        elem1.style.color = this.textfarbeAF;
         elem.append(elem1);
 
         var textContainer = document.createElement("div");
