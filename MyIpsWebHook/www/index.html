@@ -801,13 +801,13 @@
 
 
             var Rahmen1WZ = new Kachel();
-            Rahmen1WZ.create("MainHeizungWZ", "300px", "40px", "230px", "120px", "transparent", "Mode");
+            Rahmen1WZ.create("MainHeizungWZ", "300px", "20px", "230px", "120px", "transparent", "Mode");
             var btnHzWZauto = new CtrlButton();
-            btnHzWZauto.create("MainHeizungWZ", "350px", "50px", "ctrlbutton", "smaller", "cyan", "Automatik",
+            btnHzWZauto.create("MainHeizungWZ", "350px", "30px", "ctrlbutton", "smaller", "cyan", "Automatik",
                 "command",
                 "", "send('command(Heizung,WZ,auto)')");
             var btnHzWZman = new CtrlButton();
-            btnHzWZman.create("MainHeizungWZ", "350px", "155px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
+            btnHzWZman.create("MainHeizungWZ", "350px", "135px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
                 "",
                 "send('command(Heizung,WZ,man)')");
 
@@ -817,23 +817,23 @@
 
 
             var Rahmen3WZ = new Kachel();
-            Rahmen1WZ.create("MainHeizungWZ", "450px", "40px", "230px", "120px", "transparent", "Mode");
+            Rahmen1WZ.create("MainHeizungWZ", "450px", "20px", "230px", "120px", "transparent", "Mode");
             var btnHzWZUrlaub = new CtrlButton();
-            btnHzWZUrlaub.create("MainHeizungWZ", "500px", "50px", "ctrlbutton", "smaller", "cyan", "Urlaub", "command",
+            btnHzWZUrlaub.create("MainHeizungWZ", "500px", "30px", "ctrlbutton", "smaller", "cyan", "Urlaub", "command",
                 "", "send('command(Heizung,WZ,urlaub)')");
             var btnHzWZParty = new CtrlButton();
-            btnHzWZParty.create("MainHeizungWZ", "500px", "155px", "ctrlbutton", "smaller", "cyan", "Party", "command",
+            btnHzWZParty.create("MainHeizungWZ", "500px", "135px", "ctrlbutton", "smaller", "cyan", "Party", "command",
                 "", "send('command(Heizung,WZ,party)')");
 
 
             var Rahmen2WZ = new Kachel();
-            Rahmen2WZ.create("MainHeizungWZ", "300px", "315px", "270px", "120px", "transparent", "Control")
+            Rahmen2WZ.create("MainHeizungWZ", "300px", "295px", "270px", "120px", "transparent", "Control")
 
             var btnHzWZHeizen = new FontCtrlButton();
-            btnHzWZHeizen.create("MainHeizungWZ", "cyan", "350px", "325px", "fa fa-temperature-high", "Heizen",
+            btnHzWZHeizen.create("MainHeizungWZ", "cyan", "350px", "305px", "fa fa-temperature-high", "Heizen",
                 "send('command(Heizung,WZ,heizen)') ", "120px", "50px", "black", "22px", "red");
             var btnHzWZAbsenken = new FontCtrlButton();
-            btnHzWZAbsenken.create("MainHeizungWZ", "cyan", "350px", "455px", "fa fa-temperature-low", "Absenken",
+            btnHzWZAbsenken.create("MainHeizungWZ", "cyan", "350px", "435px", "fa fa-temperature-low", "Absenken",
                 "send('command(Heizung,WZ,absenken)') ", "120px", "50px", "black", "22px", "blue");
             /*
                         var btnHzWZHeizen = new CtrlButton();
@@ -846,13 +846,13 @@
                             "{send('command(Heizung,WZ,absenken)'); document.getElementById('AdjTempHzWZ1').innerHTML='16.0';}");
             */
             var Rahmen4WZ = new Kachel();
-            Rahmen4WZ.create("MainHeizungWZ", "450px", "315px", "230px", "120px", "transparent", "End Position")
+            Rahmen4WZ.create("MainHeizungWZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
 
             var btnHzWZAus = new CtrlButton();
-            btnHzWZAus.create("MainHeizungWZ", "500px", "325px", "ctrlbutton", "smaller", "cyan", "Zu", "command", "",
+            btnHzWZAus.create("MainHeizungWZ", "500px", "305px", "ctrlbutton", "smaller", "cyan", "Zu", "command", "",
                 "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} ");
             var btnHzWZAuf = new CtrlButton();
-            btnHzWZAuf.create("MainHeizungWZ", "500px", "430px", "ctrlbutton", "smaller", "cyan", "Auf", "command", "",
+            btnHzWZAuf.create("MainHeizungWZ", "500px", "410px", "ctrlbutton", "smaller", "cyan", "Auf", "command", "",
                 "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}");
         </script>
 
