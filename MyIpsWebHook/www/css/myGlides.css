@@ -970,11 +970,14 @@ margin-right: auto;
 	display: flex; /* or inline-flex */;
 	flex-direction: row;
 	align-items: center;
- 	margin:20px;
-	border: 1px #C0C0C0 inset;
+     margin:20px;
+     border: 1px solid white;
+     
+     /*
+	border: 10px #C0C0C0 inset;
 	border-color: #777777;
+	 */
 	 
-	background-color: hsl(174, 100%, 5%);
 }
 
  .ScrollReihe {

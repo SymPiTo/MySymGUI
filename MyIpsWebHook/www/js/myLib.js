@@ -434,10 +434,16 @@ class ImageDisplay {
         this.elemA = "";
         this.elemB = "";
         this.elemC = "";
+
+        this.b = "";
+        this.h = "";
+        //optionale Parameter
     }
 
 
-    create(ParentID, posTop, posLeft, size, farbe) {
+    create(ParentID, posTop, posLeft, b, h, farbe) {
+        this.b = b;
+        this.h = h;
         var elem = document.createElement("div");
         elem.className = "DenonDisplay";
         elem.classList.add(farbe);
@@ -446,13 +452,16 @@ class ImageDisplay {
         elem.style.top = posTop;
         elem.style.marginLeft = "5px";
         elem.style.marginRight = "5px";
-        elem.style.height = "200px"
-        elem.style.width = "510px"
+        elem.style.height = this.h;
+        elem.style.width = this.b;
         this.ID = elem;
 
         var elem1 = document.createElement("img");
         elem1.className = "icon";
-        elem1.classList.add(size);
+        elem1.style.opacity = "0.75";
+        elem1.style.border = "5px  grey inset";
+        elem1.style.height = "150px";
+        elem1.style.width = "150px";
         elem1.style.margin = "10px";
         elem1.style.marginRight = "30px";
         elem1.src = "";
@@ -472,6 +481,7 @@ class ImageDisplay {
         elem3.style.fontSize = "28px"
         elem3.style.color = "lime";
         var elem4 = document.createElement("div");
+
         elem4.innerHTML = "Artist: ";
 
         var elem4a = document.createElement("div");

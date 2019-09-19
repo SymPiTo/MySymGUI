@@ -3484,59 +3484,99 @@
 
         <script>
             var iDisArtistWZ = new ImageDisplay();
-            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "normal", "bgcyan");
+            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "450px", "200px", "transparent");
 
+
+
+            /*
             var rahm = new Rahmen();
             rahm.create("MainCeolWZ", "44vh", "3%", "70px", "527px", "bgGrey");
 
-            var IconVarDisVolWZ = new TransVarDisplay();
-            IconVarDisVolWZ.create("MainCeolWZ", "45vh", "0%", "lime", "28px", "Volume", "dB", );
-            var IconVarDisSourceWZ = new TransVarDisplay();
-            IconVarDisSourceWZ.create("MainCeolWZ", "45vh", "20%", "lime", "28px", "Source", "", );
-            var IconVarDisServerWZ = new TransVarDisplay();
-            IconVarDisServerWZ.create("MainCeolWZ", "45vh", "40%", "lime", "28px", "Server", "", );
-
+                        var IconVarDisVolWZ = new TransVarDisplay();
+                        IconVarDisVolWZ.create("MainCeolWZ", "45vh", "0%", "lime", "28px", "Volume", "dB", );
+                        var IconVarDisSourceWZ = new TransVarDisplay();
+                        IconVarDisSourceWZ.create("MainCeolWZ", "45vh", "20%", "lime", "28px", "Source", "", );
+                        var IconVarDisServerWZ = new TransVarDisplay();
+                        IconVarDisServerWZ.create("MainCeolWZ", "45vh", "40%", "lime", "28px", "Server", "", );
+            */
+            /*
             var rahmCD = new Rahmen();
-            rahmCD.create("MainCeolWZ", "57vh", "5px", "85px", "552px", "bgCyanLight");
+
+
+            rahmCD.create("MainCeolWZ", "57vh", "5px", "85px", "500px", "bgCyanLight");
+               */
+
+
             var FontBtnCDA = new FontButtonNew();
-            FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "4%", "fa fa-backward",
+            FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "mid", "70vh", "60px", "fa fa-backward",
                 "send('command(DenonCeol,play,previous)')");
-            var FontBtnCDB = new FontButtonNew();
-            FontBtnCDB.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "24%", "fa fa-pause",
-                "send('command(DenonCeol,pause,all)')");
-            var FontBtnCDC = new FontButtonNew();
-            FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "44%", "fa fa-play",
-                "send('command(DenonCeol,play,first)')");
-            var FontBtnCDD = new FontButtonNew();
-            FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "64%", "fa fa-stop",
-                "send('command(DenonCeol,stop,all)')");
             var FontBtnCDE = new FontButtonNew();
-            FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyanBtn", "mid", "59vh", "84%", "fa fa-forward",
+            FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyan", "mid", "70vh", "130px", "fa fa-forward",
                 "send('command(DenonCeol,play,next)')");
 
-            var rahm1 = new Rahmen();
-            rahm1.create("MainCeolWZ", "71vh", "5px", "135px", "552px", "bgCyanLight");
-            var CtrlBtnIRadioWZ = new CtrlButton();
-            CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "normal", "cyanBtn", "IRadio",
-                "CtrlFunc", "MainCeolWZCtrl", "1off");
+            var FontBtnCDB = new FontButtonNew();
+            FontBtnCDB.create("MainCeolWZ", "fontbutton", "cyan", "mid", "70vh", "300px", "fa fa-pause",
+                "send('command(DenonCeol,pause,all)')");
+
+            var FontBtnCDD = new FontButtonNew();
+            FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyan", "mid", "70vh", "230px", "fa fa-stop",
+                "send('command(DenonCeol,stop,all)')");
+
+            var FontBtnCDC = new FontButtonNew();
+            FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "mid", "70vh", "370px", "fa fa-play",
+                "send('command(DenonCeol,play,first)')");
+
+            /*
+                        var rahm1 = new Rahmen();
+                        rahm1.create("MainCeolWZ", "71vh", "5px", "145px", "500px", "bgCyanLight");
+            */
+            var RahmenA = new Kachel();
+            RahmenA.create("MainCeolWZ", "300px", "50px", "400px", "95px", "transparent", "I-Radio")
+            /*
+                        var RahmenB = new Kachel();
+                        RahmenB.create("MainCeolWZ", "350px", "25px", "500px", "100px", "transparent", "Control")
+
+                        var RahmenC = new Kachel();
+                        RahmenC.create("MainCeolWZ", "450px", "25px", "500px", "100px", "transparent", "Control")
+            */
+            var btnIRadio = new FontCtrlButton();
+            btnIRadio.create("MainCeolWZ", "cyan", "335px", "65px", "fa fa-podcast", "IRadio",
+                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
+
+            var btnIRadio = new FontCtrlButton();
+            btnIRadio.create("MainCeolWZ", "cyan", "335px", "190px", "fa fa-music", "CD",
+                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
+
+            var btnIRadio = new FontCtrlButton();
+            btnIRadio.create("MainCeolWZ", "cyan", "335px", "315px", "fa fa-book", "Audiobook",
+                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
+
+            /*
+                        var CtrlBtnIRadioWZ = new CtrlButton();
+                        CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "smaller", "cyanBtn", "IRadio",
+                            "CtrlFunc", "MainCeolWZCtrl", "1off");
+                    
             var CtrlBtnCDWZ = new CtrlButton();
-            CtrlBtnCDWZ.create("MainCeolWZ", "73vh", "195px", "ctrlbutton", "normal", "cyanBtn", "CD", "CtrlFunc",
+            CtrlBtnCDWZ.create("MainCeolWZ", "73vh", "195px", "ctrlbutton", "smaller", "cyanBtn", "CD", "CtrlFunc",
                 "MainCDCtrl", "1on");
             var CtrlBtnAudioWZ = new CtrlButton();
-            CtrlBtnAudioWZ.create("MainCeolWZ", "73vh", "375px", "ctrlbutton", "normal", "cyanBtn", "AudioBook",
+            CtrlBtnAudioWZ.create("MainCeolWZ", "73vh", "375px", "ctrlbutton", "smaller", "cyanBtn", "AudioBook",
                 "CtrlFunc", "MainAudioBookCtrl", "1on");
 
+
+   
+*/
             var FontBtnIRadioVolDwnWZ = new FontButtonNew();
-            FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyanBtn", "normal", "83vh", "5%",
+            FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyan", "mid", "83vh", "65px",
                 "fa fa-volume-down", "send('command(DenonCeol,vol,dec)')");
             var FontBtnIRadioMuteWZ = new FontButtonNew();
-            FontBtnIRadioMuteWZ.create("MainCeolWZ", "fontbutton", "cyanBtn", "normal", "83vh", "25%",
+            FontBtnIRadioMuteWZ.create("MainCeolWZ", "fontbutton", "cyan", "mid", "83vh", "130px",
                 "fa fa-volume-off", "send('command(DenonCeol,mute,toggle)')");
             var FontBtnIRadioVolUpWZ = new FontButtonNew();
-            FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyanBtn", "normal", "83vh", "45%",
+            FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyan", "mid", "83vh", "195px",
                 "fa fa-volume-up", "send('command(DenonCeol,vol,inc)')");
             var FontBtnIRadioPowerWZ = new FontButtonNew();
-            FontBtnIRadioPowerWZ.create("MainCeolWZ", "fontbutton", "cyanBtn", "normal", "83vh", "75%",
+            FontBtnIRadioPowerWZ.create("MainCeolWZ", "fontbutton", "cyan", "normal", "84vh", "330px",
                 "fa fa-power-off", "send('command(DenonCeol,power,toggle)')");
         </script>
 
@@ -3544,7 +3584,7 @@
         <!--  <Ctrl id = MainCeolWZCtrl class="RadioStation"></Ctrl>  -->
         <script>
             var CtrlwindowCeolIR = new Area();
-            CtrlwindowCeolIR.createCtrl("MainCeolWZCtrl", "bgCyan");
+            CtrlwindowCeolIR.createCtrl("MainCeolWZCtrl", "bgCyanLight");
         </script>
 
         <script>
@@ -3558,7 +3598,7 @@
 
         <script>
             var CtrlwindowCeolCD = new Area();
-            CtrlwindowCeolCD.createCtrl("MainCDCtrl", "bgCyan");
+            CtrlwindowCeolCD.createCtrl("MainCDCtrl", "bgCyanLight");
         </script>
 
         <script>

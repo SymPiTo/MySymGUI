@@ -1035,9 +1035,9 @@
 
       iDisArtist.update(sym[92], sym[95], sym[93], sym[94]);
       FontBtnIRadioPower.update(sym[96]);
-      IconVarDisVol.update(sym[97], 0);
-      IconVarDisSource.update(sym[105], "state");
-      IconVarDisServerWZ.update(sym[81]);
+      //IconVarDisVol.update(sym[97], 0);
+      //IconVarDisSource.update(sym[105], "state");
+      //IconVarDisServerWZ.update(sym[81]);
 
       if (sym[105] === 'IRADIO') {
         iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
