@@ -1046,8 +1046,8 @@
       }
 
       FontBtnIRadioPowerWZ.update(sym[96]);
-      IconVarDisVolWZ.update(sym[97], 0);
-      IconVarDisSourceWZ.update(sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
+      //IconVarDisVolWZ.update(sym[97], 0);
+      //IconVarDisSourceWZ.update(sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
 
 
 
