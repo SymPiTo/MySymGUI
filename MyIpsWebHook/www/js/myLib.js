@@ -1840,7 +1840,41 @@ class RolloCtrl {
 
 }
 
+/* ---------------------  Klasse analogBar   ---------------------------------------- */
+class analogBar {
+    constructor() {
+        this.bb = "30%";
+        //optionale Parameter
 
+    }
+    create(ParentID, posTop, posLeft, color, b, ...param) {
+        if (param.length > 1) {
+
+        }
+
+        var container = document.createElement("div");
+        container.style.width = b;
+        container.style.height = "1px";
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.style.backgroundColor = "black";
+
+        var bar = document.createElement("div");
+        bar.style.width = this.bb;
+        bar.style.height = "6px";
+        bar.style.position = "relative";
+        bar.style.top = "-200%";
+        bar.style.backgroundColor = color;
+        container.append(bar);
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+    update(value) {
+
+    }
+
+};
 
 
 /* ---------------------  Klasse FontCtrlButton   ---------------------------------------- */
@@ -1855,7 +1889,7 @@ class FontCtrlButton {
         this.textgr = "20px";
         this.textfarbeAF = "black";
     }
-    create(ParentID, color, posTop, posLeft, symbol, text, cmd, ...param) {
+    create(ParentID, color, posTop, posLeft, symbol, text, ctrltype, cmd, ctrlWin, ...param) {
         if (param.length > 1) {
             this.b = param[0];
             this.h = param[1];
@@ -1875,7 +1909,57 @@ class FontCtrlButton {
         container.style.display = "flex";
         container.style.flexDirection = "row";
         container.style.justifyContent = "space-around";
-        container.setAttribute("onclick", cmd);
+
+
+        switch (ctrltype) {
+            case "command":
+                container.setAttribute("onclick", cmd);
+                break;
+            case "ctrlWindow":
+                container.onclick = function () {
+                    // alle Ctrl auf 0px verkleinern 
+                    var Ctrl = document.getElementsByTagName("Ctrl");
+                    var MCtrlWindow = Array.from(Ctrl);
+                    MCtrlWindow.forEach(function (element) {
+                        var a = element.className;
+                        document.getElementsByClassName(a)[0].style.width = "0px";
+                    });
+                    // ctrlWindow umschalten
+                    document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
+                };
+                break;
+            case "CtrlFunc":
+                container.onclick = function () {
+                    // alle Ctrl auf 0px verkleinern 
+                    var Ctrl = document.getElementsByTagName("Ctrl");
+                    var MCtrlWindow = Array.from(Ctrl);
+                    MCtrlWindow.forEach(function (element) {
+                        var a = element.className;
+                        document.getElementsByClassName(a)[0].style.width = "0px";
+                    });
+                    // ctrlWindow umschalten
+                    document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
+                    ShowHidePanel(cmd);
+                }
+                break;
+            case "CtrlCmd":
+                container.onclick = function () {
+                    // alle Ctrl auf 0px verkleinern 
+                    var Ctrl = document.getElementsByTagName("Ctrl");
+                    var MCtrlWindow = Array.from(Ctrl);
+                    MCtrlWindow.forEach(function (element) {
+                        var a = element.className;
+                        document.getElementsByClassName(a)[0].style.width = "0px";
+                    });
+                    // ctrlWindow umschalten
+                    document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
+
+                    send(cmd);
+                }
+                break;
+            default:
+                container.setAttribute("onclick", cmd);
+        }
 
 
         var elem = document.createElement("div");

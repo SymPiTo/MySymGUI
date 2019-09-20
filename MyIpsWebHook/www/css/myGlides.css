@@ -1504,10 +1504,7 @@ width:40%;
 .fontbutton{
 	border: thin #000000 solid;
     border-radius: 5px;
-    /*
-	height: 70px;
-    width: 100px;
-    */
+ 
 	-webkit-transition: All 0.5s ease;
 	-moz-transition: All 0.5s ease;
 	-o-transition: All 0.5s ease;
@@ -1515,7 +1512,7 @@ width:40%;
 	transition: All 0.5s ease;
 	
 }
-
+/*
 .fontbutton.normal{
     width: 100px;
     height: 50px;
@@ -1531,7 +1528,7 @@ width:40%;
 	width: 60px;
 	margin:2px;
 }
-/*
+
 .fontbutton.mid{
 	width: 60px;
 	height:60px;
@@ -1541,7 +1538,7 @@ width:40%;
     position: relative;
     top: 15%;
 }
-*/
+
 .fontbutton.big{
 	width: 80px;
 	margin:2px;
@@ -1571,7 +1568,7 @@ width:40%;
 }
 
 .fontbutton.blue{
-	background:-webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%)); /* CHROME */
+	background:-webkit-linear-gradient(hsl(200, 100%, 25%), hsl(200, 100%, 45%));   
 }
 
 

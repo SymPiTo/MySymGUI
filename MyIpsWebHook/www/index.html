@@ -821,10 +821,12 @@
             Rahmen2WZ.create("MainHeizungWZ", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzWZHeizen = new FontCtrlButton();
             btnHzWZHeizen.create("MainHeizungWZ", "cyan", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "send('command(Heizung,WZ,heizen)') ", "120px", "50px", "black", "19px", "red");
+                "command",
+                "send('command(Heizung,WZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
             var btnHzWZAbsenken = new FontCtrlButton();
             btnHzWZAbsenken.create("MainHeizungWZ", "cyan", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "send('command(Heizung,WZ,absenken)') ", "120px", "50px", "black", "19px", "blue");
+                "command",
+                "send('command(Heizung,WZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
 
             var Rahmen4WZ = new Kachel();
             Rahmen4WZ.create("MainHeizungWZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
@@ -917,11 +919,12 @@
             var Rahmen2KZ = new Kachel();
             Rahmen2KZ.create("MainHzKZ", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzKZHeizen = new FontCtrlButton();
-            btnHzKZHeizen.create("MainHzKZ", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "send('command(Heizung,WZ,heizen)') ", "120px", "50px", "black", "19px", "red");
+            btnHzKZHeizen.create("MainHzKZ", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen", "command",
+                "send('command(Heizung,WZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
             var btnHzKZAbsenken = new FontCtrlButton();
             btnHzKZAbsenken.create("MainHzKZ", "olive", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "send('command(Heizung,WZ,absenken)') ", "120px", "50px", "black", "19px", "blue");
+                "command",
+                "send('command(Heizung,WZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
 
 
             var Rahmen4KZ = new Kachel();
@@ -1012,11 +1015,12 @@
             var Rahmen2SZ = new Kachel();
             Rahmen2SZ.create("MainHzSZ", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzSZHeizen = new FontCtrlButton();
-            btnHzSZHeizen.create("MainHzSZ", "sandy", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "send('command(Heizung,SZ,heizen)') ", "120px", "50px", "black", "19px", "red");
+            btnHzSZHeizen.create("MainHzSZ", "sandy", "350px", "305px", "fa fa-temperature-high", "Heizen", "command",
+                "send('command(Heizung,SZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
             var btnHzSZAbsenken = new FontCtrlButton();
             btnHzSZAbsenken.create("MainHzSZ", "sandy", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "send('command(Heizung,SZ,absenken)') ", "120px", "50px", "black", "19px", "blue");
+                "command",
+                "send('command(Heizung,SZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
 
             var Rahmen4SZ = new Kachel();
             Rahmen4SZ.create("MainHzSZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
@@ -1104,11 +1108,12 @@
             var Rahmen2K = new Kachel();
             Rahmen2K.create("MainHzK", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzKHeizen = new FontCtrlButton();
-            btnHzKHeizen.create("MainHzK", "midgreen", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
+            btnHzKHeizen.create("MainHzK", "midgreen", "350px", "305px", "fa fa-temperature-high", "Heizen", "command",
+                "send('command(Heizung,K,heizen)') ", "", "120px", "50px", "black", "19px", "red");
             var btnHzKAbsenken = new FontCtrlButton();
             btnHzKAbsenken.create("MainHzK", "midgreen", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "send('command(Heizung,K,absenken)') ", "120px", "50px", "black", "19px", "blue");
+                "command",
+                "send('command(Heizung,K,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
 
 
             var Rahmen4K = new Kachel();
@@ -1199,16 +1204,16 @@
 
 
             var btnRolloWZHoch = new FontCtrlButton();
-            btnRolloWZHoch.create("MainRolloWZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "send('command(Rollo,WZ,up)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloWZHoch.create("MainRolloWZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
+                "send('command(Rollo,WZ,up)') ", "", "120px", "50px", "black", "22px", "black");
 
             var btnRolloWZStop = new FontCtrlButton();
-            btnRolloWZStop.create("MainRolloWZ", "cyan", "415px", "370px", "fa fa-stop", "Halt",
-                "send('command(Rollo,WZ,stop)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloWZStop.create("MainRolloWZ", "cyan", "415px", "370px", "fa fa-stop", "Halt", "command",
+                "send('command(Rollo,WZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
 
             var btnRolloWZRunter = new FontCtrlButton();
-            btnRolloWZRunter.create("MainRolloWZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "send('command(Rollo,WZ,down)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloWZRunter.create("MainRolloWZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter", "command",
+                "send('command(Rollo,WZ,down)') ", "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1285,14 +1290,14 @@
             Rahmen3B.create("MainRolloB", "290px", "355px", "150px", "280px", "transparent", "Control");
 
             var btnRolloBHoch = new FontCtrlButton();
-            btnRolloBHoch.create("MainRolloB", "blue", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "send('command(Rollo,B,up)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloBHoch.create("MainRolloB", "blue", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
+                "send('command(Rollo,B,up)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloBStop = new FontCtrlButton();
-            btnRolloBStop.create("MainRolloB", "blue", "415px", "370px", "fa fa-stop", "Halt",
-                "send('command(Rollo,B,stop)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloBStop.create("MainRolloB", "blue", "415px", "370px", "fa fa-stop", "Halt", "command",
+                "send('command(Rollo,B,stop)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloBRunter = new FontCtrlButton();
-            btnRolloBRunter.create("MainRolloB", "blue", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "send('command(Rollo,B,down)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloBRunter.create("MainRolloB", "blue", "500px", "370px", "fa fa-chevron-down", "Runter", "command",
+                "send('command(Rollo,B,down)') ", "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1380,14 +1385,14 @@
             Rahmen3KZ.create("MainRolloKZ", "290px", "355px", "150px", "280px", "transparent", "Control");
 
             var btnRolloKZHoch = new FontCtrlButton();
-            btnRolloKZHoch.create("MainRolloKZ", "olive", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "send('command(Rollo,KZ,up)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloKZHoch.create("MainRolloKZ", "olive", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
+                "send('command(Rollo,KZ,up)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloKZStop = new FontCtrlButton();
-            btnRolloKZStop.create("MainRolloKZ", "olive", "415px", "370px", "fa fa-stop", "Halt",
-                "send('command(Rollo,KZ,stop)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloKZStop.create("MainRolloKZ", "olive", "415px", "370px", "fa fa-stop", "Halt", "command",
+                "send('command(Rollo,KZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloKZRunter = new FontCtrlButton();
-            btnRolloKZRunter.create("MainRolloKZ", "olive", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "send('command(Rollo,KZ,down)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloKZRunter.create("MainRolloKZ", "olive", "500px", "370px", "fa fa-chevron-down", "Runter", "command",
+                "send('command(Rollo,KZ,down)') ", "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1473,14 +1478,15 @@
             Rahmen3K.create("MainRolloK", "290px", "355px", "150px", "280px", "transparent", "Control");
 
             var btnRolloKHoch = new FontCtrlButton();
-            btnRolloKHoch.create("MainRolloK", "midgreen", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "send('command(Rollo,K,up)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloKHoch.create("MainRolloK", "midgreen", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
+                "send('command(Rollo,K,up)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloKStop = new FontCtrlButton();
-            btnRolloKStop.create("MainRolloK", "midgreen", "415px", "370px", "fa fa-stop", "Halt",
-                "send('command(Rollo,K,stop)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloKStop.create("MainRolloK", "midgreen", "415px", "370px", "fa fa-stop", "Halt", "command",
+                "send('command(Rollo,K,stop)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloKRunter = new FontCtrlButton();
             btnRolloKRunter.create("MainRolloK", "midgreen", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "send('command(Rollo,K,down)') ", "120px", "50px", "black", "22px", "black");
+                "command",
+                "send('command(Rollo,K,down)') ", "", "120px", "50px", "black", "22px", "black");
         </script>
 
         <!-- ************************** Rolladen Ctrl Kueche ************************** -->
@@ -1564,14 +1570,14 @@
 
 
             var btnRolloSZHoch = new FontCtrlButton();
-            btnRolloSZHoch.create("MainRolloSZ", "sandy", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "send('command(Rollo,SZ,up)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloSZHoch.create("MainRolloSZ", "sandy", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
+                "send('command(Rollo,SZ,up)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloSZStop = new FontCtrlButton();
-            btnRolloSZStop.create("MainRolloSZ", "sandy", "415px", "370px", "fa fa-stop", "Halt",
-                "send('command(Rollo,SZ,stop)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloSZStop.create("MainRolloSZ", "sandy", "415px", "370px", "fa fa-stop", "Halt", "command",
+                "send('command(Rollo,SZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
             var btnRolloSZRunter = new FontCtrlButton();
-            btnRolloSZRunter.create("MainRolloSZ", "sandy", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "send('command(Rollo,SZ,down)') ", "120px", "50px", "black", "22px", "black");
+            btnRolloSZRunter.create("MainRolloSZ", "sandy", "500px", "370px", "fa fa-chevron-down", "Runter", "command",
+                "send('command(Rollo,SZ,down)') ", "", "120px", "50px", "black", "22px", "black");
         </script>
 
         <!-- ************************** Rolladen Ctrl Schlafzimmer ************************** -->
@@ -3512,6 +3518,39 @@
             rahmCD.create("MainCeolWZ", "57vh", "5px", "85px", "500px", "bgCyanLight");
                */
 
+            var RahmenA = new Kachel();
+            RahmenA.create("MainCeolWZ", "300px", "20px", "450px", "95px", "transparent", "Internet Radio")
+
+            var btnIRadioWZ = new FontCtrlButton();
+            btnIRadioWZ.create("MainCeolWZ", "cyan", "335px", "45px", "fa fa-podcast", "IRadio", "CtrlFunc",
+                "1off", "MainCeolWZCtrl", "120px", "50px", "black", "19px", "red");
+
+            var btnCDWZ = new FontCtrlButton();
+            btnCDWZ.create("MainCeolWZ", "cyan", "335px", "180px", "fa fa-music", "CD", "CtrlFunc",
+                "1on", "MainCDCtrl", "120px", "50px", "black", "19px", "red");
+
+            var btnAudioWZ = new FontCtrlButton();
+            btnAudioWZ.create("MainCeolWZ", "cyan", "335px", "325px", "fa fa-book", "Audiobook", "CtrlFunc",
+                "1on", "MainAudioBookCtrl", "120px", "50px", "black", "19px", "red");
+
+            /*
+                        var CtrlBtnIRadioWZ = new CtrlButton();
+                        CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "smaller", "cyanBtn", "IRadio",
+                            "CtrlFunc", "MainCeolWZCtrl", "1off");
+                    
+            var CtrlBtnCDWZ = new CtrlButton();
+            CtrlBtnCDWZ.create("MainCeolWZ", "73vh", "195px", "ctrlbutton", "smaller", "cyanBtn", "CD", "CtrlFunc",
+                "MainCDCtrl", "1on");
+            var CtrlBtnAudioWZ = new CtrlButton();
+            CtrlBtnAudioWZ.create("MainCeolWZ", "73vh", "375px", "ctrlbutton", "smaller", "cyanBtn", "AudioBook",
+                "CtrlFunc", "MainAudioBookCtrl", "1on");
+
+
+   
+*/
+
+            var Progress = new analogBar();
+            Progress.create("MainCeolWZ", "67vh", "20px", "cyan", "450px");
 
             var FontBtnCDA = new FontButtonNew();
             FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "60px", "fa fa-backward", "60px", "60px",
@@ -3532,46 +3571,7 @@
             FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "370px", "fa fa-play", "60px", "60px",
                 "send('command(DenonCeol,play,first)')");
 
-            /*
-                        var rahm1 = new Rahmen();
-                        rahm1.create("MainCeolWZ", "71vh", "5px", "145px", "500px", "bgCyanLight");
-            */
-            var RahmenA = new Kachel();
-            RahmenA.create("MainCeolWZ", "300px", "20px", "450px", "95px", "transparent", "I-Radio")
-            /*
-                        var RahmenB = new Kachel();
-                        RahmenB.create("MainCeolWZ", "350px", "25px", "500px", "100px", "transparent", "Control")
 
-                        var RahmenC = new Kachel();
-                        RahmenC.create("MainCeolWZ", "450px", "25px", "500px", "100px", "transparent", "Control")
-            */
-            var btnIRadio = new FontCtrlButton();
-            btnIRadio.create("MainCeolWZ", "cyan", "335px", "45px", "fa fa-podcast", "IRadio",
-                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
-
-            var btnIRadio = new FontCtrlButton();
-            btnIRadio.create("MainCeolWZ", "cyan", "335px", "180px", "fa fa-music", "CD",
-                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
-
-            var btnIRadio = new FontCtrlButton();
-            btnIRadio.create("MainCeolWZ", "cyan", "335px", "325px", "fa fa-book", "Audiobook",
-                "send('command(Heizung,K,heizen)') ", "120px", "50px", "black", "19px", "red");
-
-            /*
-                        var CtrlBtnIRadioWZ = new CtrlButton();
-                        CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "smaller", "cyanBtn", "IRadio",
-                            "CtrlFunc", "MainCeolWZCtrl", "1off");
-                    
-            var CtrlBtnCDWZ = new CtrlButton();
-            CtrlBtnCDWZ.create("MainCeolWZ", "73vh", "195px", "ctrlbutton", "smaller", "cyanBtn", "CD", "CtrlFunc",
-                "MainCDCtrl", "1on");
-            var CtrlBtnAudioWZ = new CtrlButton();
-            CtrlBtnAudioWZ.create("MainCeolWZ", "73vh", "375px", "ctrlbutton", "smaller", "cyanBtn", "AudioBook",
-                "CtrlFunc", "MainAudioBookCtrl", "1on");
-
-
-   
-*/
             var FontBtnIRadioVolDwnWZ = new FontButtonNew();
             FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "40px",
                 "fa fa-volume-down", "60px", "60px", "send('command(DenonCeol,vol,dec)')");
@@ -3582,8 +3582,8 @@
             FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "180px",
                 "fa fa-volume-up", "60px", "60px", "send('command(DenonCeol,vol,inc)')");
 
-            var VarDisTempK_E = new VarDis();
-            VarDisTempK_E.create("MainCeolWZ", "black", "86vh", "26vw", "normal", "dB");
+            var VarDisVolDenon = new VarDis();
+            VarDisVolDenon.create("MainCeolWZ", "cyan", "86vh", "26vw", "normal", "dB");
 
             var FontBtnIRadioPowerWZ = new FontButtonNew();
             FontBtnIRadioPowerWZ.create("MainCeolWZ", "fontbutton", "cyan", "84vh", "360px",
