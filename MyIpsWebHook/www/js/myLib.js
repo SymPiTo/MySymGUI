@@ -1151,6 +1151,10 @@ class GlideButton {
         var elem1 = document.createElement("div");
         elem1.className = "GlideButton";
         elem1.classList.add(farbe, "area");
+
+
+
+
         elem1.onclick = function () {
             if (MenuType === "R") {
                 // Main-Menus aufklappen  
@@ -1189,6 +1193,7 @@ class GlideButton {
                 document.getElementById(ParentID).style.width = "8vw";
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
+                    //Overview Bild einblenden
                     document.getElementsByClassName(IDMain + "OV")[0].style.left = "36vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28vw";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
@@ -1264,6 +1269,8 @@ class GlideButton {
         var elem8 = document.createElement("div");
         this.ObjValue4 = elem8;
         elem4.append(elem8);
+
+
 
         document.getElementById(ParentID).appendChild(elem1);
 

@@ -334,6 +334,13 @@
         sym[226] = ips[0].ID36540; // Homematic Server duty cycle HMIP  
 
         sym[227] = ips[0].ID37348; // Balkontür 
+        sym[228] = ips[0].ID34489; // Präsenzsensor AZ
+        sym[229] = ips[0].ID48642; // Lampe AZ
+        sym[230] = ips[0].ID37348; // Tür Balkon
+        sym[231] = ips[0].ID59969; // Bad Temperatur
+        sym[232] = ips[0].ID14487; // Bad Humidity
+
+
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -660,6 +667,12 @@
 
 
     function updateValues(sym) {
+
+      /* --------------------------- Bad Temp / Humidity -------------------------- */
+      VarDisTempBad.update(sym[231]);
+      VarDisHumidBad.update(sym[232]);
+      /* -------------------------------- Balkontür ------------------------------- */
+      VarDisBDoor.update(sym[230]);
       /* --------------------------- Haustür Position --------------------------- */
       DynIconDoorD.update(sym[9]);
       DisDoorDCtrl.update(sym[9]);
@@ -891,6 +904,14 @@
 
       //<!-- ******************** Person  **************************  -->
       ihuman.update(sym[58]);
+      ihumanAZ.update(sym[228]);
+
+
+
+
+
+      /* -------------------------- Arbeitsbereich Licht -------------------------- */
+      iLightAZ.update(sym[229]);
 
       //<!-- ******************** Schlafzimmer Licht **************************  -->
       LightSZ.update(sym[106], "", "");

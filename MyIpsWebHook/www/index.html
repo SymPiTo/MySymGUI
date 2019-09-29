@@ -301,6 +301,10 @@
             LeftMenuBad.create("MainMenu", "violet", "Bad", "_Bad.png", "MenuBad", "", "MM");
             var LeftMenuDiele = new GlideButton();
             LeftMenuDiele.create("MainMenu", "yellowgreen", "Diele", "Diele.png", "MenuDiele", "", "MM");
+
+            var LeftMenuAZ = new GlideButton();
+            LeftMenuAZ.create("MainMenu", "yellowgreen", "Arbeitsbereich", "Diele.png", "MenuAZ", "", "MM");
+
             var LeftMenuMM = new GlideButton();
             LeftMenuMM.create("MainMenu", "purple", "Multimedia", "_Multimedia_BW_web.png", "MenuMultimedia", "", "MM");
             var LeftMenuHz = new GlideButton();
@@ -425,7 +429,7 @@
             SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", "door.png", "MainDoorB", "", "SM");
         </script>
 
-        <!-- ************************ Menu Bad  ************************  -->
+        <!-- ------------------------------ Menu Bad ------------------------------- -->
         <subMenu id="SubMenuBad" class="MenuBad"></subMenu>
 
         <script>
@@ -444,8 +448,19 @@
             SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
                 "SM");
             var SubMenuDoorDiele = new GlideButton();
-            SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "",
-                "SM");
+            SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
+        </script>
+
+        <!-- --------------------------- SubMenu: AZ ---------------------------- -->
+
+        <subMenu id="SubMenuAZ" class="MenuAZ"></subMenu>
+
+        <script>
+            var SubMenuLightAZ = new GlideButton();
+            SubMenuLightAZ.create("SubMenuAZ", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+            "SM");
+            var SubMenuDoorAZ = new GlideButton();
+            SubMenuDoorAZ.create("SubMenuAZ", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
         <!-- ************************ Multimedia  ************************  -->
@@ -654,7 +669,18 @@
             img.height = 570;
             img.width = 620;
         </script>
-
+        <!-- --------------------------- Overview: AZ --------------------------- -->
+        <script>
+            var OVwindowHzD = new Area();
+            OVwindowHzD.createOverview("MenuAZOV", "bgYellowgreen");
+        </script>
+        <script>
+            var img = document.createElement('img');
+            img.src = 'images/Diele.jpg';
+            document.getElementById('MenuAZOV').appendChild(img);
+            img.height = 570;
+            img.width = 620;
+        </script>
         <!-- --------------------------- Overview: Multimedia --------------------------- -->
         <script>
             var OVwindowMM = new Area();
@@ -2196,6 +2222,12 @@
         <Main id="Grundriss" class="floorplan"></Main>
 
         <script>
+            var VarDisTempBad = new VarDis();
+            VarDisTempBad.create("Grundriss", "black", "125px", "40vw", "normal", "°C");
+
+            var VarDisHumidBad = new VarDis();
+            VarDisHumidBad.create("Grundriss", "black", "100px", "40vw", "normal", "%");
+
             var VarDisTempK_E = new VarDis();
             VarDisTempK_E.create("Grundriss", "black", "55vh", "15vw", "normal", "°C");
 
@@ -2223,6 +2255,9 @@
             var VarDisMainDoor = new VarDis();
             VarDisMainDoor.create("Grundriss", "black", "90vh", "24vw", "normal", "", "close", "open");
 
+            var VarDisBDoor = new VarDis();
+            VarDisBDoor.create("Grundriss", "black", "40vh", "78vw", "normal", "", "close", "open");
+
             var iLightSz = new DynIcon("Light", "bin", false);
             iLightSz.create("Grundriss", "100px", "180px", "50px", "50px");
 
@@ -2235,8 +2270,14 @@
             var iLightD = new DynIcon("Light", "bin", false);
             iLightD.create("Grundriss", "450px", "170px", "50px", "50px");
 
+            var iLightAZ = new DynIcon("Light", "bin", false);
+            iLightAZ.create("Grundriss", "190px", "420px", "50px", "50px");
+
             var ihuman = new DynIcon("person", "bin", false);
             ihuman.create("Grundriss", "450px", "230px", "50px", "50px");
+
+            var ihumanAZ = new DynIcon("person", "bin", false);
+            ihumanAZ.create("Grundriss", "190px", "370px", "50px", "50px");
         </script>
 
 

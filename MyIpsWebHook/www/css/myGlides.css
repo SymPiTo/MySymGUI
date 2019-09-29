@@ -126,6 +126,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuSZ,
 .MenuK,
 .MenuB,
+.MenuAZ,
 .MenuMultimedia,
 .MenuHz,
 .MenuRollo,
@@ -143,7 +144,6 @@ WebKit inertia scrolling is being added here for any present/future devices that
   -o-transition: All 0.5s ease;
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
-	
 }
 /*Entirely optional â€“ just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
 .StartScreen::-webkit-scrollbar,
@@ -186,6 +186,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuSZ::-webkit-scrollbar, 
 .MenuK::-webkit-scrollbar, 
 .MenuB::-webkit-scrollbar, 
+.MenuAZ::-webkit-scrollbar, 
 .MenuMultimedia::-webkit-scrollbar, 
 .MenuHz::-webkit-scrollbar, 
 .MenuRollo::-webkit-scrollbar, 
@@ -383,8 +384,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 
-
-
+ 
 
 .MenuWZ{
     position:relative;
@@ -454,6 +454,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     height: 95vh;
     background-color: hsl(55, 100%, 10%);
  }
+
+
 .MenuMultimedia{
     position:relative;
     top: 5vh;
@@ -461,7 +463,13 @@ WebKit inertia scrolling is being added here for any present/future devices that
     height: 95vh;
     background-color: hsl(82, 100%, 10%);
 }
- 
+.MenuAZ{
+    position:relative;
+    top: 5vh;
+    width: 0px;
+    height: 95vh;
+    background-color: hsl(55, 100%, 10%);
+ }
 .MenuHz{
     position:relative;
     top: 5vh;
@@ -486,7 +494,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     background-color: hsl(82, 100%, 10%);
 }
 
-
+ 
 .RadioStation {
 	position:absolute;
 	top:  5vh;
