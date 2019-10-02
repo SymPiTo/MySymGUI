@@ -458,7 +458,7 @@
         <script>
             var SubMenuLightAZ = new GlideButton();
             SubMenuLightAZ.create("SubMenuAZ", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
-            "SM");
+                "SM");
             var SubMenuDoorAZ = new GlideButton();
             SubMenuDoorAZ.create("SubMenuAZ", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
@@ -946,11 +946,11 @@
             Rahmen2KZ.create("MainHzKZ", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzKZHeizen = new FontCtrlButton();
             btnHzKZHeizen.create("MainHzKZ", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen", "command",
-                "send('command(Heizung,WZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+                "send('command(Heizung,KZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
             var btnHzKZAbsenken = new FontCtrlButton();
             btnHzKZAbsenken.create("MainHzKZ", "olive", "350px", "435px", "fa fa-temperature-low", "Absenken",
                 "command",
-                "send('command(Heizung,WZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
+                "send('command(Heizung,KZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
 
 
             var Rahmen4KZ = new Kachel();
@@ -3261,11 +3261,9 @@
 
 
 
-
-
-        <!-- ***********************************************************************************      -->
-        <!--  **************************** UPNP                     ****************************      -->
-        <!-- ***********************************************************************************      -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                  UPNP                                   -->
+        <!-- ----------------------------------------------------------------------- -->
         <script>
             var mainwindowUpnp = new Area();
             mainwindowUpnp.createMain("MainUpnp", "bgPurple");
@@ -3274,6 +3272,11 @@
         <script>
             var ServerImg = new ShowUrlImage();
             ServerImg.create("MainUpnp", "50px", "50px", "100px", "100px", "");
+
+            var FontBtnA = new FontButtonNew();
+            FontBtnA.create("MainUpnp", "fontbutton", "cyan", "200px", "0px", "fa fa-backward", "50px", "50px",
+                "send('command(DenonCeol,play,previous)')");
+
             var ServerBtn = new ButtonSlider();
             ServerBtn.create("MainUpnp", "200px", "50px", "150px", "50px", "purpleBtn");
 
@@ -3539,26 +3542,6 @@
             var iDisArtistWZ = new ImageDisplay();
             iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "450px", "200px", "transparent");
 
-
-
-            /*
-            var rahm = new Rahmen();
-            rahm.create("MainCeolWZ", "44vh", "3%", "70px", "527px", "bgGrey");
-
-                        var IconVarDisVolWZ = new TransVarDisplay();
-                        IconVarDisVolWZ.create("MainCeolWZ", "45vh", "0%", "lime", "28px", "Volume", "dB", );
-                        var IconVarDisSourceWZ = new TransVarDisplay();
-                        IconVarDisSourceWZ.create("MainCeolWZ", "45vh", "20%", "lime", "28px", "Source", "", );
-                        var IconVarDisServerWZ = new TransVarDisplay();
-                        IconVarDisServerWZ.create("MainCeolWZ", "45vh", "40%", "lime", "28px", "Server", "", );
-            */
-            /*
-            var rahmCD = new Rahmen();
-
-
-            rahmCD.create("MainCeolWZ", "57vh", "5px", "85px", "500px", "bgCyanLight");
-               */
-
             var RahmenA = new Kachel();
             RahmenA.create("MainCeolWZ", "300px", "20px", "450px", "95px", "transparent", "Internet Radio")
 
@@ -3574,21 +3557,6 @@
             btnAudioWZ.create("MainCeolWZ", "cyan", "335px", "325px", "fa fa-book", "Audiobook", "CtrlFunc",
                 "1on", "MainAudioBookCtrl", "120px", "50px", "black", "19px", "red");
 
-            /*
-                        var CtrlBtnIRadioWZ = new CtrlButton();
-                        CtrlBtnIRadioWZ.create("MainCeolWZ", "73vh", "15px", "ctrlbutton", "smaller", "cyanBtn", "IRadio",
-                            "CtrlFunc", "MainCeolWZCtrl", "1off");
-                    
-            var CtrlBtnCDWZ = new CtrlButton();
-            CtrlBtnCDWZ.create("MainCeolWZ", "73vh", "195px", "ctrlbutton", "smaller", "cyanBtn", "CD", "CtrlFunc",
-                "MainCDCtrl", "1on");
-            var CtrlBtnAudioWZ = new CtrlButton();
-            CtrlBtnAudioWZ.create("MainCeolWZ", "73vh", "375px", "ctrlbutton", "smaller", "cyanBtn", "AudioBook",
-                "CtrlFunc", "MainAudioBookCtrl", "1on");
-
-
-   
-*/
 
             var Progress = new analogBar();
             Progress.create("MainCeolWZ", "67vh", "20px", "cyan", "450px");

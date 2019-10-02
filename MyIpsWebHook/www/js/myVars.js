@@ -557,7 +557,7 @@
       iHzWZ.update(sym[4]);
 
       DisModeHzWZ.update(sym[26]);
-      DisTempHzWZ.update(sym[2]);
+      DisTempHzWZ.update(sym[2], 1);
       DisPosHzWZCtrl.update(sym[4]);
 
       var BatHzWZ1 = sym[29];
@@ -581,7 +581,7 @@
       HzCtrlKZ.update(sym[35], sym[34]);
 
       DisModeHzKZCtrl.update(sym[33]);
-      DisTempHzKZCtrl.update(sym[1]);
+      DisTempHzKZCtrl.update(sym[1], 1);
       DisPosHzKZCtrl.update(sym[5]);
 
       //Batteriestatus Kinderzimmer
@@ -631,7 +631,7 @@
       HzCtrlK.update(sym[43], sym[42]);
 
       DisModeHzKCtrl.update(sym[41]);
-      DisTempHzKCtrl.update(sym[3]);
+      DisTempHzKCtrl.update(sym[3], 1);
       DisPosHzKCtrl.update(sym[7]);
 
       var BatHzK1 = sym[32];
