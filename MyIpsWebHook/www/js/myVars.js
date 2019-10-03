@@ -668,6 +668,9 @@
 
     function updateValues(sym) {
 
+      /* ---------------------------------- UPNP ---------------------------------- */
+      ServerBox.update(sym[130]);
+      DeviceBox.update(sym[132]);
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
       VarDisHumidBad.update(sym[232]);

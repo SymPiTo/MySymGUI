@@ -2822,23 +2822,40 @@ class ArrayListBox {
         this.ID = "";
     }
 
-    create(ParentID, posTop, posLeft, breite, hoehe, txtColor) {
+    create(ParentID, posTop, posLeft, breite, hoehe, farbe, txtColor, title) {
+
+        var container = document.createElement("div");
+        this.ID = container;
+        container.style.flexDirection = "column";
+        container.style.position = "relative";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.className = farbe + "Light";
+        container.style.width = breite;
+        container.style.height = hoehe;
+        container.style.color = "black";
+        container.style.border = "thin solid black";
+
+        var label = document.createElement("div");
+        label.style.paddingTop = "3px";
+        label.style.height = "30px";
+        label.style.backgroundColor = "black";
+        label.style.color = txtColor;
+        label.innerHTML = title;
+        container.append(label);
+
         var arrBox = document.createElement("table");
+        arrBox.style.paddingTop = "10px";
         arrBox.width = "100%";
-        arrBox.style.position = "relative";
-        arrBox.style.top = posTop;
-        arrBox.style.left = posLeft;
-        arrBox.style.color = txtColor;
-        arrBox.style.width = breite;
-        arrBox.style.height = hoehe;
-        arrBox.style.paddingLeft = "10px";
-        arrBox.style.border = "1px solid white";
+
         this.ID = arrBox;
+        container.append(arrBox);
 
         var elem1 = document.createElement("tr");
         arrBox.append(elem1);
 
         var elem2 = document.createElement("td");
+
         elem1.append(elem2);
 
         var elem3 = document.createElement("div");
@@ -2847,7 +2864,10 @@ class ArrayListBox {
         elem2.append(elem3);
 
 
-        document.getElementById(ParentID).appendChild(arrBox);
+        document.getElementById(ParentID).appendChild(container);
+
+
+
     }
 
     update(array) {
@@ -2867,6 +2887,7 @@ class ArrayListBox {
             var elem3 = document.createElement("div");
             elem3.style.textAlign = "left";
             elem3.innerHTML = value;
+
             elem2.append(elem3);
 
             a.append(elem1);

@@ -2784,8 +2784,10 @@ h1:after {
     background: -webkit-linear-gradient(hsl(55, 100%, 75%), hsl(55, 100%, 95%), hsl(55, 100%, 75%));  
 }
 .redLight {
-    /*Gradient*/
     background: -webkit-linear-gradient(hsl(0, 100%, 75%), hsl(0, 100%, 95%), hsl(0, 100%, 75%)); /* CHROME */
+}
+.purpleLight {
+    background: -webkit-linear-gradient(hsl(300, 100%, 75%), hsl(300, 100%, 95%), hsl(300, 100%, 75%));  
 }
 
 .black {

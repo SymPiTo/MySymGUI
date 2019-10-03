@@ -2323,7 +2323,7 @@
             RezeptImg.create("MainRezepteCtrl", "5px", "2px", "150px", "200px", "");
 
             var IncredBox = new ArrayListBox();
-            IncredBox.create("MainRezepteCtrl", "170px", "2px", "250px", "400px", "white");
+            IncredBox.create("MainRezepteCtrl", "170px", "2px", "250px", "400px", "midgreen", "white", "Zutaten");
         </script>
         <!-- ***********************************************************************************   -->
         <!--  ************************          Ctrl - Rezepte Liste      ************************      -->
@@ -3270,89 +3270,90 @@
         </script>
 
         <script>
+            var RahmenA = new Kachel();
+            RahmenA.create("MainUpnp", "10px", "20px", "200px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
             ServerImg.create("MainUpnp", "50px", "50px", "100px", "100px", "");
-
-            var FontBtnA = new FontButtonNew();
-            FontBtnA.create("MainUpnp", "fontbutton", "cyan", "200px", "0px", "fa fa-backward", "50px", "50px",
-                "send('command(DenonCeol,play,previous)')");
-
             var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "200px", "50px", "150px", "50px", "purpleBtn");
+            ServerBtn.create("MainUpnp", "180px", "50px", "150px", "50px", "purple");
 
+            var RahmenB = new Kachel();
+            RahmenB.create("MainUpnp", "10px", "320px", "200px", "240px", "transparent", "Devices")
             var ClientImg = new ShowUrlImage();
             ClientImg.create("MainUpnp", "50px", "370px", "100px", "100px", "");
             var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "200px", "350px", "150px", "50px", "purpleBtn");
+            ClientBtn.create("MainUpnp", "180px", "350px", "150px", "50px", "purple");
 
 
 
-            var rahm2 = new Rahmen();
-            rahm2.create("MainUpnp", "52vh", "5px", "85px", "552px", "bgPurpleLight");
+            var RahmenC = new Kachel();
+            RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Selction - PlayList")
             var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "normal", "purpleBtn", "Discover",
+            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "normal", "purple", "Discover",
                 "ctrlWindow", "MainUpnpDiscoverCtrl", "");
             var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp", "54vh", "195px", "ctrlbutton", "normal", "purpleBtn", "Browse",
+            CtrlBtnupnp2.create("MainUpnp", "54vh", "195px", "ctrlbutton", "normal", "purple", "Browse",
                 "ctrlWindow", "MainUpnpBrowseCtrl", "");
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "54vh", "375px", "ctrlbutton", "normal", "purpleBtn", "AudioBook",
+            CtrlBtnupnp3.create("MainUpnp", "54vh", "375px", "ctrlbutton", "normal", "purple", "AudioBook",
                 "ctrlWindow", "MainAudioBookCtrl", "");
 
 
-            var rahmCtrl = new Rahmen();
-            rahmCtrl.create("MainUpnp", "69vh", "5px", "140px", "552px", "bgPurpleLight");
+
 
             var FontBtnPrev = new FontButtonNew();
-            FontBtnPrev.create("MainUpnp", "fontbutton", "purpleBtn", "71vh", "4%", "fa fa-backward", "60px", "60px",
+            FontBtnPrev.create("MainUpnp", "fontbutton", "purple", "71vh", "4%", "fa fa-backward", "60px", "60px",
                 "send('command(DenonCeol,play,previous)')");
             var FontBtnPause = new FontButtonNew();
-            FontBtnPause.create("MainUpnp", "fontbutton", "purpleBtn", "71vh", "24%", "fa fa-pause", "60px", "60px",
+            FontBtnPause.create("MainUpnp", "fontbutton", "purple", "71vh", "24%", "fa fa-pause", "60px", "60px",
                 "send('command(DenonCeol,pause,all)')");
             var FontBtnPlay = new FontButtonNew();
-            FontBtnPlay.create("MainUpnp", "fontbutton", "purpleBtn", "71vh", "44%", "fa fa-play", "60px", "60px",
+            FontBtnPlay.create("MainUpnp", "fontbutton", "purple", "71vh", "44%", "fa fa-play", "60px", "60px",
                 "send('command(DenonCeol,play,first)')");
             var FontBtnStop = new FontButtonNew();
-            FontBtnStop.create("MainUpnp", "fontbutton", "purpleBtn", "71vh", "64%", "fa fa-stop", "60px", "60px",
+            FontBtnStop.create("MainUpnp", "fontbutton", "purple", "71vh", "64%", "fa fa-stop", "60px", "60px",
                 "send('command(DenonCeol,stop,all)')");
             var FontBtnNext = new FontButtonNew();
-            FontBtnNext.create("MainUpnp", "fontbutton", "purpleBtn", "71vh", "84%", "fa fa-forward", "60px", "60px",
+            FontBtnNext.create("MainUpnp", "fontbutton", "purple", "71vh", "84%", "fa fa-forward", "60px", "60px",
                 "send('command(DenonCeol,play,next)')");
 
 
             var FontBtnVolDwn = new FontButtonNew();
-            FontBtnVolDwn.create("MainUpnp", "fontbutton", "purpleBtn", "83vh", "5%", "fa fa-volume-down", "100px",
+            FontBtnVolDwn.create("MainUpnp", "fontbutton", "purple", "83vh", "5%", "fa fa-volume-down", "100px",
                 "50px",
                 "send('command(upnp,vol,dec)')");
             var FontBtnMute = new FontButtonNew();
-            FontBtnMute.create("MainUpnp", "fontbutton", "purpleBtn", "83vh", "25%", "fa fa-volume-off", "100px",
+            FontBtnMute.create("MainUpnp", "fontbutton", "purple", "83vh", "25%", "fa fa-volume-off", "100px",
                 "50px",
                 "send('command(upnp,mute,toggle)')");
             var FontBtnVolUp = new FontButtonNew();
-            FontBtnVolUp.create("MainUpnp", "fontbutton", "purpleBtn", "83vh", "45%", "fa fa-volume-up", "100px",
+            FontBtnVolUp.create("MainUpnp", "fontbutton", "purple", "83vh", "45%", "fa fa-volume-up", "100px",
                 "50px",
                 "send('command(upnp,vol,inc)')");
             var FontBtnPower = new FontButtonNew();
-            FontBtnPower.create("MainUpnp", "fontbutton", "purpleBtn", "83vh", "75%", "fa fa-power-off", "100px",
+            FontBtnPower.create("MainUpnp", "fontbutton", "purple", "83vh", "75%", "fa fa-power-off", "100px",
                 "50px",
                 "send('command(upnp,power,toggle)')");
         </script>
 
-        <!-- ***********************************************************************************   -->
-        <!--  ************************       Discover   CTRL - UPNP    ******************************      -->
-        <!-- ***********************************************************************************   -->
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                         Discover   CTRL - UPNP                          -->
+        <!-- ----------------------------------------------------------------------- -->
+
         <script>
             var CtrlwindowDiscoverUpnp = new Area();
             CtrlwindowDiscoverUpnp.createCtrl("MainUpnpDiscoverCtrl", "bgPurple");
         </script>
         <script>
             var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpDiscoverCtrl", "5px", "5px", "200px", "190px", "white");
+            ServerBox.create("MainUpnpDiscoverCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
             var btnSearchServer = new CtrlButton();
             btnSearchServer.create("MainUpnpDiscoverCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Server", "command", "", "send('command(upnp,discover,server)')");
             var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpDiscoverCtrl", "100px", "5px", "200px", "190px", "white");
+            DeviceBox.create("MainUpnpDiscoverCtrl", "100px", "30px", "150px", "190px", "purple", "white",
+                "Deviceliste");
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpDiscoverCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Devices", "command", "", "send('command(upnp,discover,client)')");
