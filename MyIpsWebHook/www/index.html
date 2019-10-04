@@ -863,7 +863,7 @@
         </script>
 
 
-        <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
+        <!-- ------------------ Ctrl Area: Wohnzimmer - Heizung ------------------ -->
         <!--	        id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"                   -->
         <script>
             var CtrlwindowHzWz = new Area();
@@ -871,23 +871,25 @@
         </script>
 
         <script>
-            addStatus("MainHeizungWZCtrl", "BatHzWZ1", "cyan", "5px", "30px", "Battery");
-
             var DisModeHzWZ = new StateDisplay();
-            DisModeHzWZ.create("MainHeizungWZCtrl", "cyanLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+            DisModeHzWZ.create("MainHeizungWZCtrl", "cyanLight", "", "10px", "30px", "size07", "30px", "Mode", "Auto",
                 "Man",
                 "Urlaub", "Party", "");
             var DisTempHzWZ = new StateDisplay();
-            DisTempHzWZ.create("MainHeizungWZCtrl", "cyanLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+            DisTempHzWZ.create("MainHeizungWZCtrl", "cyanLight", "°C", "85px", "30px", "size07", "30px", "Temperatur",
                 "Number",
                 "", "", "", "");
             var DisPosHzWZCtrl = new StateDisplay();
-            DisPosHzWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%", "200px", "30px", "size07", "30px", "Position",
+            DisPosHzWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%", "160px", "30px", "size07", "30px", "Position",
                 "Number",
                 "", "", "", "");
+            var DisHumidWZCtrl = new StateDisplay();
+            DisHumidWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%", "240px", "30px", "size07", "30px", "Humidity",
+                "Number", "",
+                "", "", "");
 
             var HzCtrlWZ = new HeatCtrl();
-            HzCtrlWZ.create("MainHeizungWZCtrl", "325px", "30px", "cyan", "Heat-Control", "sollTempWZ");
+            HzCtrlWZ.create("MainHeizungWZCtrl", "335px", "30px", "cyan", "Heat-Control", "sollTempWZ");
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -958,32 +960,32 @@
             btnHzKZAuf.create("MainHzKZ", "500px", "410px", "ctrlbutton", "smaller", "olive", "Auf", "command", "",
                 "{send('command(Heizung,KZ,auf)'); document.getElementById('AdjTempHzKZ1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Kinderzimmer ************************ -->
-
-        <!-- <Ctrl id="MainHzKZCtrl"  class="HeizungCtrlKZ"></Ctrl> -->
+        <!-- ------------------ Ctrl Area: Kinderzimmer - Heizung ------------------ -->
+        <!--                id="MainHzKZCtrl"  class="HeizungCtrlKZ"                 -->
         <script>
             var CtrlwindowHzKz = new Area();
             CtrlwindowHzKz.createCtrl("MainHzKZCtrl", "bgOlive");
         </script>
         <script>
-            addStatus("MainHzKZCtrl", "BatHzKZ1", "olive", "5px", "30px", "Battery");
-
-
             var DisModeHzKZCtrl = new StateDisplay();
-            DisModeHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+            DisModeHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "", "10px", "30px", "size07", "30px", "Mode", "Auto",
                 "Man",
                 "Urlaub", "Party", "");
             var DisTempHzKZCtrl = new StateDisplay();
-            DisTempHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+            DisTempHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "°C", "85px", "30px", "size07", "30px", "Temperatur",
                 "Number",
                 "", "", "", "");
             var DisPosHzKZCtrl = new StateDisplay();
-            DisPosHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "%", "200px", "30px", "size07", "30px", "Position",
+            DisPosHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "%", "160px", "30px", "size07", "30px", "Position",
+                "Number", "",
+                "", "", "");
+            var DisHumidKZCtrl = new StateDisplay();
+            DisHumidKZCtrl.create("MainHzKZCtrl", "oliveLight", "%", "240px", "30px", "size07", "30px", "Humidity",
                 "Number", "",
                 "", "", "");
 
             var HzCtrlKZ = new HeatCtrl();
-            HzCtrlKZ.create("MainHzKZCtrl", "325px", "30px", "olive", "Heat-Control", "sollTempKZ");
+            HzCtrlKZ.create("MainHzKZCtrl", "335px", "30px", "olive", "Heat-Control", "sollTempKZ");
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -1149,33 +1151,28 @@
             btnHzKAuf.create("MainHzK", "500px", "410px", "ctrlbutton", "smaller", "midgreen", "Auf", "command", "",
                 "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Kueche ************************  -->
-        <!-- <Ctrl  id="MainHzKCtrl"  class="HeizungCtrlK"></Ctrl> -->
-
-
+        <!-- ------------------ Ctrl Area: Küche - Heizung ------------------ -->
+        <!--              id="MainHzKCtrl"  class="HeizungCtrlK"              -->
         <script>
             var CtrlwindowHzK = new Area();
             CtrlwindowHzK.createCtrl("MainHzKCtrl", "bgMidgreen");
         </script>
         <script>
-            addStatus("MainHzKCtrl", "BatHzK1", "midgreen", "5px", "30px", "Battery");
-
-
             var DisModeHzKCtrl = new StateDisplay();
-            DisModeHzKCtrl.create("MainHzKCtrl", "midgreenLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+            DisModeHzKCtrl.create("MainHzKCtrl", "midgreenLight", "", "10px", "30px", "size07", "30px", "Mode", "Auto",
                 "Man",
                 "Urlaub", "Party", "");
             var DisTempHzKCtrl = new StateDisplay();
-            DisTempHzKCtrl.create("MainHzKCtrl", "midgreenLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+            DisTempHzKCtrl.create("MainHzKCtrl", "midgreenLight", "°C", "85px", "30px", "size07", "30px", "Temperatur",
                 "Number",
                 "", "", "", "");
             var DisPosHzKCtrl = new StateDisplay();
-            DisPosHzKCtrl.create("MainHzKCtrl", "midgreenLight", "%", "200px", "30px", "size07", "30px", "Position",
+            DisPosHzKCtrl.create("MainHzKCtrl", "midgreenLight", "%", "160px", "30px", "size07", "30px", "Position",
                 "Number", "",
                 "", "", "");
 
             var HzCtrlK = new HeatCtrl();
-            HzCtrlK.create("MainHzKCtrl", "325px", "30px", "midgreen", "Heat-Control", "sollTempK");
+            HzCtrlK.create("MainHzKCtrl", "335px", "30px", "midgreen", "Heat-Control", "sollTempK");
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
