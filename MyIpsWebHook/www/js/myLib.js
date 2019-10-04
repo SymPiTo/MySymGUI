@@ -814,6 +814,7 @@ class VarDis {
 */
 
 /* --------------------- Class Heating Ctrl -------------------------------------- */
+/* -------------------------- Version: 1.04.10.2019 ------------------------- */
 class HeatCtrl {
     constructor() {
         this.ID = "";
@@ -846,7 +847,6 @@ class HeatCtrl {
         var container = document.createElement("div");
         this.ID = container;
         container.style.flexDirection = "column";
-
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
@@ -854,7 +854,6 @@ class HeatCtrl {
         container.style.width = this.b;
         container.style.height = this.h;
         container.style.color = this.labelcolor;
-
         // Label 
         var elem1 = document.createElement("div");
         elem1.style.paddingTop = "5px";
@@ -862,7 +861,6 @@ class HeatCtrl {
         elem1.style.backgroundColor = "black";
         elem1.innerHTML = label;
         container.append(elem1)
-
         //ausstehender Soll - Einstell Wert - Soll WERT
         var elemTC = document.createElement("div");
         elemTC.style.width = this.b;
@@ -874,23 +872,22 @@ class HeatCtrl {
         elemTC.style.flexDirection = "row";
         elemTC.style.justifyContent = "space-between";
         container.append(elemTC);
-
+        //Anzeige ausstehende Soll Temperatur
         var elemTL = document.createElement("span");
         this.value1ID = elemTL;
         elemTL.innerHTML = this.leftStat + this.unit;
         elemTC.append(elemTL);
-
+        //Anzeige vorgewählter Sollwert
         var elemTM = document.createElement("span");
         elemTM.style.paddingBottom = "10%";
         elemTM.innerHTML = "22.0" + this.unit;
         elemTM.style.fontSize = "30px";
         elemTC.append(elemTM);
-
+        //Anzeige Sollwert am Regler
         var elemTR = document.createElement("span");
         this.value2ID = elemTR;
         elemTR.innerHTML = this.rightStat + this.unit;
         elemTC.append(elemTR);
-
         // + / - buttons
         var elem1 = document.createElement("div");
         elem1.style.width = this.b;
@@ -903,7 +900,7 @@ class HeatCtrl {
         elem1.style.padding = "2px";
         elem1.style.fontsize = this.fs1;
         container.append(elem1);
-
+        // Button Vorgabewert - Sollwert um 0,5 °C erhöhen
         var elem2 = document.createElement("div");
         elem2.style.width = "50%";
         elem2.style.color = this.btnTextColor;
@@ -916,8 +913,7 @@ class HeatCtrl {
             elemTM.innerHTML = solltemp + "°C";
         }
         elem1.append(elem2);
-
-
+        // Button Vorgabewert - Sollwert um 0,5 °C verringern
         var elem4 = document.createElement("div");
         elem4.style.width = "50%";
         elem4.style.flexGrow = "1";
@@ -930,7 +926,7 @@ class HeatCtrl {
             elemTM.innerHTML = solltemp + "°C";
         }
         elem1.append(elem4);
-
+        // Set Button
         var elem5 = document.createElement("div");
         elem5.style.width = this.b;
         elem5.style.height = "25%";
@@ -941,7 +937,7 @@ class HeatCtrl {
         elem5.style.position = "absolute";
         elem5.style.top = "75%";
         container.append(elem5);
-
+        // angewählten Sollwert an IPS senden
         var elem6 = document.createElement("div");
         elem6.style.flexGrow = "1";
         elem6.className = "ctrlbutton";
@@ -957,7 +953,6 @@ class HeatCtrl {
 
         document.getElementById(ParentID).appendChild(container);
     }
-
 
     update(value1, value2) {
         this.value1ID.innerHTML = value1 + this.unit;

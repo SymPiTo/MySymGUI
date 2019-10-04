@@ -550,8 +550,6 @@
       MainTempVHzWZ.update(sym[215], 1);
       MainTempRHzWZ.update(sym[216], 1);
 
-
-
       HzCtrlWZ.update(sym[28], sym[27]);
 
       iHzWZ.update(sym[4]);

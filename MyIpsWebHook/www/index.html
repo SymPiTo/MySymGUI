@@ -571,8 +571,6 @@
             document.getElementById('MenuWZOV').appendChild(img);
             img.height = 570;
             img.width = 620;
-            var HzCtrlWZ = new HeatCtrl();
-            HzCtrlWZ.create("MenuWZOV", "325px", "30px", "transparent", "Heat-Control", "sollTempWZ");
         </script>
 
         <!-- ------------------------------ Overview: Security ------------------------------- -->
@@ -866,8 +864,7 @@
 
 
         <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
-
-        <!--	//<Ctrl id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"></Ctrl> -->
+        <!--	        id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"                   -->
         <script>
             var CtrlwindowHzWz = new Area();
             CtrlwindowHzWz.createCtrl("MainHeizungWZCtrl", "bgCyan");
@@ -875,7 +872,6 @@
 
         <script>
             addStatus("MainHeizungWZCtrl", "BatHzWZ1", "cyan", "5px", "30px", "Battery");
-
 
             var DisModeHzWZ = new StateDisplay();
             DisModeHzWZ.create("MainHeizungWZCtrl", "cyanLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
@@ -1057,26 +1053,23 @@
             btnHzSZAuf.create("MainHzSZ", "500px", "410px", "ctrlbutton", "smaller", "sandy", "Auf", "command", "",
                 "{send('command(Heizung,SZ,auf)'); document.getElementById('AdjTempHzSZ1').innerHTML='30.0';}");
         </script>
-        <!-- ************************ Heizung Ctrl Schlafzimmer ************************  -->
-        <!-- <Ctrl id="MainHzSZCtrl" class="HeizungCtrlSZ">  </Ctrl>  -->
+        <!-- ------------------ Ctrl Area: Schlafzimmer - Heizung ------------------ -->
+        <!--                 id="MainHzSZCtrl" class="HeizungCtrlSZ"                 -->
         <script>
             var CtrlwindowHzSZ = new Area();
             CtrlwindowHzSZ.createCtrl("MainHzSZCtrl", "bgSandy");
         </script>
         <script>
-            addStatus("MainHzSZCtrl", "BatHzSZ1", "sandy", "5px", "30px", "Battery");
-
-
             var DisModeHzSZCtrl = new StateDisplay();
-            DisModeHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "", "50px", "30px", "size07", "30px", "Mode", "Auto",
+            DisModeHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "", "10px", "30px", "size07", "30px", "Mode", "Auto",
                 "Man",
                 "Urlaub", "Party", "");
             var DisTempHzSZCtrl = new StateDisplay();
-            DisTempHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "°C", "125px", "30px", "size07", "30px", "Temperatur",
+            DisTempHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "°C", "85px", "30px", "size07", "30px", "Temperatur",
                 "Number",
                 "", "", "", "");
             var DisPosHzSZCtrl = new StateDisplay();
-            DisPosHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "200px", "30px", "size07", "30px", "Position",
+            DisPosHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "160px", "30px", "size07", "30px", "Position",
                 "Number", "",
                 "", "", "");
 
