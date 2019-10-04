@@ -339,7 +339,7 @@
         sym[230] = ips[0].ID37348; // Tür Balkon
         sym[231] = ips[0].ID59969; // Bad Temperatur
         sym[232] = ips[0].ID14487; // Bad Humidity
-
+        sym[233] = ips[0].ID19285; // Wohnzimmer Humidity
 
 
       } catch (err) {
@@ -557,7 +557,7 @@
       DisModeHzWZ.update(sym[26]);
       DisTempHzWZ.update(sym[2], 1);
       DisPosHzWZCtrl.update(sym[4]);
-
+      DisHumidWZCtrl.update(sym[233]);
 
       //<!-- ************************ Heizung Kinderzimmer ************************  -->
 
@@ -575,7 +575,7 @@
       DisModeHzKZCtrl.update(sym[33]);
       DisTempHzKZCtrl.update(sym[1], 1);
       DisPosHzKZCtrl.update(sym[5]);
-
+      DisHumidKZCtrl.update(sym[10]);
 
       //<!-- ************************ Heizung Schlafzimmer ************************  -->
 
@@ -592,7 +592,7 @@
       DisModeHzSZCtrl.update(sym[36]);
       DisTempHzSZCtrl.update(sym[0]);
       DisPosHzSZCtrl.update(sym[6]);
-
+      DisHumidSZCtrl.update(sym[11]);
 
 
       //<!-- ************************ Heizung Kueche ************************  -->
