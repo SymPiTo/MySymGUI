@@ -1072,9 +1072,13 @@
             DisPosHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "160px", "30px", "size07", "30px", "Position",
                 "Number", "",
                 "", "", "");
+            var DisHumidSZCtrl = new StateDisplay();
+            DisHumidSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "240px", "30px", "size07", "30px", "Humidity",
+                "Number", "",
+                "", "", "");
 
             var HzCtrlSZ = new HeatCtrl();
-            HzCtrlSZ.create("MainHzSZCtrl", "325px", "30px", "sandy", "Heat-Control", "sollTempSZ");
+            HzCtrlSZ.create("MainHzSZCtrl", "335px", "30px", "sandy", "Heat-Control", "sollTempSZ");
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
