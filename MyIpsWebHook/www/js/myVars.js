@@ -558,13 +558,7 @@
       DisTempHzWZ.update(sym[2], 1);
       DisPosHzWZCtrl.update(sym[4]);
 
-      var BatHzWZ1 = sym[29];
-      if (BatHzWZ1) {
-        document.getElementById("BatHzWZ1").style.color = 'red';
 
-      } else {
-        document.getElementById("BatHzWZ1").style.color = 'lime';
-      }
       //<!-- ************************ Heizung Kinderzimmer ************************  -->
 
 
@@ -582,14 +576,7 @@
       DisTempHzKZCtrl.update(sym[1], 1);
       DisPosHzKZCtrl.update(sym[5]);
 
-      //Batteriestatus Kinderzimmer
-      var BatHzKZ1 = sym[30];
-      if (BatHzKZ1) {
-        document.getElementById("BatHzKZ1").style.color = 'red';
 
-      } else {
-        document.getElementById("BatHzKZ1").style.color = 'lime';
-      }
       //<!-- ************************ Heizung Schlafzimmer ************************  -->
 
       MainTempHzSZ.update(sym[0], 1);
@@ -607,13 +594,7 @@
       DisPosHzSZCtrl.update(sym[6]);
 
 
-      var BatHzSZ1 = sym[31];
-      if (BatHzSZ1) {
-        document.getElementById("BatHzSZ1").style.color = 'red';
 
-      } else {
-        document.getElementById("BatHzSZ1").style.color = 'lime';
-      }
       //<!-- ************************ Heizung Kueche ************************  -->
       /*
          $('TempHzK1').innerHTML =  sym[3] + '°C'  ;
@@ -632,13 +613,7 @@
       DisTempHzKCtrl.update(sym[3], 1);
       DisPosHzKCtrl.update(sym[7]);
 
-      var BatHzK1 = sym[32];
-      if (BatHzK1) {
-        document.getElementById("BatHzK1").style.color = 'red';
 
-      } else {
-        document.getElementById("BatHzK1").style.color = 'lime';
-      }
 
 
 
