@@ -188,6 +188,7 @@ function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  com
 */
 
 /* --------------------- Klasse Ctrl Button ---------------------------------------- */
+//TODO: überabeiten siehe Mob
 class CtrlButton {
     constructor() {
         this.ID = "";
@@ -513,6 +514,7 @@ class ImageDisplay {
 }
 
 /* --------------------- class Dynamic Icon ---------------------------------------- */
+/* -------------------------- Version: 1.04.10.2019 ------------------------- */
 class DynIcon {
     constructor(IBaseName, type, revers) {
         this.ID = "";
@@ -590,6 +592,7 @@ class DynIcon {
 
 
 /* --------------------- class Display status of Variable ---------------------------------------- */
+/* -------------------------- Version: 1.04.10.2019 ------------------------- */
 class StateDisplay {
     constructor() {
         this.ID = "";
@@ -814,7 +817,8 @@ class VarDis {
 */
 
 /* --------------------- Class Heating Ctrl -------------------------------------- */
-/* -------------------------- Version: 1.04.10.2019 ------------------------- */
+/* -------------------------- Version: 1.18.10.2019 ------------------------- */
+//TODO: Änderungen von MobGui übernehmen - CSS  ctrlbutton Schriftgröße buttons
 class HeatCtrl {
     constructor() {
         this.ID = "";
@@ -827,6 +831,8 @@ class HeatCtrl {
         this.unit = "°C";
         this.leftStat = "00";
         this.rightStat = "00";
+        this.SollTempWert = "22.0";
+        this.elemSollTemp = "";
 
         //optionale Parameter
         this.b = "200px";
@@ -879,8 +885,9 @@ class HeatCtrl {
         elemTC.append(elemTL);
         //Anzeige vorgewählter Sollwert
         var elemTM = document.createElement("span");
+        this.elemSollTemp = elemTM;
         elemTM.style.paddingBottom = "10%";
-        elemTM.innerHTML = "22.0" + this.unit;
+        elemTM.innerHTML = this.SollTempWert + this.unit;
         elemTM.style.fontSize = "30px";
         elemTC.append(elemTM);
         //Anzeige Sollwert am Regler
@@ -954,13 +961,15 @@ class HeatCtrl {
         document.getElementById(ParentID).appendChild(container);
     }
 
-    update(value1, value2) {
+    update(value1, value2, change = "false") {
         this.value1ID.innerHTML = value1 + this.unit;
         this.value2ID.innerHTML = value2 + this.unit;
+        if (change) {
+            this.elemSollTemp.innerHTML = value2 + this.unit;
+        }
     }
+
 }
-
-
 
 
 
@@ -1619,6 +1628,8 @@ class CDLibrary {
 
 
 /* --------------------- Class Kachel -------------------------------------- */
+/* -------------------------- Version:1.05.10.2019 -------------------------- */
+
 class Kachel {
     constructor() {
         this.ID = "";
@@ -1880,6 +1891,7 @@ class analogBar {
 
 
 /* ---------------------  Klasse FontCtrlButton   ---------------------------------------- */
+/* -------------------------- Version: 1.05.10.2019 ------------------------- */
 class FontCtrlButton {
     constructor() {
         this.ID = "";

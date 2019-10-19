@@ -884,7 +884,8 @@
                 "Number",
                 "", "", "", "");
             var DisHumidWZCtrl = new StateDisplay();
-            DisHumidWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%", "240px", "30px", "size07", "30px", "Humidity",
+            DisHumidWZCtrl.create("MainHeizungWZCtrl", "cyanLight", "%rel", "240px", "30px", "size07", "30px",
+                "Humidity",
                 "Number", "",
                 "", "", "");
 
@@ -980,7 +981,7 @@
                 "Number", "",
                 "", "", "");
             var DisHumidKZCtrl = new StateDisplay();
-            DisHumidKZCtrl.create("MainHzKZCtrl", "oliveLight", "%", "240px", "30px", "size07", "30px", "Humidity",
+            DisHumidKZCtrl.create("MainHzKZCtrl", "oliveLight", "%rel", "240px", "30px", "size07", "30px", "Humidity",
                 "Number", "",
                 "", "", "");
 
@@ -1075,7 +1076,7 @@
                 "Number", "",
                 "", "", "");
             var DisHumidSZCtrl = new StateDisplay();
-            DisHumidSZCtrl.create("MainHzSZCtrl", "sandyLight", "%", "240px", "30px", "size07", "30px", "Humidity",
+            DisHumidSZCtrl.create("MainHzSZCtrl", "sandyLight", "%rel", "240px", "30px", "size07", "30px", "Humidity",
                 "Number", "",
                 "", "", "");
 
@@ -3266,20 +3267,23 @@
 
         <script>
             var RahmenA = new Kachel();
-            RahmenA.create("MainUpnp", "10px", "20px", "200px", "240px", "transparent", "Server")
+            RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
-            ServerImg.create("MainUpnp", "50px", "50px", "100px", "100px", "");
+            ServerImg.create("MainUpnp", "50px", "60px", "100px", "100px", "");
             var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "180px", "50px", "150px", "50px", "purple");
+            ServerBtn.create("MainUpnp", "180px", "35px", "150px", "50px", "purple");
 
             var RahmenB = new Kachel();
-            RahmenB.create("MainUpnp", "10px", "320px", "200px", "240px", "transparent", "Devices")
+            RahmenB.create("MainUpnp", "10px", "360px", "180px", "240px", "transparent", "Devices")
             var ClientImg = new ShowUrlImage();
-            ClientImg.create("MainUpnp", "50px", "370px", "100px", "100px", "");
+            ClientImg.create("MainUpnp", "50px", "400px", "100px", "100px", "");
             var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "180px", "350px", "150px", "50px", "purple");
+            ClientBtn.create("MainUpnp", "180px", "375px", "150px", "50px", "purple");
 
-
+            var btnDiscover = new FontCtrlButton();
+            btnDiscover.create("MainUpnp", "purple", "180px", "220px", "fa fa-sync", "Discover", "ctrlWindow",
+                "", "MainUpnpDiscoverCtrl",
+                "120px", "50px", "white", "19px", "yellow");
 
             var RahmenC = new Kachel();
             RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Selction - PlayList")
@@ -3330,7 +3334,16 @@
                 "50px",
                 "send('command(upnp,power,toggle)')");
         </script>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                         UPNP   CTRL - UPNP                          -->
+        <!-- ----------------------------------------------------------------------- -->
 
+        <script>
+            var CtrlwindowDiscoverUpnp = new Area();
+            CtrlwindowDiscoverUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
+        </script>
+        <script>
+        </script>
 
         <!-- ----------------------------------------------------------------------- -->
         <!--                         Discover   CTRL - UPNP                          -->
@@ -3352,6 +3365,25 @@
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpDiscoverCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Devices", "command", "", "send('command(upnp,discover,client)')");
+
+            var btnSyncMusik = new FontCtrlButton();
+            btnSyncMusik.create("MainUpnpDiscoverCtrl", "purple", "600px", "30px", "fa fa-sync", "Sync Musik",
+                "command",
+                "send('command(upnp,sync,Musik)')", "",
+                "150px", "50px", "white", "19px", "yellow");
+            var btnSyncAudio = new FontCtrlButton();
+            btnSyncAudio.create("MainUpnpDiscoverCtrl", "purple", "650px", "30px", "fa fa-sync", "Sync Audio",
+                "command",
+                "send('command(upnp,sync,Audiobook)')", "",
+                "150px", "50px", "white", "19px", "yellow");
+            var btnSyncFoto = new FontCtrlButton();
+            btnSyncFoto.create("MainUpnpDiscoverCtrl", "purple", "700px", "30px", "fa fa-sync", "Sync Foto",
+                "command",
+                "send('command()')", "",
+                "150px", "50px", "white", "19px", "yellow");
+            var btnSyncVideo = new FontCtrlButton();
+            btnSyncVideo.create("MainUpnpDiscoverCtrl", "purple", "750px", "30px", "fa fa-sync", "Sync Video",
+                "command", "send('command()')", "", "150px", "50px", "white", "19px", "yellow");
         </script>
 
         <!-- ***********************************************************************************   -->
@@ -3524,11 +3556,10 @@
             </div>
         </Main>
 
-        <!-- ***********************************************************************************      -->
-        <!--  *******************  MAIN - Wohnzimmer - Anlage Denon Ceol Piccolo  **************      -->
-        <!-- ***********************************************************************************      -->
-
-        <!--  <Main id="MainCeolWZ" class="Ceol">         </Main>  -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--              MAIN - Wohnzimmer - Anlage Denon Ceol Piccolo              -->
+        <!--                id="MainCeolWZ"         class="Ceol">                    -->
+        <!-- ----------------------------------------------------------------------- -->
         <script>
             var mainwindowCeol = new Area();
             mainwindowCeol.createMain("MainCeolWZ", "bgCyan");

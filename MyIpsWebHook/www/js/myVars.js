@@ -340,6 +340,10 @@
         sym[231] = ips[0].ID59969; // Bad Temperatur
         sym[232] = ips[0].ID14487; // Bad Humidity
         sym[233] = ips[0].ID19285; // Wohnzimmer Humidity
+        sym[234] = ips[0].ID36753; // Wohnzimmer SollTempChanged
+        sym[235] = ips[0].ID50046; // Kinderzimmer SollTempChanged
+        sym[236] = ips[0].ID17734; // Küche SollTempChanged
+        sym[237] = ips[0].ID10827; // Schlafzimmer SollTempChanged
 
 
       } catch (err) {
@@ -550,7 +554,7 @@
       MainTempVHzWZ.update(sym[215], 1);
       MainTempRHzWZ.update(sym[216], 1);
 
-      HzCtrlWZ.update(sym[28], sym[27]);
+      HzCtrlWZ.update(sym[28], sym[27], sym[234]);
 
       iHzWZ.update(sym[4]);
 
@@ -570,7 +574,7 @@
 
 
       iHzKZ.update(sym[5]);
-      HzCtrlKZ.update(sym[35], sym[34]);
+      HzCtrlKZ.update(sym[35], sym[34], sym[235]);
 
       DisModeHzKZCtrl.update(sym[33]);
       DisTempHzKZCtrl.update(sym[1], 1);
@@ -587,7 +591,7 @@
 
 
       iHzSZ.update(sym[6]);
-      HzCtrlSZ.update(sym[38], sym[37]);
+      HzCtrlSZ.update(sym[38], sym[37], sym[237]);
 
       DisModeHzSZCtrl.update(sym[36]);
       DisTempHzSZCtrl.update(sym[0]);
@@ -607,7 +611,7 @@
 
 
       iHzK.update(sym[7]);
-      HzCtrlK.update(sym[43], sym[42]);
+      HzCtrlK.update(sym[43], sym[42], sym[236]);
 
       DisModeHzKCtrl.update(sym[41]);
       DisTempHzKCtrl.update(sym[3], 1);
