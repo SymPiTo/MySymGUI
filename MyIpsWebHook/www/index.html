@@ -46,8 +46,8 @@
         var initialisierung = true;
 
         function init() {
-            // var host = 'ws://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
-            var host = 'ws://192.168.178.28:9000'; // SET THIS TO YOUR SERVER
+            // var host = 'wss://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
+            var host = 'ws://torsten:sumatra@192.168.178.28:9000'; // SET THIS TO YOUR SERVER
             try {
                 socket = new WebSocket(host);
                 state('WebSocket: ' + socket.readyState);

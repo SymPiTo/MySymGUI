@@ -996,8 +996,8 @@
       DisModeRolloWZCtrl.update(sym[18]);
       DisST1RolloWZCtrl.update(sym[19]);
       DisST2RolloWZCtrl.update(sym[20]);
-
       CbSSrolloWZ.update(sym[53]);
+
       rolloCtrlB.update(sym[22], 0);
       DisModeRolloB.update(sym[21]);
       DisST1RolloB.update(sym[55]);
