@@ -603,12 +603,13 @@ class StateDisplay {
         this.state2 = "";
         this.state3 = "";
         this.bgColor = "black";
-        //Optionale Parameter
+
         this.h = "60px";
         this.b = "202px";
+        //Optionale Parameter
     }
 
-    create(ParentID, color, einheit, posTop, posLeft, size, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param) {
+    create(ParentID, color, einheit, posTop, posLeft, hoehe, breite, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param) {
         this.unit = einheit,
             this.bgColor = color;
         if (color === "") {
@@ -620,12 +621,12 @@ class StateDisplay {
         this.state3 = zus3;
         var elem1 = document.createElement("div");
         elem1.className = "anzeige";
-        elem1.classList.add(this.bgColor, size);
+        elem1.classList.add(this.bgColor);
         if (param.length > 0) {
-            this.b = param[0];
-            this.h = param[1];
-            elem1.style.width = this.b;
-            elem1.style.height = this.h;
+            // this.b = param[0];
+            //this.h = param[1];
+            //elem1.style.width = this.b;
+            //elem1.style.height = this.h;
         } else {
 
         }
@@ -634,7 +635,9 @@ class StateDisplay {
         elem1.style.position = "absolute";
         elem1.style.left = posLeft;
         elem1.style.top = posTop;
-
+        elem1.style.width = breite;
+        elem1.style.height = hoehe;
+        elem1.style.wordWrap = "break-word";
         elem1.setAttribute("onclick", command);
 
         var elem2 = document.createElement("div");
