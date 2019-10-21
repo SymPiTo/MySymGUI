@@ -344,7 +344,7 @@
         sym[235] = ips[0].ID50046; // Kinderzimmer SollTempChanged
         sym[236] = ips[0].ID17734; // Küche SollTempChanged
         sym[237] = ips[0].ID10827; // Schlafzimmer SollTempChanged
-
+        sym[238] = ips[0].ID54140; // UPNP Meldung
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -648,6 +648,8 @@
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);
       DeviceBox.update(sym[132]);
+      DisMeldung.update(sym[238]);
+
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
       VarDisHumidBad.update(sym[232]);

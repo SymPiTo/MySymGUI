@@ -3471,24 +3471,28 @@
                 "Get Devices", "command", "", "send('command(upnp,discover,client)')");
 
 
+            var DisMeldung = new StateDisplay();
+            DisMeldung.create("MainUpnpDiscoverCtrl", "purpleLight", "", "600px", "30px", "60px", "202px", "18px",
+                "Meldung",
+                "String", "", "", "", "");
 
             var btnSyncMusik = new FontCtrlButton();
-            btnSyncMusik.create("MainUpnpDiscoverCtrl", "purple", "600px", "30px", "fa fa-sync", "Sync Musik",
+            btnSyncMusik.create("MainUpnpDiscoverCtrl", "purple", "700px", "50px", "fa fa-sync", "Sync Musik",
                 "command",
                 "send('command(upnp,sync,Musik)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncAudio = new FontCtrlButton();
-            btnSyncAudio.create("MainUpnpDiscoverCtrl", "purple", "650px", "30px", "fa fa-sync", "Sync Audio",
+            btnSyncAudio.create("MainUpnpDiscoverCtrl", "purple", "750px", "50px", "fa fa-sync", "Sync Audio",
                 "command",
                 "send('command(upnp,sync,Audiobook)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncFoto = new FontCtrlButton();
-            btnSyncFoto.create("MainUpnpDiscoverCtrl", "purple", "700px", "30px", "fa fa-sync", "Sync Foto",
+            btnSyncFoto.create("MainUpnpDiscoverCtrl", "purple", "800px", "50px", "fa fa-sync", "Sync Foto",
                 "command",
                 "send('command()')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncVideo = new FontCtrlButton();
-            btnSyncVideo.create("MainUpnpDiscoverCtrl", "purple", "750px", "30px", "fa fa-sync", "Sync Video",
+            btnSyncVideo.create("MainUpnpDiscoverCtrl", "purple", "850px", "50px", "fa fa-sync", "Sync Video",
                 "command", "send('command()')", "", "150px", "50px", "white", "19px", "yellow");
         </script>
 
