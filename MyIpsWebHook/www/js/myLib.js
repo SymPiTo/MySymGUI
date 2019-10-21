@@ -1563,7 +1563,7 @@ class IconList {
                 } else if (source === "CD") {
                     var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
                 } else if (source === "AudioBook") {
-                    var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
+                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['FV'] + ")";
                 }
                 send(cmd);
             };
