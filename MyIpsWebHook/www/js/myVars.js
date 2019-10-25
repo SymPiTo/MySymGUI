@@ -644,7 +644,7 @@
 
 
     function updateValues(sym) {
-
+      uhr.startTime();
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);
       DeviceBox.update(sym[132]);

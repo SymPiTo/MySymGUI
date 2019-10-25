@@ -3653,3 +3653,68 @@ class BtnIcon {
         }
     }
 }
+
+/* --------------------- class clock ---------------------------------------- */
+class clock {
+    constructor() {
+        this.uhr = "";
+        this.datum = "";
+    }
+
+    create(ParentID, posTop, posLeft, color, fs) {
+        var container = document.createElement("div");
+        container.className = "clockdate-wrapper";
+        /*
+        container.style.backgroundColor = color;
+        container.style.padding = "25px";
+        container.style.maxWidth = "350px";
+        container.style.width = "100%";
+        container.style.textAlign = "center";
+        container.style.borderRadius = "5px";
+        container.style.margin = "0 auto";
+        container.style.marginTop = "15%";
+*/
+
+        var clock = document.createElement("div");
+        this.uhr = clock;
+        clock.idname = "clock";
+        container.append(clock);
+
+        var date = document.createElement("div");
+        this.datum = date;
+        date.idname = "date"
+        container.append(date);
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+
+
+    startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        //Add a zero in front of numbers<10
+        hr = hr;
+        min = min;
+        sec = sec;
+        this.uhr.innerHTML = hr + ":" + min;
+
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
+        this.datum.innerHTML = date;
+        /*
+        var time = setTimeout(
+            this.startTime(), 1500)
+            */
+
+    }
+
+}
