@@ -3231,7 +3231,7 @@ Input:checked + .MoveSlider:after
 #clock{
     background-color:#333;
     font-family: sans-serif;
-    font-size: 220px;
+    font-size: 20px;
     text-shadow:0px 0px 1px #fff;
     color:#fff;
 }

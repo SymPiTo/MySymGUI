@@ -3663,6 +3663,9 @@ class clock {
 
     create(ParentID, posTop, posLeft, color, fs) {
         var container = document.createElement("div");
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
         container.className = "clockdate-wrapper";
         /*
         container.style.backgroundColor = color;
