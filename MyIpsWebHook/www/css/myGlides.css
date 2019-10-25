@@ -3219,7 +3219,7 @@ Input:checked + .MoveSlider:after
 
 /* ---------------------------------- clock --------------------------------- */
 .clockdate-wrapper {
-    background-color: grey;
+    background-color: rgb(171, 199, 136);
     padding:25px;
     max-width:250px;
     width:100%;
