@@ -42,7 +42,17 @@ function goodNight() {
     //Anlage ausschalten
     send('command(DenonCeol,power,Standby)');
     //Heizung in Nacht Modus schalten
+    send('command(Heizung,WZ,absenken)');
+    send('command(Heizung,SZ,absenken)');
+    send('command(Heizung,KZ,absenken)');
+    send('command(Heizung,K,absenken)');
 
+    //Rolladen zufahren
+    send('command(Rollo,WZ,down)');
+    send('command(Rollo,SZ,down)');
+    send('command(Rollo,KZ,down)');
+    send('command(Rollo,K,down)');
+    send('command(Rollo,B,down)');
 }
 
 function Bye() {
