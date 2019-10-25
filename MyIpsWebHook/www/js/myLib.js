@@ -3661,17 +3661,17 @@ class clock {
         this.datum = "";
     }
 
-    create(ParentID, posTop, posLeft, color, fs) {
+    create(ParentID, posTop, posLeft, bgcolor, fs) {
         var container = document.createElement("div");
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
-
+        container.style.color = "white";
         container.className = "clockdate-wrapper";
         container.style.width = "250px";
         container.style.height = "110px";
         container.style.borderRadius = "10%";
-        container.style.backgroundColor = color;
+        container.style.backgroundColor = bgcolor;
         /*
                 container.style.padding = "25px";
                 container.style.maxWidth = "350px";
@@ -3686,6 +3686,7 @@ class clock {
         this.uhr = clock;
         clock.idname = "clock";
         clock.style.fontSize = "60px";
+
         container.append(clock);
 
         var date = document.createElement("div");
