@@ -3666,26 +3666,32 @@ class clock {
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
+
         container.className = "clockdate-wrapper";
-        /*
+        container.style.width = "250px";
+        container.style.height = "110px";
+        container.style.borderRadius = "10%";
         container.style.backgroundColor = color;
-        container.style.padding = "25px";
-        container.style.maxWidth = "350px";
-        container.style.width = "100%";
-        container.style.textAlign = "center";
-        container.style.borderRadius = "5px";
-        container.style.margin = "0 auto";
-        container.style.marginTop = "15%";
-*/
+        /*
+                container.style.padding = "25px";
+                container.style.maxWidth = "350px";
+                container.style.width = "100%";
+                container.style.textAlign = "center";
+                container.style.borderRadius = "5px";
+                container.style.margin = "0 auto";
+                container.style.marginTop = "15%";
+        */
 
         var clock = document.createElement("div");
         this.uhr = clock;
         clock.idname = "clock";
+        clock.style.fontSize = "60px";
         container.append(clock);
 
         var date = document.createElement("div");
         this.datum = date;
         date.idname = "date"
+        date.style.fontSize = "20px";
         container.append(date);
 
         document.getElementById(ParentID).appendChild(container);
@@ -3705,8 +3711,8 @@ class clock {
         sec = sec;
         this.uhr.innerHTML = hr + ":" + min;
 
-        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        var months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+        var days = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
         var curWeekDay = days[today.getDay()];
         var curDay = today.getDate();
         var curMonth = months[today.getMonth()];
