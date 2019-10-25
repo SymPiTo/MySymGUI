@@ -3226,7 +3226,7 @@ Input:checked + .MoveSlider:after
     text-align:center;
     border-radius:5px;
     margin:0 auto;
-    margin-top:15%;
+    
 }
 #clock{
     background-color:#333;
