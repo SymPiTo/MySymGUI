@@ -3707,9 +3707,9 @@ class clock {
         var sec = today.getSeconds();
 
         //Add a zero in front of numbers<10
-        hr = hr;
-        min = min;
-        sec = sec;
+        hr = ("00" + hr).slice(-2);
+        min = ("00" + min).slice(-2);
+        sec = ("00" + sec).slice(-2);
         this.uhr.innerHTML = hr + ":" + min;
 
         var months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
