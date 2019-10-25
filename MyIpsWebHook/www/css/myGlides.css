@@ -3219,9 +3219,9 @@ Input:checked + .MoveSlider:after
 
 /* ---------------------------------- clock --------------------------------- */
 .clockdate-wrapper {
-    background-color: white;
+    background-color: grey;
     padding:25px;
-    max-width:350px;
+    max-width:250px;
     width:100%;
     text-align:center;
     border-radius:5px;
