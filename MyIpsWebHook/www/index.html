@@ -2314,6 +2314,10 @@
         <Main id="Grundriss" class="floorplan"></Main>
 
         <script>
+            var VarDisWindowBad = new DynIcon("Fenster", "bin", false);
+            VarDisWindowBad.create("Grundriss", "0px", "40vw", "60px", "45px", "lightgreen");
+
+
             var VarDisTempBad = new VarDis();
             VarDisTempBad.create("Grundriss", "black", "125px", "40vw", "normal", "°C");
 
@@ -2332,6 +2336,7 @@
             var VarDisTempKZ_E = new VarDis();
             VarDisTempKZ_E.create("Grundriss", "black", "100px", "65vw", "normal", "°C");
 
+
             var VarDisHumidSZ_E = new VarDis();
             VarDisHumidSZ_E.create("Grundriss", "black", "70px", "9vw", "normal", "%");
 
@@ -2345,10 +2350,16 @@
             VarDisHumOutside.create("Grundriss", "black", "15vH", "80vw", "normal", "%");
 
             var VarDisMainDoor = new VarDis();
-            VarDisMainDoor.create("Grundriss", "black", "90vh", "24vw", "normal", "", "close", "open");
+            VarDisMainDoor.create("Grundriss", "black", "90vh", "23vw", "normal", "", "close", "open");
 
             var VarDisBDoor = new VarDis();
             VarDisBDoor.create("Grundriss", "black", "40vh", "78vw", "normal", "", "close", "open");
+
+            var iHeatSz = new DynIcon("heizkoerper", "bin", false);
+            iHeatSz.create("Grundriss", "175px", "50px", "80px", "50px");
+
+            var iWindowSz = new DynIcon("Fenster", "bin", false);
+            iWindowSz.create("Grundriss", "100px", "5px", "50px", "70px", "lightgreen");
 
             var iLightSz = new DynIcon("Light", "bin", false);
             iLightSz.create("Grundriss", "100px", "180px", "50px", "50px");

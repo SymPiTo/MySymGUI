@@ -529,9 +529,14 @@ class DynIcon {
         this.ImageBaseName = IBaseName;
         this.typ = type;
         this.revers = revers;
+        //optionale Parameter
+        this.bgColor = "transparent";
     }
 
-    create(ParentID, posTop, posLeft, b, h) {
+    create(ParentID, posTop, posLeft, b, h, ...param) {
+        if (param.length > 0) {
+            this.bgColor = param[0];
+        }
         var elem = document.createElement("img");
         this.ID = elem;
         elem.className = "icon";
@@ -542,6 +547,7 @@ class DynIcon {
         elem.style.top = posTop;
         elem.style.width = b;
         elem.style.height = h;
+        elem.style.backgroundColor = this.bgColor;
 
 
 
@@ -715,7 +721,6 @@ class StateDisplay {
 
 
 /* --------------------- Class VarDis ---------------------------------------- */
-
 class VarDis {
     constructor() {
         this.ID = "";

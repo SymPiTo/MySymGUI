@@ -355,6 +355,8 @@
         sym[245] = ips[0].ID42343; // Schlafzimmer Heizungs Thermostat Batterie
         sym[246] = ips[0].ID44533; // Schlafzimmer Heizungs Wand Regler Batterie
         sym[247] = ips[0].ID44533; // Wohnzimmer 6fach Licht Taster Batterie
+        sym[248] = ips[0].ID58490; // Schlafzimmer Fenster state
+        sym[249] = ips[0].ID19999; // Schlafzimmer Heizkörper state
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -599,6 +601,7 @@
       MainTempRHzSZ.update(sym[39], 1);
 
 
+      iHeatSz.update(sym[249]);
 
       iHzSZ.update(sym[6]);
       HzCtrlSZ.update(sym[38], sym[37], sym[237]);
@@ -732,8 +735,13 @@
       DiIPSL1.update(sym[189]);
       DiIPSL2.update(sym[190]);
       DiIPSL3.update(sym[191]);
+
+      /* -------------------------- Fenster Schlafzimmer -------------------------- */
+      iWindowSz.update(sym[248]);
+
       //<!-- ******************** Fenster Aktor Bad **************************  -->
       WindowBad.update(sym[185], "", "");
+      VarDisWindowBad.update(sym[185]);
 
       //<!-- ******************** HMIP Taster Bad **************************  -->
       DiIPSJ1.update(sym[184]);
