@@ -371,16 +371,24 @@ class label {
 
 
     constructor() {
-
+        this.breite = "100px";
+        this.hoehe = "50px";
     }
-    create(ParentID, posTop, posLeft, fontsize, fontcolor, text) {
+    create(ParentID, posTop, posLeft, fontsize, fontcolor, text, ...param) {
+        if (param.length > 0) {
+            this.breite = param[0];
+            this.hoehe = param[1];
+        }
         var elem = document.createElement("p");
         elem.style.color = fontcolor;
         elem.style.fontSize = fontsize;
         elem.innerHTML = text;
+        elem.style.wordWrap = "normal";
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
+        elem.style.width = this.breite;
+        elem.style.height = this.hoehe;
 
         document.getElementById(ParentID).appendChild(elem);
     }

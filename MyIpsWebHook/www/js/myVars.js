@@ -345,6 +345,16 @@
         sym[236] = ips[0].ID17734; // Küche SollTempChanged
         sym[237] = ips[0].ID10827; // Schlafzimmer SollTempChanged
         sym[238] = ips[0].ID54140; // UPNP Meldung
+        sym[239] = ips[0].ID37871; // Arbeitszimmer Präsenzmelder Batterie
+        sym[240] = ips[0].ID48751; // Bad Temt Feuchte Sensor - Regler Batterie
+        sym[241] = ips[0].ID10829; // Diele Lichtschalter Batterie
+        sym[242] = ips[0].ID41083; // HaustürKontakt Batterie
+        sym[243] = ips[0].ID47298; // Schlafzimmer FensterKontakt Batterie
+
+        sym[244] = ips[0].ID55813; // Schlafzimmer Temp DiffSensor Batterie
+        sym[245] = ips[0].ID42343; // Schlafzimmer Heizungs Thermostat Batterie
+        sym[246] = ips[0].ID44533; // Schlafzimmer Heizungs Wand Regler Batterie
+        sym[247] = ips[0].ID44533; // Wohnzimmer 6fach Licht Taster Batterie
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -966,12 +976,23 @@
       iBat05.update(sym[63]);
       iBat06.update(sym[30]);
       iBat07.update(sym[64]);
+      iBat08.update(sym[239]);
+      iBat09.update(sym[240]);
+
       iBat11.update(sym[32]);
       iBat12.update(sym[65]);
       iBat13.update(sym[31]);
       iBat14.update(sym[66]);
       iBat15.update(sym[29]);
       iBat16.update(sym[71]);
+      iBat17.update(sym[241]);
+      iBat18.update(sym[242]);
+      iBat19.update(sym[243]);
+
+      iBat20.update(sym[244]);
+      iBat21.update(sym[245]);
+      iBat22.update(sym[246]);
+      iBat23.update(sym[247]);
 
       BatDis.update(sym[44]);
 
