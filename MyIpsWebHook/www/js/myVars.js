@@ -585,8 +585,8 @@
 
       MainTempHzSZ.update(sym[0], 1);
       MainPosHzSZ.update(sym[6], 0);
-      MainTempVHzSZ.update(sym[39], 1);
-      MainTempRHzSZ.update(sym[40], 1);
+      MainTempVHzSZ.update(sym[40], 1);
+      MainTempRHzSZ.update(sym[39], 1);
 
 
 
