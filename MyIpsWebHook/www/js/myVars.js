@@ -61,13 +61,13 @@
     function checkUsedVars(ips) {
       var sym = [];
       try {
-        sym[0] = ips[0].ID23116; //Temperatur SZ
+        sym[0] = ips[0].ID15922; //Temperatur SZ (HM)
         sym[1] = ips[0].ID37045; //Temperatur KZ
         sym[2] = ips[0].ID51079; //Temperatur WZ
         sym[3] = ips[0].ID54070; //Temperatur K
         sym[4] = ips[0].ID18059; //Position HZ WZ
         sym[5] = ips[0].ID49335; //Position HZ KZ
-        sym[6] = ips[0].ID36448; //Position HZ SZ 
+        sym[6] = ips[0].ID37431; //Position HZ SZ (HM)
         sym[7] = ips[0].ID51619; //Position HZ K   
         sym[8] = ips[0].ID36168; // Diele Präsenzmelder
         sym[9] = ips[0].ID22196; // Diele Haustür   
@@ -100,8 +100,8 @@
         sym[33] = ips[0].ID34102; //Soll Modus Hz KZ
         sym[34] = ips[0].ID36377; //Soll Temp Hz KZ 
         sym[35] = ips[0].ID38441; //Soll Temp Ausstehend Hz KZ
-        sym[36] = ips[0].ID31202; //Soll Modus Hz SZ
-        sym[37] = ips[0].ID17998; //Soll Temp Hz SZ 
+        sym[36] = ips[0].ID47734; //Soll Modus Hz SZ (HM)
+        sym[37] = ips[0].ID55889; //Soll Temp Hz SZ  (HM)
         sym[38] = ips[0].ID51755; //Soll Temp Ausstehend Hz SZ
         sym[39] = ips[0].ID26565; //Temp Vor Hz SZ
         sym[40] = ips[0].ID32007; //Temp Rueck Hz SZ  
