@@ -607,7 +607,7 @@
       HzCtrlSZ.update(sym[38], sym[37], sym[237]);
 
       DisModeHzSZCtrl.update(sym[36]);
-      DisTempHzSZCtrl.update(sym[0]);
+      DisTempHzSZCtrl.update(sym[0], 1);
       DisPosHzSZCtrl.update(sym[6]);
       DisHumidSZCtrl.update(sym[11]);
 
