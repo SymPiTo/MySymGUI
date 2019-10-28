@@ -67,7 +67,7 @@
         sym[3] = ips[0].ID54070; //Temperatur K
         sym[4] = ips[0].ID18059; //Position HZ WZ
         sym[5] = ips[0].ID49335; //Position HZ KZ
-        sym[6] = ips[0].ID37431; //Position HZ SZ (HM)
+        sym[6] = ips[0].ID37431 * 100; //Position HZ SZ (HM)
         sym[7] = ips[0].ID51619; //Position HZ K   
         sym[8] = ips[0].ID36168; // Diele Präsenzmelder
         sym[9] = ips[0].ID22196; // Diele Haustür   
