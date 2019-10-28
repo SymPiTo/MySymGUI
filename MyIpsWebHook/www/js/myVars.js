@@ -101,8 +101,8 @@
         sym[34] = ips[0].ID36377; //Soll Temp Hz KZ 
         sym[35] = ips[0].ID38441; //Soll Temp Ausstehend Hz KZ
         sym[36] = ips[0].ID47734; //Soll Modus Hz SZ (HM)
-        sym[37] = ips[0].ID55889; //Soll Temp Hz SZ  (HM)
-        sym[38] = ips[0].ID51755; //Soll Temp Ausstehend Hz SZ
+        sym[37] = ips[0].ID36544; //Soll Temp Hz SZ  (HM)
+        sym[38] = ips[0].ID55889; //Soll Temp Ausstehend Hz SZ (HM)
         sym[39] = ips[0].ID26565; //Temp Vor Hz SZ
         sym[40] = ips[0].ID32007; //Temp Rueck Hz SZ  
         sym[41] = ips[0].ID39562; //Soll Modus Hz K
