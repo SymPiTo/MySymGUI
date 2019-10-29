@@ -95,7 +95,7 @@
         sym[28] = ips[0].ID27789; //Soll Temp Ausstehend Hz WZ
         sym[29] = ips[0].ID23472; //Bat Hz WZ
         sym[30] = ips[0].ID52085; //Bat Hz KZ
-        sym[31] = ips[0].ID57118; //Bat Hz SZ
+        sym[31] = ips[0].ID42343; //Bat Hz Aktor SZ
         sym[32] = ips[0].ID22083; //Bat Hz K
         sym[33] = ips[0].ID34102; //Soll Modus Hz KZ
         sym[34] = ips[0].ID36377; //Soll Temp Hz KZ 
@@ -550,7 +550,7 @@
       VarDisTempSZ_E.update(sym[0], 1);
       VarDisTempKZ_E.update(sym[1], 1);
 
-      //<!-- Temperatur Glide Floorplan  -->
+      iHeatSz.update(sym[249]);
 
 
 
