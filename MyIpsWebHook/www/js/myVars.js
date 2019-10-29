@@ -550,8 +550,12 @@
       VarDisTempSZ_E.update(sym[0], 1);
       VarDisTempKZ_E.update(sym[1], 1);
 
-      iHeatSz.update(sym[249]);
 
+
+      iHeatSz.update(sym[249]);
+      iHeatWz.update(sym[4]);
+      iHeatKz.update(sym[5]);
+      iHeatK.update(sym[7]);
 
 
       //<!-- Temperatur Werte Glide Button  -->
@@ -601,7 +605,6 @@
       MainTempRHzSZ.update(sym[39], 1);
 
 
-      iHeatSz.update(sym[249]);
 
       iHzSZ.update(sym[6]);
       HzCtrlSZ.update(sym[38], sym[37], sym[237]);
