@@ -343,7 +343,7 @@
         sym[234] = ips[0].ID36753; // Wohnzimmer SollTempChanged
         sym[235] = ips[0].ID50046; // Kinderzimmer SollTempChanged
         sym[236] = ips[0].ID17734; // Küche SollTempChanged
-        sym[237] = ips[0].ID10827; // Schlafzimmer SollTempChanged
+        sym[237] = ips[0].ID57325; // Schlafzimmer SollTempChanged
         sym[238] = ips[0].ID54140; // UPNP Meldung
         sym[239] = ips[0].ID37871; // Arbeitszimmer Präsenzmelder Batterie
         sym[240] = ips[0].ID48751; // Bad Temt Feuchte Sensor - Regler Batterie
