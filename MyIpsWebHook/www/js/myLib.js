@@ -3793,7 +3793,7 @@ class DynIconList {
             }
 
             elem.className = "iconTV";
-            elem.id = source + item["No"];
+            elem.id = source + item["no"];
             elem.style.padding = "2px";
             if (source === "TV") {
                 elem.src = "images/Sender/" + icon;
@@ -3805,6 +3805,7 @@ class DynIconList {
                 elem.src = icon;
             }
             elem.onclick = function () {
+                var test = SourceList;
                 var index = SourceList.findIndex((item) => item.selected === true);
                 if (index !== -1) {
                     SourceList[index]['selected'] = false;
