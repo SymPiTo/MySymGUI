@@ -3823,7 +3823,7 @@ class DynIconList {
                 } else if (source === "CD") {
                     var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
                 } else if (source === "Audio") {
-                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['FV'] + ")";
+                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
                 send(cmd);
             };
