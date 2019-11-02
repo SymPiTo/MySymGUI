@@ -3741,3 +3741,95 @@ class clock {
     }
 
 }
+
+/* --------------------- Klasse IconSelectList ---------------------------------------- */
+class DynIconList {
+    constructor() {
+
+    }
+
+    create(ParentID, source) {
+
+        // Liste einlesen
+        var Liste = new data();
+        switch (source) {
+            case "CD":
+                var SourceList = Liste.getCDLib();
+                break;
+            case "TV":
+                var SourceList = Liste.getTVchannels();
+                break;
+            case "IRadio":
+                var SourceList = Liste.getIRadiochannels();
+                break;
+            case "Audio":
+
+
+                var SourceListJson = Liste.getAudiobookLib();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
+                break;
+            default:
+        }
+
+        SourceList.forEach(function (item) {
+            var elem = document.createElement("img");
+
+            switch (source) {
+                case "TV":
+                    var icon = item["icon"];
+                    break;
+                case "IRadio":
+                    var icon = item["icon"];
+                    break;
+                case "CD":
+                    var icon = item["icon"];
+                    break;
+                case "Audio":
+                    var icon = item["icon"];
+                    break
+                default:
+            }
+
+            elem.className = "iconTV";
+            elem.id = source + item["No"];
+            elem.style.padding = "2px";
+            if (source === "TV") {
+                elem.src = "images/Sender/" + icon;
+            } else if (source === "IRadio") {
+                elem.src = "images/RadioStation/" + icon;
+            } else if (source === "CD") {
+                elem.src = "CDs/" + icon;
+            } else if (source === "Audio") {
+                elem.src = icon;
+            }
+            elem.onclick = function () {
+                var index = SourceList.findIndex((item) => item.selected === true);
+                if (index !== -1) {
+                    SourceList[index]['selected'] = false;
+                    var ObjID = source + index;
+                    var elem0 = document.getElementById(ObjID);
+                    elem0.classList.add("iconTV");
+                    elem0.classList.remove("iconTVToggle");
+                }
+                elem.classList.add("iconTVToggle");
+                elem.classList.remove("iconTV");
+                item['selected'] = true;
+                if (source === "TV") {
+                    var cmd = "command(TV,Channel," + item['Sender'] + ")";
+                } else if (source === "IRadio") {
+                    var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
+                } else if (source === "CD") {
+                    var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
+                } else if (source === "Audio") {
+                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['FV'] + ")";
+                }
+                send(cmd);
+            };
+
+            document.getElementById(ParentID).appendChild(elem);
+        });
+
+    }
+}
