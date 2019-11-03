@@ -3556,6 +3556,53 @@ class MoveSwitch {
 }
 
 /* --------------------- Klasse ButtonSlider -------------------------------------- */
+class ButtonDropDown {
+    constructor() {
+        this.TagArray = [];
+        this.contID = "";
+        this.noArray = 0;
+    }
+
+    create(ParentID, posTop, posLeft, breite, hoehe, farbe) {
+        var container = document.createElement("div");
+
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.style.height = hoehe;
+        container.style.width = breite;
+        container.style.backgroundColor = "grey";
+        container.className = "select-wrapper fa fa-angle-down";
+
+        var cont = document.createElement("select");
+        container.appendChild(cont);
+        this.contID = cont;
+
+
+
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+    init(NameArray, cmd) {
+        var x = this.contID;
+        this.TagArray = NameArray;
+        this.noArray = this.TagArray.length;
+        this.TagArray.forEach(function (item, i) {
+            var elem = document.createElement("option");
+
+            elem.innerHTML = item;
+
+            x.appendChild(elem);
+        })
+    }
+
+    update(value) {
+
+    }
+}
+
+/* --------------------- Klasse ButtonSlider -------------------------------------- */
 class ButtonSlider {
     constructor() {
         this.TagArray = [];
