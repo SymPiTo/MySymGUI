@@ -3189,25 +3189,36 @@ Input:checked + .MoveSlider:after
 }
 
 
-
+/* -------- gallery Slider --------- */
+.gallery {
+    width: 650px;
+    display: flex;
+    margin: 2em auto;
+    padding: 0 1em;
+    background: #04191b;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; /* Horizontal scrollen und Snap Points streng einhalten */
+  }
+  
+  img {
+    /*margin: 2em 1em; */
+    scroll-snap-align: center; /* Die Mitte eines Bildes ist der Snap Point */
+  }
 
 /* -------- Button Slider --------- */
 .Btnslider {
-  /*width: 150px;
-  height: 50px; */
+ 
   font-size: 24px;
   display: flex;
+  
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-   scroll-snap-type: x mandatory;  
+   scroll-snap-type: x mandatory;  /* horizontal  Scrollen und Snap Points streng einhalten */
    scroll-behavior: smooth;
 
 }
 .Btnslider::-webkit-scrollbar { 
-   display: display-outside;
-   
-     
-  width: 50px;
+   display: none; 
    }
 .Btnslide {
   width: 150px;
@@ -3216,8 +3227,10 @@ Input:checked + .MoveSlider:after
   line-height: 50px;
 }
 .Btnslider > div {
-  scroll-snap-align: start;
+  scroll-snap-align: start; /* An der Oberkante jeder Sektion soll gestoppt werden */
 }
+
+
 /* -------- End --------- */
 
 /* ---------------------------------- clock --------------------------------- */
