@@ -841,7 +841,10 @@
       DeviceBox.update(sym[132]);
       ServerImg.update(sym[133]);
       ClientImg.update(sym[134]);
+      //<!-- ******************** upnp   **************************  -->
+      ClientBtn.update(sym[132]);
       ServerBtn.update(sym[135]);
+
 
       //<!-- ******************** Web Socket Server   **************************  -->
       DisWSSCL1.update(sym[125]);
