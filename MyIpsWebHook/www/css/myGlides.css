@@ -3207,10 +3207,12 @@ Input:checked + .MoveSlider:after
    display: none; 
    }
 .Btnslide {
-  width: 150px;
+    margin: 5px;
+  width: 140px;
   flex-shrink: 0;
-  height: 100%;
-  line-height: 50px;
+  height: 80%;
+  line-height: 40px;
+  background-color: greenyellow;
 }
 .Btnslider > div {
   scroll-snap-align: start; /* An der Oberkante jeder Sektion soll gestoppt werden */

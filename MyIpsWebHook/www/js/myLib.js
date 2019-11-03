@@ -3561,6 +3561,7 @@ class ButtonSlider {
         this.TagArray = [];
         this.BtnID = "";
         this.containerID = "";
+        this.cont = "";
         this.noArray = 0;
     }
 
@@ -3575,17 +3576,12 @@ class ButtonSlider {
         container.className = "Btnslider";
         container.classList.add(farbe);
         this.containerID = container;
-        var elem1 = document.createElement("div");
-        elem1.className = "Btnslide";
-        elem1.innerHTML = "empty1";
-        this.BtnID = elem1;
-        container.append(elem1)
+
         document.getElementById(ParentID).appendChild(container);
     }
 
     init(NameArray, cmd) {
-        var content = document.createElement("div");
-        content.className = "Btnslider";
+        var x = this.containerID;
         this.TagArray = NameArray;
         this.noArray = this.TagArray.length;
         this.TagArray.forEach(function (item, i) {
@@ -3595,17 +3591,18 @@ class ButtonSlider {
             elem.onclick = function () {
                 send('command(upnp,' + cmd + ',' + i + ')');
             }
-            content.append(elem);
+            x.appendChild(elem);
         })
-        this.BtnID.parentNode.replaceChild(content, this.BtnID);
+
     }
 
 
     update(value) {
-        var x = this.containerID.scrollWidth;
-        var xscale = x / this.noArray;
+        var x = this.containerID;
+        var xscale = x.scrollWidth / this.noArray;
         var xpos = value * xscale;
-        this.BtnID.scrollLeft = xpos;
+        x.scrollLeft = xpos;
+
     }
 }
 
