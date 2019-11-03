@@ -3189,21 +3189,7 @@ Input:checked + .MoveSlider:after
 }
 
 
-/* -------- gallery Slider --------- */
-.gallery {
-    width: 650px;
-    display: flex;
-    margin: 2em auto;
-    padding: 0 1em;
-    background: #04191b;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory; /* Horizontal scrollen und Snap Points streng einhalten */
-  }
-  
-  img {
-    /*margin: 2em 1em; */
-    scroll-snap-align: center; /* Die Mitte eines Bildes ist der Snap Point */
-  }
+ 
 
 /* -------- Button Slider --------- */
 .Btnslider {

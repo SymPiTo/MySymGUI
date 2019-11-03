@@ -3563,7 +3563,7 @@ class ButtonSlider {
         this.containerID = "";
         this.noArray = 0;
     }
-    /*
+
     create(ParentID, posTop, posLeft, breite, hoehe, farbe) {
         var container = document.createElement("div");
         container.id = "btnSlideCont";
@@ -3582,43 +3582,7 @@ class ButtonSlider {
         container.append(elem1)
         document.getElementById(ParentID).appendChild(container);
     }
-*/
-    create(ParentID, posTop, posLeft, breite, hoehe, farbe) {
-        var container = document.createElement("div");
-        container.id = "btnSlideCont";
-        container.style.position = "absolute";
-        container.style.left = posLeft;
-        container.style.top = posTop;
-        container.style.width = breite;
-        container.style.height = hoehe;
-        container.className = "gallery";
-        container.classList.add("img");
 
-        this.containerID = container;
-        var elem1 = document.createElement("img");
-
-        elem1.src = "images/_GuestroomBW.jpg";
-
-        container.append(elem1)
-
-        var elem2 = document.createElement("img");
-
-        elem2.src = "images/_GuestroomBW.jpg";
-
-        container.append(elem2)
-
-        var elem3 = document.createElement("img");
-
-        elem3.src = "images/_GuestroomBW.jpg";
-
-
-        container.append(elem3)
-        document.getElementById(ParentID).appendChild(container);
-    }
-    init(NameArray, cmd) {
-
-    }
-    /*
     init(NameArray, cmd) {
         var content = document.createElement("div");
         content.className = "Btnslider";
@@ -3635,7 +3599,7 @@ class ButtonSlider {
         })
         this.BtnID.parentNode.replaceChild(content, this.BtnID);
     }
-    */
+
 
     update(value) {
         var x = this.containerID.scrollWidth;
