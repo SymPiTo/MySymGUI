@@ -364,7 +364,8 @@
         sym[253] = ips[0].ID17831; // upnp imageURL
         sym[254] = ips[0].ID28233; // upnp Title
         sym[255] = ips[0].ID38745; // upnp Track Number
-
+        sym[256] = ips[0].ID46310; // upnp Player
+        sym[257] = ips[0].ID39621; // upnp Volume
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -386,6 +387,7 @@
     function setup(sym) {
       ServerBtn.init(sym[130], "setServer");
       ClientBtn.init(sym[132], "setClient");
+      Player.init(sym[132], "setClient");
       return (initialisierung = false);
     }
 
@@ -679,6 +681,8 @@
 
       DiplayAudio.update(sym[253], sym[251], sym[252], sym[254], sym[250]);
       Track.update("Track: " + sym[255]);
+      upnpVol.update(sym[257]);
+      upnpSource.update(sym[256]);
 
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
@@ -857,6 +861,7 @@
       ClientImg.update(sym[134]);
       //<!-- ******************** upnp   **************************  -->
       ClientBtn.update(sym[132]);
+      Player.update(sym[132]);
       ServerBtn.update(sym[135]);
 
 
