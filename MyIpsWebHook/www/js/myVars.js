@@ -366,6 +366,8 @@
         sym[255] = ips[0].ID38745; // upnp Track Number
         sym[256] = ips[0].ID46310; // upnp Player
         sym[257] = ips[0].ID39621; // upnp Volume
+        sym[258] = ips[0].ID12964; // upnp Client Key
+
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -861,7 +863,7 @@
       ClientImg.update(sym[134]);
       //<!-- ******************** upnp   **************************  -->
       ClientBtn.update(sym[132]);
-      Player.update(sym[132]);
+      Player.update(sym[258]);
       ServerBtn.update(sym[135]);
 
 
