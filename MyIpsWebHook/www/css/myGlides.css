@@ -2897,7 +2897,10 @@ h1:after {
 
 
 
+.DisplayBlue {
+    background: -webkit-linear-gradient(hsl(211, 27%, 18%), hsl(211, 27%, 35%), hsl(211, 27%, 55%), hsl(211, 27%, 65%), hsl(211, 27%, 55%), hsl(211, 27%, 35%), hsl(211, 27%, 15%)); /* CHROME */
 
+}
 
 
 

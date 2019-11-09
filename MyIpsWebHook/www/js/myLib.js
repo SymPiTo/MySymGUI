@@ -434,16 +434,16 @@ class Rahmen {
 }
 
 /* --------------------- class Dynamic ImageDisplay ---------------------------------------- */
-class ImageDisplay {
+class MediaDisplay {
 
 
     constructor() {
         this.ID = "";
         this.imgID = "";
-        this.elemA = "";
-        this.elemB = "";
-        this.elemC = "";
-
+        this.AlbumObj = "";
+        this.ArtistObj = "";
+        this.TtileObj = "";
+        this.CreatorObj = "";
         this.b = "";
         this.h = "";
         //optionale Parameter
@@ -483,40 +483,52 @@ class ImageDisplay {
 
         elem.append(elem2);
 
-        var elem3 = document.createElement("div");
-        elem3.innerHTML = "Sender:";
-        this.elemA = elem3;
-        elem3.style.marginBottom = "15px";
-        elem3.style.fontSize = "28px"
-        elem3.style.color = "lime";
-        var elem4 = document.createElement("div");
+        var Album = document.createElement("div");
+        Album.innerHTML = "- - -:";
+        this.AlbumObj = Album;
+        Album.style.marginBottom = "15px";
+        Album.style.fontSize = "1.4rem";
+        Album.style.color = "lime";
 
-        elem4.innerHTML = "Artist: ";
+        var Artist = document.createElement("div");
+        Artist.innerHTML = "Artist: ";
+        var ArtistA = document.createElement("div");
+        this.ArtistObj = ArtistA;
+        ArtistA.innerHTML = "- - -";
+        ArtistA.style.marginBottom = "15px";
+        ArtistA.style.color = "yellow";
 
-        var elem4a = document.createElement("div");
-        this.elemB = elem4a;
-        elem4a.innerHTML = "";
-        elem4a.style.marginBottom = "15px";
-        elem4a.style.color = "yellow";
-        var elem5 = document.createElement("div");
-        elem5.innerHTML = "Song:";
-        var elem5a = document.createElement("div");
-        this.elemC = elem5a;
-        elem5a.innerHTML = "";
-        elem5a.style.color = "yellow";
-        elem2.append(elem3);
-        elem2.append(elem4);
-        elem2.append(elem4a);
-        elem2.append(elem5);
-        elem2.append(elem5a);
+        var Creator = document.createElement("div");
+        Creator.innerHTML = "Creator:";
+        var CreatorA = document.createElement("div");
+        this.CreatorObj = CreatorA;
+        CreatorA.innerHTML = "- - -";
+        CreatorA.style.color = "yellow";
+
+        var Title = document.createElement("div");
+        Title.innerHTML = "Title:";
+        var TitleA = document.createElement("div");
+        this.TitleObj = TitleA;
+        TitleA.innerHTML = "- - -";
+        TitleA.style.color = "yellow";
+
+
+        elem2.append(Album);
+        elem2.append(Artist);
+        elem2.append(ArtistA);
+        elem2.append(Creator);
+        elem2.append(CreatorA);
+        elem2.append(Title);
+        elem2.append(TitleA);
         document.getElementById(ParentID).appendChild(elem);
     }
 
-    update(value1, value2, value3, value4) {
-        this.imgID.src = value1;
-        this.elemA.innerHTML = value2;
-        this.elemB.innerHTML = value3;
-        this.elemC.innerHTML = value4;
+    update(sourceurl, Album, Artist, Title, Creator) {
+        this.imgID.src = sourceurl;
+        this.AlbumObj.innerHTML = Album;
+        this.ArtistObj.innerHTML = Artist;
+        this.TitleObj.innerHTML = Title;
+        this.CreatorObj = Creator;
 
     }
 }
@@ -1649,25 +1661,23 @@ class CDLibrary {
 class Kachel {
     constructor() {
         this.ID = "";
+        this.labelText;
+        this.labelObj = "";
 
-
-        //optionale Parameter
         this.b = "200px";
         this.h = "350px";
-
+        //optionale Parameter
         this.btnTextColor = "black";
         this.labelcolor = "lime";
     }
     create(ParentID, posTop, posLeft, breite, hoehe, color, title, ...param) {
+        this.labelText = title;
         this.color = color;
         this.b = breite;
         this.h = hoehe;
         if (param.length > 1) {
-            this.b = param[0];
-            this.h = param[1];
-
-            this.btnTextColor = param[2];
-            this.labelcolor = param[3];
+            this.btnTextColor = param[0];
+            this.labelcolor = param[1];
         }
         var container = document.createElement("div");
         this.ID = container;
@@ -1683,13 +1693,20 @@ class Kachel {
 
         // Label 
         var label = document.createElement("div");
-        label.style.paddingTop = "2px";
+        this.labelObj = label;
         label.style.height = "30px";
-        label.style.backgroundColor = "black";
+        label.style.backgroundColor = this.btnTextColor;
         label.innerHTML = title;
+        label.style.display = "flex";
+        label.style.alignItems = "center";
+        label.style.justifyContent = "center";
         container.append(label);
 
         document.getElementById(ParentID).appendChild(container);
+    }
+
+    update(value) {
+        this.labelObj.innerHTML = value;
     }
 }
 

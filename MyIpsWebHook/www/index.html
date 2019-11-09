@@ -250,7 +250,6 @@
         }
     </script>
 
-
 </head>
 
 <body onload='init();'>
@@ -446,7 +445,6 @@
 
 
         <!-- --------------------------- SubMenu: Diele ---------------------------- -->
-
         <subMenu id="SubMenuDiele" class="MenuDiele"></subMenu>
 
         <script>
@@ -458,7 +456,6 @@
         </script>
 
         <!-- --------------------------- SubMenu: AZ ---------------------------- -->
-
         <subMenu id="SubMenuAZ" class="MenuAZ"></subMenu>
 
         <script>
@@ -469,8 +466,9 @@
             SubMenuDoorAZ.create("SubMenuAZ", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
-        <!-- ************************ Multimedia  ************************  -->
+        <!-- ------------------------- SubMenu Multimedia -------------------------- -->
         <subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>
+
         <script>
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", "_TV_BW.png", "MainTV", "", "SM");
@@ -1904,7 +1902,7 @@
             windowSonosSZ.createMain("MainSonosSZ", "bgSandy");
         </script>
         <script>
-            var iDisArtistSsz = new ImageDisplay();
+            var iDisArtistSsz = new MediaDisplay();
             iDisArtistSsz.create("MainSonosSZ", "0px", "20px", "normal");
 
             var rahmSsz = new Rahmen();
@@ -2553,7 +2551,7 @@
 
         </Main>
         <script>
-            var iDisArtist = new ImageDisplay();
+            var iDisArtist = new MediaDisplay();
             iDisArtist.create("MainIRadio", "0px", "20px", "normal");
 
             var IconVarDisVol = new IconVarDisplay();
@@ -3446,6 +3444,77 @@
 
         </script>
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                  Audio (Books)                          -->
+        <!-- ----------------------------------------------------------------------- -->
+        <script>
+            var MainAudio = new Area();
+            MainAudio.createMain("MainAudio", "bgPurple");
+        </script>
+
+        <script>
+            var DiplayAudio = new MediaDisplay();
+            DiplayAudio.create("MainAudio", "0px", "20px", "500px", "200px", "DisplayBlue");
+
+            var Track = new Kachel();
+            Track.create("MainAudio", "360px", "10px", "530px", "55px", "transparent", "Track")
+
+
+            var Progress = new analogBar();
+            Progress.create("MainAudio", "405px", "20px", "cyan", "500px");
+
+            var FontBtnPrev = new FontButtonNew();
+            FontBtnPrev.create("MainAudio", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
+                "send('command(upnp,play,previous)')");
+
+            var FontBtnNext = new FontButtonNew();
+            FontBtnNext.create("MainAudio", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px", "60px",
+                "send('command(upnp,play,next)')");
+
+            var FontBtnStop = new FontButtonNew();
+            FontBtnStop.create("MainAudio", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px",
+                "send('command(upnp,stop,all)')");
+
+            var FontBtnPause = new FontButtonNew();
+            FontBtnPause.create("MainAudio", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px",
+                "send('command(upnp,pause,all)')");
+
+            var FontBtnPlay = new FontButtonNew();
+            FontBtnPlay.create("MainAudio", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px",
+                "send('command(upnp,play,continue)')");
+
+            var FontBtnVolDwn = new FontButtonNew();
+            FontBtnVolDwn.create("MainAudio", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
+                "50px",
+                "send('command(upnp,vol,dec)')");
+            var FontBtnMute = new FontButtonNew();
+            FontBtnMute.create("MainAudio", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
+                "50px",
+                "send('command(upnp,mute,toggle)')");
+            var FontBtnVolUp = new FontButtonNew();
+            FontBtnVolUp.create("MainAudio", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
+                "50px",
+                "send('command(upnp,vol,inc)')");
+            var FontBtnPower = new FontButtonNew();
+            FontBtnPower.create("MainAudio", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
+                "50px",
+                "send('command(upnp,power,toggle)')");
+        </script>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             Audiobook Ctrl                              -->
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!--  <Ctrl id = MainAudioCtrl class="AudioCtrl"></Ctrl>  -->
+        <script>
+            var CtrlMainAudio = new Area();
+            CtrlMainAudio.createCtrl("MainAudioCtrl", "bgPurpleLight");
+        </script>
+
+        <script>
+            var CtrlAudioList = new DynIconList();
+            CtrlAudioList.create("MainAudioCtrl", "Audio");
+        </script>
 
 
         <!-- ----------------------------------------------------------------------- -->
@@ -3471,42 +3540,53 @@
             var ClientBtn = new ButtonSlider();
             ClientBtn.create("MainUpnp", "180px", "375px", "150px", "50px", "purple");
 
+
+
+
             var btnDiscover = new FontCtrlButton();
-            btnDiscover.create("MainUpnp", "purple", "180px", "220px", "fa fa-sync", "Discover", "ctrlWindow",
+            btnDiscover.create("MainUpnp", "purple", "435px", "180px", "fa fa-sync", "Discover", "ctrlWindow",
                 "", "MainUpnpDiscoverCtrl",
                 "120px", "50px", "white", "19px", "yellow");
 
             var RahmenC = new Kachel();
-            RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Selection - PlayList")
+            RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Libraries")
             var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "normal", "purple", "Discover",
+            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "smaller", "purple", "CD",
                 "ctrlWindow", "MainUpnpDiscoverCtrl", "");
             var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp", "54vh", "195px", "ctrlbutton", "normal", "purple", "Browse",
+            CtrlBtnupnp2.create("MainUpnp", "54vh", "125px", "ctrlbutton", "smaller", "purple", "Foto",
                 "ctrlWindow", "MainUpnpBrowseCtrl", "");
+            var CtrlBtnupnp4 = new CtrlButton();
+            CtrlBtnupnp4.create("MainUpnp", "54vh", "233px", "ctrlbutton", "smaller", "purple", "Video",
+                "ctrlWindow", "MainUpnpDiscoverCtrl", "");
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "54vh", "375px", "ctrlbutton", "normal", "purple", "AudioBook",
+            CtrlBtnupnp3.create("MainUpnp", "54vh", "342px", "ctrlbutton", "smaller", "purple", "Audio",
                 "ctrlWindow", "MainAudioBookCtrl", "");
-
+            var CtrlBtnupnp3 = new CtrlButton();
+            CtrlBtnupnp3.create("MainUpnp", "54vh", "450px", "ctrlbutton", "smaller", "purple", "Playlist",
+                "ctrlWindow", "MainAudioBookCtrl", "");
 
 
 
             var FontBtnPrev = new FontButtonNew();
             FontBtnPrev.create("MainUpnp", "fontbutton", "purple", "71vh", "4%", "fa fa-backward", "60px", "60px",
                 "send('command(upnp,play,previous)')");
-            var FontBtnPause = new FontButtonNew();
-            FontBtnPause.create("MainUpnp", "fontbutton", "purple", "71vh", "24%", "fa fa-pause", "60px", "60px",
-                "send('command(upnp,pause,all)')");
-            var FontBtnPlay = new FontButtonNew();
-            FontBtnPlay.create("MainUpnp", "fontbutton", "purple", "71vh", "44%", "fa fa-play", "60px", "60px",
-                "send('command(upnp,play,continue)')");
-            var FontBtnStop = new FontButtonNew();
-            FontBtnStop.create("MainUpnp", "fontbutton", "purple", "71vh", "64%", "fa fa-stop", "60px", "60px",
-                "send('command(upnp,stop,all)')");
+
             var FontBtnNext = new FontButtonNew();
-            FontBtnNext.create("MainUpnp", "fontbutton", "purple", "71vh", "84%", "fa fa-forward", "60px", "60px",
+            FontBtnNext.create("MainUpnp", "fontbutton", "purple", "71vh", "16%", "fa fa-forward", "60px", "60px",
                 "send('command(upnp,play,next)')");
 
+            var FontBtnStop = new FontButtonNew();
+            FontBtnStop.create("MainUpnp", "fontbutton", "purple", "71vh", "58%", "fa fa-stop", "60px", "60px",
+                "send('command(upnp,stop,all)')");
+
+            var FontBtnPause = new FontButtonNew();
+            FontBtnPause.create("MainUpnp", "fontbutton", "purple", "71vh", "70%", "fa fa-pause", "60px", "60px",
+                "send('command(upnp,pause,all)')");
+
+            var FontBtnPlay = new FontButtonNew();
+            FontBtnPlay.create("MainUpnp", "fontbutton", "purple", "71vh", "82%", "fa fa-play", "60px", "60px",
+                "send('command(upnp,play,continue)')");
 
             var FontBtnVolDwn = new FontButtonNew();
             FontBtnVolDwn.create("MainUpnp", "fontbutton", "purple", "83vh", "5%", "fa fa-volume-down", "100px",
@@ -3615,143 +3695,7 @@
 
 
 
-        <!-- *********************************************************************************** -->
-        <!--  ************************** INDEX B - UPNP CD Musik ******************************* -->
-        <!-- *********************************************************************************** -->
-        <Main class="UpnpCD">
-            <div class="col">
-                <!-- **************************  Anzeige 1 ************************** -->
 
-                <div class="DenonAnzeige">
-                    <img id="CDimg" src='CDs/0001.jpg'
-                        style=" position:absolute; top:60px; left: 45px; width:  100px; height: 100px;" />
-                    <div style="padding-left:125px">
-                        <div id="DDILAlbum_B" style="text-align:center">. . . . </div>
-                        <hr />
-                        <div id="DIDLArtist_B" style="font-size:large">. . . .</div>
-                        <div id="DIDLTitle_B" style="font-size:large">. . . .</div>
-                    </div>
-                </div>
-
-                <!-- ************************** Player Status Anzeige  **************************  -->
-                <div class="reihe"
-                    style="padding: 5px; border: thin solid #000000; width: 560px; background-color: #000000; color: #000000;    position: absolute; top: 38vh">
-                    <div class="status cyan" style="width: 100px  ">
-                        <span class="fa fa-volume-up" style="font-size:14px; color: #00CC00;  ">
-                            <span id="vol_B" style="margin-left: 10px">- - -</span> </span>
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">
-                            <span id="Playlist_B" style="margin-left: 10px">- - -</span> </span>
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <!--    <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">    -->
-                        <!--    <span id="playmode" style="margin-left: 10px" >- - -</span>  </span> -->
-                        <select style="font-size:15px; color: #00CC00; background-color: black  ">
-                            <option id="playmode" value="0">---</option>
-                            <option value="0">Normal</option>
-                            <option value="1">RANDOM</option>
-                            <option value="2">REP_ONE</option>
-                            <option value="3">REP_ALL</option>
-                        </select>
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">
-                            <span id="activeServer_B" style="margin-left: 10px">- - -</span> </span>
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">
-                            <span id="activeClient_B" style="margin-left: 10px">- - -</span> </span>
-                    </div>
-
-                </div>
-                <!-- ************************** Progressbar  **************************  -->
-                <div
-                    style="border: 1px solid #FFFFFF; padding:2px; width: 560px; height: 10px; position: absolute; top: 46vh">
-                    <div id="progressbar_B">
-                        <span id="progressbar_B" class="expand"></span>
-                    </div>
-                </div>
-                <!-- ************************** Client Switch  Panels  **************************  -->
-                <div
-                    style="padding: 1px; border: thin solid #000000; width: 560px; background-color: #666666; color: #000000;position: absolute; top: 49vh">
-                    Clients
-                    <div class="ScrollReihe" style="padding: 2px; width: 545px;">
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="send('command(upnp,setClient,CEOL)') ;">
-                            Ceol
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="send('command(upnp,setClient,SonosK)') ;">
-                            Sonos K
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="send('command(upnp,setClient,SonosSZ)') ;">
-                            Sonos SZ
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey"
-                            onclick="send('command(upnp,setClient,[TV]UE40D8)') ;">
-                            TV
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="send('command(upnp,setClient,MusicPal)') ;">
-                            MusicPal
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ************************** CD Library  Switch  Panels  **************************  -->
-
-                <div id="CDSwitchPanel" class="reihe"
-                    style="padding:5px; border: 1px solid #FFFFFF; background-color: black; width: 560px; position:absolute; top:60vh ">
-                    <div class="col">
-
-                        <div class="reihe">
-                            <div id="1" class="ctrlbutton XS purple" onclick="CDctrl()">
-                                <img class="iconXS" src="images/Control_BW.png" />
-                            </div>
-                            <div id="1" class="ctrlbutton XS purple" onclick="CDLib()">
-                                <img class="iconXS" src="images/CDLib2_BW.png" />
-                            </div>
-                            <div id="1" class="ctrlbutton XS purple"
-                                onclick="send('command(upnp,setClient,SonosSZ)') ;">
-                                <img class="iconXS" src="images/AudioBookLib.png" />
-                            </div>
-                            <div id="1" class="ctrlbutton XS purple"
-                                onclick="send('command(upnp,setClient,[TV]UE40D8)') ;">
-
-                            </div>
-                            <div id="1" class="ctrlbutton XS purple" onclick="UpnpServer()">
-                                <img class="iconXS" src="images/Server_BW.png" />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- ************************** Control Panel  ************************** -->
-                <div style="position:absolute; top:75vh">
-                    <div class="reihe">
-                        <div class="reihe"
-                            style="border: thin solid #808080;   width: 240px; height:80px; margin-top: 20px;">
-                            <div class="fontbutton big purple" onclick="send('command(UpnpPlayer,vol,dec)')">
-                                <span class="fa fa-volume-down" style="padding: 20px; font-size:24px;  "></span>
-                            </div>
-
-                            <div class="fontbutton big purple" onclick="send('command(upnp,mute,toggle)')">
-                                <span class="fa fa-volume-off" style="padding: 20px; font-size:24px;  "></span>
-                            </div>
-
-                            <div class="fontbutton big purple" onclick="send('command(UpnpPlayer,vol,inc)')">
-                                <span class="fa fa-volume-up" style="padding: 20px; font-size:24px;  "></span>
-                            </div>
-                        </div>
-
-                        <div style="position: relative; top:20px; left: 60px">
-                            <div id="power" class="fontbutton big purple"
-                                onclick="send('command(UpnpPlayer,power,toggle)')">
-                                <span class="fa fa-power-off" style="padding: 20px; font-size:24px;  "></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Main>
 
         <!-- ----------------------------------------------------------------------- -->
         <!--              MAIN - Wohnzimmer - Anlage Denon Ceol Piccolo              -->
@@ -3763,7 +3707,7 @@
         </script>
 
         <script>
-            var iDisArtistWZ = new ImageDisplay();
+            var iDisArtistWZ = new MediaDisplay();
             iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "450px", "200px", "transparent");
 
             var RahmenA = new Kachel();
@@ -3864,177 +3808,6 @@
 
 
 
-        <!--           
-            <div class="col"> 
-                
-                <div class="DenonAnzeige" >
-                    <img  id="CDimg_A" src='CDs/0001.jpg' style="background-color: grey; position:absolute; top:50px; left: 55px; width:  100px; height: 100px;"/>
-                    <div style="padding-left:125px">
-                        <div id="sz3_A" style="text-align:center"  >. . . . </div >
-                        <hr />
-                        <div id="sz2_A" style="font-size:large" >. . . .</div >
-                    </div>
-                </div>
-                 	
-                <div class="reihe" style="padding: 5px; border: thin solid #000000; width: 560px; background-color: #000000; color: #000000;   position: absolute; top: 31.5vh;">
-                    <div class="status cyan" style="width: 100px  ">
-                        <span class="fa fa-volume-up" style="font-size:14px; color: #00CC00;  ">   
-                        <span  style="margin-left: 10px" >- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">   
-                        <span  style="margin-left: 10px" >- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">   
-                        <span id="playmode_A" style="margin-left: 10px">- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">   
-                        <span   style="margin-left: 10px" >- -  -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">   
-                        <span id="CD_A" style="margin-left: 10px" >- - -</span> </span>	
-                    </div>
-
-                </div>
-                 	
-                <div class="reihe" style="padding: 5px; border: thin solid #000000; width: 560px; background-color: #000000; color: #000000; margin-bottom: 5px;   position: absolute; top: 37vh;">
-                    <div class="status cyan" style="width: 100px  ">
-                        <span class="fa fa-volume-up" style="font-size:14px; color: #00CC00;  ">   
-                        <span style="margin-left: 10px" id="vol_A">- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">   
-                        <span style="margin-left: 10px" id="FAV_A">- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">   
-                        <span id="source_A" style="margin-left: 10px" >- - -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-server" style="font-size:14px; color: #00CC00;  ">   
-                        <span id="activeServer_A" style="margin-left: 10px" >- -  -</span> </span>	
-                    </div>
-                    <div class="status cyan" style="width: 100px">
-                        <span class="fa fa-music" style="font-size:14px; color: #00CC00;  ">   
-                        <span id="trackNo_A" style="margin-left: 10px" >- - -</span> </span>	
-                    </div>
-
-                </div>
-              	
-                <div style="border: thin solid #000000;  width: 560px; background-color: #666666; position: absolute; top: 43vh;">
-                        <div id="progressbar">
-                                <span id="progressbar_A" class="expand"></span>
-                        </div>	   
-                </div>	                    
-                
- 
-                <div  style="padding: 1px; border: thin solid #000000; width: 560px; background-color: #666666; color: #000000;">
-                    Source
-                    <div   class="ScrollReihe" style="padding: 2px; width: 545px;">
-                         <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('Radio')">
-                                    IRADIO
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('Server')">
-                                    Server
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('USB')" >
-                                    USB
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('IPOD')">
-                                    IPOD
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('AUX_A')">
-                                    AUX A
-                        </div>
-                        <div id="1" class="ctrlbutton xsmall grey" onclick="setCEOLSource('AUX_D')">
-                                    AUX D
-                        </div>
-                    </div>
-                </div>
- 
-                <div  id="SwitchPanel" class="reihe" style="padding:5px; border: 1px solid #FFFFFF; background-color: black; width: 560px; position:absolute; top:46vh ">   
-                    <div class="col">   
-                         
-                        <div  class="reihe" >
-                            <div  class="ctrlbutton XSS purple" onclick="setCEOLSource('Radio')">
-				<img class="iconXSS" src="images/radio_BW.png" alt="image not found" />
-                            </div>
-                                <div  class="ctrlbutton XSS purple" onclick="setCEOLSource('Server')">
-				<img class="iconXSS" src="images/mediaserver_BW.png" alt="image not found" />
-                            </div>
-                            <div class="ctrlbutton XSS purple" onclick="setCEOLSource('USB')" >
-				<img class="iconXSS" src="images/usb_BW.png" alt="image not found" />
-                            </div>
-                            <div  class="ctrlbutton XSS purple" onclick="setCEOLSource('IPOD')">
-                                 <img class="iconXSS" src="images/ipod_BW.png" alt="image not found" />
-                            </div>
-                                <div  class="ctrlbutton XSS purple" onclick="setCEOLSource('AUX_A')">
-                                    <img class="iconXSS" src="images/auxA_BW.png" alt="image not found" />
-                            </div>
-                                <div class="ctrlbutton XSS purple" onclick="setCEOLSource('AUX_D')">
-                                    <img class="iconXSS" src="images/auxD_BW.png" alt="image not found" />
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-
-
-                 
-       
-                <div  id="CDSwitchPanel" class="reihe" style="padding:5px; border: 1px solid #FFFFFF; background-color: black; width: 560px; position:absolute; top:60vh ">   
-                    <div class="col">   
-                         
-                        <div  class="reihe" >
-                            <div  class="ctrlbutton XS purple" onclick="DenonCEOLCDctrl()">
-				<img class="iconXS" src="images/CDcontrolBW.png" alt="image not found" />
-                            </div>
-                                <div  class="ctrlbutton XS purple" onclick="DenonCeolCDLib()">
-				<img class="iconXS" src="images/CDLib2_BW.png" alt="image not found" />
-                            </div>
-                            <div  class="ctrlbutton XS purple" onclick=" ">
-				<img class="iconXS" src="images/AudioBookLib.png" alt="image not found" />
-                            </div>
-                            <div  class="ctrlbutton XS purple" onclick=" ">
-                                 <img class="iconXS" src="images/Control_BW.png" alt="image not found" />
-                            </div>
-                                <div  class="ctrlbutton XS purple" onclick="send('command(DenonCeol,setClock,on)') ;">
-                                    <img class="iconXS" src="images/Zeit_BW.png" alt="image not found" />
-                            </div>
-
-                        </div>
-                    </div> 
-                </div>
-
-                 
-                <div  style="position:absolute; top:75vh">
-                    <div class="reihe" >
-                        <div class="reihe" style="border: thin solid #808080;   width: 280px; height:65px; margin-top: 20px;" >
-                            <div class="fontbutton wide purple" onclick="send('command(DenonCeol,vol,dec)')">
-                                <span class="fa fa-volume-down" style="padding: 20px; font-size:24px;  "></span>	
-                            </div>
-
-                            <div class="fontbutton wide purple" onclick="send('command(DenonCeol,mute,toggle)')">
-                                <span class="fa fa-volume-off" style="padding: 20px; font-size:24px;  "></span>	
-                            </div>
-
-                            <div class="fontbutton wide purple" onclick="send('command(DenonCeol,vol,inc)')">
-                                <span class="fa fa-volume-up" style="padding: 20px; font-size:24px;  "></span>	
-                            </div>
-                        </div>
-
-                        <div style="position: relative; top:20px; left: 60px"  >
-                            <div id="power_A" class="fontbutton wide purple" onclick="send('command(DenonCeol,power,toggle)')">
-                                <span  class="fa fa-power-off" style="padding: 20px; font-size:24px;  "></span>	
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-
- -->
 
 
         <!-- ************************** Rolladen Uebersicht ************************** -->

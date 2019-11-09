@@ -358,6 +358,14 @@
         sym[248] = ips[0].ID58490; // Schlafzimmer Fenster state
         sym[249] = ips[0].ID19999; // Schlafzimmer Heizkörper state
 
+        sym[250] = ips[0].ID22167; // upnp Actor
+        sym[251] = ips[0].ID26207; // upnp Album
+        sym[252] = ips[0].ID52798; // upnp Artist
+        sym[253] = ips[0].ID17831; // upnp imageURL
+        sym[254] = ips[0].ID28233; // upnp Title
+        sym[255] = ips[0].ID38745; // upnp Track Number
+
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -660,11 +668,17 @@
 
 
     function updateValues(sym) {
+
       uhr.startTime();
+
+
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);
       DeviceBox.update(sym[132]);
       DisMeldung.update(sym[238]);
+
+      DiplayAudio.update(sym[253], sym[251], sym[252], sym[254], sym[250]);
+      Track.update("Track: " + sym[255]);
 
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
@@ -844,6 +858,7 @@
       //<!-- ******************** upnp   **************************  -->
       ClientBtn.update(sym[132]);
       ServerBtn.update(sym[135]);
+
 
 
       //<!-- ******************** Web Socket Server   **************************  -->
