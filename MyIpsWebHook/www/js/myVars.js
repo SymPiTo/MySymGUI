@@ -368,6 +368,8 @@
         sym[257] = ips[0].ID39621; // upnp Volume
         sym[258] = ips[0].ID12964; // upnp Client Key
 
+        sym[259] = ips[0].ID27733; // upnp Progress
+
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -685,6 +687,7 @@
       Track.update("Track: " + sym[255]);
       upnpVol.update(sym[257]);
       upnpSource.update(sym[256]);
+      upnpProgress.update(sym[259]);
 
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);

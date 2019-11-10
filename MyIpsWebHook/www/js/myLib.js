@@ -1889,7 +1889,8 @@ class RolloCtrl {
 /* ---------------------  Klasse analogBar   ---------------------------------------- */
 class analogBar {
     constructor() {
-        this.bb = "30%";
+        this.bb = "1%";
+        this.balken = "";
         //optionale Parameter
 
     }
@@ -1907,6 +1908,7 @@ class analogBar {
         container.style.backgroundColor = "black";
 
         var bar = document.createElement("div");
+        this.balken = bar;
         bar.style.width = this.bb;
         bar.style.height = "6px";
         bar.style.position = "relative";
@@ -1917,7 +1919,8 @@ class analogBar {
         document.getElementById(ParentID).appendChild(container);
     }
     update(value) {
-
+        this.bb = (value + "%");
+        this.balken.style.width = this.bb;
     }
 
 };

@@ -3457,21 +3457,19 @@
             DiplayAudio.create("MainAudio", "0px", "20px", "500px", "200px", "DisplayBlue");
 
             var rahm = new Rahmen();
-            rahm.create("MainAudio", "222px", "24px", "70px", "501px", "DisplayBlue");
+            rahm.create("MainAudio", "222px", "24px", "73px", "501px", "DisplayBlue");
             var upnpVol = new TransVarDisplay();
             upnpVol.create("MainAudio", "230px", "0%", "lime", "28px", "Volume", "");
             var upnpSource = new TransVarDisplay();
             upnpSource.create("MainAudio", "230px", "60%", "lime", "28px", "Source", "", );
 
-            var Player = new ButtonSlider();
-            Player.create("MainAudio", "505px", "260px", "150px", "50px", "purple");
-
             var Track = new Kachel();
             Track.create("MainAudio", "360px", "10px", "530px", "55px", "transparent", "Track")
+            var upnpProgress = new analogBar();
+            upnpProgress.create("MainAudio", "405px", "20px", "cyan", "500px");
 
-
-            var Progress = new analogBar();
-            Progress.create("MainAudio", "405px", "20px", "cyan", "500px");
+            var Player = new ButtonSlider();
+            Player.create("MainAudio", "505px", "260px", "150px", "50px", "purple");
 
             var FontBtnPrev = new FontButtonNew();
             FontBtnPrev.create("MainAudio", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
