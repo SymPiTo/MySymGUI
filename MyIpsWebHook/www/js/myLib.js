@@ -3821,7 +3821,10 @@ class DynIconList {
         var Liste = new data();
         switch (source) {
             case "CD":
-                var SourceList = Liste.getCDLib();
+                var SourceListJson = Liste.getMusicLib();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
                 break;
             case "TV":
                 var SourceList = Liste.getTVchannels();
@@ -3867,7 +3870,7 @@ class DynIconList {
             } else if (source === "IRadio") {
                 elem.src = "images/RadioStation/" + icon;
             } else if (source === "CD") {
-                elem.src = "CDs/" + icon;
+                elem.src = icon;
             } else if (source === "Audio") {
                 elem.src = icon;
             }
