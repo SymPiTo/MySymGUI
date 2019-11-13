@@ -381,7 +381,7 @@
 
 
 
-        <!-- *********************** Kinderzimmer  **************************  -->
+        <!-- *********************** Sub Menu Kinderzimmer  **************************  -->
         <subMenu id="SubMenuKZ" class="MenuKZ"></subMenu>
 
         <script>
@@ -408,7 +408,7 @@
             SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", "Sonos_BW_web.png", "MainSonosSZ", "", "SM");
         </script>
 
-        <!-- ************************ Kueche  ************************  -->
+        <!-- ************************ Sub Menu Kueche  ************************  -->
         <subMenu id="SubMenuK" class="MenuK"></subMenu>
 
         <script>
@@ -424,7 +424,7 @@
         </script>
 
 
-        <!-- --------------------------- SubMenu: Balkon --------------------------- -->
+        <!-- --------------------------- Sub Menu: Balkon --------------------------- -->
         <subMenu id="SubMenuB" class="MenuB"></subMenu>
 
         <script>
@@ -434,7 +434,7 @@
             SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", "door.png", "MainDoorB", "", "SM");
         </script>
 
-        <!-- ------------------------------ Menu Bad ------------------------------- -->
+        <!-- ------------------------------ Sub Menu Bad ------------------------------- -->
         <subMenu id="SubMenuBad" class="MenuBad"></subMenu>
 
         <script>
@@ -444,7 +444,7 @@
 
 
 
-        <!-- --------------------------- SubMenu: Diele ---------------------------- -->
+        <!-- --------------------------- Sub Menu: Diele ---------------------------- -->
         <subMenu id="SubMenuDiele" class="MenuDiele"></subMenu>
 
         <script>
@@ -455,7 +455,7 @@
             SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
-        <!-- --------------------------- SubMenu: AZ ---------------------------- -->
+        <!-- --------------------------- Sub Menu: AZ ---------------------------- -->
         <subMenu id="SubMenuAZ" class="MenuAZ"></subMenu>
 
         <script>
@@ -466,7 +466,7 @@
             SubMenuDoorAZ.create("SubMenuAZ", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
-        <!-- ------------------------- SubMenu Multimedia -------------------------- -->
+        <!-- ------------------------- Sub Menu Multimedia -------------------------- -->
         <subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>
 
         <script>
@@ -476,7 +476,7 @@
             SubMenuIRadio.create("SubMenuMedia", "purple", "Internet Radio", "_IRadio_BW2a.png", "MainIRadio", "",
                 "SM");
             var SubMenuCD = new GlideButton();
-            SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", "CD1_BW.png", "MainCD", "", "SM");
+            SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", "CD1_BW.png", "MainUpnpCD", "", "SM");
             var SubMenuUPNP = new GlideButton();
             SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", "upnp1.png", "MainUpnp", "", "SM");
             var SubMenuAudio = new GlideButton();
@@ -3447,6 +3447,84 @@
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
+        <!--                    MAIN - UPNP Musik CD                                 -->
+        <!--                id="MainUpnpCD"                                          -->
+        <!-- ----------------------------------------------------------------------- -->
+        <script>
+            var mainwindowUpnpCD = new Area();
+            mainwindowUpnpCD.createMain("MainUpnpCD", "bgCyan");
+        </script>
+        <script>
+            var DisplayCD = new MediaDisplay();
+            DisplayCD.create("MainUpnpCD", "0px", "20px", "500px", "200px", "DisplayBlue");
+
+            var rahm = new Rahmen();
+            rahm.create("MainUpnpCD", "222px", "24px", "73px", "501px", "DisplayBlue");
+            var upnpVol = new TransVarDisplay();
+            upnpVol.create("MainUpnpCD", "230px", "0%", "lime", "28px", "Volume", "");
+            var upnpSource = new TransVarDisplay();
+            upnpSource.create("MainUpnpCD", "230px", "60%", "lime", "28px", "Source", "", );
+
+            var Track = new Kachel();
+            Track.create("MainUpnpCD", "360px", "10px", "530px", "55px", "transparent", "Track")
+            var upnpProgress = new analogBar();
+            upnpProgress.create("MainUpnpCD", "405px", "20px", "cyan", "500px");
+
+            var Player = new ButtonSlider();
+            Player.create("MainUpnpCD", "505px", "260px", "150px", "50px", "purple");
+
+            var FontBtnPrev = new FontButtonNew();
+            FontBtnPrev.create("MainUpnpCD", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
+                "send('command(upnp,play,previous)')");
+
+            var FontBtnNext = new FontButtonNew();
+            FontBtnNext.create("MainUpnpCD", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px", "60px",
+                "send('command(upnp,play,next)')");
+
+            var FontBtnStop = new FontButtonNew();
+            FontBtnStop.create("MainUpnpCD", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px",
+                "send('command(upnp,stop,all)')");
+
+            var FontBtnPause = new FontButtonNew();
+            FontBtnPause.create("MainUpnpCD", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px",
+                "send('command(upnp,pause,all)')");
+
+            var FontBtnPlay = new FontButtonNew();
+            FontBtnPlay.create("MainUpnpCD", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px",
+                "send('command(upnp,play,continue)')");
+
+            var FontBtnVolDwn = new FontButtonNew();
+            FontBtnVolDwn.create("MainUpnpCD", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
+                "50px",
+                "send('command(upnp,vol,dec)')");
+            var FontBtnMute = new FontButtonNew();
+            FontBtnMute.create("MainUpnpCD", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
+                "50px",
+                "send('command(upnp,mute,toggle)')");
+            var FontBtnVolUp = new FontButtonNew();
+            FontBtnVolUp.create("MainUpnpCD", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
+                "50px",
+                "send('command(upnp,vol,inc)')");
+            var FontBtnPower = new FontButtonNew();
+            FontBtnPower.create("MainUpnpCD", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
+                "50px",
+                "send('command(upnp,power,toggle)')");
+        </script>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             Ctrl UPNP CD                                -->
+        <!-- ----------------------------------------------------------------------- -->
+        <script>
+            var CtrlMainUpnpCD = new Area();
+            CtrlMainUpnpCD.createCtrl("MainUpnpCDCtrl", "bgPurpleLight");
+        </script>
+        <script>
+            var CtrlCDList = new DynIconList();
+            CtrlCDList.create("MainUpnpCDCtrl", "CD");
+        </script>
+
+
+        <!-- ----------------------------------------------------------------------- -->
         <!--                                  Audio (Books)                          -->
         <!-- ----------------------------------------------------------------------- -->
         <script>
@@ -3790,7 +3868,7 @@
         </script>
 
 
-        <!-- ************************** Right CD Player **************************  -->
+        <!-- ************************** Ctrl Denon  CD Lib **************************  -->
         <!-- <Ctrl id="MainCDCtrl" class="CoverCD" ></Ctrl>  -->
 
         <script>
@@ -3799,15 +3877,11 @@
         </script>
 
         <script>
-            /*
-            var CtrlCDList = new IconList();
+            var CtrlCDList = new DynIconList();
             CtrlCDList.create("MainCDCtrl", "CD");
-            */
-            var CtrlCCDList = new DynIconList();
-            CtrlCCDList.create("MainCDCtrl", "CD");
         </script>
 
-        <!-- ************************** Right AudioBooks Player **************************  -->
+        <!-- ************************** Ctrl Denon AudioBooks Lib **************************  -->
         <script>
             var CtrlwindowCeolAudio = new Area();
             CtrlwindowCeolAudio.createCtrl("MainAudioBookCtrl", "bgCyan");
@@ -4079,144 +4153,9 @@
 
 
 
-        <!-- ************************** CEOL Player Control  **************************  -->
-        <Ctrl class="CEOLctrl">
-            <img id="RadioCover" src='images/RadioStation/0000.png'
-                style="margin-top: 20px; margin-bottom: 20px; width: 200px; height: 200px;" />
-            <div class="reihe" style="border: thin solid #FFFFFF">
-                <div class="col" style="border: thin solid #808080; width: 60px; font-size: 18px;">
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-up" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                    <div>Bass</div>
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-down" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                </div>
-                <div class="col" style="border: thin solid #808080; width: 70px; font-size: 18px;">
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-up" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                    <div>Treble</div>
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-down" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                </div>
-                <div class="col" style="border: thin solid #808080; width: 70px; font-size: 18px;">
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-up" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                    <div>Balance</div>
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-down" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                </div>
-                <div class="col" style="border: thin solid #808080; width: 70px; font-size: 18px;">
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-up" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                    <div>Timer</div>
-                    <div class="fontbutton mid purple">
-                        <span class="fa fa-angle-down" style="padding: 10px; font-size:24px;  "></span>
-                    </div>
-                </div>
-
-            </div>
-            <!-- ************************** Client Image **************************  -->
-            <div id="ClientImage">
-                <div style=" margin: 20px; font-size: x-large;   ">Denon Ceol</div>
-                <img id="CEOLclientimg" src='images/DenonCeolAnlage.png'
-                    style="margin-top: 10px; margin-bottom: 20px; width: 200px; height: 100px;" />
-
-            </div>
-
-        </Ctrl>
-        <!-- ************************** Denon CEOL CD Player Control  **************************  -->
-        <Ctrl class="CEOLCDctrl">
-            <img id="CDCover_A" src='CDs/0001.jpg' style="margin-top: 20px; margin-bottom: 20px; " />
-            <div style="border: thin solid #FFFFFF">
-                <div class="reihe">
-                    <div class="fontbutton big purple" onclick="send('command(DenonCeol,seek,backward)')">
-                        <span class="fa fa-backward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton big purple" onclick="send('command(DenonCeol,play,first)')">
-                        <span class="fa fa-play" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton big purple" onclick="send('command(DenonCeol,seek,forward)')">
-                        <span class="fa fa-forward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                </div>
-                <div class="reihe">
-                    <div class="fontbutton small purple" onclick="send('command(DenonCeol,play,previous)')">
-                        <span class="fa fa-step-backward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(DenonCeol,pause,all)')">
-                        <span class="fa fa-pause" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(DenonCeol,stop,all)')">
-                        <span class="fa fa-stop" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(DenonCeol,play,next)')">
-                        <span class="fa fa-step-forward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                </div>
-            </div>
-
-            <div style=" margin: 10px; font-size: x-large;   ">Denon Ceol</div>
-            <img id="CDclientimg" src='images/DenonCeolAnlage.png' style=" width: 200px; height: 100px;" />
 
 
 
-        </Ctrl>
-        <!-- ************************** Server Control  ************************** -->
-        <Ctrl class="UpnpServerCtrl">
-            <div class="col">
-                <div class="IconButton small sandy" onclick="send('command(upnp,setServer,AVM)')"
-                    style="margin-top:50px">
-                    <img id="xx" class="IconMid" src="images/FrizNas.png" />
-                    <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">AVM Server</span>
-                </div>
-                <div class="IconButton small sandy" onclick="send('command(upnp,setServer,Plex)')">
-                    <img id="xx" class="IconSmall" src="images/Plex.png" />
-                    <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">Plex Server</span>
-                </div>
-            </div>
-        </Ctrl>
-
-        <!-- ************************** CD Player Control  **************************  -->
-        <Ctrl class="CDctrl">
-            <img id="iconCover" src='CDs/0001.jpg' style="margin-top: 20px; margin-bottom: 20px; " />
-            <div style="border: thin solid #FFFFFF">
-                <div class="reihe">
-                    <div class="fontbutton big purple" onclick="send('command(upnp,seek,backward)')">
-                        <span class="fa fa-backward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton big purple" onclick="send('command(upnp,play,first)')">
-                        <span class="fa fa-play" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton big purple" onclick="send('command(upnp,seek,forward)')">
-                        <span class="fa fa-forward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                </div>
-                <div class="reihe">
-                    <div class="fontbutton small purple" onclick="send('command(upnp,play,previous)')">
-                        <span class="fa fa-step-backward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(upnp,pause,all)')">
-                        <span class="fa fa-pause" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(upnp,stop,all)')">
-                        <span class="fa fa-stop" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                    <div class="fontbutton small purple" onclick="send('command(upnp,play,next)')">
-                        <span class="fa fa-step-forward" style="padding: 20px; font-size:24px;  "></span>
-                    </div>
-                </div>
-            </div>
-
-            <div style=" margin: 10px; font-size: x-large;   ">Denon Ceol</div>
-            <img id="CDclientimg" src='images/DenonCeolAnlage.png' style=" width: 200px; height: 100px;" />
-        </Ctrl>
 
 
 

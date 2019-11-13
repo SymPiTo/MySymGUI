@@ -3833,8 +3833,6 @@ class DynIconList {
                 var SourceList = Liste.getIRadiochannels();
                 break;
             case "Audio":
-
-
                 var SourceListJson = Liste.getAudiobookLib();
                 var SourceList = Array();
                 var SourceList1 = JSON.parse(SourceListJson);
@@ -3892,7 +3890,7 @@ class DynIconList {
                 } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "CD") {
-                    var cmd = "command(DenonCeol,loadCDPlaylist," + item['FV'] + ")";
+                    var cmd = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Audio") {
                     var cmd = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
