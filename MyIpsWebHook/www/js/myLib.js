@@ -3829,6 +3829,12 @@ class DynIconList {
                 var SourceList1 = JSON.parse(SourceListJson);
                 SourceList = SourceList1['media'];
                 break;
+            case "CeolCD":
+                var SourceListJson = Liste.getMusicLib();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
+                break;
             case "TV":
                 var SourceList = Liste.getTVchannels();
                 break;
@@ -3836,6 +3842,12 @@ class DynIconList {
                 var SourceList = Liste.getIRadiochannels();
                 break;
             case "Audio":
+                var SourceListJson = Liste.getAudiobookLib();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
+                break;
+            case "CeolAudio":
                 var SourceListJson = Liste.getAudiobookLib();
                 var SourceList = Array();
                 var SourceList1 = JSON.parse(SourceListJson);
@@ -3858,6 +3870,12 @@ class DynIconList {
                     var icon = item["icon"];
                     break;
                 case "Audio":
+                    var icon = item["icon"];
+                    break
+                case "CeolCD":
+                    var icon = item["icon"];
+                    break;
+                case "CeolAudio":
                     var icon = item["icon"];
                     break
                 default:
