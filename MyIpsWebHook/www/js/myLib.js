@@ -3892,6 +3892,10 @@ class DynIconList {
                 elem.src = icon;
             } else if (source === "Audio") {
                 elem.src = icon;
+            } else if (source === "CeolCD") {
+                elem.src = icon;
+            } else if (source === "CeolAudio") {
+                elem.src = icon;
             }
             elem.onclick = function () {
                 var test = SourceList;
