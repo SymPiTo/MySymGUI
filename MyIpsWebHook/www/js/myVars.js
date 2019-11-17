@@ -369,7 +369,9 @@
         sym[258] = ips[0].ID12964; // upnp Client Key
 
         sym[259] = ips[0].ID27733; // upnp Progress
-
+        sym[260] = ips[0].ID57135; // Denon AlbumCover Url
+        sym[261] = ips[0].ID48125; // Denon Album 
+        sym[262] = ips[0].ID59871; // Denon Actor 
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -1112,7 +1114,7 @@
       if (sym[105] === 'IRADIO') {
         iDisArtistWZ.update(sym[92], sym[95], sym[93], sym[94]);
       } else {
-        iDisArtistWZ.update(sym[123], sym[95], sym[93], sym[94]);
+        iDisArtistWZ.update(sym[260], sym[261], sym[93], sym[94], sym[262]);
       }
 
       FontBtnIRadioPowerWZ.update(sym[96]);
