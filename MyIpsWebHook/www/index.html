@@ -3460,18 +3460,18 @@
 
             var rahm = new Rahmen();
             rahm.create("MainUpnpCD", "222px", "24px", "73px", "501px", "DisplayBlue");
-            var upnpVol = new TransVarDisplay();
-            upnpVol.create("MainUpnpCD", "230px", "0%", "lime", "28px", "Volume", "");
-            var upnpSource = new TransVarDisplay();
-            upnpSource.create("MainUpnpCD", "230px", "60%", "lime", "28px", "Source", "", );
+            var upnpCDVol = new TransVarDisplay();
+            upnpCDVol.create("MainUpnpCD", "230px", "0%", "lime", "28px", "Volume", "");
+            var upnCDSource = new TransVarDisplay();
+            upnCDSource.create("MainUpnpCD", "230px", "60%", "lime", "28px", "Source", "", );
 
             var Track = new Kachel();
             Track.create("MainUpnpCD", "360px", "10px", "530px", "55px", "transparent", "Track")
-            var upnpProgress = new analogBar();
-            upnpProgress.create("MainUpnpCD", "405px", "20px", "cyan", "500px");
+            var upnpCDProgress = new analogBar();
+            upnpCDProgress.create("MainUpnpCD", "405px", "20px", "cyan", "500px");
 
-            var Player = new ButtonSlider();
-            Player.create("MainUpnpCD", "505px", "260px", "150px", "50px", "purple");
+            var CDPlayer = new ButtonSlider();
+            CDPlayer.create("MainUpnpCD", "505px", "260px", "150px", "50px", "purple");
 
             var FontBtnPrev = new FontButtonNew();
             FontBtnPrev.create("MainUpnpCD", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
@@ -3543,8 +3543,8 @@
             var upnpSource = new TransVarDisplay();
             upnpSource.create("MainAudio", "230px", "60%", "lime", "28px", "Source", "", );
 
-            var Track = new Kachel();
-            Track.create("MainAudio", "360px", "10px", "530px", "55px", "transparent", "Track")
+            var CDTrack = new Kachel();
+            CDTrack.create("MainAudio", "360px", "10px", "530px", "55px", "transparent", "Track")
             var upnpProgress = new analogBar();
             upnpProgress.create("MainAudio", "405px", "20px", "cyan", "500px");
 

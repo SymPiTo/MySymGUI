@@ -392,6 +392,7 @@
       ServerBtn.init(sym[130], "setServer");
       ClientBtn.init(sym[132], "setClient");
       Player.init(sym[132], "setClient");
+      CDPlayer.init(sym[132], "setClient");
       return (initialisierung = false);
     }
 
@@ -685,9 +686,15 @@
 
       DiplayAudio.update(sym[253], sym[251], sym[252], sym[254], sym[250]);
       Track.update("Track: " + sym[255]);
+      CDTrack.update("Track: " + sym[255]);
       upnpVol.update(sym[257]);
       upnpSource.update(sym[256]);
       upnpProgress.update(sym[259]);
+      DisplayCD.update(sym[253], sym[251], sym[252], sym[254], sym[250]);
+      upnpCDVol.update(sym[257]);
+      upnCDSource.update(sym[256]);
+      upnpCDProgress.update(sym[259]);
+      CDPlayer.update(sym[258]);
 
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
