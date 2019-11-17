@@ -1502,6 +1502,9 @@ class AlarmBox {
 
 
 /* --------------------- Klasse IconSelectList ---------------------------------------- */
+
+/* ------------------------ ALt nicht mehr verwenden ------------------------ */
+
 class IconList {
     constructor() {
 
@@ -3893,6 +3896,10 @@ class DynIconList {
                     var cmd = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Audio") {
                     var cmd = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
+                } else if (source === "CeolCD") {
+                    var cmd = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
+                } else if (source === "CeolAudio") {
+                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
                 send(cmd);
             };
