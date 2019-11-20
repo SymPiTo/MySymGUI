@@ -3796,10 +3796,18 @@
 
         <script>
             var iDisArtistWZ = new MediaDisplay();
-            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "450px", "200px", "DisplayBlue");
+            iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "500px", "200px", "DisplayBlue");
+
+            var rahm = new Rahmen();
+            rahm.create("MainCeolWZ", "222px", "24px", "73px", "501px", "DisplayBlue");
+            var CeolCDVol = new TransVarDisplay();
+            CeolCDVol.create("MainCeolWZ", "230px", "0%", "lime", "28px", "Volume", "");
+            var CeolCDSource = new TransVarDisplay();
+            CeolCDSource.create("MainCeolWZ", "230px", "60%", "lime", "28px", "Source", "", );
+
 
             var RahmenA = new Kachel();
-            RahmenA.create("MainCeolWZ", "300px", "20px", "450px", "95px", "transparent", "Internet Radio")
+            RahmenA.create("MainCeolWZ", "300px", "25px", "500px", "95px", "transparent", "Internet Radio")
 
             var btnIRadioWZ = new FontCtrlButton();
             btnIRadioWZ.create("MainCeolWZ", "cyan", "335px", "45px", "fa fa-podcast", "IRadio", "CtrlFunc",
@@ -3814,8 +3822,8 @@
                 "1on", "MainAudioBookCtrl", "120px", "50px", "black", "19px", "red");
 
 
-            var Progress = new analogBar();
-            Progress.create("MainCeolWZ", "67vh", "20px", "cyan", "450px");
+            var ProgressCeol = new analogBar();
+            ProgressCeol.create("MainCeolWZ", "67vh", "20px", "cyan", "450px");
 
             var FontBtnCDA = new FontButtonNew();
             FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "60px", "fa fa-backward", "60px", "60px",
@@ -3847,8 +3855,7 @@
             FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "180px",
                 "fa fa-volume-up", "60px", "60px", "send('command(DenonCeol,vol,inc)')");
 
-            var VarDisVolDenon = new VarDis();
-            VarDisVolDenon.create("MainCeolWZ", "cyan", "86vh", "26vw", "normal", "dB");
+
 
             var FontBtnIRadioPowerWZ = new FontButtonNew();
             FontBtnIRadioPowerWZ.create("MainCeolWZ", "fontbutton", "cyan", "84vh", "360px",

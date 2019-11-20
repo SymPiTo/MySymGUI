@@ -372,6 +372,7 @@
         sym[260] = ips[0].ID57135; // Denon AlbumCover Url
         sym[261] = ips[0].ID48125; // Denon Album 
         sym[262] = ips[0].ID59871; // Denon Actor 
+        sym[263] = ips[0].ID54627 // Denon Progress
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -471,13 +472,7 @@
       }
       $('playmode_A').innerHTML = pm_A;
 
-      var elem = document.getElementById("progressbar_A");
-      var width = ips[0].ID54627;
-      elem.style.width = width + '%';
 
-      var elem = document.getElementById("progressbar_B");
-      var width = ips[0].ID54627;
-      elem.style.width = width + '%';
 
       var pm = ips[0].ID45176;
       if (pm == '0') {
@@ -680,6 +675,8 @@
 
       uhr.startTime();
 
+      /* ------------------------------- Denon Ceol ------------------------------- */
+      ProgressCeol.update(sym[263]);
 
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);
