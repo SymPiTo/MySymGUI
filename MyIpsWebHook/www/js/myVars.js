@@ -677,6 +677,30 @@
 
       /* ------------------------------- Denon Ceol ------------------------------- */
       ProgressCeol.update(sym[263]);
+      CeolVol.update(sym[257]);
+      CeolTrack.update(sym[255]);
+      var s = "";
+      switch (sym[105]) {
+        case 0:
+          showAList = "IRadio";
+          break;
+        case 1:
+          s = "MediaServer";
+          break;
+        case 2:
+          s = "USB";
+          break;
+        case 3:
+          s = "IPOD";
+          break;
+        case 4:
+          s = "AUX_A";
+          break;
+        case 5:
+          s = "AUX_D";
+          break;
+      }
+      CeolSource.update(s);
 
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);

@@ -3800,48 +3800,51 @@
 
             var rahm = new Rahmen();
             rahm.create("MainCeolWZ", "222px", "24px", "73px", "501px", "DisplayBlue");
-            var CeolCDVol = new TransVarDisplay();
-            CeolCDVol.create("MainCeolWZ", "230px", "0%", "lime", "28px", "Volume", "");
-            var CeolCDSource = new TransVarDisplay();
-            CeolCDSource.create("MainCeolWZ", "230px", "60%", "lime", "28px", "Source", "", );
+            var CeolVol = new TransVarDisplay();
+            CeolVol.create("MainCeolWZ", "230px", "0%", "lime", "28px", "Volume", "");
+            var CeolTrack = new TransVarDisplay();
+            CeolTrack.create("MainCeolWZ", "230px", "25%", "lime", "28px", "Track", "", );
+
+            var CeolSource = new TransVarDisplay();
+            CeolSource.create("MainCeolWZ", "230px", "50%", "lime", "28px", "Source", "", );
 
 
             var RahmenA = new Kachel();
-            RahmenA.create("MainCeolWZ", "300px", "25px", "500px", "95px", "transparent", "Internet Radio")
+            RahmenA.create("MainCeolWZ", "310px", "25px", "500px", "95px", "transparent", "Internet Radio")
 
             var btnIRadioWZ = new FontCtrlButton();
-            btnIRadioWZ.create("MainCeolWZ", "cyan", "335px", "45px", "fa fa-podcast", "IRadio", "CtrlFunc",
+            btnIRadioWZ.create("MainCeolWZ", "cyan", "345px", "45px", "fa fa-podcast", "IRadio", "CtrlFunc",
                 "1off", "MainCeolWZCtrl", "120px", "50px", "black", "19px", "red");
 
             var btnCDWZ = new FontCtrlButton();
-            btnCDWZ.create("MainCeolWZ", "cyan", "335px", "180px", "fa fa-music", "CD", "CtrlFunc",
+            btnCDWZ.create("MainCeolWZ", "cyan", "345px", "210px", "fa fa-music", "CD", "CtrlFunc",
                 "1on", "MainCDCtrl", "120px", "50px", "black", "19px", "red");
 
-            var btnAudioWZ = new FontCtrlButton();
-            btnAudioWZ.create("MainCeolWZ", "cyan", "335px", "325px", "fa fa-book", "Audiobook", "CtrlFunc",
+            var btnAudioCeol = new FontCtrlButton();
+            btnAudioCeol.create("MainCeolWZ", "cyan", "345px", "375px", "fa fa-book", "Audiobook", "CtrlFunc",
                 "1on", "MainAudioBookCtrl", "120px", "50px", "black", "19px", "red");
 
 
             var ProgressCeol = new analogBar();
-            ProgressCeol.create("MainCeolWZ", "67vh", "20px", "cyan", "450px");
+            ProgressCeol.create("MainCeolWZ", "69vh", "25px", "cyan", "450px");
 
             var FontBtnCDA = new FontButtonNew();
-            FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "60px", "fa fa-backward", "60px", "60px",
+            FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "60px", "fa fa-backward", "60px", "60px",
                 "send('command(DenonCeol,play,previous)')");
             var FontBtnCDE = new FontButtonNew();
-            FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "130px", "fa fa-forward", "60px", "60px",
+            FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "130px", "fa fa-forward", "60px", "60px",
                 "send('command(DenonCeol,play,next)')");
 
             var FontBtnCDB = new FontButtonNew();
-            FontBtnCDB.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "300px", "fa fa-pause", "60px", "60px",
+            FontBtnCDB.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "300px", "fa fa-pause", "60px", "60px",
                 "send('command(DenonCeol,pause,all)')");
 
             var FontBtnCDD = new FontButtonNew();
-            FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "230px", "fa fa-stop", "60px", "60px",
+            FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "230px", "fa fa-stop", "60px", "60px",
                 "send('command(DenonCeol,stop,all)')");
 
             var FontBtnCDC = new FontButtonNew();
-            FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "70vh", "370px", "fa fa-play", "60px", "60px",
+            FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "370px", "fa fa-play", "60px", "60px",
                 "send('command(DenonCeol,play,first)')");
 
 
