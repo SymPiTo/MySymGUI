@@ -682,7 +682,7 @@
       var s = "";
       switch (sym[105]) {
         case 0:
-          showAList = "IRadio";
+          s = "IRadio";
           break;
         case 1:
           s = "MediaServer";
