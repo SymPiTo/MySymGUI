@@ -2678,8 +2678,12 @@ h1:after {
 .olive:active {
 	background: -webkit-linear-gradient(hsl(82, 100%, 5%), hsl(82, 100%, 15%), hsl(82, 100%, 5%));
 }
-
-
+.orangerot {
+	background: -webkit-linear-gradient(hsl(16, 100%, 25%), hsl(16, 100%, 50%), hsl(16, 100%, 25%));
+} 
+.orangerot:active {
+	background: -webkit-linear-gradient(hsl(16, 100%, 5%), hsl(82, 100%, 15%), hsl(16, 100%, 5%));
+}
 .green{
     /*Gradient*/
     background: -webkit-linear-gradient(hsl(120, 56%, 25%), hsl(120, 56%, 45%), hsl(120, 56%, 25%)); /* CHROME */
@@ -2842,6 +2846,9 @@ h1:after {
 
 .bgGreyBtn {
     background: -webkit-linear-gradient(hsl(174, 100%, 45%), hsl(174, 100%, 75%), hsl(174, 100%, 45%)); /* CHROME */
+} 
+.bgOrangeRot {
+	background: -webkit-linear-gradient(hsl(16, 100%, 45%), hsl(16, 100%, 75%), hsl(16, 100%, 425%));
 } 
 /* *********************  Background COLORS ********************************** */
 

@@ -308,7 +308,7 @@
             LeftMenuDiele.create("MainMenu", "yellowgreen", "Diele", "Diele.png", "MenuDiele", "", "MM");
 
             var LeftMenuAZ = new GlideButton();
-            LeftMenuAZ.create("MainMenu", "yellowgreen", "Arbeitsbereich", "Diele.png", "MenuAZ", "", "MM");
+            LeftMenuAZ.create("MainMenu", "orangerot", "Arbeitsbereich", "Arbeitszimmer.png", "MenuAZ", "", "MM");
 
             var LeftMenuMM = new GlideButton();
             LeftMenuMM.create("MainMenu", "purple", "Multimedia", "_Multimedia_BW_web.png", "MenuMultimedia", "", "MM");
@@ -455,15 +455,14 @@
             SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
-        <!-- --------------------------- Sub Menu: AZ ---------------------------- -->
+        <!-- --------------------------- Sub Menu: Arbeitsbereich ---------------------------- -->
         <subMenu id="SubMenuAZ" class="MenuAZ"></subMenu>
 
         <script>
             var SubMenuLightAZ = new GlideButton();
-            SubMenuLightAZ.create("SubMenuAZ", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+            SubMenuLightAZ.create("SubMenuAZ", "orangerot", "Licht Arbeitsbereich", "Light_BW_web.png", "MainLightAZ",
+                "",
                 "SM");
-            var SubMenuDoorAZ = new GlideButton();
-            SubMenuDoorAZ.create("SubMenuAZ", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
         </script>
 
         <!-- ------------------------- Sub Menu Multimedia -------------------------- -->
@@ -680,11 +679,11 @@
         <!-- --------------------------- Overview: AZ --------------------------- -->
         <script>
             var OVwindowHzD = new Area();
-            OVwindowHzD.createOverview("MenuAZOV", "bgYellowgreen");
+            OVwindowHzD.createOverview("MenuAZOV", "bgOrangeRot");
         </script>
         <script>
             var img = document.createElement('img');
-            img.src = 'images/Diele.jpg';
+            img.src = 'images/AZ.jpg';
             document.getElementById('MenuAZOV').appendChild(img);
             img.height = 570;
             img.width = 620;
@@ -1855,6 +1854,28 @@
                 "Power",
                 "Number",
                 "");
+        </script>
+        <!-- ***********************************************************************************      -->
+        <!--  ************************          Light  AZ               ************************      -->
+        <!-- ***********************************************************************************      -->
+        <script>
+            var windowLightAZ = new Area();
+            windowLightAZ.createMain("MainLightAZ", "bgOrangeRot");
+        </script>
+        <script>
+            var LightAZ = new CtrlTile();
+            LightAZ.create("MainLightAZ", "10px", "10px", "Diele", "yellowgreen", "transparent", "Light",
+                "send('command(Light,D,false)')", "send('command(Light,D,true)')");
+        </script>
+
+        <!-- ***********************************************************************************      -->
+        <!-- ************************        Light Ctrl  AZ                  *******************      -->
+        <!-- ***********************************************************************************      -->
+        <script>
+            var CtrlwindowLightAZ = new Area();
+            CtrlwindowLightAZ.createCtrl("MainLightAZCtrl", "bgOrangeRot");
+        </script>
+        <script>
         </script>
 
         <!-- ***********************************************************************************      -->
