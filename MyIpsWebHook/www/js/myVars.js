@@ -373,6 +373,7 @@
         sym[261] = ips[0].ID48125; // Denon Album 
         sym[262] = ips[0].ID59871; // Denon Actor 
         sym[263] = ips[0].ID54627 // Denon Progress
+        sym[264] = ips[0].ID25782 // Denon TrackNo
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
@@ -678,7 +679,7 @@
       /* ------------------------------- Denon Ceol ------------------------------- */
       ProgressCeol.update(sym[263]);
       CeolVol.update(sym[257]);
-      CeolTrack.update(sym[255]);
+      CeolTrack.update(sym[264]);
       var s = "";
       switch (sym[105]) {
         case 0:
@@ -701,7 +702,7 @@
           break;
       }
       CeolSource.update(s);
-
+      RahmenCeol.update(s);
       /* ---------------------------------- UPNP ---------------------------------- */
       ServerBox.update(sym[130]);
       DeviceBox.update(sym[132]);

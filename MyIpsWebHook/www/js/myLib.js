@@ -3931,3 +3931,22 @@ class DynIconList {
 
     }
 }
+
+
+/* --------------------- Klasse IconSelectList ---------------------------------------- */
+class switchCtrl {
+    constructor() {
+
+    }
+    init(_CtrlWindow) {
+        // alle Ctrl auf 0px verkleinern 
+        var Ctrl = document.getElementsByTagName("Ctrl");
+        var MCtrlWindow = Array.from(Ctrl);
+        MCtrlWindow.forEach(function (element) {
+            var a = element.className;
+            document.getElementsByClassName(a)[0].style.width = "0px";
+        });
+        // ctrlWindow umschalten
+        document.getElementsByClassName(_CtrlWindow)[0].style.width = "26vw";
+    }
+}
