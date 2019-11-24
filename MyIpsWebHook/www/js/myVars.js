@@ -375,6 +375,10 @@
         sym[263] = ips[0].ID54627 // Denon Progress
         sym[264] = ips[0].ID25782 // Denon TrackNo
 
+        sym[265] = ips[0].ID59093; // AZ Lampe current
+        sym[266] = ips[0].ID24994; // AZ Lampe Energie counter
+        sym[267] = ips[0].ID23507; // AZ Lampe Power
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -973,7 +977,15 @@
 
 
       /* -------------------------- Arbeitsbereich Licht -------------------------- */
+
+
+      //<!-- ******************** Licht Aktor AZ **************************  -->
+
+      DisLightCurrentAZCtrl.update(sym[265], 2);
+      DisLightPowerAZCtrl.update(sym[267], 2);
+      DisLightEnergyAZCtrl.update(sym[266], 2);
       iLightAZ.update(sym[229]);
+
 
       //<!-- ******************** Schlafzimmer Licht **************************  -->
       LightSZ.update(sym[106], "", "");

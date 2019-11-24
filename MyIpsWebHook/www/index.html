@@ -678,8 +678,8 @@
         </script>
         <!-- --------------------------- Overview: AZ --------------------------- -->
         <script>
-            var OVwindowHzD = new Area();
-            OVwindowHzD.createOverview("MenuAZOV", "bgOrangeRot");
+            var OVwindowAZ = new Area();
+            OVwindowAZ.createOverview("MenuAZOV", "bgOrangeRot");
         </script>
         <script>
             var img = document.createElement('img');
@@ -1864,8 +1864,8 @@
         </script>
         <script>
             var LightAZ = new CtrlTile();
-            LightAZ.create("MainLightAZ", "10px", "10px", "Diele", "yellowgreen", "transparent", "Light",
-                "send('command(Light,D,false)')", "send('command(Light,D,true)')");
+            LightAZ.create("MainLightAZ", "10px", "10px", "Arbeitsecke", "orangerot", "transparent", "Light",
+                "send('command(Light,AZ,false)')", "send('command(Light,AZ,true)')");
         </script>
 
         <!-- ***********************************************************************************      -->
@@ -1876,6 +1876,21 @@
             CtrlwindowLightAZ.createCtrl("MainLightAZCtrl", "bgOrangeRot");
         </script>
         <script>
+            var DisLightEnergyAZCtrl = new StateDisplay();
+            DisLightEnergyAZCtrl.create("MainLightAZCtrl", "orangerotLight", "Wh", "50px", "20px", "60px", "202px",
+                "20px",
+                "Energy",
+                "Number", "");
+            var DisLightCurrentAZCtrl = new StateDisplay();
+            DisLightCurrentAZCtrl.create("MainLightAZCtrl", "orangerotLight", "mA", "150px", "20px", "60px", "202px",
+                "20px",
+                "Strom",
+                "Number", "");
+            var DisLightPowerAZCtrl = new StateDisplay();
+            DisLightPowerAZCtrl.create("MainLightAZCtrl", "orangerotLight", "W", "250px", "20px", "60px", "202px",
+                "20px",
+                "Power", "Number",
+                "");
         </script>
 
         <!-- ***********************************************************************************      -->
