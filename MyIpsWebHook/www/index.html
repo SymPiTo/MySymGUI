@@ -1862,11 +1862,13 @@
             var windowLightAZ = new Area();
             windowLightAZ.createMain("MainLightAZ", "bgOrangeRot");
         </script>
+
         <script>
             var LightAZ = new CtrlTile();
             LightAZ.create("MainLightAZ", "10px", "10px", "Arbeitsecke", "orangerot", "transparent", "Light",
                 "send('command(Light,AZ,false)')", "send('command(Light,AZ,true)')");
         </script>
+
 
         <!-- ***********************************************************************************      -->
         <!-- ************************        Light Ctrl  AZ                  *******************      -->
@@ -1875,6 +1877,7 @@
             var CtrlwindowLightAZ = new Area();
             CtrlwindowLightAZ.createCtrl("MainLightAZCtrl", "bgOrangeRot");
         </script>
+
         <script>
             var DisLightEnergyAZCtrl = new StateDisplay();
             DisLightEnergyAZCtrl.create("MainLightAZCtrl", "orangerotLight", "Wh", "50px", "20px", "60px", "202px",
@@ -1892,6 +1895,7 @@
                 "Power", "Number",
                 "");
         </script>
+
 
         <!-- ***********************************************************************************      -->
         <!--  ************************          Light  Diele            ************************      -->
@@ -3780,11 +3784,12 @@
             var btnSyncFoto = new FontCtrlButton();
             btnSyncFoto.create("MainUpnpDiscoverCtrl", "purple", "800px", "50px", "fa fa-sync", "Sync Foto",
                 "command",
-                "send('command()')", "",
+                "send('command(upnp,sync,Foto)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncVideo = new FontCtrlButton();
             btnSyncVideo.create("MainUpnpDiscoverCtrl", "purple", "850px", "50px", "fa fa-sync", "Sync Video",
-                "command", "send('command()')", "", "150px", "50px", "white", "19px", "yellow");
+                "send('command(upnp,sync,Video)')", "",
+                "150px", "50px", "white", "19px", "yellow");
         </script>
 
         <!-- ***********************************************************************************   -->

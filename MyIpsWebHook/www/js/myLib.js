@@ -1240,6 +1240,7 @@ class GlideButton {
             }
             if (MenuType === "SM") {
                 if (IDMain !== "") {
+                    //script für Ctrl Window nachaden
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "8vw";
