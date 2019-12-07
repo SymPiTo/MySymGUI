@@ -260,4 +260,9 @@
              return audioJSON;
          }
 
+         getVideoLib() {
+             var videoJSON = '{"media":[{"no":"0","id":"8463e803cc5b40db9eb3","mediatype":"Video","playlistname":"0000","album":"0000_Tai Chi Chuan","icon":"http:\/\/192.168.178.9:32469\/proxy\/d01c0a90cdf5297aa91d\/albumart.jpg","totaltrack":"1","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"1","mediatype":"Video","playlistname":"0001","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"2","mediatype":"Video","playlistname":"0002","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"3","mediatype":"Video","playlistname":"0003","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"4","mediatype":"Video","playlistname":"0004","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"5","mediatype":"Video","playlistname":"0005","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"},{"id":"6","mediatype":"Video","playlistname":"0006","album":"leer","icon":"leer","totaltrack":"leer","lasttrack":"0","lastpos":"0:00:00","channel":"unknown","sender":"unknown","selected":"false"}]}'
+             return videoJSON;
+         }
+
      }

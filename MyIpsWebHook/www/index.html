@@ -3686,7 +3686,7 @@
                 "ctrlWindow", "MainUpnpBrowseCtrl", "");
             var CtrlBtnupnp4 = new CtrlButton();
             CtrlBtnupnp4.create("MainUpnp", "54vh", "233px", "ctrlbutton", "smaller", "purple", "Video",
-                "ctrlWindow", "MainUpnpDiscoverCtrl", "");
+                "ctrlWindow", "MainVideoCtrl", "");
             var CtrlBtnupnp3 = new CtrlButton();
             CtrlBtnupnp3.create("MainUpnp", "54vh", "342px", "ctrlbutton", "smaller", "purple", "Audio",
                 "ctrlWindow", "MainAudioBookCtrl", "");
@@ -3807,7 +3807,20 @@
 
 
 
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             Video Ctrl                              -->
+        <!-- ----------------------------------------------------------------------- -->
 
+        <!--  <Ctrl id = MainVideoCtrl class="VideoCtrl"></Ctrl>  -->
+        <script>
+            var CtrlMainVideo = new Area();
+            CtrlMainVideo.createCtrl("MainVideoCtrl", "bgPurpleLight");
+        </script>
+
+        <script>
+            var CtrlVideoList = new DynIconList();
+            CtrlVideoList.create("MainVideoCtrl", "Video");
+        </script>
 
 
 
