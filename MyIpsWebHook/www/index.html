@@ -469,6 +469,8 @@
         <subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>
 
         <script>
+            var SubMenuUPNP = new GlideButton();
+            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", "upnp1.png", "MainUpnp", "", "SM");
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", "_TV_BW.png", "MainTV", "", "SM");
             var SubMenuIRadio = new GlideButton();
@@ -476,10 +478,12 @@
                 "SM");
             var SubMenuCD = new GlideButton();
             SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", "CD1_BW.png", "MainUpnpCD", "", "SM");
-            var SubMenuUPNP = new GlideButton();
-            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", "upnp1.png", "MainUpnp", "", "SM");
+
             var SubMenuAudio = new GlideButton();
             SubMenuAudio.create("SubMenuMedia", "purple", "Audio Books", "AudioBookLib.png", "MainAudio", "", "SM");
+            var SubMenuVideo = new GlideButton();
+            SubMenuVideo.create("SubMenuMedia", "purple", "Video", "AudioBookLib.png", "MainVideo", "", "SM");
+
             var SubMenuCEOL = new GlideButton();
             SubMenuCEOL.create("SubMenuMedia", "purple", "Denon CEOL", "DenonCeolIcon.jpg", "MainCeol", "", "SM");
             var SubMenuBlueRay = new GlideButton();
@@ -3685,8 +3689,15 @@
             CtrlBtnupnp2.create("MainUpnp", "54vh", "125px", "ctrlbutton", "smaller", "purple", "Foto",
                 "ctrlWindow", "MainUpnpBrowseCtrl", "");
             var CtrlBtnupnp4 = new CtrlButton();
-            CtrlBtnupnp4.create("MainUpnp", "54vh", "233px", "ctrlbutton", "smaller", "purple", "Video",
-                "ctrlWindow", "MainVideoCtrl", "");
+
+
+
+            var CtrlBtnupnp4 = new FontCtrlButton();
+            CtrlBtnupnp4.create("MainUpnp", "purple", "330px", "235px", "fa fa-music", "Video", "CtrlFunc",
+                "1on", "MainVideoCtrl", "100px", "50px", "black", "19px", "red");
+
+
+
             var CtrlBtnupnp3 = new CtrlButton();
             CtrlBtnupnp3.create("MainUpnp", "54vh", "342px", "ctrlbutton", "smaller", "purple", "Audio",
                 "ctrlWindow", "MainAudioBookCtrl", "");
