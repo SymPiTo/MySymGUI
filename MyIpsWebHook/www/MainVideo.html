@@ -4,61 +4,59 @@
 <script>
     var MainVideo = new Area();
     MainVideo.createMain("MainVideo", "bgPurple");
-</script>
-
-<script>
+    //-------------------------------------------------
     var DiplayAudio = new MediaDisplay();
-    DiplayAudio.create("MainAudio", "0px", "20px", "500px", "200px", "DisplayBlue");
+    DiplayAudio.create("MainVideo", "0px", "20px", "500px", "200px", "DisplayBlue");
 
     var rahm = new Rahmen();
-    rahm.create("MainAudio", "222px", "24px", "73px", "501px", "DisplayBlue");
+    rahm.create("MainVideo", "222px", "24px", "73px", "501px", "DisplayBlue");
     var upnpVol = new TransVarDisplay();
-    upnpVol.create("MainAudio", "230px", "0%", "lime", "28px", "Volume", "");
+    upnpVol.create("MainVideo", "230px", "0%", "lime", "28px", "Volume", "");
     var upnpSource = new TransVarDisplay();
-    upnpSource.create("MainAudio", "230px", "60%", "lime", "28px", "Source", "", );
+    upnpSource.create("MainVideo", "230px", "60%", "lime", "28px", "Source", "", );
 
     var CDTrack = new Kachel();
-    CDTrack.create("MainAudio", "360px", "10px", "530px", "55px", "transparent", "Track")
+    CDTrack.create("MainVideo", "360px", "10px", "530px", "55px", "transparent", "Track")
     var upnpProgress = new analogBar();
-    upnpProgress.create("MainAudio", "405px", "20px", "cyan", "500px");
+    upnpProgress.create("MainVideo", "405px", "20px", "cyan", "500px");
 
     var Player = new ButtonSlider();
-    Player.create("MainAudio", "505px", "260px", "150px", "50px", "purple");
+    Player.create("MainVideo", "505px", "260px", "150px", "50px", "purple");
 
     var FontBtnPrev = new FontButtonNew();
-    FontBtnPrev.create("MainAudio", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
+    FontBtnPrev.create("MainVideo", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
         "send('command(upnp,play,previous)')");
 
     var FontBtnNext = new FontButtonNew();
-    FontBtnNext.create("MainAudio", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px", "60px",
+    FontBtnNext.create("MainVideo", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px", "60px",
         "send('command(upnp,play,next)')");
 
     var FontBtnStop = new FontButtonNew();
-    FontBtnStop.create("MainAudio", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px",
+    FontBtnStop.create("MainVideo", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px",
         "send('command(upnp,stop,all)')");
 
     var FontBtnPause = new FontButtonNew();
-    FontBtnPause.create("MainAudio", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px",
+    FontBtnPause.create("MainVideo", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px",
         "send('command(upnp,pause,all)')");
 
     var FontBtnPlay = new FontButtonNew();
-    FontBtnPlay.create("MainAudio", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px",
+    FontBtnPlay.create("MainVideo", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px",
         "send('command(upnp,play,continue)')");
 
     var FontBtnVolDwn = new FontButtonNew();
-    FontBtnVolDwn.create("MainAudio", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
+    FontBtnVolDwn.create("MainVideo", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
         "50px",
         "send('command(upnp,vol,dec)')");
     var FontBtnMute = new FontButtonNew();
-    FontBtnMute.create("MainAudio", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
+    FontBtnMute.create("MainVideo", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
         "50px",
         "send('command(upnp,mute,toggle)')");
     var FontBtnVolUp = new FontButtonNew();
-    FontBtnVolUp.create("MainAudio", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
+    FontBtnVolUp.create("MainVideo", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
         "50px",
         "send('command(upnp,vol,inc)')");
     var FontBtnPower = new FontButtonNew();
-    FontBtnPower.create("MainAudio", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
+    FontBtnPower.create("MainVideo", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
         "50px",
         "send('command(upnp,power,toggle)')");
 </script>

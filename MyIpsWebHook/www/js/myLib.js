@@ -1258,35 +1258,57 @@ class GlideButton {
             }
             if (MenuType === "SMload") {
                 //part HTML nachladen
+                var x = document.getElementById(IDMain);
+                if (x == null) {
+                    function loadContent() {
+                        jQuery.get(IDMain + ".html", function (data) {
+                            jQuery("#Main").html(data);
 
-                function loadContent(name) {
-                    $get({
-                        url: 'MainVideo.html',
-                        dataType: 'html'
-                    }).done((data) => {
-                        $('#Container').html(data);
-                    });
-
-                }
-                loadContent('test');
-
-
-                if (IDMain !== "") {
-                    //script für Ctrl Window nachaden
-                    document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8vw";
-                    //Haupt Fenster einblenden
-                    document.getElementById(IDMain).style.width = "58vw";
-                    //Control Fenster einblenden
-                    document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                        }).done(function () {
+                            if (IDMain !== "") {
+                                //script für Ctrl Window nachaden
+                                document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                                //SubMenue Leiste verkuerzt einblenden
+                                document.getElementById(ParentID).style.width = "8vw";
+                                //Haupt Fenster einblenden
+                                document.getElementById(IDMain).style.width = "58vw";
+                                //Control Fenster einblenden
+                                document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                            } else {
+                                document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                                //SubMenue Leiste verkuerzt einblenden
+                                document.getElementById(ParentID).style.width = "8vw";
+                                //Haupt Fenster komplett einblenden
+                                document.getElementById(IDFull).style.width = "92vw";
+                            }
+                        })
+                    }
+                    loadContent();
                 } else {
-                    document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8vw";
-                    //Haupt Fenster komplett einblenden
-                    document.getElementById(IDFull).style.width = "92vw";
+                    if (IDMain !== "") {
+                        //script für Ctrl Window nachaden
+                        document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                        //SubMenue Leiste verkuerzt einblenden
+                        document.getElementById(ParentID).style.width = "8vw";
+                        //Haupt Fenster einblenden
+                        document.getElementById(IDMain).style.width = "58vw";
+                        //Control Fenster einblenden
+                        document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                    } else {
+                        document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                        //SubMenue Leiste verkuerzt einblenden
+                        document.getElementById(ParentID).style.width = "8vw";
+                        //Haupt Fenster komplett einblenden
+                        document.getElementById(IDFull).style.width = "92vw";
+                    }
                 }
+
+
+
+
+
+
+
             }
 
             var kopfleiste = document.getElementsByClassName("Top")[0];
