@@ -5,20 +5,20 @@
     var MainVideo = new Area();
     MainVideo.createMain("MainVideo", "bgPurple");
     //-------------------------------------------------
-    var DiplayAudio = new MediaDisplay();
-    DiplayAudio.create("MainVideo", "0px", "20px", "500px", "200px", "DisplayBlue");
+    var DiplayVideo = new MediaDisplay();
+    DiplayVideo.create("MainVideo", "0px", "20px", "500px", "200px", "DisplayBlue");
 
     var rahm = new Rahmen();
     rahm.create("MainVideo", "222px", "24px", "73px", "501px", "DisplayBlue");
-    var upnpVol = new TransVarDisplay();
-    upnpVol.create("MainVideo", "230px", "0%", "lime", "28px", "Volume", "");
-    var upnpSource = new TransVarDisplay();
-    upnpSource.create("MainVideo", "230px", "60%", "lime", "28px", "Source", "", );
+    var upnpVideoVol = new TransVarDisplay();
+    upnpVideoVol.create("MainVideo", "230px", "0%", "lime", "28px", "Volume", "");
+    var upnpVideoSource = new TransVarDisplay();
+    upnpVideoSource.create("MainVideo", "230px", "60%", "lime", "28px", "Source", "", );
 
-    var CDTrack = new Kachel();
-    CDTrack.create("MainVideo", "360px", "10px", "530px", "55px", "transparent", "Track")
-    var upnpProgress = new analogBar();
-    upnpProgress.create("MainVideo", "405px", "20px", "cyan", "500px");
+    var VideoTrack = new Kachel();
+    VideoTrack.create("MainVideo", "360px", "10px", "530px", "55px", "transparent", "Track")
+    var upnpVideoProgress = new analogBar();
+    upnpVideoProgress.create("MainVideo", "405px", "20px", "cyan", "500px");
 
     var VideoPlayer = new ButtonSlider();
     VideoPlayer.create("MainVideo", "505px", "260px", "150px", "50px", "purple");

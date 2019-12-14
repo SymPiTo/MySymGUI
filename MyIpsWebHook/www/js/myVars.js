@@ -724,6 +724,17 @@
       upnpCDProgress.update(sym[259]);
       CDPlayer.update(sym[258]);
 
+      /* ---------------------------------- UPNP Video ---------------------------------- */
+      if (document.getElementById("MainVideo")) {
+        DiplayVideo.update(sym[253], sym[251], sym[252], sym[254], sym[250]);
+        VideoTrack.update("Track: " + sym[255]);
+        upnpVideoVol.update(sym[257]);
+        upnpVideoSource.update(sym[256]);
+        upnpVideoProgress.update(sym[259]);
+      }
+
+
+
       /* --------------------------- Bad Temp / Humidity -------------------------- */
       VarDisTempBad.update(sym[231]);
       VarDisHumidBad.update(sym[232]);
