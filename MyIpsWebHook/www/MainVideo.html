@@ -20,15 +20,19 @@
     var upnpProgress = new analogBar();
     upnpProgress.create("MainVideo", "405px", "20px", "cyan", "500px");
 
-    var Player = new ButtonSlider();
-    Player.create("MainVideo", "505px", "260px", "150px", "50px", "purple");
+    var VideoPlayer = new ButtonSlider();
+    VideoPlayer.create("MainVideo", "505px", "260px", "150px", "50px", "purple");
+
+    var FontBtnStart = new FontButtonNew();
+    FontBtnStart.create("MainVideo", "fontbutton", "purple", "71vh", "20px", "fa fa-step-backward", "60px", "60px",
+        "send('command(upnp,seek,start)')");
 
     var FontBtnPrev = new FontButtonNew();
-    FontBtnPrev.create("MainVideo", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px", "60px",
+    FontBtnPrev.create("MainVideo", "fontbutton", "purple", "71vh", "90px", "fa fa-backward", "60px", "60px",
         "send('command(upnp,seek,backward)')");
 
     var FontBtnNext = new FontButtonNew();
-    FontBtnNext.create("MainVideo", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px", "60px",
+    FontBtnNext.create("MainVideo", "fontbutton", "purple", "71vh", "160px", "fa fa-forward", "60px", "60px",
         "send('command(upnp,seek,forward)')");
 
     var FontBtnStop = new FontButtonNew();
