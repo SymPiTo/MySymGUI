@@ -265,4 +265,8 @@
              return videoJSON;
          }
 
+         getFotoLib() {
+             var FotoJSON = '';
+             return FotoJSON;
+         }
      }

@@ -3914,6 +3914,12 @@ class DynIconList {
                 var SourceList1 = JSON.parse(SourceListJson);
                 SourceList = SourceList1['media'];
                 break;
+            case "Foto":
+                var SourceListJson = Liste.getFotoLib();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
+                break;
             case "CeolAudio":
                 var SourceListJson = Liste.getAudiobookLib();
                 var SourceList = Array();
@@ -3942,6 +3948,9 @@ class DynIconList {
                 case "Video":
                     var icon = item["icon"];
                     break
+                case "Foto":
+                    var icon = item["icon"];
+                    break
                 case "CeolCD":
                     var icon = item["icon"];
                     break;
@@ -3963,6 +3972,8 @@ class DynIconList {
             } else if (source === "Audio") {
                 elem.src = icon;
             } else if (source === "Video") {
+                elem.src = icon;
+            } else if (source === "Foto") {
                 elem.src = icon;
             } else if (source === "CeolCD") {
                 elem.src = icon;
@@ -3992,6 +4003,8 @@ class DynIconList {
                     var cmd = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Video") {
                     var cmd = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
+                } else if (source === "Foto") {
+                    var cmd = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolCD") {
                     var cmd = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolAudio") {

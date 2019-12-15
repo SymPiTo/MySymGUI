@@ -163,7 +163,7 @@
         sym[89] = ips[0].ID29767; //SZ Sonos Treble
         sym[90] = ips[0].ID57771; //SZ Sonos Playmode
         sym[91] = ips[0].ID35731; //SZ Sonos Cover image  
-        sym[92] = ips[0].ID34292; //ArtisPicLastFM - Denon
+        sym[92] = ips[0].ID57135; //ArtisPicLastFM - Denon
         sym[93] = ips[0].ID30505; //DIDL Artist - Denon
         sym[94] = ips[0].ID17922; //DIDL Title - Denon
         sym[95] = ips[0].ID31822; //Line3 - Denon

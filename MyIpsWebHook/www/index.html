@@ -471,22 +471,30 @@
         <script>
             var SubMenuUPNP = new GlideButton();
             SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", "upnp1.png", "MainUpnp", "", "SM");
+
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", "_TV_BW.png", "MainTV", "", "SM");
+
             var SubMenuIRadio = new GlideButton();
             SubMenuIRadio.create("SubMenuMedia", "purple", "Internet Radio", "_IRadio_BW2a.png", "MainIRadio", "",
                 "SM");
+
             var SubMenuCD = new GlideButton();
             SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", "CD1_BW.png", "MainUpnpCD", "", "SM");
 
             var SubMenuAudio = new GlideButton();
             SubMenuAudio.create("SubMenuMedia", "purple", "Audio Books", "AudioBookLib.png", "MainAudio", "", "SM");
+
             var SubMenuVideo = new GlideButton();
             SubMenuVideo.create("SubMenuMedia", "purple", "Video", "Video.png", "MainVideo", "", "SMload");
+
+            var SubMenuFoto = new GlideButton();
+            SubMenuFoto.create("SubMenuMedia", "purple", "Photo", "Foto.png", "MainFoto", "", "SMload");
 
             var SubMenuCEOL = new GlideButton();
             SubMenuCEOL.create("SubMenuMedia", "purple", "Denon CEOL",
                 "DenonCeolIcon.jpg", "MainCeol", "", "SM");
+
             var SubMenuBlueRay = new GlideButton();
             SubMenuBlueRay.create("SubMenuMedia", "purple",
                 "BlueRay Player", "BlueRay.png", "MainBlueRay", "", "SM");
@@ -3664,7 +3672,7 @@
             RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
             ServerImg.create("MainUpnp", "50px", "60px", "100px", "100px", "");
-            var ServerBtn = new ButtonDropDown();
+            var ServerBtn = new ButtonSlider();
             ServerBtn.create("MainUpnp", "180px", "35px", "150px", "50px", "purple");
 
             var RahmenB = new Kachel();
