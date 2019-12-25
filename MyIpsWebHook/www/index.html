@@ -374,11 +374,11 @@
             SubMenuLichtWZ.create("SubMenuWZ", "cyan", "Licht Wohnzimmer", licht, "MainLightWZ", "", "SM");
 
             var SubMenuRolloWZ = new GlideButton();
-            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", "DenonCeolIcon.jpg", "MainCeolWZ", "", "SM");
+            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", denon, "MainCeolWZ", "", "SM");
             var SubMenuTV = new GlideButton();
-            SubMenuTV.create("SubMenuWZ", "cyan", "Samsung TV", "_TV_BW.png", "MainTV", "", "SMload");
+            SubMenuTV.create("SubMenuWZ", "cyan", "Samsung TV", tv, "MainTV", "", "SMload");
             var SubMenuRolloWZ = new GlideButton();
-            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "BlueRayPlayer", "BlueRay.png", "MainBlueRayWZ", "", "SM");
+            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "BlueRayPlayer", blueray, "MainBlueRayWZ", "", "SM");
         </script>
 
 
@@ -407,7 +407,7 @@
             SubMenuLightSZ.create("SubMenuSZ", "sandy", "Licht Schlafzimmer", licht, "MainLightSZ", "",
                 "SM");
             var SubMenuSonosZ = new GlideButton();
-            SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", "Sonos_BW_web.png", "MainSonosSZ", "", "SM");
+            SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", sonos, "MainSonosSZ", "", "SM");
         </script>
 
         <!-- ************************ Sub Menu Kueche  ************************  -->
@@ -420,9 +420,9 @@
             SubMenuRolloK.create("SubMenuK", "midgreen", "Rolladen Kueche", rolladen, "MainRolloK", "",
                 "SM");
             var SubMenuRezepte = new GlideButton();
-            SubMenuRezepte.create("SubMenuK", "midgreen", "Rezepte", "cook_web.png", "MainRezepte", "", "SM");
+            SubMenuRezepte.create("SubMenuK", "midgreen", "Rezepte", kochen, "MainRezepte", "", "SM");
             var SubMenuClock = new GlideButton();
-            SubMenuClock.create("SubMenuK", "midgreen", "Clock", "Uhr_BW_web.png", "MainClock", "", "SM");
+            SubMenuClock.create("SubMenuK", "midgreen", "Clock", uhr, "MainClock", "", "SM");
         </script>
 
 
@@ -433,7 +433,7 @@
             var SubMenuRolloB = new GlideButton();
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", rolladen, "MainRolloB", "", "SM");
             var SubMenuDoorB = new GlideButton();
-            SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", "door.png", "MainDoorB", "", "SM");
+            SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", tuer, "MainDoorB", "", "SM");
         </script>
 
         <!-- ------------------------------ Sub Menu Bad ------------------------------- -->
@@ -441,7 +441,7 @@
 
         <script>
             var SubMenuFBad = new GlideButton();
-            SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", "Fenster.png", "MainFBad", "", "SM");
+            SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", fenster, "MainFBad", "", "SM");
         </script>
 
 
@@ -472,34 +472,34 @@
 
         <script>
             var SubMenuUPNP = new GlideButton();
-            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", "upnp1.png", "MainUpnp", "", "SM");
+            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SM");
 
             var SubMenuTV = new GlideButton();
-            SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", "_TV_BW.png", "MainTV", "", "SMload");
+            SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", tv, "MainTV", "", "SMload");
 
             var SubMenuIRadio = new GlideButton();
-            SubMenuIRadio.create("SubMenuMedia", "purple", "Internet Radio", "_IRadio_BW2a.png", "MainIRadio", "",
+            SubMenuIRadio.create("SubMenuMedia", "purple", "Internet Radio", iradio, "MainIRadio", "",
                 "SM");
 
             var SubMenuCD = new GlideButton();
-            SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", "CD1_BW.png", "MainUpnpCD", "", "SM");
+            SubMenuCD.create("SubMenuMedia", "purple", "Musik CDs", cdlib, "MainUpnpCD", "", "SM");
 
             var SubMenuAudio = new GlideButton();
-            SubMenuAudio.create("SubMenuMedia", "purple", "Audio Books", "AudioBookLib.png", "MainAudio", "", "SM");
+            SubMenuAudio.create("SubMenuMedia", "purple", "Audio Books", audiobooklib, "MainAudio", "", "SM");
 
             var SubMenuVideo = new GlideButton();
-            SubMenuVideo.create("SubMenuMedia", "purple", "Video", "Video.png", "MainVideo", "", "SMload");
+            SubMenuVideo.create("SubMenuMedia", "purple", "Video", video, "MainVideo", "", "SMload");
 
             var SubMenuFoto = new GlideButton();
-            SubMenuFoto.create("SubMenuMedia", "purple", "Photo", "Foto.png", "MainFoto", "", "SMload");
+            SubMenuFoto.create("SubMenuMedia", "purple", "Photo", foto, "MainFoto", "", "SMload");
 
             var SubMenuCEOL = new GlideButton();
             SubMenuCEOL.create("SubMenuMedia", "purple", "Denon CEOL",
-                "DenonCeolIcon.jpg", "MainCeol", "", "SM");
+                denon, "MainCeol", "", "SM");
 
             var SubMenuBlueRay = new GlideButton();
             SubMenuBlueRay.create("SubMenuMedia", "purple",
-                "BlueRay Player", "BlueRay.png", "MainBlueRay", "", "SM");
+                "BlueRay Player", blueray, "MainBlueRay", "", "SM");
         </script>
 
 
@@ -508,16 +508,16 @@
 
         <script>
             var SubMenuHzAll = new GlideButton();
-            SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", "_Heizung_BW2.png", "MainHzAll", "", "SM");
+            SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", heizung, "MainHzAll", "", "SM");
             var SubMenuHzWZ = new GlideButton();
-            SubMenuHzWZ.create("SubMenuHz", "cyan", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHeizungWZ", "",
+            SubMenuHzWZ.create("SubMenuHz", "cyan", "Heizung Wohnzimmer", heizung, "MainHeizungWZ", "",
                 "SM");
             var SubMenuHzKZ = new GlideButton();
-            SubMenuHzKZ.create("SubMenuHz", "olive", "Heizung Kinderzimmer", "_Heizung_BW2.png", "MainHzKZ", "", "SM");
+            SubMenuHzKZ.create("SubMenuHz", "olive", "Heizung Kinderzimmer", heizung, "MainHzKZ", "", "SM");
             var SubMenuHzSZ = new GlideButton();
-            SubMenuHzSZ.create("SubMenuHz", "sandy", "Heizung Schlafzimmer", "_Heizung_BW2.png", "MainHzSZ", "", "SM");
+            SubMenuHzSZ.create("SubMenuHz", "sandy", "Heizung Schlafzimmer", heizung, "MainHzSZ", "", "SM");
             var SubMenuHzK = new GlideButton();
-            SubMenuHzK.create("SubMenuHz", "midgreen", "Heizung Kueche", "_Heizung_BW2.png", "MainHzK", "", "SM");
+            SubMenuHzK.create("SubMenuHz", "midgreen", "Heizung Kueche", heizung, "MainHzK", "", "SM");
         </script>
 
         <!-- ************************Menu  Rolladen  ************************  -->
@@ -547,9 +547,9 @@
 
         <script>
             var SubMenuWSS = new GlideButton();
-            SubMenuWSS.create("SubMenuNet", "midgreen", "IPS Server", "IP_Symcon.png", "MainIPS", "", "SM");
+            SubMenuWSS.create("SubMenuNet", "midgreen", "IPS Server", ips, "MainIPS", "", "SM");
             var SubMenuIPS = new GlideButton();
-            SubMenuIPS.create("SubMenuNet", "midgreen", "Websocket Server", "WSS.png", "MainWSS", "", "SM");
+            SubMenuIPS.create("SubMenuNet", "midgreen", "Websocket Server", wss, "MainWSS", "", "SM");
         </script>
 
 
