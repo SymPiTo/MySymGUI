@@ -1,0 +1,93 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  Samsung TV                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script>
+    var MainWinTV = new Area();
+    MainWinTV.createMain("MainTV", "bgPurple");
+</script>
+
+<script>
+    var LedDisplayTV = new LEDdisplay();
+    LedDisplayTV.create("MainTV", "LedDisplayTV", "1vh", "20%", "40px", "70%");
+
+    /*
+    var NavPadSecKey = new NavPad();
+    NavPadSecKey.create("MainTV", "NavPad", "purple", "10vh" , "30%", ["fa fa-square","fa fa-caret-up","fa fa-square","fa fa-caret-left","fa fa-thumbs-up","fa fa-caret-right","fa fa-square","fa fa-caret-down","fa fa-square"] ); 
+     */
+    var TVframe = new SetIframe();
+    TVframe.create("MainTV", "12vh", "2%", "160px", "400px", "");
+
+
+
+    var rahm = new Rahmen();
+    rahm.create("MainTV", "49vh", "3%", "70px", "527px", "black");
+
+    var transVarPower = new TransVarDisplay();
+    transVarPower.create("MainTV", "50vh", "0%", "lime", "28px", "Power", "");
+    var transVarVol = new TransVarDisplay();
+    transVarVol.create("MainTV", "50vh", "20%", "lime", "28px", "Volume", "", );
+    var transVarCh = new TransVarDisplay();
+    transVarCh.create("MainTV", "50vh", "40%", "lime", "28px", "Channel", "", );
+    var transVarSource = new TransVarDisplay();
+    transVarSource.create("MainTV", "50vh", "60%", "lime", "28px", "Source", "", );
+
+
+    var CtrlBtnTVList = new CtrlButton();
+    CtrlBtnTVList.create("MainTV", "63vh", "2%", "ctrlbutton", "normal", "purple", "Channel", "ctrlWindow",
+        "TVChannel");
+    var CtrlBtnTVCh = new CtrlButton();
+    CtrlBtnTVCh.create("MainTV", "63vh", "34%", "ctrlbutton", "normal", "purple", "Program", "CtrlCmd",
+        "TVGuide", "command(TV,Guide,update)");
+    var CtrlBtnTVx = new CtrlButton();
+    CtrlBtnTVx.create("MainTV", "63vh", "66%", "ctrlbutton", "normal", "purple", "Source", "ctrlWindow",
+        "TVSourceCtrl");
+    var CtrlBtnTVa = new CtrlButton();
+    CtrlBtnTVa.create("MainTV", "73vh", "2%", "ctrlbutton", "normal", "purple", "", "command", "",
+        "send('command(TV,AA,activate)') ");
+    var CtrlBtnTVb = new CtrlButton();
+    CtrlBtnTVb.create("MainTV", "73vh", "34%", "ctrlbutton", "normal", "purple", "", "command", "",
+        "send('command(TV,AA,activate)') ");
+    var CtrlBtnTVc = new CtrlButton();
+    CtrlBtnTVc.create("MainTV", "73vh", "66%", "ctrlbutton", "normal", "purple", "", "CtrlCmd", "TVGuide",
+        "command(TV,Guide,update)");
+
+    var FontBtnA = new FontButtonNew();
+    FontBtnA.create("MainTV", "fontbutton", "purple", "83vh", "2%", "fa fa-backward", "60px", "60px",
+        "send('command(TV,key,KEY_REWIND)')");
+    var FontBtnB = new FontButtonNew();
+    FontBtnB.create("MainTV", "fontbutton", "purple", "83vh", "12%", "fa fa-pause", "60px", "60px",
+        "send('command(TV,key,KEY_PAUSE)')");
+    var FontBtnC = new FontButtonNew();
+    FontBtnC.create("MainTV", "fontbutton", "purple", "83vh", "22%", "fa fa-play", "60px", "60px",
+        "send('command(TV,key,KEY_PLAY)')");
+    var FontBtnD = new FontButtonNew();
+    FontBtnD.create("MainTV", "fontbutton", "purple", "83vh", "34%", "fa fa-volume-down", "60px", "60px",
+        "send('command(TV,key,KEY_VOLDOWN)')");
+    var FontBtnH = new FontButtonNew();
+    FontBtnH.create("MainTV", "fontbutton", "purple", "83vh", "44%", "fa fa-volume-down", "60px", "60px",
+        "send('command(TV,key,KEY_MUTE)')");
+    var FontBtnI = new FontButtonNew();
+    FontBtnI.create("MainTV", "fontbutton", "purple", "83vh", "54%", "fa fa-volume-down", "60px", "60px",
+        "send('command(TV,key,KEY_VOLUP)')");
+    var FontBtnE = new FontButtonNew();
+    FontBtnE.create("MainTV", "fontbutton", "purple", "83vh", "66%", "fa fa-stop", "60px", "60px",
+        "send('command(TV,key,KEY_STOP)')");
+    var FontBtnF = new FontButtonNew();
+    FontBtnF.create("MainTV", "fontbutton", "purple", "83vh", "76%", "fa fa-circle", "60px", "60px",
+        "send('command(TV,key,KEY_REC)')");
+    var FontBtnG = new FontButtonNew();
+    FontBtnG.create("MainTV", "fontbutton", "purple", "83vh", "86%", "fa fa-forward", "60px", "60px",
+        "send('command(TV,key,KEY_FF)')");
+</script>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                      Samsung TV    Sender Liste                         -->
+<!-- ----------------------------------------------------------------------- -->
+<!--  <Ctrl id = MainTVCtrl class="TVCtrl"></Ctrl>  -->
+<script>
+    var CtrlMainTVChannels = new Area();
+    CtrlMainTVChannels.createCtrl("MainTVCtrl", "bgPurpleLight");
+    //---------------------------------------------------------
+    var CtrlTVList = new DynIconList();
+    CtrlTVList.create("MainTVCtrl", "TV");
+</script>

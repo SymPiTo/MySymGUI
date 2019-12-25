@@ -941,44 +941,46 @@
       IncredBox.update(sym[102]);
       txtBox.update(sym[103]);
       RezepteBox.update(sym[104]);
+
       //<!-- ******************** Samsung TV **************************  -->
-      TVframe.update(sym[98], 10000);
-      TVGuideframe.update(sym[99], 10000);
-      transVarPower.update(sym[76], "state", "aus", "ein", "", "");
-      transVarVol.update(sym[75]);
-      transVarCh.update(sym[77]);
-      LedDisplayTV.update(sym[78]);
-      transVarSource.update(sym[79]);
+      if (document.getElementById("MainTV1")) {
+        TVframe.update(sym[98], 10000);
+        TVGuideframe.update(sym[99], 10000);
+        transVarPower.update(sym[76], "state", "aus", "ein", "", "");
+        transVarVol.update(sym[75]);
+        transVarCh.update(sym[77]);
+        LedDisplayTV.update(sym[78]);
+        transVarSource.update(sym[79]);
 
-      iDisArtistSsz.update(sym[91], sym[84], sym[82], sym[83]);
-      transVarVolSsz.update(sym[85], "");
-      var bassCalc = Math.round(5 * (sym[88] + 10));
-      transVarBassSsz.update(bassCalc, "");
-      var trebleCalc = Math.round(5 * (sym[89] + 10));
-      transVarTrebleSsz.update(trebleCalc, "");
-      var PM = "";
-      switch (sym[90]) {
-        case 0:
-          PM = "NORMAL";
-          break;
-        case 1:
-          PM = "REPEAT_ALL";
-          break;
-        case 2:
-          PM = "REPEAT_ONE";
-          break;
-        case 3:
-          PM = "SHUFFLE_NOREPEAT";
-          break;
-        case 4:
-          PM = "SHUFFLE";
-          break;
-        case 5:
-          PM = "SHUFFLE_REPEAT_ONE";
-          break;
+        iDisArtistSsz.update(sym[91], sym[84], sym[82], sym[83]);
+        transVarVolSsz.update(sym[85], "");
+        var bassCalc = Math.round(5 * (sym[88] + 10));
+        transVarBassSsz.update(bassCalc, "");
+        var trebleCalc = Math.round(5 * (sym[89] + 10));
+        transVarTrebleSsz.update(trebleCalc, "");
+        var PM = "";
+        switch (sym[90]) {
+          case 0:
+            PM = "NORMAL";
+            break;
+          case 1:
+            PM = "REPEAT_ALL";
+            break;
+          case 2:
+            PM = "REPEAT_ONE";
+            break;
+          case 3:
+            PM = "SHUFFLE_NOREPEAT";
+            break;
+          case 4:
+            PM = "SHUFFLE";
+            break;
+          case 5:
+            PM = "SHUFFLE_REPEAT_ONE";
+            break;
+        }
+        transVarPlayModeSsz.update(PM, "");
       }
-      transVarPlayModeSsz.update(PM, "");
-
       //<!-- ******************** Person  **************************  -->
       ihuman.update(sym[58]);
       ihumanAZ.update(sym[228]);

@@ -1,0 +1,77 @@
+<!-- ************************** TV Guide  **************************  -->
+<Ctrl id="MainTVGuideCtrl" class="TVGuide"> </Ctrl>
+
+<script>
+    var TVGuideframe = new SetIframe();
+    TVGuideframe.create("MainTVGuideCtrl", "0px", "0px", "700px", "250px", "");
+
+    /*
+     var ProgGuide = new TVguide();
+    ProgGuide.create("MainTVGuideCtrl"); 
+    */
+</script>
+
+<!-- ************************** TV Source  **************************  -->
+<Ctrl id="MainTVSourceCtrl" class="TVSourceCtrl"> </Ctrl>
+
+<script>
+    var CtrlBtnStv = new CtrlStatButton();
+    CtrlBtnStv.create("MainTVSourceCtrl", "3vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,TV)') ");
+    var CtrlBtnSHDMI1 = new CtrlStatButton();
+    CtrlBtnSHDMI1.create("MainTVSourceCtrl", "13vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,HDMI1/DVI)') ");
+    var CtrlBtnSHDMI2 = new CtrlStatButton();
+    CtrlBtnSHDMI2.create("MainTVSourceCtrl", "23vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,HDMI2)') ");
+    var CtrlBtnSHDMI3 = new CtrlStatButton();
+    CtrlBtnSHDMI3.create("MainTVSourceCtrl", "33vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,HDMI3)') ");
+    var CtrlBtnSHDMI4 = new CtrlStatButton();
+    CtrlBtnSHDMI4.create("MainTVSourceCtrl", "43vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,HDMI4)') ");
+    var CtrlBtnSCART1 = new CtrlStatButton();
+    CtrlBtnSCART1.create("MainTVSourceCtrl", "53vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,SCART1)') ");
+    var CtrlBtnSCART2 = new CtrlStatButton();
+    CtrlBtnSCART2.create("MainTVSourceCtrl", "63vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,SCARTI2)') ");
+    var CtrlBtnSPC = new CtrlStatButton();
+    CtrlBtnSPC.create("MainTVSourceCtrl", "73vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,PC)') ");
+    var CtrlBtnSAV = new CtrlStatButton();
+    CtrlBtnSAV.create("MainTVSourceCtrl", "83vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,AV)') ");
+    var CtrlBtnSComp = new CtrlStatButton();
+    CtrlBtnSComp.create("MainTVSourceCtrl", "93vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,COMPONENT)') ");
+    var CtrlBtnSUSB = new CtrlStatButton();
+    CtrlBtnSUSB.create("MainTVSourceCtrl", "103vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,USB)') ");
+    var CtrlBtnSDLNA = new CtrlStatButton();
+    CtrlBtnSDLNA.create("MainTVSourceCtrl", "113vh", "15%", "normal", "", "purple", "command",
+        "send('command(TV,source,DLNA)') ");
+</script>
+
+<!-- ************************** Right - TV Internet Links **************************  -->
+<Ctrl class="TVINet">
+    <div class="col">
+        <div class="IconButton small sandy" onclick="wwwLink('https://www.twitch.tv/summonersinnlive')"
+            style="position: relative; top: 100px">
+            <img class="IconS" src="images/www.png" />
+            <span style="font-size: 22px; padding-top: 5px;">Summoners InnLive</span>
+        </div>
+        <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
+            <img class="IconS" src="images/www.png" />
+            <span style="font-size: 22px; padding-top: 5px;">- - </span>
+        </div>
+        <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
+            <img class="IconS" src="images/www.png" />
+            <span style="font-size: 22px; padding-top: 5px;">- - r</span>
+        </div>
+        <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
+            <img class="IconS" src="images/www.png" />
+            <span style="font-size: 22px; padding-top: 5px;">- - </span>
+        </div>
+    </div>
+</Ctrl>

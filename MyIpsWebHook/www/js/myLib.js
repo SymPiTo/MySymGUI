@@ -1184,9 +1184,6 @@ class GlideButton {
         elem1.className = "GlideButton";
         elem1.classList.add(farbe, "area");
 
-
-
-
         elem1.onclick = function () {
             if (MenuType === "R") {
                 // Main-Menus aufklappen  
@@ -3897,7 +3894,10 @@ class DynIconList {
                 SourceList = SourceList1['media'];
                 break;
             case "TV":
-                var SourceList = Liste.getTVchannels();
+                var SourceListJson = Liste.getTVchannels();
+                var SourceList = Array();
+                var SourceList1 = JSON.parse(SourceListJson);
+                SourceList = SourceList1['media'];
                 break;
             case "IRadio":
                 var SourceList = Liste.getIRadiochannels();
@@ -3994,7 +3994,7 @@ class DynIconList {
                 elem.classList.remove("iconTV");
                 item['selected'] = true;
                 if (source === "TV") {
-                    var cmd = "command(TV,Channel," + item['Sender'] + ")";
+                    var cmd = "func(setvalue, 28649," + "so ein scheiss" + ")";
                 } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "CD") {
