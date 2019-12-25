@@ -1319,7 +1319,9 @@ class GlideButton {
         var elem2 = document.createElement("img");
         elem2.className = "icon";
 
-        elem2.src = "images/" + image;
+        //elem2.src = "images/" + image;
+        elem2.src = image;
+
         elem1.append(elem2);
 
         var elem2a = document.createElement("div");
@@ -3994,7 +3996,7 @@ class DynIconList {
                 elem.classList.remove("iconTV");
                 item['selected'] = true;
                 if (source === "TV") {
-                    var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
+                    var cmd = "func(STV_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "CD") {

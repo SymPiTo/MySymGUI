@@ -20,6 +20,7 @@
     <script src="js/myVars.js"></script>
     <script src="js/myLib.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/iconSet.js"></script>
 
     <script src="js/ips_functions.js"></script>
 
@@ -287,37 +288,38 @@
 
         <script>
             var MenuHome = new GlideButton();
-            MenuHome.create("MainMenu", "grey", "Home", "_Home_BW_web.png", "MenuStart", "", "R");
+            MenuHome.create("MainMenu", "grey", "Home",
+                home, "MenuStart", "", "R");
             var LeftMenuFP = new GlideButton();
-            LeftMenuFP.create("MainMenu", "pink", "Floorplan", "_Floorplan_BW_web.png", "", "floorplan", "MM");
+            LeftMenuFP.create("MainMenu", "pink", "Floorplan", floorplan, "", "floorplan", "MM");
             var LeftMenuSec = new GlideButton();
-            LeftMenuSec.create("MainMenu", "red", "Alarmanlage", "_AlarmAnlage_BW_web.png", "MenuSec", "", "MM");
+            LeftMenuSec.create("MainMenu", "red", "Alarmanlage", alarm, "MenuSec", "", "MM");
             var LeftMenuWZ = new GlideButton();
-            LeftMenuWZ.create("MainMenu", "cyan", "Wohnzimmer", "_Wohnzimmer_BW_web.png", "MenuWZ", "", "MM");
+            LeftMenuWZ.create("MainMenu", "cyan", "Wohnzimmer", wohnzimmer, "MenuWZ", "", "MM");
             var LeftMenuKZ = new GlideButton();
-            LeftMenuKZ.create("MainMenu", "olive", "Kinderzimmer", "_Kinderzimmer_BW_web.png", "MenuKZ", "", "MM");
+            LeftMenuKZ.create("MainMenu", "olive", "Kinderzimmer", kinderzimmer, "MenuKZ", "", "MM");
             var LeftMenuSZ = new GlideButton();
-            LeftMenuSZ.create("MainMenu", "sandy", "Schlafzimmer", "_Schlafzimmer_BW_web.png", "MenuSZ", "", "MM");
+            LeftMenuSZ.create("MainMenu", "sandy", "Schlafzimmer", schlafzimmer, "MenuSZ", "", "MM");
             var LeftMenuK = new GlideButton();
-            LeftMenuK.create("MainMenu", "midgreen", "Kueche", "_Kueche_BW_web.png", "MenuK", "", "MM");
+            LeftMenuK.create("MainMenu", "midgreen", "Kueche", kueche, "MenuK", "", "MM");
             var LeftMenuB = new GlideButton();
-            LeftMenuB.create("MainMenu", "blue", "Balkon", "_Balkon_BW_web.png", "MenuB", "", "MM");
+            LeftMenuB.create("MainMenu", "blue", "Balkon", balkon, "MenuB", "", "MM");
             var LeftMenuBad = new GlideButton();
-            LeftMenuBad.create("MainMenu", "violet", "Bad", "_Bad.png", "MenuBad", "", "MM");
+            LeftMenuBad.create("MainMenu", "violet", "Bad", bad, "MenuBad", "", "MM");
             var LeftMenuDiele = new GlideButton();
-            LeftMenuDiele.create("MainMenu", "yellowgreen", "Diele", "Diele.png", "MenuDiele", "", "MM");
+            LeftMenuDiele.create("MainMenu", "yellowgreen", "Diele", diele, "MenuDiele", "", "MM");
 
             var LeftMenuAZ = new GlideButton();
-            LeftMenuAZ.create("MainMenu", "orangerot", "Arbeitsbereich", "Arbeitszimmer.png", "MenuAZ", "", "MM");
+            LeftMenuAZ.create("MainMenu", "orangerot", "Arbeitsbereich", arbeitszimmer, "MenuAZ", "", "MM");
 
             var LeftMenuMM = new GlideButton();
-            LeftMenuMM.create("MainMenu", "purple", "Multimedia", "_Multimedia_BW_web.png", "MenuMultimedia", "", "MM");
+            LeftMenuMM.create("MainMenu", "purple", "Multimedia", multimedia, "MenuMultimedia", "", "MM");
             var LeftMenuHz = new GlideButton();
-            LeftMenuHz.create("MainMenu", "yellow", "Heizung", "_Heizung_BW_web.png", "MenuHz", "", "MM");
+            LeftMenuHz.create("MainMenu", "yellow", "Heizung", heizung, "MenuHz", "", "MM");
             var LeftMenuRollo = new GlideButton();
-            LeftMenuRollo.create("MainMenu", "brown", "Rolladen", "_Rolladen_BW_web.png", "MenuRollo", "", "MM");
+            LeftMenuRollo.create("MainMenu", "brown", "Rolladen", rolladen, "MenuRollo", "", "MM");
             var LeftMenuNet = new GlideButton();
-            LeftMenuNet.create("MainMenu", "green", "Netzwerk", "_Network_BW_web.png", "MenuNet", "", "MM");
+            LeftMenuNet.create("MainMenu", "green", "Netzwerk", network, "MenuNet", "", "MM");
 
 
 
@@ -349,12 +351,12 @@
 
         <script>
             var SubMenuSecCode = new GlideButton();
-            SubMenuSecCode.create("SubMenuSec", "red", "Alarmanlage", "AlarmKey.png", "MainSecCode", "", "SM");
+            SubMenuSecCode.create("SubMenuSec", "red", "Alarmanlage", alarmanlage_white, "MainSecCode", "", "SM");
             var SubMenuWaterAlarm = new GlideButton();
-            SubMenuWaterAlarm.create("SubMenuSec", "red", "Wasser Alarm", "FeuchteWasserMelder.png", "MainWaterAlarm",
+            SubMenuWaterAlarm.create("SubMenuSec", "red", "Wasser Alarm", feuchteWasserMelder_white, "MainWaterAlarm",
                 "", "SM");
             var SubMenuBatAlarm = new GlideButton();
-            SubMenuBatAlarm.create("SubMenuSec", "red", "Battery Alarm", "BatAlarm.png", "MainBatAlarm", "", "SM");
+            SubMenuBatAlarm.create("SubMenuSec", "red", "Battery Alarm", batterie_white, "MainBatAlarm", "", "SM");
         </script>
 
         <!-- ************************* SubMenu - Wohnzimmer **************************  -->
@@ -363,13 +365,13 @@
 
         <script>
             var SubMenuHzWZ = new GlideButton();
-            SubMenuHzWZ.create("SubMenuWZ", "cyan", "Heizung Wohnzimmer", "_Heizung_BW2.png", "MainHeizungWZ", "",
+            SubMenuHzWZ.create("SubMenuWZ", "cyan", "Heizung Wohnzimmer", heizung, "MainHeizungWZ", "",
                 "SM");
             var SubMenuRolloWZ = new GlideButton();
-            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Rolladen Wohnzimmer", "_Rolladen_BW_web.png", "MainRolloWZ", "",
+            SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Rolladen Wohnzimmer", rolladen, "MainRolloWZ", "",
                 "SM");
             var SubMenuLichtWZ = new GlideButton();
-            SubMenuLichtWZ.create("SubMenuWZ", "cyan", "Licht Wohnzimmer", "Light_BW_web.png", "MainLightWZ", "", "SM");
+            SubMenuLichtWZ.create("SubMenuWZ", "cyan", "Licht Wohnzimmer", licht, "MainLightWZ", "", "SM");
 
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", "DenonCeolIcon.jpg", "MainCeolWZ", "", "SM");
@@ -386,9 +388,9 @@
 
         <script>
             var SubMenuHzKZ = new GlideButton();
-            SubMenuHzKZ.create("SubMenuKZ", "olive", "Heizung Kinderzimmer", "_Heizung_BW2.png", "MainHzKZ", "", "SM");
+            SubMenuHzKZ.create("SubMenuKZ", "olive", "Heizung Kinderzimmer", heizung, "MainHzKZ", "", "SM");
             var SubMenuRolloKZ = new GlideButton();
-            SubMenuRolloKZ.create("SubMenuKZ", "olive", "Rolladen Kinderzimmer", "_Rolladen_BW_web.png", "MainRolloKZ",
+            SubMenuRolloKZ.create("SubMenuKZ", "olive", "Rolladen Kinderzimmer", rolladen, "MainRolloKZ",
                 "", "SM");
         </script>
 
@@ -397,12 +399,12 @@
 
         <script>
             var SubMenuHzSZ = new GlideButton();
-            SubMenuHzSZ.create("SubMenuSZ", "sandy", "Heizung Schlafzimmer", "_Heizung_BW2.png", "MainHzSZ", "", "SM");
+            SubMenuHzSZ.create("SubMenuSZ", "sandy", "Heizung Schlafzimmer", heizung, "MainHzSZ", "", "SM");
             var SubMenuRolloSZ = new GlideButton();
-            SubMenuRolloSZ.create("SubMenuSZ", "sandy", "Rolladen Schlafzimmer", "_Rolladen_BW_web.png", "MainRolloSZ",
+            SubMenuRolloSZ.create("SubMenuSZ", "sandy", "Rolladen Schlafzimmer", rolladen, "MainRolloSZ",
                 "", "SM");
             var SubMenuLightSZ = new GlideButton();
-            SubMenuLightSZ.create("SubMenuSZ", "sandy", "Licht Schlafzimmer", "Light_BW_web.png", "MainLightSZ", "",
+            SubMenuLightSZ.create("SubMenuSZ", "sandy", "Licht Schlafzimmer", licht, "MainLightSZ", "",
                 "SM");
             var SubMenuSonosZ = new GlideButton();
             SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", "Sonos_BW_web.png", "MainSonosSZ", "", "SM");
@@ -413,9 +415,9 @@
 
         <script>
             var SubMenuHzK = new GlideButton();
-            SubMenuHzK.create("SubMenuK", "midgreen", "Heizung Kueche", "_Heizung_BW2.png", "MainHzK", "", "SM");
+            SubMenuHzK.create("SubMenuK", "midgreen", "Heizung Kueche", heizung, "MainHzK", "", "SM");
             var SubMenuRolloK = new GlideButton();
-            SubMenuRolloK.create("SubMenuK", "midgreen", "Rolladen Kueche", "_Rolladen_BW_web.png", "MainRolloK", "",
+            SubMenuRolloK.create("SubMenuK", "midgreen", "Rolladen Kueche", rolladen, "MainRolloK", "",
                 "SM");
             var SubMenuRezepte = new GlideButton();
             SubMenuRezepte.create("SubMenuK", "midgreen", "Rezepte", "cook_web.png", "MainRezepte", "", "SM");
@@ -429,7 +431,7 @@
 
         <script>
             var SubMenuRolloB = new GlideButton();
-            SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", "_Rolladen_BW_web.png", "MainRolloB", "", "SM");
+            SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", rolladen, "MainRolloB", "", "SM");
             var SubMenuDoorB = new GlideButton();
             SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", "door.png", "MainDoorB", "", "SM");
         </script>
@@ -449,7 +451,7 @@
 
         <script>
             var SubMenuLightDiele = new GlideButton();
-            SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", "Light_BW_web.png", "MainLightD", "",
+            SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", licht, "MainLightD", "",
                 "SM");
             var SubMenuDoorDiele = new GlideButton();
             SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
@@ -460,7 +462,7 @@
 
         <script>
             var SubMenuLightAZ = new GlideButton();
-            SubMenuLightAZ.create("SubMenuAZ", "orangerot", "Licht Arbeitsbereich", "Light_BW_web.png", "MainLightAZ",
+            SubMenuLightAZ.create("SubMenuAZ", "orangerot", "Licht Arbeitsbereich", licht, "MainLightAZ",
                 "",
                 "SM");
         </script>
@@ -523,21 +525,21 @@
 
         <script>
             var SubMenuRolloAll = new GlideButton();
-            SubMenuRolloAll.create("SubMenuRollo", "brown", "Rolladen Uebersicht", "_Rolladen_BW.png", "MainRolloAll",
+            SubMenuRolloAll.create("SubMenuRollo", "brown", "Rolladen Uebersicht", rolladen, "MainRolloAll",
                 "", "SM");
             var SubMenuRolloWZ = new GlideButton();
-            SubMenuRolloWZ.create("SubMenuRollo", "cyan", "Rolladen Wohnzimmer", "_Rolladen_BW.png", "MainRolloWZ", "",
+            SubMenuRolloWZ.create("SubMenuRollo", "cyan", "Rolladen Wohnzimmer", rolladen, "MainRolloWZ", "",
                 "SM");
             var SubMenuRolloKZ = new GlideButton();
-            SubMenuRolloKZ.create("SubMenuRollo", "olive", "Rolladen Kinderzimmer", "_Rolladen_BW.png", "MainRolloKZ",
+            SubMenuRolloKZ.create("SubMenuRollo", "olive", "Rolladen Kinderzimmer", rolladen, "MainRolloKZ",
                 "", "SM");
             var SubMenuRolloSZ = new GlideButton();
-            SubMenuRolloSZ.create("SubMenuRollo", "sandy", "Rolladen Schlafzimmer", "_Rolladen_BW.png", "MainRolloSZ",
+            SubMenuRolloSZ.create("SubMenuRollo", "sandy", "Rolladen Schlafzimmer", rolladen, "MainRolloSZ",
                 "", "SM");
             var SubMenuRolloK = new GlideButton();
-            SubMenuRolloK.create("SubMenuRollo", "red", "Rolladen Kueche", "_Rolladen_BW.png", "MainRolloK", "", "SM");
+            SubMenuRolloK.create("SubMenuRollo", "red", "Rolladen Kueche", rolladen, "MainRolloK", "", "SM");
             var SubMenuRolloB = new GlideButton();
-            SubMenuRolloB.create("SubMenuRollo", "blue", "Rolladen Balkon", "_Rolladen_BW.png", "MainRolloK", "", "SM");
+            SubMenuRolloB.create("SubMenuRollo", "blue", "Rolladen Balkon", rolladen, "MainRolloK", "", "SM");
         </script>
 
         <!-- ************************Menu  Netzwerk  ************************  -->
