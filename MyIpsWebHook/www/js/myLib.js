@@ -3996,7 +3996,7 @@ class DynIconList {
                 elem.classList.remove("iconTV");
                 item['selected'] = true;
                 if (source === "TV") {
-                    var cmd = "func(STV_setChannelbyName, 44308," + item['sender'] + ")";
+                    var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "CD") {
