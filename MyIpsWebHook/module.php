@@ -31,7 +31,7 @@ if(!isset($_SERVER['PHP_AUTH_USER']))
 if(!isset($_SERVER['PHP_AUTH_PW']))
     $_SERVER['PHP_AUTH_PW'] = "";
  
-if(($_SERVER['PHP_AUTH_USER'] != "Symcon") || ($_SERVER['PHP_AUTH_PW'] != "passwort")) {
+    if(($_SERVER['PHP_AUTH_USER'] != ReadPropertyString("Username")) || ($_SERVER['PHP_AUTH_PW'] != ReadPropertyString("Password"))) {
     header('WWW-Authenticate: Basic Realm="MyIpsHomeCOntrol"');
     header('HTTP/1.0 401 Unauthorized');
     echo "Authorization required";
