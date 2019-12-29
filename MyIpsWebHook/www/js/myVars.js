@@ -686,6 +686,8 @@
 
       uhr.startTime();
       stoerbat.update(sym[44], true, "red", "lime");
+
+
       /* ------------------------------- Denon Ceol ------------------------------- */
       ProgressCeol.update(sym[263]);
       CeolVol.update(sym[257]);
