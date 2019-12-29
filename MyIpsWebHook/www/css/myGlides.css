@@ -57,8 +57,9 @@ button :active {
 .Container {
     display: flex;
     overflow: hidden;
-    height: 93vh;
+    height: 100vh;
     position: fixed;
+    padding-top: 7vh;
     width: 100vw;
     backface-visibility: hidden;
     will-change: overflow;
