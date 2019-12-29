@@ -4073,7 +4073,7 @@ class FontSymb {
 
         document.getElementById(ParentID).appendChild(elem);
     }
-    update(value, blink, sfarbeOn, sfarbeoff) {
+    update(value, blink, sfarbeOn, sfarbeOff) {
         if (value) {
             if (blink) {
                 this.ID.id = "blink";
