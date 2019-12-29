@@ -4091,7 +4091,7 @@ class FontSymb {
             }
 
         } else {
-            this.ID.id = "blinkOff";
+            this.ID.id = "blinkOn";
             this.ID.style.color = sfarbeOff;
         }
     }
