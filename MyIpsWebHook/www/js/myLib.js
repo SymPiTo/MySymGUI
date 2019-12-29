@@ -4039,3 +4039,53 @@ class switchCtrl {
         document.getElementsByClassName(_CtrlWindow)[0].style.width = "26vw";
     }
 }
+
+/* --------------------- Klasse AwesomeFont Symbol ---------------------------------------- */
+class FontSymb {
+    constructor() {
+        this.symsize = "28px";
+        this.symcolor = "white";
+        this.ID = "";
+    }
+    create(ParentID, posTop, posLeft, rotdeg, symbol, scolor, ssize) {
+        this.symsize = ssize;
+        this.symcolor = scolor;
+        var elem = document.createElement("div");
+
+        this.ID = elem;
+        elem.style.position = "absolute";
+        elem.style.left = posLeft;
+        elem.style.top = posTop;
+        elem.style.backgroundColor = "transparent";
+        elem.style.display = "flex";
+        elem.style.alignItems = "center";
+        elem.style.justifyContent = "center";
+        elem.style.transform = "rotate(" + rotdeg + ")";
+
+        var elem1 = document.createElement("span");
+        elem1.className = symbol;
+        elem1.style.fontSize = this.symsize;
+        elem1.style.color = this.symcolor;
+
+
+
+        elem.append(elem1);
+
+        document.getElementById(ParentID).appendChild(elem);
+    }
+    update(value, blink, sfarbeOn, sfarbeoff) {
+        if (value) {
+            if (blink) {
+                this.ID.id = "blink";
+                this.ID.style.color = sfarbeOn;
+
+            } else {
+
+            }
+
+        } else {
+            this.ID.id = "";
+            this.ID.style.color = sfarbeOff;
+        }
+    }
+}
