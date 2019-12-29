@@ -3781,7 +3781,8 @@ class BtnIcon {
         elem3.style.transform = "scale(" + Iscale + ")";
         elem3.style.paddingBottom = "10px";
         elem3.className = "icon";
-        if ((substr(IName, -3) == "png")) {
+        itype = IName.match(/\png\b|\jpg\b/g);
+        if (itype) {
             elem3.src = "images/" + IName;
         } else {
             elem3.src = IName;
