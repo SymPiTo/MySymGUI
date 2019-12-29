@@ -4059,7 +4059,7 @@ class FontSymb {
         this.symcolor = scolor;
         var elem = document.createElement("div");
 
-        this.ID = elem;
+
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
@@ -4073,7 +4073,7 @@ class FontSymb {
         elem1.className = symbol;
         elem1.style.fontSize = this.symsize;
         elem1.style.color = this.symcolor;
-
+        this.ID = elem1;
 
 
         elem.append(elem1);
