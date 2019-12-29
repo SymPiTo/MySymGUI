@@ -1159,6 +1159,7 @@ class CheckBoxCtrlBtn {
 
 /* -------------------------------------------------------------------------- */
 /*                         Klasse: Menu Button (Glide)                         */
+/* image wird aus iconset.js geladen                                          */
 /* -------------------------------------------------------------------------- */
 
 class GlideButton {
@@ -3780,7 +3781,12 @@ class BtnIcon {
         elem3.style.transform = "scale(" + Iscale + ")";
         elem3.style.paddingBottom = "10px";
         elem3.className = "icon";
-        elem3.src = "images/" + IName;
+        if ((substr(IName, -3) == "png")) {
+            elem3.src = "images/" + IName;
+        } else {
+            elem3.src = IName;
+        }
+
         container.append(elem3)
 
         document.getElementById(ParentID).appendChild(container);
