@@ -4083,7 +4083,7 @@ class FontSymb {
     update(value, blink, sfarbeOn, sfarbeOff) {
         if (value) {
             if (blink) {
-                this.ID.id = "blink";
+                this.ID.id = "blinkOn";
                 this.ID.style.color = sfarbeOn;
 
             } else {
@@ -4091,7 +4091,7 @@ class FontSymb {
             }
 
         } else {
-            this.ID.id = "";
+            this.ID.id = "blinkOff";
             this.ID.style.color = sfarbeOff;
         }
     }

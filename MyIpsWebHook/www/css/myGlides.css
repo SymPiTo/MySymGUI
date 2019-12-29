@@ -3665,7 +3665,7 @@ select:focus::-ms-value {
 
 /* ----------------------------------- end ---------------------------------- */
 
-#blink {
+#blinkOn {
 
     animation: blink 1s linear infinite;
 }
@@ -3678,4 +3678,10 @@ select:focus::-ms-value {
     to {
         opacity: 1;
     }
+}
+
+
+#blinkOff {
+
+    animation: blink none;
 }
