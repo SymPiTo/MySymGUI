@@ -379,6 +379,8 @@
         sym[266] = ips[0].ID24994; // AZ Lampe Energie counter
         sym[267] = ips[0].ID23507; // AZ Lampe Power
 
+        sym[268] = ips[0].ID35935; // Water Alarm
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -686,7 +688,7 @@
 
       uhr.startTime();
       stoerbat.update(sym[44], true, "red", "lime");
-
+      stoerwater.update(sym[268], true, "red", "lime");
 
       /* ------------------------------- Denon Ceol ------------------------------- */
       ProgressCeol.update(sym[263]);
