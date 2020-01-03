@@ -1239,9 +1239,12 @@
             var Rahmen3WZ = new Kachel();
             Rahmen3WZ.create("MainRolloWZ", "290px", "60px", "230px", "100px", "transparent", "Mode");
 
+
             var btnRolloWZAuto = new CtrlButton();
             btnRolloWZAuto.create("MainRolloWZ", "330px", "70px", "ctrlbutton", "smaller", "cyan", "Automatik",
                 "command", "", "send('command(Rollo,WZ,Auto)') ");
+
+
             var btnRolloWZMan = new CtrlButton();
             btnRolloWZMan.create("MainRolloWZ", "330px", "175px", "ctrlbutton", "smaller", "cyan", "Manual", "command",
                 "", "send('command(Rollo,WZ,Man)') ");
@@ -1689,7 +1692,7 @@
         </script>
         <script>
             var WindowBad = new CtrlTile();
-            WindowBad.create("MainFBad", "10px", "10px", "Bad Fenster", "violet", "transparent", "Fenster",
+            WindowBad.create("MainFBad", "30px", "30px", "Bad Fenster", "violet", "transparent", "Fenster",
                 "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf", "", "",
                 "200px", "210px", "black", "white");
         </script>
@@ -1702,7 +1705,22 @@
             CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgViolet");
         </script>
         <script>
-
+            var BathDisHstate = new StateDisplay();
+            BathDisHstate.create("MainFBadCtrl", "violetLight", "", "30px", "20px", "60px", "202px", "20px",
+                "Hinweis",
+                "String");
+            var BathDisHstateDiff = new StateDisplay();
+            BathDisHstateDiff.create("MainFBadCtrl", "violetLight", "%", "130px", "20px", "60px", "202px", "20px",
+                "Diff-Feuchte",
+                "Number");
+            var BathDisTemp = new StateDisplay();
+            BathDisTemp.create("MainFBadCtrl", "violetLight", "°C", "230px", "20px", "60px", "202px", "20px",
+                "Temperatur",
+                "String");
+            var BathDisHumid = new StateDisplay();
+            BathDisHumid.create("MainFBadCtrl", "violetLight", "rel%", "330px", "20px", "60px", "202px", "20px",
+                "Feuchte",
+                "String");
         </script>
 
 

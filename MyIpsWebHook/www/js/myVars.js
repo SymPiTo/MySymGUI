@@ -381,6 +381,23 @@
 
         sym[268] = ips[0].ID35935; // Water Alarm
 
+        sym[269] = ips[0].ID21656; // gefühltes Klima aussen
+
+        sym[270] = ips[0].ID35340; // Bad Hinweis Luftfeuchtigkeit
+        sym[271] = ips[0].ID54987; // Bad Diff % Luftfeuchtigkeit
+
+        sym[272] = ips[0].ID17123; // KZ Hinweis Luftfeuchtigkeit
+        sym[273] = ips[0].ID54511; // KZ Diff % Luftfeuchtigkeit
+
+        sym[274] = ips[0].ID39658; // SZ Hinweis Luftfeuchtigkeit
+        sym[275] = ips[0].ID42262; // SZ Diff % Luftfeuchtigkeit
+
+        sym[276] = ips[0].ID41482; // WZ Hinweis Luftfeuchtigkeit
+        sym[277] = ips[0].ID56287; // WZ Diff % Luftfeuchtigkeit
+
+        sym[278] = ips[0].ID14487; // Bad Luftfeuchtigkeit
+        sym[279] = ips[0].ID59969; // Bad Temperatur
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -690,6 +707,16 @@
       stoerbat.update(sym[44], true, "red", "lime");
       stoerwater.update(sym[268], true, "red", "lime");
 
+
+
+      /* ------------------------------- Bad------------------------------- */
+      BathDisHstate.update(sym[270]);
+      BathDisHstateDiff.update(sym[271], 1);
+      BathDisTemp.update(sym[279]);
+      BathDisHumid.update(sym[278]);
+
+
+
       /* ------------------------------- Denon Ceol ------------------------------- */
       ProgressCeol.update(sym[263]);
       CeolVol.update(sym[257]);
@@ -742,6 +769,8 @@
         upnpVideoSource.update(sym[256]);
         upnpVideoProgress.update(sym[259]);
       }
+
+
 
 
 
