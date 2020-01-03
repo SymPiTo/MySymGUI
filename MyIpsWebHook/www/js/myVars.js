@@ -703,11 +703,20 @@
     /* ---------------------------------------------------------------------------------------------- */
     function updateValues(sym) {
 
-      uhr.startTime();
+      uhr.startTime(sym[270]);
       stoerbat.update(sym[44], true, "red", "lime");
       stoerwater.update(sym[268], true, "red", "lime");
 
-
+      /* ------------------------------- Floorplan------------------------------- */
+      VarDisClimate.update(sym[269]);
+      VarDisLüftenBad.update(sym[270]);
+      VarDisDiffHumidBad.update(sym[271], 0);
+      VarDisLüftenKZ.update(sym[272]);
+      VarDisDiffHumidKZ.update(sym[273], 0);
+      VarDisLüftenSZ.update(sym[274]);
+      VarDisDiffHumidSZ.update(sym[275], 0);
+      VarDisLüftenWZ.update(sym[276]);
+      VarDisDiffHumidWZ.update(sym[277], 0);
 
       /* ------------------------------- Bad------------------------------- */
       BathDisHstate.update(sym[270]);
