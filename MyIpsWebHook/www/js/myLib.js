@@ -707,10 +707,10 @@ class StateDisplay {
                     case 3:
                         this.ID.innerHTML = this.state3;
                         break;
-                    case true:
+                    case false:
                         this.ID.innerHTML = this.state0;
                         break;
-                    case false:
+                    case true:
                         this.ID.innerHTML = this.state1;
                         break;
                 }
