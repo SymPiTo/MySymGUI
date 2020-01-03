@@ -398,6 +398,9 @@
         sym[278] = ips[0].ID14487; // Bad Luftfeuchtigkeit
         sym[279] = ips[0].ID59969; // Bad Temperatur
 
+        sym[280] = ips[0].ID19285; // WZ Luftfeuchtigkeit Regler
+        sym[281] = ips[0].ID29022; // WZ Temperatur Regler     
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -717,6 +720,7 @@
       VarDisDiffHumidSZ.update(sym[275], 0);
       VarDisLüftenWZ.update(sym[276]);
       VarDisDiffHumidWZ.update(sym[277], 0);
+      VarDisHumidWZ.update(sym[280], 0);
 
       /* ------------------------------- Bad------------------------------- */
       BathDisHstate.update(sym[270]);

@@ -2425,7 +2425,7 @@
             VarDisTempBad.create("Grundriss", "black", "125px", "40vw", "normal", "°C");
 
             var VarDisHumidBad = new VarDis();
-            VarDisHumidBad.create("Grundriss", "black", "100px", "40vw", "normal", "%");
+            VarDisHumidBad.create("Grundriss", "black", "100px", "40vw", "normal", "%rel");
 
             var VarDisTempK_E = new VarDis();
             VarDisTempK_E.create("Grundriss", "black", "55vh", "15vw", "normal", "°C");
@@ -2441,16 +2441,16 @@
 
 
             var VarDisHumidSZ_E = new VarDis();
-            VarDisHumidSZ_E.create("Grundriss", "black", "70px", "9vw", "normal", "%");
+            VarDisHumidSZ_E.create("Grundriss", "black", "70px", "9vw", "normal", "%rel");
 
             var VarDisHumidKZ_E = new VarDis();
-            VarDisHumidKZ_E.create("Grundriss", "black", "70px", "65vw", "normal", "%");
+            VarDisHumidKZ_E.create("Grundriss", "black", "70px", "65vw", "normal", "%rel");
 
             var VarDisTempOutside = new VarDis();
             VarDisTempOutside.create("Grundriss", "black", "10vh", "80vw", "normal", "°C");
 
             var VarDisHumOutside = new VarDis();
-            VarDisHumOutside.create("Grundriss", "black", "15vH", "80vw", "normal", "%");
+            VarDisHumOutside.create("Grundriss", "black", "15vH", "80vw", "normal", "%rel");
 
             var VarDisMainDoor = new VarDis();
             VarDisMainDoor.create("Grundriss", "black", "90vh", "23vw", "normal", "", "close", "open");
@@ -2458,13 +2458,15 @@
             var VarDisBDoor = new VarDis();
             VarDisBDoor.create("Grundriss", "black", "40vh", "78vw", "normal", "", "close", "open");
 
-
+            var VarDisHumidWZ = new VarDis();
+            VarDisHumidWZ.create("Grundriss", "black", "400px", "60vw", "normal", "%rel");
 
             var iHeatSz = new DynIcon("heizkoerper", "bin", false);
             iHeatSz.create("Grundriss", "175px", "60px", "80px", "50px");
 
             var iHeatWz = new DynIcon("heizkoerper", "bin", false);
             iHeatWz.create("Grundriss", "470px", "740px", "80px", "50px");
+
 
             var iHeatKz = new DynIcon("heizkoerper", "bin", false);
             iHeatKz.create("Grundriss", "210px", "660px", "80px", "50px");
