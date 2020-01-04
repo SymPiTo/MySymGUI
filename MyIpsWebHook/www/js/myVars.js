@@ -381,7 +381,7 @@
 
         sym[268] = ips[0].ID35935; // Water Alarm
 
-        sym[269] = ips[0].ID21656; // gefühltes Klima aussen
+        sym[269] = ips[0].ID48299; // gefühltes Klima aussen
 
         sym[270] = ips[0].ID35340; // Bad Hinweis Luftfeuchtigkeit
         sym[271] = ips[0].ID54987; // Bad Diff % Luftfeuchtigkeit
