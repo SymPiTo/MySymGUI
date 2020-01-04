@@ -409,8 +409,8 @@
       let pos = sym.indexOf(undefined);
       if (pos != -1) {
         check(pos);
-
       }
+
       return sym;
 
 
@@ -430,8 +430,8 @@
 
     function check(index) {
       $('fehler').innerHTML = "Variable  wrong ID:" + index;
-
-
+      // ErsatzID verwenden ID38467
+      sym[index] = ips[0].ID38467;
     }
 
     function MediaValues(ips) {
