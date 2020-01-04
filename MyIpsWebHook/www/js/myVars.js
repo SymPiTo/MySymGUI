@@ -399,7 +399,9 @@
         sym[279] = ips[0].ID59969; // Bad Temperatur
 
         sym[280] = ips[0].ID19285; // WZ Luftfeuchtigkeit Regler
-        sym[281] = ips[0].ID29022; // WZ Temperatur Regler     
+        sym[281] = ips[0].ID29022; // WZ Temperatur Regler    
+
+        sym[282] = ips[0].ID38467; // DUMMY
 
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
