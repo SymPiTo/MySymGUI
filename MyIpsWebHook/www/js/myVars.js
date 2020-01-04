@@ -409,7 +409,7 @@
       let pos = sym.indexOf(undefined);
       if (pos != -1) {
         // ErsatzID verwenden ID38467
-        sym[pos] = ips[0].ID38467;
+        //sym[pos] = ips[0].ID38467;
         check(pos);
       }
 
