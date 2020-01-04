@@ -393,7 +393,7 @@
         sym[275] = ips[0].ID42262; // SZ Diff % Luftfeuchtigkeit
 
         sym[276] = ips[0].ID41482; // WZ Hinweis Luftfeuchtigkeit
-        sym[277] = ips[0].ID56287; // WZ Diff % Luftfeuchtigkeit
+        sym[277] = ips[0].ID12337; // WZ Diff % Luftfeuchtigkeit
 
         sym[278] = ips[0].ID14487; // Bad Luftfeuchtigkeit
         sym[279] = ips[0].ID59969; // Bad Temperatur
