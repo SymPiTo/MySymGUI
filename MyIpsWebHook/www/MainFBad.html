@@ -77,10 +77,11 @@
 
     getData();
     // "//var/lib/symcon/db/33471hour.csv"
-    async function getData() {
-        const response = await fetch('//var/lib/symcon/media/test.html');
-        const data = await response.text();
-        console.log(data);
+    function getData() {
+
+        jQuery.get('//var/lib/symcon/media/test.csv', function (data) {
+            alert(data);
+        });
     }
 </script>
 
