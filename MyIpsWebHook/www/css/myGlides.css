@@ -3143,8 +3143,20 @@ h1:after {
     background: hsl(82, 100%, 10%);
 }
 
+.bgOliveLight {
+    background: hsl(82, 100%, 15%);
+}
+
 .bgCyan {
     background: hsl(174, 100%, 10%);
+}
+
+.bgCyanLight {
+    background: hsl(174, 100%, 15%);
+}
+
+.bgSandyLight {
+    background: hsl(28, 100%, 15%);
 }
 
 .bgSandy {

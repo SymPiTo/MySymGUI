@@ -403,6 +403,14 @@
 
         sym[282] = ips[0].ID38467; // DUMMY
 
+        sym[283] = ips[0].ID37109; // Taupunkt Aussen Bad
+        sym[284] = ips[0].ID37922; // Taupunkt Innen Bad
+        sym[285] = ips[0].ID12347; // Wassergehalt Aussen Bad
+        sym[286] = ips[0].ID34355; // Wassergehalt Innen Bad
+        sym[287] = ips[0].ID27233; // Klima Innen Bad
+
+
+
       } catch (err) {
         document.getElementById("fehler").innerHTML = err.message;
       }
@@ -679,11 +687,6 @@
 
 
 
-      //<!-- ************************ Heizung Uebersicht ************************  -->
-      $('tempkueche4').innerHTML = 'Kueche ' + sym[3] + '°C';
-      $('tempwohnzimmer4').innerHTML = 'Wohnzimmer ' + sym[2] + '°C';
-      $('tempschlafzimmer4').innerHTML = 'Schlafzimmer ' + sym[0] + '°C';
-      $('tempkinderzimmer4').innerHTML = 'Kinderzimmer ' + sym[1] + '°C';
     }
 
     //<!-- ************************ Übergabe nur eine Variable von IPS ************************  -->
@@ -726,11 +729,23 @@
       VarDisHumidWZ.update(sym[280], 0);
 
       /* ------------------------------- Bad------------------------------- */
-      BathDisHstate.update(sym[270]);
-      BathDisHstateDiff.update(sym[271], 1);
-      BathDisTemp.update(sym[279]);
-      BathDisHumid.update(sym[278]);
+      if (document.getElementById("MainFBad")) {
+        WindowBad.update(sym[185], "", "");
+        VarDisWindowBad.update(sym[185]);
 
+
+        BathDisHstate.update(sym[270]);
+        BathDisHstateDiff.update(sym[271], 1);
+        BathDisTemp.update(sym[279]);
+        BathDisHumid.update(sym[278]);
+
+        BathFeuchteInnen.update(sym[286]);
+        BathFeuchteAussen.update(sym[285]);
+        BathTPInnen.update(sym[284]);
+        BathTPAussen.update(sym[283]);
+        BathKlima.update(sym[287]);
+
+      }
 
 
       /* ------------------------------- Denon Ceol ------------------------------- */
@@ -799,8 +814,10 @@
       DynIconDoorD.update(sym[9]);
       DisDoorDCtrl.update(sym[9]);
       /* --------------------------- Balkontür Position --------------------------- */
-      DynIconDoorB.update(sym[227]);
-      DisDoorBCtrl.update(sym[227]);
+      if (document.getElementById("MainDoorB")) {
+        DynIconDoorB.update(sym[227]);
+        DisDoorBCtrl.update(sym[227]);
+      }
       //<!-- ******************** Homematic Server **************************  -->
       DiHM1.update(sym[220]);
       DiHM2.update(sym[221]);
@@ -866,9 +883,7 @@
       /* -------------------------- Fenster Schlafzimmer -------------------------- */
       iWindowSz.update(sym[248]);
 
-      //<!-- ******************** Fenster Aktor Bad **************************  -->
-      WindowBad.update(sym[185], "", "");
-      VarDisWindowBad.update(sym[185]);
+
 
       //<!-- ******************** HMIP Taster Bad **************************  -->
       DiIPSJ1.update(sym[184]);
@@ -979,15 +994,16 @@
       DisWSSCL4.update(sym[128]);
 
       //<!-- ******************** Wetter   **************************  -->
-      WetterLabelA.update(sym[111][1]['icon'], sym[111][1]['weekday'], sym[111][1]['temperatureHigh'], sym[111][1]['temperatureLow'], sym[111][1]['windSpeed'], sym[111][1]['windGust'], sym[111][1]['cloudCover'], sym[111][1]['humidity']);
-      WetterLabelB.update(sym[111][2]['icon'], sym[111][2]['weekday'], sym[111][2]['temperatureHigh'], sym[111][2]['temperatureLow'], sym[111][2]['windSpeed'], sym[111][2]['windGust'], sym[111][2]['cloudCover'], sym[111][2]['humidity']);
-      WetterLabelC.update(sym[111][3]['icon'], sym[111][3]['weekday'], sym[111][3]['temperatureHigh'], sym[111][3]['temperatureLow'], sym[111][3]['windSpeed'], sym[111][3]['windGust'], sym[111][3]['cloudCover'], sym[111][3]['humidity']);
-      WetterLabelD.update(sym[111][4]['icon'], sym[111][4]['weekday'], sym[111][4]['temperatureHigh'], sym[111][4]['temperatureLow'], sym[111][4]['windSpeed'], sym[111][4]['windGust'], sym[111][4]['cloudCover'], sym[111][4]['humidity']);
-      WetterLabelE.update(sym[111][5]['icon'], sym[111][5]['weekday'], sym[111][5]['temperatureHigh'], sym[111][5]['temperatureLow'], sym[111][5]['windSpeed'], sym[111][5]['windGust'], sym[111][5]['cloudCover'], sym[111][5]['humidity']);
-      WetterLabelF.update(sym[111][6]['icon'], sym[111][6]['weekday'], sym[111][6]['temperatureHigh'], sym[111][6]['temperatureLow'], sym[111][6]['windSpeed'], sym[111][6]['windGust'], sym[111][6]['cloudCover'], sym[111][6]['humidity']);
-      WetterLabelG.update(sym[111][7]['icon'], sym[111][7]['weekday'], sym[111][7]['temperatureHigh'], sym[111][7]['temperatureLow'], sym[111][7]['windSpeed'], sym[111][7]['windGust'], sym[111][7]['cloudCover'], sym[111][7]['humidity']);
-      WetterLabelNow.update(sym[112]['icon'], "Aktuell", sym[112]['apparentTemperature'], sym[112]['temperature'], sym[112]['windSpeed'], sym[112]['windGust'], sym[112]['cloudCover'], sym[112]['humidity'], sym[112]['ozone'], sym[112]['uvIndex'], sym[112]['summary']);
-
+      if (document.getElementById("MainWetterB")) {
+        WetterLabelA.update(sym[111][1]['icon'], sym[111][1]['weekday'], sym[111][1]['temperatureHigh'], sym[111][1]['temperatureLow'], sym[111][1]['windSpeed'], sym[111][1]['windGust'], sym[111][1]['cloudCover'], sym[111][1]['humidity']);
+        WetterLabelB.update(sym[111][2]['icon'], sym[111][2]['weekday'], sym[111][2]['temperatureHigh'], sym[111][2]['temperatureLow'], sym[111][2]['windSpeed'], sym[111][2]['windGust'], sym[111][2]['cloudCover'], sym[111][2]['humidity']);
+        WetterLabelC.update(sym[111][3]['icon'], sym[111][3]['weekday'], sym[111][3]['temperatureHigh'], sym[111][3]['temperatureLow'], sym[111][3]['windSpeed'], sym[111][3]['windGust'], sym[111][3]['cloudCover'], sym[111][3]['humidity']);
+        WetterLabelD.update(sym[111][4]['icon'], sym[111][4]['weekday'], sym[111][4]['temperatureHigh'], sym[111][4]['temperatureLow'], sym[111][4]['windSpeed'], sym[111][4]['windGust'], sym[111][4]['cloudCover'], sym[111][4]['humidity']);
+        WetterLabelE.update(sym[111][5]['icon'], sym[111][5]['weekday'], sym[111][5]['temperatureHigh'], sym[111][5]['temperatureLow'], sym[111][5]['windSpeed'], sym[111][5]['windGust'], sym[111][5]['cloudCover'], sym[111][5]['humidity']);
+        WetterLabelF.update(sym[111][6]['icon'], sym[111][6]['weekday'], sym[111][6]['temperatureHigh'], sym[111][6]['temperatureLow'], sym[111][6]['windSpeed'], sym[111][6]['windGust'], sym[111][6]['cloudCover'], sym[111][6]['humidity']);
+        WetterLabelG.update(sym[111][7]['icon'], sym[111][7]['weekday'], sym[111][7]['temperatureHigh'], sym[111][7]['temperatureLow'], sym[111][7]['windSpeed'], sym[111][7]['windGust'], sym[111][7]['cloudCover'], sym[111][7]['humidity']);
+        WetterLabelNow.update(sym[112]['icon'], "Aktuell", sym[112]['apparentTemperature'], sym[112]['temperature'], sym[112]['windSpeed'], sym[112]['windGust'], sym[112]['cloudCover'], sym[112]['humidity'], sym[112]['ozone'], sym[112]['uvIndex'], sym[112]['summary']);
+      }
 
 
       //<!-- ******************** Kochbuch   **************************  -->

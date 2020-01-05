@@ -27,7 +27,7 @@
     <script src="js/flipclock.js"></script>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 
 
@@ -327,7 +327,7 @@
 
 
             var MenuSecurity1 = new GlideButton();
-            MenuSecurity1.create("MainMenu", "cyan", "Security", "_GuestroomBW.jpg", "", "", "MM");
+            MenuSecurity1.create("MainMenu", "cyan", "Security", network, "", "", "MM");
         </script>
 
 
@@ -376,6 +376,9 @@
             var SubMenuLichtWZ = new GlideButton();
             SubMenuLichtWZ.create("SubMenuWZ", "cyan", "Licht Wohnzimmer", licht, "MainLightWZ", "", "SM");
 
+            var SubMenuFWZ = new GlideButton();
+            SubMenuFWZ.create("SubMenuWZ", "cyan", "Fenster Wohnzimmer", fenster, "MainFWZ", "", "SMload");
+
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "Ceol Anlage", denon, "MainCeolWZ", "", "SM");
             var SubMenuTV = new GlideButton();
@@ -395,6 +398,8 @@
             var SubMenuRolloKZ = new GlideButton();
             SubMenuRolloKZ.create("SubMenuKZ", "olive", "Rolladen Kinderzimmer", rolladen, "MainRolloKZ",
                 "", "SM");
+            var SubMenuFKZ = new GlideButton();
+            SubMenuFKZ.create("SubMenuKZ", "olive", "Fenster Wohnzimmer", fenster, "MainFKZ", "", "SMload");
         </script>
 
         <!-- ----------------------- Sub Menu: Schlafzimmer ------------------------ -->
@@ -409,10 +414,10 @@
             var SubMenuLightSZ = new GlideButton();
             SubMenuLightSZ.create("SubMenuSZ", "sandy", "Licht Schlafzimmer", licht, "MainLightSZ", "",
                 "SM");
-            var SubMenuSonosZ = new GlideButton();
-            SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", sonos, "MainSonosSZ", "", "SM");
             var SubMenuFSZ = new GlideButton();
             SubMenuFSZ.create("SubMenuSZ", "sandy", "Fenster Schlafzimmer", fenster, "MainFSZ", "", "SMload");
+            var SubMenuSonosZ = new GlideButton();
+            SubMenuSonosZ.create("SubMenuSZ", "sandy", "Sonos", sonos, "MainSonosSZ", "", "SM");
         </script>
 
         <!-- ************************ Sub Menu Kueche  ************************  -->
@@ -438,7 +443,9 @@
             var SubMenuRolloB = new GlideButton();
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", rolladen, "MainRolloB", "", "SM");
             var SubMenuDoorB = new GlideButton();
-            SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", tuer, "MainDoorB", "", "SM");
+            SubMenuDoorB.create("SubMenuB", "blue", "Balkon Tür", tuer, "MainDoorB", "", "SMload");
+            var SubMenuWetterB = new GlideButton();
+            SubMenuWetterB.create("SubMenuB", "blue", "Wetter", wetter, "MainWetterB", "", "SMload");
         </script>
 
         <!-- ------------------------------ Sub Menu Bad ------------------------------- -->
@@ -446,7 +453,7 @@
 
         <script>
             var SubMenuFBad = new GlideButton();
-            SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", fenster, "MainFBad", "", "SM");
+            SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", fenster, "MainFBad", "", "SMload");
         </script>
 
 
@@ -459,7 +466,7 @@
             SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", licht, "MainLightD", "",
                 "SM");
             var SubMenuDoorDiele = new GlideButton();
-            SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", "door.png", "MainDoorD", "", "SM");
+            SubMenuDoorDiele.create("SubMenuDiele", "yellowgreen", "Eingangstür", tuer, "MainDoorD", "", "SM");
         </script>
 
         <!-- --------------------------- Sub Menu: Arbeitsbereich ---------------------------- -->
@@ -762,62 +769,7 @@
 
         <!-- ************************ Heizung Uebersicht ************************  -->
         <Main id="MainHzAll" class="HzAll">
-            <div class="reihe" style="margin-right: 50px; margin-left: 50px">
-                <div class="spalte" style="height: 45vh">
-                    <div class="IconButton small cyan" onclick="HeizungWZAll()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Heizung_BW2.png" />
-                        <span id="tempwohnzimmer4" style="font-size: 22px; padding-top: 5px;">Wohnzimmer </span>
-                    </div>
-                    <div class="ctrlbutton cyan" onclick="send('Heizung' + '*' + 'WZ' + '*' + '22.5')">
-                        Heizen
-                    </div>
-                    <div class="ctrlbutton cyan" onclick="send('Heizung' + '*' + 'WZ' + '*' + '18.0')">
-                        Standby
-                    </div>
-                </div>
 
-                <div class="spalte" style="height: 45vh">
-                    <div class="IconButton small olive" onclick="HeizungKZAll()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Heizung_BW2.png" />
-                        <span id="tempkinderzimmer4" style="font-size: 22px; padding-top: 5px;">Kinderzimmer </span>
-                    </div>
-                    <div class="ctrlbutton olive" onclick="send('Heizung' + '*' + 'KZ' + '*' + '22.5')">
-                        Heizen
-                    </div>
-                    <div class="ctrlbutton olive" onclick="send('Heizung' + '*' + 'KZ' + '*' + '18.0')">
-                        Standby
-                    </div>
-                </div>
-            </div>
-
-            <div class="reihe" style="margin-right: 50px; margin-left: 50px">
-                <div class="spalte" style="height: 45vh">
-                    <div class="IconButton small sandy" onclick="HeizungSZAll()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Heizung_BW2.png" />
-                        <span id="tempschlafzimmer4" style="font-size: 22px; padding-top: 5px;">Schlafzimmer </span>
-                    </div>
-                    <div class="ctrlbutton sandy" onclick="send('Heizung' + '*' + 'SZ' + '*' + '22.5')">
-                        Heizen
-                    </div>
-                    <div class="ctrlbutton sandy" onclick="send('Heizung' + '*' + 'SZ' + '*' + '18.0')">
-                        Standby
-                    </div>
-                </div>
-
-                <div class="spalte" style="height: 45vh">
-                    <div class="IconButton small red" onclick="HeizungKAll()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Heizung_BW2.png" />
-                        <span id="tempkueche4" style="font-size: 22px; padding-left: 20px; padding-top: 5px;">
-                            KÃ¼che<br> </span>
-                    </div>
-                    <div class="ctrlbutton red" onclick="send('Heizung' + '*' + 'K' + '*' + '22.5')">
-                        Heizen
-                    </div>
-                    <div class="ctrlbutton red" onclick="send('Heizung' + '*' + 'K' + '*' + '18.0')">
-                        Standby
-                    </div>
-                </div>
-            </div>
         </Main>
 
         <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
@@ -1681,77 +1633,11 @@
 
 
 
-        <!-- *************************************************************************************   -->
-        <!--  ************************         Main - Fenster Bad         ************************   -->
-        <!-- *************************************************************************************   -->
-        <!-- ************************ Fenster Bad ************************ -->
-        <!-- <Main id="MainFBad"  class="FBad"></Main> -->
-        <script>
-            var windowFBad = new Area();
-            windowFBad.createMain("MainFBad", "bgViolet");
-        </script>
-        <script>
-            var WindowBad = new CtrlTile();
-            WindowBad.create("MainFBad", "30px", "30px", "Bad Fenster", "violet", "transparent", "Fenster",
-                "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf", "", "",
-                "200px", "210px", "black", "white");
-        </script>
-        <!-- *************************************************************************************   -->
-        <!--  ************************         Ctrl - Fenster Bad         ************************   -->
-        <!-- *************************************************************************************   -->
-        <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
-        <script>
-            var CtrlwindowFBad = new Area();
-            CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgViolet");
-        </script>
-        <script>
-            var BathDisHstate = new StateDisplay();
-            BathDisHstate.create("MainFBadCtrl", "violetLight", "", "30px", "20px", "60px", "202px", "20px",
-                "Hinweis",
-                "nicht lüften", "lüften");
-            var BathDisHstateDiff = new StateDisplay();
-            BathDisHstateDiff.create("MainFBadCtrl", "violetLight", "%", "130px", "20px", "60px", "202px", "20px",
-                "Diff-Feuchte",
-                "Number");
-            var BathDisTemp = new StateDisplay();
-            BathDisTemp.create("MainFBadCtrl", "violetLight", "°C", "230px", "20px", "60px", "202px", "20px",
-                "Temperatur",
-                "String");
-            var BathDisHumid = new StateDisplay();
-            BathDisHumid.create("MainFBadCtrl", "violetLight", "%rel", "330px", "20px", "60px", "202px", "20px",
-                "Feuchte",
-                "String");
-        </script>
 
 
 
 
-        <!-- ----------------------------------------------------------------------- -->
-        <!--                            Area: Balkon - Tür                           -->
-        <!-- ----------------------------------------------------------------------- -->
 
-        <!-- ----------------------- Main Area: Balkon - Tür ----------------------- -->
-        <script>
-            var windowDoorB = new Area();
-            windowDoorB.createMain("MainDoorB", "bgBlue");
-        </script>
-        <script>
-            var DynIconDoorB = new DynIcon("door", "bin", false);
-
-            DynIconDoorB.create("MainDoorB", "40px", "70px", "250px", "250px");
-        </script>
-
-        <!-- ----------------------- Ctrl Area: Balkon - Tür ----------------------- -->
-        <script>
-            var CtrlwindowDoorB = new Area();
-            CtrlwindowDoorB.createCtrl("MainDoorBCtrl", "bgBlue");
-        </script>
-        <script>
-            var DisDoorBCtrl = new StateDisplay();
-            DisDoorBCtrl.create("MainDoorBCtrl", "blueLight", "", "50px", "20px", "60px", "202px", "20px",
-                "Tür Position",
-                "offen", "geschlossen", "", "", "");
-        </script>
 
         <!-- ----------------------------------------------------------------------- -->
         <!--                            Area:  Diele - Tür                           -->
@@ -2348,43 +2234,7 @@
         </script>
 
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          Wetter     ************************      -->
-        <!-- ***********************************************************************************      -->
-        <!-- <Main id="MainWetter" class="Wetter bgGrey"></Main>    -->
-        <script>
-            var windowWetter = new Area();
-            windowWetter.createMain("MainWetter", "bgGrey");
-        </script>
-        <script>
-            var WetterLabelB = new WeatherLabel;
-            WetterLabelB.create("MainWetter", "10px", "5px", "225px");
-            var WetterLabelC = new WeatherLabel;
-            WetterLabelC.create("MainWetter", "10px", "190px", "225px");
-            var WetterLabelD = new WeatherLabel;
-            WetterLabelD.create("MainWetter", "10px", "380px", "225px");
-            var WetterLabelE = new WeatherLabel;
-            WetterLabelE.create("MainWetter", "300px", "5px", "225px");
-            var WetterLabelF = new WeatherLabel;
-            WetterLabelF.create("MainWetter", "300px", "190px", "225px");
-            var WetterLabelG = new WeatherLabel;
-            WetterLabelG.create("MainWetter", "300px", "380px", "225px");
-        </script>
 
-        <!-- ***********************************************************************************      -->
-        <!--  ************************          WetterCtrl     ************************      -->
-        <!-- ***********************************************************************************      -->
-        <!-- <Ctrl id="MainWetterCtrl" class="WetterCtrl bgGrey"></Ctrl>    -->
-        <script>
-            var CtrlwindowWetter = new Area();
-            CtrlwindowWetter.createCtrl("MainWetterCtrl", "bgGrey");
-        </script>
-        <script>
-            var WetterLabelA = new WeatherLabel;
-            WetterLabelA.create("MainWetterCtrl", "10px", "35px", "225px");
-            var WetterLabelNow = new WeatherLabel;
-            WetterLabelNow.create("MainWetterCtrl", "250px", "35px", "270px");
-        </script>
 
 
 
@@ -3943,92 +3793,7 @@
 
         <!-- ************************** Rolladen Uebersicht ************************** -->
         <Main class="RolladenAll">
-            <div class="spalte" style="margin-right: 50px; margin-left: 40px">
-                <div class="RowLeft">
-                    <div class="IconButton small cyan" onclick="RolloCtrlWZ()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Rolladen_BW.png" alt="image not found" />
-                        <a>Rolladen Wohnzimmer</a>
-                    </div>
-                    <div class="fontbutton big cyan" onclick="send('command(Rollo,WZ,up)') ">
-                        <span class="fa fa-chevron-up"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big cyan" onclick="send('command(Rollo,WZ,stop)') ">
-                        <span class="fa fa-stop"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big cyan" onclick="send('command(Rollo,WZ,down)') ">
-                        <span class="fa fa-chevron-down"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                </div>
-                <div class="RowLeft">
-                    <div class="IconButton small blue" onclick="RolloCtrlB()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Rolladen_BW.png" />
-                        <a>Rolladen Balkon</a>
-                    </div>
-                    <div class="fontbutton big blue" onclick="send('command(Rollo,B,up)') ">
-                        <span class="fa fa-chevron-up"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big blue" onclick="send('command(Rollo,B,stop)') ">
-                        <span class="fa fa-stop"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big blue" onclick="send('command(Rollo,B,down)') ">
-                        <span class="fa fa-chevron-down"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                </div>
-                <div class="RowLeft">
-                    <div class="IconButton small olive" onclick="RolloCtrlKZ()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Rolladen_BW.png" alt="image not found" />
-                        <a>Rolladen Kinderzimmer</a>
-                    </div>
-                    <div class="fontbutton big olive" onclick="send('command(Rollo,KZ,up)') ">
-                        <span class="fa fa-chevron-up"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big olive" onclick="send('command(Rollo,KZ,stop)') ">
-                        <span class="fa fa-stop"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big olive" onclick="send('command(Rollo,KZ,down)') ">
-                        <span class="fa fa-chevron-down"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                </div>
-                <div class="RowLeft">
-                    <div class="IconButton small red" onclick="RolloCtrlK()" style="margin-right: 40px">
-                        <img id="xx" class="IconS" src="images/_Rolladen_BW.png" />
-                        <a>Rolladen Kueche</a>
-                    </div>
-                    <div class="fontbutton big red" onclick="send('command(Rollo,K,up)') ">
-                        <span class="fa fa-chevron-up"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big red" onclick="send('command(Rollo,K,stop)') ">
-                        <span class="fa fa-stop"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                    <div class="fontbutton big red" onclick="send('command(Rollo,K,down)') ">
-                        <span class="fa fa-chevron-down"
-                            style="padding: 5px; font-size:30px; position: relative; left:  0px; top:15px">
-                        </span>
-                    </div>
-                </div>
-            </div>
+
         </Main>
 
 
@@ -4045,97 +3810,18 @@
 
         <Ctrl class="UPNPConfig">
 
-            <div id="message">Meldungen</div>
-            <div class="col">
-                <div class="IconButton small sandy" onclick="send('command(upnp,playlist,Musik)')"
-                    style="position: relative; top: 100px">
-                    <img id="xx" class="IconS" src="images/PlaylistMusicBW.png" />
-                    <span style="font-size: 18px; padding-top: 5px;">create all Music Playlists</span>
-                </div>
-                <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
-                    <img id="xx" class="IconS" src="images/upnp.png" />
-                    <span style="font-size: 22px; padding-top: 5px;">- Audio - read-Server</span>
-                </div>
-                <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
-                    <img id="xx" class="IconS" src="images/upnp.png" />
-                    <span style="font-size: 22px; padding-top: 5px;">- Foto - read-Server</span>
-                </div>
-                <div class="IconButton small sandy" onclick="" style="position: relative; top: 100px">
-                    <img id="xx" class="IconS" src="images/upnp.png" />
-                    <span style="font-size: 22px; padding-top: 5px;">- Video - read-Server</span>
-                </div>
-            </div>
-            <div class="col" style="padding-top:100px">
-                <div class="IconButton small sandy" onclick="send('command(upnp,discover,client)')">
-                    <img id="xx" class="IconS" src="images/devices.png" />
-                    <span style="font-size: 22px; margin-top:5px; margin-left: 20px;">search Client</span>
-                </div>
-                <div class="IconButton small sandy" onclick="send('command(upnp,discover,server)')">
-                    <img id="xx" class="IconS" src="images/server.jpg" />
-                    <span style="font-size: 22px; margin-top:5px; margin-left: 20px;">search Server</span>
-                </div>
-            </div>
+
         </Ctrl>
 
         <!-- ************************** Denon Ceol Navigation  **************************  -->
         <Ctrl id="MainCeolWZCtrl" class="Navigation">
-            <div class="reihe">
-                <div class="nav">
-                    <div class="reihe" style="margin-top: 7px;">
-                        <div id="power" class="fontbutton big purple" onclick="send('command(DenonCeol,navigate,up)')"
-                            style="margin-left: 81px; margin-right: 81px">
-                            <span class="fa fa-caret-up" style="padding: 20px; font-size:30px;  "></span>
-                        </div>
-                    </div>
-                    <div class="reihe">
-                        <div class="fontbutton big purple" onclick="send('command(DenonCeol,navigate,left)')">
-                            <span class="fa fa-caret-left" style="padding: 20px; font-size:30px;  "></span>
-                        </div>
 
-                        <div class="fontbutton big purple" onclick="send('command(DenonCeol,navigate,ok)')">
-                            <span class="fa fa-square" style="padding: 20px; font-size:30px;  "></span>
-                        </div>
-
-                        <div class="fontbutton big purple" onclick="send('command(DenonCeol,navigate,right)')">
-                            <span class="fa fa-caret-right" style="padding: 20px; font-size:30px;  "></span>
-                        </div>
-                    </div>
-
-                    <div class="reihe">
-                        <div id="power" class="fontbutton big purple" onclick="send('command(DenonCeol,navigate,down)')"
-                            style="margin-left: 81px; margin-right: 81px">
-                            <span class="fa fa-caret-down" style="padding: 20px; font-size:30px;  "></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </Ctrl>
 
 
         <!-- ************************** Denon Ceol Server Control  **************************  -->
         <Ctrl class="CEOLServerCtrl">
-            <div class="col">
-                <div class="IconButton small sandy" onclick="send('command(DenonCeol,setServer,AVM)')"
-                    style="margin-top:50px">
-                    <img id="xx" class="IconMid" src="images/FrizNas.png" />
-                    <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">AVM Server</span>
-                </div>
-                <div class="IconButton small sandy" onclick="send('command(DenonCeol,setServer,Plex)')">
-                    <img id="xx" class="IconSmall" src="images/Plex.png" />
-                    <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">Plex Server</span>
-                </div>
-                <div style="padding-top:100px">
-                    <div class="IconButton small sandy" onclick="DenonCeolCDLib()">
-                        <img id="xx" class="IconS" src="images/cd.png" />
-                        <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">Musik CD</span>
-                    </div>
-                    <div class="IconButton small sandy" onclick="">
-                        <img id="xx" class="IconS" src="images/classics.png" />
-                        <span style="font-size: 22px; margin-top:20px; margin-left: 20px;">Audibook</span>
-                    </div>
-                </div>
-            </div>
+
         </Ctrl>
 
 

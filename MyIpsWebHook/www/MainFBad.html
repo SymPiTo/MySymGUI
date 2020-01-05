@@ -1,0 +1,137 @@
+<!-- *************************************************************************************   -->
+<!--  ************************         Main - Fenster Bad         ************************   -->
+<!-- *************************************************************************************   -->
+<!-- ************************ Fenster Bad ************************ -->
+<!-- <Main id="MainFBad"  class="FBad"></Main> -->
+<script>
+    var windowFBad = new Area();
+    windowFBad.createMain("MainFBad", "bgViolet");
+</script>
+<script>
+    var WindowBad = new CtrlTile();
+    WindowBad.create("MainFBad", "30px", "30px", "Bad Fenster", "violet", "transparent", "Fenster",
+        "send('command(window,Bad,false)')", "send('command(window,Bad,true)')", "zu", "auf", "", "",
+        "200px", "210px", "black", "white");
+</script>
+
+//<canvas id="line-chart" width="600" height="450"></canvas>
+<script>
+    var elem1 = document.createElement("canvas");
+    elem1.id = "line-chart";
+    elem1.style.width = "800px";
+    elem1.style.height = "450px";
+    elem1.style.position = "absolute";
+    elem1.style.top = "250px";
+    elem1.style.left = "20px";
+    elem1.style.backgroundColor = "black";
+
+
+    document.getElementById("MainFBad").appendChild(elem1);
+    new Chart(elem1, {
+        type: 'line',
+        data: {
+            labels: [new Date("2015-3-15 13:00").toLocaleString(), new Date("2015-3-25 16:00").toLocaleString(),
+                new Date("2015-4-25 14:12").toLocaleString()
+            ],
+            datasets: [{
+                data: [{
+                        t: new Date("2015-3-15 13:30"),
+                        y: 12
+                    },
+                    {
+                        t: new Date("2015-3-25 13:20"),
+                        y: 21
+                    },
+                    {
+                        t: new Date("2015-4-25 14:12"),
+                        y: 32
+                    }
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'World population per region (in millions)'
+            }
+
+        }
+    });
+
+    getData();
+    ////var/lib/symcon/db/33471hour.csv"
+    async function getData() {
+        const response = await fetch('test.csv');
+        const data = await response.text();
+        console.log(data);
+    }
+</script>
+
+<!-- *************************************************************************************   -->
+<!--  ************************         Ctrl - Fenster Bad         ************************   -->
+<!-- *************************************************************************************   -->
+<!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+<script>
+    var CtrlwindowFBad = new Area();
+    CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgViolet");
+</script>
+<script>
+    var BathDisHstate = new StateDisplay();
+    BathDisHstate.create("MainFBadCtrl", "violetLight", "", "30px", "20px", "60px", "202px", "20px",
+        "Hinweis",
+        "nicht lüften", "lüften erlaubt");
+    var BathDisHstateDiff = new StateDisplay();
+    BathDisHstateDiff.create("MainFBadCtrl", "violetLight", "%", "100px", "20px", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "Number");
+
+    var BathFeuchteInnen = new StateDisplay();
+    BathFeuchteInnen.create("MainFBadCtrl", "violetLight", "mg/m³", "170px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "Number");
+    var BathFeuchteAussen = new StateDisplay();
+    BathFeuchteAussen.create("MainFBadCtrl", "violetLight", "mg/m³", "240px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "Number");
+
+    var BathTPInnen = new StateDisplay();
+    BathTPInnen.create("MainFBadCtrl", "violetLight", "°C", "310px", "20px", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "Number");
+    var BathTPAussen = new StateDisplay();
+    BathTPAussen.create("MainFBadCtrl", "violetLight", "°C", "380px", "20px", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "Number");
+
+
+    var BathDisTemp = new StateDisplay();
+    BathDisTemp.create("MainFBadCtrl", "violetLight", "°C", "450px", "20px", "60px", "202px", "20px",
+        "Temperatur",
+        "Number");
+    var BathDisHumid = new StateDisplay();
+    BathDisHumid.create("MainFBadCtrl", "violetLight", "%rel", "520px", "20px", "60px", "202px", "20px",
+        "rel. Feuchte",
+        "Number");
+
+    var BathKlima = new StateDisplay();
+    BathKlima.create("MainFBadCtrl", "violetLight", "", "590px", "20px", "60px", "202px", "20px",
+        "Klima",
+        "String");
+</script>
