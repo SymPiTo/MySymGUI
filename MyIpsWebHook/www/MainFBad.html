@@ -76,9 +76,9 @@
     });
 
     getData();
-    ////var/lib/symcon/db/33471hour.csv"
+    // "//var/lib/symcon/db/33471hour.csv"
     async function getData() {
-        const response = await fetch('test.csv');
+        const response = await fetch('//var/lib/symcon/db/33471.hour.csv');
         const data = await response.text();
         console.log(data);
     }
