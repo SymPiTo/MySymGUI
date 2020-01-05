@@ -78,7 +78,7 @@
     getData();
     // "//var/lib/symcon/db/33471hour.csv"
     async function getData() {
-        const response = await fetch('//var/lib/symcon/media/test.csv');
+        const response = await fetch('//var/lib/symcon/webfront/user/test.csv');
         const data = await response.text();
         console.log(data);
     }
