@@ -90,11 +90,14 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuSZ,
 .MenuK,
 .MenuB,
-.MenuBad .MenuAZ,
+.MenuBad,
+.MenuDiele,
+.MenuAZ,
 .MenuMultimedia,
 .MenuHz,
 .MenuRollo,
 .MenuNet,
+.MenuNone,
 .area {
     overflow: auto;
     padding: .0rem;
@@ -119,12 +122,14 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .MenuSZ::-webkit-scrollbar,
 .MenuK::-webkit-scrollbar,
 .MenuB::-webkit-scrollbar,
+.MenuDiele::-webkit-scrollbar,
 .MenuBad::-webkit-scrollbar,
 .MenuAZ::-webkit-scrollbar,
 .MenuMultimedia::-webkit-scrollbar,
 .MenuHz::-webkit-scrollbar,
 .MenuRollo::-webkit-scrollbar,
 .MenuNet::-webkit-scrollbar,
+.MenuNone::-webkit-scrollbar,
 .area::-webkit-scrollbar {
     display: none;
 }
