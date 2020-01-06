@@ -1280,6 +1280,8 @@ class GlideButton {
                                 document.getElementById(IDFull).style.width = "92vw";
                             }
                         })
+                        // Request ValueUpdate an Server senden
+                        send('Request("updateValues")');
                     }
                     loadContent();
                 } else {

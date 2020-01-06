@@ -110,28 +110,17 @@
                     } else {
                         //alle Variable updaten
                         ips = JSON.parse(jsontext);
-
-
                         symvar = ips[0];
-
-
-
                         ipsObj.update(symvar);
-
-
                         //console.log(ipsObj.ips);
-
                         //
                         log(ips[0]);
                         ipsObj.check();
 
                         Heizung();
-
                         Security();
                         Klima();
                         updateValues();
-
-
                     }
 
                 };
