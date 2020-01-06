@@ -325,7 +325,13 @@ WebKit inertia scrolling is being added here for any present/future devices that
     background-size: 100% 100%;
 }
 
-
+.MenuNone {
+    position: relative;
+    top: 5vh;
+    width: 0px;
+    height: 125vh;
+    background-color: hsl(28, 100%, 10%);
+}
 
 
 .MenuWZ {
