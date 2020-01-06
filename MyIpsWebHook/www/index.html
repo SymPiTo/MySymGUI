@@ -572,11 +572,12 @@
             SubMenuIPS.create("SubMenuNet", "midgreen", "Websocket Server", wss, "MainWSS", "", "SM");
         </script>
 
-        <!-- ************************Menu  Netzwerk  ************************  -->
+        <!-- ************************Menu  None  ************************  -->
         <subMenu id="SubMenuNone" class="MenuNone"></subMenu>
 
         <script>
-
+            var SubMenuNone = new GlideButton();
+            SubMenuNone.create("SubMenuNone", "midgreen", "FREE", ips, "MainNone", "", "SM");
         </script>
 
 
@@ -3664,8 +3665,27 @@
 
 
 
+        <!-- *************************************************************************************   -->
+        <!--  ************************          CTRL - None    ************************   -->
+        <!-- *************************************************************************************   -->
 
 
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                    MAIN - None                   -->
+        <!--                id="MainNonen"                                          -->
+        <!-- ----------------------------------------------------------------------- -->
+        <script>
+            var mainwindowNone = new Area();
+            mainwindowNone.createMain("MainNonen", "bgCyan");
+        </script>
+
+
+        <script>
+            var CtrlwindoNone = new Area();
+            CtrlwindoNone.createCtrl("MainNoneCtrl", "bgMidgreen");
+        </script>
 
 
 
