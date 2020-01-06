@@ -51,6 +51,10 @@
         var symvar = [];
         var initialisierung = true;
 
+        var ipsArray = [];
+        var symArray = [];
+        var ipsObj = new ipsbuffer(ipsArray, symArray);
+
         function init() {
             // var host = 'wss://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
             var host = 'ws://torsten:sumatra@192.168.178.28:9000'; // SET THIS TO YOUR SERVER
@@ -78,9 +82,13 @@
                     if (initialisierung) {
                         ips = JSON.parse(jsontext);
                         symvar = ips[0];
-                        var sym = checkUsedVars(ips);
+                        ipsObj.ips = symvar;
+                        ipsObj.check();
 
-                        initialisierung = setup(sym);
+                        //var sym = checkUsedVars(ips);
+
+                        //initialisierung = setup();
+                        initialisierung = false;
                     }
 
                     if (jsontext.substring(0, 6) == "REPLY:") {
@@ -102,15 +110,26 @@
                     } else {
                         //alle Variable updaten
                         ips = JSON.parse(jsontext);
+
+
                         symvar = ips[0];
+
+
+
+                        ipsObj.update(symvar);
+
+
+                        //console.log(ipsObj.ips);
+
                         //
                         log(ips[0]);
-                        var sym = checkUsedVars(ips);
-                        /////Media(ips);
-                        Heizung(sym);
-                        Security(sym);
-                        Klima(sym);
-                        updateValues(sym);
+                        ipsObj.check();
+
+                        Heizung();
+
+                        Security();
+                        Klima();
+                        updateValues();
 
 
                     }
@@ -266,7 +285,7 @@
                 M Y I P S
             </div>
             <div id="fehler"
-                style="z-index: 6; text-align: right; position: relative; left: 400px; background-color: transparent">
+                style="z-index: 6; text-align: right; position: absolute; left: 200px; background-color: transparent">
             </div>
             <div id="log" style="z-index: 6; text-align: right;   background-color: transparent">
             </div>
