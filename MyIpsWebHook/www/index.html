@@ -793,15 +793,17 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <!-- ************************ Heizung Uebersicht ************************  -->
-        <Main id="MainHzAll" class="HzAll">
-
-        </Main>
-
-        <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
-        <Ctrl id="MainHzAllCtrl" class="HzAllCtrl"></Ctrl>
-
 
         <script>
+            var windowHzWz = new Area();
+            windowHzWz.createMain("MainHzAll", "bgCyan");
+        </script>
+
+        <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
+
+        <script>
+            var CtrlwindowHzWz = new Area();
+            CtrlwindowHzWz.createCtrl("MainHzAllCtrl", "bgCyan");
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -2266,8 +2268,11 @@
 
         <!-- ------------------------ Main Area: Floorplan ------------------------- -->
 
-        <Main id="Grundriss" class="floorplan"></Main>
-
+        //<Main id="Grundriss" class="floorplan"></Main>
+        <script>
+            var windowRezepte = new Area();
+            windowRezepte.createMain("Grundriss", "bgMidgreen");
+        </script>
         <script>
             var VarDisWindowBad = new DynIcon("Fenster", "bin", false);
             VarDisWindowBad.create("Grundriss", "0px", "40vw", "60px", "45px", "lightgreen");
@@ -2447,10 +2452,11 @@
         <!--  ************************          Main - Denon Ceol - IRadio    ************************      -->
         <!-- ***********************************************************************************   -->
 
-        <Main id="MainIRadio" class="IRadio">
 
-
-        </Main>
+        <script>
+            var windowIRadio = new Area();
+            windowIRadio.createMain("MainIRadio", "bgCyan");
+        </script>
         <script>
             var iDisArtist = new MediaDisplay();
             iDisArtist.create("MainIRadio", "0px", "20px", "normal");
@@ -3607,8 +3613,7 @@
             var CtrlwindowDiscoverUpnp = new Area();
             CtrlwindowDiscoverUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
         </script>
-        <script>
-        </script>
+
 
         <!-- ----------------------------------------------------------------------- -->
         <!--                         Discover   CTRL - UPNP                          -->
@@ -3835,38 +3840,6 @@
 
 
 
-        <!-- ************************** Rolladen Uebersicht ************************** -->
-        <Main class="RolladenAll">
-
-        </Main>
-
-
-        <!-- **************************++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++******************************** -->
-        <!-- **************************                                  RECHTE Fenster                                        ************************** -->
-        <!-- **************************++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++******************************** -->
-
-
-
-
-
-        <!-- ************************** Right PNP CONFIG  ************************** -->
-
-
-        <Ctrl class="UPNPConfig">
-
-
-        </Ctrl>
-
-        <!-- ************************** Denon Ceol Navigation  **************************  -->
-        <Ctrl id="MainCeolWZCtrl" class="Navigation">
-
-        </Ctrl>
-
-
-        <!-- ************************** Denon Ceol Server Control  **************************  -->
-        <Ctrl class="CEOLServerCtrl">
-
-        </Ctrl>
 
 
 
@@ -3880,23 +3853,6 @@
 
 
 
-        <!-- **************************Time Picker  ************************** -->
-        <Ctrl class="TimePickerX">
-
-
-        </Ctrl>
-
-
-        <!-- **************************Time Picker Rollo Class ************************** 
-                rechtes Seitenfenster nur einmal vorhanden Weret werden in Klasse überschrieben -->
-        <Ctrl id="TimePickerl" class="TimePicker"> </Ctrl>
-
-        <script>
-            var Timer1 = new TimePicker("WZ", "MoFr", "up");
-            var Timer2 = new TimePicker("WZ", "MoFr", "up");
-            Timer1.create("TimePickerl", "Timer1", "10px", "5px", "Hochfahren");
-            Timer2.create("TimePickerl", "Timer2", "300px", "5px", "Runterfahren");
-        </script>
 
 
 
@@ -3920,11 +3876,8 @@
 
     </div>
 
-    <!--  **************************  ************************** -->
-    <script>
+    <!--  ************************** Container Ende  ************************** -->
 
-
-    </script>
 
 
 
