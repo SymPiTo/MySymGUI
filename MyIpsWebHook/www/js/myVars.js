@@ -374,7 +374,7 @@ class ipsbuffer {
       this.sym[285] = this.ips.ID12347; // Wassergehalt Aussen Bad
       this.sym[286] = this.ips.ID34355; // Wassergehalt Innen Bad
       this.sym[287] = this.ips.ID27233; // Klima Innen Bad
-
+      this.sym[288] = this.ips.ID46977; // Warnung Klima Bad
 
 
 
@@ -613,17 +613,19 @@ function updateValues() {
     WindowBad.update(ipsObj.sym[185], "", "");
     VarDisWindowBad.update(ipsObj.sym[185]);
 
+    BathWarn.update(ipsObj.sym[288]);
+    BathDisKlima.update(ipsObj.sym[287])
 
     BathDisHstate.update(ipsObj.sym[270]);
     BathDisHstateDiff.update(ipsObj.sym[271], 1);
-    BathDisTemp.update(ipsObj.sym[279]);
+    BathTemp.update(ipsObj.sym[279]);
     BathDisHumid.update(ipsObj.sym[278]);
 
     BathFeuchteInnen.update(ipsObj.sym[286]);
     BathFeuchteAussen.update(ipsObj.sym[285]);
     BathTPInnen.update(ipsObj.sym[284]);
     BathTPAussen.update(ipsObj.sym[283]);
-    BathKlima.update(ipsObj.sym[287]);
+
 
   }
 
