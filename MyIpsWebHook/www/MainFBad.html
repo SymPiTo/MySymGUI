@@ -27,9 +27,6 @@
 
 //<canvas id="line-chart" width="600" height="450"></canvas>
 <script>
-    var cont = document.createElement("div");
-    cont.setAttribute("onclick", "send('IPS_RunScript,33116')");
-
     var elem1 = document.createElement("canvas");
     elem1.id = "line-chart";
     elem1.style.width = "800px";
@@ -39,8 +36,9 @@
     elem1.style.left = "20px";
     elem1.style.backgroundColor = "black";
 
+    elem1.setAttribute("onclick", "send('IPS_RunScript,33116')");
 
-    cont.append(elem1);
+
 
     document.getElementById("MainFBad").appendChild(elem1);
     var myChart = new Chart(elem1, {
