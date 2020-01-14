@@ -4095,3 +4095,66 @@ class FontSymb {
         }
     }
 }
+
+
+/* --------------------- Klasse Chart ---------------------------------------- */
+class MyChart {
+    constructor() {
+
+    }
+
+    create(ParentID) {
+
+        var elem1 = document.createElement("canvas");
+        elem1.id = "line-chart";
+        elem1.style.width = "800px";
+        elem1.style.height = "450px";
+        elem1.style.position = "absolute";
+        elem1.style.top = "250px";
+        elem1.style.left = "20px";
+        elem1.style.backgroundColor = "black";
+        elem1.setAttribute("onclick", "send('IPS_RunScript,33116')");
+        this.e = elem1;
+
+        document.getElementById(ParentID).appendChild(elem1);
+        var myChart = new Chart(elem1, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Demo',
+                    data: [],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        distribution: 'linear'
+                    }]
+                }
+            }
+        });
+    }
+
+    dataload() {
+
+    }
+}

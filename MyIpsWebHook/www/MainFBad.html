@@ -23,71 +23,17 @@
     BathTemp.create("MainFBad", "violetLight", "°C", "50px", "300px", "60px", "202px", "20px",
         "Temperatur",
         "String");
-</script>
-
-//<canvas id="line-chart" width="600" height="450"></canvas>
-<script>
-    var elem1 = document.createElement("canvas");
-    elem1.id = "line-chart";
-    elem1.style.width = "800px";
-    elem1.style.height = "450px";
-    elem1.style.position = "absolute";
-    elem1.style.top = "250px";
-    elem1.style.left = "20px";
-    elem1.style.backgroundColor = "black";
-
-    elem1.setAttribute("onclick", "send('IPS_RunScript,33116')");
 
 
 
-    document.getElementById("MainFBad").appendChild(elem1);
-    var myChart = new Chart(elem1, {
-        type: 'line',
-        data: {
-            labels: ["2015-03-15T13:03:00Z", "2015-03-15T14:12:00Z"],
-            datasets: [{
-                label: 'Demo',
-                data: [{
-                        t: "2015-03-15T13:03:00Z",
-                        y: 12
-                    },
-                    {
-                        t: "2015-03-15T13:12:00Z",
-                        y: 21
-                    },
-                    {
-                        t: "2015-03-15T14:12:00Z",
-                        y: 32
-                    }
-                ],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                    type: 'time',
-                    distribution: 'linear'
-                }]
-            }
-        }
-    });
+
+    var graph = new MyChart();
+    graph.create("MainFBad");
+    var Mydata =
+        '[{"t":"2020-01-13 21:45:44","y":9.328725490780288},{"t":"2020-01-13 21:20:42","y":9.27255681870801},{"t":"2020-01-13 21:15:42","y":9.406941700138562},{"t":"2020-01-13 21:10:42","y":9.350256082339211},{"t":"2020-01-13 20:55:41","y":9.29386626866617},{"t":"2020-01-13 20:50:41","y":9.237770974567942},{"t":"2020-01-13 20:40:40","y":9.31313990437319}]';
+
+    graph.data.datasets[0].data = JSON.parse(Mydata);
+    graph.update();
 </script>
 
 <!-- *************************************************************************************   -->

@@ -375,7 +375,12 @@ class ipsbuffer {
       this.sym[286] = this.ips.ID34355; // Wassergehalt Innen Bad
       this.sym[287] = this.ips.ID27233; // Klima Innen Bad
       this.sym[288] = this.ips.ID46977; // Warnung Klima Bad
-      this.sym[289] = this.ips.DATA43454;
+      if (this.ips.DATA43454) {
+        this.sym[289] = this.ips.DATA43454;
+      } else {
+        this.sym[289] = "";
+      }
+
 
 
 
@@ -591,6 +596,8 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
+
+
 
   uhr.startTime(ipsObj.sym[270]);
   stoerbat.update(ipsObj.sym[44], true, "red", "lime");
