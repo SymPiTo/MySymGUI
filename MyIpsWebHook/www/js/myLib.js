@@ -4101,60 +4101,96 @@ class FontSymb {
 class MyChart {
     constructor() {
 
+        this.C = "";
     }
 
-    create(ParentID) {
-
+    create(ParentID, ds0, ds1, ds2) {
         var elem1 = document.createElement("canvas");
         elem1.id = "line-chart";
+        elem1.className = "s";
         elem1.style.width = "800px";
         elem1.style.height = "450px";
         elem1.style.position = "absolute";
         elem1.style.top = "250px";
         elem1.style.left = "20px";
         elem1.style.backgroundColor = "black";
-        elem1.setAttribute("onclick", "send('IPS_RunScript,33116')");
-        this.e = elem1;
-
+        elem1.setAttribute("onclick", "send('IPS_RunScript,26561')");
         document.getElementById(ParentID).appendChild(elem1);
+
+
         var myChart = new Chart(elem1, {
             type: 'line',
             data: {
                 labels: [],
                 datasets: [{
-                    label: 'Demo',
+                    label: ds0['label'],
+                    yAxisID: 'B',
                     data: [],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
                     borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'red',
+                    ]
+                }, {
+                    label: ds1['label'],
+                    yAxisID: 'B',
+                    data: [],
+                    borderColor: [
+                        'blue',
+                    ]
+                }, {
+                    label: ds2['label'],
+                    yAxisID: 'A',
+                    data: [],
+                    borderColor: [
+                        'white',
                     ],
+                    fill: false,
                     borderWidth: 1
                 }]
             },
             options: {
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 30,
+                        top: 0,
+                        bottom: 0
+                    }
+                },
                 scales: {
                     xAxes: [{
                         type: 'time',
                         distribution: 'linear'
-                    }]
+                    }],
+                    yAxes: [{
+                            id: 'A',
+                            type: 'linear',
+                            position: 'right',
+                            ticks: {
+                                min: 55,
+                                max: 65
+                            }
+                        },
+                        {
+                            id: 'B',
+                            type: 'linear',
+                            position: 'left',
+                            ticks: {
+                                min: 0,
+                                max: 15
+                            }
+                        }
+                    ]
                 }
             }
         });
+        this.C = myChart;
+        return myChart;
     }
 
-    dataload() {
-
+    dataload(ds1, ds2, ds3) {
+        this.C.data.datasets[0].data = JSON.parse(ds1);
+        this.C.data.datasets[1].data = JSON.parse(ds2);
+        this.C.data.datasets[2].data = JSON.parse(ds3);
+        this.C.update();
     }
 }

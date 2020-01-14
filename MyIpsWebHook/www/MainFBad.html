@@ -26,14 +26,14 @@
 
 
 
-
     var graph = new MyChart();
-    graph.create("MainFBad");
-    var Mydata =
-        '[{"x":"2020-01-13 21:45:44","y":9.328725490780288},{"x":"2020-01-13 21:20:42","y":9.27255681870801},{"x":"2020-01-13 21:15:42","y":9.406941700138562},{"x":"2020-01-13 21:10:42","y":9.350256082339211},{"x":"2020-01-13 20:55:41","y":9.29386626866617},{"x":"2020-01-13 20:50:41","y":9.237770974567942},{"x":"2020-01-13 20:40:40","y":9.31313990437319}]';
-
-    graph.data.dataset[0].data = JSON.parse(Mydata);
-    graph.update();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Wasser-Innen";
+    ds1['label'] = "Wasser-Aussen";
+    ds2['label'] = "Differenz";
+    var x = graph.create("MainFBad", ds0, ds1, ds2);
 </script>
 
 <!-- *************************************************************************************   -->

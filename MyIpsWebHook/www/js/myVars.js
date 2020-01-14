@@ -19,6 +19,10 @@ class ipsbuffer {
     this._sym = sym;
   }
 
+  init() {
+
+  }
+
   update(symvar) {
     //objecte zusammenführen
     const target = this.ips;
@@ -375,13 +379,21 @@ class ipsbuffer {
       this.sym[286] = this.ips.ID34355; // Wassergehalt Innen Bad
       this.sym[287] = this.ips.ID27233; // Klima Innen Bad
       this.sym[288] = this.ips.ID46977; // Warnung Klima Bad
-      if (this.ips.DATA43454) {
-        this.sym[289] = this.ips.DATA43454;
+      if (this.ips.DATA34355) {
+        this.sym[289] = this.ips.DATA34355; //Wassergehalt Innen
       } else {
-        this.sym[289] = "";
+        this.sym[289] = '';
       }
-
-
+      if (this.ips.DATA12347) {
+        this.sym[290] = this.ips.DATA12347; //Wassergehalt Innen
+      } else {
+        this.sym[290] = '';
+      }
+      if (this.ips.DATA54987) {
+        this.sym[291] = this.ips.DATA54987; //Wassergehalt Innen
+      } else {
+        this.sym[291] = '';
+      }
 
 
 
@@ -634,6 +646,8 @@ function updateValues() {
     BathTPAussen.update(ipsObj.sym[283]);
 
 
+
+    graph.dataload(this.ipsObj.sym[289], this.ipsObj.sym[290], this.ipsObj.sym[291]);
   }
 
 
