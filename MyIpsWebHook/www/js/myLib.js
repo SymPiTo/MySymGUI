@@ -4120,32 +4120,39 @@ class MyChart {
 
         var myChart = new Chart(elem1, {
             type: 'line',
+
             data: {
                 labels: [],
+
                 datasets: [{
-                    label: ds0['label'],
-                    yAxisID: 'B',
-                    data: [],
-                    borderColor: [
-                        'red',
-                    ]
-                }, {
-                    label: ds1['label'],
-                    yAxisID: 'B',
-                    data: [],
-                    borderColor: [
-                        'blue',
-                    ]
-                }, {
-                    label: ds2['label'],
-                    yAxisID: 'A',
-                    data: [],
-                    borderColor: [
-                        'white',
-                    ],
-                    fill: false,
-                    borderWidth: 1
-                }]
+                        label: ds0['label'],
+                        yAxisID: 'B',
+                        data: [],
+                        borderColor: [
+                            'red',
+                        ],
+                        fill: false,
+                    },
+                    {
+                        label: ds1['label'],
+                        yAxisID: 'B',
+                        data: [],
+                        borderColor: [
+                            'blue',
+                        ],
+                        fill: false,
+                    },
+                    {
+                        label: ds2['label'],
+                        yAxisID: 'A',
+                        data: [],
+                        borderColor: [
+                            'white',
+                        ],
+                        fill: false,
+                        borderWidth: 1
+                    }
+                ]
             },
             options: {
                 layout: {
@@ -4155,6 +4162,7 @@ class MyChart {
                         top: 0,
                         bottom: 0
                     }
+
                 },
                 scales: {
                     xAxes: [{
@@ -4166,17 +4174,22 @@ class MyChart {
                             type: 'linear',
                             position: 'right',
                             ticks: {
-                                min: 55,
-                                max: 65
+                                // Include a dollar sign in the ticks
+                                callback: function (value, index, values) {
+                                    return value + '%';
+                                }
                             }
+
                         },
                         {
                             id: 'B',
                             type: 'linear',
                             position: 'left',
                             ticks: {
-                                min: 0,
-                                max: 15
+                                // Include a dollar sign in the ticks
+                                callback: function (value, index, values) {
+                                    return value + '°C';
+                                }
                             }
                         }
                     ]
@@ -4189,8 +4202,14 @@ class MyChart {
 
     dataload(ds1, ds2, ds3) {
         this.C.data.datasets[0].data = JSON.parse(ds1);
-        this.C.data.datasets[1].data = JSON.parse(ds2);
-        this.C.data.datasets[2].data = JSON.parse(ds3);
+        if (ds2) {
+            this.C.data.datasets[1].data = JSON.parse(ds2);
+        }
+
+        if (ds3) {
+            this.C.data.datasets[2].data = JSON.parse(ds3);
+        }
+
         this.C.update();
     }
 }

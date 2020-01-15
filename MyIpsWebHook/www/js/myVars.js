@@ -640,8 +640,8 @@ function updateValues() {
     BathTemp.update(ipsObj.sym[279]);
     BathDisHumid.update(ipsObj.sym[278]);
 
-    BathFeuchteInnen.update(ipsObj.sym[286]);
-    BathFeuchteAussen.update(ipsObj.sym[285]);
+    BathFeuchteInnen.update(ipsObj.sym[286], 1);
+    BathFeuchteAussen.update(ipsObj.sym[285], 1);
     BathTPInnen.update(ipsObj.sym[284]);
     BathTPAussen.update(ipsObj.sym[283]);
 
