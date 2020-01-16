@@ -26,14 +26,20 @@
 
 
 
-    var graph = new MyChart();
+    var graphB = new MyChart();
     var ds0 = new Array();
     var ds1 = new Array();
     var ds2 = new Array();
     ds0['label'] = "Wasser-Innen";
     ds1['label'] = "Wasser-Aussen";
     ds2['label'] = "Differenz";
-    var x = graph.create("MainFBad", ds0, ds1, ds2);
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphB.create("MainFBad", '26561', '%', '°C', ds0, ds1, ds2);
 </script>
 
 <!-- *************************************************************************************   -->

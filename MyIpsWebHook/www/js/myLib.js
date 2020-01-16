@@ -4104,7 +4104,7 @@ class MyChart {
         this.C = "";
     }
 
-    create(ParentID, ds0, ds1, ds2) {
+    create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ds3 = '') {
         var elem1 = document.createElement("canvas");
         elem1.id = "line-chart";
         elem1.className = "s";
@@ -4114,7 +4114,7 @@ class MyChart {
         elem1.style.top = "250px";
         elem1.style.left = "20px";
         elem1.style.backgroundColor = "black";
-        elem1.setAttribute("onclick", "send('IPS_RunScript,26561')");
+        elem1.setAttribute("onclick", "send('IPS_RunScript," + scriptID + "')");
         document.getElementById(ParentID).appendChild(elem1);
 
 
@@ -4122,32 +4122,32 @@ class MyChart {
             type: 'line',
 
             data: {
-                labels: [],
+
 
                 datasets: [{
                         label: ds0['label'],
-                        yAxisID: 'B',
+                        yAxisID: ds0['id'],
                         data: [],
                         borderColor: [
-                            'red',
+                            ds0['color'],
                         ],
                         fill: false,
                     },
                     {
                         label: ds1['label'],
-                        yAxisID: 'B',
+                        yAxisID: ds1['id'],
                         data: [],
                         borderColor: [
-                            'blue',
+                            ds1['color'],
                         ],
                         fill: false,
                     },
                     {
                         label: ds2['label'],
-                        yAxisID: 'A',
+                        yAxisID: ds2['id'],
                         data: [],
                         borderColor: [
-                            'white',
+                            ds2['color'],
                         ],
                         fill: false,
                         borderWidth: 1
@@ -4176,7 +4176,7 @@ class MyChart {
                             ticks: {
                                 // Include a dollar sign in the ticks
                                 callback: function (value, index, values) {
-                                    return value + '%';
+                                    return value + unit1;
                                 }
                             }
 
@@ -4188,7 +4188,7 @@ class MyChart {
                             ticks: {
                                 // Include a dollar sign in the ticks
                                 callback: function (value, index, values) {
-                                    return value + '°C';
+                                    return value + unit2;
                                 }
                             }
                         }
@@ -4200,16 +4200,21 @@ class MyChart {
         return myChart;
     }
 
-    dataload(ds1, ds2, ds3) {
-        this.C.data.datasets[0].data = JSON.parse(ds1);
+    dataload(ds1, ds2, ds3, ds4) {
+        if (ds1) {
+            this.C.data.datasets[0].data = JSON.parse(ds1);
+        }
+
+
         if (ds2) {
             this.C.data.datasets[1].data = JSON.parse(ds2);
         }
-
         if (ds3) {
             this.C.data.datasets[2].data = JSON.parse(ds3);
         }
-
+        if (ds4) {
+            this.C.data.datasets[3].data = JSON.parse(ds4);
+        }
         this.C.update();
     }
 }

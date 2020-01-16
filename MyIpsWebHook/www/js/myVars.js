@@ -396,6 +396,23 @@ class ipsbuffer {
       }
 
 
+      if (this.ips.DATA43454) {
+        this.sym[292] = this.ips.DATA43454; //Wassergehalt Innen
+      } else {
+        this.sym[292] = '';
+      }
+      if (this.ips.DATA37684) {
+        this.sym[293] = this.ips.DATA37684; //Wassergehalt Aussen
+      } else {
+        this.sym[293] = '';
+      }
+      if (this.ips.DATA42262) {
+        this.sym[294] = this.ips.DATA42262; //Wassergehalt Diff
+      } else {
+        this.sym[294] = '';
+      }
+
+
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -627,7 +644,7 @@ function updateValues() {
   VarDisDiffHumidWZ.update(ipsObj.sym[277], 0);
   VarDisHumidWZ.update(ipsObj.sym[280], 0);
 
-  /* ------------------------------- Bad------------------------------- */
+  /* ------------------------------- Bad- Fenster------------------------------ */
   if (document.getElementById("MainFBad")) {
     WindowBad.update(ipsObj.sym[185], "", "");
     VarDisWindowBad.update(ipsObj.sym[185]);
@@ -647,9 +664,12 @@ function updateValues() {
 
 
 
-    graph.dataload(this.ipsObj.sym[289], this.ipsObj.sym[290], this.ipsObj.sym[291]);
+    graphB.dataload(this.ipsObj.sym[289], this.ipsObj.sym[290], this.ipsObj.sym[291]);
   }
-
+  /* ------------------------------- SZ Fenster------------------------------- */
+  if (document.getElementById("MainFSZ")) {
+    graphSZ.dataload(this.ipsObj.sym[292], this.ipsObj.sym[293], this.ipsObj.sym[294]);
+  }
 
   /* ------------------------------- Denon Ceol ------------------------------- */
   ProgressCeol.update(ipsObj.sym[263]);
