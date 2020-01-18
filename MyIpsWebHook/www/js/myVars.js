@@ -630,8 +630,8 @@ function updateValues() {
 
   /* ------------------------------- Schlafzimmer Fenster------------------------------ */
   if (document.getElementById("MainFSZ")) {
-    WindowSZ.update(ipsObj.sym[248], "", "");
-    VarDisWindowSZ.update(ipsObj.sym[248]);
+    iWindowSZ.update(ipsObj.sym[248], "", "");
+
 
     SZhWarn.update(ipsObj.sym[296]);
     SZDisKlima.update(ipsObj.sym[295])
