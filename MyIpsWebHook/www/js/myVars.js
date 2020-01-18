@@ -407,7 +407,9 @@ class ipsbuffer {
       this.sym[310] = this.ips.ID32911; //Klime Innen WZ
       this.sym[311] = this.ips.ID43544; //Auswertung Warnung WZ
 
-
+      this.sym[312] = this.ips.DATA12337; //Differenz WZ
+      this.sym[313] = this.ips.DATA43084; //Wassergehalt Aussen WZ
+      this.sym[314] = this.ips.DATA23948; //Wassergehalt Innen WZ
 
 
     } catch (err) {
@@ -667,7 +669,7 @@ function updateValues() {
     WZTPInnen.update(ipsObj.sym[307]);
     WZTPAussen.update(ipsObj.sym[306]);
 
-    graphWZ.dataload(this.ipsObj.sym[298], this.ipsObj.sym[299], this.ipsObj.sym[297]);
+    graphWZ.dataload(this.ipsObj.sym[313], this.ipsObj.sym[314], this.ipsObj.sym[312]);
   }
 
   /* ------------------------------- Schlafzimmer Fenster------------------------------ */
