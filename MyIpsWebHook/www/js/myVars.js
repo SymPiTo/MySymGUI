@@ -20,7 +20,7 @@ class ipsbuffer {
   }
 
   init() {
-
+    this.sym = new array(400);
   }
 
   update(symvar) {

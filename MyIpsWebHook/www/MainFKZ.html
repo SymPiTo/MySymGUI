@@ -16,3 +16,39 @@
     CtrlMainFKZ.createCtrl("MainFKZCtrl", "bgOliveLight");
     //---------------------------------------------------------
 </script>
+<script>
+    var KZWarn = new StateDisplay();
+    KZWarn.create("MainFKZCtrl", "OliveLight", "", "20px", "20px", "60px", "202px", "20px",
+        "Warnung",
+        "String");
+    var KZDisKlima = new StateDisplay();
+    KZDisKlima.create("MainFKZCtrl", "CyanLOliveLightight", "", "90px", "20px", "60px", "202px", "20px",
+        "Klima Innen",
+        "String");
+    var KZDisHstate = new StateDisplay();
+    KZDisHstate.create("MainFKZCtrl", "OliveLight", "", "160px", "20px", "60px", "202px", "20px",
+        "Hinweis",
+        "nicht lüften", "lüften erlaubt");
+    var KZDisHstateDiff = new StateDisplay();
+    KZDisHstateDiff.create("MainFKZCtrl", "OliveLight", "%", "230px", "20px", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "Number");
+
+    var KZFeuchteInnen = new StateDisplay();
+    KZFeuchteInnen.create("MainFKZCtrl", "OliveLight", "mg/m³", "300px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "Number");
+    var KZFeuchteAussen = new StateDisplay();
+    KZFeuchteAussen.create("MainFKZCtrl", "OliveLight", "mg/m³", "370px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "Number");
+
+    var KZTPInnen = new StateDisplay();
+    KZTPInnen.create("MainFKZCtrl", "OliveLight", "°C", "440px", "20px", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "Number");
+    var KZTPAussen = new StateDisplay();
+    KZTPAussen.create("MainFKZCtrl", "OliveLight", "°C", "510px", "20px", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "Number");
+</script>

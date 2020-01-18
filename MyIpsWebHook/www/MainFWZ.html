@@ -16,3 +16,39 @@
     CtrlMainFWZ.createCtrl("MainFWZCtrl", "bgCyanLight");
     //---------------------------------------------------------
 </script>
+<script>
+    var WZWarn = new StateDisplay();
+    WZWarn.create("MainFWZCtrl", "CyanLight", "", "20px", "20px", "60px", "202px", "20px",
+        "Warnung",
+        "String");
+    var WZDisKlima = new StateDisplay();
+    WZDisKlima.create("MainFWZCtrl", "CyanLight", "", "90px", "20px", "60px", "202px", "20px",
+        "Klima Innen",
+        "String");
+    var WZDisHstate = new StateDisplay();
+    WZDisHstate.create("MainFWZCtrl", "CyanLight", "", "160px", "20px", "60px", "202px", "20px",
+        "Hinweis",
+        "nicht lüften", "lüften erlaubt");
+    var WZDisHstateDiff = new StateDisplay();
+    WZDisHstateDiff.create("MainFWZCtrl", "CyanLight", "%", "230px", "20px", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "Number");
+
+    var WZFeuchteInnen = new StateDisplay();
+    WZFeuchteInnen.create("MainFWZCtrl", "CyanLight", "mg/m³", "300px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "Number");
+    var WZFeuchteAussen = new StateDisplay();
+    WZFeuchteAussen.create("MainFWZCtrl", "CyanLight", "mg/m³", "370px", "20px", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "Number");
+
+    var WZTPInnen = new StateDisplay();
+    WZTPInnen.create("MainFWZCtrl", "CyanLight", "°C", "440px", "20px", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "Number");
+    var WZTPAussen = new StateDisplay();
+    WZTPAussen.create("MainFWZCtrl", "CyanLight", "°C", "510px", "20px", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "Number");
+</script>
