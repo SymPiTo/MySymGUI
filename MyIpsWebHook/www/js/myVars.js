@@ -398,6 +398,16 @@ class ipsbuffer {
 
       this.sym[303] = this.ips.ID39612; //TempSensor Wand SZ
 
+      this.sym[304] = this.ips.ID41482; //Hinweis WZ
+      this.sym[305] = this.ips.ID12337; //Differenz WZ
+      this.sym[306] = this.ips.ID49863; //Taupunkt Aussen WZ
+      this.sym[307] = this.ips.ID32126; //Taupunkt Innen WZ
+      this.sym[308] = this.ips.ID43084; //Wassergehalt Aussen WZ
+      this.sym[309] = this.ips.ID23948; //Wassergehalt Innen WZ
+      this.sym[310] = this.ips.ID32911; //Klime Innen WZ
+      this.sym[311] = this.ips.ID43544; //Auswertung Warnung WZ
+
+
 
 
     } catch (err) {
@@ -637,6 +647,28 @@ function updateValues() {
 
 
 
+
+
+
+
+  /* ------------------------------- Wohnzimmer Fenster------------------------------ */
+  if (document.getElementById("MainFWZ")) {
+    iWindowWZ.update(ipsObj.sym[25], "", "");
+
+    WZTemp.update(ipsObj.sym[281]);
+    WZDisHumid.update(ipsObj.sym[280]);
+
+    WZWarn.update(ipsObj.sym[311]);
+    WZDisKlima.update(ipsObj.sym[310])
+    WZDisHstate.update(ipsObj.sym[304]);
+    WZDisHstateDiff.update(ipsObj.sym[305], 1);
+    WZFeuchteInnen.update(ipsObj.sym[309], 1);
+    WZFeuchteAussen.update(ipsObj.sym[308], 1);
+    WZTPInnen.update(ipsObj.sym[307]);
+    WZTPAussen.update(ipsObj.sym[306]);
+
+    graphWZ.dataload(this.ipsObj.sym[298], this.ipsObj.sym[299], this.ipsObj.sym[297]);
+  }
 
   /* ------------------------------- Schlafzimmer Fenster------------------------------ */
   if (document.getElementById("MainFSZ")) {
