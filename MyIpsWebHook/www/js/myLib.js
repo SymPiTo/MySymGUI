@@ -671,6 +671,7 @@ class StateDisplay {
         elem2.style.height = "20px";
         elem2.innerHTML = titel;
         elem2.style.paddingTop = "2px"
+
         elem1.append(elem2);
 
         var elem3 = document.createElement("div");
