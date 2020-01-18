@@ -82,7 +82,7 @@
                     var jsontext = msg.data;
                     //beim Ersten AUfruf der Webseite  
                     if (initialisierung) {
-                        ipsobj.init();
+                        ipsObj.init();
                         ips = JSON.parse(jsontext);
                         symvar = ips[0];
                         ipsObj.ips = symvar;
