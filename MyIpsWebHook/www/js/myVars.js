@@ -379,38 +379,25 @@ class ipsbuffer {
       this.sym[286] = this.ips.ID34355; // Wassergehalt Innen Bad
       this.sym[287] = this.ips.ID27233; // Klima Innen Bad
       this.sym[288] = this.ips.ID46977; // Warnung Klima Bad
-      if (this.ips.DATA34355) {
-        this.sym[289] = this.ips.DATA34355; //Wassergehalt Innen
-      } else {
-        this.sym[289] = '';
-      }
-      if (this.ips.DATA12347) {
-        this.sym[290] = this.ips.DATA12347; //Wassergehalt Innen
-      } else {
-        this.sym[290] = '';
-      }
-      if (this.ips.DATA54987) {
-        this.sym[291] = this.ips.DATA54987; //Wassergehalt Innen
-      } else {
-        this.sym[291] = '';
-      }
+
+      this.sym[289] = this.ips.DATA34355; //Wassergehalt Innen
 
 
-      if (this.ips.DATA43454) {
-        this.sym[292] = this.ips.DATA43454; //Wassergehalt Innen
-      } else {
-        this.sym[292] = '';
-      }
-      if (this.ips.DATA37684) {
-        this.sym[293] = this.ips.DATA37684; //Wassergehalt Aussen
-      } else {
-        this.sym[293] = '';
-      }
-      if (this.ips.DATA42262) {
-        this.sym[294] = this.ips.DATA42262; //Wassergehalt Diff
-      } else {
-        this.sym[294] = '';
-      }
+      this.sym[290] = this.ips.DATA12347; //Wassergehalt Innen
+
+
+      this.sym[291] = this.ips.DATA54987; //Wassergehalt Innen
+
+
+
+      this.sym[292] = this.ips.DATA43454; //Wassergehalt Innen
+
+
+      this.sym[293] = this.ips.DATA37684; //Wassergehalt Aussen
+
+
+      this.sym[294] = this.ips.DATA42262; //Wassergehalt Diff
+
 
 
 
