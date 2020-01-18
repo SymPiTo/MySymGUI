@@ -413,7 +413,7 @@ class ipsbuffer {
 
     function check(index) {
       $('fehler').innerHTML = "Variable  wrong ID:" + index;
-      this.sym[index] = "";
+      ipsObj.sym[index] = "";
     }
 
   }
