@@ -633,7 +633,7 @@ function updateValues() {
     iWindowSZ.update(ipsObj.sym[248], "", "");
 
 
-    SZhWarn.update(ipsObj.sym[296]);
+    SZWarn.update(ipsObj.sym[296]);
     SZDisKlima.update(ipsObj.sym[295])
 
     SZDisHstate.update(ipsObj.sym[289]);
