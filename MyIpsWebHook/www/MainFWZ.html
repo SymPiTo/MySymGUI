@@ -6,6 +6,37 @@
     MainFWZ.createMain("MainFWZ", "bgCyan");
     //-------------------------------------------------
 </script>
+
+<script>
+    var iWindowWZ = new DynIcon("door", "bin", false);
+    iWindowWZ.create("MainFWZ", "40px", "30px", "170px", "170px");
+
+
+    var WZDisHumid = new StateDisplay();
+    WZDisHumid.create("MainFWZ", "violetLight", "%rel", "150px", "300px", "60px", "202px", "20px",
+        "rel. Feuchte",
+        "Number");
+
+    var WZTemp = new StateDisplay();
+    WZTemp.create("MainFWZ", "violetLight", "°C", "50px", "300px", "60px", "202px", "20px",
+        "Temperatur",
+        "String");
+
+    var graphWZ = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Wasser-Innen";
+    ds1['label'] = "Wasser-Aussen";
+    ds2['label'] = "Differenz";
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphWZ.create("MainFWZ", '48881', '%', '°C', ds0, ds1, ds2);
+</script>
 <!-- ----------------------------------------------------------------------- -->
 <!--                                  Ctrl                                   -->
 <!-- ----------------------------------------------------------------------- -->
