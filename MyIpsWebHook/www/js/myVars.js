@@ -395,6 +395,11 @@ class ipsbuffer {
       this.sym[297] = this.ips.DATA54987; //Differenz Bad
       this.sym[298] = this.ips.DATA12347; //Wassergehalt Aussen Bad
       this.sym[299] = this.ips.DATA34355; //Wassergehalt Innen Bad
+
+      this.sym[300] = this.ips.ID39612; //TempSensor Wand SZ
+
+
+
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
     }
@@ -637,15 +642,13 @@ function updateValues() {
   if (document.getElementById("MainFSZ")) {
     iWindowSZ.update(ipsObj.sym[248], "", "");
 
+    SZTemp.update(ipsObj.sym[300]);
+    SZDisHumid.update(ipsObj.sym[11]);
 
     SZWarn.update(ipsObj.sym[296]);
     SZDisKlima.update(ipsObj.sym[295])
-
     SZDisHstate.update(ipsObj.sym[289]);
     SZDisHstateDiff.update(ipsObj.sym[290], 1);
-    SZTemp.update(ipsObj.sym[279]);
-    SZDisHumid.update(ipsObj.sym[278]);
-
     SZFeuchteInnen.update(ipsObj.sym[294], 1);
     SZFeuchteAussen.update(ipsObj.sym[293], 1);
     SZTPInnen.update(ipsObj.sym[292]);
@@ -661,7 +664,6 @@ function updateValues() {
 
     BathWarn.update(ipsObj.sym[288]);
     BathDisKlima.update(ipsObj.sym[287])
-
     BathDisHstate.update(ipsObj.sym[270]);
     BathDisHstateDiff.update(ipsObj.sym[271], 1);
     BathTemp.update(ipsObj.sym[279]);
