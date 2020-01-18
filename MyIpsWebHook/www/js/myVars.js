@@ -380,25 +380,14 @@ class ipsbuffer {
       this.sym[287] = this.ips.ID27233; // Klima Innen Bad
       this.sym[288] = this.ips.ID46977; // Warnung Klima Bad
 
-      this.sym[289] = this.ips.DATA34355; //Wassergehalt Innen
-
-
-      this.sym[290] = this.ips.DATA12347; //Wassergehalt Innen
-
-
-      this.sym[291] = this.ips.DATA54987; //Wassergehalt Innen
-
-
-
-      this.sym[292] = this.ips.DATA43454; //Wassergehalt Innen
-
-
-      this.sym[293] = this.ips.DATA37684; //Wassergehalt Aussen
-
-
-      this.sym[294] = this.ips.DATA42262; //Wassergehalt Diff
-
-
+      this.sym[289] = this.ips.DATA39658; //Hinweis SZ
+      this.sym[290] = this.ips.DATA42262; //Differenz SZ
+      this.sym[291] = this.ips.DATA47006; //Taupunkt Aussen SZ
+      this.sym[292] = this.ips.DATA10084; //Taupunkt Innen SZ
+      this.sym[293] = this.ips.DATA37684; //Wassergehalt Aussen SZ
+      this.sym[294] = this.ips.DATA43454; //Wassergehalt Innen SZ
+      this.sym[295] = this.ips.DATA24992; //Klime Innen SZ
+      this.sym[296] = this.ips.DATA33665; //Auswertung Warnung SZ
 
 
     } catch (err) {
@@ -631,6 +620,35 @@ function updateValues() {
   VarDisDiffHumidWZ.update(ipsObj.sym[277], 0);
   VarDisHumidWZ.update(ipsObj.sym[280], 0);
 
+
+
+
+
+
+
+
+
+  /* ------------------------------- Schlafzimmer Fenster------------------------------ */
+  if (document.getElementById("MainFSZ")) {
+    WindowSZ.update(ipsObj.sym[248], "", "");
+    VarDisWindowSZ.update(ipsObj.sym[248]);
+
+    SZhWarn.update(ipsObj.sym[296]);
+    SZDisKlima.update(ipsObj.sym[295])
+
+    SZDisHstate.update(ipsObj.sym[289]);
+    SZDisHstateDiff.update(ipsObj.sym[290], 1);
+    SZTemp.update(ipsObj.sym[279]);
+    SZDisHumid.update(ipsObj.sym[278]);
+
+    SZFeuchteInnen.update(ipsObj.sym[294], 1);
+    SZFeuchteAussen.update(ipsObj.sym[293], 1);
+    SZTPInnen.update(ipsObj.sym[292]);
+    SZTPAussen.update(ipsObj.sym[291]);
+
+    graphSZ.dataload(this.ipsObj.sym[294], this.ipsObj.sym[293], this.ipsObj.sym[290]);
+  }
+
   /* ------------------------------- Bad- Fenster------------------------------ */
   if (document.getElementById("MainFBad")) {
     WindowBad.update(ipsObj.sym[185], "", "");
@@ -648,8 +666,6 @@ function updateValues() {
     BathFeuchteAussen.update(ipsObj.sym[285], 1);
     BathTPInnen.update(ipsObj.sym[284]);
     BathTPAussen.update(ipsObj.sym[283]);
-
-
 
     graphB.dataload(this.ipsObj.sym[289], this.ipsObj.sym[290], this.ipsObj.sym[291]);
   }
