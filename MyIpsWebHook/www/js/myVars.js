@@ -669,7 +669,7 @@ function updateValues() {
     WZTPInnen.update(ipsObj.sym[307]);
     WZTPAussen.update(ipsObj.sym[306]);
 
-    graphWZ.dataload(this.ipsObj.sym[313], this.ipsObj.sym[314], this.ipsObj.sym[312]);
+    graphWZ.dataload(this.ipsObj.sym[314], this.ipsObj.sym[313], this.ipsObj.sym[312]);
   }
 
   /* ------------------------------- Schlafzimmer Fenster------------------------------ */
@@ -688,7 +688,7 @@ function updateValues() {
     SZTPInnen.update(ipsObj.sym[292]);
     SZTPAussen.update(ipsObj.sym[291]);
 
-    graphSZ.dataload(this.ipsObj.sym[298], this.ipsObj.sym[299], this.ipsObj.sym[297]);
+    graphSZ.dataload(this.ipsObj.sym[299], this.ipsObj.sym[298], this.ipsObj.sym[297]);
   }
 
   /* ------------------------------- Bad- Fenster------------------------------ */
