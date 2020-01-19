@@ -21,7 +21,7 @@
     <script src="js/myGlides.js"></script>
     <script src="js/myCommands.js"></script>
     <script src="js/myVars.js"></script>
-    <script src="js/myLib-min.js"></script>
+    <script src="js/myLib.js"></script>
     <script src="js/data.js"></script>
     <script src="js/iconSet.js"></script>
 
@@ -90,9 +90,9 @@
                         ipsObj.check();
 
                         //var sym = checkUsedVars(ips);
-
-                        //initialisierung = setup();
-                        initialisierung = false;
+                        //Einmaliges Aufrufen von nicht verädnerten Daten
+                        initialisierung = iniData();
+                        //initialisierung = false;
                     }
 
                     if (jsontext.substring(0, 6) == "REPLY:") {
@@ -411,7 +411,7 @@
             SubMenuRolloKZ.create("SubMenuKZ", "olive", "Rolladen Kinderzimmer", rolladen, "MainRolloKZ",
                 "", "SM");
             var SubMenuFKZ = new GlideButton();
-            SubMenuFKZ.create("SubMenuKZ", "olive", "Fenster Wohnzimmer", fenster, "MainFKZ", "", "SMload");
+            SubMenuFKZ.create("SubMenuKZ", "olive", "Fenster Kinderzimmer", fenster, "MainFKZ", "", "SMload");
         </script>
 
         <!-- ----------------------- Sub Menu: Schlafzimmer ------------------------ -->

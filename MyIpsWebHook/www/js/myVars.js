@@ -411,6 +411,21 @@ class ipsbuffer {
       this.sym[313] = this.ips.DATA43084; //Wassergehalt Aussen WZ
       this.sym[314] = this.ips.DATA23948; //Wassergehalt Innen WZ
 
+      this.sym[315] = this.ips.ID17123; //Hinweis KZ
+      this.sym[316] = this.ips.ID54511; //Differenz KZ
+      this.sym[317] = this.ips.ID12637; //Taupunkt Aussen KZ
+      this.sym[318] = this.ips.ID22124; //Taupunkt Innen KZ
+      this.sym[319] = this.ips.ID37605; //Wassergehalt Aussen KZ
+      this.sym[320] = this.ips.ID58606; //Wassergehalt Innen KZ
+      this.sym[321] = this.ips.ID51301; //Klime Innen KZ
+      this.sym[322] = this.ips.ID40120; //Auswertung Warnung KZ
+
+      this.sym[312] = this.ips.DATA54511; //Differenz KZ
+      this.sym[313] = this.ips.DATA37605; //Wassergehalt Aussen KZ
+      this.sym[314] = this.ips.DATA58606; //Wassergehalt Innen KZ
+
+      this.sym[315] = this.ips.ID48220; //Temp Wand KZ 
+
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -492,11 +507,11 @@ function showAList(text) {
 
 
 
-function setup(sym) {
-  ServerBtn.init(sym[130], "setServer");
-  ClientBtn.init(sym[132], "setClient");
-  Player.init(sym[132], "setClient");
-  CDPlayer.init(sym[132], "setClient");
+function iniData() {
+  ServerBtn.init(ipsObj.sym[130], "setServer");
+  ClientBtn.init(ipsObj.sym[132], "setClient");
+  Player.init(ipsObj.sym[132], "setClient");
+  CDPlayer.init(ipsObj.sym[132], "setClient");
   return (initialisierung = false);
 }
 
@@ -645,7 +660,22 @@ function updateValues() {
 
 
 
+  /* ------------------------------- Kinderzimmer Fenster------------------------------ */
+  if (document.getElementById("MainFKZ")) {
+    KZTemp.update(ipsObj.sym[315]);
+    KZDisHumid.update(ipsObj.sym[10]);
 
+    KZWarn.update(ipsObj.sym[322]);
+    KZDisKlima.update(ipsObj.sym[321])
+    KZDisHstate.update(ipsObj.sym[315]);
+    KZDisHstateDiff.update(ipsObj.sym[316], 1);
+    KZFeuchteInnen.update(ipsObj.sym[320], 1);
+    KZFeuchteAussen.update(ipsObj.sym[319], 1);
+    KZTPInnen.update(ipsObj.sym[318]);
+    KZTPAussen.update(ipsObj.sym[317]);
+
+    graphKZ.dataload(this.ipsObj.sym[314], this.ipsObj.sym[313], this.ipsObj.sym[312]);
+  }
 
 
 

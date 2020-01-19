@@ -635,6 +635,14 @@ class StateDisplay {
         //Optionale Parameter
     }
 
+    get textColor() {
+        return this._textColor;
+    }
+
+    set textColor(textColor) {
+        this._textColor = textColor;
+    }
+
     create(ParentID, color, einheit, posTop, posLeft, hoehe, breite, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param) {
         this.unit = einheit,
             this.bgColor = color;
