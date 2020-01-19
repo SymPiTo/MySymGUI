@@ -3697,7 +3697,8 @@ class ButtonDropDown {
     }
 }
 
-/* --------------------- Klasse ButtonSlider -------------------------------------- */
+/* --------------------- TEMP Klasse ButtonSlider -------------------------------------- */
+/*
 class ButtonSlider {
     constructor() {
         this.TagArray = [];
@@ -3737,14 +3738,82 @@ class ButtonSlider {
         })
 
     }
+    */
+/* --------------------- Klasse ButtonSlider -------------------------------------- */
+class ButtonSlider {
+    constructor() {
+        this.TagArray = [];
+        this.BtnID = "";
+        this.containerID = "";
+        this.cont = "";
+        this.noArray = 0;
+    }
 
+    create(ParentID, posTop, posLeft, breite, hoehe, farbe, arrayList) {
+        var container = document.createElement("div");
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+        container.style.width = breite;
+        container.style.height = hoehe;
+        container.style.borderRadius = "5px";
+        container.style.display = "flex";
+        container.style.flexDirection = "row";
 
-    update(value) {
-        var x = this.containerID;
-        var xscale = x.scrollWidth / this.noArray;
-        var xpos = value * xscale;
-        x.scrollLeft = xpos;
+        var elemLeft = document.createElement("div");
+        elemLeft.className = "fontbutton";
+        elemLeft.classList.add(farbe);
+        elemLeft.style.width = "17%";
+        elemLeft.style.height = hoehe;
+        elemLeft.style.display = "flex";
+        elemLeft.style.alignItems = "center";
+        elemLeft.style.justifyContent = "center";
+        var cmd = "send('command(upnp," + arrayList + ",left)')";
+        elemLeft.setAttribute("onclick", cmd);
+        var elemLeft1 = document.createElement("span");
+        elemLeft1.className = "fa fa-chevron-left";
+        elemLeft1.style.fontSize = "20px";
+        elemLeft1.style.color = "black";
+        elemLeft.append(elemLeft1);
+        container.appendChild(elemLeft);
 
+        var elem1 = document.createElement("div");
+        elem1.style.width = "66%";
+        elem1.style.height = parseInt(hoehe, 10) - parseInt("0px", 10) + "px";
+        elem1.style.marginTop = "0px";
+        elem1.style.marginLeft = "2px";
+        elem1.style.marginRight = "2px";
+        elem1.style.display = "flex";
+        elem1.style.alignItems = "center";
+        elem1.style.justifyContent = "center";
+        elem1.style.border = "5px  grey inset";
+        elem1.className = "";
+        elem1.classList.add(farbe + 'Light');
+        this.containerID = elem1;
+        container.appendChild(elem1);
+
+        var elemRight = document.createElement("div");
+        elemRight.className = "fontbutton";
+        elemRight.classList.add(farbe);
+        elemRight.style.width = "17%";
+        elemRight.style.height = hoehe;
+        elemRight.style.display = "flex";
+        elemRight.style.alignItems = "center";
+        elemRight.style.justifyContent = "center";
+        var cmd = "send('command(upnp," + arrayList + ",right)')";
+        elemRight.setAttribute("onclick", cmd);
+        var elemRight1 = document.createElement("span");
+        elemRight1.className = "fa fa-chevron-right";
+        elemRight1.style.fontSize = "20px";
+        elemRight1.style.color = "black";
+        elemRight.append(elemRight1);
+        container.appendChild(elemRight);
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+    update(name) {
+        this.containerID.innerHTML = name;
     }
 }
 

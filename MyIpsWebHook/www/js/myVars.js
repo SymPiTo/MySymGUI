@@ -426,6 +426,7 @@ class ipsbuffer {
 
       this.sym[315] = this.ips.ID48220; //Temp Wand KZ 
 
+      this.sym[316] = this.ips.ID37365; //upnp Server Name
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -508,10 +509,7 @@ function showAList(text) {
 
 
 function iniData() {
-  ServerBtn.init(ipsObj.sym[130], "setServer");
-  ClientBtn.init(ipsObj.sym[132], "setClient");
-  Player.init(ipsObj.sym[132], "setClient");
-  CDPlayer.init(ipsObj.sym[132], "setClient");
+
   return (initialisierung = false);
 }
 
@@ -975,9 +973,9 @@ function updateValues() {
   ServerImg.update(ipsObj.sym[133]);
   ClientImg.update(ipsObj.sym[134]);
   //<!-- ******************** upnp   **************************  -->
-  ClientBtn.update(ipsObj.sym[132]);
+  ClientBtn.update(ipsObj.sym[256]);
   Player.update(ipsObj.sym[258]);
-  ServerBtn.update(ipsObj.sym[135]);
+  ServerBtn.update(ipsObj.ips['ID37365']);
 
 
 
