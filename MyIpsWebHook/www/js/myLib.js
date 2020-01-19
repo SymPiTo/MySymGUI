@@ -3763,7 +3763,7 @@ class ButtonSlider {
         var elemLeft = document.createElement("div");
         elemLeft.className = "fontbutton";
         elemLeft.classList.add(farbe);
-        elemLeft.style.width = "17%";
+        elemLeft.style.width = "20%";
         elemLeft.style.height = hoehe;
         elemLeft.style.display = "flex";
         elemLeft.style.alignItems = "center";
@@ -3778,8 +3778,8 @@ class ButtonSlider {
         container.appendChild(elemLeft);
 
         var elem1 = document.createElement("div");
-        elem1.style.width = "66%";
-        elem1.style.height = parseInt(hoehe, 10) - parseInt("0px", 10) + "px";
+        elem1.style.width = "60%";
+        elem1.style.height = parseInt(hoehe, 10) - parseInt("2px", 10) + "px";
         elem1.style.marginTop = "0px";
         elem1.style.marginLeft = "2px";
         elem1.style.marginRight = "2px";
@@ -3795,7 +3795,7 @@ class ButtonSlider {
         var elemRight = document.createElement("div");
         elemRight.className = "fontbutton";
         elemRight.classList.add(farbe);
-        elemRight.style.width = "17%";
+        elemRight.style.width = "20%";
         elemRight.style.height = hoehe;
         elemRight.style.display = "flex";
         elemRight.style.alignItems = "center";
