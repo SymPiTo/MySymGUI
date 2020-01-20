@@ -3619,7 +3619,7 @@
 
 
             var FontBtnPrev = new FontButtonNew();
-            FontBtnPrev.create("MainUpnp", "fontbutton", "purple", "71vh", "4%", "fa fa-backward", "60px", "60px",
+            FontBtnPrev.create("MainUpnp", "fontbutton", "purple", "71vh", "3%", "fa fa-backward", "60px", "60px",
                 "send('command(upnp,play,previous)')");
 
             var FontBtnNext = new FontButtonNew();
@@ -3666,40 +3666,40 @@
 
         <script>
             var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpDiscoverCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
+            ServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
             var btnSearchServer = new CtrlButton();
-            btnSearchServer.create("MainUpnpDiscoverCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
+            btnSearchServer.create("MainUpnpCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Server", "command", "", "send('command(upnp,discover,server)')");
             var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpDiscoverCtrl", "100px", "30px", "150px", "190px", "purple", "white",
+            DeviceBox.create("MainUpnpCtrl", "100px", "30px", "150px", "190px", "purple", "white",
                 "Deviceliste");
             var btnSearchClient = new CtrlButton();
-            btnSearchClient.create("MainUpnpDiscoverCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
+            btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Devices", "command", "", "send('command(upnp,discover,client)')");
 
 
             var DisMeldung = new StateDisplay();
-            DisMeldung.create("MainUpnpDiscoverCtrl", "purpleLight", "", "600px", "30px", "80px", "202px", "18px",
+            DisMeldung.create("MainUpnpCtrl", "purpleLight", "", "600px", "30px", "80px", "202px", "18px",
                 "Meldung",
                 "String", "", "", "", "");
 
             var btnSyncMusik = new FontCtrlButton();
-            btnSyncMusik.create("MainUpnpDiscoverCtrl", "purple", "700px", "50px", "fa fa-sync", "Sync Musik",
+            btnSyncMusik.create("MainUpnpCtrl", "purple", "700px", "50px", "fa fa-sync", "Sync Musik",
                 "command",
                 "send('command(upnp,sync,Musik)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncAudio = new FontCtrlButton();
-            btnSyncAudio.create("MainUpnpDiscoverCtrl", "purple", "750px", "50px", "fa fa-sync", "Sync Audio",
+            btnSyncAudio.create("MainUpnpCtrl", "purple", "750px", "50px", "fa fa-sync", "Sync Audio",
                 "command",
                 "send('command(upnp,sync,Audio)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncFoto = new FontCtrlButton();
-            btnSyncFoto.create("MainUpnpDiscoverCtrl", "purple", "800px", "50px", "fa fa-sync", "Sync Foto",
+            btnSyncFoto.create("MainUpnpCtrl", "purple", "800px", "50px", "fa fa-sync", "Sync Foto",
                 "command",
                 "send('command(upnp,sync,Foto)')", "",
                 "150px", "50px", "white", "19px", "yellow");
             var btnSyncVideo = new FontCtrlButton();
-            btnSyncVideo.create("MainUpnpDiscoverCtrl", "purple", "850px", "50px", "fa fa-sync", "Sync Video",
+            btnSyncVideo.create("MainUpnpCtrl", "purple", "850px", "50px", "fa fa-sync", "Sync Video",
                 "command",
                 "send('command(upnp,sync,Video)')", "",
                 "150px", "50px", "white", "19px", "yellow");
