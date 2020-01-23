@@ -95,7 +95,7 @@ class ipsbuffer {
       this.sym[21] = this.ips.ID25457; //Rollo B Mode
       this.sym[22] = this.ips.ID26881; //Rollo B Postion 
       this.sym[54] = this.ips.ID42649; //Rollo B up/Down
-      this.sym[55] = this.ips.ID41457;; //Rollo B Schaltzeit Mo-Fr
+      this.sym[55] = this.ips.ID41457; //Rollo B Schaltzeit Mo-Fr
       this.sym[56] = this.ips.ID25503; //Rollo B Schaltzeit Sa-So
       this.sym[57] = this.ips.ID11634; // Rollo B SunSet active  
 
@@ -660,19 +660,19 @@ function updateValues() {
 
   /* ------------------------------- Kinderzimmer Fenster------------------------------ */
   if (document.getElementById("MainFKZ")) {
-    KZTemp.update(ipsObj.sym[315]);
-    KZDisHumid.update(ipsObj.sym[10]);
+    KZTemp.update(ipsObj.ips.ID48220);
+    KZDisHumid.update(ipsObj.ips.ID56454);
 
-    KZWarn.update(ipsObj.sym[322]);
-    KZDisKlima.update(ipsObj.sym[321])
-    KZDisHstate.update(ipsObj.sym[315]);
-    KZDisHstateDiff.update(ipsObj.sym[316], 1);
-    KZFeuchteInnen.update(ipsObj.sym[320], 1);
-    KZFeuchteAussen.update(ipsObj.sym[319], 1);
-    KZTPInnen.update(ipsObj.sym[318]);
-    KZTPAussen.update(ipsObj.sym[317]);
+    KZWarn.update(ipsObj.ips.ID40120);
+    KZDisKlima.update(ipsObj.ips.ID51301)
+    KZDisHstate.update(ipsObj.ips.ID17123);
+    KZDisHstateDiff.update(ipsObj.ips.ID54511, 1);
+    KZFeuchteInnen.update(ipsObj.ips.ID58606, 1);
+    KZFeuchteAussen.update(ipsObj.ips.ID37605, 1);
+    KZTPInnen.update(ipsObj.ips.ID22124);
+    KZTPAussen.update(ipsObj.ips.ID12637);
 
-    graphKZ.dataload(this.ipsObj.sym[314], this.ipsObj.sym[313], this.ipsObj.sym[312]);
+    graphKZ.dataload(ipsObj.ips.ID58606, ipsObj.ips.ID37605, ipsObj.ips.ID54511);
   }
 
 

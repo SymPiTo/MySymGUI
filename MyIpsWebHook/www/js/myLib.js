@@ -242,6 +242,7 @@ class CtrlButton {
                 send(command);
             }
         } else if (ctrltype === "CtrlFunc") {
+
             elem.onclick = function () {
 
                 // alle Ctrl auf 0px verkleinern 
@@ -257,16 +258,83 @@ class CtrlButton {
                 ShowHidePanel(command);
             }
 
+            document.getElementById(ParentID).appendChild(elem);
+        } else if (ctrltype === "SM") {
+            elem.onclick = function () {
+
+                // alle Main auf 0px verkleinern 
+                var Main = document.getElementsByTagName("Main");
+                var MainWindow = Array.from(Main);
+                MainWindow.forEach(function (element) {
+                    var a = element.className;
+                    document.getElementsByClassName(a)[0].style.width = "0px";
+                });
+                // alle Ctrl auf 0px verkleinern 
+                var Ctrl = document.getElementsByTagName("Ctrl");
+                var MCtrlWindow = Array.from(Ctrl);
+                MCtrlWindow.forEach(function (element) {
+                    var a = element.className;
+                    document.getElementsByClassName(a)[0].style.width = "0px";
+                });
+                //Haupt Fenster einblenden
+                document.getElementById(ctrlWin).style.width = "58vw";
+                //Control Fenster einblenden
+                document.getElementById(ctrlWin + "Ctrl").style.width = "26vw";
+            }
+
+        } else if (ctrltype === "SMload") {
+            elem.onclick = function () {
+                //part HTML nachladen
+                var x = document.getElementById(ctrlWin);
+                if (x == null) {
+                    function loadContent() {
+                        jQuery.get(ctrlWin + ".html", function (data) {
+                            jQuery("#Main").html(data);
+
+                        }).done(function () {
+                            if (ctrlWin !== "") {
+                                // alle Main auf 0px verkleinern 
+                                var Main = document.getElementsByTagName("Main");
+                                var MainWindow = Array.from(Main);
+                                MainWindow.forEach(function (element) {
+                                    var a = element.className;
+                                    document.getElementsByClassName(a)[0].style.width = "0px";
+                                });
+                                // alle Ctrl auf 0px verkleinern 
+                                var Ctrl = document.getElementsByTagName("Ctrl");
+                                var MCtrlWindow = Array.from(Ctrl);
+                                MCtrlWindow.forEach(function (element) {
+                                    var a = element.className;
+                                    document.getElementsByClassName(a)[0].style.width = "0px";
+                                });
+                                //Haupt Fenster einblenden
+                                document.getElementById(ctrlWin).style.width = "58vw";
+                                //Control Fenster einblenden
+                                document.getElementById(ctrlWin + "Ctrl").style.width = "26vw";
+                            } else {
+
+
+                            }
+                        })
+                        // Request ValueUpdate an Server senden
+                        send('Request("updateValues")');
+                    }
+                    loadContent();
+                }
+            }
+
 
         }
         document.getElementById(ParentID).appendChild(elem);
     }
+
+
+
     off() {
         this.ID.style.transition = "all 2s ease-in";
         this.ID.style.height = "0px";
         this.ID.style.opacity = "0";
         this.ID.style.visibility = "hidden";
-
     }
 
 }

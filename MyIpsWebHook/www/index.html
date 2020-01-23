@@ -3586,74 +3586,52 @@
 
 
 
-            var btnDiscover = new FontCtrlButton();
-            btnDiscover.create("MainUpnp", "purple", "435px", "180px", "fa fa-sync", "Discover", "ctrlWindow",
-                "", "MainUpnpDiscoverCtrl",
-                "120px", "50px", "white", "19px", "yellow");
-
             var RahmenC = new Kachel();
             RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Libraries")
             var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "54vh", "15px", "ctrlbutton", "smaller", "purple", "CD",
-                "ctrlWindow", "MainUpnpDiscoverCtrl", "");
+            CtrlBtnupnp1.create("MainUpnp", "330px", "15px", "ctrlbutton", "smaller", "purple", "CD",
+                "SM", "MainUpnpCD", "");
             var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp", "54vh", "125px", "ctrlbutton", "smaller", "purple", "Foto",
-                "ctrlWindow", "MainUpnpBrowseCtrl", "");
+            CtrlBtnupnp2.create("MainUpnp", "330px", "125px", "ctrlbutton", "smaller", "purple", "Foto",
+                "SMload", "MainFoto", "");
+
+
             var CtrlBtnupnp4 = new CtrlButton();
-
-
-
-            var CtrlBtnupnp4 = new FontCtrlButton();
-            CtrlBtnupnp4.create("MainUpnp", "purple", "330px", "235px", "fa fa-music", "Video", "CtrlFunc",
-                "1on", "MainVideoCtrl", "100px", "50px", "black", "19px", "red");
-
-
+            CtrlBtnupnp4.create("MainUpnp", "330px", "235px", "ctrlbutton", "smaller", "purple", "Video",
+                "SMload", "MainVideo", "");
 
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "54vh", "342px", "ctrlbutton", "smaller", "purple", "Audio",
-                "ctrlWindow", "MainAudioBookCtrl", "");
+            CtrlBtnupnp3.create("MainUpnp", "330px", "340px", "ctrlbutton", "smaller", "purple", "Audio",
+                "SM", "MainAudio", "");
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "54vh", "450px", "ctrlbutton", "smaller", "purple", "Playlist",
+            CtrlBtnupnp3.create("MainUpnp", "330px", "450px", "ctrlbutton", "smaller", "purple", "Playlist",
                 "ctrlWindow", "MainAudioBookCtrl", "");
 
+            var DisMeldung = new StateDisplay();
+            DisMeldung.create("MainUpnp", "purpleLight", "", "410px", "30px", "50px", "500px", "18px",
+                "Meldung",
+                "String", "", "", "", "");
 
-
-            var FontBtnPrev = new FontButtonNew();
-            FontBtnPrev.create("MainUpnp", "fontbutton", "purple", "71vh", "3%", "fa fa-backward", "60px", "60px",
-                "send('command(upnp,play,previous)')");
-
-            var FontBtnNext = new FontButtonNew();
-            FontBtnNext.create("MainUpnp", "fontbutton", "purple", "71vh", "16%", "fa fa-forward", "60px", "60px",
-                "send('command(upnp,play,next)')");
-
-            var FontBtnStop = new FontButtonNew();
-            FontBtnStop.create("MainUpnp", "fontbutton", "purple", "71vh", "58%", "fa fa-stop", "60px", "60px",
-                "send('command(upnp,stop,all)')");
-
-            var FontBtnPause = new FontButtonNew();
-            FontBtnPause.create("MainUpnp", "fontbutton", "purple", "71vh", "70%", "fa fa-pause", "60px", "60px",
-                "send('command(upnp,pause,all)')");
-
-            var FontBtnPlay = new FontButtonNew();
-            FontBtnPlay.create("MainUpnp", "fontbutton", "purple", "71vh", "82%", "fa fa-play", "60px", "60px",
-                "send('command(upnp,play,continue)')");
-
-            var FontBtnVolDwn = new FontButtonNew();
-            FontBtnVolDwn.create("MainUpnp", "fontbutton", "purple", "83vh", "5%", "fa fa-volume-down", "100px",
-                "50px",
-                "send('command(upnp,vol,dec)')");
-            var FontBtnMute = new FontButtonNew();
-            FontBtnMute.create("MainUpnp", "fontbutton", "purple", "83vh", "25%", "fa fa-volume-off", "100px",
-                "50px",
-                "send('command(upnp,mute,toggle)')");
-            var FontBtnVolUp = new FontButtonNew();
-            FontBtnVolUp.create("MainUpnp", "fontbutton", "purple", "83vh", "45%", "fa fa-volume-up", "100px",
-                "50px",
-                "send('command(upnp,vol,inc)')");
-            var FontBtnPower = new FontButtonNew();
-            FontBtnPower.create("MainUpnp", "fontbutton", "purple", "83vh", "75%", "fa fa-power-off", "100px",
-                "50px",
-                "send('command(upnp,power,toggle)')");
+            var btnSyncMusik = new FontCtrlButton();
+            btnSyncMusik.create("MainUpnp", "purple", "480px", "10px", "fa fa-sync", "Sync Musik",
+                "command",
+                "send('command(upnp,sync,Musik)')", "",
+                "130px", "50px", "white", "19px", "yellow");
+            var btnSyncAudio = new FontCtrlButton();
+            btnSyncAudio.create("MainUpnp", "purple", "480px", "150px", "fa fa-sync", "Sync Audio",
+                "command",
+                "send('command(upnp,sync,Audio)')", "",
+                "130px", "50px", "white", "19px", "yellow");
+            var btnSyncFoto = new FontCtrlButton();
+            btnSyncFoto.create("MainUpnp", "purple", "480px", "290px", "fa fa-sync", "Sync Foto",
+                "command",
+                "send('command(upnp,sync,Foto)')", "",
+                "130px", "50px", "white", "19px", "yellow");
+            var btnSyncVideo = new FontCtrlButton();
+            btnSyncVideo.create("MainUpnp", "purple", "480px", "430px", "fa fa-sync", "Sync Video",
+                "command",
+                "send('command(upnp,sync,Video)')", "",
+                "130px", "50px", "white", "19px", "yellow");
         </script>
         <!-- ----------------------------------------------------------------------- -->
         <!--                         Discover   CTRL - UPNP                          -->
@@ -3676,33 +3654,6 @@
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Devices", "command", "", "send('command(upnp,discover,client)')");
-
-
-            var DisMeldung = new StateDisplay();
-            DisMeldung.create("MainUpnpCtrl", "purpleLight", "", "600px", "30px", "80px", "202px", "18px",
-                "Meldung",
-                "String", "", "", "", "");
-
-            var btnSyncMusik = new FontCtrlButton();
-            btnSyncMusik.create("MainUpnpCtrl", "purple", "700px", "50px", "fa fa-sync", "Sync Musik",
-                "command",
-                "send('command(upnp,sync,Musik)')", "",
-                "150px", "50px", "white", "19px", "yellow");
-            var btnSyncAudio = new FontCtrlButton();
-            btnSyncAudio.create("MainUpnpCtrl", "purple", "750px", "50px", "fa fa-sync", "Sync Audio",
-                "command",
-                "send('command(upnp,sync,Audio)')", "",
-                "150px", "50px", "white", "19px", "yellow");
-            var btnSyncFoto = new FontCtrlButton();
-            btnSyncFoto.create("MainUpnpCtrl", "purple", "800px", "50px", "fa fa-sync", "Sync Foto",
-                "command",
-                "send('command(upnp,sync,Foto)')", "",
-                "150px", "50px", "white", "19px", "yellow");
-            var btnSyncVideo = new FontCtrlButton();
-            btnSyncVideo.create("MainUpnpCtrl", "purple", "850px", "50px", "fa fa-sync", "Sync Video",
-                "command",
-                "send('command(upnp,sync,Video)')", "",
-                "150px", "50px", "white", "19px", "yellow");
         </script>
 
         <!-- ***********************************************************************************   -->
