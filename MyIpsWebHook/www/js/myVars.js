@@ -974,7 +974,7 @@ function updateValues() {
   ClientImg.update(ipsObj.sym[134]);
   //<!-- ******************** upnp   **************************  -->
   ClientBtn.update(ipsObj.sym[256]);
-  Player.update(ipsObj.sym[258]);
+  Player.update(ipsObj.ips.ID46310);
   ServerBtn.update(ipsObj.ips['ID37365']);
 
 
