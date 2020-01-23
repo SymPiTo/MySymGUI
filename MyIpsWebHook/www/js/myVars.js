@@ -782,7 +782,7 @@ function updateValues() {
   upnpCDVol.update(ipsObj.sym[257]);
   upnCDSource.update(ipsObj.sym[256]);
   upnpCDProgress.update(ipsObj.sym[259]);
-  CDPlayer.update(ipsObj.sym[258]);
+  CDPlayer.update(ipsObj.ips.ID46310);
 
   /* ---------------------------------- UPNP Video ---------------------------------- */
   if (document.getElementById("MainVideo")) {
