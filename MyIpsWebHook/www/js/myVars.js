@@ -420,13 +420,13 @@ class ipsbuffer {
       this.sym[321] = this.ips.ID51301; //Klime Innen KZ
       this.sym[322] = this.ips.ID40120; //Auswertung Warnung KZ
 
-      this.sym[312] = this.ips.DATA54511; //Differenz KZ
-      this.sym[313] = this.ips.DATA37605; //Wassergehalt Aussen KZ
-      this.sym[314] = this.ips.DATA58606; //Wassergehalt Innen KZ
+      this.sym[323] = this.ips.DATA54511; //Differenz KZ
+      this.sym[324] = this.ips.DATA37605; //Wassergehalt Aussen KZ
+      this.sym[325] = this.ips.DATA58606; //Wassergehalt Innen KZ
 
-      this.sym[315] = this.ips.ID48220; //Temp Wand KZ 
+      this.sym[326] = this.ips.ID48220; //Temp Wand KZ 
 
-      this.sym[316] = this.ips.ID37365; //upnp Server Name
+      this.sym[327] = this.ips.ID37365; //upnp Server Name
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
