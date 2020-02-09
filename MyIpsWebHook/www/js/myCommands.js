@@ -46,7 +46,6 @@ function goodNight() {
     send('command(Heizung,SZ,absenken)');
     send('command(Heizung,KZ,absenken)');
     send('command(Heizung,K,absenken)');
-
     //Rolladen zufahren
     send('command(Rollo,WZ,down)');
     send('command(Rollo,SZ,down)');
@@ -56,7 +55,16 @@ function goodNight() {
 }
 
 function Bye() {
-    var x = "ghjgh";
+    //Schlafzimmerlicht ausschalten
+
+    //Wohnzimmerfenster Licht ausschalten
+    var cmd = "func(HM_WriteValueBoolean, 15609, 'STATE', false)";
+    send(cmd);
+    //Heizung in AWAY Modus schalten
+
+
+
+
 }
 
 function SetCDCover(player) {
