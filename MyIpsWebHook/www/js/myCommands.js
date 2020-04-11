@@ -58,7 +58,8 @@ function Bye() {
     //Schlafzimmerlicht ausschalten
 
     //Wohnzimmerfenster Licht ausschalten
-    var cmd = "func(HM_WriteValueBoolean, 15609, STATE, false)";
+    //var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
+    var cmd = "func(HM_WriteValueBoolean, 15609, 'STATE', false)";
     send(cmd);
     //Heizung in AWAY Modus schalten
 
