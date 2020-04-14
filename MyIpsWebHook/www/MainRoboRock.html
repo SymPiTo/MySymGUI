@@ -1,0 +1,52 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                        Saug Roboter Roborock 6                          -->
+<!-- ----------------------------------------------------------------------- -->
+<script>
+    var MainRR = new Area();
+    MainRR.createMain("MainRR", "bgCyan");
+    //-------------------------------------------------
+</script>
+
+
+<script>
+
+</script>
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  Ctrl                                   -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!--  <Ctrl id = MainRRCtrl class="RRCtrl"></Ctrl>  -->
+<script>
+    var CtrlMainRR = new Area();
+    CtrlMainRR.createCtrl("MainRRCtrl", "bgCyanLight");
+    //---------------------------------------------------------
+</script>
+<script>
+    var RRBat = new StateDisplay();
+    RRBat.create("MainRRCtrl", "cyanLight", "", "20px", "20px", "60px", "202px", "20px",
+        "Battery",
+        "Number");
+    var RRError = new StateDisplay();
+    RRError.create("MainRRCtrl", "cyanLight", "", "90px", "20px", "60px", "202px", "20px",
+        "Fehler",
+        "String");
+    var RRHB = new StateDisplay();
+    RRHB.create("MainRRCtrl", "cyanLight", "", "160px", "20px", "60px", "202px", "20px",
+        "Hauptbürste",
+        "Number");
+    var RRSB = new StateDisplay();
+    RRSB.create("MainRRCtrl", "cyanLight", "%", "230px", "20px", "60px", "202px", "20px",
+        "Seitenbürste",
+        "Number");
+    var RRFilter = new StateDisplay();
+    RRFilter.create("MainRRCtrl", "cyanLight", "%", "300px", "20px", "60px", "202px", "20px",
+        "Filter",
+        "Number");
+    var RRSensor = new StateDisplay();
+    RRSensor.create("MainRRCtrl", "cyanLight", "%", "370px", "20px", "60px", "202px", "20px",
+        "Sensor",
+        "Number");
+</script>
