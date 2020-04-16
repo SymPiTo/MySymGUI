@@ -3,13 +3,58 @@
 <!-- ----------------------------------------------------------------------- -->
 <script>
     var MainRR = new Area();
-    MainRR.createMain("MainRR", "bgCyan");
+    MainRR.createMain("MainRRWZ", "bgCyan");
     //-------------------------------------------------
 </script>
 
 
 <script>
+    var roborock = new CtrlTile();
+    roborock.create("MainRRWZ", "30px", "30px", "RoboRock", "cyan", "transparent", "roborock",
+        "send('IPS_RunScript(48453)')", "send('IPS_RunScript(21227)')", "aus", "ein", "", "",
+        "200px", "210px", "red", "lime");
 
+    var RRStat = new StateDisplay();
+    RRStat.create("MainRRWZ", "cyanLight", "", "150px", "300px", "60px", "202px", "20px",
+        "Status",
+        "String");
+
+    var RRLstg = new StateDisplay();
+    RRLstg.create("MainRRWZ", "cyanLight", "%", "50px", "300px", "60px", "202px", "20px",
+        "Saugeistung",
+        "Number");
+
+    var Rahmen3WZ = new Kachel();
+    Rahmen3WZ.create("MainRRWZ", "270px", "20px", "230px", "100px", "transparent", "Mode");
+
+    var btnRRPause = new CtrlButton();
+    btnRRPause.create("MainRRWZ", "310px", "30px", "ctrlbutton", "smaller", "cyan", "Pause",
+        "command", "", "send('IPS_RunScript(19621)') ");
+
+    var bbtnRRLocate = new CtrlButton();
+    bbtnRRLocate.create("MainRRWZ", "310px", "135px", "ctrlbutton", "smaller", "cyan", "Locate", "command",
+        "", "send('IPS_RunScript(25879)')");
+
+
+    var Rahmen3WZ = new Kachel();
+    Rahmen3WZ.create("MainRRWZ", "270px", "280px", "230px", "300px", "transparent", "Reset");
+
+    var btnRRFilterReset = new CtrlButton();
+    btnRRFilterReset.create("MainRRWZ", "310px", "310px", "ctrlbutton", "normal", "cyan", "Reset Filter",
+        "command", "", "send('IPS_RunScript(23889)') ");
+
+    var btnMainbrushReset = new CtrlButton();
+    btnMainbrushReset.create("MainRRWZ", "375px", "310px", "ctrlbutton", "normal", "cyan", "Reset Mainbrush",
+        "command",
+        "", "send('IPS_RunScript(52712)') ");
+
+    var btnSensorReset = new CtrlButton();
+    btnSensorReset.create("MainRRWZ", "440px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sensor",
+        "command", "", "send('IPS_RunScript(17714)') ");
+
+    var btnSideBrushReset = new CtrlButton();
+    btnSideBrushReset.create("MainRRWZ", "505px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sidebrush",
+        "command", "", "send('IPS_RunScript31673)') ");
 </script>
 
 
@@ -21,32 +66,32 @@
 <!--  <Ctrl id = MainRRCtrl class="RRCtrl"></Ctrl>  -->
 <script>
     var CtrlMainRR = new Area();
-    CtrlMainRR.createCtrl("MainRRCtrl", "bgCyanLight");
+    CtrlMainRR.createCtrl("MainRRWZCtrl", "bgCyanLight");
     //---------------------------------------------------------
 </script>
 <script>
     var RRBat = new StateDisplay();
-    RRBat.create("MainRRCtrl", "cyanLight", "", "20px", "20px", "60px", "202px", "20px",
+    RRBat.create("MainRRWZCtrl", "cyanLight", "", "20px", "20px", "60px", "202px", "20px",
         "Battery",
         "Number");
     var RRError = new StateDisplay();
-    RRError.create("MainRRCtrl", "cyanLight", "", "90px", "20px", "60px", "202px", "20px",
+    RRError.create("MainRRWZCtrl", "cyanLight", "", "90px", "20px", "60px", "202px", "20px",
         "Fehler",
         "String");
     var RRHB = new StateDisplay();
-    RRHB.create("MainRRCtrl", "cyanLight", "", "160px", "20px", "60px", "202px", "20px",
+    RRHB.create("MainRRWZCtrl", "cyanLight", "", "160px", "20px", "60px", "202px", "20px",
         "Hauptbürste",
         "Number");
     var RRSB = new StateDisplay();
-    RRSB.create("MainRRCtrl", "cyanLight", "%", "230px", "20px", "60px", "202px", "20px",
+    RRSB.create("MainRRWZCtrl", "cyanLight", "%", "230px", "20px", "60px", "202px", "20px",
         "Seitenbürste",
         "Number");
     var RRFilter = new StateDisplay();
-    RRFilter.create("MainRRCtrl", "cyanLight", "%", "300px", "20px", "60px", "202px", "20px",
+    RRFilter.create("MainRRWZCtrl", "cyanLight", "%", "300px", "20px", "60px", "202px", "20px",
         "Filter",
         "Number");
     var RRSensor = new StateDisplay();
-    RRSensor.create("MainRRCtrl", "cyanLight", "%", "370px", "20px", "60px", "202px", "20px",
+    RRSensor.create("MainRRWZCtrl", "cyanLight", "%", "370px", "20px", "60px", "202px", "20px",
         "Sensor",
         "Number");
 </script>

@@ -655,7 +655,17 @@ function updateValues() {
   VarDisDiffHumidWZ.update(ipsObj.sym[277], 0);
   VarDisHumidWZ.update(ipsObj.sym[280], 0);
 
-
+  /* ------------------------------- Roborock ----------------------------- */
+  if (document.getElementById("MainRRWZ")) {
+    RRBat.update(ipsObj.ips.ID28007);
+    RRError.update(ipsObj.ips.ID43768);
+    RRHB.update(ipsObj.ips.ID54799);
+    RRSB.update(ipsObj.ips.ID10507);
+    RRFilter.update(ipsObj.ips.ID15483);
+    RRSensor.update(ipsObj.ips.ID52016);
+    RRStat.update(ipsObj.ips.ID48664);
+    RRLstg.update(ipsObj.ips.ID14129);
+  }
 
 
   /* ------------------------------- Kinderzimmer Fenster------------------------------ */
