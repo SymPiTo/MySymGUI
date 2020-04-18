@@ -657,13 +657,78 @@ function updateValues() {
 
   /* ------------------------------- Roborock ----------------------------- */
   if (document.getElementById("MainRRWZ")) {
+
+    var Status = "";
+    switch (ipsObj.ips.ID28007) {
+      case 1:
+        Status = "Starting up";
+        RRstate = true;
+        break;
+      case 2:
+        Status = "Sleeping";
+        RRstate = false;
+        break;
+      case 3:
+        Status = "Waiting";
+        RRstate = true;
+      case 4:
+        Status = "Remote Control";
+        break;
+      case 5:
+        Status = "Cleaning";
+        RRstate = true;
+        break;
+      case 6:
+        Status = "Return to Base";
+        RRstate = true;
+        break;
+      case 7:
+        Status = "Manual Mode";
+        break;
+      case 8:
+        Status = "Charging";
+        RRstate = false;
+        break;
+      case 9:
+        Status = "Charging Problem";
+        break;
+      case 10:
+        Status = "Pause";
+        RRstate = false;
+        break;
+      case 11:
+        Status = "Spot Cleaning";
+        RRstate = true;
+        break;
+      case 12:
+        Status = "Malfunction";
+        break;
+      case 13:
+        Status = "Shutting Down";
+        RRstate = false;
+        break;
+      case 14:
+        Status = "Software update";
+        break;
+      case 15:
+        Status = "Docking";
+        RRstate = false;
+        break;
+      case 100:
+        Status = "Full";
+        RRstate = false;
+        break;
+      default:
+        // code block
+    }
+    roborock.update(RRstate, !RRstate, RRstate);
     RRBat.update(ipsObj.ips.ID28007);
     RRError.update(ipsObj.ips.ID43768);
     RRHB.update(ipsObj.ips.ID54799);
     RRSB.update(ipsObj.ips.ID10507);
     RRFilter.update(ipsObj.ips.ID15483);
     RRSensor.update(ipsObj.ips.ID52016);
-    RRStat.update(ipsObj.ips.ID48664);
+    RRStat.update(Status);
     RRLstg.update(ipsObj.ips.ID14129);
   }
 
