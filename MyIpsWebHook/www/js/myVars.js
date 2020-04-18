@@ -326,7 +326,7 @@ class ipsbuffer {
       this.sym[246] = this.ips.ID44533; // Schlafzimmer Heizungs Wand Regler Batterie
       this.sym[247] = this.ips.ID44533; // Wohnzimmer 6fach Licht Taster Batterie
       this.sym[248] = this.ips.ID58490; // Schlafzimmer Fenster state
-      this.sym[249] = this.ips.ID19999; // Schlafzimmer Heizkörper state
+      this.sym[249] = this.ips.ID50235; // Schlafzimmer Heizkörper state
 
       this.sym[250] = this.ips.ID22167; // upnp Actor
       this.sym[251] = this.ips.ID26207; // upnp Album
