@@ -657,9 +657,9 @@ function updateValues() {
 
   /* ------------------------------- Roborock ----------------------------- */
   if (document.getElementById("MainRRWZ")) {
-
+    var RRstate = 0;
     var Status = "";
-    switch (ipsObj.ips.ID28007) {
+    switch (ipsObj.ips.ID48664) {
       case 1:
         Status = "Starting up";
         RRstate = true;
@@ -721,7 +721,7 @@ function updateValues() {
       default:
         // code block
     }
-    roborock.update(RRstate, !RRstate, RRstate);
+    roborock.update(RRstate, "", "");
     RRBat.update(ipsObj.ips.ID28007);
     RRError.update(ipsObj.ips.ID43768);
     RRHB.update(ipsObj.ips.ID54799);

@@ -12,10 +12,10 @@
     var roborock = new CtrlTile();
     roborock.create("MainRRWZ", "30px", "30px", "RoboRock", "cyan", "transparent", "roborock",
         "send('IPS_RunScript(48453)')", "send('IPS_RunScript(21227)')", "aus", "ein", "", "",
-        "200px", "210px", "red", "lime");
+        "200px", "210px", "black", "lime");
 
     var RRStat = new StateDisplay();
-    RRStat.create("MainRRWZ", "cyanLight", "%", "150px", "300px", "60px", "202px", "20px",
+    RRStat.create("MainRRWZ", "cyanLight", "", "150px", "300px", "60px", "202px", "20px",
         "Status",
         "String");
 
@@ -25,7 +25,7 @@
         "Number");
 
     var Rahmen3WZ = new Kachel();
-    Rahmen3WZ.create("MainRRWZ", "270px", "20px", "230px", "100px", "transparent", "Mode");
+    Rahmen3WZ.create("MainRRWZ", "270px", "20px", "230px", "170px", "transparent", "Mode");
 
     var btnRRPause = new CtrlButton();
     btnRRPause.create("MainRRWZ", "310px", "30px", "ctrlbutton", "smaller", "cyan", "Pause",
@@ -36,7 +36,7 @@
         "", "send('IPS_RunScript(25879)')");
 
     var bbtnRRLoad = new CtrlButton();
-    bbtnRRLoad.create("MainRRWZ", "310px", "135px", "ctrlbutton", "smaller", "cyan", "Load", "command",
+    bbtnRRLoad.create("MainRRWZ", "380px", "45px", "ctrlbutton", "normal", "cyan", "go to base", "command",
         "", "send('IPS_RunScript(16629)')");
 
 
