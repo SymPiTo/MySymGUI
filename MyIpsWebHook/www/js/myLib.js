@@ -640,7 +640,11 @@ class DynIcon {
                 this.ID.src = "images/" + this.ImageBaseName + "0.png";
             } else if (value === 1) {
                 this.ID.src = "images/" + this.ImageBaseName + "1.png";
-            } else if (value > 1 && value < 11) {
+            } else if (value === 2) {
+                this.ID.src = "images/" + this.ImageBaseName + "2.png";
+            } else if (value === 3) {
+                this.ID.src = "images/" + this.ImageBaseName + "3.png";
+            } else if (value > 3 && value < 11) {
                 this.ID.src = "images/" + this.ImageBaseName + "10.png";
             } else if (value > 10 && value < 21) {
                 this.ID.src = "images/" + this.ImageBaseName + "20.png";
