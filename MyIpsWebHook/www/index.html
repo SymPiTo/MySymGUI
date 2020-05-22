@@ -174,7 +174,7 @@
                     //"The connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).";
                     else
                         reason = "Unknown reason";
-                    fehler('Client closed:' + event.code);
+                    fehler('Client closed:' + reason);
 
                     cancelKeepAlive();
                     //led.update(false);
@@ -2454,16 +2454,16 @@
             txtBox.create("MainRezepte", "0px", "10px", "390px", "520px", "white", "16px", "transparent");
 
             var FontBtnRL = new FontButtonNew();
-            FontBtnRL.create("MainRezepte", "fontbutton", "midgreen", "83vh", "5%", "fa fa-caret-left", "60px", "60px",
+            FontBtnRL.create("MainRezepte", "fontbutton", "midgreen", "70vh", "5%", "fa fa-caret-left", "60px", "60px",
                 "send('command(Cook,key,prev)')");
             var CtrlBtnRezeptList = new CtrlButton();
-            CtrlBtnRezeptList.create("MainRezepte", "83vh", "22%", "ctrlbutton", "big", "midgreen", "Rezepte",
+            CtrlBtnRezeptList.create("MainRezepte", "70vh", "22%", "ctrlbutton", "big", "midgreen", "Rezepte",
                 "ctrlWindow", "MainRezepteCtrlList");
             var CtrlBtnZutaten = new CtrlButton();
-            CtrlBtnZutaten.create("MainRezepte", "83vh", "53%", "ctrlbutton", "big", "midgreen", "Zutaten",
+            CtrlBtnZutaten.create("MainRezepte", "70vh", "53%", "ctrlbutton", "big", "midgreen", "Zutaten",
                 "ctrlWindow", "MainRezepteCtrl");
             var FontBtnRR = new FontButtonNew();
-            FontBtnRR.create("MainRezepte", "fontbutton", "midgreen", "83vh", "85%", "fa fa-caret-right", "60px",
+            FontBtnRR.create("MainRezepte", "fontbutton", "midgreen", "70vh", "85%", "fa fa-caret-right", "60px",
                 "60px",
                 "send('command(Cook,key,next)')");
         </script>
