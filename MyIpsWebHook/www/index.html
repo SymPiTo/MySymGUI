@@ -54,8 +54,8 @@
 
         var ipsArray = [];
         var symArray = new Array(400).fill("");
-
-        var ipsObj = new ipsbuffer(ipsArray, symArray, true);
+        var first = true;
+        var ipsObj = new ipsbuffer(ipsArray, symArray, first);
 
         function init() {
             // var host = 'wss://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
@@ -82,8 +82,8 @@
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
                     //beim Ersten AUfruf der Webseite  
-                    var initialisierung = ipsObj.first;
-                    if (initialisierung) {
+
+                    if (ipsObj.first) {
                         //initialisierung = iniData();
                         ipsObj.first = false;
                         ipsObj.init();
