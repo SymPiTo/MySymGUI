@@ -20,6 +20,391 @@ class ipsbuffer {
   }
 
   init() {
+    this.ips.ID15922 = ""; //Temperatur SZ (HM)
+    this.ips.ID37045 = ""; //Temperatur KZ
+    this.ips.ID51079 = ""; //Temperatur WZ
+    this.ips.ID54070 = ""; //Temperatur K
+    this.ips.ID18059 = ""; //Position HZ WZ
+    this.ips.ID49335 = ""; //Position HZ KZ
+    this.ips.ID37431 = ""; //Position HZ SZ (HM)
+    this.ips.ID51619 = ""; //Position HZ K   
+    this.ips.ID36168 = ""; // Diele Präsenzmelder
+    this.ips.ID22196 = ""; // Diele Haustür   
+    this.ips.ID56454 = ""; // humidity KZ
+    this.ips.ID50329 = ""; // humidity SZ  
+
+    this.ips.ID54298 = ""; //Rollo KZ Mode
+    this.ips.ID59964 = ""; //Rollo KZ Postion 
+
+    this.ips.ID53773 = ""; //Rollo WZ up/down
+    this.ips.ID49991 = ""; //Rollo WZ Position
+    this.ips.ID13953 = ""; //Rollo WZ Mode
+    this.ips.ID21488 = ""; //Rollo WZ Schaltzeit Mo-Fr
+    this.ips.ID37176 = ""; //Rollo WZ Schaltzeit Sa-So 
+    this.ips.ID15822 = ""; //Rollo WZ SSunSet  
+
+    this.ips.ID57642 = ""; //Rollo B Mode
+    this.ips.ID25065 = ""; //Rollo B Postion          
+    this.ips.ID57942 = ""; //Sonnenuntergang
+    this.ips.ID11938 = ""; //Sonnenaufgang
+    this.ips.ID37348 = ""; //Balkontür
+    this.ips.ID53071 = ""; //Soll Modus Hz WZ
+    this.ips.ID31769 = ""; //Soll Temp Hz WZ 
+    this.ips.ID27789 = ""; //Soll Temp Ausstehend Hz WZ
+    this.ips.ID23472 = ""; //Bat Hz WZ
+    this.ips.ID52085 = ""; //Bat Hz KZ
+    this.ips.ID42343 = ""; //Bat Hz Aktor SZ
+    this.ips.ID22083 = ""; //Bat Hz K
+    this.ips.ID34102 = ""; //Soll Modus Hz KZ
+    this.ips.ID36377 = ""; //Soll Temp Hz KZ 
+    this.ips.ID38441 = ""; //Soll Temp Ausstehend Hz KZ
+    this.ips.ID47734 = ""; //Soll Modus Hz SZ (HM)
+    this.ips.ID36544 = ""; //Soll Temp Hz SZ  (HM)
+    this.ips.ID55889 = ""; //Soll Temp Ausstehend Hz SZ (HM)
+    this.ips.ID26565 = ""; //Temp Vor Hz SZ
+    this.ips.ID32007 = ""; //Temp Rueck Hz SZ  
+    this.ips.ID39562 = ""; //Soll Modus Hz K
+    this.ips.ID54426 = ""; //Soll Temp Hz K 
+    this.ips.ID21258 = ""; //Soll Temp Ausstehend Hz K     
+    this.ips.ID41310 = ""; //Battery Alarm  
+    this.ips.ID53083 = ""; //Security Meldung
+    this.ips.ID16709 = ""; //Temperatur Balkon Aussen
+    this.ips.ID27502 = ""; //Humidity Balkon Aussen
+    this.ips.ID44154 = ""; //Alarm Anlage aktiv
+
+    this.ips.ID53769 = ""; //Rollo K Mode
+    this.ips.ID11004 = ""; //Rollo K Postion 
+    this.ips.ID13003 = ""; //Rollo K up/down
+    this.ips.ID34905 = ""; //Rollo K Schaltzeit Mo-Fr
+    this.ips.ID52660 = ""; //Rollo K Schaltzeit Sa-So
+    this.ips.ID28605 = ""; //Rollo K SSunSet  
+
+
+    this.ips.ID25457 = ""; //Rollo B Mode
+    this.ips.ID26881 = ""; //Rollo B Postion 
+    this.ips.ID42649 = ""; //Rollo B up/Down
+    this.ips.ID41457 = ""; //Rollo B Schaltzeit Mo-Fr
+    this.ips.ID25503 = ""; //Rollo B Schaltzeit Sa-So
+    this.ips.ID11634 = ""; // Rollo B SunSet active  
+
+    this.ips.ID36168 = ""; //Anwesenheit Stste Diele
+    this.ips.ID30280 = "" //Bad Fenster Aktor LowBat
+    this.ips.ID49846 = ""; //Bad Taster-Fenster LowBat
+    this.ips.ID33304 = ""; //Balkon Temp Feuchte Sensor LowBat
+    this.ips.ID26399 = ""; //Diele Präsenzmelder LowBat
+    this.ips.ID25322 = ""; //Haustür Kontakt LowBat
+    this.ips.ID38784 = ""; //Kinderzimmer Temp-Feuchte Sensor LowBat
+    this.ips.ID16681 = ""; //Küche Wassermelder LowBat
+    this.ips.ID18803 = ""; //Schlafzimmer Feuchte Sensor LowBat
+    this.ips.ID50294 = ""; //Sabotage Alarm Bewegungsmelder Diele
+    this.ips.ID54473 = ""; //Wasser Sensor Küche Alarm
+    this.ips.ID23685 = ""; //Wasser Sensor Küche Feuchte
+    this.ips.ID27499 = ""; //Wasser Sensor Küche Wasserstand
+    this.ips.ID20350 = ""; //Wasser Sensor Bad Batterie
+    this.ips.ID58710 = ""; //Wasser Sensor Bad Alarm
+    this.ips.ID17453 = ""; //Wasser Sensor Bad Feuchte
+    this.ips.ID36414 = ""; //Wasser Sensor Bad Wasserstand
+    this.ips.ID23042 = ""; //TV Volume
+    this.ips.ID34392 = ""; //TV Power
+    this.ips.ID43304 = ""; //TV Channel - 15810
+    this.ips.ID53698 = ""; //TV Channel Name - 41307
+    this.ips.ID26003 = ""; //TV Source 24408
+    this.ips.ID35428 = ""; //TV SourceList 45960
+    this.ips.ID16753 = ""; //Denon Server Name
+    this.ips.ID32160 = ""; //SZ Sonos Artist
+    this.ips.ID23875 = ""; //SZ Sonos Title
+    this.ips.ID38320 = ""; //SZ Sonos Album
+    this.ips.ID36157 = ""; //SZ Sonos Volume
+    this.ips.ID24061 = ""; //SZ Sonos Mute
+    this.ips.ID44467 = ""; //SZ Sonos Loudnes
+    this.ips.ID55859 = ""; //SZ Sonos Bass
+    this.ips.ID29767 = ""; //SZ Sonos Treble
+    this.ips.ID57771 = ""; //SZ Sonos Playmode
+    this.ips.ID35731 = ""; //SZ Sonos Cover image  
+    this.ips.ID57135 = ""; //ArtisPicLastFM - Denon
+    this.ips.ID30505 = ""; //DIDL Artist - Denon
+    this.ips.ID17922 = ""; //DIDL Title - Denon
+    this.ips.ID31822 = ""; //Line3 - Denon
+    this.ips.ID22520 = ""; //Power - Denon
+    this.ips.ID19185 = ""; //Volume - Denon
+    this.ips.ID33459 = ""; //TVchProgList 31510
+    this.ips.ID35025 = ""; //TVProgList  49099
+    this.ips.ID54563 = ""; //Kochbuch Titel
+    this.ips.ID18416 = ""; //Kochbuch Image
+    this.ips.ID29246 = ""; //Kochbuch Zutaten
+
+    this.ips.ID59260 = ""; //Kochbuch Rezept
+    this.ips.ID16493 = ""; //Kochbuch Liste
+    this.ips.ID46852 = ""; //Denon Source
+    this.ips.ID19506 = ""; //Lampe - Schalter State Schlafzimmer
+    this.ips.ID35590 = ""; //Lampe - Schalter current Schlafzimmer
+    this.ips.ID43083 = ""; //Lampe - Schalter Power Schlafzimmer
+    this.ips.ID12561 = ""; //Lampe - Schalter EnergyCounter Schlafzimmer
+    this.ips.ID17052 = ""; // Security Code
+    this.ips.ID44125 = ""; //Wetter Week Data
+    this.ips.ID46593 = ""; //Wetter NowDay Data
+
+    this.ips.ID22052 = ""; //Rollo SZ Mode
+    this.ips.ID18298 = ""; //Rollo SZ Postion 
+    this.ips.ID58302 = ""; //Rollo SZ up/down
+    this.ips.ID18740 = ""; //Rollo SZ Schaltzeit Mo-Fr
+    this.ips.ID53883 = ""; //Rollo SZ Schaltzeit Sa-So
+    this.ips.ID12349 = ""; //Rollo SZ SSunSet  
+
+    this.ips.ID25277 = ""; //Rollo KZ Schaltzeit Sa-So
+    this.ips.ID53747 = ""; //Rollo KZ SSunSet            
+    this.ips.ID54434 = ""; //Rollo KZ up/down
+    this.ips.ID28071 = ""; //Rollo KZ Schaltzeit Mo-Fr
+    this.ips.ID34292 = ""; //Denon DIDL AlbumArt URL
+    this.ips.ID42467 = ""; //WSS active
+    this.ips.ID56321 = ""; //WSS Client 1
+    this.ips.ID43949 = ""; //WSS Client 2
+    this.ips.ID15131 = ""; //WSS Client 3
+    this.ips.ID38435 = ""; //WSS Client 4
+    this.ips.ID26335 = ""; //UPNP Server Array
+    this.ips.ID59157 = ""; //UPNP Client Array
+
+    this.ips.ID31626 = ""; //UPNP Server Icon
+    this.ips.ID14390 = ""; //UPNP Client Icon   
+    this.ips.ID31981 = ""; //UPNP Server key
+
+    this.ips.ID16161 = ""; //CPU Frequemcy
+    this.ips.ID12220 = ""; //CPU load 15min
+    this.ips.ID41245 = ""; //CPU Temperature
+    this.ips.ID54826 = ""; //CPU Voltage
+    this.ips.ID19292 = ""; //IP
+    this.ips.ID59797 = ""; //IPS Kernel STatus
+    this.ips.ID41816 = ""; //IPS Version
+    this.ips.ID29733 = ""; //Memory Free
+    this.ips.ID39889 = ""; //Port this.symcon
+    this.ips.ID30080 = ""; //Port WSS
+    this.ips.ID30080 = ""; //Mem SD Free
+
+    this.ips.ID23367 = ""; //Error Code
+    this.ips.ID56516 = ""; //Operating Voltage
+    this.ips.ID20750 = ""; //RSSI Device
+    this.ips.ID48787 = ""; //RSSI Peer
+    this.ips.ID37634 = ""; //unreach
+
+    this.ips.ID22446 = ""; //RSSI Device
+    this.ips.ID53621 = ""; //RSSI Peer
+    this.ips.ID51909 = ""; //unreach
+
+    this.ips.ID20695 = ""; //RSSI Device
+    this.ips.ID17718 = ""; //RSSI Peer
+    this.ips.ID25178 = ""; //unreach
+
+    this.ips.ID51834 = ""; //Duty Cycle
+    this.ips.ID36971 = ""; // Error Code
+    this.ips.ID29563 = ""; // Error Falt Position
+    this.ips.ID14045 = ""; // Op voltage
+    this.ips.ID23035 = ""; //RSSI Device
+    this.ips.ID48609 = ""; //RSSI Peer
+    this.ips.ID42463 = ""; //unreach
+
+    this.ips.ID18797 = ""; //Duty Cycle
+    this.ips.ID10775 = ""; // Error Code
+    this.ips.ID36083 = ""; // Error Falt Position
+    this.ips.ID35613 = ""; // Op voltage
+    this.ips.ID48610 = ""; //RSSI Device
+    this.ips.ID49852 = ""; //RSSI Peer
+    this.ips.ID31856 = ""; //unreach
+
+    this.ips.ID10422 = ""; // unreach
+    this.ips.ID27255 = ""; // Error
+
+    this.ips.ID53298 = ""; // act Temperature
+    this.ips.ID46213 = ""; // Error Code
+    this.ips.ID53923 = ""; // Error Overheat
+    this.ips.ID29520 = ""; // RSSI Device
+    this.ips.ID31167 = ""; // RSSI Peer
+    this.ips.ID19200 = ""; // unreach
+
+    this.ips.ID42477 = ""; // Op. voltage
+    this.ips.ID32916 = ""; // RSSI Device
+    this.ips.ID12503 = ""; // unreach
+
+    this.ips.ID28998 = ""; // unreach
+
+    this.ips.ID14236 = ""; // unreach
+
+    this.ips.ID32177 = ""; // Fenster Position Bad
+
+    this.ips.ID13580 = ""; // RSSI Device
+    this.ips.ID38699 = ""; // RSSI Peer
+    this.ips.ID47058 = ""; // unreach
+
+    this.ips.ID39262 = ""; // RSSI Device
+    this.ips.ID34051 = ""; // RSSI Peer
+    this.ips.ID18170 = ""; // unreach
+
+    this.ips.ID42279 = ""; //Lampe - Schalter State Wohnzimmer Fenster
+    this.ips.ID58362 = ""; //Lampe - Schalter current Wohnzimmer Fenster
+    this.ips.ID22672 = ""; //Lampe - Schalter Power Wohnzimmer Fenster
+    this.ips.ID27048 = ""; //Lampe - Schalter EnergyCounter Wohnzimmer Fenster
+
+    this.ips.ID12113 = ""; //Lampe - Schalter State Wohnzimmer Mitte
+    this.ips.ID45930 = ""; //Lampe - Schalter current Wohnzimmer Mitte
+    this.ips.ID57742 = ""; //Lampe - Schalter Power Wohnzimmer Mitte
+    this.ips.ID21225 = ""; //Lampe - Schalter EnergyCounter Wohnzimmer Mitte
+
+    this.ips.ID40790 = ""; // RSSI Device Diele
+    this.ips.ID13713 = ""; // RSSI Peer Diele
+    this.ips.ID38705 = ""; // unreach Diele
+
+    this.ips.ID56831 = ""; //Lampe - Schalter State Diele
+    this.ips.ID19440 = ""; //Lampe - Schalter current Diele
+    this.ips.ID41504 = ""; //Lampe - Schalter Power Diele
+    this.ips.ID16840 = ""; //Lampe - Schalter EnergyCounter Diele
+
+    this.ips.ID10829 = ""; //Lampe - LOW BAT Schalterkontakt Diele
+    this.ips.ID42787 = ""; //Lampe - Voltage Schalterkontakt Diele
+    this.ips.ID25438 = ""; //Lampe - RSSI Device Schalterkontakt Diele
+    this.ips.ID44332 = ""; //Lampe - UNREACH Schalterkontakt Diele
+
+    this.ips.ID57825 = ""; //D Temp SZ Kanal 3
+    this.ips.ID29076 = ""; //D Temp SZ Kanal 4
+    this.ips.ID13507 = ""; //D Temp WZ Kanal 3
+    this.ips.ID52998 = ""; //D Temp WZ Kanal 4
+    this.ips.ID29170 = ""; //Temp Vor Hz WZ
+    this.ips.ID47576 = ""; //Temp Rueck Hz WZ 
+
+    this.ips.ID14488 = ""; // RSSI Device Steckdose
+    this.ips.ID16447 = ""; // RSSI Peer Steckdose
+    this.ips.ID26377 = ""; // unreach Steckdose
+
+    this.ips.ID16201 = ""; // Homematic Server connected HM   
+    this.ips.ID58903 = ""; // Homematic Server default HM  
+    this.ips.ID44062 = ""; // Homematic Server duty cycle  HM
+    this.ips.ID16055 = ""; // Homematic Server connected  HMIP
+    this.ips.ID39565 = ""; // Homematic Server default HMIP  
+    this.ips.ID29679 = ""; // Homematic Server description HMIP  
+    this.ips.ID36540 = ""; // Homematic Server duty cycle HMIP  
+
+    this.ips.ID37348 = ""; // Balkontür 
+    this.ips.ID34489 = ""; // Präsenzsensor AZ
+    this.ips.ID48642 = ""; // Lampe AZ
+    this.ips.ID37348 = ""; // Tür Balkon
+    this.ips.ID59969 = ""; // Bad Temperatur
+    this.ips.ID14487 = ""; // Bad Humidity
+    this.ips.ID19285 = ""; // Wohnzimmer Humidity
+    this.ips.ID36753 = ""; // Wohnzimmer SollTempChanged
+    this.ips.ID50046 = ""; // Kinderzimmer SollTempChanged
+    this.ips.ID17734 = ""; // Küche SollTempChanged
+    this.ips.ID57325 = ""; // Schlafzimmer SollTempChanged
+    this.ips.ID54140 = ""; // UPNP Meldung
+    this.ips.ID37871 = ""; // Arbeitszimmer Präsenzmelder Batterie
+    this.ips.ID48751 = ""; // Bad Temt Feuchte Sensor - Regler Batterie
+    this.ips.ID10829 = ""; // Diele Lichtschalter Batterie
+    this.ips.ID41083 = ""; // HaustürKontakt Batterie
+    this.ips.ID47298 = ""; // Schlafzimmer FensterKontakt Batterie
+
+    this.ips.ID55813 = ""; // Schlafzimmer Temp DiffSensor Batterie
+    this.ips.ID42343 = ""; // Schlafzimmer Heizungs Thermostat Batterie
+    this.ips.ID44533 = ""; // Schlafzimmer Heizungs Wand Regler Batterie
+    this.ips.ID44533 = ""; // Wohnzimmer 6fach Licht Taster Batterie
+    this.ips.ID58490 = ""; // Schlafzimmer Fenster state
+    this.ips.ID50235 = ""; // Schlafzimmer Heizkörper state
+
+    this.ips.ID22167 = ""; // upnp Actor
+    this.ips.ID26207 = ""; // upnp Album
+    this.ips.ID52798 = ""; // upnp Artist
+    this.ips.ID17831 = ""; // upnp imageURL
+    this.ips.ID28233 = ""; // upnp Title
+    this.ips.ID38745 = ""; // upnp Track Number
+    this.ips.ID46310 = ""; // upnp Player
+    this.ips.ID39621 = ""; // upnp Volume
+    this.ips.ID12964 = ""; // upnp Client Key
+
+    this.ips.ID27733 = ""; // upnp Progress
+    this.ips.ID57135 = ""; // Denon AlbumCover Url
+    this.ips.ID48125 = ""; // Denon Album 
+    this.ips.ID59871 = ""; // Denon Actor 
+    this.ips.ID54627 = ""; // Denon Progress
+    this.ips.ID25782 = ""; // Denon TrackNo
+
+    this.ips.ID59093 = ""; // AZ Lampe current
+    this.ips.ID24994 = ""; // AZ Lampe Energie counter
+    this.ips.ID23507 = ""; // AZ Lampe Power
+
+    this.ips.ID35935 = ""; // Water Alarm
+
+    this.ips.ID48299 = ""; // gefühltes Klima aussen
+
+    this.ips.ID35340 = ""; // Bad Hinweis Luftfeuchtigkeit
+    this.ips.ID54987 = ""; // Bad Diff % Luftfeuchtigkeit
+
+    this.ips.ID17123 = ""; // KZ Hinweis Luftfeuchtigkeit
+    this.ips.ID54511 = ""; // KZ Diff % Luftfeuchtigkeit
+
+    this.ips.ID39658 = ""; // SZ Hinweis Luftfeuchtigkeit
+    this.ips.ID42262 = ""; // SZ Diff % Luftfeuchtigkeit
+
+    this.ips.ID41482 = ""; // WZ Hinweis Luftfeuchtigkeit
+    this.ips.ID12337 = ""; // WZ Diff % Luftfeuchtigkeit
+
+    this.ips.ID14487 = ""; // Bad Luftfeuchtigkeit
+    this.ips.ID59969 = ""; // Bad Temperatur
+
+    this.ips.ID19285 = ""; // WZ Luftfeuchtigkeit Regler
+    this.ips.ID29022 = ""; // WZ Temperatur Regler    
+
+    this.ips.ID38476 = ""; // DUMMY
+
+    this.ips.ID37109 = ""; // Taupunkt Aussen Bad
+    this.ips.ID37922 = ""; // Taupunkt Innen Bad
+    this.ips.ID12347 = ""; // Wassergehalt Aussen Bad
+    this.ips.ID34355 = ""; // Wassergehalt Innen Bad
+    this.ips.ID27233 = ""; // Klima Innen Bad
+    this.ips.ID46977 = ""; // Warnung Klima Bad
+
+    this.ips.ID39658 = ""; //Hinweis SZ
+    this.ips.ID42262 = ""; //Differenz SZ
+    this.ips.ID47006 = ""; //Taupunkt Aussen SZ
+    this.ips.ID10084 = ""; //Taupunkt Innen SZ
+    this.ips.ID37684 = ""; //Wassergehalt Aussen SZ
+    this.ips.ID43454 = ""; //Wassergehalt Innen SZ
+    this.ips.ID24992 = ""; //Klime Innen SZ
+    this.ips.ID33665 = ""; //Auswertung Warnung SZ
+
+    this.ips.DATA42262 = ""; //Differenz SZ
+    this.ips.DATA37684 = ""; //Wassergehalt Aussen SZ
+    this.ips.DATA43454 = ""; //Wassergehalt Innen SZ 
+    this.ips.DATA54987 = ""; //Differenz Bad
+    this.ips.DATA12347 = ""; //Wassergehalt Aussen Bad
+    this.ips.DATA34355 = ""; //Wassergehalt Innen Bad
+
+    this.ips.ID39612 = ""; //TempSensor Wand SZ
+
+    this.ips.ID41482 = ""; //Hinweis WZ
+    this.ips.ID12337 = ""; //Differenz WZ
+    this.ips.ID49863 = ""; //Taupunkt Aussen WZ
+    this.ips.ID32126 = ""; //Taupunkt Innen WZ
+    this.ips.ID43084 = ""; //Wassergehalt Aussen WZ
+    this.ips.ID23948 = ""; //Wassergehalt Innen WZ
+    this.ips.ID32911 = ""; //Klime Innen WZ
+    this.ips.ID43544 = ""; //Auswertung Warnung WZ
+
+    this.ips.DATA12337 = ""; //Differenz WZ
+    this.ips.DATA43084 = ""; //Wassergehalt Aussen WZ
+    this.ips.DATA23948 = ""; //Wassergehalt Innen WZ
+
+    this.ips.ID17123 = ""; //Hinweis KZ
+    this.ips.ID54511 = ""; //Differenz KZ
+    this.ips.ID12637 = ""; //Taupunkt Aussen KZ
+    this.ips.ID22124 = ""; //Taupunkt Innen KZ
+    this.ips.ID37605 = ""; //Wassergehalt Aussen KZ
+    this.ips.ID58606 = ""; //Wassergehalt Innen KZ
+    this.ips.ID51301 = ""; //Klime Innen KZ
+    this.ips.ID40120 = ""; //Auswertung Warnung KZ
+
+    his.ips.DATA54511 = ""; //Differenz KZ
+    this.ips.DATA37605 = ""; //Wassergehalt Aussen KZ
+    this.ips.DATA58606 = ""; //Wassergehalt Innen KZ
+
+    this.ips.ID48220 = ""; //Temp Wand KZ 
+
+    this.ips.ID37365 = ""; //upnp Server Name
 
   }
 
