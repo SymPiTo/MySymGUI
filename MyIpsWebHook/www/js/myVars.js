@@ -569,7 +569,7 @@ class ipsbuffer {
       this.sym[126] = this.ips.ID43949; //WSS Client 2
       this.sym[127] = this.ips.ID15131; //WSS Client 3
       this.sym[128] = this.ips.ID38435; //WSS Client 4
-      if (this.ips.ID26335 = "") {
+      if (this.ips.ID26335 == "") {
         this.sym[130] = "";
         this.sym[132] = "";
       } else {
