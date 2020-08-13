@@ -1,8 +1,8 @@
 class ipsbuffer {
-  constructor(ips, sym, f) {
+  constructor(ips, sym) {
     this.ips = ips;
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
-    this.f = f;
+    this.first = true;
   }
 
   get ips() {
@@ -19,12 +19,12 @@ class ipsbuffer {
   set sym(sym) {
     this._sym = sym;
   }
-  get f() {
-    return this._f;
+  get first() {
+    return this._first;
   }
 
-  set f(f) {
-    this._f = f;
+  set first(first) {
+    this._first = first;
   }
 
 
@@ -141,7 +141,7 @@ class ipsbuffer {
       this.ips.ID35025 = ""; //TVProgList  49099
       this.ips.ID54563 = ""; //Kochbuch Titel
       this.ips.ID18416 = ""; //Kochbuch Image
-      this.ips.ID29246 = JSON.parse('{"first":"empty", "second":"empty"}'; //Kochbuch Zutaten
+      this.ips.ID29246 = JSON.parse('{"first":"empty", "second":"empty"}'); //Kochbuch Zutaten
 
           this.ips.ID59260 = ""; //Kochbuch Rezept
           this.ips.ID16493 = ""; //Kochbuch Liste
@@ -152,7 +152,7 @@ class ipsbuffer {
           this.ips.ID12561 = ""; //Lampe - Schalter EnergyCounter Schlafzimmer
           this.ips.ID17052 = ""; // Security Code
           this.ips.ID44125 = JSON.parse('{"first":"empty", "second":"empty"}'); //Wetter Week Data
-          this.ips.ID46593 = JSON.parse('{"first":"empty", "second":"empty"}'; //Wetter NowDay Data
+          this.ips.ID46593 = JSON.parse('{"first":"empty", "second":"empty"}'); //Wetter NowDay Data
 
             this.ips.ID22052 = ""; //Rollo SZ Mode
             this.ips.ID18298 = ""; //Rollo SZ Postion 
@@ -171,7 +171,7 @@ class ipsbuffer {
             this.ips.ID43949 = ""; //WSS Client 2
             this.ips.ID15131 = ""; //WSS Client 3
             this.ips.ID38435 = ""; //WSS Client 4
-            this.ips.ID26335 = JSON.parse('{"first":"empty", "second":"empty"}'; //UPNP Server Array
+            this.ips.ID26335 = JSON.parse('{"first":"empty", "second":"empty"}'); //UPNP Server Array
               this.ips.ID59157 = ""; //UPNP Client Array
 
               this.ips.ID31626 = ""; //UPNP Server Icon
@@ -840,7 +840,7 @@ class ipsbuffer {
               }
 
             }
-          }
+      }
 
           function reply(msg) {
             switch (msg) {
