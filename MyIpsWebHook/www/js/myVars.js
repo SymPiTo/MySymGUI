@@ -1,8 +1,8 @@
 class ipsbuffer {
-  constructor(ips, sym, first) {
+  constructor(ips, sym) {
     this.ips = ips;
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
-    this.first = first;
+    this.f = true;
   }
 
   get ips() {
@@ -19,18 +19,15 @@ class ipsbuffer {
   set sym(sym) {
     this._sym = sym;
   }
-  get first() {
-    return this._first;
+  get f() {
+    return this._f;
   }
 
-  set first(first) {
-    this._first = first;
+  set f(f) {
+    this._f = f;
   }
 
-  start() {
-    var x = this.first;
-    return x;
-  }
+
 
   init() {
       this.ips.ID15922 = ""; //Temperatur SZ (HM)
