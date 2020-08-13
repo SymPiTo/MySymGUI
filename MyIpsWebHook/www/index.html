@@ -82,7 +82,9 @@
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
                     //beim Ersten AUfruf der Webseite  
-                    if (initialisierung) {
+                    if (ipsObj.first) {
+                        //initialisierung = iniData();
+                        ipsObj.first = false;
                         ipsObj.init();
                         ips = JSON.parse(jsontext);
                         symvar = ips[0];
@@ -91,7 +93,7 @@
 
                         //var sym = checkUsedVars(ips);
                         //Einmaliges Aufrufen von nicht verädnerten Daten
-                        initialisierung = iniData();
+
                         //initialisierung = false;
                     }
 
