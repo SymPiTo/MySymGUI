@@ -1,7 +1,7 @@
 class ipsbuffer {
   constructor(ips, sym) {
     this.ips = ips;
-    this.sym = sym;
+    this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
   }
 
   get ips() {
@@ -24,10 +24,11 @@ class ipsbuffer {
   }
 
   update(symvar) {
-    //objecte zusammenführen
+    //objecte zusammenführen target wird ergänzt durch source sind Elemete gleich mit unterschiedlichen Werten wird der Wert von Source genommen
+    // Ergebnis steht in target und returnedTarget
     const target = this.ips;
     const source = symvar;
-    const returnedTarget = Object.assign(target, source);
+    this.ips = Object.assign(target, source);
   }
 
   check() {
