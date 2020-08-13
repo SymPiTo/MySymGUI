@@ -171,7 +171,7 @@ class ipsbuffer {
     this.ips.ID43949 = ""; //WSS Client 2
     this.ips.ID15131 = ""; //WSS Client 3
     this.ips.ID38435 = ""; //WSS Client 4
-    this.ips.ID26335 = '{"first":"empty", "second":"empty"}'; //UPNP Server Array
+    this.ips.ID26335 = ""; //UPNP Server Array
     this.ips.ID59157 = ""; //UPNP Client Array
 
     this.ips.ID31626 = ""; //UPNP Server Icon
@@ -569,19 +569,23 @@ class ipsbuffer {
       this.sym[126] = this.ips.ID43949; //WSS Client 2
       this.sym[127] = this.ips.ID15131; //WSS Client 3
       this.sym[128] = this.ips.ID38435; //WSS Client 4
-      this.sym[129] = JSON.parse(this.ips.ID26335); //UPNP Server Array
-      var Server = [];
-      var task_names = this.sym[129].map(function (task, index, array) {
-        Server[index] = task.FriendlyName;
-      });
-      this.sym[130] = Server;
-      this.sym[131] = JSON.parse(this.ips.ID59157); //UPNP Client Array
-      var Client = [];
-      var task_names = this.sym[131].map(function (task, index, array) {
-        Client[index] = task.FriendlyName;
-      });
-      this.sym[132] = Client;
-
+      if (this.ips.ID26335 = "") {
+        this.sym[130] = "";
+        this.sym[132] = "";
+      } else {
+        this.sym[129] = JSON.parse(this.ips.ID26335); //UPNP Server Array
+        var Server = [];
+        var task_names = this.sym[129].map(function (task, index, array) {
+          Server[index] = task.FriendlyName;
+        });
+        this.sym[130] = Server;
+        this.sym[131] = JSON.parse(this.ips.ID59157); //UPNP Client Array
+        var Client = [];
+        var task_names = this.sym[131].map(function (task, index, array) {
+          Client[index] = task.FriendlyName;
+        });
+        this.sym[132] = Client;
+      }
       this.sym[133] = this.ips.ID31626; //UPNP Server Icon
       this.sym[134] = this.ips.ID14390; //UPNP Client Icon   
       this.sym[135] = this.ips.ID31981; //UPNP Server key
