@@ -82,8 +82,8 @@
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
                     //beim Ersten AUfruf der Webseite  
-
-                    if (ipsObj.first) {
+                    initialisierung = ipsObj.start();
+                    if (initialisierung) {
                         //initialisierung = iniData();
                         ipsObj.first = false;
                         ipsObj.init();

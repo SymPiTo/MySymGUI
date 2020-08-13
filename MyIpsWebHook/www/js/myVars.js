@@ -27,6 +27,11 @@ class ipsbuffer {
     this._first = first;
   }
 
+  start() {
+    var x = this.first;
+    return x;
+  }
+
   init() {
       this.ips.ID15922 = ""; //Temperatur SZ (HM)
       this.ips.ID37045 = ""; //Temperatur KZ
