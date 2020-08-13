@@ -1,8 +1,8 @@
 class ipsbuffer {
-  constructor(ips, sym) {
+  constructor(ips, sym, first) {
     this.ips = ips;
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
-    this.first = true;
+    this.first = first;
   }
 
   get ips() {
