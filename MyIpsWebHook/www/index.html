@@ -50,16 +50,16 @@
         var socket;
 
         var symvar = [];
-        var initialisierung = true;
+
 
         var ipsArray = [];
         var symArray = new Array(400).fill("");
-
         var ipsObj = new ipsbuffer(ipsArray, symArray);
 
         function init() {
             // var host = 'wss://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
-            var host = 'ws://192.168.178.28:9000'; // SET THIS TO YOUR SERVER
+            var host =
+                'ws://192.168.178.28:9000,["access_token", "3gn11Ft0Me8lkqqW2/5uFQ="]'; // SET THIS TO YOUR SERVER
             try {
                 socket = new WebSocket(host);
                 state('WebSocket: ' + socket.readyState);
@@ -81,21 +81,13 @@
 
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
-                    //beim Ersten AUfruf der Webseite  
+
 
                     if (ipsObj.first) {
-                        //initialisierung = iniData();
+                        //Ausführung beim Ersten AUfruf der Webseite  
                         ipsObj.first = false;
+                        //alle verwendete IPS Variable Definieren - mit "" beschreiben
                         ipsObj.init();
-                        ///////ips = JSON.parse(jsontext);
-                        /////symvar = ips[0];
-                        ///////ipsObj.ips = symvar;
-                        ipsObj.check();
-
-                        //var sym = checkUsedVars(ips);
-                        //Einmaliges Aufrufen von nicht verädnerten Daten
-
-                        //initialisierung = false;
                     }
 
                     if (jsontext.substring(0, 6) == "REPLY:") {
@@ -115,15 +107,18 @@
                         updateIPSValue(ipsID, IPSValue);
 
                     } else {
-                        //alle Variable updaten
+                        //Variablen Paket einlesen
                         ips = JSON.parse(jsontext);
                         symvar = ips[0];
+                        //eingelesene Datenpakete/Werte in die IPS variablen schreiben
+                        //=> update der IPS Variablen
                         ipsObj.update(symvar);
                         //console.log(ipsObj.ips);
-                        //
+                        //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
                         log(ips[0]);
+                        //IPS Variable den Anzeige Variablen zuordnen
                         ipsObj.check();
-
+                        //Anzeige der aktuellen Werte
                         Heizung();
                         Security();
                         Klima();
