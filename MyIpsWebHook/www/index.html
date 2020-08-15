@@ -59,7 +59,7 @@
         function init() {
             // var host = 'wss://ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
             var host =
-                'ws://192.168.178.28:9000'; // SET THIS TO YOUR SERVER
+                'ws://anton:hans@192.168.178.28:9000'; // SET THIS TO YOUR SERVER
             try {
                 socket = new WebSocket(host);
                 state('WebSocket: ' + socket.readyState);
@@ -86,7 +86,7 @@
 
                     if (ipsObj.first) {
                         //Ausführung beim Ersten AUfruf der Webseite  
-                        send("AuthToken,0123456789");
+
                         ipsObj.first = false;
                         //alle verwendete IPS Variable Definieren - mit "" beschreiben
                         ipsObj.init();
