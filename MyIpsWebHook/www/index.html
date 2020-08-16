@@ -62,7 +62,7 @@
             document.cookie = 'X-Authorization=' + authToken + '; path=/';
 
             //var host = 'wss://torsten:Beck@ylgsiletvcrasj6i.myfritz.net:9000'; // SET THIS TO YOUR SERVER
-            var host = 'ws://192.168.178.28:9000?key1=abcadefd'; // SET THIS TO YOUR SERVER
+            var host = 'ws://192.168.178.28:9000/?key1=abcadefd'; // SET THIS TO YOUR SERVER
             try {
                 socket = new WebSocket(host);
                 state('WebSocket: ' + socket.readyState);
