@@ -3961,9 +3961,10 @@ class clock {
     constructor() {
         this.uhr = "";
         this.datum = "";
+
     }
 
-    create(ParentID, posTop, posLeft, bgcolor, fs) {
+    create(ParentID, posTop, posLeft, bgcolor, fsTime, fsDate) {
         var container = document.createElement("div");
         container.style.position = "absolute";
         container.style.left = posLeft;
@@ -3987,14 +3988,14 @@ class clock {
         var clock = document.createElement("div");
         this.uhr = clock;
         clock.idname = "clock";
-        clock.style.fontSize = "60px";
+        clock.style.fontSize = fsTime;
 
         container.append(clock);
 
         var date = document.createElement("div");
         this.datum = date;
         date.idname = "date"
-        date.style.fontSize = "20px";
+        date.style.fontSize = fsDate;
         container.append(date);
 
         document.getElementById(ParentID).appendChild(container);
