@@ -68,8 +68,8 @@
             var host = 'ws://192.168.178.28:9000/?auth=' + authToken; // SET THIS TO YOUR SERVER
             try {
                 socket = new WebSocket(host, {
-                    perMessageDeflate: false,
-                    heades: {
+                    perMessageDeflate: true,
+                    headers: {
                         Authorization: 'Basic abcdefghij',
                     },
                 });
