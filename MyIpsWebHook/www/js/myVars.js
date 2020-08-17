@@ -1038,7 +1038,7 @@ function updateIPSValue(ipsID, IPSValue) {
 function updateValues() {
 
 
-
+  uhrTop.startTime();
   uhr.startTime();
   stoerbat.update(ipsObj.sym[44], true, "red", "lime");
   stoerwater.update(ipsObj.sym[268], true, "red", "lime");
