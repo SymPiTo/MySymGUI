@@ -4022,10 +4022,10 @@ class clock {
         var curYear = today.getFullYear();
         var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
         this.datum.innerHTML = date;
-        /*
+
         var time = setTimeout(
             this.startTime(), 1500)
-            */
+
 
     }
 
