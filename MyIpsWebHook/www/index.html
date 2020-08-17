@@ -70,7 +70,7 @@
                 socket = new WebSocket(host, {
                     perMessageDeflate: true,
                     headers: {
-                        Authorization: 'Basic abcdefghij',
+                        Authorization: 'Basic ${abcdefghij}',
                     },
                 });
                 state('WebSocket: ' + socket.readyState);
