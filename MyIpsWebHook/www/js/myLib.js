@@ -3971,7 +3971,7 @@ class clock {
         container.style.top = posTop;
         container.style.color = "white";
         container.className = "clockdate-wrapper";
-        container.style.width = "250px";
+        container.style.width = "250px" - "100px";
         container.style.height = "110px";
         container.style.borderRadius = "10%";
         container.style.backgroundColor = bgcolor;
