@@ -761,9 +761,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 200px;
     left: 50%;
     z-index: 5;
-    background-color: transparent;
-    border: 2px solid black;
-    box-shadow: 10px 10px 15px silver;
+
+
+
+    -moz-box-shadow: inset 0 0 15px 5px #DDD;
+    -webkit-box-shadow: inset 0 0 15px 5px #DDDDE5;
+    box-shadow: inset 0 0 15px 5px #DDD;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
 }
 
 .frosted-glass {
@@ -814,6 +820,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     border-radius: 40px;
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px;
+
+
 }
 
 
