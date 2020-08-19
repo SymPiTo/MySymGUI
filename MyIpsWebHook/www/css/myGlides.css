@@ -762,12 +762,14 @@ WebKit inertia scrolling is being added here for any present/future devices that
     left: 50%;
     z-index: 5;
 
-    background: #7e7979;
-    border: 1px solid #FFF;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+    background: inherit;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 
 }
 
