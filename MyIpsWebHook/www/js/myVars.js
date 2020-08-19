@@ -1036,8 +1036,8 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
-  let x = document.getElementById("Message");
-  x.style.height = "400px";
+  //let x = document.getElementById("Message");
+  //x.style.height = "200px";
 
   uhrTop.startTime();
   uhr.startTime();
