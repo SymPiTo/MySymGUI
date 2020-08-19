@@ -754,7 +754,12 @@ WebKit inertia scrolling is being added here for any present/future devices that
     overflow: hidden;
 }
 
-
+.Message {
+    width: 270px;
+    height: 270px;
+    z-index: 3;
+    background-color: #c299be;
+}
 
 
 
