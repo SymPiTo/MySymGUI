@@ -759,7 +759,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     width: 400px;
     height: 0px;
     position: absolute;
-    top: 200px;
+    top: 10px;
     left: 30%;
     z-index: 5;
 
