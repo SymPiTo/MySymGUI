@@ -791,7 +791,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     box-shadow: inset 0 0 3000px rgba(255, 255, 255, .5);
     filter: blur(10px);
     margin: -20px;
-    opacity(50%)
+    opacity(50%);
 }
 
 
