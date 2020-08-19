@@ -772,6 +772,10 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 }
 
+.Message:hover {
+    height: 400px;
+}
+
 .frosted-glass {
     width: 400px;
     height: 200px;
