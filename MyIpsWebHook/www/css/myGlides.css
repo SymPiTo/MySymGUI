@@ -777,7 +777,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     padding: 2rem;
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
-
+    opacity: 50%;
 }
 
 .frosted-glass::before {
@@ -792,7 +792,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     box-shadow: inset 0 0 3000px rgba(255, 255, 255, .5);
     filter: blur(10px);
     margin: -20px;
-    opacity: 50%;
+
 }
 
 
