@@ -755,13 +755,13 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 .Message {
-    width: 270px;
-    height: 270px;
+    width: 400px;
+    height: 200px;
     position: absolute;
     top: 200px;
-    left: 400px;
+    left: 50%;
     z-index: 5;
-    background-color: #c299be;
+    background-color: transparent;
     border: 2px solid black;
     box-shadow: 10px 10px 15px silver;
 }
