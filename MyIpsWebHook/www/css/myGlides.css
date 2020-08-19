@@ -762,6 +762,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     left: 400px;
     z-index: 5;
     background-color: #c299be;
+    border: 2px solid black;
     box-shadow: 10px 10px 15px silver;
 }
 
