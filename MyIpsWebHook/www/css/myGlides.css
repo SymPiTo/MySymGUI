@@ -755,9 +755,9 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 .Message {
-    transition: height 20s;
+    transition: height 5s;
     width: 400px;
-    height: 200px;
+    height: 0px;
     position: absolute;
     top: 200px;
     left: 30%;
