@@ -777,7 +777,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     padding: 2rem;
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
-    opacity: 50%;
+
 }
 
 .frosted-glass::before {
@@ -796,10 +796,25 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 
+.transparentesGlas {
+    background-color: rgba(255, 255, 255, .9);
+    -moz-box-shadow: inset 0 0 15px 5px rgba(200, 200, 200, .9);
+    -webkit-box-shadow: inset 0 0 15px 5px rgba(200, 200, 200, .9);
+    box-shadow: inset 0 0 15px 5px rgba(200, 200, 200, .9);
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+}
 
 
-
-
+.glas {
+    -moz-box-shadow: inset 0 0 15px 5px #DDD;
+    -webkit-box-shadow: inset 0 0 15px 5px #DDDDE5;
+    box-shadow: inset 0 0 15px 5px #DDD;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+}
 
 
 
