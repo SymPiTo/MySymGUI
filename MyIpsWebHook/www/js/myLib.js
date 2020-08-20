@@ -4388,17 +4388,29 @@ class Message {
         if (param.length > 1) {
 
         }
+        var container = document.createElement("div");
+
+        var elemicon = document.createElement("div");
+        elemicon.className = "fa fa-info";
+        elemicon.style.fontSize = "24px";
+        elemicon.style.color = "#00FF00";
+        container.appendChild(elemicon);
+
         var elem = document.createElement("div");
         this.ID = elem;
         elem.className = "Message";
         elem.innerHTML = ""
         elem.style.position = "absolute";
         elem.style.top = "7vh";
+        elem.style.width = this.b;
         elem.style.height = "0px";
+        container.appendChild(elem);
+
+
         if (ParentID == "body") {
             document.body.appendChild(elem);
         } else {
-            document.getElementById(ParentID).appendChild(elem);
+            document.getElementById(ParentID).appendChild(container);
         }
     }
 
