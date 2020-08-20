@@ -4400,7 +4400,6 @@ class Message {
         } else {
             document.getElementById(ParentID).appendChild(elem);
         }
-
     }
 
     set(state, text) {
