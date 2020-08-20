@@ -4398,9 +4398,10 @@ class Message {
         container.style.height = "0px";
 
         var elemicon = document.createElement("div");
-        elemicon.className = "fa fa-info";
+        elemicon.className = "fas fa-info-circle";
         elemicon.style.fontSize = "24px";
         elemicon.style.color = "#00FF00";
+        elemicon.text - align = "right";
         container.appendChild(elemicon);
 
         var elemText = document.createElement("div");
