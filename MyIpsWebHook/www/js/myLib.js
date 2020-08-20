@@ -4369,6 +4369,43 @@ class MyChart {
     }
 }
 
+
+/* --------------------- Class Message -------------------------------------- */
+/* -------------------------- Version:1.20.08.2020 -------------------------- */
+
+class Message {
+    constructor() {
+        this.ID = "";
+        this.b = "200px";
+        this.h = "350px";
+        //optionale Parameter
+
+    }
+    create(ParentID, breite, hoehe, ...param) {
+
+        this.b = breite;
+        this.h = hoehe;
+        if (param.length > 1) {
+
+        }
+        var elem = document.createElement("div");
+        this.ID = elem;
+        elem.className = "Message";
+        elem.innerHTML = ""
+
+        document.getElementById(ParentID).appendChild(container);
+    }
+
+    set(state, text) {
+        if (state == true) {
+            this.ID.style.height = this.h;
+            this.ID.innerHTML = text;
+        }
+    }
+}
+
+
+
 /* --------------------- Klasse Video ---------------------------------------- */
 class MyVideo {
     constructor() {
