@@ -4400,7 +4400,7 @@ class Message {
         var elemicon = document.createElement("div");
         elemicon.className = "fa fa-info-circle";
         elemicon.style.fontSize = "56px";
-        elemicon.style.color = "red";
+        elemicon.style.color = "yellow";
         elemicon.style.cssFloat = "left";
         container.appendChild(elemicon);
 
