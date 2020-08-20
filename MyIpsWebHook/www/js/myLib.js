@@ -4407,9 +4407,9 @@ class Message {
 
         var elemText = document.createElement("div");
         this.IDText = elemText;
-        elemText.style.lineHeight = "24px";
+        elemText.style.lineHeight = "20px";
         elemText.innerHTML = ""
-        container.style.padding = "20px";
+        container.style.padding = "10px";
         container.appendChild(elemText);
 
 
