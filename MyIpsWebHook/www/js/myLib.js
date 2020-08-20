@@ -4392,8 +4392,12 @@ class Message {
         this.ID = elem;
         elem.className = "Message";
         elem.innerHTML = ""
+        if (ParentID == "body") {
+            document.body.appendChild(elem);
+        } else {
+            document.getElementById(ParentID).appendChild(elem);
+        }
 
-        document.getElementById(ParentID).appendChild(container);
     }
 
     set(state, text) {
