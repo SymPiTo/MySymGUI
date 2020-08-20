@@ -4396,7 +4396,7 @@ class Message {
         container.style.top = "7vh";
         container.style.width = this.b;
         container.style.height = "0px";
-        container.style.padding = "10px";
+
 
         var elemicon = document.createElement("div");
         elemicon.className = "fa fa-info-circle";
@@ -4409,7 +4409,7 @@ class Message {
         this.IDText = elemText;
         elemText.style.lineHeight = "24px";
         elemText.innerHTML = ""
-
+        container.style.padding = "20px";
         container.appendChild(elemText);
 
 
