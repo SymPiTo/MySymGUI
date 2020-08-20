@@ -4376,7 +4376,8 @@ class MyChart {
 class Message {
     constructor() {
         this.ID = "";
-        this.b = "200px";
+        this.IDText = "";
+        this.b = "400px";
         this.h = "350px";
         //optionale Parameter
 
@@ -4389,6 +4390,7 @@ class Message {
 
         }
         var container = document.createElement("div");
+        this.ID = container;
         container.className = "Message";
         container.style.position = "absolute";
         container.style.top = "7vh";
@@ -4401,12 +4403,12 @@ class Message {
         elemicon.style.color = "#00FF00";
         container.appendChild(elemicon);
 
-        var elem = document.createElement("div");
-        this.ID = elem;
+        var elemText = document.createElement("div");
+        this.IDText = elemText;
 
-        elem.innerHTML = ""
+        elemText.innerHTML = ""
 
-        container.appendChild(elem);
+        container.appendChild(elemText);
 
 
         if (ParentID == "body") {
@@ -4419,7 +4421,7 @@ class Message {
     set(state, text) {
         if (state == true) {
             this.ID.style.height = this.h;
-            this.ID.innerHTML = text;
+            this.IDText.innerHTML = text;
         }
     }
 }
