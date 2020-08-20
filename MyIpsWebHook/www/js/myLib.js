@@ -4382,7 +4382,7 @@ class Message {
         //optionale Parameter
 
     }
-    create(ParentID, breite, hoehe, ...param) {
+    create(ParentID, breite, hoehe, messageType, ...param) {
 
         this.b = breite;
         this.h = hoehe;
@@ -4396,10 +4396,20 @@ class Message {
         container.style.top = "7vh";
         container.style.width = this.b;
         container.style.height = "0px";
-
+        container.onclick = function () {
+            container.style.height = "0px";
+        }
 
         var elemicon = document.createElement("div");
-        elemicon.className = "fa fa-info-circle";
+        if (messageType == "info") {
+            elemicon.className = "fa fa-info-circle";
+        }
+        if (messageType == "warn") {
+            elemicon.className = "fa fa-warning";
+        }
+        if (messageType == "notify") {
+            elemicon.className = "fa fa-exclamation";
+        }
         elemicon.style.fontSize = "56px";
         elemicon.style.color = "yellow";
         elemicon.style.cssFloat = "left";
