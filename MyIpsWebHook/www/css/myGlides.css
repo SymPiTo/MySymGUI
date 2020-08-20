@@ -789,7 +789,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 
-    transition: transform 1s;
+    transition: transform 5s;
     transform: translateY(200px);
 
 }
