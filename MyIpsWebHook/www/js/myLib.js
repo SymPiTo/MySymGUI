@@ -4412,7 +4412,7 @@ class Message {
 
 
         if (ParentID == "body") {
-            document.body.appendChild(elem);
+            document.body.appendChild(container);
         } else {
             document.getElementById(ParentID).appendChild(container);
         }
