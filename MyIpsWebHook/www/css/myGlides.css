@@ -758,6 +758,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     transition: height 5s;
     width: 400px;
     height: 0px;
+    white-space: pre;
     position: absolute;
     top: 7vh;
     left: 50vw;
