@@ -4390,7 +4390,7 @@ class Message {
         }
         var elem = document.createElement("div");
         this.ID = elem;
-        elem.className = "Message";
+        elem.className = "frosted-glass";
         elem.innerHTML = ""
         if (ParentID == "body") {
             document.body.appendChild(elem);
