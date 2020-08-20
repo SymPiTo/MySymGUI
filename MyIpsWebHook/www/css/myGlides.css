@@ -755,9 +755,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 .Message {
-    transition: height 15s;
-    width: 400px;
-    height: 0px;
+    transition: height 5s;
+
     white-space: pre;
     position: absolute;
     top: 7vh;
@@ -772,7 +771,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     -webkit-border-radius: 5px;
     box-shadow: 4px 8px 16px rgba(0, 0, 0, .4);
     font-style: bold;
-    opacity: 80%;
+    font-size: 24px;
+    opacity: 90%;
 }
 
 

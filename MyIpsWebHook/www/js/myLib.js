@@ -4392,6 +4392,9 @@ class Message {
         this.ID = elem;
         elem.className = "Message";
         elem.innerHTML = ""
+        elem.style.position = "absolute";
+        elem.style.top = "7vh";
+        elem.style.height = "0px";
         if (ParentID == "body") {
             document.body.appendChild(elem);
         } else {
