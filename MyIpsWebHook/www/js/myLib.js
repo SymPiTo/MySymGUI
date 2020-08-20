@@ -4389,6 +4389,11 @@ class Message {
 
         }
         var container = document.createElement("div");
+        container.className = "Message";
+        container.style.position = "absolute";
+        container.style.top = "7vh";
+        container.style.width = this.b;
+        container.style.height = "0px";
 
         var elemicon = document.createElement("div");
         elemicon.className = "fa fa-info";
@@ -4398,12 +4403,9 @@ class Message {
 
         var elem = document.createElement("div");
         this.ID = elem;
-        elem.className = "Message";
+
         elem.innerHTML = ""
-        elem.style.position = "absolute";
-        elem.style.top = "7vh";
-        elem.style.width = this.b;
-        elem.style.height = "0px";
+
         container.appendChild(elem);
 
 
