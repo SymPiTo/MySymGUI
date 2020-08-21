@@ -785,7 +785,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     z-index: 1;
     overflow: hidden;
     margin: 0 auto;
-
+    font-style: bold;
+    font-size: 20px;
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 
