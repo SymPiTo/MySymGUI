@@ -797,8 +797,9 @@ class StateDisplay {
                 }
             }
         } catch (error) {
-            $('fehler').innerHTML = "Variable  fehlt:";
+            //$('fehler').innerHTML = "Variable  fehlt:";
             //alert("value in Display error" + this.ID);
+            this.ID.innerHTML = "XXXX";
         }
 
 
@@ -2025,8 +2026,10 @@ class RolloCtrl {
             this.ID.innerHTML = (wert.toString() + this.unit);
 
         } catch (error) {
-            $('fehler').innerHTML = "Variable  fehlt:";
+            //$('fehler').innerHTML = "Variable  fehlt:";
             //alert("value in Display error" + this.ID);
+            wert = 99.9;
+            this.ID.innerHTML = (wert.toString() + this.unit);
         }
 
     }
