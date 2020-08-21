@@ -4382,7 +4382,7 @@ class Message {
         //optionale Parameter
 
     }
-    create(ParentID, breite, hoehe, messageType, command, value, ...param) {
+    create(ParentID, posTop, posLeft, breite, hoehe, messageType, command, value, ...param) {
 
         this.b = breite;
         this.h = hoehe;
@@ -4394,8 +4394,8 @@ class Message {
         this.ID = container;
         container.className = "Message";
         container.style.position = "absolute";
-        container.style.top = "7vh";
-        container.style.left = "40vw";
+        container.style.top = posTop;
+        container.style.left = posLeft;
         container.style.width = this.b;
 
         container.onclick = function () {
