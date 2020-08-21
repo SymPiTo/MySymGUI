@@ -4399,7 +4399,7 @@ class Message {
         container.style.height = "0px";
         container.onclick = function () {
             send('command(Message,' + command + ',' + value + ')');
-            container.style.height = "-20px";
+            container.style.height = "0px";
         }
 
         var elemicon = document.createElement("div");
@@ -4419,9 +4419,9 @@ class Message {
 
         var elemText = document.createElement("div");
         this.IDText = elemText;
-        elemText.style.lineHeight = "20px";
+        //elemText.style.lineHeight = "20px";
         elemText.innerHTML = ""
-        container.style.padding = "10px";
+        //container.style.padding = "10px";
         container.appendChild(elemText);
 
 
