@@ -1039,7 +1039,8 @@ function updateIPSValue(ipsID, IPSValue) {
 function updateValues() {
 
   if (ipsObj.ips.ID13996 != "") {
-    Meldung.set(true, "Eingehender Anruf.\n\r".ipsObj.ips.ID13996);
+    let inphone = ipsObj.ips.ID13996;
+    Meldung.set(true, "Eingehender Anruf.\n\r".inphone);
   }
 
 
