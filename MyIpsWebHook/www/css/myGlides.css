@@ -761,7 +761,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
     height: 0px;
-    z-index: 5;
+    z-index: 2;
 
     /*ausblenden der zeichen in der box */
     overflow: hidden;
@@ -779,12 +779,9 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 .frosted-glass {
-    width: 400px;
-    height: 200px;
+    transition: height 3s;
     background: inherit;
-    position: absolute;
-    top: 7vh;
-    left: 50%;
+
     z-index: 1;
     overflow: hidden;
     margin: 0 auto;
@@ -792,8 +789,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 
-    transition: transform 5s;
-    transform: translateY(200px);
+    /*transition: transform 5s;
+    transform: translateY(200px);*/
 
 }
 
@@ -808,7 +805,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     background: silver;
     opacity: 50%;
 
-    box-shadow: inset 0 0 3000px rgba(255, 255, 255, .5);
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, .5);
     filter: blur(5px);
     margin: -20px;
 
