@@ -4397,7 +4397,7 @@ class Message {
         container.style.top = "7vh";
         container.style.left = "40vw";
         container.style.width = this.b;
-        container.style.padding = "10px";
+
         container.onclick = function () {
             send('command(Message,' + command + ',' + value + ')');
             container.style.height = "0px";
@@ -4416,10 +4416,12 @@ class Message {
         elemicon.style.fontSize = "56px";
         elemicon.style.color = "yellow";
         elemicon.style.cssFloat = "left";
+
         container.appendChild(elemicon);
 
         var elemText = document.createElement("div");
         this.IDText = elemText;
+        elemText.style.padding = "10px";
         elemText.style.lineHeight = "20px";
         elemText.innerHTML = ""
         //
