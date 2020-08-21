@@ -3974,8 +3974,9 @@ class clock {
         container.style.top = posTop;
         container.style.color = "white";
         container.className = "clock";
+        container.style.width = "500px";
+        container.style.height = "200px";
 
-        container.style.borderRadius = "1%";
         /*container.style.backgroundColor = bgcolor; */
         /*
                 container.style.padding = "25px";
