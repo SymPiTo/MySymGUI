@@ -4397,7 +4397,7 @@ class Message {
         container.style.top = "7vh";
         container.style.left = "40vw";
         container.style.width = this.b;
-
+        container.style.padding = "10px";
         container.onclick = function () {
             send('command(Message,' + command + ',' + value + ')');
             container.style.height = "0px";
@@ -4422,7 +4422,7 @@ class Message {
         this.IDText = elemText;
         elemText.style.lineHeight = "20px";
         elemText.innerHTML = ""
-        //container.style.padding = "10px";
+        //
         container.appendChild(elemText);
 
 
