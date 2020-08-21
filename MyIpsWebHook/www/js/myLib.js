@@ -3976,7 +3976,7 @@ class clock {
         container.className = "glas";
 
         container.style.borderRadius = "1%";
-        container.style.backgroundColor = bgcolor;
+        /*container.style.backgroundColor = bgcolor; */
         /*
                 container.style.padding = "25px";
                 container.style.maxWidth = "350px";
