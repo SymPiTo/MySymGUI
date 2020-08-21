@@ -1038,8 +1038,8 @@ function updateIPSValue(ipsID, IPSValue) {
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
 
-  if (ips.ID13996 != "") {
-    Meldung.set(true, "Eingehender Anruf.\n\r".ips.ID13996);
+  if (ipsObj.ips.ID13996 != "") {
+    Meldung.set(true, "Eingehender Anruf.\n\r".ipsObj.ips.ID13996);
   }
 
 
