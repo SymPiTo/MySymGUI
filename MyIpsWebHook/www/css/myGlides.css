@@ -755,14 +755,14 @@ WebKit inertia scrolling is being added here for any present/future devices that
 }
 
 .Message {
-    transition: height 5s;
+    transition: height 3s;
 
     white-space: pre;
     position: absolute;
     top: 7vh;
     left: 40vw;
     z-index: 5;
-    padding: 5px;
+    padding: 0px;
     overflow: hidden;
     background: rgb(214, 214, 207);
     /*border: 1px solid white;
