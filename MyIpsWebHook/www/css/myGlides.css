@@ -754,31 +754,8 @@ WebKit inertia scrolling is being added here for any present/future devices that
     overflow: hidden;
 }
 
-.Message {
-    transition: height 3s;
 
-    white-space: pre;
-
-
-    height: 0px;
-    z-index: 2;
-
-    /*ausblenden der zeichen in der box */
-    overflow: hidden;
-
-    background: rgb(214, 214, 207);
-    /*border: 1px solid white;
-    border-radius: 0px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;*/
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, .4);
-    font-style: bold;
-    font-size: 24px;
-    opacity: 80%;
-}
-
-
-.frosted-glass {
+.glass {
     transition: height 3s;
     background: inherit;
     height: 0px;
@@ -790,13 +767,11 @@ WebKit inertia scrolling is being added here for any present/future devices that
     font-size: 22px;
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
-
     /*transition: transform 5s;
     transform: translateY(200px);*/
-
 }
 
-.frosted-glass::before {
+.glass::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -805,12 +780,11 @@ WebKit inertia scrolling is being added here for any present/future devices that
     bottom: 0;
     left: 0;
     background: silver;
-    opacity: 100%;
+    opacity: 85%;
     padding: 2rem;
     box-shadow: inset 0 0 30px rgba(255, 255, 255, .5);
     filter: blur(5px);
     margin: -20px;
-
 }
 
 

@@ -4392,7 +4392,7 @@ class Message {
         }
         var container = document.createElement("div");
         this.ID = container;
-        container.className = "frosted-glass";
+        container.className = "glass";
         container.style.position = "absolute";
         container.style.top = posTop;
         container.style.left = posLeft;
