@@ -3975,7 +3975,7 @@ class clock {
         container.style.color = "white";
         container.className = "clock";
         container.style.width = "400px";
-        container.style.height = "150px";
+        container.style.height = "120px";
 
         /*container.style.backgroundColor = bgcolor; */
         /*
