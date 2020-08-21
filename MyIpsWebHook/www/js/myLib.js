@@ -3973,7 +3973,7 @@ class clock {
         container.style.left = posLeft;
         container.style.top = posTop;
         container.style.color = "white";
-        container.className = "glas";
+        container.className = "clock";
 
         container.style.borderRadius = "1%";
         /*container.style.backgroundColor = bgcolor; */
