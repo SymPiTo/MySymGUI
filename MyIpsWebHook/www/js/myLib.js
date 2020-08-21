@@ -4406,15 +4406,18 @@ class Message {
         var elemicon = document.createElement("div");
         if (messageType == "info") {
             elemicon.className = "fa fa-info-circle";
+            elemicon.style.color = "lime";
         }
         if (messageType == "warn") {
             elemicon.className = "fa fa-exclamation-circle";
+            elemicon.style.color = "yellow";
         }
         if (messageType == "notify") {
             elemicon.className = "fa fa-exclamation";
+            elemicon.style.color = "blue";
         }
         elemicon.style.fontSize = "56px";
-        elemicon.style.color = "yellow";
+
         elemicon.style.cssFloat = "left";
         elemicon.style.padding = "5px";
         container.appendChild(elemicon);
