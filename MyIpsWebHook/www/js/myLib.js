@@ -4399,7 +4399,7 @@ class Message {
         container.style.height = "0px";
         container.onclick = function () {
             send('command(Message,' + command + ',' + value + ')');
-            container.style.height = "0px";
+            container.style.height = "-20px";
         }
 
         var elemicon = document.createElement("div");
