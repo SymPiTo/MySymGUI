@@ -415,6 +415,7 @@ class ipsbuffer {
     this.ips.ID48220 = ""; //Temp Wand KZ 
 
     this.ips.ID37365 = ""; //upnp Server Name
+    this.ips.ID13996 = ""; //incomming call
 
   }
 
@@ -1036,7 +1037,11 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
-  Meldung.set(true, "jhjhjhjhl\n\rlalalalala");
+
+  if (ips.ID13996 != "") {
+    Meldung.set(true, "Eingehender Anruf.\n\r".ips.ID13996);
+  }
+
 
   uhrTop.startTime();
   uhr.startTime();
