@@ -1040,6 +1040,8 @@ function updateValues() {
 
   if (ipsObj.ips.ID13996 != "") {
     Meldung.set(true, "Eingehender Anruf.\n\r" + ipsObj.ips.ID13996 + "\n\r" + ipsObj.ips.ID43770);
+  } else {
+    Meldung.set(false, "");
   }
 
 
