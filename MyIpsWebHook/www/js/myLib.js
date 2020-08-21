@@ -3972,7 +3972,7 @@ class clock {
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
-        container.style.color = "white";
+        container.style.color = "blue";
         container.className = "clock";
         container.style.width = "400px";
         container.style.height = "120px";
