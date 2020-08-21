@@ -4416,7 +4416,7 @@ class Message {
         elemicon.style.fontSize = "56px";
         elemicon.style.color = "yellow";
         elemicon.style.cssFloat = "left";
-
+        elemicon.style.padding = "5px";
         container.appendChild(elemicon);
 
         var elemText = document.createElement("div");
