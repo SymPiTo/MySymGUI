@@ -4408,7 +4408,7 @@ class Message {
             elemicon.className = "fa fa-info-circle";
         }
         if (messageType == "warn") {
-            elemicon.className = "fa fa-warning";
+            elemicon.className = "fa fa-exclamation-circle";
         }
         if (messageType == "notify") {
             elemicon.className = "fa fa-exclamation";
