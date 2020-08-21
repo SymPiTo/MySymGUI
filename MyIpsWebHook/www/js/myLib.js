@@ -4382,10 +4382,11 @@ class Message {
         //optionale Parameter
 
     }
-    create(ParentID, breite, hoehe, messageType, ...param) {
+    create(ParentID, breite, hoehe, messageType, command, value, ...param) {
 
         this.b = breite;
         this.h = hoehe;
+
         if (param.length > 1) {
 
         }
@@ -4397,6 +4398,7 @@ class Message {
         container.style.width = this.b;
         container.style.height = "0px";
         container.onclick = function () {
+            send('command(Message,' + command + ',' + value + ')');
             container.style.height = "0px";
         }
 
