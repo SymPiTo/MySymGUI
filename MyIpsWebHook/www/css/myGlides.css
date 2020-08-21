@@ -781,12 +781,13 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .frosted-glass {
     transition: height 3s;
     background: inherit;
-
+    height: 0px;
     z-index: 1;
     overflow: hidden;
     margin: 0 auto;
+    white-space: pre;
     font-style: bold;
-    font-size: 20px;
+    font-size: 22px;
     box-sizing: border-box;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 
