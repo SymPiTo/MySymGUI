@@ -89,7 +89,6 @@ class ipsbuffer {
     this.ips.ID52660 = ""; //Rollo K Schaltzeit Sa-So
     this.ips.ID28605 = ""; //Rollo K SSunSet  
 
-
     this.ips.ID25457 = ""; //Rollo B Mode
     this.ips.ID26881 = ""; //Rollo B Postion 
     this.ips.ID42649 = ""; //Rollo B up/Down
@@ -416,6 +415,7 @@ class ipsbuffer {
 
     this.ips.ID37365 = ""; //upnp Server Name
     this.ips.ID13996 = ""; //incomming call
+    this.ips.ID11403 = ""; //Liste of hosts
 
   }
 
@@ -1037,6 +1037,14 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
+  /* ------------------------------- Netzwerk ----------------------------- */
+  if (document.getElementById("MainNW")) {
+    var FBhosts = JSON.parse(ipsObj.ips.ID11403);
+    var n = FBhosts.length;
+    ADiIPS1.update(FBhosts['NewIPAddress'][0]);
+  }
+
+
 
   if (ipsObj.ips.ID13996 != "") {
     Meldung.set(true, "Eingehender Anruf.\n\r" + ipsObj.ips.ID13996 + "\n\r" + ipsObj.ips.ID43770);
