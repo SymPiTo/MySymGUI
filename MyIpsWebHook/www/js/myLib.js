@@ -694,6 +694,7 @@ class DynIcon {
 class StateDisplay {
     constructor() {
         this.ID = "";
+        this.ID2 = "";
         this.unit = "";
         this.textColor = "black";
         this.state0 = "";
@@ -701,6 +702,7 @@ class StateDisplay {
         this.state2 = "";
         this.state3 = "";
         this.bgColor = "black";
+        this.title = "";
 
         this.h = "60px";
         this.b = "202px";
@@ -717,7 +719,8 @@ class StateDisplay {
 
     create(ParentID, color, einheit, posTop, posLeft, hoehe, breite, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param) {
         this.unit = einheit,
-            this.bgColor = color;
+            this.title = titel;
+        this.bgColor = color;
         if (color === "") {
             this.bgColor = "black";
         }
@@ -747,6 +750,7 @@ class StateDisplay {
         elem1.setAttribute("onclick", command);
 
         var elem2 = document.createElement("div");
+        this.ID2 = elem2;
         elem2.style.backgroundColor = "black";
         elem2.style.height = "20px";
         elem2.innerHTML = titel;
@@ -766,8 +770,9 @@ class StateDisplay {
         document.getElementById(ParentID).appendChild(elem1);
     }
 
-    update(value, n = 0) {
+    update(value, n = 0, title = this.title) {
         try {
+            this.ID2.innerHTML = title;
             this.ID.style.color = this.textColor;
             if (this.state0 === "Number") {
                 var wert = value.toFixed(n);
