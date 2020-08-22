@@ -2623,25 +2623,28 @@ class Led {
     constructor() {
         this.ID = "";
         this.color = "#ABFF00"
-
     }
 
     create(ParentID, posTop, posLeft, ObjektFarbe) {
-
         this.color = ObjektFarbe;
         var elem = document.createElement("div");
         elem.className = "led-box";
-
         var elem1 = document.createElement("div");
+        this.ID = elem1;
         elem1.className = "led";
         elem1.style.margin = "0 auto";
-
         elem1.style.backgroundColor = this.color;
-
         elem.append(elem1);
         this.ID = elem1;
-
         document.getElementById(ParentID).appendChild(elem);
+    }
+
+    update(state) {
+        if (state == true) {
+            this.ID.style.backgroundColor = this.color;
+        } else {
+            this.ID.style.backgroundColor = "grey";
+        }
     }
 }
 
