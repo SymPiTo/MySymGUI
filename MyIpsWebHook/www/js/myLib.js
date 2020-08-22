@@ -2618,7 +2618,7 @@ class TransVarDisplay {
     }
 }
 
-/* --------------------- Klasse flashing Led ---------------------------------------- */
+/* --------------------- Klasse Led ---------------------------------------- */
 class Led {
     constructor() {
         this.ID = "";
@@ -2627,8 +2627,12 @@ class Led {
 
     create(ParentID, posTop, posLeft, ObjektFarbe) {
         this.color = ObjektFarbe;
-        var elem = document.createElement("div");
-        elem.className = "led-box";
+        var container = document.createElement("div");
+        container.className = "led-box";
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
+
         var elem1 = document.createElement("div");
         this.ID = elem1;
         elem1.className = "led";
