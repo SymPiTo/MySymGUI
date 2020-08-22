@@ -1041,7 +1041,7 @@ function updateValues() {
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
     var n = FBhosts.length;
-    ADiIPS1.update(FBhosts.NewIPAddress[0]);
+    ADiIPS1.update(FBhosts['NewIPAddress'][0]);
   }
 
 
