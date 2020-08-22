@@ -1040,7 +1040,8 @@ function updateValues() {
   /* ------------------------------- Netzwerk ----------------------------- */
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
-    var n = FBhosts.length;, ADiIPS1.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
+    var n = FBhosts.length;
+    ADiIPS1.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
   }
 
 
