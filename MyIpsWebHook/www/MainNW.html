@@ -17,39 +17,43 @@
  <script>
      var Head1 = new HeadLine();
      Head1.create("MainNWCtrl", "0px", "transparent", "Ethernet");
+
+     let Aled = new Led();
+     Aled.create("MainNWCtrl", "50px", "30px", "#ABFF00");
+
      var DiIPS1 = new StateDisplay();
-     DiIPS1.create("MainNWCtrl", "midgreenLight", "", "50px", "30px", "60px", "202px", "18px", "IP Adress",
+     DiIPS1.create("MainNWCtrl", "midgreenLight", "", "50px", "60px", "60px", "150px", "18px", "IP Adress",
          "String",
          "", "", "",
          "");
      var DiIPS2 = new StateDisplay();
-     DiIPS2.create("MainNWCtrl", "midgreenLight", "", "110px", "30px", "60px", "202px", "18px", "Frequency",
+     DiIPS2.create("MainNWCtrl", "midgreenLight", "", "110px", "60px", "60px", "150px", "18px", "Frequency",
          "String",
          "",
          "", "",
          "");
      var DiIPS3 = new StateDisplay();
-     DiIPS3.create("MainNWCtrl", "midgreenLight", "", "170px", "30px", "60px", "202px", "18px",
+     DiIPS3.create("MainNWCtrl", "midgreenLight", "", "170px", "60px", "60px", "150px", "18px",
          "CPU load 15min",
          "String", "", "",
          "", "");
      var DiIPS4 = new StateDisplay();
-     DiIPS4.create("MainNWCtrl", "midgreenLight", "", "230px", "30px", "60px", "202px", "18px",
+     DiIPS4.create("MainNWCtrl", "midgreenLight", "", "230px", "60px", "60px", "150px", "18px",
          "CPU Temperature",
          "String", "", "",
          "", "");
      var DiIPS5 = new StateDisplay();
-     DiIPS5.create("MainNWCtrl", "midgreenLight", "", "290px", "30px", "60px", "202px", "18px", "CPU Voltage",
+     DiIPS5.create("MainNWCtrl", "midgreenLight", "", "290px", "60px", "60px", "150px", "18px", "CPU Voltage",
          "String",
          "", "", "",
          "");
      var DiIPS6 = new StateDisplay();
-     DiIPS6.create("MainNWCtrl", "midgreenLight", "", "350px", "30px", "60px", "202px", "18px", "Memory Free",
+     DiIPS6.create("MainNWCtrl", "midgreenLight", "", "350px", "6px", "60px", "150px", "18px", "Memory Free",
          "String",
          "", "", "",
          "");
      var DiIPS7 = new StateDisplay();
-     DiIPS7.create("MainNWCtrl", "midgreenLight", "", "410px", "30px", "60px", "202px", "18px",
+     DiIPS7.create("MainNWCtrl", "midgreenLight", "", "410px", "60px", "60px", "150px", "18px",
          "Memory SD Free",
          "String", "", "",
          "", "");

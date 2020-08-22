@@ -2618,6 +2618,35 @@ class TransVarDisplay {
     }
 }
 
+/* --------------------- Klasse flashing Led ---------------------------------------- */
+class Led {
+    constructor() {
+        this.ID = "";
+        this.color = "#ABFF00"
+
+    }
+
+    create(ParentID, posTop, posLeft, ObjektFarbe) {
+
+        this.color = ObjektFarbe;
+        var elem = document.createElement("div");
+        elem.className = "led-box";
+
+        var elem1 = document.createElement("div");
+        elem1.className = "led";
+        elem1.style.margin = "0 auto";
+
+        elem1.style.backgroundColor = this.color;
+
+        elem.append(elem1);
+        this.ID = elem1;
+
+        document.getElementById(ParentID).appendChild(elem);
+    }
+}
+
+
+
 
 
 /* --------------------- Klasse flashing Led ---------------------------------------- */
