@@ -3967,12 +3967,12 @@ class clock {
 
     }
 
-    create(ParentID, posTop, posLeft, breite, hoehe, bgclass, fsTime, fsDate) {
+    create(ParentID, posTop, posLeft, breite, hoehe, bgclass, fsTime, fsDate, timeColor) {
         var container = document.createElement("div");
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
-        container.style.color = "blue";
+        container.style.color = timeColor;
         if (bgclass) {
             container.className = "clock";
         } else {
