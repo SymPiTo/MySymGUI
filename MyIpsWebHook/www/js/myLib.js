@@ -3976,7 +3976,7 @@ class clock {
         if (bgclass) {
             container.className = "clock";
         } else {
-            container.style.backgroundColor = transparent;
+            container.style.backgroundColor = "transparent";
         }
         container.style.zIndex = 2;
         container.style.width = breite;
