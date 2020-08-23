@@ -32,7 +32,8 @@
          eval("IPdis" + i + '.create("MainNWCtrl","midgreenLight", "", "' + z +
              '", "70px", "60px", "150px", "18px", "IP Adress", "String", "", "", "", "")');
      }
+     var parent = document.getElementById('MainNWCtrl');
+     var childs = parent.childNodes;
 
-
-     ledno0.remove();
+     childs[0].remove();
  </script>
