@@ -21,8 +21,8 @@
 
      let i;
      for (i = 0; i < 20; i++) {
-
-         let ledno[i] = new Led();
+         let on = i + "";
+         let ledno[on] = new Led();
          let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px"
          ledno[i].create('"MainNWCtrl",' + y + ', "5px", "#ABFF00"');
      }
