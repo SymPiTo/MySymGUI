@@ -2660,7 +2660,11 @@ class Led {
     }
 
     delete() {
-        document.getElementById(this.ParID).removeChild(this.IDCont);
+        var parent = document.getElementById('MainNWCtrl');
+        var childs = parent.childNodes;
+
+        this.IDCont.remove();
+
     }
 }
 
