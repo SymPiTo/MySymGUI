@@ -1043,8 +1043,8 @@ function updateValues() {
     var n = FBhosts.length;
 
     FBhosts.forEach(function (value, i) {
-      let str = "IPDiIPS" + i;
-      var disp = JSON.parse('{ ' + str + ':"world" }');
+      let disp = eval("IPDiIPS" + i);
+
       disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
     });
 
