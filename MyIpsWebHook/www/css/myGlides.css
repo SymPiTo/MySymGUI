@@ -137,7 +137,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 /*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
 .areaMain {
     position: absolute;
-    top: 5vh;
+    top: 7vh;
     width: 0px;
     height: 95vh;
     left: 16.2vw;
@@ -146,7 +146,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 .areaCtrl {
     position: absolute;
-    top: 5vh;
+    top: 7vh;
     width: 0px;
     height: 95vh;
     left: 74vw;
