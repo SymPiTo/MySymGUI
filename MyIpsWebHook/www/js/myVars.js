@@ -1041,7 +1041,7 @@ function updateValues() {
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
     var n = FBhosts.length;
-
+    ledno0.delete();
     FBhosts.forEach(function (value, i) {
       //ein Object aus einem String erzeugen
       let led = eval("ledno" + i);
@@ -1052,7 +1052,7 @@ function updateValues() {
 
     });
 
-    ledno0.delete();
+
   }
 
 
