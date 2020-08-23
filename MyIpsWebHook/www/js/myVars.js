@@ -1041,7 +1041,7 @@ function updateValues() {
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
     var n = FBhosts.length;
-
+    let x = parseInt("70px", 10) + parseInt("60px", 10) * 0 + "px"
     FBhosts.forEach(function (value, i) {
       //ein Object aus einem String erzeugen
       let disp = eval("IPDiIPS" + i);
