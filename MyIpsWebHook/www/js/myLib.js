@@ -3115,15 +3115,15 @@ class ArrayListBox {
 
     }
 
-    update(array) {
+    update(Rezepte) {
 
         // As long as <ul> has a child node, remove it
         while (this.ID.hasChildNodes()) {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        if (array != 0) {
-            array.forEach(function (value) {
+        if (Rezepte != 0) {
+            Rezepte.forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
 
