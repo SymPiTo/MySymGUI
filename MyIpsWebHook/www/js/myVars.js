@@ -576,8 +576,8 @@ class ipsbuffer {
       this.sym[127] = this.ips.ID15131; //WSS Client 3
       this.sym[128] = this.ips.ID38435; //WSS Client 4
       if (this.ips.ID26335 == "") {
-        this.sym[130] = "";
-        this.sym[132] = "";
+        this.sym[130] = [];
+        this.sym[132] = [];
       } else {
         this.sym[129] = JSON.parse(this.ips.ID26335); //UPNP Server Array
         var Server = [];
