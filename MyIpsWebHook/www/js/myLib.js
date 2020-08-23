@@ -3122,7 +3122,7 @@ class ArrayListBox {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        if (Rezepte) {
+        if (Rezepte.length > 0) {
             Rezepte.forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
