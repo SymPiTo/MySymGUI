@@ -1058,7 +1058,7 @@ function updateValues() {
     if (ipsObj.NoHosts < n) {
       for (let i = (ipsObj.NoHosts - n); i < ipsObj.NoHosts; i++) {
 
-        eval("ledno" + i + "= new Led()");
+        eval("ledno" + i + "= new Led();");
         let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px";
         eval("ledno" + i + '.create("MainNWCtrl", "' + y + '", "5px", "#ABFF00")');
 
