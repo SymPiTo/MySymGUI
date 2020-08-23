@@ -145,9 +145,7 @@ class ipsbuffer {
     this.ips.ID35025 = ""; //TVProgList  49099
     this.ips.ID54563 = ""; //Kochbuch Titel
     this.ips.ID18416 = ""; //Kochbuch Image
-    this.ips.ID29246 = JSON.stringify({
-      "": ""
-    }); //Kochbuch Zutaten
+    this.ips.ID29246 = array(); //Kochbuch Zutaten
 
     this.ips.ID59260 = ""; //Kochbuch Rezept
     this.ips.ID16493 = ""; //Kochbuch Liste
