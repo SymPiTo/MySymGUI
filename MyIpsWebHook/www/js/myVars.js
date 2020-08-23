@@ -3,31 +3,36 @@ class ipsbuffer {
     this.ips = ips;
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
     this.first = true;
+    this.NoHosts = 0;
   }
 
   get ips() {
     return this._ips;
   }
-
   set ips(ips) {
     this._ips = ips;
   }
+
   get sym() {
     return this._sym;
   }
-
   set sym(sym) {
     this._sym = sym;
   }
+
   get first() {
     return this._first;
   }
-
   set first(first) {
     this._first = first;
   }
 
-
+  get NoHosts() {
+    return this._NoHosts;
+  }
+  set NoHosts(NoHosts) {
+    this._NoHosts = NoHosts;
+  }
 
   init() {
     this.ips.ID15922 = ""; //Temperatur SZ (HM)
@@ -1041,7 +1046,14 @@ function updateValues() {
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
     var n = FBhosts.length;
-    ledno0.delete();
+    if (ipsObj.NoHosts > n) {
+      for (let index = (ipsObj.NoHosts - n); index < ipsObj.NoHosts; index++) {
+        eval("ledno" + index + ".delete()");
+
+      }
+
+    }
+
     FBhosts.forEach(function (value, i) {
       //ein Object aus einem String erzeugen
       let led = eval("ledno" + i);

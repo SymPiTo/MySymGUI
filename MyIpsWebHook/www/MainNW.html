@@ -20,9 +20,9 @@
      Head1.create("MainNWCtrl", "0px", "transparent", "Ethernet");
 
      var CFBhosts = JSON.parse(ipsObj.ips.ID11403);
-     var i = CFBhosts.length;
-
-     for (i = 0; i < 6; i++) {
+     var iHost = CFBhosts.length;
+     ipsObj.NoHosts = iHost;
+     for (i = 0; i < iHost; i++) {
          eval("ledno" + i + "= new Led()");
          let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px";
          eval("ledno" + i + '.create("MainNWCtrl", "' + y + '", "5px", "#ABFF00")');
