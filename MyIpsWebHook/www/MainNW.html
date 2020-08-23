@@ -21,92 +21,21 @@
 
      let i;
      for (i = 0; i < 20; i++) {
-
          eval("ledno" + i + "= new Led()");
          let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px"
          eval("ledno" + i + '.create("MainNWCtrl", "' + y + '", "5px", "#ABFF00")');
+
+         eval("IPdis" + i + "= new StateDisplay()");
+         let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px"
+         eval("IPdis" + i + '.create("MainNWCtrl","midgreenLight", "", "' + y +
+             '", "70px", "60px", "150px", "18px", "IP Adress", "String", "", "", "", "")');
      }
 
-     var IPDiIPS0 = new StateDisplay();
-     IPDiIPS0.create("MainNWCtrl", "midgreenLight", "", "50px", "70px", "60px", "150px", "18px", "IP Adress",
-         "String",
-         "", "", "",
-         "");
 
-     let Bled = new Led();
-     Bled.create("MainNWCtrl", "130px", "5px", "#ABFF00");
-     var IPDiIPS1 = new StateDisplay();
-     IPDiIPS1.create("MainNWCtrl", "midgreenLight", "", "110px", "70px", "60px", "150px", "18px", "Frequency",
-         "String",
-         "",
-         "", "",
-         "");
 
-     let Cled = new Led();
-     Cled.create("MainNWCtrl", "190px", "5px", "#ABFF00");
-     var IPDiIPS2 = new StateDisplay();
-     IPDiIPS2.create("MainNWCtrl", "midgreenLight", "", "170px", "70px", "60px", "150px", "18px",
-         "CPU load 15min",
-         "String", "", "",
-         "", "");
-
-     let Dled = new Led();
-     Dled.create("MainNWCtrl", "250px", "5px", "#ABFF00");
-     var IPDiIPS3 = new StateDisplay();
-     IPDiIPS3.create("MainNWCtrl", "midgreenLight", "", "230px", "70px", "60px", "150px", "18px",
-         "CPU Temperature",
-         "String", "", "",
-         "", "");
-
-     let Eled = new Led();
-     Eled.create("MainNWCtrl", "310px", "5px", "#ABFF00");
-     var IPDiIPS5 = new StateDisplay();
-     IPDiIPS5.create("MainNWCtrl", "midgreenLight", "", "290px", "70px", "60px", "150px", "18px", "CPU Voltage",
-         "String",
-         "", "", "",
-         "");
-
-     let Fled = new Led();
-     Fled.create("MainNWCtrl", "365px", "5px", "#ABFF00");
-     var FDiIPS6 = new StateDisplay();
-     FDiIPS6.create("MainNWCtrl", "midgreenLight", "", "350px", "70px", "60px", "150px", "18px", "Memory Free",
-         "String",
-         "", "", "",
-         "");
-
-     let Gled = new Led();
-     Gled.create("MainNWCtrl", "425px", "5px", "#ABFF00");
      var GDiIPS7 = new StateDisplay();
      GDiIPS7.create("MainNWCtrl", "midgreenLight", "", "410px", "70px", "60px", "150px", "18px",
          "Memory SD Free",
          "String", "", "",
          "", "");
-
-
-     var Head2 = new HeadLine();
-     Head2.create("MainNWCtrl", "450px", "transparent", "WLAN");
-
-     let Iled = new Led();
-     Iled.create("MainNWCtrl", "550px", "5px", "#ABFF00");
-     var DiIPS8 = new StateDisplay();
-     DiIPS8.create("MainNWCtrl", "midgreenLight", "", "530px", "70px", "60px", "150px", "18px", "IPS Version",
-         "String",
-         "", "", "",
-         "");
-
-     let Jled = new Led();
-     Jled.create("MainNWCtrl", "610px", "5px", "#ABFF00");
-     var DiIPS9 = new StateDisplay();
-     DiIPS9.create("MainNWCtrl", "midgreenLight", "", "590px", "70px", "60px", "150px", "18px", "Kernel Status",
-         "String",
-         "", "",
-         "", "", "202px", "80px");
-
-     let Kled = new Led();
-     Kled.create("MainNWCtrl", "670px", "5px", "#ABFF00");
-     var DiIPS10 = new StateDisplay();
-     DiIPS10.create("MainNWCtrl", "midgreenLight", "", "670px", "70px", "60px", "150px", "18px", "Port 3777",
-         "String",
-         "", "", "",
-         "");
  </script>
