@@ -19,7 +19,9 @@
      var Head1 = new HeadLine();
      Head1.create("MainNWCtrl", "0px", "transparent", "Ethernet");
 
-     let i;
+     var CFBhosts = JSON.parse(ipsObj.ips.ID11403);
+     var i = CFBhosts.length;
+
      for (i = 0; i < 20; i++) {
          eval("ledno" + i + "= new Led()");
          let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px";
@@ -30,12 +32,4 @@
          eval("IPdis" + i + '.create("MainNWCtrl","midgreenLight", "", "' + z +
              '", "70px", "60px", "150px", "18px", "IP Adress", "String", "", "", "", "")');
      }
-
-
-
-     var GDiIPS7 = new StateDisplay();
-     GDiIPS7.create("MainNWCtrl", "midgreenLight", "", "410px", "70px", "60px", "150px", "18px",
-         "Memory SD Free",
-         "String", "", "",
-         "", "");
  </script>
