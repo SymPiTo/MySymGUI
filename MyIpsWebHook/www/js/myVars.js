@@ -1052,7 +1052,7 @@ function updateValues() {
 
     });
 
-
+    ledno0.delete();
   }
 
 
