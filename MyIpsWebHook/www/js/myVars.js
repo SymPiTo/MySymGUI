@@ -1044,7 +1044,7 @@ function updateValues() {
 
     FBhosts.forEach(function (value, i) {
       let str = "IPDiIPS" + i;
-      var disp = JSON.parse('{ str:"world" }');
+      var disp = JSON.parse('{ ' + str + ':"world" }');
       disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
     });
 
