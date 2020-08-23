@@ -22,7 +22,7 @@
      var CFBhosts = JSON.parse(ipsObj.ips.ID11403);
      var i = CFBhosts.length;
 
-     for (i = 0; i < 20; i++) {
+     for (i = 0; i < 6; i++) {
          eval("ledno" + i + "= new Led()");
          let y = parseInt("70px", 10) + parseInt("60px", 10) * i + "px";
          eval("ledno" + i + '.create("MainNWCtrl", "' + y + '", "5px", "#ABFF00")');
