@@ -148,7 +148,7 @@ class ipsbuffer {
     this.ips.ID29246 = []; //Kochbuch Zutaten
 
     this.ips.ID59260 = ""; //Kochbuch Rezept
-    this.ips.ID16493 = ""; //Kochbuch Liste
+    this.ips.ID16493 = []; //Kochbuch Liste
     this.ips.ID46852 = ""; //Denon Source
     this.ips.ID19506 = ""; //Lampe - Schalter State Schlafzimmer
     this.ips.ID35590 = ""; //Lampe - Schalter current Schlafzimmer
