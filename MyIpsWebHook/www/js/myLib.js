@@ -3177,7 +3177,7 @@ class ArraySelectListBox {
     }
 
     update(jsonarray) {
-        if (jsonarray != "") {
+        try {
             var array = JSON.parse(jsonarray);
             // As long as <ul> has a child node, remove it
             while (this.ID.hasChildNodes()) {
@@ -3202,6 +3202,9 @@ class ArraySelectListBox {
 
                 a.append(elem1);
             });
+
+        } catch (error) {
+
         }
 
     }
