@@ -3115,7 +3115,7 @@ class ArrayListBox {
 
     }
 
-    update(Rezepte) {
+    update(Rezepte = {}) {
 
         // As long as <ul> has a child node, remove it
         while (this.ID.hasChildNodes()) {
