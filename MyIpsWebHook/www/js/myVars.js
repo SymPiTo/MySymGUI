@@ -1041,7 +1041,13 @@ function updateValues() {
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
     var n = FBhosts.length;
-    ADiIPS1.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
+
+    FBhosts.forEach(function (value, i) {
+      disp = IPDiIPS + i;
+      var disp = JSON.parse('{ "update":"world" }');
+      disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
+    });
+
   }
 
 
