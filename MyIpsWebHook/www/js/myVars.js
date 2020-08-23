@@ -1051,7 +1051,7 @@ function updateValues() {
       disp.update(FBhosts[i]['NewIPAddress'], 0, FBhosts[i]['NewHostName']);
 
     });
-    disp0 = null;
+
 
   }
 

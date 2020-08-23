@@ -2626,6 +2626,7 @@ class TransVarDisplay {
 /* --------------------- Klasse Led ---------------------------------------- */
 class Led {
     constructor() {
+        this.IDCont = "";
         this.ID = "";
         this.color = "#ABFF00"
     }
@@ -2633,6 +2634,7 @@ class Led {
     create(ParentID, posTop, posLeft, ObjektFarbe) {
         this.color = ObjektFarbe;
         var container = document.createElement("div");
+        this.IDCont = container;
         container.className = "led-box";
         container.style.position = "absolute";
         container.style.left = posLeft;
@@ -2654,6 +2656,10 @@ class Led {
         } else {
             this.ID.style.backgroundColor = "grey";
         }
+    }
+
+    delete() {
+        removeChild(this.IDCont);
     }
 }
 
