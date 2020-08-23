@@ -1044,7 +1044,7 @@ function updateValues() {
 
     FBhosts.forEach(function (value, i) {
       //ein Object aus einem String erzeugen
-      let disp = eval("IPDiIPS" + i);
+      let disp = eval("IPdis" + i);
       disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[i]['NewHostName']);
 
     });
