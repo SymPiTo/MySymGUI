@@ -2626,6 +2626,7 @@ class TransVarDisplay {
 /* --------------------- Klasse Led ---------------------------------------- */
 class Led {
     constructor() {
+        this.ParID = "";
         this.IDCont = "";
         this.ID = "";
         this.color = "#ABFF00"
@@ -2659,7 +2660,7 @@ class Led {
     }
 
     delete() {
-        removeChild(this.IDCont);
+        document.getElementById(this.ParID).removeChild(this.IDCont);
     }
 }
 
