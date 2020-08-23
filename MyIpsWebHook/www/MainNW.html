@@ -19,6 +19,13 @@
      var Head1 = new HeadLine();
      Head1.create("MainNWCtrl", "0px", "transparent", "Ethernet");
 
+     let i;
+     for (i = 0; i < 20; i++) {
+         let ledno = eval(Led + i);
+         ledno = new Led();
+         let x = parseInt("70px", 10) + parseInt("60px", 10) * i + "px"
+         ledno.create('"MainNWCtrl",' + x + ', "5px", "#ABFF00"');
+     }
      let Aled = new Led();
      Aled.create("MainNWCtrl", "70px", "5px", "#ABFF00");
      var IPDiIPS0 = new StateDisplay();

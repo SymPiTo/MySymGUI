@@ -1043,10 +1043,10 @@ function updateValues() {
     var n = FBhosts.length;
 
     FBhosts.forEach(function (value, i) {
+      //ein Object aus einem String erzeugen
       let disp = eval("IPDiIPS" + i);
-      let x = "HJHJKH";
-      disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[0]['NewHostName']);
-      let d = "uiuiouio";
+      disp.update(FBhosts[0]['NewIPAddress'], 0, FBhosts[i]['NewHostName']);
+
     });
 
   }
