@@ -3122,21 +3122,24 @@ class ArrayListBox {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        array.forEach(function (value) {
-            var elem1 = document.createElement("tr");
-            a.append(elem1);
+        if (array != 0) {
+            array.forEach(function (value) {
+                var elem1 = document.createElement("tr");
+                a.append(elem1);
 
-            var elem2 = document.createElement("td");
-            elem1.append(elem2);
+                var elem2 = document.createElement("td");
+                elem1.append(elem2);
 
-            var elem3 = document.createElement("div");
-            elem3.style.textAlign = "left";
-            elem3.innerHTML = value;
+                var elem3 = document.createElement("div");
+                elem3.style.textAlign = "left";
+                elem3.innerHTML = value;
 
-            elem2.append(elem3);
+                elem2.append(elem3);
 
-            a.append(elem1);
-        });
+                a.append(elem1);
+            });
+        }
+
     }
 }
 /* --------------------- Klasse ArraySelectListBox ---------------------------------------- */
