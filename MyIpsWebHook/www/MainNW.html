@@ -4,8 +4,11 @@
 
  <!-- ----------------------- Main Area: Network ----------------------- -->
  <script>
-     var windowDoorB = new Area();
-     windowDoorB.createMain("MainNW", "bgBlue");
+     var windowNW = new Area();
+     windowNW.createMain("MainNW", "bgBlue");
+
+     var rahmFB = new Rahmen();
+     rahmFB.create("MainNWCtrl", "90px", "10px", "400px", "250px", "glas");
  </script>
 
  <!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->
@@ -13,8 +16,6 @@
  <script>
      var CtrlwindowNW = new Area();
      CtrlwindowNW.createCtrl("MainNWCtrl", "bgMidgreen");
-     var rahmFB = new Rahmen();
-     rahmFB.create("MainNWCtrl", "90px", "10px", "400px", "250px", "glas");
  </script>
 
  <script>
