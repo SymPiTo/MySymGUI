@@ -612,7 +612,7 @@ class drawLine {
         var elem = document.createElement("canvas");
         document.getElementById(ParentID).appendChild(elem);
         if (elem.getContext) {
-            var ctx = canvas.getContext('2d');
+            var ctx = elem.getContext('2d');
             ctx.beginPath();
             ctx.moveTo(0, 0);
             ctx.lineTo(300, 150);
