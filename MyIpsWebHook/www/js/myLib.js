@@ -608,14 +608,16 @@ class drawLine {
 
     }
 
-    draw(ParentID) {
+    draw(ParentID, startX, startY, endX, endY, color, width) {
         var elem = document.createElement("canvas");
         document.getElementById(ParentID).appendChild(elem);
         if (elem.getContext) {
             var ctx = elem.getContext('2d');
             ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(300, 150);
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+            ctx.lineWidth = width;
+            ctx.strokeStyle = color;
             ctx.stroke();
         }
     }
