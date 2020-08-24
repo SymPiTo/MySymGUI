@@ -601,6 +601,27 @@ class MediaDisplay {
     }
 }
 
+/* --------------------- class draw line ---------------------------------------- */
+/* -------------------------- Version:  ------------------------- */
+class drawLine {
+    constructor() {
+
+    }
+
+    draw(ParentID) {
+        var elem = document.createElement("canvas");
+        document.getElementById(ParentID).appendChild(elem);
+        if (elem.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(300, 150);
+            ctx.stroke();
+        }
+    }
+
+}
+
 /* --------------------- class Dynamic Icon ---------------------------------------- */
 /* -------------------------- Version: 1.04.10.2019 ------------------------- */
 class DynIcon {
