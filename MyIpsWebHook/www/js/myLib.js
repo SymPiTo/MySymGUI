@@ -850,9 +850,9 @@ class VarDis {
         this.textColor = "white";
         this.state1 = "";
         this.state2 = "";
-        this.bgColor = "black";
+        this.bgColor = "transparent";
         this.icon = "";
-        this.iconColor = "black";
+        this.iconColor = "yellow";
     }
 
     create(ParentID, bgColor, posTop, posLeft, size, einheit, zus0, zus1, ...param) {
