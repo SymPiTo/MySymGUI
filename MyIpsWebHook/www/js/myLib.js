@@ -851,14 +851,23 @@ class VarDis {
         this.state1 = "";
         this.state2 = "";
         this.bgColor = "black";
+        this.icon = "";
+        this.iconColor = "black";
     }
 
-    create(ParentID, bgColor, posTop, posLeft, size, einheit, zus0, zus1) {
+    create(ParentID, bgColor, posTop, posLeft, size, einheit, zus0, zus1, ...param) {
 
         this.bgColor = bgColor;
         this.unit = einheit;
         this.state1 = zus0;
         this.state2 = zus1;
+        if (param[0]) {
+            this.icon = param[0];
+        }
+        if (param[1]) {
+            this.iconColor = param[1];
+        }
+
 
         var container = document.createElement("div");
         container.style.position = "absolute";
@@ -876,9 +885,9 @@ class VarDis {
         var s = false;
 
         var elemicon = document.createElement("div");
-        if (s) {
-            elemicon.className = "fa fa-info-circle";
-            elemicon.style.color = "lime";
+        if (param[0]) {
+            elemicon.className = this.icon;
+            elemicon.style.color = this.iconColor;
         }
         container.append(elemicon);
 
