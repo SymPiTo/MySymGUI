@@ -864,6 +864,9 @@ class VarDis {
         container.style.display = "flex";
 
         container.style.flexDirection = "row";
+        container.style.alignItems = "flex-end";
+
+        container.style.justifyContent = "space-between";
         container.className = "var";
         container.classList.add(size);
         container.style.position = "absolute";
