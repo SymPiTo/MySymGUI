@@ -861,17 +861,17 @@ class VarDis {
         this.state2 = zus1;
 
         var container = document.createElement("div");
-        container.style.display = "flex";
-
-        container.style.flexDirection = "row";
-        container.style.alignItems = "flex-end";
-
-        container.style.justifyContent = "space-between";
-        container.className = "var";
-        container.classList.add(size);
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
+        container.style.display = "flex";
+        container.style.flexDirection = "row";
+        container.style.alignItems = "center";
+        container.style.justifyContent = "space-between";
+        container.style.backgroundColor = bgColor;
+        container.className = "var";
+        container.classList.add(size);
+
 
         var elemicon = document.createElement("div");
 
@@ -882,7 +882,7 @@ class VarDis {
         var elem = document.createElement("div");
 
         elem.style.color = this.textColor;
-        elem.style.backgroundColor = bgColor;
+
         this.ID = elem;
         container.append(elem);
 
