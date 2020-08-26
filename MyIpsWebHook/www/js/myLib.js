@@ -895,7 +895,7 @@ class VarDis {
         var s = false;
 
         var elemicon = document.createElement("div");
-        if (param[0]) {
+        if (param[2]) {
             elemicon.className = this.icon;
             elemicon.style.color = this.iconColor;
         }
