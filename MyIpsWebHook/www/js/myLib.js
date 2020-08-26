@@ -882,7 +882,7 @@ class VarDis {
         container.style.left = posLeft;
         container.style.top = posTop;
         container.style.top = this.b;
-        container.style.top = thgis.h;
+        container.style.top = this.h;
         container.style.display = "flex";
         container.style.flexDirection = "row";
         container.style.alignItems = "baseline";
