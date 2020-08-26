@@ -868,9 +868,9 @@ class VarDis {
         container.style.flexDirection = "row";
         container.style.alignItems = "baseline";
         container.style.justifyContent = "space-between";
-        container.style.backgroundColor = bgColor;
+        /*container.style.backgroundColor = bgColor; */
         container.className = "var";
-        container.classList.add(size, glas);
+        container.classList.add(size, glass);
         container.style.paddingLeft = "0.5em";
         container.style.paddingRight = "0.5em";
         var s = false;
