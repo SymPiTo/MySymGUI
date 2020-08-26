@@ -870,7 +870,7 @@ class VarDis {
         container.style.justifyContent = "space-between";
         /*container.style.backgroundColor = bgColor; */
         container.className = "var";
-        container.classList.add(size, glass);
+        container.classList.add(size, "glass");
         container.style.paddingLeft = "0.5em";
         container.style.paddingRight = "0.5em";
         var s = false;
