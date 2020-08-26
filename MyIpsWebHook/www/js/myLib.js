@@ -866,12 +866,13 @@ class VarDis {
         container.style.top = posTop;
         container.style.display = "flex";
         container.style.flexDirection = "row";
-        container.style.alignItems = "center";
+        container.style.alignItems = "baseline";
         container.style.justifyContent = "space-between";
         container.style.backgroundColor = bgColor;
         container.className = "var";
         container.classList.add(size);
-
+        container.style.paddingLeft = "10%";
+        container.style.paddingRight = "10%";
 
         var elemicon = document.createElement("div");
 
