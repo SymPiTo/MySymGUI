@@ -864,7 +864,11 @@ class VarDis {
         container.style.display = "flex";
 
         container.style.flexDirection = "row";
-        container.style.justifyContent = "space-between";
+        container.className = "var";
+        container.classList.add(size);
+        container.style.position = "absolute";
+        container.style.left = posLeft;
+        container.style.top = posTop;
 
         var elemicon = document.createElement("div");
 
@@ -873,11 +877,7 @@ class VarDis {
         container.append(elemicon);
 
         var elem = document.createElement("div");
-        elem.className = "var";
-        elem.classList.add(size);
-        elem.style.position = "absolute";
-        elem.style.left = posLeft;
-        elem.style.top = posTop;
+
         elem.style.color = this.textColor;
         elem.style.backgroundColor = bgColor;
         this.ID = elem;
