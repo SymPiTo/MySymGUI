@@ -853,19 +853,27 @@ class VarDis {
         this.bgColor = "transparent";
         this.icon = "";
         this.iconColor = "yellow";
+        this.width = "250px";
+        this.height = "170px";
     }
 
-    create(ParentID, bgColor, posTop, posLeft, size, einheit, zus0, zus1, ...param) {
-
+    create(ParentID, bgColor, posTop, posLeft, b, h, einheit, ...param) {
+        this.width = b;
+        this.height = h;
         this.bgColor = bgColor;
         this.unit = einheit;
-        this.state1 = zus0;
-        this.state2 = zus1;
+
         if (param[0]) {
-            this.icon = param[0];
+            this.state1 = param[0];
         }
         if (param[1]) {
-            this.iconColor = param[1];
+            this.state2 = param[1];
+        }
+        if (param[2]) {
+            this.icon = param[2];
+        }
+        if (param[3]) {
+            this.iconColor = param[3];
         }
 
 
@@ -873,13 +881,15 @@ class VarDis {
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
+        container.style.top = this.b;
+        container.style.top = thgis.h;
         container.style.display = "flex";
         container.style.flexDirection = "row";
         container.style.alignItems = "baseline";
         container.style.justifyContent = "space-between";
         /*container.style.backgroundColor = bgColor; */
         container.className = "var";
-        container.classList.add(size, bgColor);
+        container.classList.add(bgColor);
         container.style.paddingLeft = "0.5em";
         container.style.paddingRight = "0.5em";
         var s = false;
