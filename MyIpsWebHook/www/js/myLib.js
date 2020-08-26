@@ -862,7 +862,7 @@ class VarDis {
 
         var container = document.createElement("div");
         container.style.display = "flex";
-        container.style.alignItems = "flex-end";
+
         container.style.flexDirection = "row";
         container.style.justifyContent = "space-between";
 
