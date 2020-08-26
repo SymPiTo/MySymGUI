@@ -871,8 +871,8 @@ class VarDis {
         container.style.backgroundColor = bgColor;
         container.className = "var";
         container.classList.add(size);
-        container.style.paddingLeft = "1em";
-        container.style.paddingRight = "1em";
+        container.style.paddingLeft = "0.5em";
+        container.style.paddingRight = "0.5em";
 
         var elemicon = document.createElement("div");
 
