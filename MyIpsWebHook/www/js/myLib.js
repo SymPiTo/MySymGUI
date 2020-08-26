@@ -881,8 +881,8 @@ class VarDis {
         container.style.position = "absolute";
         container.style.left = posLeft;
         container.style.top = posTop;
-        container.style.top = this.b;
-        container.style.top = this.h;
+        container.style.top = this.width;
+        container.style.top = this.height;
         container.style.display = "flex";
         container.style.flexDirection = "row";
         container.style.alignItems = "baseline";
