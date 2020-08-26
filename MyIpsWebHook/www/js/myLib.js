@@ -860,6 +860,18 @@ class VarDis {
         this.state1 = zus0;
         this.state2 = zus1;
 
+        var container = document.createElement("div");
+        container.style.display = "flex";
+        container.style.alignItems = "flex-end";
+        container.style.flexDirection = "row";
+        container.style.justifyContent = "space-between";
+
+        var elemicon = document.createElement("div");
+
+        elemicon.className = "fa fa-info-circle";
+        elemicon.style.color = "lime";
+        container.append(elemicon);
+
         var elem = document.createElement("div");
         elem.className = "var";
         elem.classList.add(size);
@@ -868,10 +880,10 @@ class VarDis {
         elem.style.top = posTop;
         elem.style.color = this.textColor;
         elem.style.backgroundColor = bgColor;
-
         this.ID = elem;
+        container.append(elem);
 
-        document.getElementById(ParentID).appendChild(elem);
+        document.getElementById(ParentID).appendChild(container);
     }
 
     update(value, n) {
