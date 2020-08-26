@@ -874,12 +874,14 @@ class VarDis {
         container.style.paddingLeft = "0.5em";
         container.style.paddingRight = "0.5em";
         var s = false;
+
+        var elemicon = document.createElement("div");
         if (s) {
-            var elemicon = document.createElement("div");
             elemicon.className = "fa fa-info-circle";
             elemicon.style.color = "lime";
-            container.append(elemicon);
         }
+        container.append(elemicon);
+
 
 
         var elem = document.createElement("div");
