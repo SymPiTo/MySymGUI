@@ -425,6 +425,9 @@ class ipsbuffer {
     this.ips.ID29751 = ""; //DSLIn
     this.ips.ID54212 = ""; //ext Adress000
     this.ips.ID34420 = ""; //Fritz Box Adress Dyn Adress
+    this.ips.ID29703 = ""; //DSL Status
+    this.ips.ID13418 = ""; //Internet Status
+
   }
 
   update(symvar) {
