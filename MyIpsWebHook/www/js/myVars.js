@@ -1082,7 +1082,7 @@ function updateValues() {
     });
     DSLIn.update(ipsObj.ips.ID29751);
     DSLOut.update(ipsObj.ips.ID36784);
-    FBextAdr.update(this.ips.ID54212);
+    FBextAdr.update(ipsObj.ips.ID54212);
   }
 
 
