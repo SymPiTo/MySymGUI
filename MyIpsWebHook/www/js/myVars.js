@@ -424,6 +424,7 @@ class ipsbuffer {
     this.ips.ID36784 = ""; //DSLOut
     this.ips.ID29751 = ""; //DSLIn
     this.ips.ID54212 = ""; //ext Adress000
+    this.ips.ID34420 = ""; //Fritz Box Adress Dyn Adress
   }
 
   update(symvar) {
@@ -1083,6 +1084,7 @@ function updateValues() {
     DSLIn.update(ipsObj.ips.ID29751);
     DSLOut.update(ipsObj.ips.ID36784);
     FBextAdr.update(ipsObj.ips.ID54212);
+    FBDNS.update(ipsObj.ips.ID34420);
   }
 
 
