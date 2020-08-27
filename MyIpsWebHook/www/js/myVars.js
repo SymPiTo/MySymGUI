@@ -421,6 +421,8 @@ class ipsbuffer {
     this.ips.ID37365 = ""; //upnp Server Name
     this.ips.ID13996 = ""; //incomming call
     this.ips.ID11403 = ""; //Liste of hosts
+    this.ips.ID36784 = ""; //DSLOut
+    this.ips.ID29751 = ""; //DSLIn
 
   }
 
@@ -1078,7 +1080,8 @@ function updateValues() {
       disp.update(FBhosts[i]['NewIPAddress'], 0, FBhosts[i]['NewHostName']);
 
     });
-
+    DSLIn.update(ipsObj.ips.ID29751);
+    DSLOut.update(ipsObj.ips.ID36784);
 
   }
 

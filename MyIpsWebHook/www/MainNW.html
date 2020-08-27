@@ -6,12 +6,18 @@
  <script>
      var windowNW = new Area();
      windowNW.createMain("MainNW", "bgBlue");
-
+ </script>
+ <script>
      var rahmFB = new Rahmen();
      rahmFB.create("MainNW", "20px", "200px", "400px", "250px", "glas");
 
      let linie = new drawLine();
      linie.draw("MainNW", "300", "50", "300", "20", "red", "4");
+
+     var DSLIn = new VarDis();
+     DSLIn.create("MainNW", "black", "50px", "490px", "85px", "20px", "°C", null, null, "fa fa-arrow-right");
+     var DSLOut = new VarDis();
+     DSLOut.create("MainNW", "black", "50px", "490px", "85px", "20px", "°C", null, null, "fa fa-arrow-left");
  </script>
 
  <!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->
