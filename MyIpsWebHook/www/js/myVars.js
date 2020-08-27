@@ -423,7 +423,7 @@ class ipsbuffer {
     this.ips.ID11403 = ""; //Liste of hosts
     this.ips.ID36784 = ""; //DSLOut
     this.ips.ID29751 = ""; //DSLIn
-
+    this.ips.ID54212 = ""; //ext Adress000
   }
 
   update(symvar) {
@@ -1082,7 +1082,7 @@ function updateValues() {
     });
     DSLIn.update(ipsObj.ips.ID29751);
     DSLOut.update(ipsObj.ips.ID36784);
-
+    FBextAdr.update(this.ips.ID54212);
   }
 
 
