@@ -1088,6 +1088,8 @@ function updateValues() {
     DSLOut.update(ipsObj.ips.ID36784);
     FBextAdr.update(ipsObj.ips.ID54212);
     FBDNS.update(ipsObj.ips.ID34420);
+    VarDSL.update(ipsObj.ips.ID29703);
+    INet.update(ipsObj.ips.ID13418);
   }
 
 
