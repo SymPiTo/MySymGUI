@@ -427,6 +427,12 @@ class ipsbuffer {
     this.ips.ID34420 = ""; //Fritz Box Adress Dyn Adress
     this.ips.ID29703 = ""; //DSL Status
     this.ips.ID13418 = ""; //Internet Status
+    this.ips.ID12596 = ""; //TV source List
+    this.ips.ID17876 = ""; //Denon Source Name
+    this.ips.ID20095 = ""; //TV channellist
+    this.ips.ID27978 = ""; //Sonos Position
+
+
 
   }
 
