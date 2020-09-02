@@ -431,6 +431,9 @@ class ipsbuffer {
     this.ips.ID17876 = ""; //Denon Source Name
     this.ips.ID20095 = ""; //TV channellist
     this.ips.ID27978 = ""; //Sonos Position
+    this.ips.ID54931 = ""; //TV source
+    this.ips.ID53226 = ""; //Heatstat Meldung KZ
+    this.ips.ID53473 = ""; //Sonos SZ now playing
 
 
 
