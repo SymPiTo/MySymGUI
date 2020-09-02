@@ -115,22 +115,24 @@
                         updateIPSValue(ipsID, IPSValue);
 
                     } else {
-                        //Variablen Paket einlesen
-                        ips = JSON.parse(jsontext);
-                        symvar = ips[0];
-                        //eingelesene Datenpakete/Werte in die IPS variablen schreiben
-                        //=> update der IPS Variablen
-                        ipsObj.update(symvar);
-                        //console.log(ipsObj.ips);
-                        //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
-                        //log(ips[0]);
-                        //IPS Variable den Anzeige Variablen zuordnen
-                        ipsObj.check();
-                        //Anzeige der aktuellen Werte
-                        Heizung();
-                        Security();
-                        Klima();
-                        updateValues();
+                        if (jsontext != "") {
+                            //Variablen Paket einlesen
+                            ips = JSON.parse(jsontext);
+                            symvar = ips[0];
+                            //eingelesene Datenpakete/Werte in die IPS variablen schreiben
+                            //=> update der IPS Variablen
+                            ipsObj.update(symvar);
+                            //console.log(ipsObj.ips);
+                            //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
+                            //log(ips[0]);
+                            //IPS Variable den Anzeige Variablen zuordnen
+                            ipsObj.check();
+                            //Anzeige der aktuellen Werte
+                            Heizung();
+                            Security();
+                            Klima();
+                            updateValues();
+                        }
                     }
 
                 };
