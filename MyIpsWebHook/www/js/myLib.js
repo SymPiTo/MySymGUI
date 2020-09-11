@@ -4574,6 +4574,9 @@ class Message {
         if (state == true) {
             this.ID.style.height = this.h;
             this.IDText.innerHTML = text;
+        } else {
+            this.ID.style.height = "0px";
+            this.IDText.innerHTML = "";
         }
     }
 }
