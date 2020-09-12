@@ -435,7 +435,10 @@ class ipsbuffer {
     this.ips.ID53226 = ""; //Heatstat Meldung KZ
     this.ips.ID53473 = ""; //Sonos SZ now playing
 
-
+    this.ips.ID29770 = ""; //Filter Wartungsmeldung
+    this.ips.ID29377 = ""; //Filter eingesetzt
+    this.ips.ID46559 = ""; //Datum Filter wechseln
+    this.ips.ID13215 = ""; //Liter befüllt
 
   }
 
@@ -1108,6 +1111,13 @@ function updateValues() {
   } else {
     Meldung.set(false, "");
   }
+
+  /* ------------------------------- Wasser Filter------------------------------- */
+  DiIPSFil1.update(ipsObj.ips.ID29770);
+  DiIPSFil2.update(ipsObj.ips.ID29377);
+  DiIPSFil3.update(ipsObj.ips.ID46559);
+  DiIPSFil4.update(ipsObj.ips.ID13215, 1);
+  iFilterK.update(sym[4]);
 
 
   uhrTop.startTime();
