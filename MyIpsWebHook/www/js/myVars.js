@@ -1117,6 +1117,7 @@ function updateValues() {
   DiIPSFil2.update(ipsObj.ips.ID29377);
   DiIPSFil3.update(ipsObj.ips.ID46559);
   DiIPSFil4.update(ipsObj.ips.ID13215, 1);
+  DiIPSFil5.update(ipsObj.ips.ID24603, 0);
   iFilterK.update(ipsObj.ips.ID24603);
 
 
