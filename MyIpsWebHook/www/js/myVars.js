@@ -439,7 +439,7 @@ class ipsbuffer {
     this.ips.ID29377 = ""; //Filter eingesetzt
     this.ips.ID46559 = ""; //Datum Filter wechseln
     this.ips.ID13215 = ""; //Liter befüllt
-
+    this.ips.ID24603 = ""; //Füllstandsanzeige
   }
 
   update(symvar) {
@@ -1117,7 +1117,7 @@ function updateValues() {
   DiIPSFil2.update(ipsObj.ips.ID29377);
   DiIPSFil3.update(ipsObj.ips.ID46559);
   DiIPSFil4.update(ipsObj.ips.ID13215, 1);
-  iFilterK.update(sym[4]);
+  iFilterK.update(ipsObj.ips.ID24603);
 
 
   uhrTop.startTime();
