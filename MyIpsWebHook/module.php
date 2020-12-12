@@ -32,7 +32,7 @@ if(!isset($_SERVER['PHP_AUTH_PW']))
     $_SERVER['PHP_AUTH_PW'] = "";
  
     if(($_SERVER['PHP_AUTH_USER'] != $this->ReadPropertyString("Username")) || ($_SERVER['PHP_AUTH_PW'] != $this->ReadPropertyString("Password"))) {
-    header('WWW-Authenticate: Basic Realm="MyIpsHomeCOntrol"');
+    header('WWW-Authenticate: Basic Realm="MyIpsHomeControl"');
     header('HTTP/1.0 401 Unauthorized');
     echo "Authorization required";
     return;
@@ -79,6 +79,7 @@ if(!isset($_SERVER['PHP_AUTH_PW']))
                         include_once($path);
                 } else {
                    header("Content-Type: ".$this->GetMimeType($extension));
+                   header("Link: </css/styles.css>; rel=preload; as=style, </js/scripts.js>; rel=preload; as=script");
                     readfile($path);
                 }
                 
