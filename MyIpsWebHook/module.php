@@ -79,7 +79,7 @@ if(!isset($_SERVER['PHP_AUTH_PW']))
                         include_once($path);
                 } else {
                    header("Content-Type: ".$this->GetMimeType($extension));
-                   header("Link: </css/styles.css>; rel=preload; as=style, </js/scripts.js>; rel=preload; as=script");
+                   header("Link: </css/myGlides.css>; rel=preload; as=style, </js/myGlides.js>; rel=preload; as=script");
                     readfile($path);
                 }
                 
