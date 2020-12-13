@@ -6,7 +6,7 @@ function ShowHidePanel(no) {
             FontBtnCDC.on();
             FontBtnCDD.on();
             FontBtnCDE.on();
-            rahmCD.on();
+            //rahmCD.on();
             break;
         case '1off':
             FontBtnCDA.off();
@@ -14,7 +14,7 @@ function ShowHidePanel(no) {
             FontBtnCDC.off();
             FontBtnCDD.off();
             FontBtnCDE.off();
-            rahmCD.off();
+            //rahmCD.off();
             break;
     }
 }
