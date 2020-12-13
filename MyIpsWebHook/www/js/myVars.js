@@ -1532,10 +1532,11 @@ function updateValues() {
   ServerImg.update(ipsObj.sym[133]);
   ClientImg.update(ipsObj.sym[134]);
   //<!-- ******************** upnp   **************************  -->
-  ClientBtn.update(ipsObj.sym[256]);
-  Player.update(ipsObj.ips.ID46310);
-  ServerBtn.update(ipsObj.ips['ID37365']);
-
+  if (document.getElementById("MainUpnpCD")) {
+    ClientBtn.update(ipsObj.sym[256]);
+    Player.update(ipsObj.ips.ID46310);
+    ServerBtn.update(ipsObj.ips['ID37365']);
+  }
 
 
   //<!-- ******************** Web Socket Server   **************************  -->
