@@ -1777,23 +1777,23 @@ function updateValues() {
   DisAlarmActiveSec.update(ipsObj.sym[48]);
   ABox.update(ipsObj.sym[58]);
 
+  if (document.getElementById("MainCeolWZ")) {
+    iDisArtist.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
+    FontBtnIRadioPower.update(ipsObj.sym[96]);
+    //IconVarDisVol.update(ipsObj.sym[97], 0);
+    //IconVarDisSource.update(ipsObj.sym[105], "state");
+    //IconVarDisServerWZ.update(ipsObj.sym[81]);
 
-  iDisArtist.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
-  FontBtnIRadioPower.update(ipsObj.sym[96]);
-  //IconVarDisVol.update(ipsObj.sym[97], 0);
-  //IconVarDisSource.update(ipsObj.sym[105], "state");
-  //IconVarDisServerWZ.update(ipsObj.sym[81]);
+    if (ipsObj.sym[105] === 'IRADIO') {
+      iDisArtistWZ.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
+    } else {
+      iDisArtistWZ.update(ipsObj.sym[260], ipsObj.sym[261], ipsObj.sym[93], ipsObj.sym[94], ipsObj.sym[262]);
+    }
 
-  if (ipsObj.sym[105] === 'IRADIO') {
-    iDisArtistWZ.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
-  } else {
-    iDisArtistWZ.update(ipsObj.sym[260], ipsObj.sym[261], ipsObj.sym[93], ipsObj.sym[94], ipsObj.sym[262]);
+    FontBtnIRadioPowerWZ.update(ipsObj.sym[96]);
+    //IconVarDisVolWZ.update(ipsObj.sym[97], 0);
+    //IconVarDisSourceWZ.update(ipsObj.sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
   }
-
-  FontBtnIRadioPowerWZ.update(ipsObj.sym[96]);
-  //IconVarDisVolWZ.update(ipsObj.sym[97], 0);
-  //IconVarDisSourceWZ.update(ipsObj.sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
-
 
 
 
