@@ -1299,32 +1299,35 @@ function updateValues() {
 
 
   /* ------------------------------- Denon Ceol ------------------------------- */
-  ProgressCeol.update(ipsObj.sym[263]);
-  CeolVol.update(ipsObj.sym[257]);
-  CeolTrack.update(ipsObj.sym[264]);
-  var s = "";
-  switch (ipsObj.sym[105]) {
-    case 0:
-      s = "IRadio";
-      break;
-    case 1:
-      s = "MediaServer";
-      break;
-    case 2:
-      s = "USB";
-      break;
-    case 3:
-      s = "IPOD";
-      break;
-    case 4:
-      s = "AUX_A";
-      break;
-    case 5:
-      s = "AUX_D";
-      break;
+  if (document.getElementById("MainCeolWZ")) {
+    ProgressCeol.update(ipsObj.sym[263]);
+    CeolVol.update(ipsObj.sym[257]);
+    CeolTrack.update(ipsObj.sym[264]);
+    var s = "";
+    switch (ipsObj.sym[105]) {
+      case 0:
+        s = "IRadio";
+        break;
+      case 1:
+        s = "MediaServer";
+        break;
+      case 2:
+        s = "USB";
+        break;
+      case 3:
+        s = "IPOD";
+        break;
+      case 4:
+        s = "AUX_A";
+        break;
+      case 5:
+        s = "AUX_D";
+        break;
+    }
+    CeolSource.update(s);
+    RahmenCeol.update(s);
   }
-  CeolSource.update(s);
-  RahmenCeol.update(s);
+
   /* ---------------------------------- UPNP ---------------------------------- */
   if (document.getElementById("MainUpnpCD")) {
     ServerBox.update(ipsObj.sym[130]);
