@@ -326,7 +326,7 @@
     <!--                            Meldefenster überlagernd                     -->
 
 
-    <script>
+    <script async>
         var Meldung = new Message();
         Meldung.create("body", "7vh", "40vw", "350px", "120px", "info", "13996", "-");
     </script>
@@ -350,7 +350,7 @@
             </div>
 
         </div>
-        <script>
+        <script async>
             var uhrTop = new clock();
             uhrTop.create("kopfleiste", "2px", "90%", "80px", "50px", false, "30px", "0px", "white");
             uhrTop.startTime();
@@ -418,7 +418,7 @@
         <!-- *********************** StartScreen  **************************  -->
         <subMenu id="SubMenuStart" class="MenuStart"></subMenu>
 
-        <script>
+        <script async>
             /*
             var SubMenuWetter = new GlideButton();
             SubMenuWetter.create("SubMenuStart", "grey", "Wetter", "Wetter_BW_web.png", "MainWetter", "", "SM");
@@ -431,7 +431,7 @@
         <!-- *********************** Security  **************************  -->
         <subMenu id="SubMenuSec" class="MenuSec"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuSecCode = new GlideButton();
             SubMenuSecCode.create("SubMenuSec", "red", "Alarmanlage", alarmanlage_white, "MainSecCode", "",
                 "SM");
@@ -448,7 +448,7 @@
         <subMenu id="SubMenuWZ" class="MenuWZ"> </subMenu>
 
 
-        <script>
+        <script async>
             var SubMenuHzWZ = new GlideButton();
             SubMenuHzWZ.create("SubMenuWZ", "cyan", "Heizung Wohnzimmer", heizung, "MainHeizungWZ", "",
                 "SM");
@@ -477,7 +477,7 @@
         <!-- *********************** Sub Menu Kinderzimmer  **************************  -->
         <subMenu id="SubMenuKZ" class="MenuKZ"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuHzKZ = new GlideButton();
             SubMenuHzKZ.create("SubMenuKZ", "olive", "Heizung Kinderzimmer", heizung, "MainHzKZ", "", "SM");
             var SubMenuRolloKZ = new GlideButton();
@@ -490,7 +490,7 @@
         <!-- ----------------------- Sub Menu: Schlafzimmer ------------------------ -->
         <subMenu id="SubMenuSZ" class="MenuSZ"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuHzSZ = new GlideButton();
             SubMenuHzSZ.create("SubMenuSZ", "sandy", "Heizung Schlafzimmer", heizung, "MainHzSZ", "", "SM");
             var SubMenuRolloSZ = new GlideButton();
@@ -508,7 +508,7 @@
         <!-- ************************ Sub Menu Kueche  ************************  -->
         <subMenu id="SubMenuK" class="MenuK"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuHzK = new GlideButton();
             SubMenuHzK.create("SubMenuK", "midgreen", "Heizung Kueche", heizung, "MainHzK", "", "SM");
             var SubMenuRolloK = new GlideButton();
@@ -526,7 +526,7 @@
         <!-- --------------------------- Sub Menu: Balkon --------------------------- -->
         <subMenu id="SubMenuB" class="MenuB"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuRolloB = new GlideButton();
             SubMenuRolloB.create("SubMenuB", "blue", "Rolladen Balkon", rolladen, "MainRolloB", "", "SM");
             var SubMenuDoorB = new GlideButton();
@@ -538,7 +538,7 @@
         <!-- ------------------------------ Sub Menu Bad ------------------------------- -->
         <subMenu id="SubMenuBad" class="MenuBad"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuFBad = new GlideButton();
             SubMenuFBad.create("SubMenuBad", "violet", "Fenster Bad", fenster, "MainFBad", "", "SMload");
         </script>
@@ -548,7 +548,7 @@
         <!-- --------------------------- Sub Menu: Diele ---------------------------- -->
         <subMenu id="SubMenuDiele" class="MenuDiele"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuLightDiele = new GlideButton();
             SubMenuLightDiele.create("SubMenuDiele", "yellowgreen", "Licht Diele", licht, "MainLightD", "",
                 "SM");
@@ -559,7 +559,7 @@
         <!-- --------------------------- Sub Menu: Arbeitsbereich ---------------------------- -->
         <subMenu id="SubMenuAZ" class="MenuAZ"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuLightAZ = new GlideButton();
             SubMenuLightAZ.create("SubMenuAZ", "orangerot", "Licht Arbeitsbereich", licht, "MainLightAZ",
                 "",
@@ -569,7 +569,7 @@
         <!-- ------------------------- Sub Menu Multimedia -------------------------- -->
         <subMenu id="SubMenuMedia" class="MenuMultimedia"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuUPNP = new GlideButton();
             SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SM");
 
@@ -605,7 +605,7 @@
         <!-- ************************ Menue  Heizung  ************************  -->
         <subMenu id="SubMenuHz" class="MenuHz"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuHzAll = new GlideButton();
             SubMenuHzAll.create("SubMenuHz", "purple", "Heizung Uebersicht", heizung, "MainHzAll", "", "SM");
             var SubMenuHzWZ = new GlideButton();
@@ -622,7 +622,7 @@
         <!-- ************************Menu  Rolladen  ************************  -->
         <subMenu id="SubMenuRollo" class="MenuRollo"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuRolloAll = new GlideButton();
             SubMenuRolloAll.create("SubMenuRollo", "brown", "Rolladen Uebersicht", rolladen, "MainRolloAll",
                 "", "SM");
@@ -644,7 +644,7 @@
         <!-- ************************Menu  Netzwerk  ************************  -->
         <subMenu id="SubMenuNet" class="MenuNet"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuWSS = new GlideButton();
             SubMenuWSS.create("SubMenuNet", "midgreen", "IPS Server", ips, "MainIPS", "", "SM");
             var SubMenuIPS = new GlideButton();
@@ -656,7 +656,7 @@
         <!-- ************************Menu  None  ************************  -->
         <subMenu id="SubMenuNone" class="MenuNone"></subMenu>
 
-        <script>
+        <script async>
             var SubMenuNone = new GlideButton();
             SubMenuNone.create("SubMenuNone", "midgreen", "FREE", ips, "MainNone", "", "SM");
         </script>
@@ -669,7 +669,7 @@
             <img src="images/MyHomeControl.png" alt="image not found" style="width: 400px; padding-top:50px" />
         </div>
 
-        <script>
+        <script async>
             var uhr = new clock();
             uhr.create("MainStarScreen", "350px", "150px", "400px", "120px", true, "70px", "30px", "blue");
             uhr.startTime();
@@ -696,11 +696,11 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <!-- ----------------------------- Overview: Wohnzimmer ------------------------------ -->
-        <script>
+        <script async>
             var OVwindowHzWz = new Area();
             OVwindowHzWz.createOverview("MenuWZOV", "bgCyan");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/wohnzimmer.jpg';
             document.getElementById('MenuWZOV').appendChild(img);
@@ -709,11 +709,11 @@
         </script>
 
         <!-- ------------------------------ Overview: Security ------------------------------- -->
-        <script>
+        <script async>
             var OVwindowSec = new Area();
             OVwindowSec.createOverview("MenuSecOV", "bgRed");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Security.jpeg';
             document.getElementById('MenuSecOV').appendChild(img);
@@ -723,11 +723,11 @@
 
 
         <!-- ----------------------- Overview: Kinderzimmer ------------------------ -->
-        <script>
+        <script async>
             var OVwindowHzKz = new Area();
             OVwindowHzKz.createOverview("MenuKZOV", "bgOlive");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Arbeitszimmer.jpg';
             document.getElementById('MenuKZOV').appendChild(img);
@@ -736,11 +736,11 @@
         </script>
 
         <!-- ----------------------- Overview: Schlafzimmer ------------------------ -->
-        <script>
+        <script async>
             var OVwindowHzSz = new Area();
             OVwindowHzSz.createOverview("MenuSZOV", "bgSandy");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Schlafzimmer.jpg';
             document.getElementById('MenuSZOV').appendChild(img);
@@ -749,11 +749,11 @@
         </script>
 
         <!-- --------------------------- Overview:Küche ---------------------------- -->
-        <script>
+        <script async>
             var OVwindowHzK = new Area();
             OVwindowHzK.createOverview("MenuKOV", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Kueche.jpg';
             document.getElementById('MenuKOV').appendChild(img);
@@ -763,11 +763,11 @@
 
 
         <!-- -------------------------- Overview: Balkon --------------------------- -->
-        <script>
+        <script async>
             var OVwindowHzB = new Area();
             OVwindowHzB.createOverview("MenuBOV", "bgBlue");
         </script>
-        <script>
+        <script async>
             var OVwindowSec = new Area();
             OVwindowSec.createOverview("MenuSecOV", "bgRed");
             var img = document.createElement('img');
@@ -778,11 +778,11 @@
         </script>
 
         <!-- ---------------------------- Overview: Bad ---------------------------- -->
-        <script>
+        <script async>
             var OVwindowHzBad = new Area();
             OVwindowHzBad.createOverview("MenuBadOV", "bgViolet");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Badezimmer.jpg';
             document.getElementById('MenuBadOV').appendChild(img);
@@ -791,11 +791,11 @@
         </script>
 
         <!-- --------------------------- Overview: Diele --------------------------- -->
-        <script>
+        <script async>
             var OVwindowHzD = new Area();
             OVwindowHzD.createOverview("MenuDieleOV", "bgYellowgreen");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Diele.jpg';
             document.getElementById('MenuDieleOV').appendChild(img);
@@ -803,11 +803,11 @@
             img.width = 620;
         </script>
         <!-- --------------------------- Overview: AZ --------------------------- -->
-        <script>
+        <script async>
             var OVwindowAZ = new Area();
             OVwindowAZ.createOverview("MenuAZOV", "bgOrangeRot");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/AZ.jpg';
             document.getElementById('MenuAZOV').appendChild(img);
@@ -815,11 +815,11 @@
             img.width = 620;
         </script>
         <!-- --------------------------- Overview: Multimedia --------------------------- -->
-        <script>
+        <script async>
             var OVwindowMM = new Area();
             OVwindowMM.createOverview("MenuMultimediaOV", "bgPurple");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Multimedia.jpg';
             document.getElementById('MenuMultimediaOV').appendChild(img);
@@ -828,29 +828,27 @@
         </script>
 
         <!-- --------------------------- Overview: Heizung --------------------------- -->
-        <script>
+        <script async>
             var OVwindowHz = new Area();
             OVwindowHz.createOverview("MenuHzOV", "bgYellow");
         </script>
-        <script>
-        </script>
+
 
 
         <!-- --------------------------- Overview: Rolladen --------------------------- -->
-        <script>
+        <script async>
             var OVwindowRollo = new Area();
             OVwindowRollo.createOverview("MenuRolloOV", "bgBrown");
         </script>
-        <script>
-        </script>
+
 
 
         <!-- --------------------------- Overview: Netzwerk --------------------------- -->
-        <script>
+        <script async>
             var OVwindowNW = new Area();
             OVwindowNW.createOverview("MenuNetOV", "bgGreen");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Netzwerk.jpg';
             document.getElementById('MenuNetOV').appendChild(img);
@@ -859,11 +857,11 @@
         </script>
 
         <!-- --------------------------- Overview: None --------------------------- -->
-        <script>
+        <script async>
             var OVwindowNone = new Area();
             OVwindowNone.createOverview("MenuNoneOV", "bgGreen");
         </script>
-        <script>
+        <script async>
             var img = document.createElement('img');
             img.src = 'images/Netzwerk.jpg';
             document.getElementById('MenuNoneOV').appendChild(img);
@@ -878,14 +876,14 @@
 
         <!-- ************************ Heizung Uebersicht ************************  -->
 
-        <script>
+        <script async>
             var windowHzWz = new Area();
             windowHzWz.createMain("MainHzAll", "bgCyan");
         </script>
 
         <!-- ************************ Heizung Ctrl Wohnzimmer ************************  -->
 
-        <script>
+        <script async>
             var CtrlwindowHzWz = new Area();
             CtrlwindowHzWz.createCtrl("MainHzAllCtrl", "bgCyan");
         </script>
@@ -897,11 +895,11 @@
 
         <!-- -------------------- Main Area:  Wohnzimmer - Heizung -------------------- -->
         <!--<Main id="MainHeizungWZ" class="HeizungWZ">	</Main> -->
-        <script>
+        <script async>
             var windowHzWz = new Area();
             windowHzWz.createMain("MainHeizungWZ", "bgCyan");
         </script>
-        <script>
+        <script async>
             var MainTempVHzWZ = new VarDis();
             MainTempVHzWZ.create("MainHeizungWZ", "black", "50px", "490px", "85px", "20px", "°C", null, null,
                 "fa fa-arrow-left");
@@ -969,12 +967,12 @@
 
         <!-- ------------------ Ctrl Area: Wohnzimmer - Heizung ------------------ -->
         <!--	        id="MainHeizungWZCtrl"  class="HeizungCtrlWZ"                   -->
-        <script>
+        <script async>
             var CtrlwindowHzWz = new Area();
             CtrlwindowHzWz.createCtrl("MainHeizungWZCtrl", "bgCyan");
         </script>
 
-        <script>
+        <script async>
             var DisModeHzWZ = new StateDisplay();
             DisModeHzWZ.create("MainHeizungWZCtrl", "cyanLight", "", "10px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1013,11 +1011,11 @@
         <!-- <Main id="MainHzKZ"  class="HeizungKZ"></Main>	  -->
 
 
-        <script>
+        <script async>
             var windowHzWz = new Area();
             windowHzWz.createMain("MainHzKZ", "bgOlive");
         </script>
-        <script>
+        <script async>
             var MainTempVHzKZ = new VarDis();
             MainTempVHzKZ.create("MainHzKZ", "black", "50px", "490px", "85px", "20px", "°C");
             var MainTempRHzKZ = new VarDis();
@@ -1082,11 +1080,11 @@
         </script>
         <!-- ------------------ Ctrl Area: Kinderzimmer - Heizung ------------------ -->
         <!--                id="MainHzKZCtrl"  class="HeizungCtrlKZ"                 -->
-        <script>
+        <script async>
             var CtrlwindowHzKz = new Area();
             CtrlwindowHzKz.createCtrl("MainHzKZCtrl", "bgOlive");
         </script>
-        <script>
+        <script async>
             var DisModeHzKZCtrl = new StateDisplay();
             DisModeHzKZCtrl.create("MainHzKZCtrl", "oliveLight", "", "10px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1121,11 +1119,11 @@
         <!-- ------------------ Main Area: Schlafzimmer - Heizung ------------------ -->
 
         <!-- <Main id="MainHzSZ"   class="HeizungSZ">	</Main>  -->
-        <script>
+        <script async>
             var windowHzSz = new Area();
             windowHzSz.createMain("MainHzSZ", "bgSandy");
         </script>
-        <script>
+        <script async>
             var MainTempVHzSZ = new VarDis();
             MainTempVHzSZ.create("MainHzSZ", "black", "50px", "490px", "85px", "20px", "°C");
             var MainTempRHzSZ = new VarDis();
@@ -1192,11 +1190,11 @@
         </script>
         <!-- ------------------ Ctrl Area: Schlafzimmer - Heizung ------------------ -->
         <!--                 id="MainHzSZCtrl" class="HeizungCtrlSZ"                 -->
-        <script>
+        <script async>
             var CtrlwindowHzSZ = new Area();
             CtrlwindowHzSZ.createCtrl("MainHzSZCtrl", "bgSandy");
         </script>
-        <script>
+        <script async>
             var DisModeHzSZCtrl = new StateDisplay();
             DisModeHzSZCtrl.create("MainHzSZCtrl", "sandyLight", "", "10px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1234,11 +1232,11 @@
 
         <!--  <Main  id="MainHzK"   class="HeizungK">   </Main>	-->
 
-        <script>
+        <script async>
             var windowHzK = new Area();
             windowHzK.createMain("MainHzK", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var MainTempVHzK = new VarDis();
             MainTempVHzK.create("MainHzK", "black", "50px", "490px", "85px", "20px", "°C");
             var MainTempRHzK = new VarDis();
@@ -1303,11 +1301,11 @@
         </script>
         <!-- ------------------ Ctrl Area: Küche - Heizung ------------------ -->
         <!--              id="MainHzKCtrl"  class="HeizungCtrlK"              -->
-        <script>
+        <script async>
             var CtrlwindowHzK = new Area();
             CtrlwindowHzK.createCtrl("MainHzKCtrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var DisModeHzKCtrl = new StateDisplay();
             DisModeHzKCtrl.create("MainHzKCtrl", "midgreenLight", "", "10px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1337,11 +1335,11 @@
 
 
         <!-- <Main id="MainRolloWZ"   class="RolloWZ"> </Main> -->
-        <script>
+        <script async>
             var windowRolloWZ = new Area();
             windowRolloWZ.createMain("MainRolloWZ", "bgCyan");
         </script>
-        <script>
+        <script async>
             var iRolloWZ = new DynIcon("rollo", "ana", false);
             iRolloWZ.create("MainRolloWZ", "0px", "100px", "350px", "250px");
 
@@ -1404,11 +1402,11 @@
 
         <!-- ------------------ Ctrl Area: Wohnzimmer - Rolladen ------------------- -->
         <!-- <Ctrl id = "MainRolloWZCtrl" class="RolloCtrlWZ"></Ctrl>  -->
-        <script>
+        <script async>
             var CtrlwindowRolloWZ = new Area();
             CtrlwindowRolloWZ.createCtrl("MainRolloWZCtrl", "bgCyan");
         </script>
-        <script>
+        <script async>
             var DisModeRolloWZCtrl = new StateDisplay();
             DisModeRolloWZCtrl.create("MainRolloWZCtrl", "cyanLight", "", "20px", "30px", "70px", "202px",
                 "30px",
@@ -1440,11 +1438,11 @@
 
         <!-- ------------------- Main Area: Rollasden Balkontür -------------------- -->
         <!-- <Main id="MainRolloB"  class="RolloB">	</Main>  -->
-        <script>
+        <script async>
             var windowRolloB = new Area();
             windowRolloB.createMain("MainRolloB", "bgBlue");
         </script>
-        <script>
+        <script async>
             var iRolloB = new DynIcon("rollo", "ana", false);
             iRolloB.create("MainRolloB", "0px", "100px", "350px", "250px");
 
@@ -1500,11 +1498,11 @@
         <!-- ************************** Rolladen Ctrl BalkontTuer **************************  -->
         <!-- <Ctrl id = MainRolloBCtrl  class="RolloCtrlB">  </Ctrl>  -->
 
-        <script>
+        <script async>
             var CtrlwindowRolloB = new Area();
             CtrlwindowRolloB.createCtrl("MainRolloBCtrl", "bgBlue");
         </script>
-        <script>
+        <script async>
             var DisModeRolloB = new StateDisplay();
             DisModeRolloB.create("MainRolloBCtrl", "blueLight", "", "20px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1540,11 +1538,11 @@
 
 
         <!-- <Main id="MainRolloKZ"  class="RolloKZ">	</Main>  -->
-        <script>
+        <script async>
             var windowRolloKZ = new Area();
             windowRolloKZ.createMain("MainRolloKZ", "bgOlive");
         </script>
-        <script>
+        <script async>
             var iRolloKZ = new DynIcon("rollo", "ana", false);
             iRolloKZ.create("MainRolloKZ", "0px", "100px", "350px", "250px");
 
@@ -1601,11 +1599,11 @@
 
         <!-- ************************** Rolladen Ctrl Kinderzimmer **************************  -->
         <!-- <Ctrl id = MainRolloKZCtrl  class="RolloCtrlKZ"> </Ctrl>  -->
-        <script>
+        <script async>
             var CtrlwindowRolloKZ = new Area();
             CtrlwindowRolloKZ.createCtrl("MainRolloKZCtrl", "bgOlive");
         </script>
-        <script>
+        <script async>
             var DisModeRolloKZ = new StateDisplay();
             DisModeRolloKZ.create("MainRolloKZCtrl", "oliveLight", "", "20px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1639,11 +1637,11 @@
         <!-- --------------------- Main Area: Küche - Rolladen --------------------- -->
 
         <!-- <Main id="MainRolloK"  class="RolloK">	</Main> -->
-        <script>
+        <script async>
             var windowRolloK = new Area();
             windowRolloK.createMain("MainRolloK", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var iRolloK = new DynIcon("rollo", "ana", false);
             iRolloK.create("MainRolloK", "0px", "100px", "350px", "250px");
 
@@ -1700,11 +1698,11 @@
 
         <!-- ************************** Rolladen Ctrl Kueche ************************** -->
         <!--  <Ctrl id = MainRolloKCtrl  class="RolloCtrlK"></Ctrl> -->
-        <script>
+        <script async>
             var CtrlwindowRolloK = new Area();
             CtrlwindowRolloK.createCtrl("MainRolloKCtrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var DisModeRolloK = new StateDisplay();
             DisModeRolloK.create("MainRolloKCtrl", "midgreenLight", "", "20px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1738,11 +1736,11 @@
 
 
         <!-- <Main id="MainRolloSZ"  class="RolloSZ">	</Main> -->
-        <script>
+        <script async>
             var windowRolloSZ = new Area();
             windowRolloSZ.createMain("MainRolloSZ", "bgSandy");
         </script>
-        <script>
+        <script async>
             var iRolloSZ = new DynIcon("rollo", "ana", false);
             iRolloSZ.create("MainRolloSZ", "0px", "100px", "350px", "250px");
 
@@ -1799,11 +1797,11 @@
 
         <!-- ************************** Rolladen Ctrl Schlafzimmer ************************** -->
         <!-- <Ctrl id = MainRolloSZCtrl  class="RolloCtrlSZ"></Ctrl> -->
-        <script>
+        <script async>
             var CtrlwindowRolloSZ = new Area();
             CtrlwindowRolloSZ.createCtrl("MainRolloSZCtrl", "bgSandy");
         </script>
-        <script>
+        <script async>
             var DisModeRolloSZ = new StateDisplay();
             DisModeRolloSZ.create("MainRolloSZCtrl", "sandyLight", "", "20px", "30px", "70px", "202px", "30px",
                 "Mode",
@@ -1841,22 +1839,22 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <!-- ----------------------- Main Area: Diele  - Tür ----------------------- -->
-        <script>
+        <script async>
             var windowDoorD = new Area();
             windowDoorD.createMain("MainDoorD", "bgBlue");
         </script>
-        <script>
+        <script async>
             var DynIconDoorD = new DynIcon("door", "bin", false);
 
             DynIconDoorD.create("MainDoorD", "40px", "70px", "250px", "250px");
         </script>
 
         <!-- ----------------------- Ctrl Area: Diele - Tür ----------------------- -->
-        <script>
+        <script async>
             var CtrlwindowDoorD = new Area();
             CtrlwindowDoorD.createCtrl("MainDoorDCtrl", "bgBlue");
         </script>
-        <script>
+        <script async>
             var DisDoorDCtrl = new StateDisplay();
             DisDoorDCtrl.create("MainDoorDCtrl", "blueLight", "", "50px", "20px", "60px", "202px", "20px",
                 "Tür Position",
@@ -1868,11 +1866,11 @@
         <!--  ************************          Light  Wohnzimmer       ************************      -->
         <!-- ***********************************************************************************      -->
         <!-- <Main id="MainLightWZ"  class="LightWZ"></Main> -->
-        <script>
+        <script async>
             var windowLightWZ = new Area();
             windowLightWZ.createMain("MainLightWZ", "bgCyan");
         </script>
-        <script>
+        <script async>
             var Light1WZ = new CtrlTile();
             Light1WZ.create("MainLightWZ", "10px", "10px", "Lampe Fenster", "cyan", "transparent", "Light",
                 "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "",
@@ -1891,11 +1889,11 @@
         <!-- ************************      Light Ctrl  Wohnzimmer     ************************      -->
         <!-- ***********************************************************************************      -->
         <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
-        <script>
+        <script async>
             var CtrlwindowLightWZ = new Area();
             CtrlwindowLightWZ.createCtrl("MainLightWZCtrl", "bgCyan");
         </script>
-        <script>
+        <script async>
             var HeadWZL1 = new HeadLine();
             HeadWZL1.create("MainLightWZCtrl", "0px", "transparent", "Fenster Lampe");
             var DisLightEnergy1WZCtrl = new StateDisplay();
@@ -1956,22 +1954,22 @@
         <!--  ************************          Light  Schlafzimmer     ************************      -->
         <!-- ***********************************************************************************      -->
         <!-- <Main id="MainLightSZ"  class="LightSZ"></Main> -->
-        <script>
+        <script async>
             var windowLightSZ = new Area();
             windowLightSZ.createMain("MainLightSZ", "bgSandy");
         </script>
-        <script>
+        <script async>
             var LightSZ = new CtrlTile();
             LightSZ.create("MainLightSZ", "10px", "10px", "Schlafzimmer", "sandy", "transparent", "Light",
                 "send('command(Light,SZ,false)')", "send('command(Light,SZ,true)')");
         </script>
         <!-- ************************ Light Ctrl  Schlafzimmer ************************ -->
         <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
-        <script>
+        <script async>
             var CtrlwindowLightSZ = new Area();
             CtrlwindowLightSZ.createCtrl("MainLightSZCtrl", "bgSandy");
         </script>
-        <script>
+        <script async>
             var DisLightEnergySZCtrl = new StateDisplay();
             DisLightEnergySZCtrl.create("MainLightSZCtrl", "sandyLight", "Wh", "50px", "20px", "60px", "202px",
                 "20px",
@@ -1993,12 +1991,12 @@
         <!-- ***********************************************************************************      -->
         <!--  ************************          Light  AZ               ************************      -->
         <!-- ***********************************************************************************      -->
-        <script>
+        <script async>
             var windowLightAZ = new Area();
             windowLightAZ.createMain("MainLightAZ", "bgOrangeRot");
         </script>
 
-        <script>
+        <script async>
             var LightAZ = new CtrlTile();
             LightAZ.create("MainLightAZ", "10px", "10px", "Arbeitsecke", "orangerot", "transparent", "Light",
                 "send('command(Light,AZ,false)')", "send('command(Light,AZ,true)')");
@@ -2008,12 +2006,12 @@
         <!-- ***********************************************************************************      -->
         <!-- ************************        Light Ctrl  AZ                  *******************      -->
         <!-- ***********************************************************************************      -->
-        <script>
+        <script async>
             var CtrlwindowLightAZ = new Area();
             CtrlwindowLightAZ.createCtrl("MainLightAZCtrl", "bgOrangeRot");
         </script>
 
-        <script>
+        <script async>
             var DisLightEnergyAZCtrl = new StateDisplay();
             DisLightEnergyAZCtrl.create("MainLightAZCtrl", "orangerotLight", "Wh", "50px", "20px", "60px",
                 "202px",
@@ -2038,11 +2036,11 @@
         <!-- ***********************************************************************************      -->
         <!--  ************************          Light  Diele            ************************      -->
         <!-- ***********************************************************************************      -->
-        <script>
+        <script async>
             var windowLightD = new Area();
             windowLightD.createMain("MainLightD", "bgYellowGreen");
         </script>
-        <script>
+        <script async>
             var LightD = new CtrlTile();
             LightD.create("MainLightD", "10px", "10px", "Diele", "yellowgreen", "transparent", "Light",
                 "send('command(Light,D,false)')", "send('command(Light,D,true)')");
@@ -2051,11 +2049,11 @@
         <!-- ***********************************************************************************      -->
         <!-- ************************        Light Ctrl  Diele               *******************      -->
         <!-- ***********************************************************************************      -->
-        <script>
+        <script async>
             var CtrlwindowLightD = new Area();
             CtrlwindowLightD.createCtrl("MainLightDCtrl", "bgYellowGreen");
         </script>
-        <script>
+        <script async>
             var DisLightEnergyDCtrl = new StateDisplay();
             DisLightEnergyDCtrl.create("MainLightDCtrl", "yellowgreenLight", "Wh", "50px", "20px", "60px",
                 "202px",
@@ -2078,11 +2076,11 @@
 
         <!-- ************************ Sonos  Schlafzimmer ************************ -->
         <!-- <Main id="MainSonosSZ" class="SonosSZ"></Main> -->
-        <script>
+        <script async>
             var windowSonosSZ = new Area();
             windowSonosSZ.createMain("MainSonosSZ", "bgSandy");
         </script>
-        <script>
+        <script async>
             var iDisArtistSsz = new MediaDisplay();
             iDisArtistSsz.create("MainSonosSZ", "0px", "20px", "normal");
 
@@ -2149,11 +2147,11 @@
         </script>
         <!-- ************************ Sonos Ctrl  Schlafzimmer ************************ -->
         <!-- <Ctrl id="MainSonosSZCtrl" class="SonosSZCtrl"></Ctrl>  -->
-        <script>
+        <script async>
             var CtrlwindowSonosSZ = new Area();
             CtrlwindowSonosSZ.createCtrl("MainSonosSZCtrl", "bgSandy");
         </script>
-        <script>
+        <script async>
             /*
             var CtrlSonosCD = new CDLibrary();
             CtrlSonosCD.create("MainSonosSZCtrl", "SonosSZ", "play");
@@ -2166,11 +2164,11 @@
         <!--  ************************          INDEX S - Security    ************************      -->
         <!-- ***********************************************************************************      -->
         <!--  <Main id ="MainSecCode" class="SecurityCode"></Main>  -->
-        <script>
+        <script async>
             var windowSecCode = new Area();
             windowSecCode.createMain("MainSecCode", "bgRed");
         </script>
-        <script>
+        <script async>
             var KeyPadSecKey = new KeyPad();
             KeyPadSecKey.create("MainSecCode", "KeyCode", "security", "grey", "1", "10vh", "120px");
 
@@ -2198,11 +2196,11 @@
         <!--  ************************    Security Ctrl                 ************************      -->
         <!-- ***********************************************************************************      -->
         <!--  <Ctrl id ="MainSecCodeCtrl" class="SecCodeCtrl"></Ctrl>   -->
-        <script>
+        <script async>
             var CtrlwindowSecCde = new Area();
             CtrlwindowSecCde.createCtrl("MainSecCodeCtrl", "bgRed");
         </script>
-        <script>
+        <script async>
             var ABox = new AlarmBox();
             ABox.create("MainSecCodeCtrl", "AlarmMeldung", "yellow", "10px", "20px");
 
@@ -2242,12 +2240,12 @@
         <!--  ************************          Water Alarm             ************************      -->
         <!-- ***********************************************************************************      -->
         <!-- <Main id ="MainWaterAlarm" class="WaterAlarm"></Main> -->
-        <script>
+        <script async>
             var windowWaterAlarm = new Area();
             windowWaterAlarm.createMain("MainWaterAlarm", "bgRed");
         </script>
 
-        <script>
+        <script async>
             var iBath = new DynIcon("BadewanneW", "bin", false);
             iBath.create("MainWaterAlarm", "20px", "70px", "250px", "250px");
             var iWashM = new DynIcon("WaschmaschineW", "bin", false);
@@ -2262,12 +2260,12 @@
         <!-- ************************     Water Alarm Ctrl              ************************      -->
         <!-- ***********************************************************************************      -->
         <!-- <Ctrl id ="MainWaterAlarmCtrl" class="WaterAlarmCtrl"></Ctrl>    -->
-        <script>
+        <script async>
             var CtrlwindowWaterAlarm = new Area();
             CtrlwindowWaterAlarm.createCtrl("MainWaterAlarmCtrl", "bgRed");
         </script>
 
-        <script>
+        <script async>
             var BathDisAlarm = new StateDisplay();
             BathDisAlarm.create("MainWaterAlarmCtrl", "redLight", "", "20px", "20px", "60px", "202px", "20px",
                 "Alarm",
@@ -2304,13 +2302,13 @@
         <!-- ***********************************************************************************      -->
 
         <!-- <Main id ="MainBatAlarm" class="BatAlarm"></Main> -->
-        <script>
+        <script async>
             var windowBatAlarm = new Area();
             windowBatAlarm.createMain("MainBatAlarm", "bgRed");
         </script>
 
 
-        <script>
+        <script async>
             var iBat01 = new DynIcon("BatStat", "bin", true);
             iBat01.create("MainBatAlarm", "0px", "10px", "20px", "50px");
             var iBat02 = new DynIcon("BatStat", "bin", true);
@@ -2423,11 +2421,11 @@
         <!-- ************************     Battery Alarm Ctrl            ************************      -->
         <!-- ***********************************************************************************      -->
         <!--  <Ctrl id ="MainBatAlarmCtrl" class="BatAlarmCtrl"></Ctrl>   -->
-        <script>
+        <script async>
             var CtrlwindowBatAlarm = new Area();
             CtrlwindowBatAlarm.createCtrl("MainBatAlarmCtrl", "bgRed");
         </script>
-        <script>
+        <script async>
             var BatDis = new StateDisplay();
             BatDis.create("MainBatAlarmCtrl", "redLight", "", "50px", "20px", "225px", "202px", "20px",
                 "Battery Alarm",
@@ -2439,12 +2437,12 @@
         <!--  ************************          Clock     ************************      -->
         <!-- ***********************************************************************************      -->
         <!--  <Main id ="MainClock" class="Uhr"></Main>       -->
-        <script>
+        <script async>
             var windowClock = new Area();
             windowClock.createMain("MainClock", "bgRed");
         </script>
 
-        <script>
+        <script async>
             var watch1 = new EierUhr();
             watch1.create("MainClock", "1");
             watch1.countdown1();
@@ -2460,12 +2458,12 @@
         <!--  ************************          ClockCtrl     ************************      -->
         <!-- ***********************************************************************************      -->
         <!--  <Ctrl id ="MainClockCtrl" class="UhrCtrl">     -->
-        <script>
+        <script async>
             var CtrlwindowClock = new Area();
             CtrlwindowClock.createCtrl("MainClockCtrl", "bgRed");
         </script>
 
-        <script>
+        <script async>
 
         </script>
 
@@ -2474,12 +2472,12 @@
         <!--  ************************          Filter     ************************      -->
         <!-- ***********************************************************************************      -->
 
-        <script>
+        <script async>
             var windowFilter = new Area();
             windowFilter.createMain("MainFilter", "bgRed");
         </script>
 
-        <script>
+        <script async>
             var iFilterK = new DynIcon("BatStat", "ana", false);
             iFilterK.create("MainFilter", "30px", "230px", "125px", "300px");
 
@@ -2499,12 +2497,12 @@
         <!--  ************************          FilterCtrl     ************************      -->
         <!-- ***********************************************************************************      -->
 
-        <script>
+        <script async>
             var CtrlwindowFilter = new Area();
             CtrlwindowFilter.createCtrl("MainFilterCtrl", "bgRed");
         </script>
 
-        <script>
+        <script async>
             var DiIPSFil1 = new StateDisplay();
             DiIPSFil1.create("MainFilterCtrl", "midgreenLight", "", "30px", "30px",
                 "60px", "202px",
@@ -2546,11 +2544,11 @@
         <!-- ------------------------ Main Area: Floorplan ------------------------- -->
 
         //<Main id="Grundriss" class="floorplan"></Main>
-        <script>
+        <script async>
             var windowRezepte = new Area();
             windowRezepte.createMain("Grundriss", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var VarDisWindowBad = new DynIcon("Fenster", "bin", false);
             VarDisWindowBad.create("Grundriss", "0px", "40vw", "60px", "45px", "lightgreen");
 
@@ -2664,11 +2662,11 @@
         <!--  ************************          Main - Rezepte       ************************      -->
         <!-- ***********************************************************************************   -->
         <!-- <Main id="MainRezepte" class="Rezepte"> </Main>  -->
-        <script>
+        <script async>
             var windowRezepte = new Area();
             windowRezepte.createMain("MainRezepte", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var RezeptName = new HeadLine();
             RezeptName.create("MainRezepte", "0px", "transparent", "Spargel Soße");
 
@@ -2695,11 +2693,11 @@
         <!--  ************************          Ctrl - Rezepte       ************************      -->
         <!-- ***********************************************************************************   -->
         <!-- <Ctrl id="MainRezepteCtrl" class="RezepteCtrl"></Ctrl>  -->
-        <script>
+        <script async>
             var CtrlwindowRezepte = new Area();
             CtrlwindowRezepte.createCtrl("MainRezepteCtrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var RezeptImg = new ShowUrlImage();
             RezeptImg.create("MainRezepteCtrl", "5px", "2px", "150px", "200px", "");
 
@@ -2712,11 +2710,11 @@
         <!-- ***********************************************************************************   -->
 
         <!--<Ctrl id="MainRezepteCtrlList" class="RezepteCtrlList"></Ctrl>-->
-        <script>
+        <script async>
             var CtrlwindowRezepteList = new Area();
             CtrlwindowRezepteList.createCtrl("MainRezepteCtrlList", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var RezepteBox = new ArraySelectListBox();
             RezepteBox.create("MainRezepteCtrlList", "5px", "2px", "white");
         </script>
@@ -2733,11 +2731,11 @@
         <!-- ***********************************************************************************   -->
 
 
-        <script>
+        <script async>
             var windowIRadio = new Area();
             windowIRadio.createMain("MainIRadio", "bgCyan");
         </script>
-        <script>
+        <script async>
             var iDisArtist = new MediaDisplay();
             iDisArtist.create("MainIRadio", "0px", "20px", "normal");
 
@@ -2771,11 +2769,11 @@
         <!-- *************************************************************************************   -->
         <!--  ************************         Main - IP Symcon Server    ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var mainwindoIPS = new Area();
             mainwindoIPS.createMain("MainIPS", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var server1 = new BtnIcon();
             server1.create("MainIPS", "20px", "20px", "midgreen", ips, "1.0", "IPS Server",
                 "switchCtrlArea('MainIPSCtrl')", "150px", "100px");
@@ -2843,11 +2841,11 @@
         <!-- *************************************************************************************   -->
         <!--  ************************         CTRL - IP Symcon Server    ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowIPS = new Area();
             CtrlwindowIPS.createCtrl("MainIPSCtrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var Head1 = new HeadLine();
             Head1.create("MainIPSCtrl", "0px", "transparent", "IPS-RASPI");
             var DiIPS1 = new StateDisplay();
@@ -2923,11 +2921,11 @@
         <!-- *************************************************************************************   -->
         <!--  ************************         CTRL - Homematic Server    ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHM = new Area();
             CtrlwindowHM.createCtrl("MainHMCtrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadHM1 = new HeadLine();
             HeadHM1.create("MainHMCtrl", "0px", "transparent", "HM - Server");
             var labelHM1 = new label();
@@ -2985,11 +2983,11 @@
         <!-- *************************************************************************************   -->
         <!--  ************************       CTRL - HMIP1 Präsenzmelder   ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP1 = new Area();
             CtrlwindowHMIP1.createCtrl("HMIP1Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadA1 = new HeadLine();
             HeadA1.create("HMIP1Ctrl", "0px", "transparent", "Präsenzmelder");
             var labelA1 = new label();
@@ -3029,11 +3027,11 @@
         <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->
         <!--  ************************       Kinderzimmer                           ************************   -->
         <!-- ***********************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP2 = new Area();
             CtrlwindowHMIP2.createCtrl("HMIP2Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadB1 = new HeadLine();
             HeadB1.create("HMIP2Ctrl", "0px", "transparent", "Temp/Feuchte");
             var labelB1 = new label();
@@ -3063,11 +3061,11 @@
         <!--  ************************       CTRL - HM-WDS40 TH-I-2 Temp/Humidity    ***********************   -->
         <!--  ************************       Schlafzimmer                           ************************   -->
         <!-- ***********************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP3 = new Area();
             CtrlwindowHMIP3.createCtrl("HMIP3Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadC1 = new HeadLine();
             HeadC1.create("HMIP3Ctrl", "0px", "transparent", "Temp/Feuchte");
             var labelC1 = new label();
@@ -3097,11 +3095,11 @@
         <!--  ************************       CTRL - HMIP-SWD  Wasser Sensor          ***********************   -->
         <!--  ************************       Küche                                  ************************   -->
         <!-- ***********************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP4 = new Area();
             CtrlwindowHMIP4.createCtrl("HMIP4Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadD1 = new HeadLine();
             HeadD1.create("HMIP4Ctrl", "0px", "transparent", "Wasser Sensor");
             var labelD1 = new label();
@@ -3152,11 +3150,11 @@
         <!--  ************************       CTRL - HMIP-SWD  Wasser Sensor          ***********************   -->
         <!--  ************************       Bad                                  ************************   -->
         <!-- ***********************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP5 = new Area();
             CtrlwindowHMIP5.createCtrl("HMIP5Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadE1 = new HeadLine();
             HeadE1.create("HMIP5Ctrl", "0px", "transparent", "Wasser Sensor");
             var labelE1 = new label();
@@ -3208,11 +3206,11 @@
         <!--  ************************       CTRL - HMIP-Sec-SCo  Tür Kontakt        ***********************   -->
         <!--  ************************       Haustür                                ************************   -->
         <!-- ***********************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP6 = new Area();
             CtrlwindowHMIP6.createCtrl("HMIP6Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadF1 = new HeadLine();
             HeadF1.create("HMIP6Ctrl", "0px", "transparent", "Tür Kontakt");
             var labelF1 = new label();
@@ -3235,11 +3233,11 @@
         <!--  ************************       CTRL - HMIP-BSM  Schalter / Mess Aktor       ***********************   -->
         <!--  ************************       Schlafzimmer                                ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP7 = new Area();
             CtrlwindowHMIP7.createCtrl("HMIP7Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadG1 = new HeadLine();
             HeadG1.create("HMIP7Ctrl", "0px", "transparent", "Schalter/Mess");
             var labelG1 = new label();
@@ -3288,11 +3286,11 @@
         <!--  ************************       CTRL -   Wandtaster 6fach  HMIP_WRC6         ***********************   -->
         <!--  ************************       Wohnzimmer                                  ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP8 = new Area();
             CtrlwindowHMIP8.createCtrl("HMIP8Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadH1 = new HeadLine();
             HeadH1.create("HMIP8Ctrl", "0px", "transparent", "Taster 6fach");
             var labelH1 = new label();
@@ -3322,11 +3320,11 @@
         <!--  ************************       CTRL - HM-LC-Sw4 Aktor 4fach                 ***********************   -->
         <!--  ************************       Bad                                         ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP9 = new Area();
             CtrlwindowHMIP9.createCtrl("HMIP9Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadI1 = new HeadLine();
             HeadI1.create("HMIP9Ctrl", "0px", "transparent", "Schalter 6fach");
             var labelI1 = new label();
@@ -3346,11 +3344,11 @@
         <!--  ************************       CTRL - HM-PB-2 Wandtaster                     ***********************   -->
         <!--  ************************       Bad                                         ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP10 = new Area();
             CtrlwindowHMIP10.createCtrl("HMIP10Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadJ1 = new HeadLine();
             HeadJ1.create("HMIP10Ctrl", "0px", "transparent", "Wand Taster");
             var labelJ1 = new label();
@@ -3370,11 +3368,11 @@
         <!--  ************************       CTRL - HM-FSM Lichtaktor Mitte               ***********************   -->
         <!--  ************************       Wohnzimmer                                  ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP11 = new Area();
             CtrlwindowHMIP11.createCtrl("HMIP11Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadK1 = new HeadLine();
             HeadK1.create("HMIP11Ctrl", "0px", "transparent", "Lampe Mitte");
             var labelK1 = new label();
@@ -3405,11 +3403,11 @@
         <!--  ************************       CTRL - HM-FSM Lichtaktor Hinten              ***********************   -->
         <!--  ************************       Wohnzimmer                                  ************************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP12 = new Area();
             CtrlwindowHMIP12.createCtrl("HMIP12Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadL1 = new HeadLine();
             HeadL1.create("HMIP12Ctrl", "0px", "transparent", "Lampe Fenster");
             var labelL1 = new label();
@@ -3441,11 +3439,11 @@
         <!--  ************************       CTRL - HM-FSM Lichtaktor Diele               ***********************   -->
         <!--  ************************       Diele                                        ***********************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP13 = new Area();
             CtrlwindowHMIP13.createCtrl("HMIP13Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadM1 = new HeadLine();
             HeadM1.create("HMIP13Ctrl", "0px", "transparent", "Lampe Diele");
             var labelM1 = new label();
@@ -3478,11 +3476,11 @@
         <!--  ************************       CTRL - HMIP-FCI 1 Schater Kontakt            ***********************   -->
         <!--  ************************       Diele                                        ***********************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP14 = new Area();
             CtrlwindowHMIP14.createCtrl("HMIP14Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadN1 = new HeadLine();
             HeadN1.create("HMIP14Ctrl", "0px", "transparent", "Schalter Diele");
             var labelN1 = new label();
@@ -3508,11 +3506,11 @@
         <!--  ************************       CTRL - HM-WDS30 Tem Diff Sensor              ***********************   -->
         <!--  ************************       Schlafzimmer                                 ***********************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP15 = new Area();
             CtrlwindowHMIP15.createCtrl("HMIP15Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadO1 = new HeadLine();
             HeadO1.create("HMIP15Ctrl", "0px", "transparent", "D-Temp Sensor");
             var labelO1 = new label();
@@ -3551,11 +3549,11 @@
         <!--  ************************       CTRL - HM-WDS30 Tem Diff Sensor              ***********************   -->
         <!--  ************************       Wohnzimmer                                   ***********************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP16 = new Area();
             CtrlwindowHMIP16.createCtrl("HMIP16Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadP1 = new HeadLine();
             HeadP1.create("HMIP16Ctrl", "0px", "transparent", "D-Temp Sensor");
             var labelP1 = new label();
@@ -3594,11 +3592,11 @@
         <!--  ************************       CTRL - HMIP.PS Funk Schalt Steckdose         ***********************   -->
         <!--  ************************       Wohnzimmer      Repeater                     ***********************   -->
         <!-- ****************************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowHMIP17 = new Area();
             CtrlwindowHMIP17.createCtrl("HMIP17Ctrl", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var HeadQ1 = new HeadLine();
             HeadQ1.create("HMIP17Ctrl", "0px", "transparent", "Steckdose - Repeater");
             var labelQ1 = new label();
@@ -3636,11 +3634,11 @@
         <!-- *************************************************************************************   -->
         <!--  ************************          Main - WebSocketServer    ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var mainwindowWSS = new Area();
             mainwindowWSS.createMain("MainWSS", "bgMidgreen");
         </script>
-        <script>
+        <script async>
             var rahmWss = new Rahmen();
             rahmWss.create("MainWSS", "90px", "10px", "400px", "250px", "transparent");
             var iWSS = new DynIcon("WSS", "bin", false);
@@ -3697,12 +3695,12 @@
         <!-- *************************************************************************************   -->
         <!--  ************************          CTRL - WebSocketServer    ************************   -->
         <!-- *************************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowWSS = new Area();
             CtrlwindowWSS.createCtrl("MainWSSCtrl", "bgMidgreen");
         </script>
 
-        <script>
+        <script async>
 
         </script>
 
@@ -3710,11 +3708,11 @@
         <!--                    MAIN - UPNP Musik CD                                 -->
         <!--                id="MainUpnpCD"                                          -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var mainwindowUpnpCD = new Area();
             mainwindowUpnpCD.createMain("MainUpnpCD", "bgCyan");
         </script>
-        <script>
+        <script async>
             var DisplayCD = new MediaDisplay();
             DisplayCD.create("MainUpnpCD", "0px", "20px", "500px", "200px", "DisplayBlue");
 
@@ -3782,11 +3780,11 @@
         <!-- ----------------------------------------------------------------------- -->
         <!--                             Ctrl UPNP CD                                -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var CtrlMainUpnpCD = new Area();
             CtrlMainUpnpCD.createCtrl("MainUpnpCDCtrl", "bgPurpleLight");
         </script>
-        <script>
+        <script async>
             var CtrlCDList = new DynIconList();
             CtrlCDList.create("MainUpnpCDCtrl", "CD");
         </script>
@@ -3795,12 +3793,12 @@
         <!-- ----------------------------------------------------------------------- -->
         <!--                                  Audio (Books)                          -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var MainAudio = new Area();
             MainAudio.createMain("MainAudio", "bgPurple");
         </script>
 
-        <script>
+        <script async>
             var DiplayAudio = new MediaDisplay();
             DiplayAudio.create("MainAudio", "0px", "20px", "500px", "200px", "DisplayBlue");
 
@@ -3869,12 +3867,12 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <!--  <Ctrl id = MainAudioCtrl class="AudioCtrl"></Ctrl>  -->
-        <script>
+        <script async>
             var CtrlMainAudio = new Area();
             CtrlMainAudio.createCtrl("MainAudioCtrl", "bgPurpleLight");
         </script>
 
-        <script>
+        <script async>
             var CtrlAudioList = new DynIconList();
             CtrlAudioList.create("MainAudioCtrl", "Audio");
         </script>
@@ -3883,12 +3881,12 @@
         <!-- ----------------------------------------------------------------------- -->
         <!--                                  UPNP                                   -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var mainwindowUpnp = new Area();
             mainwindowUpnp.createMain("MainUpnp", "bgPurple");
         </script>
 
-        <script>
+        <script async>
             var RahmenA = new Kachel();
             RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
@@ -3957,12 +3955,12 @@
         <!--                         Discover   CTRL - UPNP                          -->
         <!-- ----------------------------------------------------------------------- -->
 
-        <script>
+        <script async>
             var CtrlwindowDiscoverUpnp = new Area();
             CtrlwindowDiscoverUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
         </script>
 
-        <script>
+        <script async>
             var ServerBox = new ArrayListBox();
             ServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
             var btnSearchServer = new CtrlButton();
@@ -3979,11 +3977,11 @@
         <!-- ***********************************************************************************   -->
         <!--  ************************      Browse   CTRL - UPNP    ******************************      -->
         <!-- ***********************************************************************************   -->
-        <script>
+        <script async>
             var CtrlwindowBrowseUpnp = new Area();
             CtrlwindowBrowseUpnp.createCtrl("MainUpnpBrowseCtrl", "bgPurple");
         </script>
-        <script>
+        <script async>
 
         </script>
 
@@ -4004,13 +4002,13 @@
         <!--                    MAIN - None                   -->
         <!--                id="MainNonen"                                          -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var mainwindowNone = new Area();
             mainwindowNone.createMain("MainNonen", "bgCyan");
         </script>
 
 
-        <script>
+        <script async>
             var CtrlwindoNone = new Area();
             CtrlwindoNone.createCtrl("MainNoneCtrl", "bgMidgreen");
         </script>
@@ -4033,12 +4031,12 @@
         <!--              MAIN - Wohnzimmer - Anlage Denon Ceol Piccolo              -->
         <!--                id="MainCeolWZ"         class="Ceol">                    -->
         <!-- ----------------------------------------------------------------------- -->
-        <script>
+        <script async>
             var mainwindowCeol = new Area();
             mainwindowCeol.createMain("MainCeolWZ", "bgCyan");
         </script>
 
-        <script>
+        <script async>
             var iDisArtistWZ = new MediaDisplay();
             iDisArtistWZ.create("MainCeolWZ", "0px", "20px", "500px", "200px", "DisplayBlue");
 
@@ -4114,12 +4112,12 @@
 
         <!-- ************************** Internet Radio Stationen  **************************  -->
         <!--  <Ctrl id = MainCeolWZCtrl class="RadioStation"></Ctrl>  -->
-        <script>
+        <script async>
             var CtrlwindowCeolIR = new Area();
             CtrlwindowCeolIR.createCtrl("MainCeolWZCtrl", "bgCyanLight");
         </script>
 
-        <script>
+        <script async>
             var CtrlIRadiochannels = new IconList();
             CtrlIRadiochannels.create("MainCeolWZCtrl", "IRadio");
         </script>
@@ -4128,23 +4126,23 @@
         <!-- ************************** Ctrl Denon  CD Lib **************************  -->
         <!-- <Ctrl id="MainCDCtrl" class="CoverCD" ></Ctrl>  -->
 
-        <script>
+        <script async>
             var CtrlwindowCeolCD = new Area();
             CtrlwindowCeolCD.createCtrl("MainCDCtrl", "bgCyanLight");
         </script>
 
-        <script>
+        <script async>
             var CtrlCEOLCDList = new DynIconList();
             CtrlCEOLCDList.create("MainCDCtrl", "CeolCD");
         </script>
 
         <!-- ************************** Ctrl Denon AudioBooks Lib **************************  -->
-        <script>
+        <script async>
             var CtrlwindowCeolAudio = new Area();
             CtrlwindowCeolAudio.createCtrl("MainAudioBookCtrl", "bgCyan");
         </script>
 
-        <script>
+        <script async>
             var CtrlCEOLAudioList = new DynIconList();
             CtrlCEOLAudioList.create("MainAudioBookCtrl", "CeolAudio");
         </script>
