@@ -1326,22 +1326,23 @@ function updateValues() {
   CeolSource.update(s);
   RahmenCeol.update(s);
   /* ---------------------------------- UPNP ---------------------------------- */
-  ServerBox.update(ipsObj.sym[130]);
-  DeviceBox.update(ipsObj.sym[132]);
-  DisMeldung.update(ipsObj.sym[238]);
+  if (document.getElementById("MainUpnpCD")) {
+    ServerBox.update(ipsObj.sym[130]);
+    DeviceBox.update(ipsObj.sym[132]);
+    DisMeldung.update(ipsObj.sym[238]);
 
-  DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
-  Track.update("Track: " + ipsObj.sym[255]);
-  CDTrack.update("Track: " + ipsObj.sym[255]);
-  upnpVol.update(ipsObj.sym[257]);
-  upnpSource.update(ipsObj.sym[256]);
-  upnpProgress.update(ipsObj.sym[259]);
-  DisplayCD.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
-  upnpCDVol.update(ipsObj.sym[257]);
-  upnCDSource.update(ipsObj.sym[256]);
-  upnpCDProgress.update(ipsObj.sym[259]);
-  CDPlayer.update(ipsObj.ips.ID46310);
-
+    DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
+    Track.update("Track: " + ipsObj.sym[255]);
+    CDTrack.update("Track: " + ipsObj.sym[255]);
+    upnpVol.update(ipsObj.sym[257]);
+    upnpSource.update(ipsObj.sym[256]);
+    upnpProgress.update(ipsObj.sym[259]);
+    DisplayCD.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
+    upnpCDVol.update(ipsObj.sym[257]);
+    upnCDSource.update(ipsObj.sym[256]);
+    upnpCDProgress.update(ipsObj.sym[259]);
+    CDPlayer.update(ipsObj.ips.ID46310);
+  }
   /* ---------------------------------- UPNP Video ---------------------------------- */
   if (document.getElementById("MainVideo")) {
     DiplayVideo.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
