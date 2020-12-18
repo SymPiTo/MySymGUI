@@ -75,6 +75,7 @@
                     var a = 0;
                     if (this.readyState === 1) {
                         a = 'connected';
+                        versuch = false;
 
                     } else if (this.readyState === 2) {
                         a = 'connecting';
@@ -186,6 +187,15 @@
                         reason = "Unknown reason";
                     fehler('Client closed:' + reason);
 
+                    state(' WebSocket: ' + socket.readyState);
+                    if (event.code == 1006) {
+                        if (versuch == false) {
+                            reconnect();
+                            versuch = true;
+                        }
+
+
+                    }
                     cancelKeepAlive();
                     //led.update(false);
                 };
@@ -441,6 +451,9 @@
                 "", "SM");
             var SubMenuBatAlarm = new GlideButton();
             SubMenuBatAlarm.create("SubMenuSec", "red", "Battery Alarm", batterie_white, "MainBatAlarm", "",
+                "SM");
+            var SubMenuSysError = new GlideButton();
+            SubMenuSysError.create("SubMenuSec", "red", "System Error", syserror, "MainSysError", "",
                 "SM");
         </script>
 
@@ -2432,6 +2445,36 @@
             BatDis.create("MainBatAlarmCtrl", "redLight", "", "50px", "20px", "225px", "202px", "20px",
                 "Battery Alarm",
                 "String");
+        </script>
+
+
+        <!-- ***********************************************************************************      -->
+        <!-- ************************            MainSysError           ************************      -->
+        <!-- ***********************************************************************************      -->
+
+        <!-- <Main id =" MainSysError" class="SysError"></Main> -->
+        <script>
+            var windowSysError = new Area();
+            windowSysError.createMain("MainSysError", "bgRed");
+        </script>
+
+
+        <script>
+            var errorbox = new TextScrollBox();
+            errorbox.create("MainSysError", "50px", "100px");
+            errorbox.maximize();
+        </script>
+
+        <!-- ***********************************************************************************      -->
+        <!-- ************************     MainSysError Ctrl            ************************      -->
+        <!-- ***********************************************************************************      -->
+        <!--  <Ctrl id ="MainSysErrorCtrl" class="SysErrorCtrl"></Ctrl>   -->
+        <script>
+            var CtrlwindowSysError = new Area();
+            CtrlwindowSysError.createCtrl("MainSysErrorCtrl", "bgRed");
+        </script>
+        <script>
+
         </script>
 
 
