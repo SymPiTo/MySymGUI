@@ -2546,7 +2546,7 @@ class TextScrollBox {
 
     add(newtext) {
         this.inhalt += newtext;
-        this.ID.value = this.inhalt;
+        this.ID.value = this.inhalt + System.lineSeparator();
     }
 
     minimize() {
