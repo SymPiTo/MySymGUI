@@ -86,7 +86,7 @@
                         a = 'Connection closed';
                     }
                     state(' WebSocket: ' + a);
-                    errorbox.add(' WebSocket: ' + a);
+                    errorbox.add(' WebSocket onOpen: ' + a);
                     //keepAlive();
                 };
 
@@ -189,17 +189,17 @@
                         reason = "Unknown reason";
                     //fehler('Client closed:' + reason);
                     state(' WebSocket: ' + reason);
-                    errorbox.add('Close: ' + reason);
+                    errorbox.add('Websocket OnClose: ' + reason);
                     state(' WebSocket: ' + socket.readyState);
                     if (event.code == 1006) {
                         if (versuch == false) {
                             //Versuch den Client neu zu starten.
-                            errorbox.add('Close: ' + 'Restart Versuch');
+                            errorbox.add('Websocket OnClose: ' + 'Restart Versuch');
                             reconnect();
                             versuch = true;
                         } else {
-                            reconnect();
-                            errorbox.add('Close: ' + 'ELSE Restart Versuch');
+
+                            errorbox.add('Websocket OnClose: ' + ' Restart Versuch gescheitert.');
                         }
 
 
@@ -210,7 +210,7 @@
                 socket.onerror = function (error) {
                     //fehler('Client' + '*' + 'status' + '*' + error.data);
                     //fehler('Fehler:' + error.message);
-                    state(' WebSocket: ' + error.message);
+                    state(' Websocket OnError: ' + error.message);
                     errorbox.add(error.message);
 
 
