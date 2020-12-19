@@ -2512,6 +2512,7 @@ class MainWindow {
 class TextScrollBox {
     constructor() {
         this.ID = "";
+        this.inhalt = "";
     }
 
     create(ParentID, posTop, posLeft) {
@@ -2541,6 +2542,11 @@ class TextScrollBox {
             // alert("error");
         }
 
+    }
+
+    add(newtext) {
+        this.inhalt += newtext;
+        this.ID.value = this.inhalt;
     }
 
     minimize() {

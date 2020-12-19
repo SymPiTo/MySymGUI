@@ -75,6 +75,7 @@
                     var a = 0;
                     if (this.readyState === 1) {
                         a = 'connected';
+                        //Restartversuchszaehler zurücksetzen
                         versuch = false;
 
                     } else if (this.readyState === 2) {
@@ -85,6 +86,7 @@
                         a = 'Connection closed';
                     }
                     state(' WebSocket: ' + a);
+                    errorbox.add(' WebSocket: ' + a);
                     //keepAlive();
                 };
 
@@ -186,22 +188,29 @@
                     else
                         reason = "Unknown reason";
                     fehler('Client closed:' + reason);
-
+                    errorbox.add('Close: ' + reason);
                     state(' WebSocket: ' + socket.readyState);
                     if (event.code == 1006) {
                         if (versuch == false) {
+                            //Versuch den Client neu zu starten.
+                            errorbox.add('Close: ' + 'Restart Versuch');
                             reconnect();
                             versuch = true;
+                        } else {
+                            reconnect();
+                            errorbox.add('Close: ' + 'ELSE Restart Versuch');
                         }
 
 
                     }
-                    cancelKeepAlive();
+                    //cancelKeepAlive();
                     //led.update(false);
                 };
                 socket.onerror = function (error) {
                     //fehler('Client' + '*' + 'status' + '*' + error.data);
                     fehler('Fehler:' + error.message);
+                    errorbox.add(error.message);
+
 
                 };
             } catch (ex) {
