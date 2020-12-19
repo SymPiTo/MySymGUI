@@ -187,7 +187,8 @@
                     //"The connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).";
                     else
                         reason = "Unknown reason";
-                    fehler('Client closed:' + reason);
+                    //fehler('Client closed:' + reason);
+                    state(' WebSocket: ' + reason);
                     errorbox.add('Close: ' + reason);
                     state(' WebSocket: ' + socket.readyState);
                     if (event.code == 1006) {
@@ -208,7 +209,8 @@
                 };
                 socket.onerror = function (error) {
                     //fehler('Client' + '*' + 'status' + '*' + error.data);
-                    fehler('Fehler:' + error.message);
+                    //fehler('Fehler:' + error.message);
+                    state(' WebSocket: ' + error.message);
                     errorbox.add(error.message);
 
 
