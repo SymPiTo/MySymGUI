@@ -37,7 +37,7 @@ class ipsbuffer {
   init() {
     this.ips.ID15922 = ""; //Temperatur SZ (HM)
     this.ips.ID37045 = ""; //Temperatur KZ
-    this.ips.ID51079 = ""; //Temperatur WZ
+    this.ips.ID41984 = ""; //Temperatur WZ
     this.ips.ID54070 = ""; //Temperatur K
     this.ips.ID20539 = ""; //Position HZ WZ
     this.ips.ID49335 = ""; //Position HZ KZ
@@ -63,7 +63,7 @@ class ipsbuffer {
     this.ips.ID57942 = ""; //Sonnenuntergang
     this.ips.ID11938 = ""; //Sonnenaufgang
     this.ips.ID37348 = ""; //Balkontür
-    this.ips.ID53071 = ""; //Soll Modus Hz WZ
+    this.ips.ID40597 = ""; //Soll Modus Hz WZ
     this.ips.ID31769 = ""; //Soll Temp Hz WZ 
     this.ips.ID21198 = ""; //Soll Temp Ausstehend Hz WZ
     this.ips.ID10060 = ""; //Bat Hz WZ Aktor
@@ -454,7 +454,7 @@ class ipsbuffer {
     try {
       this.sym[0] = this.ips.ID15922; //Temperatur SZ (HM)
       this.sym[1] = this.ips.ID37045; //Temperatur KZ
-      this.sym[2] = this.ips.ID51079; //Temperatur WZ
+      this.sym[2] = this.ips.ID41984; //Temperatur WZ
       this.sym[3] = this.ips.ID54070; //Temperatur K
       this.sym[4] = this.ips.ID20539; //Position HZ WZ
       this.sym[5] = this.ips.ID49335; //Position HZ KZ
