@@ -440,6 +440,7 @@ class ipsbuffer {
     this.ips.ID46559 = ""; //Datum Filter wechseln
     this.ips.ID13215 = ""; //Liter befüllt
     this.ips.ID24603 = ""; //Füllstandsanzeige
+    this.ips.ID38470 = ""; //Präsenzmelder WZ
   }
 
   update(symvar) {
@@ -851,6 +852,7 @@ class ipsbuffer {
       this.sym[326] = this.ips.ID48220; //Temp Wand KZ 
 
       this.sym[327] = this.ips.ID37365; //upnp Server Name
+      this.sym[328] = this.ips.ID38470; //Präsenz WZ
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -1610,7 +1612,7 @@ function updateValues() {
   //<!-- ******************** Person  **************************  -->
   ihuman.update(ipsObj.sym[58]);
   ihumanAZ.update(ipsObj.sym[228]);
-
+  ihumanWZ.update(ipsObj.sym[328]);
 
 
 
