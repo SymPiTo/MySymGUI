@@ -2513,6 +2513,7 @@ class TextScrollBox {
     constructor() {
         this.ID = "";
         this.inhalt = "";
+        this.logOn = false;
     }
 
     create(ParentID, posTop, posLeft) {
@@ -2555,6 +2556,29 @@ class TextScrollBox {
         
         this.ID.value = this.inhalt;
     }
+
+    log(newLog){
+        if(this.Logon == true){
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+    
+            newtext = dateTime + ': ' + newLog + "\n";
+            this.inhalt += newtext;
+            
+            this.ID.value = this.inhalt;  
+        }
+
+    }
+
+    setLogOn(){
+        this.Logon = true;
+    }
+
+    setLogOff(){
+        this.Logon = false;
+    }    
 
     minimize() {
         this.ID.style.height = "0px";
