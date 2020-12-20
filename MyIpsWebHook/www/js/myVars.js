@@ -64,7 +64,7 @@ class ipsbuffer {
     this.ips.ID11938 = ""; //Sonnenaufgang
     this.ips.ID37348 = ""; //Balkontür
     this.ips.ID40597 = ""; //Soll Modus Hz WZ
-    this.ips.ID31769 = ""; //Soll Temp Hz WZ 
+    this.ips.ID41314 = ""; //Soll Temp Hz WZ 
     this.ips.ID21198 = ""; //Soll Temp Ausstehend Hz WZ
     this.ips.ID10060 = ""; //Bat Hz WZ Aktor
     this.ips.ID52085 = ""; //Bat Hz KZ
@@ -481,8 +481,8 @@ class ipsbuffer {
       this.sym[24] = this.ips.ID11938; //Sonnenaufgang
       this.sym[25] = this.ips.ID37348; //Balkontür
       this.sym[26] = this.ips.ID40597; //Soll Modus Hz WZ
-      this.sym[27] = this.ips.ID31769; //Soll Temp Hz WZ 
-      this.sym[28] = this.ips.ID41314; //Soll Temp Ausstehend Hz WZ_
+      this.sym[27] = this.ips.ID41314; //Soll Temp Hz WZ 
+      this.sym[28] = this.ips.ID21198; //Soll Temp Ausstehend Hz WZ_
       this.sym[29] = this.ips.ID55199; //Bat Hz WZ
       this.sym[30] = this.ips.ID52085; //Bat Hz KZ
       this.sym[31] = this.ips.ID42343; //Bat Hz Aktor SZ
