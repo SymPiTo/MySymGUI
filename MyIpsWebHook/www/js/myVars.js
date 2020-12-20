@@ -39,7 +39,7 @@ class ipsbuffer {
     this.ips.ID37045 = ""; //Temperatur KZ
     this.ips.ID51079 = ""; //Temperatur WZ
     this.ips.ID54070 = ""; //Temperatur K
-    this.ips.ID18059 = ""; //Position HZ WZ
+    this.ips.ID20539 = ""; //Position HZ WZ
     this.ips.ID49335 = ""; //Position HZ KZ
     this.ips.ID37431 = ""; //Position HZ SZ (HM)
     this.ips.ID51619 = ""; //Position HZ K   
@@ -65,8 +65,8 @@ class ipsbuffer {
     this.ips.ID37348 = ""; //Balkontür
     this.ips.ID53071 = ""; //Soll Modus Hz WZ
     this.ips.ID31769 = ""; //Soll Temp Hz WZ 
-    this.ips.ID27789 = ""; //Soll Temp Ausstehend Hz WZ
-    this.ips.ID23472 = ""; //Bat Hz WZ
+    this.ips.ID21198 = ""; //Soll Temp Ausstehend Hz WZ
+    this.ips.ID10060 = ""; //Bat Hz WZ Aktor
     this.ips.ID52085 = ""; //Bat Hz KZ
     this.ips.ID42343 = ""; //Bat Hz Aktor SZ
     this.ips.ID22083 = ""; //Bat Hz K
@@ -456,7 +456,7 @@ class ipsbuffer {
       this.sym[1] = this.ips.ID37045; //Temperatur KZ
       this.sym[2] = this.ips.ID51079; //Temperatur WZ
       this.sym[3] = this.ips.ID54070; //Temperatur K
-      this.sym[4] = this.ips.ID18059; //Position HZ WZ
+      this.sym[4] = this.ips.ID20539; //Position HZ WZ
       this.sym[5] = this.ips.ID49335; //Position HZ KZ
       this.sym[6] = this.ips.ID37431 * 100; //Position HZ SZ (HM)
       this.sym[7] = this.ips.ID51619; //Position HZ K   
@@ -480,10 +480,10 @@ class ipsbuffer {
       this.sym[23] = this.ips.ID57942; //Sonnenuntergang
       this.sym[24] = this.ips.ID11938; //Sonnenaufgang
       this.sym[25] = this.ips.ID37348; //Balkontür
-      this.sym[26] = this.ips.ID53071; //Soll Modus Hz WZ
+      this.sym[26] = this.ips.ID40597; //Soll Modus Hz WZ
       this.sym[27] = this.ips.ID31769; //Soll Temp Hz WZ 
-      this.sym[28] = this.ips.ID27789; //Soll Temp Ausstehend Hz WZ
-      this.sym[29] = this.ips.ID23472; //Bat Hz WZ
+      this.sym[28] = this.ips.ID41314; //Soll Temp Ausstehend Hz WZ_
+      this.sym[29] = this.ips.ID55199; //Bat Hz WZ
       this.sym[30] = this.ips.ID52085; //Bat Hz KZ
       this.sym[31] = this.ips.ID42343; //Bat Hz Aktor SZ
       this.sym[32] = this.ips.ID22083; //Bat Hz K
