@@ -22,12 +22,7 @@
         */
         protected function ProcessHookData() { 
             
- 
-                IPS_LogMessage("WebHook GET", print_r($_GET, true));
-    
-                //echo "Meldung: " . $_GET['auth'];
-
- 
+     
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
 if(!isset($_SERVER['PHP_AUTH_PW']))
