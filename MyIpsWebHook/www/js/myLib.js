@@ -1341,7 +1341,7 @@ class GlideButton {
                 MainMenu[0].style.width = "28vw";
                 //Startbild vergößern
                 document.getElementsByClassName("StartScreen")[0].style.left = "28vw";
-                document.getElementsByClassName("StartScreen")[0].style.width = "72vw";
+                document.getElementsByClassName("StartScreen")[0].style.width = "72%";
             }
 
             // alle subMenus auf 0px verkleinern 
@@ -1369,20 +1369,20 @@ class GlideButton {
 
             if (MenuType === "MM") {
                 //benötigte Fenster einblenden für Main Menu
-                document.getElementById(ParentID).style.width = "8vw";
+                document.getElementById(ParentID).style.width = "8%";
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
                     document.getElementsByClassName(IDMain + "OV")[0].style.left = "36vw";
-                    document.getElementsByClassName(IDMain)[0].style.width = "28vw";
+                    document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
 
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    document.getElementsByClassName(IDMain + "OV")[0].style.width = "64vw";
+                    document.getElementsByClassName(IDMain + "OV")[0].style.width = "64%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    document.getElementsByClassName("StartScreen")[0].style.left = "8vw";
-                    document.getElementsByClassName(IDFull)[0].style.width = "92vw";
+                    document.getElementsByClassName("StartScreen")[0].style.left = "8%";
+                    document.getElementsByClassName(IDFull)[0].style.width = "92%";
                 }
             }
             if (MenuType === "SM") {
@@ -1390,17 +1390,17 @@ class GlideButton {
                     //script für Ctrl Window nachaden
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8vw";
+                    document.getElementById(ParentID).style.width = "8%";
                     //Haupt Fenster einblenden
-                    document.getElementById(IDMain).style.width = "56vw";
+                    document.getElementById(IDMain).style.width = "56%";
                     //Control Fenster einblenden
-                    document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                    document.getElementById(IDMain + "Ctrl").style.width = "26%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8vw";
+                    document.getElementById(ParentID).style.width = "8%";
                     //Haupt Fenster komplett einblenden
-                    document.getElementById(IDFull).style.width = "92vw";
+                    document.getElementById(IDFull).style.width = "92%";
                 }
             }
             if (MenuType === "SMload") {
@@ -1416,17 +1416,17 @@ class GlideButton {
                                 //script für Ctrl Window nachaden
                                 document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                                 //SubMenue Leiste verkuerzt einblenden
-                                document.getElementById(ParentID).style.width = "8vw";
+                                document.getElementById(ParentID).style.width = "8%";
                                 //Haupt Fenster einblenden
-                                document.getElementById(IDMain).style.width = "56vw";
+                                document.getElementById(IDMain).style.width = "56%";
                                 //Control Fenster einblenden
-                                document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                                document.getElementById(IDMain + "Ctrl").style.width = "26%";
                             } else {
                                 document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                                 //SubMenue Leiste verkuerzt einblenden
-                                document.getElementById(ParentID).style.width = "8vw";
+                                document.getElementById(ParentID).style.width = "8%";
                                 //Haupt Fenster komplett einblenden
-                                document.getElementById(IDFull).style.width = "92vw";
+                                document.getElementById(IDFull).style.width = "92%";
                             }
                         })
                         // Request ValueUpdate an Server senden
@@ -1438,17 +1438,17 @@ class GlideButton {
                         //script für Ctrl Window nachaden
                         document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                         //SubMenue Leiste verkuerzt einblenden
-                        document.getElementById(ParentID).style.width = "8vw";
+                        document.getElementById(ParentID).style.width = "8%";
                         //Haupt Fenster einblenden
-                        document.getElementById(IDMain).style.width = "56vw";
+                        document.getElementById(IDMain).style.width = "56%";
                         //Control Fenster einblenden
-                        document.getElementById(IDMain + "Ctrl").style.width = "26vw";
+                        document.getElementById(IDMain + "Ctrl").style.width = "26%";
                     } else {
                         document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                         //SubMenue Leiste verkuerzt einblenden
-                        document.getElementById(ParentID).style.width = "8vw";
+                        document.getElementById(ParentID).style.width = "8%";
                         //Haupt Fenster komplett einblenden
-                        document.getElementById(IDFull).style.width = "92vw";
+                        document.getElementById(IDFull).style.width = "92%";
                     }
                 }
 
