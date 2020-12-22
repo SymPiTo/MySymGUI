@@ -48,7 +48,7 @@ button :active {
     left: 0px;
     top: 0px;
     z-index: 10;
-    width: 100%;
+    width: 90%;
     height: 7vh;
     border-bottom-style: solid;
     border-bottom-width: thin;
@@ -62,7 +62,7 @@ button :active {
     height: 100vh;
     position: fixed;
     padding-top: 2vh;
-    width: 90vw;
+    width: 100vw;
     backface-visibility: hidden;
     will-change: overflow;
     -webkit-transition: All 0.5s ease;
