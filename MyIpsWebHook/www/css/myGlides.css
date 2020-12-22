@@ -157,7 +157,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position: absolute;
     top: 5vh;
     left: 28vw;
-    width: 62vw;
+    width: 72vw;
     height: 95vh;
     background: -webkit-linear-gradient(hsl(750, 100%, 85%), hsl(450, 100%, 65%), hsl(750, 100%, 85%));
     /* CHROME */
@@ -222,7 +222,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
     /*border-left-style: solid;
 	border-left-width: thin; */
@@ -231,7 +231,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .CEOLCDctrl {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     width: 0px;
     height: 95vh;
     background: hsl(300, 100%, 10%);
@@ -243,7 +243,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .CEOLctrl {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     width: 0px;
     height: 95vh;
     background-color: darkslategray
@@ -256,7 +256,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
     /* border-left-style: solid;
 	border-left-width: thin; */
@@ -265,7 +265,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .CDLib {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     width: 0px;
     height: 95vh;
     background-color: darkslategray
@@ -278,7 +278,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
     /* border-left-style: solid;
 	border-left-width: thin; */
@@ -287,10 +287,10 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .AudioBookLib {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+
     background: hsl(900, 100%, 10%);
 }
 
@@ -346,7 +346,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position: relative;
     top: 5vh;
     width: 0px;
-    height: 125vh;
+    height: 95vh;
     background-color: hsl(28, 100%, 10%);
 }
 
@@ -450,7 +450,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .RadioStation {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     flex-direction: column;
     width: 0px;
     height: 95vh;
@@ -463,7 +463,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .CoverCD {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     height: 95vh;
 
     padding-bottom: 5px;
@@ -552,7 +552,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .TVChannel {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     flex-direction: column;
     width: 0px;
     height: 95vh;
@@ -562,7 +562,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .TVINet {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     width: 0px;
     height: 95vh;
     background: hsl(300, 1%, 10%);
@@ -573,7 +573,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background-color: darkslategray
 }
 
@@ -582,7 +582,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
 }
 
@@ -591,14 +591,14 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
 }
 
 .TVGuide {
     position: absolute;
     top: 5vh;
-    left: 74vw;
+    left: 72vw;
     flex-direction: column;
     width: 0px;
     height: 95vh;
@@ -614,7 +614,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     top: 5vh;
     width: 0px;
     height: 95vh;
-    left: 74vw;
+    left: 72vw;
     background: hsl(300, 100%, 10%);
 }
 
