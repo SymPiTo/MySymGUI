@@ -1392,7 +1392,7 @@ class GlideButton {
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "8vw";
                     //Haupt Fenster einblenden
-                    document.getElementById(IDMain).style.width = "58vw";
+                    document.getElementById(IDMain).style.width = "56vw";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26vw";
                 } else {
@@ -1418,7 +1418,7 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "8vw";
                                 //Haupt Fenster einblenden
-                                document.getElementById(IDMain).style.width = "58vw";
+                                document.getElementById(IDMain).style.width = "56vw";
                                 //Control Fenster einblenden
                                 document.getElementById(IDMain + "Ctrl").style.width = "26vw";
                             } else {
@@ -1440,7 +1440,7 @@ class GlideButton {
                         //SubMenue Leiste verkuerzt einblenden
                         document.getElementById(ParentID).style.width = "8vw";
                         //Haupt Fenster einblenden
-                        document.getElementById(IDMain).style.width = "58vw";
+                        document.getElementById(IDMain).style.width = "56vw";
                         //Control Fenster einblenden
                         document.getElementById(IDMain + "Ctrl").style.width = "26vw";
                     } else {
