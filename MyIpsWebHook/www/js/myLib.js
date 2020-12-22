@@ -1341,7 +1341,7 @@ class GlideButton {
                 MainMenu[0].style.width = "28vw";
                 //Startbild vergößern
                 document.getElementsByClassName("StartScreen")[0].style.left = "28vw";
-                document.getElementsByClassName("StartScreen")[0].style.width = "72%";
+                document.getElementsByClassName("StartScreen")[0].style.width = "74%";
             }
 
             // alle subMenus auf 0px verkleinern 
@@ -1392,7 +1392,7 @@ class GlideButton {
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "8%";
                     //Haupt Fenster einblenden
-                    document.getElementById(IDMain).style.width = "56%";
+                    document.getElementById(IDMain).style.width = "58%";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26%";
                 } else {
@@ -1418,7 +1418,7 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "8%";
                                 //Haupt Fenster einblenden
-                                document.getElementById(IDMain).style.width = "56%";
+                                document.getElementById(IDMain).style.width = "58%";
                                 //Control Fenster einblenden
                                 document.getElementById(IDMain + "Ctrl").style.width = "26%";
                             } else {
@@ -1440,7 +1440,7 @@ class GlideButton {
                         //SubMenue Leiste verkuerzt einblenden
                         document.getElementById(ParentID).style.width = "8%";
                         //Haupt Fenster einblenden
-                        document.getElementById(IDMain).style.width = "56%";
+                        document.getElementById(IDMain).style.width = "58%";
                         //Control Fenster einblenden
                         document.getElementById(IDMain + "Ctrl").style.width = "26%";
                     } else {
