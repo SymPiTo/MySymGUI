@@ -62,7 +62,7 @@ button :active {
     height: 100vh;
     position: fixed;
     padding-top: 2vh;
-    width: 100vw;
+    width: 90vw;
     backface-visibility: hidden;
     will-change: overflow;
     -webkit-transition: All 0.5s ease;
