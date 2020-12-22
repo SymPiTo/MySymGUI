@@ -48,7 +48,7 @@ button :active {
     left: 0px;
     top: 0px;
     z-index: 10;
-    width: 90%;
+    width: 100%;
     height: 7vh;
     border-bottom-style: solid;
     border-bottom-width: thin;
@@ -157,7 +157,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     position: absolute;
     top: 5vh;
     left: 28vw;
-    width: 72vw;
+    width: 62vw;
     height: 95vh;
     background: -webkit-linear-gradient(hsl(750, 100%, 85%), hsl(450, 100%, 65%), hsl(750, 100%, 85%));
     /* CHROME */
