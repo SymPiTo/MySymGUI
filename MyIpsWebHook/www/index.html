@@ -94,6 +94,9 @@
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
 
+                    //Server ip and port
+                    let quelle = msg.origin;
+                    //let lastID = msg.lastEventId;
 
                     if (ipsObj.first) {
                         //Ausführung beim Ersten AUfruf der Webseite  
