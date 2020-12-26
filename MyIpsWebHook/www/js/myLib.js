@@ -1369,11 +1369,12 @@ class GlideButton {
 
             if (MenuType === "MM") {
                 //benötigte Fenster einblenden für Main Menu
-                document.getElementById(ParentID).style.width = "8%";
+                document.getElementById(ParentID).style.width = "85px";
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
-                    document.getElementsByClassName(IDMain + "OV")[0].style.left = "36vw";
+                    let s = 36 + 8 - (100 * 170 / window.innerWidth);
+                    document.getElementsByClassName(IDMain + "OV")[0].style.left = s + "vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
 
@@ -1381,7 +1382,7 @@ class GlideButton {
                     document.getElementsByClassName(IDMain + "OV")[0].style.width = "64%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    document.getElementsByClassName("StartScreen")[0].style.left = "8%";
+                    document.getElementsByClassName("StartScreen")[0].style.left = "85px";
                     document.getElementsByClassName(IDFull)[0].style.width = "92%";
                 }
             }
@@ -1390,15 +1391,16 @@ class GlideButton {
                     //script für Ctrl Window nachaden
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8%";
+                    document.getElementById(ParentID).style.width = "85px";
                     //Haupt Fenster einblenden
-                    document.getElementById(IDMain).style.width = "58%";
+                    let s = 58 + 16 - (100 * 170 / window.innerWidth);
+                    document.getElementById(IDMain).style.width = s + "%";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     //SubMenue Leiste verkuerzt einblenden
-                    document.getElementById(ParentID).style.width = "8%";
+                    document.getElementById(ParentID).style.width = "85px";
                     //Haupt Fenster komplett einblenden
                     document.getElementById(IDFull).style.width = "92%";
                 }
@@ -1416,15 +1418,16 @@ class GlideButton {
                                 //script für Ctrl Window nachaden
                                 document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                                 //SubMenue Leiste verkuerzt einblenden
-                                document.getElementById(ParentID).style.width = "8%";
+                                document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster einblenden
-                                document.getElementById(IDMain).style.width = "58%";
+                                let s = 58 + 16 - (100 * 170 / window.innerWidth);
+                                document.getElementById(IDMain).style.width = s + "%";
                                 //Control Fenster einblenden
                                 document.getElementById(IDMain + "Ctrl").style.width = "26%";
                             } else {
                                 document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                                 //SubMenue Leiste verkuerzt einblenden
-                                document.getElementById(ParentID).style.width = "8%";
+                                document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster komplett einblenden
                                 document.getElementById(IDFull).style.width = "92%";
                             }
