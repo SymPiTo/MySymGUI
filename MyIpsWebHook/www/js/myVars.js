@@ -4,7 +4,7 @@ class ipsbuffer {
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
     this.first = true;
     this.NoHosts = 0;
-    this.transmit = false;
+    this.lala = 10;
   }
 
   get ips() {
@@ -35,12 +35,6 @@ class ipsbuffer {
     this._NoHosts = NoHosts;
   }
 
-  get transmit() {
-    return this._transmit;
-  }
-  set transmit(transmit) {
-    this._transmit = transmit;
-  }
 
   init() {
     this.ips.ID15922 = ""; //Temperatur SZ (HM)

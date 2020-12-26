@@ -97,7 +97,6 @@
 
                     if (ipsObj.first) {
                         //Ausführung beim Ersten AUfruf der Webseite  
-
                         ipsObj.first = false;
                         //alle verwendete IPS Variable Definieren - mit "" beschreiben
                         ipsObj.init();
@@ -119,39 +118,32 @@
                         var IPSValue = JSON.parse(ipsJsonValue);
                         updateIPSValue(ipsID, IPSValue);
 
+                    } else if (jsontext != "") {
+                        //Variablen Paket einlesen
+                        var paket = ips[1];
+                        ips = JSON.parse(jsontext);
+                        symvar = ips[0];
+
+                        //eingelesene Datenpakete/Werte in die IPS variablen schreiben
+                        //=> update der IPS Variablen
+                        ipsObj.update(symvar);
+
+                        //console.log(ipsObj.ips);
+                        //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
+                        //log(ips[0]);
+                        //IPS Variable den Anzeige Variablen zuordnen
+                        ipsObj.check();
+                        //Anzeige der aktuellen Werte
+                        Heizung();
+
+                        Security();
+                        Klima();
+                        updateValues();
+
+
                     } else {
-                        if (jsontext != "") {
-
-                            //eingehende Daten wurden nicht komplett abgearbeitet.
-                            errorbox.add('Websocket onmessage: ' +
-                                'eingehende Daten.');
-
-
-                            //Variablen Paket einlesen
-                            var paket = ips[1];
-                            ips = JSON.parse(jsontext);
-                            symvar = ips[0];
-
-                            //eingelesene Datenpakete/Werte in die IPS variablen schreiben
-                            //=> update der IPS Variablen
-                            ipsObj.update(symvar);
-                            errorbox.add('Websocket onmessage: ' +
-                                'Daten updaten.');
-                            //console.log(ipsObj.ips);
-                            //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
-                            //log(ips[0]);
-                            //IPS Variable den Anzeige Variablen zuordnen
-                            ipsObj.check();
-                            //Anzeige der aktuellen Werte
-                            Heizung();
-
-                            Security();
-                            Klima();
-                            updateValues();
-                            errorbox.add('Websocket onmessage: ' +
-                                'Objekte aktualisieren.');
-
-                        }
+                        errorbox.add('Websocket onmessage: ' +
+                            'keine gültigen eingehende Daten.');
                     }
 
                 };
