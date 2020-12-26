@@ -121,21 +121,22 @@
 
                     } else {
                         if (jsontext != "") {
-                            if (ipsObj.transmit) {
-                                //eingehende Daten wurden nicht komplett abgearbeitet.
-                                errorbox.add('Websocket onmessage: ' +
-                                    'eingehende Daten wurden nicht komplett abgearbeitet.');
-                            }
-                            ipsObj.transmit = true;
+
+                            //eingehende Daten wurden nicht komplett abgearbeitet.
+                            errorbox.add('Websocket onmessage: ' +
+                                'eingehende Daten.');
+
+
                             //Variablen Paket einlesen
                             var paket = ips[1];
                             ips = JSON.parse(jsontext);
                             symvar = ips[0];
-                            ipsObj.transmit == false;
+
                             //eingelesene Datenpakete/Werte in die IPS variablen schreiben
                             //=> update der IPS Variablen
                             ipsObj.update(symvar);
-
+                            errorbox.add('Websocket onmessage: ' +
+                                'Daten updaten.');
                             //console.log(ipsObj.ips);
                             //Counter für empfangene Daten Pakete anzeigen auf Kopfleiste
                             //log(ips[0]);
@@ -147,6 +148,8 @@
                             Security();
                             Klima();
                             updateValues();
+                            errorbox.add('Websocket onmessage: ' +
+                                'Objekte aktualisieren.');
 
                         }
                     }
