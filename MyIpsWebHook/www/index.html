@@ -121,6 +121,12 @@
 
                     } else {
                         if (jsontext != "") {
+                            if (ipsObj.transmit == true) {
+                                //eingehende Daten wurden nicht komplett abgearbeitet.
+                                errorbox.add('Websocket onmessage: ' +
+                                    'eingehende Daten wurden nicht komplett abgearbeitet.');
+                            }
+                            ipsObj.transmit = true;
                             //Variablen Paket einlesen
                             var paket = ips[1];
                             ips = JSON.parse(jsontext);
@@ -138,6 +144,7 @@
                             Security();
                             Klima();
                             updateValues();
+                            ipsObj.transmit == false;
                         }
                     }
 

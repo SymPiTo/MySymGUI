@@ -4,6 +4,7 @@ class ipsbuffer {
     this.sym = sym; //Datenspeicher der Bildvariablen sind am Anfang leer und werden gefüllt mit ips
     this.first = true;
     this.NoHosts = 0;
+    this.transmit = false;
   }
 
   get ips() {
@@ -32,6 +33,13 @@ class ipsbuffer {
   }
   set NoHosts(NoHosts) {
     this._NoHosts = NoHosts;
+  }
+
+  get transmit() {
+    return this._transmit;
+  }
+  set transmit(transmit) {
+    this._transmit = transmit;
   }
 
   init() {
