@@ -121,7 +121,7 @@
 
                     } else {
                         if (jsontext != "") {
-                            if (ipsObj.transmit == true) {
+                            if (ipsObj.transmit) {
                                 //eingehende Daten wurden nicht komplett abgearbeitet.
                                 errorbox.add('Websocket onmessage: ' +
                                     'eingehende Daten wurden nicht komplett abgearbeitet.');
@@ -141,10 +141,11 @@
                             ipsObj.check();
                             //Anzeige der aktuellen Werte
                             Heizung();
+                            ipsObj.transmit == false;
                             Security();
                             Klima();
                             updateValues();
-                            ipsObj.transmit == false;
+
                         }
                     }
 
