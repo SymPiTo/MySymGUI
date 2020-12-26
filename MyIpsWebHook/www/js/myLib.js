@@ -1373,13 +1373,14 @@ class GlideButton {
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
-                    let s = 36 + 8 - (100 * 170 / window.innerWidth);
+                    let s = 28 + (100 * 85 / window.innerWidth);
                     document.getElementsByClassName(IDMain + "OV")[0].style.left = s + "vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
 
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    document.getElementsByClassName(IDMain + "OV")[0].style.width = "64%";
+                    let t = 100 - 28 - (100 * 85 / window.innerWidth);
+                    document.getElementsByClassName(IDMain + "OV")[0].style.width = t + "%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName("StartScreen")[0].style.left = "85px";
