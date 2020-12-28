@@ -35,6 +35,20 @@
      var FBDNS = new StateDisplay();
      FBDNS.create("MainNW", "cyanLight", "", "190px", "219px", "50px", "170px", "14px",
          "Static Adress", "String", "", "", "", "");
+
+     var labelMyPC = new label();
+     labelMyPC.create("MainNW", "10%", "65%", "18px", "white", "My WorkStation");
+
+     var FontBtnMyPC = new FontButtonNew();
+     FontBtnMyPC.create("MainNW", "fontbutton", "cyanLight", "10vh", "80%", "fa fa-power-off", "60px", "60px",
+         "send('command(WoL,MyPC,on)')");
+
+     var lablabelABBPCelABBPC = new label();
+     labelMyPC.create("MainNW", "20%", "65%", "18px", "white", "ABB Computer");
+
+     var FontBtnABBPC = new FontButtonNew();
+     FontBtnABBPC.create("MainNW", "fontbutton", "cyanLight", "20vh", "80%", "fa fa-power-off", "60px", "60px",
+         "send('command(WoL,ABBPC,on)')");
  </script>
 
  <!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->
@@ -60,5 +74,6 @@
          let z = parseInt("70px", 10) + parseInt("50px", 10) * i + "px";
          eval("IPdis" + i + '.create("MainNWCtrl","midgreenLight", "", "' + z +
              '", "70px", "50px", "150px", "18px", "IP Adress", "String", "", "", "", "")');
+
      }
  </script>
