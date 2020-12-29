@@ -448,6 +448,10 @@ class ipsbuffer {
     this.ips.DATA21198 = ""; //Temp Soll WZ
     this.ips.DATA20539 = ""; //Hz Stellung WZ
 
+    this.ips.DATA15922 = ""; //Temp Ist SZ
+    this.ips.DATA55889 = ""; //Temp Soll SZ
+    this.ips.DATA37431 = ""; //Hz Stellung SZ
+
   }
 
   update(symvar) {
@@ -865,6 +869,10 @@ class ipsbuffer {
       this.sym[330] = this.ips.DATA21198; //Temp Soll WZ
       this.sym[331] = this.ips.DATA20539; //Hz Stellung WZ
 
+      this.sym[332] = this.ips.DATA15922; //Temp Ist SZ
+      this.sym[333] = this.ips.DATA55889; //Temp Soll SZ
+      this.sym[334] = this.ips.DATA37431; //Hz Stellung SZ
+
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
     }
@@ -1236,7 +1244,10 @@ function updateValues() {
     graphTWZ.dataload(this.ipsObj.ips.DATA41984, this.ipsObj.ips.DATA21198, this.ipsObj.ips.DATA20539);
   }
 
-
+  /* ------------------------------- Schlafzimmer Temperatur Graph------------------------------ */
+  if (document.getElementById("MainTGSZ")) {
+    graphTSZ.dataload(this.ipsObj.ips.DATA15922, this.ipsObj.ips.DATA55889, this.ipsObj.ips.DATA37431);
+  }
 
   /* ------------------------------- Kinderzimmer Fenster------------------------------ */
   if (document.getElementById("MainFKZ")) {

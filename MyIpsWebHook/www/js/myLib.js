@@ -4513,6 +4513,16 @@ class MyChart {
                 ]
             },
             options: {
+                legend: {
+                    labels: {
+                         fontColor: 'yellow'
+                        }
+                     },
+                title: {
+                     display: true,
+                    fontColor: 'yellow',
+                    text: 'Chart'
+                },   
                 layout: {
                     padding: {
                         left: 0,
@@ -4533,6 +4543,7 @@ class MyChart {
                             position: 'right',
                             ticks: {
                                 // Include a dollar sign in the ticks
+                                fontColor: 'yellow',
                                 callback: function (value, index, values) {
                                     return value + unit1;
                                 }
@@ -4545,6 +4556,7 @@ class MyChart {
                             position: 'left',
                             ticks: {
                                 // Include a dollar sign in the ticks
+                                fontColor: 'yellow',
                                 callback: function (value, index, values) {
                                     return value + unit2;
                                 }
