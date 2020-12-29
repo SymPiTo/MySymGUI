@@ -1373,13 +1373,13 @@ class GlideButton {
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
-                    let s = 28 + (100 * 85 / window.innerWidth);
+                    let s = 28 + (100 * 85 / window.outerWidth);
                     document.getElementsByClassName(IDMain + "OV")[0].style.left = s + "vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
 
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    let t = 100 - 28 - (100 * 85 / window.innerWidth);
+                    let t = 100 - 28 - (100 * 85 / window.outerWidth);
                     document.getElementsByClassName(IDMain + "OV")[0].style.width = t + "%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
@@ -1394,7 +1394,7 @@ class GlideButton {
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "85px";
                     //Haupt Fenster einblenden
-                    let s = 58 + 16 - (100 * 170 / window.innerWidth);
+                    let s = 58 + 16 - (100 * 170 / window.outerWidth);
                     document.getElementById(IDMain).style.width = s + "%";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26%";
@@ -1421,7 +1421,7 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster einblenden
-                                let s = 58 + 16 + (100 * 170 / window.innerWidth);
+                                let s = 58 + 16 + (100 * 170 / window.outerWidth);
                                 
                                 document.getElementById(IDMain).style.width = s + "%";
                                 //Control Fenster einblenden
