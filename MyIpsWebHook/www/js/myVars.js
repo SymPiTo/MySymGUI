@@ -443,6 +443,11 @@ class ipsbuffer {
     this.ips.ID13215 = ""; //Liter befüllt
     this.ips.ID24603 = ""; //Füllstandsanzeige
     this.ips.ID38470 = ""; //Präsenzmelder WZ
+
+    this.ips.DATA41984 = ""; //Temp Ist WZ
+    this.ips.DATA21198 = ""; //Temp Soll WZ
+    this.ips.DATA20539 = ""; //Hz Stellung WZ
+
   }
 
   update(symvar) {
@@ -856,6 +861,10 @@ class ipsbuffer {
       this.sym[327] = this.ips.ID37365; //upnp Server Name
       this.sym[328] = this.ips.ID38470; //Präsenz WZ
 
+      this.sym[329] = this.ips.DATA41984; //Temp Ist WZ
+      this.sym[330] = this.ips.DATA21198; //Temp Soll WZ
+      this.sym[331] = this.ips.DATA20539; //Hz Stellung WZ
+
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
     }
@@ -1218,6 +1227,15 @@ function updateValues() {
     RRStat.update(Status);
     RRLstg.update(ipsObj.ips.ID14129);
   }
+
+
+
+
+  /* ------------------------------- Wohnzimmer Temperatur Graph------------------------------ */
+  if (document.getElementById("MainTGWZ")) {
+    graphTWZ.dataload(this.ipsObj.ips.DATA41984, this.ipsObj.ips.DATA21198, this.ipsObj.ips.DATA20539);
+  }
+
 
 
   /* ------------------------------- Kinderzimmer Fenster------------------------------ */

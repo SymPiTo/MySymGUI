@@ -318,9 +318,7 @@
         }
 
 
-        function log15(msg) {
-            $('prog').innerHTML = msg;
-        }
+
 
 
         function read_json() {
@@ -330,24 +328,6 @@
                     alert("Prime number: " + prime);
                 });
             });
-        }
-
-
-        function HzWZan() {
-            document.getElementById("test").classList.toggle('cyan');
-            document.getElementById("test").classList.toggle('cyanA');
-
-
-        }
-
-
-
-        function VarsNetwork(ips) {
-            $('ws1').innerHTML = ips[0].WS0001 + ' connected: ' + ips[0].WS0011;
-            $('ws2').innerHTML = ips[0].WS0002 + ' connected: ' + ips[0].WS0021;
-            $('ws3').innerHTML = ips[0].WS0003 + ' connected: ' + ips[0].WS0031;
-            document.getElementById('servericon').src = ips[0].ID10960;
-            document.getElementById('clienticon').src = ips[0].ID12017;
         }
     </script>
 
@@ -504,6 +484,10 @@
             SubMenuTV.create("SubMenuWZ", "cyan", "Samsung TV", tv, "MainTV", "", "SMload");
             var SubMenuRolloWZ = new GlideButton();
             SubMenuRolloWZ.create("SubMenuWZ", "cyan", "BlueRayPlayer", blueray, "MainBlueRayWZ", "", "SM");
+
+            var SubMenuTempGraphWZ = new GlideButton();
+            SubMenuTempGraphWZ.create("SubMenuWZ", "cyan", "Temperatur Wohnzimmer", temperaturGraph, "MainTGWZ", "",
+                "SMload");
         </script>
 
 
