@@ -1421,7 +1421,8 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster einblenden
-                                let s = 58 + 16 - (100 * 170 / window.innerWidth);
+                                let s = 58 + 16 + (100 * 170 / window.innerWidth);
+                                
                                 document.getElementById(IDMain).style.width = s + "%";
                                 //Control Fenster einblenden
                                 document.getElementById(IDMain + "Ctrl").style.width = "26%";
