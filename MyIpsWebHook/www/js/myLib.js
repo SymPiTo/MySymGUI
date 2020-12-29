@@ -4439,8 +4439,8 @@ class MyChart {
 
 
     create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ds3 = '', ...param) {
-        var b = "70%";
-        var h = "70%";
+        var b = "80%";
+        var h = "80%";
         var top = "250px";
         var left = "10px";
 
