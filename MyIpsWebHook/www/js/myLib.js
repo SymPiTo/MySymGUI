@@ -1394,7 +1394,7 @@ class GlideButton {
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "85px";
                     //Haupt Fenster einblenden
-                    let sSM = 58 + 16 + (100 * 170 / window.outerWidth);
+                    let sSM = 100 - 26 - (100 * 172 / window.innerWidth);
                     document.getElementById(IDMain).style.width = sSM + "%";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26%";
@@ -1411,7 +1411,13 @@ class GlideButton {
                 var x = document.getElementById(IDMain);
                 if (x == null) {
                     function loadContent() {
-                        jQuery.get(IDMain + ".html", function (data) {
+                        if (IDMain !== "") {
+                            var IDMainFull = IDMain;
+                        }
+                        else{
+                            IDMainFull = IDFull;
+                        }
+                        jQuery.get(IDMainFull + ".html", function (data) {
                             jQuery("#Main").html(data);
 
                         }).done(function () {
@@ -1421,7 +1427,7 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster einblenden
-                                let sL = 58 + 16 + (100 * 170 / window.outerWidth);
+                                let sL = 100 - 26 - (100 * 172 / window.innerWidth);
                                 
                                 document.getElementById(IDMain).style.width = sL + "%";
                                 //Control Fenster einblenden
@@ -1446,7 +1452,7 @@ class GlideButton {
                         //SubMenue Leiste verkuerzt einblenden
                         document.getElementById(ParentID).style.width = "8%";
                         //Haupt Fenster einblenden
-                        let sL = 58 + 16 + (100 * 170 / window.outerWidth);
+                        let sL = 100 - 26 - (100 * 172 / window.innerWidth);
                         document.getElementById(IDMain).style.width = sL + "%";
                         //Control Fenster einblenden
                         document.getElementById(IDMain + "Ctrl").style.width = "26%";
@@ -4430,18 +4436,44 @@ class MyChart {
         this.C = "";
     }
 
-    create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ds3 = '') {
+
+
+    create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ds3 = '', ...param) {
+        var b = "70%";
+        var h = "35%";
+        var top = "250px";
+        var left = "10px";
+
+        if (param[0]) {
+            b = param[0];
+        }
+        if (param[1]) {
+            h = param[1];
+        }
+        if (param[2]) {
+            top = param[2];
+        }
+        if (param[3]) {
+            left = param[3];
+        }
+
+        var container = document.createElement("div");
+        container.style.width = b;
+        container.style.height = h;
+        container.style.position = "absolute";
+        container.style.top = top;
+        container.style.left = left;
+
         var elem1 = document.createElement("canvas");
         elem1.id = "line-chart";
         elem1.className = "s";
-        elem1.style.width = "800px";
-        elem1.style.height = "450px";
-        elem1.style.position = "absolute";
-        elem1.style.top = "250px";
-        elem1.style.left = "20px";
+
+
         elem1.style.backgroundColor = "black";
         elem1.setAttribute("onclick", "send('IPS_RunScript," + scriptID + "')");
-        document.getElementById(ParentID).appendChild(elem1);
+        container.append(elem1);
+
+        document.getElementById(ParentID).appendChild(container);
 
 
         var myChart = new Chart(elem1, {
