@@ -1234,7 +1234,7 @@ function updateValues() {
     KZTPInnen.update(ipsObj.ips.ID22124);
     KZTPAussen.update(ipsObj.ips.ID12637);
 
-    graphKZ.dataload(ipsObj.ips.DATAT58606, ipsObj.ips.DATA37605, ipsObj.ips.DATA54511);
+    graphKZ.dataload(ipsObj.ips.DATA58606, ipsObj.ips.DATA37605, ipsObj.ips.DATA54511);
   }
 
 
