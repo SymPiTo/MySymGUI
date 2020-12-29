@@ -1373,14 +1373,14 @@ class GlideButton {
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
-                    let s = 28 + (100 * 85 / window.outerWidth);
-                    document.getElementsByClassName(IDMain + "OV")[0].style.left = s + "vw";
+                    let sMM = 28 + (100 * 85 / window.outerWidth);
+                    document.getElementsByClassName(IDMain + "OV")[0].style.left = sMM + "vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";
 
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
-                    let t = 100 - 28 - (100 * 85 / window.outerWidth);
-                    document.getElementsByClassName(IDMain + "OV")[0].style.width = t + "%";
+                    let sMS = 100 - 28 - (100 * 85 / window.outerWidth);
+                    document.getElementsByClassName(IDMain + "OV")[0].style.width = sMS + "%";
                 } else {
                     document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                     document.getElementsByClassName("StartScreen")[0].style.left = "85px";
@@ -1394,8 +1394,8 @@ class GlideButton {
                     //SubMenue Leiste verkuerzt einblenden
                     document.getElementById(ParentID).style.width = "85px";
                     //Haupt Fenster einblenden
-                    let s = 58 + 16 - (100 * 170 / window.outerWidth);
-                    document.getElementById(IDMain).style.width = s + "%";
+                    let sSM = 58 + 16 + (100 * 170 / window.outerWidth);
+                    document.getElementById(IDMain).style.width = sSM + "%";
                     //Control Fenster einblenden
                     document.getElementById(IDMain + "Ctrl").style.width = "26%";
                 } else {
@@ -1421,9 +1421,9 @@ class GlideButton {
                                 //SubMenue Leiste verkuerzt einblenden
                                 document.getElementById(ParentID).style.width = "85px";
                                 //Haupt Fenster einblenden
-                                let s = 58 + 16 + (100 * 170 / window.outerWidth);
+                                let sL = 58 + 16 + (100 * 170 / window.outerWidth);
                                 
-                                document.getElementById(IDMain).style.width = s + "%";
+                                document.getElementById(IDMain).style.width = sL + "%";
                                 //Control Fenster einblenden
                                 document.getElementById(IDMain + "Ctrl").style.width = "26%";
                             } else {
@@ -1439,13 +1439,15 @@ class GlideButton {
                     }
                     loadContent();
                 } else {
+                    //Fenster ist schon geladen
                     if (IDMain !== "") {
                         //script für Ctrl Window nachaden
                         document.getElementsByClassName("StartScreen")[0].style.width = "0px";
                         //SubMenue Leiste verkuerzt einblenden
                         document.getElementById(ParentID).style.width = "8%";
                         //Haupt Fenster einblenden
-                        document.getElementById(IDMain).style.width = "58%";
+                        let sL = 58 + 16 + (100 * 170 / window.outerWidth);
+                        document.getElementById(IDMain).style.width = sL + "%";
                         //Control Fenster einblenden
                         document.getElementById(IDMain + "Ctrl").style.width = "26%";
                     } else {
