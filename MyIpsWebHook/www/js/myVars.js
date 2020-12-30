@@ -1259,11 +1259,13 @@ function updateValues() {
 
   /* ------------------------------- Kinderzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGKZ")) {
-    graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA49335);
+   // graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA49335);
+   graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA37431);
+   var x = 0;
   }
 
 
-  
+
   /* ------------------------------- Kinderzimmer Fenster------------------------------ */
   if (document.getElementById("MainFKZ")) {
     KZTemp.update(ipsObj.ips.ID48220);
