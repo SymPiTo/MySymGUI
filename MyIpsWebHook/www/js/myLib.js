@@ -1366,14 +1366,14 @@ class GlideButton {
                 var a = element.className;
                 document.getElementsByClassName(a)[0].style.width = "0px";
             });
-
+            // Click auf Main Menu Item
             if (MenuType === "MM") {
-                //benötigte Fenster einblenden für Main Menu
+                //benötigte Fenster einblenden für Main Menu öffnet Wohnraun Picture
                 document.getElementById(ParentID).style.width = "85px";
                 if (IDMain !== "") {
                     //document.getElementsByClassName("StartScreen")[0].style.left = "36vw";
                     //Overview Bild einblenden
-                    let sMM = 28 + (100 * 85 / window.outerWidth);
+                    let sMM = 28 + (100 * 86 / window.innerWidth);
                     document.getElementsByClassName(IDMain + "OV")[0].style.left = sMM + "vw";
                     document.getElementsByClassName(IDMain)[0].style.width = "28%";
                     //document.getElementsByClassName("StartScreen")[0].style.width = "64vw";

@@ -988,9 +988,9 @@ function Heizung() {
 
   //<!-- Temperatur Werte Glide Button  -->
   LeftMenuK.update(ipsObj.sym[3], "°C", "", "", "", "", "", "");
-  LeftMenuWZ.update(ipsObj.sym[3], "°C", "", "", "", "", "", "");
-  LeftMenuSZ.update(ipsObj.sym[3], "°C", "", "", "", "", "", "");
-  LeftMenuKZ.update(ipsObj.sym[3], "°C", "", "", "", "", "", "");
+  LeftMenuWZ.update(ipsObj.sym[2], "°C", "", "", "", "", "", "");
+  LeftMenuSZ.update(ipsObj.sym[0], "°C", "", "", "", "", "", "");
+  LeftMenuKZ.update(ipsObj.sym[1], "°C", "", "", "", "", "", "");
 
   //<!-- ************************ Heizung Wohnzimmer ************************  -->
   MainTempHzWZ.update(ipsObj.sym[2], 1);
