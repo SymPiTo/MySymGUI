@@ -1259,8 +1259,8 @@ function updateValues() {
 
   /* ------------------------------- Kinderzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGKZ")) {
-   // graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA49335);
-   graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA37431);
+   
+   graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA49335);
    var x = 0;
   }
 
