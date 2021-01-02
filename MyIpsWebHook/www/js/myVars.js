@@ -472,8 +472,8 @@ class ipsbuffer {
       this.sym[1] = this.ips.ID37045; //Temperatur KZ
       this.sym[2] = this.ips.ID41984; //Temperatur WZ
       this.sym[3] = this.ips.ID54070; //Temperatur K
-      this.sym[4] = this.ips.ID20539; //Position HZ WZ
-      this.sym[5] = this.ips.ID49335; //Position HZ KZ
+      this.sym[4] = this.ips.ID20539 * 100; //Position HZ WZ
+      this.sym[5] = this.ips.ID49335 * 100; //Position HZ KZ
       this.sym[6] = this.ips.ID37431 * 100; //Position HZ SZ (HM)
       this.sym[7] = this.ips.ID51619; //Position HZ K   
       this.sym[8] = this.ips.ID36168; // Diele Präsenzmelder
