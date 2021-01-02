@@ -4558,7 +4558,7 @@ class MyChart {
                                 // Include a dollar sign in the ticks
                                 fontColor: 'yellow',
                                 callback: function (value, index, values) {
-                                    return (value * 100) + unit2;
+                                    return value + unit2;
                                 }
                             }
                         }
