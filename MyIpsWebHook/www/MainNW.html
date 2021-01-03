@@ -31,10 +31,10 @@
 
      var FBextAdr = new StateDisplay();
      FBextAdr.create("MainNW", "cyanLight", "", "130px", "219px", "50px", "170px", "20px",
-         "External Address", "String", "", "", "", "");
+         "External Address", "string", "", "", "", "");
      var FBDNS = new StateDisplay();
      FBDNS.create("MainNW", "cyanLight", "", "190px", "219px", "50px", "170px", "14px",
-         "Static Adress", "String", "", "", "", "");
+         "Static Adress", "string", "", "", "", "");
 
      var labelMyPC = new label();
      labelMyPC.create("MainNW", "10%", "65%", "18px", "white", "My WorkStation");
@@ -73,7 +73,7 @@
          eval("IPdis" + i + "= new StateDisplay()");
          let z = parseInt("70px", 10) + parseInt("50px", 10) * i + "px";
          eval("IPdis" + i + '.create("MainNWCtrl","midgreenLight", "", "' + z +
-             '", "70px", "50px", "150px", "18px", "IP Adress", "String", "", "", "", "")');
+             '", "70px", "50px", "150px", "18px", "IP Adress", "string", "", "", "", "")');
 
      }
  </script>

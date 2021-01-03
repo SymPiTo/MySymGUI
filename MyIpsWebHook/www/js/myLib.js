@@ -720,6 +720,7 @@ class StateDisplay {
         this.ID2 = "";
         this.unit = "";
         this.textColor = "black";
+        this.type = "bool";
         this.state0 = "";
         this.state1 = "";
         this.state2 = "";
@@ -740,13 +741,14 @@ class StateDisplay {
         this._textColor = textColor;
     }
 
-    create(ParentID, color, einheit, posTop, posLeft, hoehe, breite, SchriftGr, titel, zus0, zus1, zus2, zus3, command, ...param) {
+    create(ParentID, color, einheit, posTop, posLeft, hoehe, breite, SchriftGr, titel, typ, zus0, zus1, zus2, zus3, command, ...param) {
         this.unit = einheit,
             this.title = titel;
         this.bgColor = color;
         if (color === "") {
             this.bgColor = "black";
         }
+        this.type = typ;
         this.state0 = zus0;
         this.state1 = zus1;
         this.state2 = zus2;
@@ -797,12 +799,28 @@ class StateDisplay {
         try {
             this.ID2.innerHTML = title;
             this.ID.style.color = this.textColor;
-            if (this.state0 === "Number") {
+            if (this.type === "number") {
                 var wert = value.toFixed(n);
                 this.ID.innerHTML = (wert.toString() + this.unit);
-            } else if (this.state0 === "String") {
+            } else if (this.type === "string") {
                 this.ID.innerHTML = (value.toString() + this.unit);
-            } else {
+            } else if (this.type === "bool") {
+                switch (value) {
+                    case 0:
+                        this.ID.innerHTML = this.state0;
+                        break;
+                    case 1:
+                        this.ID.innerHTML = this.state1;
+                        break;
+                    case false:
+                        this.ID.innerHTML = this.state0;
+                        break;
+                    case true:
+                        this.ID.innerHTML = this.state1;
+                    break;
+                }
+            }
+            else {
                 switch (value) {
                     case 0:
                         this.ID.innerHTML = this.state0;
@@ -815,12 +833,6 @@ class StateDisplay {
                         break;
                     case 3:
                         this.ID.innerHTML = this.state3;
-                        break;
-                    case false:
-                        this.ID.innerHTML = this.state0;
-                        break;
-                    case true:
-                        this.ID.innerHTML = this.state1;
                         break;
                 }
             }

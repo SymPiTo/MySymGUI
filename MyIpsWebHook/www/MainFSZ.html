@@ -16,12 +16,12 @@
     var SZDisHumid = new StateDisplay();
     SZDisHumid.create("MainFSZ", "sandyLight", "%rel", "150px", "300px", "60px", "202px", "20px",
         "rel. Feuchte",
-        "Number");
+        "number");
 
     var SZTemp = new StateDisplay();
     SZTemp.create("MainFSZ", "sandyLight", "°C", "50px", "300px", "60px", "202px", "20px",
         "Temperatur",
-        "String");
+        "string");
 
     var graphSZ = new MyChart();
     var ds0 = new Array();
@@ -55,35 +55,35 @@
     var SZWarn = new StateDisplay();
     SZWarn.create("MainFSZCtrl", "sandyLight", "", "20px", "20px", "60px", "202px", "20px",
         "Warnung",
-        "String");
+        "string");
     var SZDisKlima = new StateDisplay();
     SZDisKlima.create("MainFSZCtrl", "sandyLight", "", "90px", "20px", "60px", "202px", "20px",
         "Klima Innen",
-        "String");
+        "string");
     var SZDisHstate = new StateDisplay();
     SZDisHstate.create("MainFSZCtrl", "sandyLight", "", "160px", "20px", "60px", "202px", "20px",
-        "Hinweis",
+        "Hinweis", "bool",
         "nicht lüften", "lüften erlaubt");
     var SZDisHstateDiff = new StateDisplay();
     SZDisHstateDiff.create("MainFSZCtrl", "sandyLight", "%", "230px", "20px", "60px", "202px", "20px",
         "Diff-Feuchte",
-        "Number");
+        "number");
 
     var SZFeuchteInnen = new StateDisplay();
     SZFeuchteInnen.create("MainFSZCtrl", "sandyLight", "mg/m³", "300px", "20px", "60px", "202px", "20px",
         "Wassergehalt Innen",
-        "Number");
+        "number");
     var SZFeuchteAussen = new StateDisplay();
     SZFeuchteAussen.create("MainFSZCtrl", "sandyLight", "mg/m³", "370px", "20px", "60px", "202px", "20px",
         "Wassergehalt Aussen",
-        "Number");
+        "number");
 
     var SZTPInnen = new StateDisplay();
     SZTPInnen.create("MainFSZCtrl", "sandyLight", "°C", "440px", "20px", "60px", "202px", "20px",
         "Taupunkt Innen",
-        "Number");
+        "number");
     var SZTPAussen = new StateDisplay();
     SZTPAussen.create("MainFSZCtrl", "sandyLight", "°C", "510px", "20px", "60px", "202px", "20px",
         "Taupunkt Aussen",
-        "Number");
+        "number");
 </script>
