@@ -4574,8 +4574,6 @@ class MyChart {
         if (ds1) {
             this.C.data.datasets[0].data = JSON.parse(ds1);
         }
-
-
         if (ds2) {
             this.C.data.datasets[1].data = JSON.parse(ds2);
         }
