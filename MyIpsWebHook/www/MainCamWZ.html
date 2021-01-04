@@ -1,0 +1,41 @@
+<!-- *************************************************************************************   -->
+<!--  ************************         Main - Cam Wohnzimmer      ************************   -->
+<!-- *************************************************************************************   -->
+<!-- ************************ Cam Wohnzimmer ************************ -->
+<!-- <Main id="MainCamWZ"  class="CamWZ"></Main> -->
+
+<script>
+    var windowCamWZ = new Area();
+    windowCamWZ.createMain("MainCamWZ", "bgRed");
+</script>
+<script>
+    //url: 'http://192.xxx.x.xx:2323/?cmd=getCamshot&password=xxx', encoding: 'binary'
+    var elem = document.createElement("img");
+    this.ID = elem;
+    elem.className = "icon";
+
+    elem.src = "http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra', encoding: 'binary'";
+    elem.style.position = "absolute";
+    elem.style.left = "50px";
+    elem.style.top = "50px";
+    elem.style.width = "200px";
+    elem.style.height = "200px";
+    elem.style.backgroundColor = "white";
+
+
+
+    document.getElementById("MainCamWZ").appendChild(elem);
+</script>
+
+
+<!-- *************************************************************************************   -->
+<!--  ************************         Ctrl - Fenster Bad         ************************   -->
+<!-- *************************************************************************************   -->
+<!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+<script>
+    var CtrlwindowCamWZ = new Area();
+    CtrlwindowCamWZ.createCtrl("MainCamWZCtrl", "bgRed");
+</script>
+<script>
+
+</script>
