@@ -14,6 +14,7 @@
 function SetValue(variableID,value)
 {
 		 var url = "http://192.168.178.28:3777/hook/myGUIhook/";
+		//var url = "http://192.168.178.28:3777/hook/myipshook/";
 	 
 	jQuery.post( url, {"method" : "SetValue", "variableID" : variableID, "value" : value},function( data ) { console.log(data); });
 }
