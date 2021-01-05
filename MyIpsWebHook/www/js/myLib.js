@@ -3181,7 +3181,18 @@ class ShowUrlImage {
     }
 
     update(SourceUrl) {
-        this.ID.src = SourceUrl;
+            // create a new timestamp 
+        var timestamp = new Date().getTime();  
+  
+           
+  
+        var queryString = "?t=" + timestamp;    
+   
+      
+        
+        
+        this.ID.src = SourceUrl+ queryString;  
+
     }
 }
 

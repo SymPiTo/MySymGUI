@@ -1089,6 +1089,11 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
+  /* ------------------------------- Cam ----------------------------- */
+  if (document.getElementById("MainCamWZ")) {
+    camImage.update("http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra");
+  }
+
   /* ------------------------------- Netzwerk ----------------------------- */
   if (document.getElementById("MainNW")) {
     var FBhosts = JSON.parse(ipsObj.ips.ID11403);
