@@ -10,21 +10,16 @@
 </script>
 <script>
     //url: 'http://192.xxx.x.xx:2323/?cmd=getCamshot&password=xxx', encoding: 'binary'
-    var elem = document.createElement("img");
-    this.ID = elem;
-    elem.className = "icon";
 
-    elem.src = "http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra', encoding: 'binary'";
-    elem.style.position = "absolute";
-    elem.style.left = "50px";
-    elem.style.top = "50px";
-    elem.style.width = "200px";
-    elem.style.height = "200px";
-    elem.style.backgroundColor = "white";
+    let SourceUrl = "http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra";
+    //let SourceUrl =
+    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.butenunbinnen.de%2Fbilder%2Ftestbild-radio-bremen-fernsehen-108~_v-512x288_c-1594546688278.jpg&imgrefurl=https%3A%2F%2Fwww.butenunbinnen.de%2Fnachrichten%2Fwissen%2Ftestbild-fernsehen-tv-jahrestag-102.html&tbnid=LUQ-d0Keh7DXHM&vet=12ahUKEwjn_oTJ0YTuAhUP7qQKHd10BhcQMygBegUIARCzAQ..i&docid=N8695_abT04y_M&w=512&h=288&q=testbild&ved=2ahUKEwjn_oTJ0YTuAhUP7qQKHd10BhcQMygBegUIARCzAQ";
 
 
 
-    document.getElementById("MainCamWZ").appendChild(elem);
+
+    var camImage = new ShowUrlImage();
+    camImage.create("MainCamWZ", "20px", "20px", "500px", "500px", SourceUrl);
 </script>
 
 
