@@ -9,11 +9,8 @@
     windowCamWZ.createMain("MainCamWZ", "bgRed");
 </script>
 <script>
-    //url: 'http://192.xxx.x.xx:2323/?cmd=getCamshot&password=xxx', encoding: 'binary'
-
-    let SourceUrl = "http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra', encoding: 'binary'";
-    let camImage = new ShowUrlImage();
-    camImage.create("MainCamWZ", "20px", "20px", "500px", "500px", SourceUrl);
+    let camImage = new ShowCamImage();
+    camImage.create("MainCamWZ", "20px", "20px", "1000px", "800px");
 </script>
 
 

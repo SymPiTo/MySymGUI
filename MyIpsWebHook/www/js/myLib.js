@@ -3181,20 +3181,44 @@ class ShowUrlImage {
     }
 
     update(SourceUrl) {
-            // create a new timestamp 
-        var timestamp = new Date().getTime();  
-  
-           
-  
-        var queryString = "?t=" + timestamp;    
-   
-      
-        
-        
-        this.ID.src = SourceUrl+ queryString;  
+ 
 
     }
 }
+
+
+/* --------------------- Klasse ShowCamImage ---------------------------------------- */
+class ShowCamImage {
+    constructor() {
+        this.ID = "";
+    }
+
+    create(ParentID, posTop, posLeft, sizeH, sizeW) {
+        var img = document.createElement("img");
+        img.src = "";
+        img.style.width = sizeW;
+        img.style.height = sizeH;
+        img.style.position = "absolute";
+        img.style.top = posTop;
+        img.style.left = posLeft;
+        this.ID = img;
+        document.getElementById(ParentID).appendChild(img);
+  
+
+         
+         
+    }
+
+    update(image) {
+         // create a new timestamp 
+       // var timestamp = new Date().getTime();  
+        //var queryString = "?t=" + timestamp;    
+       //this.ID.src =  SourceUrl + queryString;  
+       this.ID.src = image;
+    }
+}
+
+
 
 /* --------------------- Klasse ArrayListBox ---------------------------------------- */
 class ArrayListBox {

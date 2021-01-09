@@ -38,11 +38,11 @@ class ipsbuffer {
 
   init() {
     this.ips.ID15922 = ""; //Temperatur SZ (HM)
-    this.ips.ID37045 = ""; //Temperatur KZ
+    this.ips.ID50730 = ""; //Temperatur KZ
     this.ips.ID41984 = ""; //Temperatur WZ
     this.ips.ID54070 = ""; //Temperatur K
     this.ips.ID20539 = ""; //Position HZ WZ
-    this.ips.ID49335 = ""; //Position HZ KZ
+    this.ips.ID48718 = ""; //Position HZ KZ
     this.ips.ID37431 = ""; //Position HZ SZ (HM)
     this.ips.ID51619 = ""; //Position HZ K   
     this.ips.ID36168 = ""; // Diele Präsenzmelder
@@ -69,12 +69,12 @@ class ipsbuffer {
     this.ips.ID41314 = ""; //Soll Temp Hz WZ 
     this.ips.ID21198 = ""; //Soll Temp Ausstehend Hz WZ
     this.ips.ID10060 = ""; //Bat Hz WZ Aktor
-    this.ips.ID52085 = ""; //Bat Hz KZ
+    this.ips.ID15817 = ""; //Bat Hz KZ
     this.ips.ID42343 = ""; //Bat Hz Aktor SZ
     this.ips.ID22083 = ""; //Bat Hz K
-    this.ips.ID34102 = ""; //Soll Modus Hz KZ
-    this.ips.ID36377 = ""; //Soll Temp Hz KZ 
-    this.ips.ID38441 = ""; //Soll Temp Ausstehend Hz KZ
+    this.ips.ID34300 = ""; //Soll Modus Hz KZ
+    this.ips.ID25152 = ""; //Soll Temp Hz KZ 
+    this.ips.ID30444 = ""; //Soll Temp Ausstehend Hz KZ
     this.ips.ID47734 = ""; //Soll Modus Hz SZ (HM)
     this.ips.ID36544 = ""; //Soll Temp Hz SZ  (HM)
     this.ips.ID55889 = ""; //Soll Temp Ausstehend Hz SZ (HM)
@@ -452,9 +452,9 @@ class ipsbuffer {
     this.ips.DATA55889 = ""; //Temp Soll SZ
     this.ips.DATA37431 = ""; //Hz Stellung SZ
 
-    this.ips.DATA37045 = ""; //Temp Ist KZ
-    this.ips.DATA36377 = ""; //Temp Soll KZ
-    this.ips.DATA49335 = ""; //Hz Stellung KZ
+    this.ips.DATA50730 = ""; //Temp Ist KZ
+    this.ips.DATA25152 = ""; //Temp Soll KZ
+    this.ips.DATA48718 = ""; //Hz Stellung KZ
 
   }
 
@@ -469,11 +469,11 @@ class ipsbuffer {
   check() {
     try {
       this.sym[0] = this.ips.ID15922; //Temperatur SZ (HM)
-      this.sym[1] = this.ips.ID37045; //Temperatur KZ
+      this.sym[1] = this.ips.ID50730; //Temperatur KZ
       this.sym[2] = this.ips.ID41984; //Temperatur WZ
       this.sym[3] = this.ips.ID54070; //Temperatur K
       this.sym[4] = this.ips.ID20539 * 100; //Position HZ WZ
-      this.sym[5] = this.ips.ID49335; //Position HZ KZ
+      this.sym[5] = this.ips.ID48718 * 100; //Position HZ KZ
       this.sym[6] = this.ips.ID37431 * 100; //Position HZ SZ (HM)
       this.sym[7] = this.ips.ID51619; //Position HZ K   
       this.sym[8] = this.ips.ID36168; // Diele Präsenzmelder
@@ -500,12 +500,12 @@ class ipsbuffer {
       this.sym[27] = this.ips.ID41314; //Soll Temp Hz WZ 
       this.sym[28] = this.ips.ID21198; //Soll Temp Ausstehend Hz WZ_
       this.sym[29] = this.ips.ID55199; //Bat Hz WZ
-      this.sym[30] = this.ips.ID52085; //Bat Hz KZ
+      this.sym[30] = this.ips.ID15817; //Bat Hz KZ
       this.sym[31] = this.ips.ID42343; //Bat Hz Aktor SZ
       this.sym[32] = this.ips.ID22083; //Bat Hz K
-      this.sym[33] = this.ips.ID34102; //Soll Modus Hz KZ
-      this.sym[34] = this.ips.ID36377; //Soll Temp Hz KZ 
-      this.sym[35] = this.ips.ID38441; //Soll Temp Ausstehend Hz KZ
+      this.sym[33] = this.ips.ID47036; //Soll Modus Hz KZ
+      this.sym[34] = this.ips.ID25152; //Soll Temp Hz KZ 
+      this.sym[35] = this.ips.ID25152; //Soll Temp Ausstehend Hz KZ
       this.sym[36] = this.ips.ID47734; //Soll Modus Hz SZ (HM)
       this.sym[37] = this.ips.ID36544; //Soll Temp Hz SZ  (HM)
       this.sym[38] = this.ips.ID55889; //Soll Temp Ausstehend Hz SZ (HM)
@@ -877,9 +877,9 @@ class ipsbuffer {
       this.sym[333] = this.ips.DATA55889; //Temp Soll SZ
       this.sym[334] = this.ips.DATA37431; //Hz Stellung SZ
 
-      this.sym[335] = this.ips.DATA37045; //Temp Ist KZ
-      this.sym[336] = this.ips.DATA36377; //Temp Soll KZ
-      this.sym[337] = this.ips.DATA49335; //Hz Stellung KZ  
+      this.sym[335] = this.ips.DATA50730; //Temp Ist KZ
+      this.sym[336] = this.ips.DATA25152; //Temp Soll KZ
+      this.sym[337] = this.ips.DATA48718; //Hz Stellung KZ  
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -1091,7 +1091,7 @@ function updateIPSValue(ipsID, IPSValue) {
 function updateValues() {
   /* ------------------------------- Cam ----------------------------- */
   if (document.getElementById("MainCamWZ")) {
-    camImage.update("http://192.168.178.6:2323/?cmd=getCamshot&password=sumatra");
+    camImage.update(ipsObj.ips.ID26104);
   }
 
   /* ------------------------------- Netzwerk ----------------------------- */
@@ -1265,7 +1265,7 @@ function updateValues() {
   /* ------------------------------- Kinderzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGKZ")) {
    
-   graphTKZ.dataload(this.ipsObj.ips.DATA37045, this.ipsObj.ips.DATA36377, this.ipsObj.ips.DATA49335);
+   graphTKZ.dataload(this.ipsObj.ips.DATA50730, this.ipsObj.ips.DATA25152, this.ipsObj.ips.DATA48718);
    var x = 0;
   }
 
