@@ -630,10 +630,10 @@ class ipsbuffer {
       this.sym[134] = this.ips.ID14390; //UPNP Client Icon   
       this.sym[135] = this.ips.ID31981; //UPNP Server key
 
-      this.sym[136] = this.ips.ID16161; //CPU Frequemcy
-      this.sym[137] = this.ips.ID12220; //CPU load 15min
-      this.sym[138] = this.ips.ID41245; //CPU Temperature
-      this.sym[139] = this.ips.ID54826; //CPU Voltage
+      this.sym[136] = this.ips.ID12369; //CPU Frequemcy
+      this.sym[137] = this.ips.ID17974; //CPU load 15min
+      this.sym[138] = this.ips.ID37859; //CPU Temperature
+      this.sym[139] = this.ips.ID35144; //CPU Voltage
       this.sym[140] = this.ips.ID19292; //IP
       this.sym[141] = this.ips.ID59797; //IPS Kernel STatus
       this.sym[142] = this.ips.ID41816; //IPS Version
