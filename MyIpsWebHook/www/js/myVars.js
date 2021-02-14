@@ -468,7 +468,7 @@ class ipsbuffer {
 
   check() {
     try {
-      this.sym[0] = this.ips.ID15922; //Temperatur SZ (HM)
+      this.sym[0] = this.ips.ID29022; //Temperatur SZ (HM)
       this.sym[1] = this.ips.ID50730; //Temperatur KZ
       this.sym[2] = this.ips.ID41984; //Temperatur WZ
       this.sym[3] = this.ips.ID54070; //Temperatur K
