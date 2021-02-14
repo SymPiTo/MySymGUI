@@ -508,7 +508,7 @@ class ipsbuffer {
       this.sym[35] = this.ips.ID25152; //Soll Temp Ausstehend Hz KZ
       this.sym[36] = this.ips.ID47124; //Soll Modus Hz SZ (HM)
       this.sym[37] = this.ips.ID36544; //Soll Temp Hz SZ  (HM)
-      this.sym[38] = this.ips.ID55889; //Soll Temp Ausstehend Hz SZ (HM)
+      this.sym[38] = this.ips.ID20217; //Soll Temp Ausstehend Hz SZ (HM)
       this.sym[39] = this.ips.ID26565; //Temp Vor Hz SZ
       this.sym[40] = this.ips.ID32007; //Temp Rueck Hz SZ  
       this.sym[41] = this.ips.ID39562; //Soll Modus Hz K
@@ -808,8 +808,8 @@ class ipsbuffer {
       this.sym[278] = this.ips.ID14487; // Bad Luftfeuchtigkeit
       this.sym[279] = this.ips.ID59969; // Bad Temperatur
 
-      this.sym[280] = this.ips.ID19285; // WZ Luftfeuchtigkeit Regler
-      this.sym[281] = this.ips.ID29022; // WZ Temperatur Regler    
+      this.sym[280] = this.ips.ID19285; // SZ Luftfeuchtigkeit Regler
+      this.sym[281] = this.ips.ID29022; // SZ Temperatur Regler    
 
       this.sym[282] = this.ips.ID38476; // DUMMY
 
