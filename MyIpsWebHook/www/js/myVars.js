@@ -37,7 +37,7 @@ class ipsbuffer {
 
 
   init() {
-    this.ips.ID15922 = ""; //Temperatur SZ (HM)
+    this.ips.ID29022 = ""; //Temperatur SZ (HM)
     this.ips.ID50730 = ""; //Temperatur KZ
     this.ips.ID41984 = ""; //Temperatur WZ
     this.ips.ID54070 = ""; //Temperatur K
@@ -75,9 +75,9 @@ class ipsbuffer {
     this.ips.ID34300 = ""; //Soll Modus Hz KZ
     this.ips.ID25152 = ""; //Soll Temp Hz KZ 
     this.ips.ID30444 = ""; //Soll Temp Ausstehend Hz KZ
-    this.ips.ID47734 = ""; //Soll Modus Hz SZ (HM)
+    this.ips.ID18975 = ""; //Soll Modus Hz SZ (HM)
     this.ips.ID36544 = ""; //Soll Temp Hz SZ  (HM)
-    this.ips.ID55889 = ""; //Soll Temp Ausstehend Hz SZ (HM)
+    this.ips.ID20217 = ""; //Soll Temp Ausstehend Hz SZ (HM)
     this.ips.ID26565 = ""; //Temp Vor Hz SZ
     this.ips.ID32007 = ""; //Temp Rueck Hz SZ  
     this.ips.ID39562 = ""; //Soll Modus Hz K
