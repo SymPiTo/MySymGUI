@@ -506,7 +506,7 @@ class ipsbuffer {
       this.sym[33] = this.ips.ID47036; //Soll Modus Hz KZ
       this.sym[34] = this.ips.ID25152; //Soll Temp Hz KZ 
       this.sym[35] = this.ips.ID25152; //Soll Temp Ausstehend Hz KZ
-      this.sym[36] = this.ips.ID47734; //Soll Modus Hz SZ (HM)
+      this.sym[36] = this.ips.ID47124; //Soll Modus Hz SZ (HM)
       this.sym[37] = this.ips.ID36544; //Soll Temp Hz SZ  (HM)
       this.sym[38] = this.ips.ID55889; //Soll Temp Ausstehend Hz SZ (HM)
       this.sym[39] = this.ips.ID26565; //Temp Vor Hz SZ
