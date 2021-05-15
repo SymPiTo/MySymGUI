@@ -448,8 +448,8 @@ class ipsbuffer {
     this.ips.DATA21198 = ""; //Temp Soll WZ
     this.ips.DATA20539 = ""; //Hz Stellung WZ
 
-    this.ips.DATA15922 = ""; //Temp Ist SZ
-    this.ips.DATA55889 = ""; //Temp Soll SZ
+    this.ips.DATA29022 = ""; //Temp Ist SZ
+    this.ips.DATA20217 = ""; //Temp Soll SZ
     this.ips.DATA37431 = ""; //Hz Stellung SZ
 
     this.ips.DATA50730 = ""; //Temp Ist KZ
@@ -1145,6 +1145,29 @@ function updateValues() {
   } else {
     Meldung.set(false, "");
   }
+
+
+
+
+  /* ------------------------------- Covid ------------------------------- */
+  if (document.getElementById("MainCovidB")) {
+      D_Covidweek.update(ipsObj.ips.ID31063,0);
+      D_Inz.update(ipsObj.ips.ID44672,1);
+      D_R.update(ipsObj.ips.ID59037,1);
+      BW_Covidweek.update(ipsObj.ips.ID23996,0);
+      BW_Inz.update(ipsObj.ips.ID34200,1);
+      BW_Dead.update(ipsObj.ips.ID10702,0);
+      HD_Covidweek.update(ipsObj.ips.ID38045,0);
+      HD_Inz.update(ipsObj.ips.ID30937,1);
+      HD_Dead.update(ipsObj.ips.ID55798,0);
+      MA_Covidweek.update(ipsObj.ips.ID19543,0);
+      MA_Inz.update(ipsObj.ips.ID59569,1);
+      MA_Dead.update(ipsObj.ips.ID54162,0);
+    /* ------------------------------- Covid Graph------------------------------ */
+
+      graphCovid.dataload(this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA38045, this.ipsObj.ips.DATA19543);
+    }
+
 
   /* ------------------------------- Wasser Filter------------------------------- */
   DiIPSFil1.update(ipsObj.ips.ID29770);
