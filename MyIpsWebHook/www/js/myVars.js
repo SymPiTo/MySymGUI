@@ -1165,7 +1165,7 @@ function updateValues() {
       MA_Dead.update(ipsObj.ips.ID54162,0);
     /* ------------------------------- Covid Graph------------------------------ */
 
-      graphCovid.dataload(this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA38045, this.ipsObj.ips.DATA19543);
+      graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
     }
 
 
