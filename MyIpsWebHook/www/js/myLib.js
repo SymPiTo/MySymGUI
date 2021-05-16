@@ -4485,7 +4485,7 @@ class MyChart {
 
 
 
-    create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ds3 = '', ...param) {
+    create(ParentID, scriptID, unit1, unit2 = '', ds0, ds1 = '', ds2 = '', ...param) {
         var b = "600px";
         var h = "300px";
         var top = "250px";

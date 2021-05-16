@@ -1166,6 +1166,7 @@ function updateValues() {
     /* ------------------------------- Covid Graph------------------------------ */
 
       graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
+      graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
     }
 
 

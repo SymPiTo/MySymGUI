@@ -21,7 +21,22 @@
      ds0D['color'] = 'red';
      ds1D['color'] = 'blue';
      ds2D['color'] = 'white';
-     graphCovid.create("MainCovidB", '33023', '', '', ds0D, ds1D, ds2D, '1200px', '600px', '20px', '20px');
+     graphCovid.create("MainCovidB", '33023', '', '', ds0D, ds1D, ds2D, '600px', '200px', '5px', '10px');
+
+     var graphCovid1 = new MyChart();
+     var ds0D = new Array();
+     var ds1D = new Array();
+     var ds2D = new Array();
+     ds0D['label'] = "/100K D";
+     ds1D['label'] = "/7Tage D";
+     ds2D['label'] = "Tote";
+     ds0D['id'] = "B";
+     ds1D['id'] = "B";
+     ds2D['id'] = "B";
+     ds0D['color'] = 'red';
+     ds1D['color'] = 'blue';
+     ds2D['color'] = 'white';
+     graphCovid1.create("MainCovidB", '10026', '', '', ds0D, ds1D, ds2D, '600px', '200px', '320px', '10px');
  </script>
 
  <!-- ----------------------- Ctrl Area: Balkon - Covid ----------------------- -->
