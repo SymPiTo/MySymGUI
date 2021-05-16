@@ -15,13 +15,13 @@
      ds0D['label'] = "Deutschland";
      ds1D['label'] = "Heidelberg";
      ds2D['label'] = "Mannheim";
-     ds0D['id'] = "B";
-     ds1D['id'] = "B";
+     ds0D['id'] = "A";
+     ds1D['id'] = "A";
      ds2D['id'] = "A";
      ds0D['color'] = 'red';
      ds1D['color'] = 'blue';
      ds2D['color'] = 'white';
-     graphCovid.create("MainCovidB", '33023', '%', '°C', ds0D, ds1D, ds2D, '1200px', '600px', '20px', '20px');
+     graphCovid.create("MainCovidB", '33023', '', '', ds0D, ds1D, ds2D, '1200px', '600px', '20px', '20px');
  </script>
 
  <!-- ----------------------- Ctrl Area: Balkon - Covid ----------------------- -->
@@ -71,14 +71,14 @@
 
      var MA_Covidweek = new StateDisplay();
      MA_Covidweek.create("MainCovidBCtrl", "blueLight", "", "640px", "20px", "60px", "202px", "20px",
-         "Fälle pro Woche HD",
+         "Fälle pro Woche MA",
          "number");
      var MA_Inz = new StateDisplay();
      MA_Inz.create("MainCovidBCtrl", "blueLight", "", "710px", "20px", "60px", "202px", "20px",
-         "Inzidenz HD",
+         "Inzidenz MA",
          "number");
      var MA_Dead = new StateDisplay();
      MA_Dead.create("MainCovidBCtrl", "blueLight", "", "780px", "20px", "60px", "202px", "20px",
-         "Tode je Woche HD",
+         "Tode je Woche MA",
          "number");
  </script>
