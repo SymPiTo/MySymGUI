@@ -80,7 +80,7 @@
                     if (this.readyState === 1) {
                         a = 'connected';
                         //Restartversuchszaehler zurücksetzen
-                        versuch = false;
+                        versuch = 0;
 
                     } else if (this.readyState === 2) {
                         a = 'connecting';
@@ -205,14 +205,12 @@
                     errorbox.add('Websocket OnClose: ' + reason);
                     state(' WebSocket: ' + socket.readyState);
                     if (event.code == 1006) {
-                        if (versuch == false) {
-                            //Versuch den Client neu zu starten.
-                            errorbox.add('Websocket OnClose: ' + 'Restart Versuch');
-                            reconnect();
-                            versuch = true;
-                        } else {
 
-                            errorbox.add('Websocket OnClose: ' + ' Restart Versuch gescheitert.');
+                        //Versuch den Client neu zu starten.
+                        errorbox.add('Websocket OnClose: ' + 'Restart Versuch');
+                        versuch = versuch + 1;
+                        if (versuch <= 10) {
+                            reconnect();
                         }
 
 

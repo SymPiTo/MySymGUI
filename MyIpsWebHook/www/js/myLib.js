@@ -4527,8 +4527,6 @@ class MyChart {
             type: 'line',
 
             data: {
-
-
                 datasets: [{
                         label: ds0['label'],
                         yAxisID: ds0['id'],
@@ -4589,7 +4587,7 @@ class MyChart {
                             type: 'linear',
                             position: 'right',
                             ticks: {
-                                // Include a dollar sign in the ticks
+                                // Include a unit sign in the ticks
                                 fontColor: 'yellow',
                                 callback: function (value, index, values) {
                                     return value + unit1;
