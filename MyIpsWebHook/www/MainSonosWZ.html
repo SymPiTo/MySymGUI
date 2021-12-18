@@ -1,0 +1,29 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                       Sonos Wohnzimmer                       -->
+<!-- ----------------------------------------------------------------------- -->
+<script>
+    var MainSonosWZ = new Area();
+    MainSonosWZ.createMain("MainSonosWZ", "bgCyan");
+    //-------------------------------------------------
+
+    var iDisSonosWZ = new MediaDisplay();
+    iDisSonosWZ.create("MainSonosWZ", "0px", "20px", "500px", "220px", "DisplayBlue", "Album", "Künstler", "Titel");
+</script>
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  Ctrl                                   -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!--  <Ctrl id = MainSonosWZCtrl class="SonosWZCtrl"></Ctrl>  -->
+<script>
+    var CtrlMainSonosWZ = new Area();
+    CtrlMainSonosWZ.createCtrl("MainSonosWZCtrl", "bgCyanLight");
+    //---------------------------------------------------------
+    var CtrlSonosWZRadioList = new DynIconList();
+    CtrlSonosWZRadioList.create("MainSonosWZCtrl", "SonosRadio");
+</script>

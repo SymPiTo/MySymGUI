@@ -514,11 +514,14 @@ class MediaDisplay {
         this.CreatorObj = "";
         this.b = "";
         this.h = "";
+        this.sender = ""; 
+ 
+
         //optionale Parameter
     }
 
 
-    create(ParentID, posTop, posLeft, b, h, farbe) {
+    create(ParentID, posTop, posLeft, b, h, farbe, Titel1="Album", Titel2="Artist", Titel3="Titel") {
         this.b = b;
         this.h = h;
         var elem = document.createElement("div");
@@ -551,52 +554,53 @@ class MediaDisplay {
 
         elem.append(elem2);
 
+        var Sender = document.createElement("div");
+        Sender.innerHTML = "- - -:";
+        this.SenderObj = Sender;
+        Sender.style.marginBottom = "15px";
+        Sender.style.fontSize = "1.4rem";
+        Sender.style.color = "lime";
+
         var Album = document.createElement("div");
-        Album.innerHTML = "- - -:";
-        this.AlbumObj = Album;
-        Album.style.marginBottom = "15px";
-        Album.style.fontSize = "1.4rem";
-        Album.style.color = "lime";
+        Album.innerHTML = Titel1;
+        var AlbumA = document.createElement("div");
+        this.AlbumObj = AlbumA;
+        AlbumA.innerHTML = "- - -";
+        AlbumA.style.marginBottom = "15px";
+        AlbumA.style.color = "yellow";
 
         var Artist = document.createElement("div");
-        Artist.innerHTML = "Artist: ";
+        Artist.innerHTML = Titel2;
         var ArtistA = document.createElement("div");
         this.ArtistObj = ArtistA;
         ArtistA.innerHTML = "- - -";
-        ArtistA.style.marginBottom = "15px";
         ArtistA.style.color = "yellow";
 
-        var Creator = document.createElement("div");
-        Creator.innerHTML = "Creator:";
-        var CreatorA = document.createElement("div");
-        this.CreatorObj = CreatorA;
-        CreatorA.innerHTML = "- - -";
-        CreatorA.style.color = "yellow";
-
         var Title = document.createElement("div");
-        Title.innerHTML = "Title:";
+        Title.innerHTML = Titel3;
         var TitleA = document.createElement("div");
         this.TitleObj = TitleA;
         TitleA.innerHTML = "- - -";
         TitleA.style.color = "yellow";
 
 
+        elem2.append(Sender);
         elem2.append(Album);
+        elem2.append(AlbumA);
         elem2.append(Artist);
         elem2.append(ArtistA);
-        elem2.append(Creator);
-        elem2.append(CreatorA);
         elem2.append(Title);
         elem2.append(TitleA);
         document.getElementById(ParentID).appendChild(elem);
     }
 
-    update(sourceurl, Album, Artist, Title, Creator) {
+    update(sourceurl, Sender, Album, Artist, Title) {
         this.imgID.src = sourceurl;
+        this.SenderObj.innerHTML = Sender;
         this.AlbumObj.innerHTML = Album;
         this.ArtistObj.innerHTML = Artist;
         this.TitleObj.innerHTML = Title;
-        this.CreatorObj = Creator;
+        
 
     }
 }
@@ -4263,10 +4267,10 @@ class clock {
 /* --------------------- Klasse IconSelectList ---------------------------------------- */
 class DynIconList {
     constructor() {
-
+       
     }
 
-    create(ParentID, source) {
+    create(ParentID, source, iconsize = "110px") {
 
         // Liste einlesen
         var Liste = new data();
@@ -4316,12 +4320,16 @@ class DynIconList {
                 var SourceList1 = JSON.parse(SourceListJson);
                 SourceList = SourceList1['media'];
                 break;
+            case "SonosRadio":
+                //Daten sind als Array abgelegt
+                var SourceList = Liste.getSonosRadioLib();
+                break;  
             default:
         }
 
         SourceList.forEach(function (item) {
             var elem = document.createElement("img");
-
+/*
             switch (source) {
                 case "TV":
                     var icon = item["icon"];
@@ -4349,9 +4357,14 @@ class DynIconList {
                     break
                 default:
             }
-
+*/
+            var icon = item["icon"];
+            
             elem.className = "iconTV";
+            elem.style.width = iconsize;
+            elem.style.height = iconsize;
             elem.id = source + item["no"];
+
             elem.style.padding = "2px";
             if (source === "TV") {
                 elem.src = "images/Sender/" + icon;
@@ -4368,6 +4381,8 @@ class DynIconList {
             } else if (source === "CeolCD") {
                 elem.src = icon;
             } else if (source === "CeolAudio") {
+                elem.src = icon;
+            } else {
                 elem.src = icon;
             }
             elem.onclick = function () {

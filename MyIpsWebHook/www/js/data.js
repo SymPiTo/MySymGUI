@@ -70,6 +70,61 @@
              return IRadiocahnnels;
          }
 
+         getSonosRadioLib() {
+            var SonosRadioLib = new Array({
+                    No: 0,
+                    FV: "01",
+                    selected: false,
+                    Sender: "SWR3",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s24896q.png"
+                }, {
+                    No: 1,
+                    FV: "02",
+                    selected: false,
+                    Sender: "AC/DC Collection",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s256712.png"
+                }, {
+                    No: 2,
+                    FV: "03",
+                    selected: false,
+                    Sender: "FFN",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s8954q.png"
+                }, {
+                    No: 3,
+                    FV: "04",
+                    selected: false,
+                    Sender: "Bayern 3",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s14991q.png"
+                }, {
+                    No: 4,
+                    FV: "05",
+                    selected: false,
+                    Sender: "hr 3",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s57109q.png"
+                }, {
+                    No: 5,
+                    FV: "06",
+                    selected: false,
+                    Sender: "Radio Regenbogen",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s2485q.png"
+                }, {
+                    No: 6,
+                    FV: "07",
+                    selected: false,
+                    Sender: "SWR1 BW",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s20291q.png"
+                }, {
+                    No: 7,
+                    FV: "08",
+                    selected: false,
+                    Sender: "WDR 5",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s20301q.png"
+                }
+
+            )
+            return SonosRadioLib;
+        }
+
 
 
          getMusicLib() {

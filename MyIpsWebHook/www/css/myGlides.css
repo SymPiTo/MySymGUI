@@ -867,8 +867,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 .iconTV {
     margin-top: 5px;
-    width: 110px;
-    height: 110px;
+
     opacity: 0.7;
 }
 
@@ -878,8 +877,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 .iconTVToggle {
     margin-top: 5px;
-    width: 110px;
-    height: 110px;
+
     border: 3px solid greenyellow;
     opacity: 1;
 }
