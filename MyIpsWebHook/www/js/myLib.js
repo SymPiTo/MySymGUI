@@ -530,6 +530,7 @@ class MediaDisplay {
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
+        elem.style.border = "7px  grey inset";
         elem.style.marginLeft = "5px";
         elem.style.marginRight = "5px";
         elem.style.height = this.h;
@@ -539,8 +540,8 @@ class MediaDisplay {
         var elem1 = document.createElement("img");
         elem1.className = "icon";
         elem1.style.opacity = "0.75";
-        elem1.style.border = "10px  grey inset";
-        elem1.style.height = "100%";
+        
+        elem1.style.height = "95%";
         elem1.style.width = "50%";
         elem1.style.margin = "10px";
         elem1.style.marginRight = "30px";
