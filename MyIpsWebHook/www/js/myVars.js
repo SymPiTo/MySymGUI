@@ -1096,7 +1096,7 @@ function updateValues() {
     var position =  cover.indexOf("https");
     var length = cover.length;
     cover = cover.substring(position,length);
-    iDisSonosWZ.update(cover, ipsObj.ips.ID52213, ipsObj.ips.ID22736, ipsObj.ips.ID22436, ipsObj.ips.ID28487);
+    iDisSonosWZ.update(cover, ipsObj.ips.ID29726, ipsObj.ips.ID22736, ipsObj.ips.ID22436, ipsObj.ips.ID28487);
   }
 
   /* ------------------------------- Cam ----------------------------- */
