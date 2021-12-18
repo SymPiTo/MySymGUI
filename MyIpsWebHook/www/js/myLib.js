@@ -539,7 +539,7 @@ class MediaDisplay {
         var elem1 = document.createElement("img");
         elem1.className = "icon";
         elem1.style.opacity = "0.75";
-        elem1.style.border = "5px  grey inset";
+        elem1.style.border = "10px  grey inset";
         elem1.style.height = "100%";
         elem1.style.width = "50%";
         elem1.style.margin = "10px";
