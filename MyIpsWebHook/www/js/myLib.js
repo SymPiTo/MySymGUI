@@ -540,8 +540,8 @@ class MediaDisplay {
         elem1.className = "icon";
         elem1.style.opacity = "0.75";
         elem1.style.border = "5px  grey inset";
-        elem1.style.height = "150px";
-        elem1.style.width = "150px";
+        elem1.style.height = "100%";
+        elem1.style.width = "50%";
         elem1.style.margin = "10px";
         elem1.style.marginRight = "30px";
         elem1.src = "";
