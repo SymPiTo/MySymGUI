@@ -866,8 +866,9 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 
 .iconTV {
-    margin-top: 5px;
-
+    margin: 3px;
+    background-color: rgb(238, 234, 234);
+    width: 100%;
     opacity: 0.7;
 }
 
