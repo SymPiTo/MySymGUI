@@ -119,6 +119,12 @@
                     selected: false,
                     Sender: "WDR 5",
                     icon: "http://cdn-radiotime-logos.tunein.com/s20301q.png"
+                },{
+                    No: 8,
+                    FV: "09",
+                    selected: false,
+                    Sender: "ANTENNE BAYERN Weihnachts Hits",
+                    icon: "http://cdn-radiotime-logos.tunein.com/s244472q.png"
                 }
 
             )

@@ -4364,7 +4364,7 @@ class DynIconList {
             elem.className = "iconTV";
             elem.style.width = iconsize;
             elem.style.height = iconsize;
-            elem.id = source + item["no"];
+            elem.id = source + item["No"];
 
             elem.style.padding = "2px";
             if (source === "TV") {
@@ -4403,6 +4403,8 @@ class DynIconList {
                     var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
                     var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
+                } else if (source === "SonosRadio") {
+                    var cmd = "command(SonosWZ,Channel," + item['Sender'] + ")";
                 } else if (source === "CD") {
                     var cmd = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Audio") {

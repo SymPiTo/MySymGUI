@@ -878,7 +878,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 .iconTVToggle {
     margin-top: 5px;
-
+    background-color: rgb(238, 234, 234);
     border: 3px solid greenyellow;
     opacity: 1;
 }
