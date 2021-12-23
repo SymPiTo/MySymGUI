@@ -54,7 +54,7 @@
 
         var symvar = [];
 
-
+        var lastTimeStamp = 0;
         var ipsArray = [];
         var symArray = new Array(600).fill("");
         var ipsObj = new ipsbuffer(ipsArray, symArray);
@@ -96,6 +96,32 @@
 
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
+                    var typ = msg.type;
+                    // Update, message, Refresh, Ping, Pong, 
+
+                    var TimeStamp = msg.timeStamp;
+                    var deltaTime = TimeStamp - lastTimeStamp;
+                    lastTimeStamp = TimeStamp;
+                    state(' WS: ' + deltaTime.toFixed(0));
+                    var x = "";
+                    switch (typ) {
+                        case "update":
+                            x = "Update";
+                            break;
+                        case "message":
+                            x = "message;"
+                            break;
+                        case "refresh":
+                            x = "Refresh";
+                            break;
+                        case "ping":
+                            x = "Ping";
+                            break;
+                        case "pong":
+                            x = "Pong";
+                            break;
+
+                    }
 
                     //Server ip and port
                     let quelle = msg.origin;

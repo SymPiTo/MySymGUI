@@ -9,19 +9,37 @@
     var iDisSonosWZ = new MediaDisplay();
     iDisSonosWZ.create("MainSonosWZ", "0px", "20px", "590px", "325px", "DisplayBlue", "Album", "Künstler", "Titel");
 
+    var rahm = new Rahmen();
+    rahm.create("MainSonosWZ", "350px", "24px", "73px", "590px", "DisplayBlue");
+    var SonosWZVol = new TransVarDisplay();
+    SonosWZVol.create("MainSonosWZ", "360px", "0%", "lime", "28px", "Volume", "");
+    var SonosWZTrack = new TransVarDisplay();
+    SonosWZTrack.create("MainSonosWZ", "230px", "25%", "lime", "28px", "Track", "", );
+
+    var SonosWZSource = new TransVarDisplay();
+    SonosWZSource.create("MainSonosWZ", "360px", "55%", "lime", "28px", "Source", "", );
+
+
+
+
+
+
+
+
+
     var FontBtnSonosVolDwnWZ = new FontButtonNew();
-    FontBtnSonosVolDwnWZ.create("MainSonosWZ", "fontbutton", "cyan", "83vh", "40px",
+    FontBtnSonosVolDwnWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "40px",
         "fa fa-volume-down", "60px", "60px", "send('command(SonosWZ,vol,dec)')");
 
     var FontBtnSonosMuteWZ = new FontButtonNew();
-    FontBtnSonosMuteWZ.create("MainSonosWZ", "fontbutton", "cyan", "83vh", "110px",
+    FontBtnSonosMuteWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "110px",
         "fa fa-volume-off", "60px", "60px", "send('command(SonosWZ,mute,toggle)')");
     var FontBtnSonosVolUpWZ = new FontButtonNew();
-    FontBtnSonosVolUpWZ.create("MainSonosWZ", "fontbutton", "cyan", "83vh", "180px",
+    FontBtnSonosVolUpWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "180px",
         "fa fa-volume-up", "60px", "60px", "send('command(SonosWZ,vol,inc)')");
 
     var FontBtnSonosPowerWZ = new FontButtonNew();
-    FontBtnSonosPowerWZ.create("MainSonosWZ", "fontbutton", "cyan", "84vh", "360px",
+    FontBtnSonosPowerWZ.create("MainSonosWZ", "fontbutton", "cyan", "74vh", "360px",
         "fa fa-power-off", "100px", "50px", "send('command(SonosWZ,Key,Stop)')");
 </script>
 

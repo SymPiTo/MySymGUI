@@ -1097,6 +1097,8 @@ function updateValues() {
     var length = cover.length;
     cover = cover.substring(position,length);
     iDisSonosWZ.update(ipsObj.ips.ID30112, ipsObj.ips.ID52806, ipsObj.ips.ID21140, ipsObj.ips.ID39085,ipsObj.ips.ID13777);
+  
+  
   }
 
   /* ------------------------------- Cam ----------------------------- */
