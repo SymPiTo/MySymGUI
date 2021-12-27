@@ -4281,11 +4281,12 @@ class clock {
 /* --------------------- Klasse IconSelectList ---------------------------------------- */
 class DynIconList {
     constructor() {
-       
+        this.room = "WZ";
     }
 
-    create(ParentID, source, iconsize = "110px") {
-
+    create(ParentID, source, iconsize = "110px", ...param) {
+        this.room = param[0];
+       
         // Liste einlesen
         var Liste = new data();
         switch (source) {
@@ -4417,7 +4418,8 @@ class DynIconList {
                 } else if (source === "IRadio") {
                     var cmd1 = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "SonosRadio") {
-                    var cmd1 = "command(SonosWZ,Channel," + item['Sender'] +")";
+
+                    var cmd1 = "command(Sonos" + this.room + ",Channel," + item['Sender'] +")";
                     
                 } else if (source === "CD") {
                     var cmd1 = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";

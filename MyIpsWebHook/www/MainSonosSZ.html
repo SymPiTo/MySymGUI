@@ -1,0 +1,64 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 Sonos Schlafzimmer                      -->
+<!-- ----------------------------------------------------------------------- -->
+<script>
+    var MainSonosSZ = new Area();
+    MainSonosSZ.createMain("MainSonosSZ", "bgCyan");
+    //-------------------------------------------------
+
+    var iDisSonosSZ = new MediaDisplay();
+    iDisSonosSZ.create("MainSonosSZ", "20px", "20px", "590px", "325px", "DisplayBlue", "Album", "Künstler", "Titel");
+
+    var rahm = new Rahmen();
+    rahm.create("MainSonosSZ", "350px", "24px", "73px", "590px", "DisplayBlue");
+
+    var SonosSZVol = new TransVarDisplay();
+    SonosSZVol.create("MainSonosSZ", "360px", "0%", "lime", "28px", "Volume", "");
+
+    var SonosSZTrack = new TransVarDisplay();
+    SonosSZTrack.create("MainSonosSZ", "360px", "25%", "lime", "28px", "Track", "", );
+
+    var SonosSZSource = new TransVarDisplay();
+    SonosSZSource.create("MainSonosSZ", "360px", "55%", "lime", "28px", "Source", "", );
+
+
+
+
+
+
+
+
+
+    var FontBtnSonosVolDwnSZ = new FontButtonNew();
+    FontBtnSonosVolDwnSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "40px",
+        "fa fa-volume-down", "60px", "60px", "send('command(SonosSZ,vol,dec)')");
+
+    var FontBtnSonosMuteSZ = new FontButtonNew();
+    FontBtnSonosMuteSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "110px",
+        "fa fa-volume-off", "60px", "60px", "send('command(SonosSZ,mute,toggle)')");
+    var FontBtnSonosVolUpSZ = new FontButtonNew();
+    FontBtnSonosVolUpSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "180px",
+        "fa fa-volume-up", "60px", "60px", "send('command(SonosSZ,vol,inc)')");
+
+    var FontBtnSonosPowerSZ = new FontButtonNew();
+    FontBtnSonosPowerSZ.create("MainSonosSZ", "fontbutton", "cyan", "74vh", "360px",
+        "fa fa-power-off", "100px", "50px", "send('command(SonosSZ,Key,Stop)')");
+</script>
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  Ctrl                                   -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!--  <Ctrl id = MainSonosSZCtrl class="SonosSZCtrl"></Ctrl>  -->
+<script>
+    var CtrlMainSonosSZ = new Area();
+    CtrlMainSonosSZ.createCtrl("MainSonosSZCtrl", "bgCyanLight");
+    //---------------------------------------------------------
+    var CtrlSonosSZRadioList = new DynIconList();
+    CtrlSonosSZRadioList.create("MainSonosSZCtrl", "SonosRadio", "110px", "SZ");
+</script>
