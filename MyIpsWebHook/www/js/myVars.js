@@ -1093,16 +1093,7 @@ function updateValues() {
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainSonosWZ")) {
     var coverUrl = ipsObj.ips.ID30112;
-    
-    //var position =  cover.indexOf("https");
-    //var length = cover.length;
-    //cover = cover.substring(position,length);
-    //var posEnd = cover.indexOf("?");
-    //cover = cover.substring(0,posEnd);
     coverUrl = coverUrl.replace("__", "");
-    
-    
-    
     iDisSonosWZ.update(coverUrl, ipsObj.ips.ID52806, ipsObj.ips.ID21140, ipsObj.ips.ID39085,ipsObj.ips.ID13777);
     var Power = false;  
     if (ipsObj.ips.ID36394 == ""){
@@ -1119,6 +1110,25 @@ function updateValues() {
       var media = "Radio";
     }
     SonosWZSource.update(media);
+
+    /* ------------------------------- SonosWZ ----------------------------- */
+    var coverSZUrl = ipsObj.ips.ID26811;
+    coverSZUrl = coverUrl.replace("__", "");
+    iDisSonosSZ.update(coverSZUrl, ipsObj.ips.ID44326, ipsObj.ips.ID56244, ipsObj.ips.ID26119,ipsObj.ips.ID30069);
+    var Power = false;  
+    if (ipsObj.ips.ID16949 == ""){
+      Power = false;
+    }
+    else{
+      Power = true;
+    }
+    FontBtnSonosPowerSZ.update(Power);
+    SonosSZVol.update(ipsObj.ips.ID53465);
+    SonosSZTrack.update(ipsObj.ips.ID29800);
+    if(ipsObj.ips.ID53670 > 0){
+      var media = "Radio";
+    }
+    SonosSZSource.update(media);
   }
 
   /* ------------------------------- Cam ----------------------------- */

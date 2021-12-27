@@ -3,7 +3,7 @@
 <!-- ----------------------------------------------------------------------- -->
 <script>
     var MainSonosSZ = new Area();
-    MainSonosSZ.createMain("MainSonosSZ", "bgCyan");
+    MainSonosSZ.createMain("MainSonosSZ", "bgSandy");
     //-------------------------------------------------
 
     var iDisSonosSZ = new MediaDisplay();
@@ -30,18 +30,18 @@
 
 
     var FontBtnSonosVolDwnSZ = new FontButtonNew();
-    FontBtnSonosVolDwnSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "40px",
+    FontBtnSonosVolDwnSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "40px",
         "fa fa-volume-down", "60px", "60px", "send('command(SonosSZ,vol,dec)')");
 
     var FontBtnSonosMuteSZ = new FontButtonNew();
-    FontBtnSonosMuteSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "110px",
+    FontBtnSonosMuteSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "110px",
         "fa fa-volume-off", "60px", "60px", "send('command(SonosSZ,mute,toggle)')");
     var FontBtnSonosVolUpSZ = new FontButtonNew();
-    FontBtnSonosVolUpSZ.create("MainSonosSZ", "fontbutton", "cyan", "73vh", "180px",
+    FontBtnSonosVolUpSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "180px",
         "fa fa-volume-up", "60px", "60px", "send('command(SonosSZ,vol,inc)')");
 
     var FontBtnSonosPowerSZ = new FontButtonNew();
-    FontBtnSonosPowerSZ.create("MainSonosSZ", "fontbutton", "cyan", "74vh", "360px",
+    FontBtnSonosPowerSZ.create("MainSonosSZ", "fontbutton", "sandy", "74vh", "360px",
         "fa fa-power-off", "100px", "50px", "send('command(SonosSZ,Key,Stop)')");
 </script>
 
@@ -57,7 +57,7 @@
 <!--  <Ctrl id = MainSonosSZCtrl class="SonosSZCtrl"></Ctrl>  -->
 <script>
     var CtrlMainSonosSZ = new Area();
-    CtrlMainSonosSZ.createCtrl("MainSonosSZCtrl", "bgCyanLight");
+    CtrlMainSonosSZ.createCtrl("MainSonosSZCtrl", "bgSandyLight");
     //---------------------------------------------------------
     var CtrlSonosSZRadioList = new DynIconList();
     CtrlSonosSZRadioList.create("MainSonosSZCtrl", "SonosRadio", "110px", "SZ");
