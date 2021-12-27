@@ -1029,7 +1029,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .spalteLeft {
     display: flex;
     /* or inline-flex */
-    ;
+
     flex-direction: column;
 
 }
@@ -1046,9 +1046,19 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .reihe {
     display: flex;
     /* or inline-flex */
-    ;
+
     flex-direction: row;
     justify-content: space-between;
+
+}
+
+.reiheStart {
+    display: flex;
+    /* or inline-flex */
+
+    flex-direction: row;
+    justify-content: flex-start;
+
 
 }
 

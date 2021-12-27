@@ -87,7 +87,7 @@
                     No: 2,
                     FV: "03",
                     selected: false,
-                    Sender: "FFN",
+                    Sender: "radio ffn",
                     icon: "http://cdn-radiotime-logos.tunein.com/s8954q.png"
                 }, {
                     No: 3,
@@ -105,13 +105,13 @@
                     No: 5,
                     FV: "06",
                     selected: false,
-                    Sender: "Radio Regenbogen",
+                    Sender: "Radio Regenbogen 102.8 (Top 40/Pop)",
                     icon: "http://cdn-radiotime-logos.tunein.com/s2485q.png"
                 }, {
                     No: 6,
                     FV: "07",
                     selected: false,
-                    Sender: "SWR1 BW",
+                    Sender: "SWR1 Baden-Württemberg",
                     icon: "http://cdn-radiotime-logos.tunein.com/s20291q.png"
                 }, {
                     No: 7,

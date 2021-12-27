@@ -525,7 +525,7 @@ class MediaDisplay {
         this.b = b;
         this.h = h;
         var elem = document.createElement("div");
-        elem.className = "DenonDisplay";
+         
         elem.classList.add(farbe);
         elem.style.position = "absolute";
         elem.style.left = posLeft;
@@ -535,24 +535,37 @@ class MediaDisplay {
         elem.style.marginRight = "5px";
         elem.style.height = this.h;
         elem.style.width = this.b;
+        elem.style.display = "flex";
+        elem.style.flexDirection =  "row";
+        elem.style.flexWrap = "nowrap"; 
+        elem.style.justifyContent = "space-around";
+
         this.ID = elem;
 
-        var elem1 = document.createElement("img");
-        elem1.className = "icon";
-        elem1.style.opacity = "0.75";
+        var elemi = document.createElement("div");
         
-        elem1.style.height = "95%";
-        elem1.style.width = "50%";
-        elem1.style.margin = "10px";
-        elem1.style.marginRight = "30px";
+        elemi.style.width = "40%";
+        elemi.style.height = "95%";
+        elemi.style.display = "flex";
+        elemi.style.flexDirection = "column";
+        elemi.style.justifyContent = "center";
+
+        var elem1 = document.createElement("img");
+       
+        elem1.style.opacity = "1";
+       
         elem1.src = "";
         this.imgID = elem1;
 
-        elem.append(elem1);
+        elemi.append(elem1);
+        elem.append(elemi);
 
         var elem2 = document.createElement("div");
-        elem2.className = "spalteLeft";
-
+        elem2.style.display = "flex"; 
+        elem2.style.flexDirection = "column";
+        elem2.style.justifyContent = "center";
+        elem2.style.height = "95%";
+        elem2.style.width = "50%";
         elem.append(elem2);
 
         var Sender = document.createElement("div");
@@ -4400,25 +4413,27 @@ class DynIconList {
                 elem.classList.remove("iconTV");
                 item['selected'] = true;
                 if (source === "TV") {
-                    var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
+                    var cmd1 = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
-                    var cmd = "command(DenonCeol,Channel," + item['FV'] + ")";
+                    var cmd1 = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "SonosRadio") {
-                    var cmd = "command(SonosWZ,Channel," + item['Sender'] + ")";
+                    var cmd1 = "command(SonosWZ,Channel," + item['Sender'] +")";
+                    
                 } else if (source === "CD") {
-                    var cmd = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Audio") {
-                    var cmd = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Video") {
-                    var cmd = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Foto") {
-                    var cmd = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolCD") {
-                    var cmd = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolAudio") {
-                    var cmd = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
+                    var cmd1 = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
-                send(cmd);
+                send(cmd1);
+
             };
 
             document.getElementById(ParentID).appendChild(elem);

@@ -1092,13 +1092,33 @@ function updateValues() {
 
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainSonosWZ")) {
-    var cover = ipsObj.ips.ID34617;
-    var position =  cover.indexOf("https");
-    var length = cover.length;
-    cover = cover.substring(position,length);
-    iDisSonosWZ.update(ipsObj.ips.ID30112, ipsObj.ips.ID52806, ipsObj.ips.ID21140, ipsObj.ips.ID39085,ipsObj.ips.ID13777);
-  
-  
+    var coverUrl = ipsObj.ips.ID30112;
+    
+    //var position =  cover.indexOf("https");
+    //var length = cover.length;
+    //cover = cover.substring(position,length);
+    //var posEnd = cover.indexOf("?");
+    //cover = cover.substring(0,posEnd);
+    coverUrl = coverUrl.replace("__", "");
+    
+    
+    
+    iDisSonosWZ.update(coverUrl, ipsObj.ips.ID52806, ipsObj.ips.ID21140, ipsObj.ips.ID39085,ipsObj.ips.ID13777);
+    var Power = false;  
+    if (ipsObj.ips.ID36394 == ""){
+      Power = false;
+    }
+    else{
+      Power = true;
+    }
+
+    FontBtnSonosPowerWZ.update(Power);
+    SonosWZVol.update(ipsObj.ips.ID31136);
+    SonosWZTrack.update(ipsObj.ips.ID42119);
+    if(ipsObj.ips.ID52213 > 0){
+      var media = "Radio";
+    }
+    SonosWZSource.update(media);
   }
 
   /* ------------------------------- Cam ----------------------------- */
