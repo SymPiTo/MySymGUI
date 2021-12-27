@@ -1114,7 +1114,7 @@ function updateValues() {
     /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainSonosSZ")) {
     var coverSZUrl = ipsObj.ips.ID26811;
-    coverSZUrl = coverUrl.replace("__", "");
+    
     iDisSonosSZ.update(coverSZUrl, ipsObj.ips.ID44326, ipsObj.ips.ID56244, ipsObj.ips.ID26119,ipsObj.ips.ID30069);
     var Power = false;  
     if (ipsObj.ips.ID16949 == ""){
