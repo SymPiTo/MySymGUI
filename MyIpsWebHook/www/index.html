@@ -636,7 +636,7 @@
 
         <script>
             var SubMenuUPNP = new GlideButton();
-            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SM");
+            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SMLoad");
 
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", tv, "MainTV", "", "SMload");
@@ -3593,114 +3593,6 @@
 
 
 
-
-
-        <!-- ----------------------------------------------------------------------- -->
-        <!--                                  UPNP                                   -->
-        <!-- ----------------------------------------------------------------------- -->
-        <script>
-            var mainwindowUpnp = new Area();
-            mainwindowUpnp.createMain("MainUpnp", "bgPurple");
-        </script>
-
-        <script>
-            var RahmenA = new Kachel();
-            RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
-            var ServerImg = new ShowUrlImage();
-            ServerImg.create("MainUpnp", "50px", "60px", "100px", "100px", "");
-            var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "180px", "35px", "85px", "20px", "purple", "ServerList");
-
-            var RahmenB = new Kachel();
-            RahmenB.create("MainUpnp", "10px", "360px", "180px", "240px", "transparent", "Devices")
-            var ClientImg = new ShowUrlImage();
-            ClientImg.create("MainUpnp", "50px", "400px", "100px", "100px", "");
-            var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "180px", "375px", "85px", "20px", "purple", "ClientList");
-
-
-
-
-            var RahmenC = new Kachel();
-            RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Libraries")
-            var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "330px", "15px", "ctrlbutton", "smaller", "purple", "CD",
-                "SM", "MainUpnpCD", "");
-            var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp", "330px", "125px", "ctrlbutton", "smaller", "purple", "Foto",
-                "SMload", "MainFoto", "");
-
-
-            var CtrlBtnupnp4 = new CtrlButton();
-            CtrlBtnupnp4.create("MainUpnp", "330px", "235px", "ctrlbutton", "smaller", "purple", "Video",
-                "SMload", "MainVideo", "");
-
-            var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "330px", "340px", "ctrlbutton", "smaller", "purple", "Audio",
-                "SM", "MainAudio", "");
-            var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "330px", "450px", "ctrlbutton", "smaller", "purple", "Playlist",
-                "ctrlWindow", "MainAudioBookCtrl", "");
-
-            var DisMeldung = new StateDisplay();
-            DisMeldung.create("MainUpnp", "purpleLight", "", "410px", "30px", "50px", "500px", "18px",
-                "Meldung",
-                "string");
-
-            var btnSyncMusik = new FontCtrlButton();
-            btnSyncMusik.create("MainUpnp", "purple", "480px", "10px", "fa fa-sync", "Sync Musik",
-                "command",
-                "send('command(upnp,sync,Musik)')", "",
-                "130px", "50px", "white", "19px", "yellow");
-            var btnSyncAudio = new FontCtrlButton();
-            btnSyncAudio.create("MainUpnp", "purple", "480px", "150px", "fa fa-sync", "Sync Audio",
-                "command",
-                "send('command(upnp,sync,Audio)')", "",
-                "130px", "50px", "white", "19px", "yellow");
-            var btnSyncFoto = new FontCtrlButton();
-            btnSyncFoto.create("MainUpnp", "purple", "480px", "290px", "fa fa-sync", "Sync Foto",
-                "command",
-                "send('command(upnp,sync,Foto)')", "",
-                "130px", "50px", "white", "19px", "yellow");
-            var btnSyncVideo = new FontCtrlButton();
-            btnSyncVideo.create("MainUpnp", "purple", "480px", "430px", "fa fa-sync", "Sync Video",
-                "command",
-                "send('command(upnp,sync,Video)')", "",
-                "130px", "50px", "white", "19px", "yellow");
-        </script>
-        <!-- ----------------------------------------------------------------------- -->
-        <!--                         Discover   CTRL - UPNP                          -->
-        <!-- ----------------------------------------------------------------------- -->
-
-        <script>
-            var CtrlwindowDiscoverUpnp = new Area();
-            CtrlwindowDiscoverUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
-        </script>
-
-        <script>
-            var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
-            var btnSearchServer = new CtrlButton();
-            btnSearchServer.create("MainUpnpCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Server", "command", "", "send('command(upnp,discover,server)')");
-            var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpCtrl", "100px", "30px", "150px", "190px", "purple", "white",
-                "Deviceliste");
-            var btnSearchClient = new CtrlButton();
-            btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Devices", "command", "", "send('command(upnp,discover,client)')");
-        </script>
-
-        <!-- ***********************************************************************************   -->
-        <!--  ************************      Browse   CTRL - UPNP    ******************************      -->
-        <!-- ***********************************************************************************   -->
-        <script>
-            var CtrlwindowBrowseUpnp = new Area();
-            CtrlwindowBrowseUpnp.createCtrl("MainUpnpBrowseCtrl", "bgPurple");
-        </script>
-        <script>
-
-        </script>
 
 
 
