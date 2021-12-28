@@ -24,25 +24,32 @@
 
 
 
-
-
-
-
-
-    var FontBtnSonosVolDwnWZ = new FontButtonNew();
+    var FontBtnSonosVolDwnWZ = new FontButton();
     FontBtnSonosVolDwnWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "40px",
-        "fa fa-volume-down", "60px", "60px", "send('command(SonosWZ,vol,dec)')");
+        "fa fa-volume-down", "60px", "60px", "", "", 'func(SNS_ChangeVolume,33732,-2)');
 
-    var FontBtnSonosMuteWZ = new FontButtonNew();
+
+
+    var FontBtnSonosMuteWZ = new FontButton();
     FontBtnSonosMuteWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "110px",
-        "fa fa-volume-off", "60px", "60px", "send('command(SonosWZ,mute,toggle)')");
-    var FontBtnSonosVolUpWZ = new FontButtonNew();
-    FontBtnSonosVolUpWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "180px",
-        "fa fa-volume-up", "60px", "60px", "send('command(SonosWZ,vol,inc)')");
+        "fa fa-volume-off", "60px", "60px", "", "", 'func(SNS_SetMute,33732,toggle14879)');
 
-    var FontBtnSonosPowerWZ = new FontButtonNew();
+    var FontBtnSonosVolUpWZ = new FontButton();
+    FontBtnSonosVolUpWZ.create("MainSonosWZ", "fontbutton", "cyan", "73vh", "180px",
+        "fa fa-volume-up", "60px", "60px", "", "", 'func(SNS_ChangeVolume,33732,2)');
+
+
+    var FontBtnSonosPowerWZ = new FontButton();
     FontBtnSonosPowerWZ.create("MainSonosWZ", "fontbutton", "cyan", "74vh", "360px",
-        "fa fa-power-off", "100px", "50px", "send('command(SonosWZ,Key,Stop)')");
+        "fa fa-power-off", "100px", "50px", "", "", 'func(SNS_Stop,33732)');
+
+
+    var Befehl1 = 'func(SNS_SetRADIO,33732,WDR 5)';
+    var Befehl2 = 'func(SNS_Play,33732)';
+
+    var FontBtnTestWZ = new FontButton();
+    FontBtnTestWZ.create("MainSonosWZ", "fontbutton", "cyan", "80vh", "40px",
+        "fa fa-power-off", "450px", "50px", "", "", Befehl1, Befehl2);
 </script>
 
 

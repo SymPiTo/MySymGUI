@@ -4750,6 +4750,80 @@ class Message {
     }
 }
 
+class FontButton {
+    constructor() {
+        this.ID = "";
+        this.ID1 = "";
+        this.b = "";
+        this.h = "";
+
+        // options
+        this.textSize = "28px";
+        this.textColor = "black";
+        this.cmd2 = "";
+        this.cmd3="";
+
+    }
+    create(ParentID, btnClass, color, posTop, posLeft, symbol, b, h, ts="28px", tc="black", cmd1, ...param) {
+        this.h = h;
+        this.b = b;
+        this.textSize = ts;
+        this.textColor = tc;
+
+        if (param.length == 1) {
+            this.cmd2 = param[0]; 
+        }
+        if (param.length == 2) {
+           this.cmd2 = param[0];  
+           this.cmd3 = param[1];
+        } 
+
+
+        var elem = document.createElement("div");
+        elem.className = btnClass;
+        elem.classList.add(color);
+        this.ID = elem;
+        elem.style.position = "absolute";
+        elem.style.left = posLeft;
+        elem.style.top = posTop;
+        elem.style.width = this.b;
+        elem.style.height = this.h;
+        elem.style.display = "flex";
+        elem.style.alignItems = "center";
+        elem.style.justifyContent = "center";
+        elem.setAttribute("onclick",  'send("'+ cmd1 + '§' + this.cmd2 + '§' + this.cmd3 + '")');
+
+        var elem1 = document.createElement("span");
+        elem1.className = symbol;
+        elem1.style.fontSize = this.textSize;
+        elem1.style.color = this.textColor;
+        this.ID1 = elem1;
+
+        elem.append(elem1);
+        document.getElementById(ParentID).appendChild(elem);
+    }
+
+    update(value) {
+        if (value === true) {
+            this.ID1.style.color = "lime";
+        } else {
+            this.ID1.style.color = "white";
+        }
+    }
+
+    off() {
+        this.ID.style.transition = "all 2s ease-in";
+
+        this.ID.style.opacity = "0";
+        this.ID.style.visibility = "hidden";
+    }
+    on() {
+        this.ID.style.transition = "all 2s ease-in";
+
+        this.ID.style.opacity = "1";
+        this.ID.style.visibility = "visible";
+    }
+};
 
 
 /* --------------------- Klasse Video ---------------------------------------- */

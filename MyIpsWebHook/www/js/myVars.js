@@ -37,6 +37,8 @@ class ipsbuffer {
 
 
   init() {
+    this.ips.ID14879 = ""; //Mute Sonos WZ
+    
     this.ips.ID29022 = ""; //Temperatur SZ (HM)
     this.ips.ID50730 = ""; //Temperatur KZ
     this.ips.ID41984 = ""; //Temperatur WZ

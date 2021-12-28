@@ -22,27 +22,22 @@
     SonosSZSource.create("MainSonosSZ", "360px", "55%", "lime", "28px", "Source", "", );
 
 
-
-
-
-
-
-
-
-    var FontBtnSonosVolDwnSZ = new FontButtonNew();
+    var FontBtnSonosVolDwnSZ = new FontButton();
     FontBtnSonosVolDwnSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "40px",
-        "fa fa-volume-down", "60px", "60px", "send('command(SonosSZ,vol,dec)')");
+        "fa fa-volume-down", "60px", "60px", "", "", 'func(SNS_ChangeVolume,53696,-2)');
 
-    var FontBtnSonosMuteSZ = new FontButtonNew();
+    var FontBtnSonosMuteSZ = new FontButton();
     FontBtnSonosMuteSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "110px",
-        "fa fa-volume-off", "60px", "60px", "send('command(SonosSZ,mute,toggle)')");
-    var FontBtnSonosVolUpSZ = new FontButtonNew();
-    FontBtnSonosVolUpSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "180px",
-        "fa fa-volume-up", "60px", "60px", "send('command(SonosSZ,vol,inc)')");
+        "fa fa-volume-off", "60px", "60px", "", "", 'func(SNS_SetMute,53696,toggle50128)');
 
-    var FontBtnSonosPowerSZ = new FontButtonNew();
+    var FontBtnSonosVolUpSZ = new FontButton();
+    FontBtnSonosVolUpSZ.create("MainSonosSZ", "fontbutton", "sandy", "73vh", "180px",
+        "fa fa-volume-up", "60px", "60px", "", "", 'func(SNS_ChangeVolume,53696,2)');
+
+
+    var FontBtnSonosPowerSZ = new FontButton();
     FontBtnSonosPowerSZ.create("MainSonosSZ", "fontbutton", "sandy", "74vh", "360px",
-        "fa fa-power-off", "100px", "50px", "send('command(SonosSZ,Key,Stop)')");
+        "fa fa-power-off", "100px", "50px", "", "", 'func(SNS_Stop,53696)');
 </script>
 
 
