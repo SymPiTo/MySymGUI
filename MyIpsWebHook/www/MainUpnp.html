@@ -2,11 +2,9 @@
         <!--                                  UPNP                                   -->
         <!-- ----------------------------------------------------------------------- -->
         <script>
-            var mainwindowUpnp = new Area();
-            mainwindowUpnp.createMain("MainUpnp", "bgPurple");
-        </script>
+            var MainUpnp = new Area();
+            MainUpnp.createMain("MainUpnp", "bgPurple");
 
-        <script>
             var RahmenA = new Kachel();
             RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
@@ -76,11 +74,9 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <script>
-            var CtrlwindowDiscoverUpnp = new Area();
-            CtrlwindowDiscoverUpnp.createCtrl("MainUpnpCtrl", "bgPurple");
-        </script>
+            var MainUpnpCtrl = new Area();
+            MainUpnpCtrl.createCtrl("MainUpnpCtrl", "bgPurple");
 
-        <script>
             var UPNPServerBox = new ArrayListBox();
             UPNPServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
             var btnSearchServer = new CtrlButton();
