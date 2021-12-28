@@ -81,13 +81,13 @@
         </script>
 
         <script>
-            var ServerBox = new ArrayListBox();
-            ServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
+            var UPNPServerBox = new ArrayListBox();
+            UPNPServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
             var btnSearchServer = new CtrlButton();
             btnSearchServer.create("MainUpnpCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
                 "Get Server", "command", "", "send('command(upnp,discover,server)')");
-            var DeviceBox = new ArrayListBox();
-            DeviceBox.create("MainUpnpCtrl", "100px", "30px", "150px", "190px", "purple", "white",
+            var UPNPDeviceBox = new ArrayListBox();
+            UPNPDeviceBox.create("MainUpnpCtrl", "100px", "30px", "150px", "190px", "purple", "white",
                 "Deviceliste");
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",

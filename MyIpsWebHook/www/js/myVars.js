@@ -1454,8 +1454,8 @@ function updateValues() {
 
   /* ---------------------------------- UPNP ---------------------------------- */
   if (document.getElementById("MainUpnpCD")) {
-    ServerBox.update(ipsObj.sym[130]);
-    DeviceBox.update(ipsObj.sym[132]);
+    UPNPServerBox.update(ipsObj.sym[130]);
+    UPNPDeviceBox.update(ipsObj.sym[132]);
     DisMeldung.update(ipsObj.sym[238]);
 
     DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
@@ -1654,10 +1654,14 @@ function updateValues() {
 
 
   //<!-- ******************** Kochbuch   **************************  -->
+  /*
+
   RezeptName.update(ipsObj.sym[100]);
   DeviceBox.update(ipsObj.sym[132]);
   ServerImg.update(ipsObj.sym[133]);
   ClientImg.update(ipsObj.sym[134]);
+*/
+
   //<!-- ******************** upnp   **************************  -->
   if (document.getElementById("MainUpnpCD")) {
     ClientBtn.update(ipsObj.sym[256]);
