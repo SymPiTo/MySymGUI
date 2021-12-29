@@ -1672,12 +1672,7 @@ function updateValues() {
 
 */
 
-  //<!-- ******************** upnp   **************************  -->
-  if (document.getElementById("MainUpnpCD")) {
-    ClientBtn.update(ipsObj.sym[256]);
-    Player.update(ipsObj.ips.ID46310);
-    ServerBtn.update(ipsObj.ips['ID37365']);
-  }
+
 
 
   //<!-- ******************** Web Socket Server   **************************  -->

@@ -333,6 +333,29 @@ class CtrlButton {
                         send('Request("updateValues")');
                     }
                     loadContent();
+                } else {
+                    // ist schon geladen
+                
+                        // alle Main auf 0px verkleinern 
+                        var Main = document.getElementsByTagName("Main");
+                        var MainWindow = Array.from(Main);
+                        MainWindow.forEach(function (element) {
+                            var a = element.className;
+                            document.getElementsByClassName(a)[0].style.width = "0px";
+                        });
+                        // alle Ctrl auf 0px verkleinern 
+                        var Ctrl = document.getElementsByTagName("Ctrl");
+                        var MCtrlWindow = Array.from(Ctrl);
+                        MCtrlWindow.forEach(function (element) {
+                            var a = element.className;
+                            document.getElementsByClassName(a)[0].style.width = "0px";
+                        });
+                        //Haupt Fenster einblenden
+                        document.getElementById(ctrlWin).style.width = "58vw";
+                        //Control Fenster einblenden
+                        document.getElementById(ctrlWin + "Ctrl").style.width = "26vw";
+
+                   
                 }
             }
 
