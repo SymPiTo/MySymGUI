@@ -636,7 +636,7 @@
 
         <script>
             var SubMenuUPNP = new GlideButton();
-            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SMLoad");
+            SubMenuUPNP.create("SubMenuMedia", "purple", "UPnP", upnp, "MainUpnp", "", "SMload");
 
             var SubMenuTV = new GlideButton();
             SubMenuTV.create("SubMenuMedia", "purple", "Samsung TV", tv, "MainTV", "", "SMload");
@@ -2676,21 +2676,21 @@
             var txtBox = new TextBox();
             txtBox.create("MainRezepte", "0px", "10px", "390px", "520px", "white", "16px", "transparent");
 
-            var FontBtnRL = new FontButtonNew();
+            var FontBtnRL = new FontButton();
             FontBtnRL.create("MainRezepte", "fontbutton", "midgreen", "70vh", "5%", "fa fa-caret-left", "60px",
-                "60px",
-                "send('command(Cook,key,prev)')");
+                "60px", "", "", 'func(KR_prevRezept,54833)');
+
             var CtrlBtnRezeptList = new CtrlButton();
             CtrlBtnRezeptList.create("MainRezepte", "70vh", "22%", "ctrlbutton", "big", "midgreen", "Rezepte",
                 "ctrlWindow", "MainRezepteCtrlList");
+
             var CtrlBtnZutaten = new CtrlButton();
             CtrlBtnZutaten.create("MainRezepte", "70vh", "53%", "ctrlbutton", "big", "midgreen", "Zutaten",
                 "ctrlWindow", "MainRezepteCtrl");
-            var FontBtnRR = new FontButtonNew();
+
+            var FontBtnRR = new FontButton();
             FontBtnRR.create("MainRezepte", "fontbutton", "midgreen", "70vh", "85%", "fa fa-caret-right",
-                "60px",
-                "60px",
-                "send('command(Cook,key,next)')");
+                "60px", "60px", "", "", 'func(KR_nextRezept,54833)');
         </script>
         <!-- ***********************************************************************************   -->
         <!--  ************************          Ctrl - Rezepte       ************************      -->
@@ -2751,18 +2751,18 @@
 
 
 
-            var FontBtnIRadioVolDwn = new FontButtonNew();
+            var FontBtnIRadioVolDwn = new FontButton();
             FontBtnIRadioVolDwn.create("MainIRadio", "fontbutton", "purple", "73vh", "5%",
-                "fa fa-volume-down", "60px", "60px", "send('command(DenonCeol,vol,dec)')");
-            var FontBtnIRadioMute = new FontButtonNew();
+                "fa fa-volume-down", "60px", "60px", "", "", 'func(CEOL_DecVolume,49535)');
+
+            var FontBtnIRadioMute = new FontButton();
             FontBtnIRadioMute.create("MainIRadio", "fontbutton", "purple", "73vh", "25%", "fa fa-volume-off",
-                "60px",
-                "60px",
-                "send('command(DenonCeol,mute,toggle)')");
-            var FontBtnIRadioVolUp = new FontButtonNew();
+                "60px", "60px", "", "", 'func(CEOL_ToggleMute,49535,toggle59848)');
+
+            var FontBtnIRadioVolUp = new FontButton();
             FontBtnIRadioVolUp.create("MainIRadio", "fontbutton", "purple", "73vh", "45%", "fa fa-volume-up",
-                "60px",
-                "60px", "send('command(DenonCeol,vol,inc)')");
+                "60px", "60px", "", "", 'func(CEOL_IncVolume,49535)');
+
             var FontBtnIRadioPower = new FontButtonNew();
             FontBtnIRadioPower.create("MainIRadio", "fontbutton", "purple", "73vh", "85%", "fa fa-power-off",
                 "60px",

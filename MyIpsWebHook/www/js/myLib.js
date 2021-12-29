@@ -195,11 +195,22 @@ class CtrlButton {
 
         //optionale Parameter
         this.FontFarbe = "black";
+        this.cmd2 = "";
+        this.cmd3 = "";
     }
 
-    create(ParentID, posTop, posLeft, btnClass, size, color, text, ctrltype, ctrlWin, command, ...param) {
-        if (param.length > 0) {
+    create(ParentID, posTop, posLeft, btnClass, size, color, text, ctrltype, ctrlWin, cmd1, ...param) {
+        if (param.length == 1) {
             this.FontFarbe = param[0];
+        }
+        if (param.length == 2) {
+            this.FontFarbe = param[0];
+            this.cmd2 = param[1];
+        }
+        if (param.length == 3) {
+            this.FontFarbe = param[0];
+            this.cmd2 = param[1];
+            this.cmd3 = param[2];
         }
         var elem = document.createElement("div");
         elem.className = btnClass;
@@ -225,7 +236,9 @@ class CtrlButton {
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
             };
         } else if (ctrltype === "command") {
-            elem.setAttribute("onclick", command);
+            elem.setAttribute("onclick", cmd1);
+        } else if (ctrltype === "func") {
+            elem.setAttribute("onclick",  'send("'+ cmd1 + '§' + this.cmd2 + '§' + this.cmd3 + '")');
         } else if (ctrltype === "CtrlCmd") {
             elem.onclick = function () {
 
@@ -239,7 +252,7 @@ class CtrlButton {
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
 
-                send(command);
+                send(cmd1);
             }
         } else if (ctrltype === "CtrlFunc") {
 
@@ -255,7 +268,7 @@ class CtrlButton {
                 // ctrlWindow umschalten
                 document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
 
-                ShowHidePanel(command);
+                ShowHidePanel(cmd1);
             }
 
             document.getElementById(ParentID).appendChild(elem);
@@ -3199,7 +3212,7 @@ class ShowUrlImage {
     }
 
     update(SourceUrl) {
- 
+        this.ID.src = SourceUrl;
 
     }
 }
@@ -3292,15 +3305,15 @@ class ArrayListBox {
 
     }
 
-    update(Rezepte = {}) {
+    update(ArrDaten  = {}) {
 
         // As long as <ul> has a child node, remove it
         while (this.ID.hasChildNodes()) {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        if (Rezepte.length > 0) {
-            Rezepte.forEach(function (value) {
+        if (ArrDaten .length > 0) {
+            ArrDaten .forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
 

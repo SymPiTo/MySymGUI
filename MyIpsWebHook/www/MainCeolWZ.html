@@ -63,22 +63,22 @@
     FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "370px", "fa fa-play", "60px", "60px",
         "send('command(DenonCeol,play,first)')");
 
+    var FontBtnIRadioVolDwnWZ = new FontButton();
+    FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "40px", "fa fa-volume-down", "60px",
+        "60px", "", "", 'func(CEOL_DecVolume,49535)');
 
-    var FontBtnIRadioVolDwnWZ = new FontButtonNew();
-    FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "40px",
-        "fa fa-volume-down", "60px", "60px", "send('command(DenonCeol,vol,dec)')");
-    var FontBtnIRadioMuteWZ = new FontButtonNew();
-    FontBtnIRadioMuteWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "110px",
-        "fa fa-volume-off", "60px", "60px", "send('command(DenonCeol,mute,toggle)')");
-    var FontBtnIRadioVolUpWZ = new FontButtonNew();
-    FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "180px",
-        "fa fa-volume-up", "60px", "60px", "send('command(DenonCeol,vol,inc)')");
+    var FontBtnIRadioMuteWZ = new FontButton();
+    FontBtnIRadioMuteWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "110px", "fa fa-volume-off", "60px",
+        "60px", "", "", 'func(CEOL_ToggleMute,49535,toggle59848)');
+
+    var FontBtnIRadioVolUpWZ = new FontButton();
+    FontBtnIRadioVolUpWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "180px", "fa fa-volume-up", "60px",
+        "60px", "", "", 'func(CEOL_IncVolume,49535)');
 
 
-
-    var FontBtnIRadioPowerWZ = new FontButtonNew();
+    var FontBtnIRadioPowerWZ = new FontButton();
     FontBtnIRadioPowerWZ.create("MainCeolWZ", "fontbutton", "cyan", "84vh", "360px",
-        "fa fa-power-off", "100px", "50px", "send('command(DenonCeol,power,toggle)')");
+        "fa fa-power-off", "100px", "50px", "", "", 'func(CEOL_SetPower,49535,toggle22520)');
 </script>
 
 <!-- ************************** Internet Radio Stationen  **************************  -->

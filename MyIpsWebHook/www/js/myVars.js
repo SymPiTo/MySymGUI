@@ -1452,7 +1452,19 @@ function updateValues() {
     RahmenCeol.update(s);
   }
 
-  /* ---------------------------------- UPNP ---------------------------------- */
+    /* ---------------------------------- UPNP ---------------------------------- */
+    if (document.getElementById("MainUpnp")) {
+      UPNPServerBox.update(ipsObj.sym[130]);
+      UPNPDeviceBox.update(ipsObj.sym[132]);
+      ServerImg.update(ipsObj.ips.ID31626);
+      ClientImg.update(ipsObj.ips.ID14390);
+      ClientBtn.update(ipsObj.sym[256]);
+       
+      ServerBtn.update(ipsObj.ips.ID37365);
+       
+    }
+
+  /* ---------------------------------- UPNP CD---------------------------------- */
   if (document.getElementById("MainUpnpCD")) {
     UPNPServerBox.update(ipsObj.sym[130]);
     UPNPDeviceBox.update(ipsObj.sym[132]);
@@ -1658,8 +1670,7 @@ function updateValues() {
 
   RezeptName.update(ipsObj.sym[100]);
   DeviceBox.update(ipsObj.sym[132]);
-  ServerImg.update(ipsObj.sym[133]);
-  ClientImg.update(ipsObj.sym[134]);
+
 */
 
   //<!-- ******************** upnp   **************************  -->

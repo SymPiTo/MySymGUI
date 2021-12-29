@@ -6,18 +6,21 @@
             MainUpnp.createMain("MainUpnp", "bgPurple");
 
             var RahmenA = new Kachel();
-            RahmenA.create("MainUpnp", "10px", "20px", "180px", "240px", "transparent", "Server")
+            RahmenA.create("MainUpnp", "10px", "20px", "200px", "240px", "transparent", "Server")
             var ServerImg = new ShowUrlImage();
             ServerImg.create("MainUpnp", "50px", "60px", "100px", "100px", "");
+
             var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "180px", "35px", "85px", "20px", "purple", "ServerList");
+            ServerBtn.create("MainUpnp", "180px", "25px", "190px", "40px", "purple", "ServerList");
 
             var RahmenB = new Kachel();
-            RahmenB.create("MainUpnp", "10px", "360px", "180px", "240px", "transparent", "Devices")
+            RahmenB.create("MainUpnp", "10px", "360px", "200px", "240px", "transparent", "Devices")
+
             var ClientImg = new ShowUrlImage();
             ClientImg.create("MainUpnp", "50px", "400px", "100px", "100px", "");
+
             var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "180px", "375px", "85px", "20px", "purple", "ClientList");
+            ClientBtn.create("MainUpnp", "180px", "365px", "190px", "40px", "purple", "ClientList");
 
 
 
@@ -78,16 +81,19 @@
             MainUpnpCtrl.createCtrl("MainUpnpCtrl", "bgPurple");
 
             var UPNPServerBox = new ArrayListBox();
-            UPNPServerBox.create("MainUpnpCtrl", "5px", "30px", "150px", "190px", "purple", "white", "Serverliste");
+            UPNPServerBox.create("MainUpnpCtrl", "10px", "30px", "150px", "190px", "purple", "white", "Serverliste");
+
             var btnSearchServer = new CtrlButton();
-            btnSearchServer.create("MainUpnpCtrl", "210px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Server", "command", "", "send('command(upnp,discover,server)')");
+            btnSearchServer.create("MainUpnpCtrl", "220px", "20px", "ctrlbutton", "normal", "purpleBtn",
+                "Get Server", "func", "", "send('command(upnp,discover,server)')");
+
             var UPNPDeviceBox = new ArrayListBox();
-            UPNPDeviceBox.create("MainUpnpCtrl", "100px", "30px", "150px", "190px", "purple", "white",
+            UPNPDeviceBox.create("MainUpnpCtrl", "110px", "30px", "150px", "190px", "purple", "white",
                 "Deviceliste");
+
             var btnSearchClient = new CtrlButton();
-            btnSearchClient.create("MainUpnpCtrl", "490px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Devices", "command", "", "send('command(upnp,discover,client)')");
+            btnSearchClient.create("MainUpnpCtrl", "500px", "20px", "ctrlbutton", "normal", "purpleBtn",
+                "Get Devices", "func", "", "send('command(upnp,discover,client)')");
         </script>
 
         <!-- ***********************************************************************************   -->
