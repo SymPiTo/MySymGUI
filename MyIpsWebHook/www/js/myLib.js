@@ -564,9 +564,9 @@ class MediaDisplay {
         elemi.style.justifyContent = "center";
 
         var elem1 = document.createElement("img");
-       
         elem1.style.opacity = "1";
-       
+        elem1.style.height = "95%";
+        elem1.style.width = "auto";
         elem1.src = "";
         this.imgID = elem1;
 
@@ -3202,19 +3202,29 @@ class ShowUrlImage {
     create(ParentID, posTop, posLeft, sizeH, sizeW, SourceUrl) {
         var img = document.createElement("img");
         img.src = SourceUrl;
+        img.alt = "not found",
         img.style.width = sizeW;
         img.style.height = sizeH;
         img.style.position = "absolute";
         img.style.top = posTop;
         img.style.left = posLeft;
         this.ID = img;
+         
         document.getElementById(ParentID).appendChild(img);
     }
 
     update(SourceUrl) {
+      
+    
         this.ID.src = SourceUrl;
+        this.ID.alt = "not found";
+    
+        
 
     }
+
+ 
+ 
 }
 
 
