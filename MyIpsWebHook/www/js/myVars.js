@@ -1467,7 +1467,7 @@ function updateValues() {
   /* ---------------------------------- UPNP CD---------------------------------- */
   if (document.getElementById("MainUpnpCD")) {
   
-    DisMeldung.update(ipsObj.sym[238]);
+    
 
     DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
     Track.update("Track: " + ipsObj.sym[255]);
