@@ -4328,6 +4328,8 @@ class clock {
 class DynIconList {
     constructor() {
         this.room = "";
+        this.cmd2 = "";
+        this.cmd3 = "";
     }
 
     create(ParentID, source, iconsize = "110px", ...param) {
@@ -4448,7 +4450,8 @@ class DynIconList {
             } else {
                 elem.src = icon;
             }
-            elem.onclick = function () {
+            
+            elem.onclick = function (cmd2="", cmd3="") {
                 var t = param[0];
                 var test = SourceList;
                 var index = SourceList.findIndex((item) => item.selected === true);
@@ -4468,7 +4471,9 @@ class DynIconList {
                     var cmd1 = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "SonosRadio") {
                     
-                    var cmd1 = "command(Sonos" +  t + ",Channel," + item['Sender'] +")";
+                    //var cmd1 = "command(Sonos" +  t + ",Channel," + item['Sender'] +")";
+                    var cmd1 = 'func(SNS_SetRadio,33732,' + item['Sender'] + ')';
+                    var cmd2 = 'func(SNS_Play,33732)';
                     
                 } else if (source === "CD") {
                     var cmd1 = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
@@ -4483,8 +4488,8 @@ class DynIconList {
                 } else if (source === "CeolAudio") {
                     var cmd1 = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
-                send(cmd1);
-
+                //send(cmd1);
+                send('"'+ cmd1 + '§' + cmd2 + '§' + cmd3 + '"');
             };
 
             document.getElementById(ParentID).appendChild(elem);
