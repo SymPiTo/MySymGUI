@@ -11,48 +11,46 @@
            DisplayCD.create("MainUpnpCD", "10px", "20px", "600px", "250px", "DisplayBlue");
 
            var rahm = new Rahmen();
-           rahm.create("MainUpnpCD", "272px", "24px", "73px", "501px", "DisplayBlue");
+           rahm.create("MainUpnpCD", "272px", "24px", "73px", "600px", "DisplayBlue");
            var upnpCDVol = new TransVarDisplay();
            upnpCDVol.create("MainUpnpCD", "280px", "0%", "lime", "28px", "Volume", "");
            var upnCDSource = new TransVarDisplay();
            upnCDSource.create("MainUpnpCD", "280px", "50%", "lime", "28px", "Source", "", );
 
            var Track = new Kachel();
-           Track.create("MainUpnpCD", "360px", "10px", "530px", "55px", "transparent", "Track")
+           Track.create("MainUpnpCD", "360px", "24px", "600px", "55px", "transparent", "Track")
            var upnpCDProgress = new analogBar();
            upnpCDProgress.create("MainUpnpCD", "405px", "20px", "cyan", "500px");
 
            var CDPlayer = new ButtonSlider();
            CDPlayer.create("MainUpnpCD", "83vh", "230px", "200px", "45px", "purple", "ClientList");
 
-           var FontBtnPrev = new FontButtonNew();
+           var FontBtnPrev = new FontButton();
            FontBtnPrev.create("MainUpnpCD", "fontbutton", "purple", "71vh", "20px", "fa fa-backward", "60px",
-               "60px",
-               "send('command(upnp,play,previous)')");
+               "60px", "32px", "", 'func(UPNP_previous,19824)');
 
-           var FontBtnNext = new FontButtonNew();
+           var FontBtnNext = new FontButton();
            FontBtnNext.create("MainUpnpCD", "fontbutton", "purple", "71vh", "90px", "fa fa-forward", "60px",
-               "60px",
-               "send('command(upnp,play,next)')");
+               "60px", "32px", "", 'func(UPNP_next,19824)');
 
-           var FontBtnStop = new FontButtonNew();
+           var FontBtnStop = new FontButton();
            FontBtnStop.create("MainUpnpCD", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px",
-               "60px",
-               "send('command(upnp,stop,all)')");
+               "60px", "32px", "", 'func(UPNP_stop,19824)');
 
-           var FontBtnPause = new FontButtonNew();
+
+           var FontBtnPause = new FontButton();
            FontBtnPause.create("MainUpnpCD", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px",
-               "60px",
-               "send('command(upnp,pause,all)')");
+               "60px", "32px", "", 'func(UPNP_pause,19824)');
+
 
            var FontBtnPlay = new FontButton();
            FontBtnPlay.create("MainUpnpCD", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px",
-               "60px", "32px", "", 'func(UPNP_setVolume,19824,down)');
+               "60px", "32px", "", 'func(UPNP_play,19824)');
 
 
-           var FontBtnVolDwn = new FontButtonNew();
+           var FontBtnVolDwn = new FontButton();
            FontBtnVolDwn.create("MainUpnpCD", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down",
-               "60px", "50px", "send('command(upnp,vol,dec)')");
+               "60px", "50px", "32px", "", 'func(UPNP_setVolume,19824,down)');
 
            var FontBtnMute = new FontButton();
            FontBtnMute.create("MainUpnpCD", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
@@ -60,8 +58,7 @@
 
            var FontBtnVolUp = new FontButton();
            FontBtnVolUp.create("MainUpnpCD", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up",
-               "60px",
-               "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
+               "60px", "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
 
 
            var FontBtnPower = new FontButtonNew();
