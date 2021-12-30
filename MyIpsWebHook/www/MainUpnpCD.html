@@ -45,25 +45,25 @@
                "60px",
                "send('command(upnp,pause,all)')");
 
-           var FontBtnPlay = new FontButtonNew();
+           var FontBtnPlay = new FontButton();
            FontBtnPlay.create("MainUpnpCD", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px",
-               "60px",
-               "send('command(upnp,play,continue)')");
+               "60px", "32px", "", 'func(UPNP_setVolume,19824,down)');
+
 
            var FontBtnVolDwn = new FontButtonNew();
            FontBtnVolDwn.create("MainUpnpCD", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down",
-               "60px",
-               "50px",
-               "send('command(upnp,vol,dec)')");
-           var FontBtnMute = new FontButtonNew();
+               "60px", "50px", "send('command(upnp,vol,dec)')");
+
+           var FontBtnMute = new FontButton();
            FontBtnMute.create("MainUpnpCD", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
-               "50px",
-               "send('command(upnp,mute,toggle)')");
-           var FontBtnVolUp = new FontButtonNew();
+               "50px", "32px", "", 'func(UPNP_setMute,19824,toggle14879)');
+
+           var FontBtnVolUp = new FontButton();
            FontBtnVolUp.create("MainUpnpCD", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up",
                "60px",
-               "50px",
-               "send('command(upnp,vol,inc)')");
+               "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
+
+
            var FontBtnPower = new FontButtonNew();
            FontBtnPower.create("MainUpnpCD", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off",
                "100px",
