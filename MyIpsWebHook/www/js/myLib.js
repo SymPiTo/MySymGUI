@@ -4489,7 +4489,7 @@ class DynIconList {
                     var cmd1 = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
                 //send(cmd1);
-                send('"'+ cmd1 + '§' + cmd2 + '§' + cmd3 + '"');
+                send(cmd1 + '§' + cmd2 + '§' + cmd3);
             };
 
             document.getElementById(ParentID).appendChild(elem);
