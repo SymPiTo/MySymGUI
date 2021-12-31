@@ -4328,8 +4328,7 @@ class clock {
 class DynIconList {
     constructor() {
         this.room = "";
-        this.cmd2 = "";
-        this.cmd3 = "";
+     
     }
 
     create(ParentID, source, iconsize = "110px", ...param) {
@@ -4451,8 +4450,9 @@ class DynIconList {
                 elem.src = icon;
             }
             
-            elem.onclick = function (cmd2="", cmd3="") {
+            elem.onclick = function () {
                 var t = param[0];
+                cmd = [];
                 var test = SourceList;
                 var index = SourceList.findIndex((item) => item.selected === true);
                 if (index !== -1) {
@@ -4466,30 +4466,36 @@ class DynIconList {
                 elem.classList.remove("iconTV");
                 item['selected'] = true;
                 if (source === "TV") {
-                    var cmd1 = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
+                    cmd[0] = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
-                    var cmd1 = "command(DenonCeol,Channel," + item['FV'] + ")";
+                    cmd[0] = "command(DenonCeol,Channel," + item['FV'] + ")";
                 } else if (source === "SonosRadio") {
                     
                     //var cmd1 = "command(Sonos" +  t + ",Channel," + item['Sender'] +")";
-                    var cmd1 = 'func(SNS_SetRadio,33732,' + item['Sender'] + ')';
-                    var cmd2 = 'func(SNS_Play,33732)';
+                    cmd[0] = 'func(SNS_SetRadio,33732,' + item['Sender'] + ')';
+                    cmd[1] = 'func(SNS_Play,33732)';
+                    
                     
                 } else if (source === "CD") {
-                    var cmd1 = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
+                    //var cmd1 = "command(upnp,loadCDPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Musik)';
+                    
                 } else if (source === "Audio") {
-                    var cmd1 = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Video") {
-                    var cmd1 = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Foto") {
-                    var cmd1 = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolCD") {
-                    var cmd1 = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
                 } else if (source === "CeolAudio") {
-                    var cmd1 = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
                 }
                 //send(cmd1);
-                send(cmd1 + '§' + cmd2 + '§' + cmd3);
+                
+                var command =JSON.stringify(cmd);
+                send(command);
+                //send(cmd1 + '§' + cmd2 + '§' + cmd3);
             };
 
             document.getElementById(ParentID).appendChild(elem);
@@ -4813,6 +4819,7 @@ class FontButton {
         this.textColor = "black";
         this.cmd2 = "";
         this.cmd3="";
+        this.cmd = [];
 
     }
     create(ParentID, btnClass, color, posTop, posLeft, symbol, b, h, ts="28px", tc="black", cmd1, ...param) {
@@ -4820,13 +4827,15 @@ class FontButton {
         this.b = b;
         this.textSize = ts;
         this.textColor = tc;
-
+         
+         
+        this.cmd[0] = cmd1;
         if (param.length == 1) {
-            this.cmd2 = param[0]; 
+            this.cmd[1] = param[0]; 
         }
         if (param.length == 2) {
-           this.cmd2 = param[0];  
-           this.cmd3 = param[1];
+            this.cmd[1] = param[0];  
+            this.cmd[2] = param[1];
         } 
 
 
@@ -4842,7 +4851,11 @@ class FontButton {
         elem.style.display = "flex";
         elem.style.alignItems = "center";
         elem.style.justifyContent = "center";
-        elem.setAttribute("onclick",  'send("'+ cmd1 + '§' + this.cmd2 + '§' + this.cmd3 + '")');
+
+        var command =JSON.stringify(this.cmd);
+        
+
+        elem.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
 
         var elem1 = document.createElement("span");
         elem1.className = symbol;
