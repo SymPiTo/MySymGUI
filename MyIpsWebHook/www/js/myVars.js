@@ -1464,22 +1464,25 @@ function updateValues() {
        
     }
 
+  /* ---------------------------------- UPNP Audio---------------------------------- */
+  if (document.getElementById("MainUpnpAudio")) {
+    DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
+    
+    AudioTrack.update("Track: " + ipsObj.sym[255]);
+    AudioPlayer.update(ipsObj.ips.ID46310);
+    upnpAudioVol.update(ipsObj.sym[257]);
+    upnpAudioSource.update(ipsObj.sym[256]);
+    upnpAudioProgress.update(ipsObj.sym[259]);
+  }
+
   /* ---------------------------------- UPNP CD---------------------------------- */
   if (document.getElementById("MainUpnpCD")) {
-  
-    
-
-    DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
-    Track.update("Track: " + ipsObj.sym[255]);
-    CDTrack.update("Track: " + ipsObj.sym[255]);
-    upnpVol.update(ipsObj.sym[257]);
-    upnpSource.update(ipsObj.sym[256]);
-    upnpProgress.update(ipsObj.sym[259]);
     DisplayCD.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
     upnpCDVol.update(ipsObj.sym[257]);
     upnCDSource.update(ipsObj.sym[256]);
     upnpCDProgress.update(ipsObj.sym[259]);
     CDPlayer.update(ipsObj.ips.ID46310);
+    CDTrack.update("Track: " + ipsObj.sym[255]);
   }
   /* ---------------------------------- UPNP Video ---------------------------------- */
   if (document.getElementById("MainVideo")) {
@@ -1488,8 +1491,18 @@ function updateValues() {
     upnpVideoVol.update(ipsObj.sym[257]);
     upnpVideoSource.update(ipsObj.sym[256]);
     upnpVideoProgress.update(ipsObj.sym[259]);
+    VideoPlayer.update(ipsObj.ips.ID46310);
   }
 
+    /* ---------------------------------- UPNP Video ---------------------------------- */
+    if (document.getElementById("MainFoto")) {
+      DiplayFoto.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
+      FotoTrack.update("Track: " + ipsObj.sym[255]);
+      upnpFotoVol.update(ipsObj.sym[257]);
+      upnpFotoSource.update(ipsObj.sym[256]);
+      upnpFotoProgress.update(ipsObj.sym[259]);
+      FotoPlayer.update(ipsObj.ips.ID46310);
+    }
 
 
 

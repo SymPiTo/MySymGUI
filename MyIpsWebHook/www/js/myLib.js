@@ -4436,8 +4436,6 @@ class DynIconList {
                 elem.src = "images/RadioStation/" + icon;
             } else if (source === "CD") {
                 elem.src = icon;
-            } else if (source === "Audio") {
-                elem.src = icon;
             } else if (source === "Video") {
                 elem.src = icon;
             } else if (source === "Foto") {
@@ -4481,7 +4479,7 @@ class DynIconList {
                     cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Musik)';
                     
                 } else if (source === "Audio") {
-                    cmd[0] = "command(upnp,loadAudioPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Audio)';
                 } else if (source === "Video") {
                     cmd[0] = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
                 } else if (source === "Foto") {
