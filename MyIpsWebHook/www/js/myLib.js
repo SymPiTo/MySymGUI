@@ -4483,13 +4483,13 @@ class DynIconList {
                 } else if (source === "Audio") {
                     cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Audio)';
                 } else if (source === "Video") {
-                    cmd[0] = "command(upnp,loadVideoPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Video)';
                 } else if (source === "Foto") {
-                    cmd[0] = "command(upnp,loadFotoPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(UPNP_loadPlaylist,19824,' + item['playlistname'] + ',Foto)';
                 } else if (source === "CeolCD") {
-                    cmd[0] = "command(DenonCeol,loadCDPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(CEOL_loadPlaylist,49535,' + item['playlistname'] + ',CD)';
                 } else if (source === "CeolAudio") {
-                    cmd[0] = "command(DenonCeol,loadAudioPlaylist," + item['playlistname'] + ")";
+                    cmd[0] = 'func(CEOL_loadPlaylist,49535,' + item['playlistname'] + ',Audio)';
                 }
                 //send(cmd1);
                 
