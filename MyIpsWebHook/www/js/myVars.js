@@ -1091,6 +1091,38 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
+  /* ------------------------------- SonosWZ ----------------------------- */
+  if (document.getElementById("MainGreensense")) {
+    Sensor1Icon.update(ipsObj.ips.ID10654);
+    Sensor2Icon.update(ipsObj.ips.ID13062);
+    Sensor3Icon.update(ipsObj.ips.ID47459);
+    Sensor4Icon.update(ipsObj.ips.ID11533);
+    Sensor5Icon.update(ipsObj.ips.ID42405);
+    Sensor1Lm.update(ipsObj.ips.ID56086);
+    Sensor2Lm.update(ipsObj.ips.ID22953);
+    Sensor3Lm.update(ipsObj.ips.ID30832);
+    Sensor4Lm.update(ipsObj.ips.ID47736);
+    Sensor5Lm.update(ipsObj.ips.ID48566);
+    
+    Sensor1Temp.update(ipsObj.ips.ID47753);
+    Sensor2Temp.update(ipsObj.ips.ID14009);
+    Sensor3Temp.update(ipsObj.ips.ID26601);
+    Sensor4Temp.update(ipsObj.ips.ID23576);
+    Sensor5Temp.update(ipsObj.ips.ID32221);
+
+    Sensor1Feuchte.update(ipsObj.ips.ID11431);
+    Sensor2Feuchte.update(ipsObj.ips.ID37043);
+    Sensor3Feuchte.update(ipsObj.ips.ID31918);
+    Sensor4Feuchte.update(ipsObj.ips.ID24329);
+    Sensor5Feuchte.update(ipsObj.ips.ID26548);
+
+    Sensor1Stat.update(ipsObj.ips.ID28141);
+    Sensor2Stat.update(ipsObj.ips.ID27865);
+    Sensor3Stat.update(ipsObj.ips.ID13328);
+    Sensor4Stat.update(ipsObj.ips.ID11902);
+    Sensor5Stat.update(ipsObj.ips.ID34627);
+
+  }
 
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainSonosWZ")) {
