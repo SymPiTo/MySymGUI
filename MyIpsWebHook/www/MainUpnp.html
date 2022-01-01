@@ -29,23 +29,23 @@
             RahmenC.create("MainUpnp", "290px", "10px", "550px", "110px", "transparent", "Libraries")
 
             var CtrlBtnupnp1 = new CtrlButton();
-            CtrlBtnupnp1.create("MainUpnp", "330px", "15px", "ctrlbutton", "smaller", "purple", "CD",
+            CtrlBtnupnp1.create("MainUpnp", "330px", "15px", "ctrlbutton", "smaller", "purple", "CD", "black",
                 "SMload", "MainUpnpCD", "");
 
             var CtrlBtnupnp2 = new CtrlButton();
-            CtrlBtnupnp2.create("MainUpnp", "330px", "125px", "ctrlbutton", "smaller", "purple", "Foto",
+            CtrlBtnupnp2.create("MainUpnp", "330px", "125px", "ctrlbutton", "smaller", "purple", "Foto", "black",
                 "SMload", "MainFoto", "");
 
 
             var CtrlBtnupnp4 = new CtrlButton();
-            CtrlBtnupnp4.create("MainUpnp", "330px", "235px", "ctrlbutton", "smaller", "purple", "Video",
+            CtrlBtnupnp4.create("MainUpnp", "330px", "235px", "ctrlbutton", "smaller", "purple", "Video", "black",
                 "SMload", "MainVideo", "");
 
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "330px", "340px", "ctrlbutton", "smaller", "purple", "Audio",
+            CtrlBtnupnp3.create("MainUpnp", "330px", "340px", "ctrlbutton", "smaller", "purple", "Audio", "black",
                 "SM", "MainAudio", "");
             var CtrlBtnupnp3 = new CtrlButton();
-            CtrlBtnupnp3.create("MainUpnp", "330px", "450px", "ctrlbutton", "smaller", "purple", "Playlist",
+            CtrlBtnupnp3.create("MainUpnp", "330px", "450px", "ctrlbutton", "smaller", "purple", "Playlist", "black",
                 "ctrlWindow", "MainAudioBookCtrl", "");
 
             var DisMeldung = new StateDisplay();
@@ -87,7 +87,7 @@
 
             var btnSearchServer = new CtrlButton();
             btnSearchServer.create("MainUpnpCtrl", "220px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Server", "func", "", "send('command(upnp,discover,server)')");
+                "Get Server", "black", "func", "", "send('command(upnp,discover,server)')");
 
             var UPNPDeviceBox = new ArrayListBox();
             UPNPDeviceBox.create("MainUpnpCtrl", "110px", "30px", "150px", "190px", "purple", "white",
@@ -95,7 +95,7 @@
 
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpCtrl", "500px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Devices", "func", "", "send('command(upnp,discover,client)')");
+                "Get Devices", "black", "func", "", "send('command(upnp,discover,client)')");
         </script>
 
         <!-- ***********************************************************************************   -->

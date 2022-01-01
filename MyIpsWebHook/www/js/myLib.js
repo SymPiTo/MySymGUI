@@ -195,23 +195,21 @@ class CtrlButton {
 
         //optionale Parameter
         this.FontFarbe = "black";
-        this.cmd2 = "";
-        this.cmd3 = "";
+   
+        this.cmd = [];
     }
 
-    create(ParentID, posTop, posLeft, btnClass, size, color, text, ctrltype, ctrlWin, cmd1, ...param) {
+    create(ParentID, posTop, posLeft, btnClass, size, color, text, textColor="black", ctrltype, ctrlWin, cmd1, ...param) {
+        this.cmd[0] = cmd1;
+        this.FontFarbe = textColor;
         if (param.length == 1) {
-            this.FontFarbe = param[0];
+            this.cmd[1] = param[0];
         }
         if (param.length == 2) {
-            this.FontFarbe = param[0];
-            this.cmd2 = param[1];
+            this.cmd[1] = param[0];
+            this.cmd[2] = param[1];
         }
-        if (param.length == 3) {
-            this.FontFarbe = param[0];
-            this.cmd2 = param[1];
-            this.cmd3 = param[2];
-        }
+  
         var elem = document.createElement("div");
         elem.className = btnClass;
         elem.classList.add(size, color);
@@ -238,7 +236,8 @@ class CtrlButton {
         } else if (ctrltype === "command") {
             elem.setAttribute("onclick", cmd1);
         } else if (ctrltype === "func") {
-            elem.setAttribute("onclick",  'send("'+ cmd1 + '§' + this.cmd2 + '§' + this.cmd3 + '")');
+            var command =JSON.stringify(this.cmd);
+            elem.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
         } else if (ctrltype === "CtrlCmd") {
             elem.onclick = function () {
 
@@ -4469,7 +4468,7 @@ class DynIconList {
                 if (source === "TV") {
                     cmd[0] = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
                 } else if (source === "IRadio") {
-                    cmd[0] = "command(DenonCeol,Channel," + item['FV'] + ")";
+                    cmd[0] = 'func(CEOL_SetRadioChannel,49535,' + item['FV']+ ')';
                 } else if (source === "SonosRadio") {
                     
                     //var cmd1 = "command(Sonos" +  t + ",Channel," + item['Sender'] +")";

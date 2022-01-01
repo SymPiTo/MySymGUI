@@ -743,14 +743,15 @@
 
             var CtrlBtnGoodMorning = new CtrlButton();
             CtrlBtnGoodMorning.create("MainStarScreen", "80vh", "10%", "ctrlbutton", "normal", "grey",
-                "Good Morning",
+                "Good Morning", "black",
                 "command", "", "goodMorning();");
             var CtrlBtnGoodNight = new CtrlButton();
             CtrlBtnGoodNight.create("MainStarScreen", "80vh", "40%", "ctrlbutton", "normal", "grey",
-                "Good Night",
+                "Good Night", "black",
                 "command", "", "goodNight();");
             var CtrlBtnBye = new CtrlButton();
-            CtrlBtnBye.create("MainStarScreen", "80vh", "70%", "ctrlbutton", "normal", "grey", "Bye", "command",
+            CtrlBtnBye.create("MainStarScreen", "80vh", "70%", "ctrlbutton", "normal", "grey", "Bye", "black",
+                "command",
                 "",
                 "Bye();");
         </script>
@@ -983,26 +984,25 @@
 
             var Rahmen1WZ = new Kachel();
             Rahmen1WZ.create("MainHeizungWZ", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
             var btnHzWZauto = new CtrlButton();
-            btnHzWZauto.create("MainHeizungWZ", "350px", "30px", "ctrlbutton", "smaller", "cyan", "Automatik",
-                "command",
-                "", "send('command(Heizung,WZ,auto)')");
+            btnHzWZauto.create("MainHeizungWZ", "350px", "30px", "ctrlbutton", "smaller", "cyan", "Automatik", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,0)');
+
             var btnHzWZman = new CtrlButton();
-            btnHzWZman.create("MainHeizungWZ", "350px", "135px", "ctrlbutton", "smaller", "cyan", "Manual",
-                "command",
-                "",
-                "send('command(Heizung,WZ,man)')");
+            btnHzWZman.create("MainHeizungWZ", "350px", "135px", "ctrlbutton", "smaller", "cyan", "Manual", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,1)');
 
             var Rahmen3WZ = new Kachel();
             Rahmen3WZ.create("MainHeizungWZ", "450px", "20px", "230px", "120px", "transparent", "Preset");
+
             var btnHzWZUrlaub = new CtrlButton();
-            btnHzWZUrlaub.create("MainHeizungWZ", "500px", "30px", "ctrlbutton", "smaller", "cyan", "Urlaub",
-                "command",
-                "", "send('command(Heizung,WZ,urlaub)')");
+            btnHzWZUrlaub.create("MainHeizungWZ", "500px", "30px", "ctrlbutton", "smaller", "cyan", "Urlaub", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,2)');
+
             var btnHzWZParty = new CtrlButton();
-            btnHzWZParty.create("MainHeizungWZ", "500px", "135px", "ctrlbutton", "smaller", "cyan", "Party",
-                "command",
-                "", "send('command(Heizung,WZ,party)')");
+            btnHzWZParty.create("MainHeizungWZ", "500px", "135px", "ctrlbutton", "smaller", "cyan", "Party", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,2)');
 
 
             var Rahmen2WZ = new Kachel();
@@ -1019,16 +1019,17 @@
 
             var Rahmen4WZ = new Kachel();
             Rahmen4WZ.create("MainHeizungWZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
             var btnHzWZAus = new CtrlButton();
-            btnHzWZAus.create("MainHeizungWZ", "500px", "305px", "ctrlbutton", "smaller", "cyan", "Zu",
-                "command", "",
-                "{send('command(Heizung,WZ,aus)'); document.getElementById('AdjTempHzWZ1').innerHTML='6.0';} "
-            );
+            btnHzWZAus.create("MainHeizungWZ", "500px", "305px", "ctrlbutton", "smaller", "cyan", "Zu", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,24898,SET_POINT_TEMPERATURE,5.0)');
+
+
             var btnHzWZAuf = new CtrlButton();
-            btnHzWZAuf.create("MainHeizungWZ", "500px", "410px", "ctrlbutton", "smaller", "cyan", "Auf",
-                "command", "",
-                "{send('command(Heizung,WZ,auf)'); document.getElementById('AdjTempHzWZ1').innerHTML='30.0';}"
-            );
+            btnHzWZAuf.create("MainHeizungWZ", "500px", "410px", "ctrlbutton", "smaller", "cyan", "Auf", "black",
+                "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,24898,SET_POINT_TEMPERATURE,23.0)');
         </script>
 
 
@@ -1095,30 +1096,30 @@
 
             var Rahmen1KZ = new Kachel();
             Rahmen1KZ.create("MainHzKZ", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
             var btnHzKZauto = new CtrlButton();
-            btnHzKZauto.create("MainHzKZ", "350px", "30px", "ctrlbutton", "smaller", "olive", "Automatik",
-                "command",
-                "",
-                "send('command(Heizung,KZ,auto)') ");
+            btnHzKZauto.create("MainHzKZ", "350px", "30px", "ctrlbutton", "smaller", "olive", "Automatik", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,0)');
+
             var btnHzKZman = new CtrlButton();
-            btnHzKZman.create("MainHzKZ", "350px", "135px", "ctrlbutton", "smaller", "olive", "Manual",
-                "command", "",
-                "send('command(Heizung,KZ,man)') ");
+            btnHzKZman.create("MainHzKZ", "350px", "135px", "ctrlbutton", "smaller", "olive", "Manual", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)');
 
 
             var Rahmen3KZ = new Kachel();
             Rahmen3KZ.create("MainHzKZ", "450px", "20px", "230px", "120px", "transparent", "Preset");
+
             var btnHzKZUrlaub = new CtrlButton();
-            btnHzKZUrlaub.create("MainHzKZ", "500px", "30px", "ctrlbutton", "smaller", "olive", "Urlaub",
-                "command", "",
-                "send('command(Heizung,KZ,urlaub)') ");
+            btnHzKZUrlaub.create("MainHzKZ", "500px", "30px", "ctrlbutton", "smaller", "olive", "Urlaub", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,2)');
+
             var btnHzKZParty = new CtrlButton();
-            btnHzKZParty.create("MainHzKZ", "500px", "135px", "ctrlbutton", "smaller", "olive", "Party",
-                "command", "",
-                "send('command(Heizung,KZ,party)') ");
+            btnHzKZParty.create("MainHzKZ", "500px", "135px", "ctrlbutton", "smaller", "olive", "Party", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,3)');
 
             var Rahmen2KZ = new Kachel();
             Rahmen2KZ.create("MainHzKZ", "300px", "295px", "270px", "120px", "transparent", "Control")
+
             var btnHzKZHeizen = new FontCtrlButton();
             btnHzKZHeizen.create("MainHzKZ", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen",
                 "command",
@@ -1131,16 +1132,16 @@
 
             var Rahmen4KZ = new Kachel();
             Rahmen4KZ.create("MainHzKZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
             var btnHzKZAus = new CtrlButton();
-            btnHzKZAus.create("MainHzKZ", "500px", "305px", "ctrlbutton", "smaller", "olive", "Aus", "command",
-                "",
-                "{send('command(Heizung,KZ,aus)'); document.getElementById('AdjTempHzKZ1').innerHTML='6.0';} "
-            );
+            btnHzKZAus.create("MainHzKZ", "500px", "305px", "ctrlbutton", "smaller", "olive", "Aus", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,17995,SET_POINT_TEMPERATURE,5.0)');
+
             var btnHzKZAuf = new CtrlButton();
-            btnHzKZAuf.create("MainHzKZ", "500px", "410px", "ctrlbutton", "smaller", "olive", "Auf", "command",
-                "",
-                "{send('command(Heizung,KZ,auf)'); document.getElementById('AdjTempHzKZ1').innerHTML='30.0';}"
-            );
+            btnHzKZAuf.create("MainHzKZ", "500px", "410px", "ctrlbutton", "smaller", "olive", "Auf", "black",
+                "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,17995,SET_POINT_TEMPERATURE,23.0)');
         </script>
         <!-- ------------------ Ctrl Area: Kinderzimmer - Heizung ------------------ -->
         <!--                id="MainHzKZCtrl"  class="HeizungCtrlKZ"                 -->
@@ -1201,37 +1202,35 @@
 
             var Rahmen1SZ = new Kachel();
             Rahmen1SZ.create("MainHzSZ", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
             var btnHzSZauto = new CtrlButton();
-            btnHzSZauto.create("MainHzSZ", "350px", "30px", "ctrlbutton", "smaller", "sandy", "Automatik",
-                "command",
-                "",
-                "send('command(Heizung,SZ,auto)') ");
+            btnHzSZauto.create("MainHzSZ", "350px", "30px", "ctrlbutton", "smaller", "sandy", "Automatik", "black",
+                "func", "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,0)');
+
             var btnHzSZman = new CtrlButton();
-            btnHzSZman.create("MainHzSZ", "350px", "135px", "ctrlbutton", "smaller", "sandy", "Manual",
-                "command", "",
-                "send('command(Heizung,SZ,man)') ");
-
-
-
+            btnHzSZman.create("MainHzSZ", "350px", "135px", "ctrlbutton", "smaller", "sandy", "Manual", "black",
+                "func", "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,1)');
 
             var Rahmen3SZ = new Kachel();
             Rahmen3SZ.create("MainHzSZ", "450px", "20px", "230px", "120px", "transparent", "Preset")
+
             var btnHzSZUrlaub = new CtrlButton();
-            btnHzSZUrlaub.create("MainHzSZ", "500px", "30px", "ctrlbutton", "smaller", "sandy", "Urlaub",
-                "command", "",
-                "send('command(Heizung,SZ,urlaub)') ");
+            btnHzSZUrlaub.create("MainHzSZ", "500px", "30px", "ctrlbutton", "smaller", "sandy", "Urlaub", "black",
+                "func", "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,2)');
+
             var btnHzSZParty = new CtrlButton();
-            btnHzSZParty.create("MainHzSZ", "500px", "135px", "ctrlbutton", "smaller", "sandy", "Party",
-                "command", "",
-                "send('command(Heizung,SZ,party)') ");
+            btnHzSZParty.create("MainHzSZ", "500px", "135px", "ctrlbutton", "smaller", "sandy", "Party", "black",
+                "func", "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,2)');
 
 
             var Rahmen2SZ = new Kachel();
             Rahmen2SZ.create("MainHzSZ", "300px", "295px", "270px", "120px", "transparent", "Control")
+
             var btnHzSZHeizen = new FontCtrlButton();
             btnHzSZHeizen.create("MainHzSZ", "sandy", "350px", "305px", "fa fa-temperature-high", "Heizen",
                 "command",
                 "send('command(Heizung,SZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+
             var btnHzSZAbsenken = new FontCtrlButton();
             btnHzSZAbsenken.create("MainHzSZ", "sandy", "350px", "435px", "fa fa-temperature-low", "Absenken",
                 "command",
@@ -1239,16 +1238,16 @@
 
             var Rahmen4SZ = new Kachel();
             Rahmen4SZ.create("MainHzSZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
             var btnHzSZAus = new CtrlButton();
-            btnHzSZAus.create("MainHzSZ", "500px", "305px", "ctrlbutton", "smaller", "sandy", "Zu", "command",
-                "",
-                "{send('command(Heizung,SZ,zu)'); document.getElementById('AdjTempHzSZ1').innerHTML='6.0';} "
-            );
+            btnHzSZAus.create("MainHzSZ", "500px", "305px", "ctrlbutton", "smaller", "sandy", "Zu", "black", "func", "",
+                'func(HM_WriteValueInteger,33241,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,33241,SET_POINT_TEMPERATURE,5.0)');
+
             var btnHzSZAuf = new CtrlButton();
-            btnHzSZAuf.create("MainHzSZ", "500px", "410px", "ctrlbutton", "smaller", "sandy", "Auf", "command",
-                "",
-                "{send('command(Heizung,SZ,auf)'); document.getElementById('AdjTempHzSZ1').innerHTML='30.0';}"
-            );
+            btnHzSZAuf.create("MainHzSZ", "500px", "410px", "ctrlbutton", "smaller", "sandy", "Auf", "black", "func",
+                "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,1)',
+                'func(HM_WriteValueInteger,33241,SET_POINT_TEMPERATURE,23.0)');
         </script>
         <!-- ------------------ Ctrl Area: Schlafzimmer - Heizung ------------------ -->
         <!--                 id="MainHzSZCtrl" class="HeizungCtrlSZ"                 -->
@@ -1311,30 +1310,30 @@
 
             var Rahmen1K = new Kachel();
             Rahmen1K.create("MainHzK", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
             var btnHzKauto = new CtrlButton();
-            btnHzKauto.create("MainHzK", "350px", "30px", "ctrlbutton", "smaller", "midgreen", "Automatik",
-                "command",
-                "", "send('command(Heizung,K,auto)') ");
+            btnHzKauto.create("MainHzK", "350px", "30px", "ctrlbutton", "smaller", "midgreen", "Automatik", "black",
+                "func", "", 'func(FHT_SetMode,13226,0)');
+
             var btnHzKman = new CtrlButton();
-            btnHzKman.create("MainHzK", "350px", "135px", "ctrlbutton", "smaller", "midgreen", "Manual",
-                "command", "",
-                "send('command(Heizung,K,man)') ");
+            btnHzKman.create("MainHzK", "350px", "135px", "ctrlbutton", "smaller", "midgreen", "Manual", "black",
+                "func", "", 'func(FHT_SetMode,13226,1)');
 
 
             var Rahmen3K = new Kachel();
             Rahmen3K.create("MainHzK", "450px", "20px", "230px", "120px", "transparent", "Preset");
+
             var btnHzKUrlaub = new CtrlButton();
-            btnHzKUrlaub.create("MainHzK", "500px", "30px", "ctrlbutton", "smaller", "midgreen", "Urlaub",
-                "command",
-                "",
-                "send('command(Heizung,K,urlaub)') ");
+            btnHzKUrlaub.create("MainHzK", "500px", "30px", "ctrlbutton", "smaller", "midgreen", "Urlaub", "black",
+                "func", "", 'func(FHT_SetMode,13226,2)');
+
             var btnHzKParty = new CtrlButton();
-            btnHzKParty.create("MainHzK", "500px", "135px", "ctrlbutton", "smaller", "midgreen", "Party",
-                "command", "",
-                "send('command(Heizung,K,party)') ");
+            btnHzKParty.create("MainHzK", "500px", "135px", "ctrlbutton", "smaller", "midgreen", "Party", "black",
+                "func", "", 'func(FHT_SetMode,13226,3)');
 
             var Rahmen2K = new Kachel();
             Rahmen2K.create("MainHzK", "300px", "295px", "270px", "120px", "transparent", "Control")
+
             var btnHzKHeizen = new FontCtrlButton();
             btnHzKHeizen.create("MainHzK", "midgreen", "350px", "305px", "fa fa-temperature-high", "Heizen",
                 "command",
@@ -1347,16 +1346,14 @@
 
             var Rahmen4K = new Kachel();
             Rahmen4K.create("MainHzK", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
             var btnHzKAus = new CtrlButton();
-            btnHzKAus.create("MainHzK", "500px", "305px", "ctrlbutton", "smaller", "midgreen", "Aus", "command",
-                "",
-                "{send('command(Heizung,K,aus)'); document.getElementById('AdjTempHzK1').innerHTML='6.0';} "
-            );
+            btnHzKAus.create("MainHzK", "500px", "305px", "ctrlbutton", "smaller", "midgreen", "Aus", "black",
+                "func", "", 'func(FHT_SetMode,13226,1)', 'func(FHT_SetTemperature,13226,6.0)');
+
             var btnHzKAuf = new CtrlButton();
-            btnHzKAuf.create("MainHzK", "500px", "410px", "ctrlbutton", "smaller", "midgreen", "Auf", "command",
-                "",
-                "{send('command(Heizung,K,auf)'); document.getElementById('AdjTempHzK1').innerHTML='30.0';}"
-            );
+            btnHzKAuf.create("MainHzK", "500px", "410px", "ctrlbutton", "smaller", "midgreen", "Auf", "black",
+                "func", "", 'func(FHT_SetMode,13226,1)', 'func(FHT_SetTemperature,13226,24.0)');
         </script>
         <!-- ------------------ Ctrl Area: Küche - Heizung ------------------ -->
         <!--              id="MainHzKCtrl"  class="HeizungCtrlK"              -->
@@ -1405,34 +1402,32 @@
 
 
             var btnRolloWZAuto = new CtrlButton();
-            btnRolloWZAuto.create("MainRolloWZ", "330px", "70px", "ctrlbutton", "smaller", "cyan", "Automatik",
-                "command", "", "send('command(Rollo,WZ,Auto)') ");
+            btnRolloWZAuto.create("MainRolloWZ", "330px", "70px", "ctrlbutton", "smaller", "cyan", "Automatik", "black",
+                "func", "", 'func(FSS_SetMode,18067,1)');
 
 
             var btnRolloWZMan = new CtrlButton();
-            btnRolloWZMan.create("MainRolloWZ", "330px", "175px", "ctrlbutton", "smaller", "cyan", "Manual",
-                "command",
-                "", "send('command(Rollo,WZ,Man)') ");
+            btnRolloWZMan.create("MainRolloWZ", "330px", "175px", "ctrlbutton", "smaller", "cyan", "Manual", "black",
+                "func", "", 'func(FSS_SetMode,18067,0)');
 
             var Rahmen1WZ = new Kachel();
             Rahmen1WZ.create("MainRolloWZ", "400px", "60px", "230px", "170px", "transparent", "Preset");
 
             var btnRolloWZ99 = new CtrlButton();
-            btnRolloWZ99.create("MainRolloWZ", "440px", "175px", "ctrlbutton", "smaller", "cyan", "99%",
-                "command", "",
-                "send('command(Rollo,WZ,nearlyClosed)') ");
+            btnRolloWZ99.create("MainRolloWZ", "440px", "175px", "ctrlbutton", "smaller", "cyan", "99%", "black",
+                "func", "", 'func(FSS_SetRollo,18067,99)');
+
             var btnRolloWZ75 = new CtrlButton();
-            btnRolloWZ75.create("MainRolloWZ", "500px", "175px", "ctrlbutton", "smaller", "cyan", "75%",
-                "command", "",
-                "send('command(Rollo,WZ,dark)') ");
+            btnRolloWZ75.create("MainRolloWZ", "500px", "175px", "ctrlbutton", "smaller", "cyan", "75%", "black",
+                "func", "", 'func(FSS_SetRollo,18067,75)');
+
             var btnRolloWZ50 = new CtrlButton();
-            btnRolloWZ50.create("MainRolloWZ", "440px", "72px", "ctrlbutton", "smaller", "cyan", "50%",
-                "command", "",
-                "send('command(Rollo,WZ,mid)') ");
+            btnRolloWZ50.create("MainRolloWZ", "440px", "72px", "ctrlbutton", "smaller", "cyan", "50%", "black",
+                "func", "", 'func(FSS_SetRollo,18067,50)');
+
             var btnRolloWZ25 = new CtrlButton();
-            btnRolloWZ25.create("MainRolloWZ", "500px", "72px", "ctrlbutton", "smaller", "cyan", "25%",
-                "command", "",
-                "send('command(Rollo,WZ,bright)') ");
+            btnRolloWZ25.create("MainRolloWZ", "500px", "72px", "ctrlbutton", "smaller", "cyan", "25%", "black",
+                "func", "", 'func(FSS_SetRollo,18067,25)');
 
             var Rahmen2WZ = new Kachel();
             Rahmen2WZ.create("MainRolloWZ", "290px", "355px", "150px", "280px", "transparent", "Control");
@@ -1507,34 +1502,31 @@
             Rahmen1B.create("MainRolloB", "290px", "60px", "230px", "100px", "transparent", "Mode");
 
             var btnRolloBAuto = new CtrlButton();
-            btnRolloBAuto.create("MainRolloB", "330px", "70px", "ctrlbutton", "smaller", "blue", "Automatik",
-                "command",
-                "", "send('command(Rollo,B,Auto)') ");
+            btnRolloBAuto.create("MainRolloB", "330px", "70px", "ctrlbutton", "smaller", "blue", "Automatik", "black",
+                "func", "", 'func(FSS_SetMode,24236,1)');
+
             var btnRolloBMan = new CtrlButton();
-            btnRolloBMan.create("MainRolloB", "330px", "175px", "ctrlbutton", "smaller", "blue", "Manual",
-                "command",
-                "",
-                "send('command(Rollo,B,Man)') ");
+            btnRolloBMan.create("MainRolloB", "330px", "175px", "ctrlbutton", "smaller", "blue", "Manual", "black",
+                "func", "", 'func(FSS_SetMode,24236,0)');
 
             var Rahmen2B = new Kachel();
             Rahmen2B.create("MainRolloB", "400px", "60px", "230px", "170px", "transparent", "Preset")
 
             var btnRolloB99 = new CtrlButton();
-            btnRolloB99.create("MainRolloB", "440px", "175px", "ctrlbutton", "smaller", "blue", "99%",
-                "command", "",
-                "send('command(Rollo,B,nearlyClosed)') ");
+            btnRolloB99.create("MainRolloB", "440px", "175px", "ctrlbutton", "smaller", "blue", "99%", "black",
+                "func", "", 'func(FSS_SetRollo,24236,99)');
+
             var btnRolloB75 = new CtrlButton();
-            btnRolloB75.create("MainRolloB", "500px", "175px", "ctrlbutton", "smaller", "blue", "75%",
-                "command", "",
-                "send('command(Rollo,B,dark)') ");
+            btnRolloB75.create("MainRolloB", "500px", "175px", "ctrlbutton", "smaller", "blue", "75%", "black",
+                "func", "", 'func(FSS_SetRollo,24236,75)');
+
             var btnRolloB50 = new CtrlButton();
-            btnRolloB50.create("MainRolloB", "440px", "72px", "ctrlbutton", "smaller", "blue", "50%", "command",
-                "",
-                "send('command(Rollo,B,mid)') ");
+            btnRolloB50.create("MainRolloB", "440px", "72px", "ctrlbutton", "smaller", "blue", "50%", "black",
+                "func", "", 'func(FSS_SetRollo,24236,50)');
+
             var btnRolloB25 = new CtrlButton();
-            btnRolloB25.create("MainRolloB", "500px", "72px", "ctrlbutton", "smaller", "blue", "25%", "command",
-                "",
-                "send('command(Rollo,B,bright)') ");
+            btnRolloB25.create("MainRolloB", "500px", "72px", "ctrlbutton", "smaller", "blue", "25%", "black",
+                "func", "", 'func(FSS_SetRollo,24236,25)');
 
             var Rahmen3B = new Kachel();
             Rahmen3B.create("MainRolloB", "290px", "355px", "150px", "280px", "transparent", "Control");
@@ -1610,31 +1602,31 @@
 
             var btnRolloKZAuto = new CtrlButton();
             btnRolloKZAuto.create("MainRolloKZ", "330px", "70px", "ctrlbutton", "smaller", "olive", "Automatik",
-                "command", "", "send('command(Rollo,KZ,Auto)') ");
+                "black",
+                "func", "", 'func(FSS_SetMode,43261,1)');
+
             var btnRolloKZMan = new CtrlButton();
-            btnRolloKZMan.create("MainRolloKZ", "330px", "175px", "ctrlbutton", "smaller", "olive", "Manual",
-                "command",
-                "", "send('command(Rollo,KZ,Man)') ");
+            btnRolloKZMan.create("MainRolloKZ", "330px", "175px", "ctrlbutton", "smaller", "olive", "Manual", "black",
+                "func", "", 'func(FSS_SetMode,43261,0)');
 
             var Rahmen2KZ = new Kachel();
             Rahmen2KZ.create("MainRolloKZ", "400px", "60px", "230px", "170px", "transparent", "Preset")
 
             var btnRolloKZ99 = new CtrlButton();
-            btnRolloKZ99.create("MainRolloKZ", "440px", "175px", "ctrlbutton", "smaller", "olive", "99%",
-                "command", "",
-                "send('command(Rollo,KZ,nearlyClosed)') ");
+            btnRolloKZ99.create("MainRolloKZ", "440px", "175px", "ctrlbutton", "smaller", "olive", "99%", "black",
+                "func", "", 'func(FSS_SetRollo,43261,99)');
+
             var btnRolloKZ75 = new CtrlButton();
-            btnRolloKZ75.create("MainRolloKZ", "500px", "175px", "ctrlbutton", "smaller", "olive", "75%",
-                "command", "",
-                "send('command(Rollo,KZ,dark)') ");
+            btnRolloKZ75.create("MainRolloKZ", "500px", "175px", "ctrlbutton", "smaller", "olive", "75%", "black",
+                "func", "", 'func(FSS_SetRollo,43261,75)');
+
             var btnRolloKZ50 = new CtrlButton();
-            btnRolloKZ50.create("MainRolloKZ", "440px", "72px", "ctrlbutton", "smaller", "olive", "50%",
-                "command", "",
-                "send('command(Rollo,KZ,mid)') ");
+            btnRolloKZ50.create("MainRolloKZ", "440px", "72px", "ctrlbutton", "smaller", "olive", "50%", "black",
+                "func", "", 'func(FSS_SetRollo,43261,50)');
+
             var btnRolloKZ25 = new CtrlButton();
-            btnRolloKZ25.create("MainRolloKZ", "500px", "72px", "ctrlbutton", "smaller", "olive", "25%",
-                "command", "",
-                "send('command(Rollo,KZ,bright)') ");
+            btnRolloKZ25.create("MainRolloKZ", "500px", "72px", "ctrlbutton", "smaller", "olive", "25%", "black",
+                "func", "", 'func(FSS_SetRollo,43261,25)');
 
 
             var Rahmen3KZ = new Kachel();
@@ -1708,34 +1700,33 @@
 
             var btnRolloKAuto = new CtrlButton();
             btnRolloKAuto.create("MainRolloK", "330px", "70px", "ctrlbutton", "smaller", "midgreen",
-                "Automatik",
-                "command", "", "send('command(Rollo,K,Auto)') ");
+                "Automatik", "black",
+                "func", "", 'func(FSS_SetMode,55245,1)');
+
             var btnRolloKMan = new CtrlButton();
-            btnRolloKMan.create("MainRolloK", "330px", "175px", "ctrlbutton", "smaller", "midgreen", "Manual",
-                "command",
-                "", "send('command(Rollo,K,Man)') ");
+            btnRolloKMan.create("MainRolloK", "330px", "175px", "ctrlbutton", "smaller", "midgreen", "Manual", "black",
+                "func", "", 'func(FSS_SetMode,55245,0)');
+
 
             var Rahmen2K = new Kachel();
             Rahmen2K.create("MainRolloK", "400px", "60px", "230px", "170px", "transparent", "Preset")
 
+
             var btnRolloK99 = new CtrlButton();
-            btnRolloK99.create("MainRolloK", "440px", "175px", "ctrlbutton", "smaller", "midgreen", "99%",
-                "command",
-                "",
-                "send('command(Rollo,K,nearlyClosed)') ");
+            btnRolloK99.create("MainRolloK", "440px", "175px", "ctrlbutton", "smaller", "midgreen", "99%", "black",
+                "func", "", 'func(FSS_SetRollo,55245,99)');
+
             var btnRolloK75 = new CtrlButton();
-            btnRolloK75.create("MainRolloK", "500px", "175px", "ctrlbutton", "smaller", "midgreen", "75%",
-                "command",
-                "",
-                "send('command(Rollo,K,dark)') ");
+            btnRolloK75.create("MainRolloK", "500px", "175px", "ctrlbutton", "smaller", "midgreen", "75%", "black",
+                "func", "", 'func(FSS_SetRollo,55245,75)');
+
             var btnRolloK50 = new CtrlButton();
-            btnRolloK50.create("MainRolloK", "440px", "72px", "ctrlbutton", "smaller", "midgreen", "50%",
-                "command", "",
-                "send('command(Rollo,K,mid)') ");
+            btnRolloK50.create("MainRolloK", "440px", "72px", "ctrlbutton", "smaller", "midgreen", "50%", "black",
+                "func", "", 'func(FSS_SetRollo,55245,50)');
+
             var btnRolloK25 = new CtrlButton();
-            btnRolloK25.create("MainRolloK", "500px", "72px", "ctrlbutton", "smaller", "midgreen", "25%",
-                "command", "",
-                "send('command(Rollo,K,bright)') ");
+            btnRolloK25.create("MainRolloK", "500px", "72px", "ctrlbutton", "smaller", "midgreen", "25%", "black",
+                "func", "", 'func(FSS_SetRollo,55245,25)');
 
             var Rahmen3K = new Kachel();
             Rahmen3K.create("MainRolloK", "290px", "355px", "150px", "280px", "transparent", "Control");
@@ -1808,32 +1799,31 @@
 
             var btnRolloSZAuto = new CtrlButton();
             btnRolloSZAuto.create("MainRolloSZ", "330px", "70px", "ctrlbutton", "smaller", "sandy", "Automatik",
-                "command", "", "send('command(Rollo,SZ,Auto)') ");
+                "black",
+                "func", "", 'func(FSS_SetMode,53809,1)');
+
             var btnRolloSZMan = new CtrlButton();
-            btnRolloSZMan.create("MainRolloSZ", "330px", "175px", "ctrlbutton", "smaller", "sandy", "Manual",
-                "command",
-                "", "send('command(Rollo,SZ,Man)') ");
+            btnRolloSZMan.create("MainRolloSZ", "330px", "175px", "ctrlbutton", "smaller", "sandy", "Manual", "black",
+                "func", "", 'func(FSS_SetMode,53809,0)');
 
             var Rahmen2SZ = new Kachel();
             Rahmen2SZ.create("MainRolloSZ", "400px", "60px", "230px", "170px", "transparent", "Preset");
 
             var btnRolloSZ99 = new CtrlButton();
-            btnRolloSZ99.create("MainRolloSZ", "440px", "175px", "ctrlbutton", "smaller", "sandy", "99%",
-                "command", "",
-                "send('command(Rollo,SZ,nearlyClosed)') ");
+            btnRolloSZ99.create("MainRolloSZ", "440px", "175px", "ctrlbutton", "smaller", "sandy", "99%", "black",
+                "func", "", 'func(FSS_SetRollo,53809,99)');
 
             var btnRolloSZ75 = new CtrlButton();
-            btnRolloSZ75.create("MainRolloSZ", "500px", "175px", "ctrlbutton", "smaller", "sandy", "75%",
-                "command", "",
-                "send('command(Rollo,SZ,dark)') ");
+            btnRolloSZ75.create("MainRolloSZ", "500px", "175px", "ctrlbutton", "smaller", "sandy", "75%", "black",
+                "func", "", 'func(FSS_SetRollo,53809,75)');
+
             var btnRolloSZ50 = new CtrlButton();
-            btnRolloSZ50.create("MainRolloSZ", "440px", "72px", "ctrlbutton", "smaller", "sandy", "50%",
-                "command", "",
-                "send('command(Rollo,SZ,mid)') ");
+            btnRolloSZ50.create("MainRolloSZ", "440px", "72px", "ctrlbutton", "smaller", "sandy", "50%", "black",
+                "func", "", 'func(FSS_SetRollo,53809,50)');
+
             var btnRolloSZ25 = new CtrlButton();
-            btnRolloSZ25.create("MainRolloSZ", "500px", "72px", "ctrlbutton", "smaller", "sandy", "25%",
-                "command", "",
-                "send('command(Rollo,SZ,bright)') ");
+            btnRolloSZ25.create("MainRolloSZ", "500px", "72px", "ctrlbutton", "smaller", "sandy", "25%", "black",
+                "func", "", 'func(FSS_SetRollo,53809,25)');
 
             var Rahmen3SZ = new Kachel();
             Rahmen3SZ.create("MainRolloSZ", "290px", "355px", "150px", "280px", "transparent", "Control");
@@ -2152,16 +2142,16 @@
 
             var CtrlBtnAlarmActive = new CtrlButton();
             CtrlBtnAlarmActive.create("MainSecCode", "500px", "10px", "ctrlbutton", "normal", "red",
-                "activate Alarm",
-                "command", "", "send('command(security,AA,activate)') ");
+                "activate Alarm", "black",
+                "func", "", 'func(A_activateSecAlarm,18694)');
 
             var CtrlBtnShowAlarmList = new CtrlButton();
             CtrlBtnShowAlarmList.create("MainSecCode", "500px", "200px", "ctrlbutton", "normal", "red",
-                "Alarm List",
+                "Alarm List", "black",
                 "command", "", "showAlarmList()");
 
             var CtrlBtnShowkeypad = new CtrlButton()
-            CtrlBtnShowkeypad.create("MainSecCode", "500px", "390px", "ctrlbutton", "normal", "red", "KeyPad",
+            CtrlBtnShowkeypad.create("MainSecCode", "500px", "390px", "ctrlbutton", "normal", "red", "KeyPad", "black",
                 "command", "", "showkeypad()");
         </script>
 
@@ -2489,13 +2479,12 @@
             RahmenFK.create("MainFilter", "370px", "150px", "300px", "170px", "transparent", "Filter SET");
 
             var btnFilterNeu = new CtrlButton();
-            btnFilterNeu.create("MainFilter", "410px", "220px", "ctrlbutton", "normal", "cyan", "Neuer Filter",
-                "command", "", "send('command(Brita,Filter,new)')");
+            btnFilterNeu.create("MainFilter", "410px", "220px", "ctrlbutton", "normal", "cyan", "Neuer Filter", "black",
+                "func", "", 'func(Brita_setNewDate,24507)');
 
             var btnFilterInc = new CtrlButton();
-            btnFilterInc.create("MainFilter", "470px", "220px", "ctrlbutton", "normal", "cyan", "Neue Füllung",
-                "command",
-                "", "send('command(Brita,Fill,inc)')");
+            btnFilterInc.create("MainFilter", "470px", "220px", "ctrlbutton", "normal", "cyan", "Neue Füllung", "black",
+                "func", "", 'func(Brita_incFill,24507)');
         </script>
 
         <!--  ************************          FilterCtrl     ************************      -->
@@ -2681,11 +2670,11 @@
                 "60px", "", "", 'func(KR_prevRezept,54833)');
 
             var CtrlBtnRezeptList = new CtrlButton();
-            CtrlBtnRezeptList.create("MainRezepte", "70vh", "22%", "ctrlbutton", "big", "midgreen", "Rezepte",
+            CtrlBtnRezeptList.create("MainRezepte", "70vh", "22%", "ctrlbutton", "big", "midgreen", "Rezepte", "black",
                 "ctrlWindow", "MainRezepteCtrlList");
 
             var CtrlBtnZutaten = new CtrlButton();
-            CtrlBtnZutaten.create("MainRezepte", "70vh", "53%", "ctrlbutton", "big", "midgreen", "Zutaten",
+            CtrlBtnZutaten.create("MainRezepte", "70vh", "53%", "ctrlbutton", "big", "midgreen", "Zutaten", "black",
                 "ctrlWindow", "MainRezepteCtrl");
 
             var FontBtnRR = new FontButton();

@@ -129,16 +129,16 @@ class ipsbuffer {
     this.ips.ID26003 = ""; //TV Source 24408
     this.ips.ID35428 = ""; //TV SourceList 45960
     this.ips.ID16753 = ""; //Denon Server Name
-    this.ips.ID32160 = ""; //SZ Sonos Artist
-    this.ips.ID23875 = ""; //SZ Sonos Title
-    this.ips.ID38320 = ""; //SZ Sonos Album
-    this.ips.ID36157 = ""; //SZ Sonos Volume
-    this.ips.ID24061 = ""; //SZ Sonos Mute
-    this.ips.ID44467 = ""; //SZ Sonos Loudnes
-    this.ips.ID55859 = ""; //SZ Sonos Bass
-    this.ips.ID29767 = ""; //SZ Sonos Treble
-    this.ips.ID57771 = ""; //SZ Sonos Playmode
-    this.ips.ID35731 = ""; //SZ Sonos Cover image  
+    this.ips.ID29545 = ""; //SZ Sonos Artist
+    this.ips.ID56317 = ""; //SZ Sonos Title
+    this.ips.ID37839 = ""; //SZ Sonos Album
+    this.ips.ID53465 = ""; //SZ Sonos Volume
+    this.ips.ID50128 = ""; //SZ Sonos Mute
+    this.ips.ID43872 = ""; //SZ Sonos Loudnes
+    this.ips.ID11408 = ""; //SZ Sonos Bass
+    this.ips.ID13271 = ""; //SZ Sonos Treble
+    this.ips.ID53064 = ""; //SZ Sonos Playmode
+    this.ips.ID12748 = ""; //SZ Sonos Cover image  
     this.ips.ID57135 = ""; //ArtisPicLastFM - Denon
     this.ips.ID30505 = ""; //DIDL Artist - Denon
     this.ips.ID17922 = ""; //DIDL Title - Denon
@@ -1022,7 +1022,7 @@ function Heizung() {
   iHzKZ.update(ipsObj.sym[5]);
   HzCtrlKZ.update(ipsObj.sym[35], ipsObj.sym[34], ipsObj.sym[235]);
 
-  DisModeHzKZCtrl.update(ipsObj.sym[33]);
+  DisModeHzKZCtrl.update(ipsObj.ips.ID34300);
   DisTempHzKZCtrl.update(ipsObj.sym[1], 1);
   DisPosHzKZCtrl.update(ipsObj.sym[5]);
   DisHumidKZCtrl.update(ipsObj.sym[10]);
