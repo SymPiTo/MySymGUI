@@ -2593,18 +2593,21 @@ class TextScrollBox {
         this.ID = "";
         this.inhalt = "";
         this.logOn = false;
+        this.b = "450px";
+        this.h = "450px";
     }
 
-    create(ParentID, posTop, posLeft) {
-
+    create(ParentID, posTop, posLeft, b = "450px", h = "450px") {
+        this.b = b;
+        this.h = h;
         var elem = document.createElement("textarea");
         elem.className = "AList";
         elem.style.position = "absolute";
         elem.style.left = posLeft;
         elem.style.top = posTop;
         elem.style.resize = "none";
-        elem.style.width = "450px";
-        elem.style.height = "0px";
+        elem.style.width = b;
+        elem.style.height = h;
 
         this.ID = elem;
 
@@ -2664,7 +2667,7 @@ class TextScrollBox {
     }
 
     maximize() {
-        this.ID.style.height = "450px";
+        this.ID.style.height = this.h;
     }
 }
 

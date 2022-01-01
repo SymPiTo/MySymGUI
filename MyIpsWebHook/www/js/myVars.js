@@ -1689,10 +1689,13 @@ function updateValues() {
 
 
   //<!-- ******************** Web Socket Server   **************************  -->
-  DisWSSCL1.update(ipsObj.sym[125]);
-  DisWSSCL2.update(ipsObj.sym[126]);
-  DisWSSCL3.update(ipsObj.sym[127]);
-  DisWSSCL4.update(ipsObj.sym[128]);
+
+    DisWSSCL1.update(ipsObj.sym[125]);
+    DisWSSCL2.update(ipsObj.sym[126]);
+    DisWSSCL3.update(ipsObj.sym[127]);
+    DisWSSCL4.update(ipsObj.sym[128]);
+    
+
 
   //<!-- ******************** Wetter   **************************  -->
   if (document.getElementById("MainWetterB")) {
