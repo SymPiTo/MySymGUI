@@ -840,7 +840,7 @@
             var OVwindowSec = new Area();
             OVwindowSec.createOverview("MenuSecOV", "bgRed");
             var img = document.createElement('img');
-            img.src = 'images/Balkon.jpg';
+            img.src = 'images/Balkon.webp';
             document.getElementById('MenuBOV').appendChild(img);
             img.height = 570;
             img.width = 620;
@@ -1012,13 +1012,16 @@
             Rahmen2WZ.create("MainHeizungWZ", "300px", "295px", "270px", "120px", "transparent", "Control")
             var btnHzWZHeizen = new FontCtrlButton();
             btnHzWZHeizen.create("MainHeizungWZ", "cyan", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "command",
-                "send('command(Heizung,WZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+                "func",
+                'func(HM_WriteValueFloat,24898,SET_POINT_TEMPERATURE,22.0)', "", "120px", "50px", "black", "19px",
+                "red");
+
             var btnHzWZAbsenken = new FontCtrlButton();
             btnHzWZAbsenken.create("MainHeizungWZ", "cyan", "350px", "435px", "fa fa-temperature-low",
                 "Absenken",
-                "command",
-                "send('command(Heizung,WZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
+                "func",
+                'func(HM_WriteValueFloat,24898,SET_POINT_TEMPERATURE,16.0)', "", "120px", "50px", "black", "19px",
+                "blue");
 
             var Rahmen4WZ = new Kachel();
             Rahmen4WZ.create("MainHeizungWZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
@@ -1125,12 +1128,15 @@
 
             var btnHzKZHeizen = new FontCtrlButton();
             btnHzKZHeizen.create("MainHzKZ", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "command",
-                "send('command(Heizung,KZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+                "func",
+                'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,22.0)', "", "120px", "50px", "black", "19px",
+                "red");
+
             var btnHzKZAbsenken = new FontCtrlButton();
             btnHzKZAbsenken.create("MainHzKZ", "olive", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "command",
-                "send('command(Heizung,KZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
+                "func",
+                'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,16.0)', "", "120px", "50px", "black", "19px",
+                "blue");
 
 
             var Rahmen4KZ = new Kachel();
@@ -1231,13 +1237,15 @@
 
             var btnHzSZHeizen = new FontCtrlButton();
             btnHzSZHeizen.create("MainHzSZ", "sandy", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "command",
-                "send('command(Heizung,SZ,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+                "func",
+                'func(HM_WriteValueFloat,33241,SET_POINT_TEMPERATURE,22.0)', "", "120px", "50px", "black", "19px",
+                "red");
 
             var btnHzSZAbsenken = new FontCtrlButton();
             btnHzSZAbsenken.create("MainHzSZ", "sandy", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "command",
-                "send('command(Heizung,SZ,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
+                "func",
+                'func(HM_WriteValueFloat,33241,SET_POINT_TEMPERATURE,16.0)', "", "120px", "50px", "black", "19px",
+                "blue");
 
             var Rahmen4SZ = new Kachel();
             Rahmen4SZ.create("MainHzSZ", "450px", "295px", "230px", "120px", "transparent", "End Position")
@@ -1339,12 +1347,13 @@
 
             var btnHzKHeizen = new FontCtrlButton();
             btnHzKHeizen.create("MainHzK", "midgreen", "350px", "305px", "fa fa-temperature-high", "Heizen",
-                "command",
-                "send('command(Heizung,K,heizen)') ", "", "120px", "50px", "black", "19px", "red");
+                "func",
+                'func(FHT_SetTemperature,13226,22.0)', "", "120px", "50px", "black", "19px", "red");
+
             var btnHzKAbsenken = new FontCtrlButton();
             btnHzKAbsenken.create("MainHzK", "midgreen", "350px", "435px", "fa fa-temperature-low", "Absenken",
-                "command",
-                "send('command(Heizung,K,absenken)') ", "", "120px", "50px", "black", "19px", "blue");
+                "func",
+                'func(FHT_SetTemperature,13226,16.0)', "", "120px", "50px", "black", "19px", "blue");
 
 
             var Rahmen4K = new Kachel();
@@ -1441,17 +1450,17 @@
 
             var btnRolloWZHoch = new FontCtrlButton();
             btnRolloWZHoch.create("MainRolloWZ", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "command",
-                "send('command(Rollo,WZ,up)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloUp,18067)', "", "120px", "50px", "black", "22px", "black");
 
             var btnRolloWZStop = new FontCtrlButton();
-            btnRolloWZStop.create("MainRolloWZ", "cyan", "415px", "370px", "fa fa-stop", "Halt", "command",
-                "send('command(Rollo,WZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloWZStop.create("MainRolloWZ", "cyan", "415px", "370px", "fa fa-stop", "Halt", "func",
+                'func(FSS_SetRolloStop,18067)', "", "120px", "50px", "black", "22px", "black");
 
             var btnRolloWZRunter = new FontCtrlButton();
             btnRolloWZRunter.create("MainRolloWZ", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "command",
-                "send('command(Rollo,WZ,down)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloDown,18067)', "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1535,15 +1544,17 @@
             Rahmen3B.create("MainRolloB", "290px", "355px", "150px", "280px", "transparent", "Control");
 
             var btnRolloBHoch = new FontCtrlButton();
-            btnRolloBHoch.create("MainRolloB", "blue", "330px", "370px", "fa fa-chevron-up", "Hoch", "command",
-                "send('command(Rollo,B,up)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloBHoch.create("MainRolloB", "blue", "330px", "370px", "fa fa-chevron-up", "Hoch", "func",
+                'func(FSS_SetRolloUp,24236)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloBStop = new FontCtrlButton();
-            btnRolloBStop.create("MainRolloB", "blue", "415px", "370px", "fa fa-stop", "Halt", "command",
-                "send('command(Rollo,B,stop)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloBStop.create("MainRolloB", "blue", "415px", "370px", "fa fa-stop", "Halt", "func",
+                'func(FSS_SetRolloStop,24236)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloBRunter = new FontCtrlButton();
             btnRolloBRunter.create("MainRolloB", "blue", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "command",
-                "send('command(Rollo,B,down)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloDown,24236)', "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1637,15 +1648,17 @@
 
             var btnRolloKZHoch = new FontCtrlButton();
             btnRolloKZHoch.create("MainRolloKZ", "olive", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "command",
-                "send('command(Rollo,KZ,up)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloUp,43261)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloKZStop = new FontCtrlButton();
-            btnRolloKZStop.create("MainRolloKZ", "olive", "415px", "370px", "fa fa-stop", "Halt", "command",
-                "send('command(Rollo,KZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloKZStop.create("MainRolloKZ", "olive", "415px", "370px", "fa fa-stop", "Halt", "func",
+                'func(FSS_SetRolloStop,43261)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloKZRunter = new FontCtrlButton();
             btnRolloKZRunter.create("MainRolloKZ", "olive", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "command",
-                "send('command(Rollo,KZ,down)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloDown,43261)', "", "120px", "50px", "black", "22px", "black");
         </script>
 
 
@@ -1736,15 +1749,17 @@
 
             var btnRolloKHoch = new FontCtrlButton();
             btnRolloKHoch.create("MainRolloK", "midgreen", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "command",
-                "send('command(Rollo,K,up)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloUp,55245)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloKStop = new FontCtrlButton();
-            btnRolloKStop.create("MainRolloK", "midgreen", "415px", "370px", "fa fa-stop", "Halt", "command",
-                "send('command(Rollo,K,stop)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloKStop.create("MainRolloK", "midgreen", "415px", "370px", "fa fa-stop", "Halt", "func",
+                'func(FSS_SetRolloStop,55245)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloKRunter = new FontCtrlButton();
             btnRolloKRunter.create("MainRolloK", "midgreen", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "command",
-                "send('command(Rollo,K,down)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloDown,55245)', "", "120px", "50px", "black", "22px", "black");
         </script>
 
         <!-- ************************** Rolladen Ctrl Kueche ************************** -->
@@ -1834,15 +1849,17 @@
 
             var btnRolloSZHoch = new FontCtrlButton();
             btnRolloSZHoch.create("MainRolloSZ", "sandy", "330px", "370px", "fa fa-chevron-up", "Hoch",
-                "command",
-                "send('command(Rollo,SZ,up)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloUp,53809)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloSZStop = new FontCtrlButton();
-            btnRolloSZStop.create("MainRolloSZ", "sandy", "415px", "370px", "fa fa-stop", "Halt", "command",
-                "send('command(Rollo,SZ,stop)') ", "", "120px", "50px", "black", "22px", "black");
+            btnRolloSZStop.create("MainRolloSZ", "sandy", "415px", "370px", "fa fa-stop", "Halt", "func",
+                'func(FSS_SetRolloStop,53809)', "", "120px", "50px", "black", "22px", "black");
+
             var btnRolloSZRunter = new FontCtrlButton();
             btnRolloSZRunter.create("MainRolloSZ", "sandy", "500px", "370px", "fa fa-chevron-down", "Runter",
-                "command",
-                "send('command(Rollo,SZ,down)') ", "", "120px", "50px", "black", "22px", "black");
+                "func",
+                'func(FSS_SetRolloDown,53809)', "", "120px", "50px", "black", "22px", "black");
         </script>
 
         <!-- ************************** Rolladen Ctrl Schlafzimmer ************************** -->

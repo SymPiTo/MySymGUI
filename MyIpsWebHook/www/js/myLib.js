@@ -2226,6 +2226,7 @@ class analogBar {
 class FontCtrlButton {
     constructor() {
         this.ID = "";
+        this.cmd = [];
 
         //optionale Parameter
         this.b = "200px";
@@ -2233,6 +2234,7 @@ class FontCtrlButton {
         this.textfarbe = "black";
         this.textgr = "20px";
         this.textfarbeAF = "black";
+
     }
     create(ParentID, color, posTop, posLeft, symbol, text, ctrltype, cmd, ctrlWin, ...param) {
         if (param.length > 1) {
@@ -2241,6 +2243,10 @@ class FontCtrlButton {
             this.textfarbe = param[2];
             this.textgr = param[3];
             this.textfarbeAF = param[4];
+        }
+        if (param.length > 5) {
+            this.cmd[1] = param[5];
+            this.cmd[2] = param[6];
         }
         var container = document.createElement("div");
         container.className = "ctrlbutton";
@@ -2259,6 +2265,11 @@ class FontCtrlButton {
         switch (ctrltype) {
             case "command":
                 container.setAttribute("onclick", cmd);
+                break;
+            case "func":
+                this.cmd[0] = cmd;
+                var command =JSON.stringify(this.cmd);
+                container.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
                 break;
             case "ctrlWindow":
                 container.onclick = function () {
@@ -2302,6 +2313,21 @@ class FontCtrlButton {
                     send(cmd);
                 }
                 break;
+            case "CtrlFunc":
+                container.onclick = function () {
+                    // alle Ctrl auf 0px verkleinern 
+                    var Ctrl = document.getElementsByTagName("Ctrl");
+                    var MCtrlWindow = Array.from(Ctrl);
+                    MCtrlWindow.forEach(function (element) {
+                        var a = element.className;
+                        document.getElementsByClassName(a)[0].style.width = "0px";
+                    });
+                    // ctrlWindow umschalten
+                    document.getElementsByClassName(ctrlWin)[0].style.width = "26vw";
+                    his.cmd[0] = cmd;
+                    var command =JSON.stringify(this.cmd);
+                    send(JSON.stringify(command));
+                }
             default:
                 container.setAttribute("onclick", cmd);
         }
@@ -4813,13 +4839,14 @@ class FontButton {
         this.ID1 = "";
         this.b = "";
         this.h = "";
+        this.cmd = [];
 
         // options
         this.textSize = "28px";
         this.textColor = "black";
         this.cmd2 = "";
         this.cmd3="";
-        this.cmd = [];
+         
 
     }
     create(ParentID, btnClass, color, posTop, posLeft, symbol, b, h, ts="28px", tc="black", cmd1, ...param) {
