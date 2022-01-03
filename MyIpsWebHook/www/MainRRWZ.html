@@ -29,36 +29,34 @@
 
     var btnRRPause = new CtrlButton();
     btnRRPause.create("MainRRWZ", "310px", "30px", "ctrlbutton", "smaller", "cyan", "Pause", "black",
-        "command", "", "send('IPS_RunScript(19621)') ");
+        "func", "", 'func(IPS_RunScript,19621)');
 
     var bbtnRRLocate = new CtrlButton();
-    bbtnRRLocate.create("MainRRWZ", "310px", "135px", "ctrlbutton", "smaller", "cyan", "Locate", "black", "command",
-        "", "send('IPS_RunScript(25879)')");
+    bbtnRRLocate.create("MainRRWZ", "310px", "135px", "ctrlbutton", "smaller", "cyan", "Locate", "black", "func", "",
+        'func(IPS_RunScript,25879)');
 
     var bbtnRRLoad = new CtrlButton();
-    bbtnRRLoad.create("MainRRWZ", "380px", "45px", "ctrlbutton", "normal", "cyan", "go to base", "black", "command",
-        "", "send('IPS_RunScript(16629)')");
-
+    bbtnRRLoad.create("MainRRWZ", "380px", "45px", "ctrlbutton", "normal", "cyan", "go to base", "black", "func", "",
+        'func(IPS_RunScript,16629)');
 
     var Rahmen3WZ = new Kachel();
     Rahmen3WZ.create("MainRRWZ", "270px", "280px", "230px", "300px", "transparent", "Reset");
 
     var btnRRFilterReset = new CtrlButton();
     btnRRFilterReset.create("MainRRWZ", "310px", "310px", "ctrlbutton", "normal", "cyan", "Reset Filter", "black",
-        "command", "", "send('IPS_RunScript(23889)') ");
+        "func", "", 'func(IPS_RunScript,23889)');
 
     var btnMainbrushReset = new CtrlButton();
     btnMainbrushReset.create("MainRRWZ", "375px", "310px", "ctrlbutton", "normal", "cyan", "Reset Mainbrush", "black",
-        "command",
-        "", "send('IPS_RunScript(52712)') ");
+        "func", "", 'func(IPS_RunScript,52712)');
 
     var btnSensorReset = new CtrlButton();
-    btnSensorReset.create("MainRRWZ", "440px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sensor", "black",
-        "command", "", "send('IPS_RunScript(17714)') ");
+    btnSensorReset.create("MainRRWZ", "440px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sensor", "black", "func",
+        "", 'func(IPS_RunScript,17714)');
 
     var btnSideBrushReset = new CtrlButton();
     btnSideBrushReset.create("MainRRWZ", "505px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sidebrush", "black",
-        "command", "", "send('IPS_RunScript31673)') ");
+        "func", "", 'func(IPS_RunScript,31673)');
 </script>
 
 

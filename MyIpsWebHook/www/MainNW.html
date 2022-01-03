@@ -39,16 +39,17 @@
      var labelMyPC = new label();
      labelMyPC.create("MainNW", "10%", "65%", "18px", "white", "My WorkStation");
 
-     var FontBtnMyPC = new FontButtonNew();
+     var FontBtnMyPC = new FontButton();
      FontBtnMyPC.create("MainNW", "fontbutton", "cyanLight", "10vh", "80%", "fa fa-power-off", "60px", "60px",
-         "send('command(WoL,MyPC,on)')");
+         "32px", "", 'func(IPS_RunScript,42590)');
+
 
      var lablabelABBPCelABBPC = new label();
      labelMyPC.create("MainNW", "20%", "65%", "18px", "white", "ABB Computer");
 
-     var FontBtnABBPC = new FontButtonNew();
-     FontBtnABBPC.create("MainNW", "fontbutton", "cyanLight", "20vh", "80%", "fa fa-power-off", "60px", "60px",
-         "send('command(WoL,ABBPC,on)')");
+     var FontBtnABBPC = new FontButton();
+     FontBtnABBPC.create("MainNW", "fontbutton", "cyanLight", "20vh", "80%", "fa fa-power-off", "60px", "60px", "32px",
+         "", 'func(IPS_RunScript,42590)');
  </script>
 
  <!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->

@@ -1315,16 +1315,17 @@ class CheckBoxCtrlBtn {
     constructor() {
         this.ID = "";
         this.color = "";
-
+        this.cmd = [];
         //optionale Parameter
         this.textColor1 = "black";
         this.textColor2 = "black";
     }
 
-    create(ParentID, farbe, posTop, posLeft, text, sendCmd, ...param) {
+    create(ParentID, farbe, posTop, posLeft, text, cmd0, cmd1,  ...param) {
         var c1 = this.textColor1;
         var c2 = this.textColor2;
         this.color = farbe;
+         
         var elem1 = document.createElement("label");
         elem1.className = "CBcontainer";
         elem1.classList.add(farbe);
@@ -1348,18 +1349,19 @@ class CheckBoxCtrlBtn {
         document.getElementById(ParentID).appendChild(elem1);
 
         elem2.addEventListener('change', function () {
+            var befehl = [];
+            
             if (this.checked) {
                 // Checkbox is checked..
                 elem1.style.color = c1;
                 elem2.style.color = c1;
-                //var n = sendCmd.search("X"); 
-                var res = sendCmd.replace("X", "on");
-                send(res);
+                befehl[0] = cmd1; 
+                send(JSON.stringify(befehl));
             } else {
                 // Checkbox is not checked..
                 elem1.style.color = c2;
-                var res = sendCmd.replace("X", "off");
-                send(res);
+                befehl[0] = cmd0;                 
+                send(JSON.stringify(befehl));
             }
         });
     }
@@ -1551,7 +1553,9 @@ class GlideButton {
 
         //elem2.src = "images/" + image;
         elem2.src = image;
-
+        elem2.style.position = "relative";
+        elem2.style.left = "5px";
+        
         elem1.append(elem2);
 
         var elem2a = document.createElement("div");
@@ -1622,9 +1626,11 @@ class KeyPad {
     constructor() {
         this.value1 = "";
         this.ID = " ";
+         
     }
 
-    create(ParentID, ObjID, Device, color, size, posTop, posLeft) {
+    create(ParentID, Device, color, size, posTop, posLeft, cmd0) {
+       
         var elem = document.createElement("div");
         elem.style.position = "absolute";
         elem.style.left = posLeft;
@@ -1670,9 +1676,10 @@ class KeyPad {
             let b1 = 70 * size;
             taste.style.width = a1 + "px";
             taste.style.height = b1 + "px";
-            taste.setAttribute("onclick", "send('command(" + Device + ",keyNo," + i + ")')");
+            taste.setAttribute("onclick", "passkey(" + i + ")");
             taste.innerHTML = i;
             Zcontainer.append(taste);
+ 
         }
 
 
@@ -1686,7 +1693,7 @@ class KeyPad {
         let b2 = 70 * size;
         reply.style.width = a2 + "px";
         reply.style.height = b2 + "px";
-        reply.setAttribute("onclick", "send('command(" + Device + ",key,cancel)')");
+        reply.setAttribute("onclick", "passkeyrepeat()");
         Zcontainer.append(reply);
 
         var replyA = document.createElement("span");
@@ -1707,7 +1714,7 @@ class KeyPad {
         let b3 = 70 * size;
         taste9.style.width = a3 + "px";
         taste9.style.height = b3 + "px";
-        taste9.setAttribute("onclick", "send('command(" + Device + ",keyNo,9)')");
+        taste9.setAttribute("onclick", "passkey(9)");
         taste9.innerHTML = "9";
         Zcontainer.append(taste9);
 
@@ -1721,7 +1728,8 @@ class KeyPad {
         let b4 = 70 * size;
         enter.style.width = a4 + "px";
         enter.style.height = b4 + "px";
-        enter.setAttribute("onclick", "send('command(" + Device + ",key,enter)')");
+        enter.setAttribute("onclick", "sendpassword('" + cmd0 + "')" );
+ 
         Zcontainer.append(enter);
 
         var enterA = document.createElement("span");
@@ -1734,7 +1742,10 @@ class KeyPad {
 
         document.getElementById(ParentID).appendChild(elem);
 
+
+
     }
+
     update(value) {
         if (value != "") {
             this.value1 = value;
@@ -1743,6 +1754,7 @@ class KeyPad {
             this.ID.innerHTML = code.substr(0, n);
         }
     };
+    
 
 
 }
@@ -2011,7 +2023,8 @@ class Kachel {
 class RolloCtrl {
     constructor() {
         this.ID = "";
-
+        this.cmdLeft = [];
+        this.cmdRight = [];
 
         //optionale Parameter
         this.b = "202px";
@@ -2024,9 +2037,13 @@ class RolloCtrl {
         this.AnzSchriftgr = "30px"
 
         this.unit = "%";
+
     }
-    create(ParentID, posTop, posLeft, color, title, room, ...param) {
+    create(ParentID, posTop, posLeft, color, title, cmdL1, cmdR1, ...param) {
         this.color = color;
+        this.cmdLeft[0] = cmdL1;
+        this.cmdRight[0] = cmdR1;
+
         if (param.length > 1) {
             this.b = param[0];
             this.h = param[1];
@@ -2087,8 +2104,10 @@ class RolloCtrl {
         btnLeft.style.display = "flex";
         btnLeft.style.alignItems = "center";
         btnLeft.style.justifyContent = "center";
-        var cmd4 = "send('command(Rollo," + room + ",StepUp)')"
-        btnLeft.setAttribute("onclick", cmd4);
+
+        var commandLeft =JSON.stringify(this.cmdLeft);
+        btnLeft.setAttribute("onclick",  'send('+ JSON.stringify(commandLeft) + ')');
+
         var btn4Sign = document.createElement("span");
         btn4Sign.className = "fa fa-plus";
         btn4Sign.style.fontSize = "30px";
@@ -2105,8 +2124,10 @@ class RolloCtrl {
         btnRight.style.display = "flex";
         btnRight.style.alignItems = "center";
         btnRight.style.justifyContent = "center";
-        var cmd5 = "send('command(Rollo," + room + ",StepDown)')"
-        btnRight.setAttribute("onclick", cmd5);
+
+        var commandRight =JSON.stringify(this.cmdRight);
+        btnRight.setAttribute("onclick",  'send('+ JSON.stringify(commandRight) + ')');
+
         var btn5Sign = document.createElement("span");
         btn5Sign.className = "fa fa-minus";
         btn5Sign.style.fontSize = "30px";
@@ -3086,8 +3107,8 @@ class CtrlTile {
         this.id3 = "";
         this.id4 = "";
         this.id5 = "";
-        this.cmd1 = "";
-        this.cmd2 = "";
+        this.cmdLeft = [];
+        this.cmdRight = [];
         // optionale Parameter
         this.state0 = "off";
         this.state1 = "on";
@@ -3099,7 +3120,10 @@ class CtrlTile {
         this.btnTextColor1 = "lime";
     }
 
-    create(ParentID, posTop, posLeft, label, color, tilecolor, BaseIcon, cmd1, cmd2, ...param) {
+    create(ParentID, posTop, posLeft, label, color, tilecolor, BaseIcon, cmdL, cmdR, ...param) {
+        this.cmdLeft[0] = cmdL;
+        this.cmdRight[0] = cmdR;
+
         if (param.length > 0) {
             this.state0 = param[0];
             this.state1 = param[1];
@@ -3176,8 +3200,10 @@ class CtrlTile {
         elem2.classList.add(this.size, this.color);
         elem2.innerHTML = this.state0;
         this.id4 = elem2;
-        this.cmd1 = cmd1;
-        elem2.setAttribute("onclick", this.cmd1);
+
+        var commandLeft =JSON.stringify(this.cmdLeft);
+        elem2.setAttribute("onclick",  'send('+ JSON.stringify(commandLeft) + ')');
+
         elem1.append(elem2);
 
         var elem4 = document.createElement("div");
@@ -3185,8 +3211,10 @@ class CtrlTile {
         elem4.classList.add(this.size, this.color);
         elem4.innerHTML = this.state1;
         this.id5 = elem4;
-        this.cmd2 = cmd2;
-        elem4.setAttribute("onclick", this.cmd2);
+
+        var commandRight =JSON.stringify(this.cmdRight);
+        elem4.setAttribute("onclick",  'send('+ JSON.stringify(commandRight) + ')');
+
         elem1.append(elem4);
 
         document.getElementById(ParentID).appendChild(elem);

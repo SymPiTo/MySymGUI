@@ -13,8 +13,10 @@
 
     var rahm = new Rahmen();
     rahm.create("MainCeolWZ", "272px", "24px", "73px", "600px", "DisplayBlue");
+
     var CeolVol = new TransVarDisplay();
     CeolVol.create("MainCeolWZ", "280px", "0%", "lime", "28px", "Volume", "");
+
     var CeolTrack = new TransVarDisplay();
     CeolTrack.create("MainCeolWZ", "280px", "25%", "lime", "28px", "Track", "", );
 
@@ -41,27 +43,28 @@
     var ProgressCeol = new analogBar();
     ProgressCeol.create("MainCeolWZ", "69vh", "25px", "cyan", "450px");
 
-    var FontBtnCDA = new FontButtonNew();
+    var FontBtnCDA = new FontButton();
     FontBtnCDA.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "60px", "fa fa-backward", "60px",
-        "60px",
-        "send('command(DenonCeol,play,previous)')");
-    var FontBtnCDE = new FontButtonNew();
+        "60px", "", "", 'func(CEOL_previous,49535)');
+
+    var FontBtnCDE = new FontButton();
     FontBtnCDE.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "130px", "fa fa-forward", "60px",
-        "60px",
-        "send('command(DenonCeol,play,next)')");
+        "60px", "", "", 'func(CEOL_next,49535)');
 
-    var FontBtnCDB = new FontButtonNew();
+    var FontBtnCDB = new FontButton();
     FontBtnCDB.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "300px", "fa fa-pause", "60px",
-        "60px",
-        "send('command(DenonCeol,pause,all)')");
+        "60px", "", "", 'func(CEOL_pause,49535)');
 
-    var FontBtnCDD = new FontButtonNew();
-    FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "230px", "fa fa-stop", "60px", "60px",
-        "send('command(DenonCeol,stop,all)')");
 
-    var FontBtnCDC = new FontButtonNew();
-    FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "370px", "fa fa-play", "60px", "60px",
-        "send('command(DenonCeol,play,first)')");
+    var FontBtnCDD = new FontButton();
+    FontBtnCDD.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "230px", "fa fa-stop", "60px", "60px", "", "",
+        'func(CEOL_stop,49535)');
+
+
+    var FontBtnCDC = new FontButton();
+    FontBtnCDC.create("MainCeolWZ", "fontbutton", "cyan", "71vh", "370px", "fa fa-play", "60px", "60px", "", "",
+        'func(CEOL_play,49535)');
+
 
     var FontBtnIRadioVolDwnWZ = new FontButton();
     FontBtnIRadioVolDwnWZ.create("MainCeolWZ", "fontbutton", "cyan", "83vh", "40px", "fa fa-volume-down", "60px",

@@ -55,23 +55,19 @@
 
             var btnSyncMusik = new FontCtrlButton();
             btnSyncMusik.create("MainUpnp", "purple", "480px", "10px", "fa fa-sync", "Sync Musik",
-                "command",
-                "send('command(upnp,sync,Musik)')", "",
+                "func", 'func(UPNP_syncLib,19824,Musik)', "",
                 "130px", "50px", "white", "19px", "yellow");
             var btnSyncAudio = new FontCtrlButton();
             btnSyncAudio.create("MainUpnp", "purple", "480px", "150px", "fa fa-sync", "Sync Audio",
-                "command",
-                "send('command(upnp,sync,Audio)')", "",
+                "func", 'func(UPNP_syncLib,19824,Audio)', "",
                 "130px", "50px", "white", "19px", "yellow");
             var btnSyncFoto = new FontCtrlButton();
             btnSyncFoto.create("MainUpnp", "purple", "480px", "290px", "fa fa-sync", "Sync Foto",
-                "command",
-                "send('command(upnp,sync,Foto)')", "",
+                "func", 'func(UPNP_syncLib,19824,Foto)', "",
                 "130px", "50px", "white", "19px", "yellow");
             var btnSyncVideo = new FontCtrlButton();
             btnSyncVideo.create("MainUpnp", "purple", "480px", "430px", "fa fa-sync", "Sync Video",
-                "command",
-                "send('command(upnp,sync,Video)')", "",
+                "func", 'func(UPNP_syncLib,19824,Video)', "",
                 "130px", "50px", "white", "19px", "yellow");
         </script>
         <!-- ----------------------------------------------------------------------- -->
@@ -87,7 +83,7 @@
 
             var btnSearchServer = new CtrlButton();
             btnSearchServer.create("MainUpnpCtrl", "220px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Server", "black", "func", "", "send('command(upnp,discover,server)')");
+                "Get Server", "black", "func", "", 'func(UPNP_searchUPNP,19824,server)');
 
             var UPNPDeviceBox = new ArrayListBox();
             UPNPDeviceBox.create("MainUpnpCtrl", "110px", "30px", "150px", "190px", "purple", "white",
@@ -95,7 +91,7 @@
 
             var btnSearchClient = new CtrlButton();
             btnSearchClient.create("MainUpnpCtrl", "500px", "20px", "ctrlbutton", "normal", "purpleBtn",
-                "Get Devices", "black", "func", "", "send('command(upnp,discover,client)')");
+                "Get Devices", "black", "func", "", 'func(UPNP_searchUPNP,19824,client)');
         </script>
 
         <!-- ***********************************************************************************   -->

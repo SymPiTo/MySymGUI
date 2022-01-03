@@ -23,9 +23,11 @@
     var FotoPlayer = new ButtonSlider();
     FotoPlayer.create("MainFoto", "83vh", "230px", "200px", "45px", "purple", "ClientList");
 
-    var FontBtnStart = new FontButtonNew();
+    var FontBtnStart = new FontButton();
     FontBtnStart.create("MainFoto", "fontbutton", "purple", "71vh", "20px", "fa fa-step-backward", "60px", "60px",
-        "send('command(upnp,seek,start)')");
+        "32px", "",
+        'func(UPNP_seekStart,19824)');
+
 
     var FontBtnPrev = new FontButton();
     FontBtnPrev.create("MainFoto", "fontbutton", "purple", "71vh", "90px", "fa fa-backward", "60px", "60px", "32px", "",
@@ -55,7 +57,7 @@
     FontBtnVolDwn.create("MainFoto", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
         "50px", "32px", "", 'func(UPNP_setVolume,19824,down)');
 
-    var FontBtnMute = new FontButtonNew();
+    var FontBtnMute = new FontButton();
     FontBtnMute.create("MainFoto", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
         "50px", "32px", "", 'func(UPNP_setMute,19824,toggle14879)');
 
@@ -63,10 +65,10 @@
     FontBtnVolUp.create("MainFoto", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
         "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
 
-    var FontBtnPower = new FontButtonNew();
+    var FontBtnPower = new FontButton();
     FontBtnPower.create("MainFoto", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
-        "50px",
-        "send('command(upnp,power,toggle)')");
+        "50px", "32px", "",
+        'func(STV_SetPower,38391,toggle59911)');
 </script>
 <!-- ----------------------------------------------------------------------- -->
 <!--                             Video Ctrl                              -->

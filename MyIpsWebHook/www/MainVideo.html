@@ -23,9 +23,10 @@
     var VideoPlayer = new ButtonSlider();
     VideoPlayer.create("MainVideo", "83vh", "230px", "200px", "45px", "purple", "ClientList");
 
-    var FontBtnStart = new FontButtonNew();
+    var FontBtnStart = new FontButton();
     FontBtnStart.create("MainVideo", "fontbutton", "purple", "71vh", "20px", "fa fa-step-backward", "60px", "60px",
-        "send('command(upnp,seek,start)')");
+        "32px",
+        "", 'func(UPNP_seekStart,19824)');
 
     var FontBtnPrev = new FontButton();
     FontBtnPrev.create("MainVideo", "fontbutton", "purple", "71vh", "90px", "fa fa-backward", "60px", "60px", "32px",

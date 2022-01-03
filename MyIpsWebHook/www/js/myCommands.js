@@ -1,3 +1,23 @@
+var keys = "";
+
+function passkey(b) {
+    keys = keys + b;
+    KeyPadSecKey.ID.innerHTML = keys;
+ }
+ function sendpassword(cmd) {
+    var command =[];
+    command[0] = cmd.replace("XXXXXX", keys); 
+
+    Befehl = JSON.stringify(command);
+    send(Befehl);
+ }
+
+ function passkeyrepeat(){
+    keys = "";
+    KeyPadSecKey.ID.innerHTML = keys;
+ }
+
+
 function ShowHidePanel(no) {
     switch (no) {
         case '1on':

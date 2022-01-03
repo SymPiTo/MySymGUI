@@ -60,6 +60,7 @@
         var ipsObj = new ipsbuffer(ipsArray, symArray);
 
 
+
         function init() {
             var authToken = "tboercskten";
 
@@ -97,6 +98,8 @@
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
                     var typ = msg.type;
+
+
                     // Update, message, Refresh, Ping, Pong, 
 
                     var TimeStamp = msg.timeStamp;
@@ -1492,12 +1495,12 @@
 
             CbSSrolloWZ = new CheckBoxCtrlBtn();
             CbSSrolloWZ.create("MainRolloWZCtrl", "cyan", "290px", "30px", "SunRise-SunSet",
-                "command(Rollo,WZ,SSXX");
+                'func(FSS_SetSunSet,18067,0)', 'func(FSS_SetSunSet,18067,1)');
 
 
             var rolloCtrlWZ = new RolloCtrl();
             rolloCtrlWZ.create("MainRolloWZCtrl", "400px", "30px", "cyan",
-                "Position", "WZ");
+                "Position", 'func(FSS_StepRolloUp,18067)', 'func(FSS_StepRolloDown,18067)');
         </script>
 
         <!-- ------------------- Main Area: Rollasden Balkontür -------------------- -->
@@ -1585,11 +1588,13 @@
 
             CbSSrolloB = new CheckBoxCtrlBtn();
             CbSSrolloB.create("MainRolloBCtrl", "blue", "290px", "30px", "SunRise-SunSet",
-                "command(Rollo,B,SSXX");
+                'func(FSS_SetSunSet,24236,0)', 'func(FSS_SetSunSet,24236,1)');
+
 
 
             var rolloCtrlB = new RolloCtrl();
-            rolloCtrlB.create("MainRolloBCtrl", "400px", "30px", "blue", "Position", "B");
+            rolloCtrlB.create("MainRolloBCtrl", "400px", "30px", "blue", "Position", 'func(FSS_StepRolloUp,24236)',
+                'func(FSS_StepRolloDown,24236)');
         </script>
 
 
@@ -1687,11 +1692,13 @@
 
             CbSSrolloKZ = new CheckBoxCtrlBtn();
             CbSSrolloKZ.create("MainRolloKZCtrl", "olive", "290px", "30px", "SunRise-SunSet",
-                "command(Rollo,KZ,SSXX");
+                'func(FSS_SetSunSet,43261,0)', 'func(FSS_SetSunSet,43261,1)');
 
 
             var rolloCtrlKZ = new RolloCtrl();
-            rolloCtrlKZ.create("MainRolloKZCtrl", "400px", "30px", "olive", "Rolladen Kinderzimmer", "KZ");
+            rolloCtrlKZ.create("MainRolloKZCtrl", "400px", "30px", "olive", "Rolladen Kinderzimmer",
+                'func(FSS_StepRolloUp,43261)',
+                'func(FSS_StepRolloDown,43261)');
         </script>
 
 
@@ -1787,11 +1794,12 @@
 
             CbSSrolloK = new CheckBoxCtrlBtn();
             CbSSrolloK.create("MainRolloKCtrl", "midgreen", "290px", "30px", "SunRise-SunSet",
-                "command(Rollo,K,SSXX");
+                'func(FSS_SetSunSet,55245,0)', 'func(FSS_SetSunSet,55245,1)');
 
 
             var rolloCtrlK = new RolloCtrl();
-            rolloCtrlK.create("MainRolloKCtrl", "400px", "30px", "midgreen", "Position", "K");
+            rolloCtrlK.create("MainRolloKCtrl", "400px", "30px", "midgreen", "Position", 'func(FSS_StepRolloUp,55245)',
+                'func(FSS_StepRolloDown,55245)');
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -1887,10 +1895,11 @@
 
             CbSSrolloSZ = new CheckBoxCtrlBtn();
             CbSSrolloSZ.create("MainRolloSZCtrl", "sandy", "290px", "30px", "SunRise-SunSet",
-                "command(Rollo,SZ,SSXX");
+                'func(FSS_SetSunSet,53809,0)', 'func(FSS_SetSunSet,53809,1)');
 
             var rolloCtrlSZ = new RolloCtrl();
-            rolloCtrlSZ.create("MainRolloSZCtrl", "400px", "30px", "sandy", "Position", "SZ");
+            rolloCtrlSZ.create("MainRolloSZCtrl", "400px", "30px", "sandy", "Position", 'func(FSS_StepRolloUp,53809)',
+                'func(FSS_StepRolloDown,53809)');
         </script>
 
 
@@ -1940,16 +1949,21 @@
         <script>
             var Light1WZ = new CtrlTile();
             Light1WZ.create("MainLightWZ", "10px", "10px", "Lampe Fenster", "cyan", "transparent", "Light",
-                "send('command(Light,WZF,false)')", "send('command(Light,WZF,true)')", "aus", "ein", "", "",
+                'func(HM_WriteValueBoolean,15609,STATE,0)', 'func(HM_WriteValueBoolean,15609,STATE,1)', "aus",
+                "ein", "", "",
                 "200px", "210px", "black", "white");
+
             var Light2WZ = new CtrlTile();
             Light2WZ.create("MainLightWZ", "10px", "240px", "Lampe Mitte", "cyan", "transparent", "Light",
-                "send('command(Light,WZM,false)')", "send('command(Light,WZM,true)')", "aus", "ein", "", "",
+                'func(HM_WriteValueBoolean,26078,STATE,0)', 'func(HM_WriteValueBoolean,26078,STATE,1)', "aus",
+                "ein", "", "",
                 "200px", "210px", "black", "white");
+
             var Light3WZ = new CtrlTile();
             Light3WZ.create("MainLightWZ", "300px", "10px", "Lampe Schreibtisch", "cyan", "transparent",
                 "Light",
-                "send('command(Light,WZA,false)')", "send('command(Light,WZA,true)')", "aus", "ein", "", "",
+                'func(HM_WriteValueBoolean,26078,STATE,0)', 'func(HM_WriteValueBoolean,26078,STATE,1)', "aus",
+                "ein", "", "",
                 "200px", "210px", "black", "white");
         </script>
         <!-- ***********************************************************************************      -->
@@ -2028,7 +2042,7 @@
         <script>
             var LightSZ = new CtrlTile();
             LightSZ.create("MainLightSZ", "10px", "10px", "Schlafzimmer", "sandy", "transparent", "Light",
-                "send('command(Light,SZ,false)')", "send('command(Light,SZ,true)')");
+                'func(HM_WriteValueBoolean,32856,STATE,0)', 'func(HM_WriteValueBoolean,32856,STATE,1)');
         </script>
         <!-- ************************ Light Ctrl  Schlafzimmer ************************ -->
         <!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
@@ -2065,7 +2079,7 @@
         <script>
             var LightAZ = new CtrlTile();
             LightAZ.create("MainLightAZ", "10px", "10px", "Arbeitsecke", "orangerot", "transparent", "Light",
-                "send('command(Light,AZ,false)')", "send('command(Light,AZ,true)')");
+                'func(HM_WriteValueBoolean,22331,STATE,0)', 'func(HM_WriteValueBoolean,22331,STATE,1)');
         </script>
 
 
@@ -2108,7 +2122,7 @@
         <script>
             var LightD = new CtrlTile();
             LightD.create("MainLightD", "10px", "10px", "Diele", "yellowgreen", "transparent", "Light",
-                "send('command(Light,D,false)')", "send('command(Light,D,true)')");
+                'func(HM_WriteValueBoolean,38883,STATE,0)', 'func(HM_WriteValueBoolean,38883,STATE,1)');
         </script>
 
         <!-- ***********************************************************************************      -->
@@ -2154,7 +2168,8 @@
         </script>
         <script>
             var KeyPadSecKey = new KeyPad();
-            KeyPadSecKey.create("MainSecCode", "KeyCode", "security", "grey", "1", "10vh", "120px");
+            KeyPadSecKey.create("MainSecCode", "security", "grey", "1", "10vh", "120px",
+                'func(A_checkCode,18694,XXXXXX)');
 
             var AList = new TextScrollBox();
             AList.create("MainSecCode", "5vh", "50px");
@@ -2736,6 +2751,7 @@
         <!-- *************************************************************************************   -->
         <!--  ************************          Main - WebSocketServer    ************************   -->
         <!-- *************************************************************************************   -->
+
         <script>
             var mainwindowWSS = new Area();
             mainwindowWSS.createMain("MainWSS", "bgMidgreen");
@@ -2748,6 +2764,13 @@
             WSSbox.create("MainWSS", "100px", "25px", "220px", "380px");
             WSSbox.maximize();
 
+
+
+
+            var DisWSSStat = new StateDisplay();
+            DisWSSStat.create("MainWSS", "midgreenLight", "", "20px", "20px", "50px", "250px", "18px",
+                "socket.readyState",
+                "string");
 
 
             var DisWSSCL1 = new StateDisplay();
@@ -2816,8 +2839,7 @@
 
             var FontBtnIRadioPower = new FontButtonNew();
             FontBtnIRadioPower.create("MainIRadio", "fontbutton", "purple", "73vh", "85%", "fa fa-power-off",
-                "60px",
-                "60px", "send('command(DenonCeol,power,toggle)')");
+                "60px", "60px", "", "", 'func(CEOL_SetPower,49535,toggle22520)');
         </script>
 
         <!-- *************************************************************************************   -->

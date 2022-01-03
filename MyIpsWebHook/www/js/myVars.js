@@ -1122,6 +1122,12 @@ function updateValues() {
     Sensor4Stat.update(ipsObj.ips.ID11902);
     Sensor5Stat.update(ipsObj.ips.ID34627);
 
+    Sensor1ID.update(ipsObj.ips.ID29653);
+    Sensor2ID.update(ipsObj.ips.ID25601);
+    Sensor3ID.update(ipsObj.ips.ID47833);
+    Sensor4ID.update(ipsObj.ips.ID50154);
+    Sensor5ID.update(ipsObj.ips.ID26102);
+
   }
 
   /* ------------------------------- SonosWZ ----------------------------- */
@@ -1726,7 +1732,21 @@ function updateValues() {
     DisWSSCL2.update(ipsObj.sym[126]);
     DisWSSCL3.update(ipsObj.sym[127]);
     DisWSSCL4.update(ipsObj.sym[128]);
-    
+    switch (socket.readyState) {
+      case 0:
+        Status = "not connecting";
+        break;
+      case 1:
+        Status = "connected";
+        break;
+      case 2:
+        Status = "connecting";
+        break;
+      case 3:
+        Status = "Connection closed";
+        break;
+    }
+    DisWSSStat.update(Status);
 
 
   //<!-- ******************** Wetter   **************************  -->
