@@ -1082,9 +1082,11 @@ class HeatCtrl {
         this.zeichengr = "15px";
         this.btnTextColor = "black";
         this.labelcolor = "lime";
+        this.cmd = [];
     }
-    create(ParentID, posTop, posLeft, color, label, room, ...param) {
+    create(ParentID, posTop, posLeft, color, label, cmd0, ...param) {
         this.color = color;
+        this.cmd[0] = cmd0;
         if (param.length > 1) {
             this.b = param[0];
             this.h = param[1];
@@ -1194,9 +1196,11 @@ class HeatCtrl {
         elem6.innerHTML = this.state2;
         elem6.style.color = this.btnTextColor;
         elem6.onclick = function () {
+            var command = [];
             var solltemp = parseFloat(elemTM.innerHTML);
-            var cmd = "command(Heizung," + room + "," + solltemp + ")";
-            send(cmd);
+            command[0] = cmd0.replace(/xx.x/g, solltemp);
+            var Befehl = JSON.stringify(command);
+            send(Befehl);
         }
         elem5.append(elem6);
 
@@ -4908,8 +4912,6 @@ class FontButton {
         elem.style.justifyContent = "center";
 
         var command =JSON.stringify(this.cmd);
-        
-
         elem.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
 
         var elem1 = document.createElement("span");

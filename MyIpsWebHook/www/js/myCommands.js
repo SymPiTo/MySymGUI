@@ -10,6 +10,8 @@ function passkey(b) {
 
     Befehl = JSON.stringify(command);
     send(Befehl);
+    keys = "";
+    KeyPadSecKey.ID.innerHTML = keys;
  }
 
  function passkeyrepeat(){

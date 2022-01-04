@@ -1032,13 +1032,13 @@
             var btnHzWZAus = new CtrlButton();
             btnHzWZAus.create("MainHeizungWZ", "500px", "305px", "ctrlbutton", "smaller", "cyan", "Zu", "black",
                 "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,24898,SET_POINT_TEMPERATURE,5.0)');
+                'func(HM_WriteValueFloat,24898,SET_POINT_TEMPERATURE,5.0)');
 
 
             var btnHzWZAuf = new CtrlButton();
             btnHzWZAuf.create("MainHeizungWZ", "500px", "410px", "ctrlbutton", "smaller", "cyan", "Auf", "black",
                 "func", "", 'func(HM_WriteValueInteger,24898,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,24898,SET_POINT_TEMPERATURE,23.0)');
+                'func(HM_WriteValueFloat,24898,SET_POINT_TEMPERATURE,23.0)');
         </script>
 
 
@@ -1072,7 +1072,8 @@
                 "number");
 
             var HzCtrlWZ = new HeatCtrl();
-            HzCtrlWZ.create("MainHeizungWZCtrl", "335px", "30px", "cyan", "Heat-Control", "sollTempWZ");
+            HzCtrlWZ.create("MainHeizungWZCtrl", "335px", "30px", "cyan", "Heat-Control",
+                'func(HM_WriteValueFloat,24898,SET_POINT_TEMPERATURE,xx.x)');
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -1148,12 +1149,12 @@
             var btnHzKZAus = new CtrlButton();
             btnHzKZAus.create("MainHzKZ", "500px", "305px", "ctrlbutton", "smaller", "olive", "Aus", "black",
                 "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,17995,SET_POINT_TEMPERATURE,5.0)');
+                'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,5.0)');
 
             var btnHzKZAuf = new CtrlButton();
             btnHzKZAuf.create("MainHzKZ", "500px", "410px", "ctrlbutton", "smaller", "olive", "Auf", "black",
                 "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,17995,SET_POINT_TEMPERATURE,23.0)');
+                'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,23.0)');
         </script>
         <!-- ------------------ Ctrl Area: Kinderzimmer - Heizung ------------------ -->
         <!--                id="MainHzKZCtrl"  class="HeizungCtrlKZ"                 -->
@@ -1184,7 +1185,8 @@
                 "number");
 
             var HzCtrlKZ = new HeatCtrl();
-            HzCtrlKZ.create("MainHzKZCtrl", "335px", "30px", "olive", "Heat-Control", "sollTempKZ");
+            HzCtrlKZ.create("MainHzKZCtrl", "335px", "30px", "olive", "Heat-Control",
+                'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,xx.x)');
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -1256,12 +1258,12 @@
             var btnHzSZAus = new CtrlButton();
             btnHzSZAus.create("MainHzSZ", "500px", "305px", "ctrlbutton", "smaller", "sandy", "Zu", "black", "func", "",
                 'func(HM_WriteValueInteger,33241,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,33241,SET_POINT_TEMPERATURE,5.0)');
+                'func(HM_WriteValueFloat,33241,SET_POINT_TEMPERATURE,5.0)');
 
             var btnHzSZAuf = new CtrlButton();
             btnHzSZAuf.create("MainHzSZ", "500px", "410px", "ctrlbutton", "smaller", "sandy", "Auf", "black", "func",
                 "", 'func(HM_WriteValueInteger,33241,CONTROL_MODE,1)',
-                'func(HM_WriteValueInteger,33241,SET_POINT_TEMPERATURE,23.0)');
+                'func(HM_WriteValueFloat,33241,SET_POINT_TEMPERATURE,23.0)');
         </script>
         <!-- ------------------ Ctrl Area: Schlafzimmer - Heizung ------------------ -->
         <!--                 id="MainHzSZCtrl" class="HeizungCtrlSZ"                 -->
@@ -1292,7 +1294,8 @@
 
 
             var HzCtrlSZ = new HeatCtrl();
-            HzCtrlSZ.create("MainHzSZCtrl", "335px", "30px", "sandy", "Heat-Control", "sollTempSZ");
+            HzCtrlSZ.create("MainHzSZCtrl", "335px", "30px", "sandy", "Heat-Control",
+                'func(HM_WriteValueFloat,33241,SET_POINT_TEMPERATURE,xx.x)');
         </script>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -1393,7 +1396,8 @@
                 "number");
 
             var HzCtrlK = new HeatCtrl();
-            HzCtrlK.create("MainHzKCtrl", "335px", "30px", "midgreen", "Heat-Control", "sollTempK");
+            HzCtrlK.create("MainHzKCtrl", "335px", "30px", "midgreen", "Heat-Control",
+                'func(FHT_SetTemperature,13226,xx.x)');
         </script>
 
         <!-- ----------------------------------------------------------------------- -->

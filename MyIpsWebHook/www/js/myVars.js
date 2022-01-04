@@ -752,7 +752,7 @@ class ipsbuffer {
       this.sym[231] = this.ips.ID59969; // Bad Temperatur
       this.sym[232] = this.ips.ID14487; // Bad Humidity
       this.sym[233] = this.ips.ID19285; // Wohnzimmer Humidity
-      this.sym[234] = this.ips.ID36753; // Wohnzimmer SollTempChanged
+      
       this.sym[235] = this.ips.ID50046; // Kinderzimmer SollTempChanged
       this.sym[236] = this.ips.ID17734; // Küche SollTempChanged
       this.sym[237] = this.ips.ID57325; // Schlafzimmer SollTempChanged
@@ -1000,7 +1000,7 @@ function Heizung() {
   MainTempVHzWZ.update(ipsObj.sym[215], 1);
   MainTempRHzWZ.update(ipsObj.sym[216], 1);
 
-  HzCtrlWZ.update(ipsObj.sym[28], ipsObj.sym[27], ipsObj.sym[234]);
+  HzCtrlWZ.update(ipsObj.sym[28], ipsObj.sym[27]);
 
   iHzWZ.update(ipsObj.sym[4]);
 
