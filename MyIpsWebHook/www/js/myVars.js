@@ -1976,7 +1976,7 @@ function updateValues() {
   VarDisHumOutside.update(ipsObj.sym[47]);
 
   DisAlarmActiveSec.update(ipsObj.sym[48]);
-  ABox.update(ipsObj.sym[58]);
+  ABox.update(ipsObj.ips.ID15289);
 
   if (document.getElementById("MainCeolWZ")) {
     iDisArtist.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);

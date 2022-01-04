@@ -728,8 +728,8 @@
         <subMenu id="SubMenuNone" class="MenuNone"></subMenu>
 
         <script>
-            var SubMenuNone = new GlideButton();
-            SubMenuNone.create("SubMenuNone", "midgreen", "FREE", ips, "MainNone", "", "SM");
+            var SubMenuNoneA = new GlideButton();
+            SubMenuNoneA.create("SubMenuNone", "midgreen", "Aktien", ips, "MainAktien", "", "SMload");
         </script>
 
 
@@ -2205,7 +2205,7 @@
         </script>
         <script>
             var ABox = new AlarmBox();
-            ABox.create("MainSecCodeCtrl", "AlarmMeldung", "yellow", "10px", "20px");
+            ABox.create("MainSecCodeCtrl", "AlarmMeldung", "yellow", "10px", "20px", 'func(A_ResetAlarm,18694)');
 
             var DisAlarmActiveSec = new StateDisplay();
             DisAlarmActiveSec.create("MainSecCodeCtrl", "redLight", "", "50px", "30px", "60px", "202px", "20px",

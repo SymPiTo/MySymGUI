@@ -171,7 +171,7 @@ class TimePicker {
 
 }
 
-/* ------------------- löschenn ---------------------------------- 
+/* ------------------- löschen ---------------------------------- 
 
 function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  command){
     var elem = document.createElement("div");
@@ -655,7 +655,7 @@ class MediaDisplay {
 }
 
 /* --------------------- class draw line ---------------------------------------- */
-/* -------------------------- Version:  ------------------------- */
+/* -------------------------- Version: 04.01.2022 ------------------------- */
 class drawLine {
     constructor() {
 
@@ -1767,17 +1767,23 @@ class KeyPad {
 class AlarmBox {
     constructor() {
         this.ID = "";
+        this.cmd = [];
     }
 
-    create(ParentID, ObjID, color, posTop, posLeft) {
+    create(ParentID, ObjID, color, posTop, posLeft, cmd0) {
         this.ID = ObjID;
+        this.cmd[0] = cmd0;
+
         var elem = document.createElement("div");
         elem.className = "AlarmBox";
         elem.classList.add(color);
         elem.id = this.ID;
         elem.style.fontSize = "24px";
         elem.style.padding = "4px";
-        elem.setAttribute("onclick", "send('command(security,alarm,aus)')");
+        
+        var command =JSON.stringify(this.cmd);
+        elem.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
+
         elem.innerHTML = "Einbrecher!";
         elem.style.position = "absolute";
         elem.style.left = posLeft;
@@ -2904,6 +2910,7 @@ class Led {
 
 
 /* --------------------- Klasse flashing Led ---------------------------------------- */
+/* --------------------- Version: 04.01.2022 ---------------------------------------- */
 class flashLed {
     constructor() {
         this.ID = "";
@@ -2911,14 +2918,9 @@ class flashLed {
 
     }
 
-    create(ParentID, ObjektFarbe, posTop, posLeft) {
-
-
+    create(ParentID, posTop, posLeft, ObjektFarbe) {
 
         this.color = ObjektFarbe;
-
-
-
         var elem = document.createElement("div");
         elem.className = "led-box";
 
@@ -3893,6 +3895,7 @@ class EierUhr {
 }
 
 /* --------------------- Klasse WeatherLabel ---------------------------------------- */
+/* --------------------- Version: 04.02.2022 ---------------------------------------- */
 class WeatherLabel {
     constructor() {
 
@@ -3979,10 +3982,6 @@ class WeatherLabel {
         secC.append(summary);
         this.source = img;
         Fig.append(img);
-
-
-
-
 
         document.getElementById(ParentID).appendChild(container);
     }
