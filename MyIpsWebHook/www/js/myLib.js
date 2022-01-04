@@ -4798,7 +4798,7 @@ class Message {
         //optionale Parameter
 
     }
-    create(ParentID, posTop, posLeft, breite, hoehe, messageType, command, value, ...param) {
+    create(ParentID, posTop, posLeft, breite, hoehe, messageType, cmd0, value, ...param) {
 
         this.b = breite;
         this.h = hoehe;
@@ -4815,7 +4815,9 @@ class Message {
         container.style.width = this.b;
 
         container.onclick = function () {
-            send('command(Message,' + command + ',' + value + ')');
+            var cmd =[];
+            cmd[0] = 'func(SetValue,' + cmd0 + ',' + value + ')';
+            send(JSON.stringify(cmd));
             container.style.height = "0px";
         }
 
