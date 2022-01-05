@@ -456,8 +456,7 @@ class ipsbuffer {
 
     this.ips.DATA50730 = ""; //Temp Ist KZ
     this.ips.DATA25152 = ""; //Temp Soll KZ
-    this.ips.DATA48718 = ""; //Hz Stellung KZ
-
+    this.ips.DATA48718 = ""; //Umlaufrendite
   }
 
   update(symvar) {
@@ -882,6 +881,7 @@ class ipsbuffer {
       this.sym[335] = this.ips.DATA50730; //Temp Ist KZ
       this.sym[336] = this.ips.DATA25152; //Temp Soll KZ
       this.sym[337] = this.ips.DATA48718; //Hz Stellung KZ  
+      this.sym[338] = this.ips.DATA50816; //Umlaufrendite 
 
     } catch (err) {
       document.getElementById("fehler").innerHTML = err.message;
@@ -1094,8 +1094,11 @@ function updateValues() {
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainAktien")) {
     DisUmlfRendite.update(ipsObj.ips.ID50816, 3);
+   
+    graphUlfR.dataload(this.ipsObj.ips.DATA50816 );
+    var x = 0;
   }
-
+ 
 
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainGreensense")) {

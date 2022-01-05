@@ -4736,6 +4736,7 @@ class MyChart {
                     }],
                     yAxes: [{
                             id: 'A',
+                            display: 'auto',
                             type: 'linear',
                             position: 'right',
                             ticks: {
@@ -4749,6 +4750,7 @@ class MyChart {
                         },
                         {
                             id: 'B',
+                            display: 'auto',
                             type: 'linear',
                             position: 'left',
                             ticks: {
