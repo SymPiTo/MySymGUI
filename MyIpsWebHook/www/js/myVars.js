@@ -1000,7 +1000,7 @@ function Heizung() {
   MainTempVHzWZ.update(ipsObj.sym[215], 1);
   MainTempRHzWZ.update(ipsObj.sym[216], 1);
 
-  HzCtrlWZ.update(ipsObj.sym[28], ipsObj.sym[27]);
+  HzCtrlWZ.update(ipsObj.sym[28], ipsObj.sym[27],false);
 
   iHzWZ.update(ipsObj.sym[4]);
 
@@ -1091,6 +1091,12 @@ function updateIPSValue(ipsID, IPSValue) {
 /* -------------------------------  Aktualisierung der Variablen  ------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 function updateValues() {
+  /* ------------------------------- SonosWZ ----------------------------- */
+  if (document.getElementById("MainAktien")) {
+    DisUmlfRendite.update(ipsObj.ips.ID50816, 3);
+  }
+
+
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainGreensense")) {
     Sensor1Icon.update(ipsObj.ips.ID10654);
