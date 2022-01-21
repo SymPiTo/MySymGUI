@@ -1,9 +1,3 @@
-// TODO: Funktionen mit optonalen Parameter ergänzen.
-
-// TODO: Erstellen einer Funktion zum generieren der SUB Menus
-//       <subMenu id="SubMenuK" class="MenuK"></subMenu>
-//        zugehörige CSS Klasse "class="MenuK"  kann dann mit eingebaut werden
-
 
 class TimePicker {
     constructor(room, group, direction) {
@@ -171,21 +165,6 @@ class TimePicker {
 
 }
 
-/* ------------------- löschen ---------------------------------- 
-
-function addCtrlButton(ParentID, Ident, posTop, posLeft, size, color, text,  command){
-    var elem = document.createElement("div");
-    elem.className = "ctrlbutton";
-    elem.classList.add(size, color);
-    elem.id = Ident;
-    elem.innerHTML = text;
-    elem.style.position = "absolute";
-    elem.style.left = posLeft;
-    elem.style.top = posTop;
-    elem.setAttribute("onclick", command);
-    document.getElementById(ParentID).appendChild(elem);			 
-}
-*/
 
 /* --------------------- Klasse Ctrl Button ---------------------------------------- */
 //TODO: überabeiten siehe Mob
@@ -1919,57 +1898,6 @@ class IconList {
 
 
 
-
-/* --------------------- Klasse CDLib SelectList ---------------------------------------- */
-class CDLibrary {
-    constructor() {
-
-    }
-
-    create(ParentID, device, action) {
-        // Liste einlesen
-        var Liste = new data();
-        var SourceList = Liste.getCDLib();
-
-
-        SourceList.forEach(function (item) {
-            var elem = document.createElement("img");
-
-            elem.className = "iconTV";
-            elem.id = device + item["No"];
-            elem.style.padding = "2px";
-            elem.src = "CDs/" + item["icon"];
-            elem.onclick = function () {
-
-                var index = SourceList.findIndex((item) => item.selected === true);
-                if (index !== -1) {
-                    SourceList[index]['selected'] = false;
-                    var ObjID = device + index;
-                    var elem0 = document.getElementById(ObjID);
-                    elem0.classList.add("iconTV");
-                    elem0.classList.remove("iconTVToggle");
-                }
-                elem.classList.add("iconTVToggle");
-                elem.classList.remove("iconTV");
-                item['selected'] = true;
-                if (action == "play") {
-                    cmd = ("command(" + device + ",playAlbum," + item['FV'] + ")");
-                    send(cmd);
-                }
-            }
-
-            document.getElementById(ParentID).appendChild(elem);
-        })
-    }
-
-
-
-}
-
-
-
-
-
 /* --------------------- Class Kachel -------------------------------------- */
 /* -------------------------- Version:1.05.10.2019 -------------------------- */
 
@@ -2408,7 +2336,7 @@ class FontCtrlButton {
 
 
 
-/* ---------------------  Klasse FontButton (Rest noch austauschen ---------------------------------------- */
+/* ---------------------  Klasse FontButton (kann entfallen wenn nicht mehr verwndet wird ersetzt durch FontButton */
 class FontButtonNew {
     constructor() {
         this.ID = "";
@@ -2597,7 +2525,7 @@ class NavPad {
     }
 }
 
-/* --------------------- Klasse Navigation Pad ---------------------------------------- */
+/* --------------------- Klasse LED Display---------------------------------------- */
 class LEDdisplay {
     constructor() {
         this.ID = "";
@@ -3255,13 +3183,13 @@ class SetIframe {
         //var source = "<p>Some new content inside the iframe!</p>";
         //var source = "<table width='auto'><tr><td width='auto'height='80px'><div><img src=https://a2.tvspielfilm.de/itv_sofa/2019-03-10/5c6affc281896536498e11b9_149.jpg alt='not Found'></div></td><td width='980px'><div style='text-align:left; margin-left:10px;'><b style=color:#C00000;>19:05 | RTL | Vermisst</b><br><small>Rund um den Globus sucht Sandra Eckardt nach verschollenen Personen. Nicht immer gibt’s ein Happy End.  Sechs neue Folgen, so. </small><br></div></td></tr></table>";
         var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src", "");
+        ifrm.setAttribute("src", "https://web.skype.com/");
         ifrm.style.width = sizeW;
         ifrm.style.height = sizeH;
         ifrm.style.position = "relative";
         ifrm.style.top = posTop;
         ifrm.style.left = posLeft;
-        ifrm.srcdoc = "";
+        //ifrm.srcdoc = "http://google.com/";
         this.ID = ifrm;
 
         document.getElementById(ParentID).appendChild(ifrm);
@@ -3302,9 +3230,9 @@ class ShowUrlImage {
       
     
         this.ID.src = SourceUrl;
-        this.ID.alt = "not found";
+        this.ID.alt = "images/notFound.png";
     
-        
+         
 
     }
 
@@ -4165,9 +4093,13 @@ class ButtonSlider {
         this.containerID = "";
         this.cont = "";
         this.noArray = 0;
+        this.cmdL = [];
+        this.cmdR = [];
     }
 
-    create(ParentID, posTop, posLeft, breite, hoehe, farbe, arrayList) {
+    create(ParentID, posTop, posLeft, breite, hoehe, farbe, cmd1, cmd2) {
+        this.cmdL[0] = cmd1;
+        this.cmdR[0] = cmd2;
         var container = document.createElement("div");
         container.style.position = "absolute";
         container.style.left = posLeft;
@@ -4186,8 +4118,10 @@ class ButtonSlider {
         elemLeft.style.display = "flex";
         elemLeft.style.alignItems = "center";
         elemLeft.style.justifyContent = "center";
-        var cmd = "send('command(upnp," + arrayList + ",left)')";
-        elemLeft.setAttribute("onclick", cmd);
+        //'func(UPNP_setClient,19824,0,"dec")'
+        var command =JSON.stringify(this.cmdL);
+        elemLeft.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
+
         var elemLeft1 = document.createElement("span");
         elemLeft1.className = "fa fa-chevron-left";
         elemLeft1.style.fontSize = "20px";
@@ -4218,8 +4152,9 @@ class ButtonSlider {
         elemRight.style.display = "flex";
         elemRight.style.alignItems = "center";
         elemRight.style.justifyContent = "center";
-        var cmd = "send('command(upnp," + arrayList + ",right)')";
-        elemRight.setAttribute("onclick", cmd);
+        //'func(UPNP_setClient,19824,0,"inc")'
+        var command =JSON.stringify(this.cmdR);
+        elemRight.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
         var elemRight1 = document.createElement("span");
         elemRight1.className = "fa fa-chevron-right";
         elemRight1.style.fontSize = "20px";

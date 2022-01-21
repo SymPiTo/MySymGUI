@@ -11,7 +11,8 @@
             ServerImg.create("MainUpnp", "50px", "60px", "100px", "100px", "");
 
             var ServerBtn = new ButtonSlider();
-            ServerBtn.create("MainUpnp", "180px", "25px", "190px", "40px", "purple", "ServerList");
+            ServerBtn.create("MainUpnp", "180px", "25px", "190px", "40px", "purple",
+                'func(UPNP_setServer,19824,0,dec)', 'func(UPNP_setServer,19824,0,inc)');
 
             var RahmenB = new Kachel();
             RahmenB.create("MainUpnp", "10px", "360px", "200px", "240px", "transparent", "Devices")
@@ -20,7 +21,8 @@
             ClientImg.create("MainUpnp", "50px", "400px", "100px", "100px", "");
 
             var ClientBtn = new ButtonSlider();
-            ClientBtn.create("MainUpnp", "180px", "365px", "190px", "40px", "purple", "ClientList");
+            ClientBtn.create("MainUpnp", "180px", "365px", "190px", "40px", "purple",
+                'func(UPNP_setClient,19824,0,dec)', 'func(UPNP_setClient,19824,0,inc)');
 
 
 
