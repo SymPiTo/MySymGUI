@@ -3215,7 +3215,7 @@ class ShowUrlImage {
     create(ParentID, posTop, posLeft, sizeH, sizeW, SourceUrl) {
         var img = document.createElement("img");
         img.src = SourceUrl;
-        img.alt = "not found",
+        img.alt = "images/notFound.png";
         img.style.width = sizeW;
         img.style.height = sizeH;
         img.style.position = "absolute";
@@ -3228,10 +3228,9 @@ class ShowUrlImage {
 
     update(SourceUrl) {
       
-    
+         
         this.ID.src = SourceUrl;
-        this.ID.alt = "images/notFound.png";
-    
+
          
 
     }

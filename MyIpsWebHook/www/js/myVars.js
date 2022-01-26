@@ -1256,9 +1256,9 @@ function updateValues() {
       MA_Inz.update(ipsObj.ips.ID59569,1);
       MA_Dead.update(ipsObj.ips.ID54162,0);
     /* ------------------------------- Covid Graph------------------------------ */
-
-      graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
-      graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
+    //sollte nur bei click geladen werden
+     // graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
+     // graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
     }
 
 
@@ -1780,7 +1780,7 @@ function updateValues() {
 
   //<!-- ******************** Samsung TV **************************  -->
   if (document.getElementById("MainTV1")) {
-    TVframe.update(ipsObj.sym[98], 10000);
+    TVframe.update('https://www.chefkoch.de/rezepte/2853311437410196/Weisswurst.html', 10000);
     TVGuideframe.update(ipsObj.sym[99], 10000);
     transVarPower.update(ipsObj.sym[76], "state", "aus", "ein", "", "");
     transVarVol.update(ipsObj.sym[75]);
