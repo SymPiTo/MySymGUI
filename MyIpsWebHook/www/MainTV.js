@@ -1,12 +1,10 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Samsung TV                             -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Samsung TV                             -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainWinTV = new Area();
     MainWinTV.createMain("MainTV", "bgPurple");
-</script>
-
-<script>
+ 
     var LedDisplayTV = new LEDdisplay();
     LedDisplayTV.create("MainTV", "LedDisplayTV", "1vh", "20%", "40px", "70%");
 
@@ -90,16 +88,16 @@
     var FontBtnG = new FontButtonNew();
     FontBtnG.create("MainTV", "fontbutton", "purple", "83vh", "86%", "fa fa-forward", "60px", "60px",
         "send('command(TV,key,KEY_FF)')");
-</script>
+ 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                      Samsung TV    Sender Liste                         -->
-<!-- ----------------------------------------------------------------------- -->
-<!--  <Ctrl id = MainTVCtrl class="TVCtrl"></Ctrl>  -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                      Samsung TV    Sender Liste                         -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--  <Ctrl id = MainTVCtrl class="TVCtrl"></Ctrl>  -->
+ 
     var CtrlMainTVChannels = new Area();
     CtrlMainTVChannels.createCtrl("MainTVCtrl", "bgPurpleLight");
     //---------------------------------------------------------
     var CtrlTVList = new DynIconList();
     CtrlTVList.create("MainTVCtrl", "TV");
-</script>
+ 

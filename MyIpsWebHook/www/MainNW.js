@@ -1,13 +1,12 @@
- <!-- ----------------------------------------------------------------------- -->
- <!--                            Area: Network                          -->
- <!-- ----------------------------------------------------------------------- -->
+ //<!-- ----------------------------------------------------------------------- -->
+ //<!--                            Area: Network                          -->
+ //<!-- ----------------------------------------------------------------------- -->
 
- <!-- ----------------------- Main Area: Network ----------------------- -->
- <script>
+ //<!-- ----------------------- Main Area: Network ----------------------- -->
+ 
      var windowNW = new Area();
      windowNW.createMain("MainNW", "bgBlue");
- </script>
- <script>
+ 
      var rahmFB = new Rahmen();
      rahmFB.create("MainNW", "20px", "210px", "400px", "200px", "glas");
 
@@ -50,16 +49,14 @@
      var FontBtnABBPC = new FontButton();
      FontBtnABBPC.create("MainNW", "fontbutton", "cyanLight", "20vh", "80%", "fa fa-power-off", "60px", "60px", "32px",
          "", 'func(IPS_RunScript,42590)');
- </script>
+ 
 
- <!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->
+ //<!-- ----------------------- Ctrl Area: Network Devices ----------------------- -->
 
- <script>
+ 
      var CtrlwindowNW = new Area();
      CtrlwindowNW.createCtrl("MainNWCtrl", "bgMidgreen");
- </script>
-
- <script>
+ 
      var Head1 = new HeadLine();
      Head1.create("MainNWCtrl", "0px", "transparent", "Ethernet");
 
@@ -77,4 +74,4 @@
              '", "70px", "50px", "150px", "18px", "IP Adress", "string", "", "", "", "")');
 
      }
- </script>
+ 

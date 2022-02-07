@@ -5,6 +5,7 @@ class ipsbuffer {
     this.first = true;
     this.NoHosts = 0;
     this.lala = 10;
+    this.serverID = "0";
   }
 
   get ips() {
@@ -35,6 +36,12 @@ class ipsbuffer {
     this._NoHosts = NoHosts;
   }
 
+  get serverID() {
+    return this._serverID;
+  }
+  set serverID(serverID) {
+    this._serverID = serverID;
+  }
 
   init() {
     this.ips.ID14879 = ""; //Mute Sonos WZ
@@ -993,6 +1000,8 @@ function Heizung() {
   LeftMenuWZ.update(ipsObj.sym[2], "°C", "", "", "", "", "", "");
   LeftMenuSZ.update(ipsObj.sym[0], "°C", "", "", "", "", "", "");
   LeftMenuKZ.update(ipsObj.sym[1], "°C", "", "", "", "", "", "");
+  LeftMenuB.update(ipsObj.ips.ID16709, "°C", "", "", "", "", "", "");
+  LeftMenuBad.update(ipsObj.ips.ID59969, "°C", "", "", "", "", "", "");
 
   //<!-- ************************ Heizung Wohnzimmer ************************  -->
   MainTempHzWZ.update(ipsObj.sym[2], 1);
@@ -1257,7 +1266,12 @@ function updateValues() {
       MA_Dead.update(ipsObj.ips.ID54162,0);
     /* ------------------------------- Covid Graph------------------------------ */
     //sollte nur bei click geladen werden
-     // graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
+    if(ipsObj.serverID == 33023){
+      graphCovid.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA30937, this.ipsObj.ips.DATA59569);
+      //Befehl nur einmal ausführen, deshalb serverID = 0
+      ipsObj.serverID = 0;
+    }
+     // 
      // graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
     }
 

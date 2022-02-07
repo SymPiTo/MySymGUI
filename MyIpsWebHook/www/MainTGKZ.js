@@ -1,13 +1,12 @@
- <!-- ----------------------------------------------------------------------- -->
- <!--                 Area: Kinderzimmer Graph Temperatur                       -->
- <!-- ----------------------------------------------------------------------- -->
+ //<!-- ----------------------------------------------------------------------- -->
+ //<!--                 Area: Kinderzimmer Graph Temperatur                       -->
+ //<!-- ----------------------------------------------------------------------- -->
 
- <!-- ----------------------- Main Area: Kinderzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Main Area: Kinderzimmer - Temperatur Graph ----------------------- -->
+ 
      var windowTGKZ = new Area();
      windowTGKZ.createMain("MainTGKZ", "bgOlive");
- </script>
- <script>
+ 
      var graphTKZ = new MyChart();
      var ds0 = new Array();
      var ds1 = new Array();
@@ -22,10 +21,10 @@
      ds1['color'] = 'blue';
      ds2['color'] = 'white';
      graphTKZ.create("MainTGKZ", '27353', '%', '°C', ds0, ds1, ds2, "90%", "90%", "300px", "20px");
- </script>
+ 
 
- <!-- ----------------------- Ctrl Area: Kinderzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Ctrl Area: Kinderzimmer - Temperatur Graph ----------------------- -->
+ 
      var CtrlwindowTGKZ = new Area();
      CtrlwindowTGKZ.createCtrl("MainTGKZCtrl", "bgOlive");
- </script>
+ 

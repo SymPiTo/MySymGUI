@@ -1,13 +1,12 @@
- <!-- ----------------------------------------------------------------------- -->
- <!--                 Area: Schlafzimmer Graph Temperatur                       -->
- <!-- ----------------------------------------------------------------------- -->
+ //<!-- ----------------------------------------------------------------------- -->
+ //<!--                 Area: Schlafzimmer Graph Temperatur                       -->
+ //<!-- ----------------------------------------------------------------------- -->
 
- <!-- ----------------------- Main Area: Schlafzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Main Area: Schlafzimmer - Temperatur Graph ----------------------- -->
+ 
      var windowTGSZ = new Area();
      windowTGSZ.createMain("MainTGSZ", "bgSandy");
- </script>
- <script>
+ 
      var graphTSZ = new MyChart();
      var ds0 = new Array();
      var ds1 = new Array();
@@ -22,13 +21,10 @@
      ds1['color'] = 'blue';
      ds2['color'] = 'white';
      graphTSZ.create("MainTGSZ", '12276', '%', '°C', ds0, ds1, ds2, "90%", "90%", "300px", "20px");
- </script>
+ 
 
- <!-- ----------------------- Ctrl Area: Schlafzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Ctrl Area: Schlafzimmer - Temperatur Graph ----------------------- -->
+ 
      var CtrlwindowTGSZ = new Area();
      CtrlwindowTGSZ.createCtrl("MainTGSZCtrl", "bgSandy");
- </script>
- <script>
-
- </script>
+ 

@@ -1,13 +1,11 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--            Fenster und Luftfeuchtigkeit Wohnimmer                       -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--            Fenster und Luftfeuchtigkeit Wohnimmer                       -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainFWZ = new Area();
     MainFWZ.createMain("MainFWZ", "bgCyan");
     //-------------------------------------------------
-</script>
-
-<script>
+ 
     var iWindowWZ = new DynIcon("door", "bin", false);
     iWindowWZ.create("MainFWZ", "40px", "30px", "170px", "170px");
 
@@ -36,18 +34,17 @@
     ds1['color'] = 'blue';
     ds2['color'] = 'white';
     graphWZ.create("MainFWZ", '20131', '%', '°C', ds0, ds1, ds2);
-</script>
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+ 
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
+ 
     var CtrlMainFWZ = new Area();
     CtrlMainFWZ.createCtrl("MainFWZCtrl", "bgCyanLight");
     //---------------------------------------------------------
-</script>
-<script>
+ 
     var WZWarn = new StateDisplay();
     WZWarn.create("MainFWZCtrl", "cyanLight", "", "20px", "20px", "60px", "202px", "20px",
         "Warnung",
@@ -87,4 +84,4 @@
     WZTPAussen.create("MainFWZCtrl", "cyanLight", "°C", "510px", "20px", "60px", "202px", "20px",
         "Taupunkt Aussen",
         "number");
-</script>
+ 

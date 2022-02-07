@@ -1,7 +1,7 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--                       Sonos Wohnzimmer                       -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                       Sonos Wohnzimmer                       -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainSonosWZ = new Area();
     MainSonosWZ.createMain("MainSonosWZ", "bgCyan");
     //-------------------------------------------------
@@ -52,22 +52,22 @@
         FontBtnTestWZ.create("MainSonosWZ", "fontbutton", "cyan", "80vh", "40px",
             "fa fa-power-off", "450px", "50px", "", "", Befehl1, Befehl2, Befehl3);
     */
-</script>
+ 
 
 
 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainSonosWZCtrl class="SonosWZCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainSonosWZCtrl class="SonosWZCtrl"></Ctrl>  -->
+ 
     var CtrlMainSonosWZ = new Area();
     CtrlMainSonosWZ.createCtrl("MainSonosWZCtrl", "bgCyanLight");
     //---------------------------------------------------------
     var CtrlSonosWZRadioList = new DynIconList();
     CtrlSonosWZRadioList.create("MainSonosWZCtrl", "SonosRadio", "110px", "WZ");
-</script>
+ 

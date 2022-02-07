@@ -1,12 +1,11 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--            Fenster und Luftfeuchtigkeit Kinderzimmer                    -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--            Fenster und Luftfeuchtigkeit Kinderzimmer                    -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainFKZ = new Area();
     MainFKZ.createMain("MainFKZ", "bgOlive");
     //-------------------------------------------------
-</script>
-<script>
+ 
     var KZDisHumid = new StateDisplay();
     KZDisHumid.create("MainFKZ", "oliveLight", "%rel", "150px", "300px", "60px", "202px", "20px",
         "rel. Feuchte",
@@ -33,19 +32,18 @@
     ds1['color'] = 'blue';
     ds2['color'] = 'white';
     graphKZ.create("MainFKZ", '21504', '%', '°C', ds0, ds1, ds2);
-</script>
+ 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
+ 
     var CtrlMainFKZ = new Area();
     CtrlMainFKZ.createCtrl("MainFKZCtrl", "bgOliveLight");
     //---------------------------------------------------------
-</script>
-<script>
+ 
     var KZWarn = new StateDisplay();
     KZWarn.create("MainFKZCtrl", "oliveLight", "", "20px", "20px", "60px", "202px", "20px",
         "Warnung",
@@ -80,4 +78,4 @@
     KZTPAussen.create("MainFKZCtrl", "oliveLight", "°C", "510px", "20px", "60px", "202px", "20px",
         "Taupunkt Aussen",
         "number");
-</script>
+ 

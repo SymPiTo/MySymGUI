@@ -1,13 +1,11 @@
-       <!-- ----------------------------------------------------------------------- -->
-       <!--                    MAIN - UPNP  Audio (Books)                                -->
-       <!--                id="MainUpnpCD"                                          -->
-       <!-- ----------------------------------------------------------------------- -->
-       <script>
+       //<!-- ----------------------------------------------------------------------- -->
+       //<!--                    MAIN - UPNP  Audio (Books)                                -->
+       //<!--                id="MainUpnpCD"                                          -->
+       //<!-- ----------------------------------------------------------------------- -->
+     
            var MainAudio = new Area();
            MainAudio.createMain("MainUpnpAudio", "bgPurple");
-       </script>
-
-       <script>
+    
            var DiplayAudio = new MediaDisplay();
            DiplayAudio.create("MainUpnpAudio", "10px", "20px", "600px", "250px", "DisplayBlue");
 
@@ -69,19 +67,17 @@
                "100px",
                "50px",
                "send('command(upnp,power,toggle)')");
-       </script>
+    
 
-       <!-- ----------------------------------------------------------------------- -->
-       <!--                             Audiobook Ctrl                              -->
-       <!-- ----------------------------------------------------------------------- -->
+       //<!-- ----------------------------------------------------------------------- -->
+       //<!--                             Audiobook Ctrl                              -->
+       //<!-- ----------------------------------------------------------------------- -->
 
-       <!--  <Ctrl id = MainUpnpAudioCtrl class="AudioCtrl"></Ctrl>  -->
-       <script>
+       //<!--  <Ctrl id = MainUpnpAudioCtrl class="AudioCtrl"></Ctrl>  -->
+     
            var CtrlMainAudio = new Area();
            CtrlMainAudio.createCtrl("MainUpnpAudioCtrl", "bgPurpleLight");
-       </script>
-
-       <script>
+       
            var CtrlAudioList = new DynIconList();
            CtrlAudioList.create("MainUpnpAudioCtrl", "Audio");
-       </script>
+   

@@ -1460,6 +1460,7 @@ class GlideButton {
                 //part HTML nachladen
                 var x = document.getElementById(IDMain);
                 if (x == null) {
+                    /*
                     function loadContent() {
                         if (IDMain !== "") {
                             var IDMainFull = IDMain;
@@ -1494,6 +1495,36 @@ class GlideButton {
                         send('Request("updateValues")');
                     }
                     loadContent();
+                    */
+                    if (IDMain !== "") {
+                        var IDMainFull = IDMain;
+                    }
+                    else{
+                        IDMainFull = IDFull;
+                    }
+                    jQuery.getScript(IDMainFull + ".js", function()
+                    {
+                        // script is now loaded and executed.
+
+                        if (IDMain !== "") {
+                            //script für Ctrl Window nachaden
+                            document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                            //SubMenue Leiste verkuerzt einblenden
+                            document.getElementById(ParentID).style.width = "85px";
+                            //Haupt Fenster einblenden
+                            let sL = 100 - 26 - (100 * 172 / window.innerWidth);
+                            
+                            document.getElementById(IDMain).style.width = sL + "%";
+                            //Control Fenster einblenden
+                            document.getElementById(IDMain + "Ctrl").style.width = "26%";
+                        } else {
+                            document.getElementsByClassName("StartScreen")[0].style.width = "0px";
+                            //SubMenue Leiste verkuerzt einblenden
+                            document.getElementById(ParentID).style.width = "85px";
+                            //Haupt Fenster komplett einblenden
+                            document.getElementById(IDFull).style.width = "92%";
+                        }
+                    });
                 } else {
                     //Fenster ist schon geladen
                     if (IDMain !== "") {
@@ -3228,10 +3259,15 @@ class ShowUrlImage {
 
     update(SourceUrl) {
       
-         
-        this.ID.src = SourceUrl;
-
-         
+        try {
+            this.ID.src = SourceUrl;
+          }
+          catch(err) {
+            var fehler =  err;
+          }   
+     
+            
+        
 
     }
 
@@ -4565,7 +4601,8 @@ class FontSymb {
 /* --------------------- Klasse Chart ---------------------------------------- */
 class MyChart {
     constructor() {
-
+        this.cmd = [];
+        
         this.C = "";
     }
 
@@ -4589,7 +4626,7 @@ class MyChart {
         if (param[3]) {
             left = param[3];
         }
-
+        this.cmd[0] = 'func(IPS_RunScript,'+scriptID+')';
         var container = document.createElement("div");
         container.style.width = b;
         container.style.height = h;
@@ -4603,7 +4640,16 @@ class MyChart {
 
 
         elem1.style.backgroundColor = "black";
-        elem1.setAttribute("onclick", "send('IPS_RunScript," + scriptID + "')");
+
+         
+         var command =JSON.stringify(this.cmd);
+
+     
+        elem1.setAttribute("onclick",  'send('+ JSON.stringify(command) + ')');
+
+       
+        
+       // elem1.setAttribute("onclick", "send('command(IPS_RunScript,33023)')");
         container.append(elem1);
 
         document.getElementById(ParentID).appendChild(container);

@@ -1,7 +1,7 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--                                 Greensense Pflanzen Sensor                     -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                 Greensense Pflanzen Sensor                     -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainGreensense = new Area();
     MainGreensense.createMain("MainGreensense", "bgCyan");
     //-------------------------------------------------
@@ -103,19 +103,19 @@
 
     var Sensor2ID = new TransVarDisplay();
     Sensor2ID.create("MainGreensense", "550px", "440px", "lime", "18px", "ID", "");
-</script>
+ 
 
 
 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainGreensenseCtrl class="MainGreensenseCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainGreensenseCtrl class="MainGreensenseCtrl"></Ctrl>  -->
+ 
     var CtrlMainGreensense = new Area();
     CtrlMainGreensense.createCtrl("MainGreensenseCtrl", "bgCyanLight");
     //---------------------------------------------------------
@@ -143,4 +143,4 @@
     Sensor5Stat.create("MainGreensenseCtrl", "cyanLight", "", "420px", "20px", "60px", "202px", "20px",
         "Sensor 5 - Zustand",
         "N OK", "OK", "", "", "");
-</script>
+ 

@@ -1,14 +1,11 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--            Fenster und Luftfeuchtigkeit Schlafzimmer                    -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--            Fenster und Luftfeuchtigkeit Schlafzimmer                    -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainFSZ = new Area();
     MainFSZ.createMain("MainFSZ", "bgSandy");
     //-------------------------------------------------
-</script>
-
-
-<script>
+ 
     var iWindowSZ = new DynIcon("Fenster", "bin", false);
     iWindowSZ.create("MainFSZ", "40px", "30px", "170px", "170px");
 
@@ -37,21 +34,20 @@
     ds1['color'] = 'blue';
     ds2['color'] = 'white';
     graphSZ.create("MainFSZ", '48881', '%', '°C', ds0, ds1, ds2);
-</script>
+ 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainFSZCtrl class="FSZCtrl"></Ctrl>  -->
+ 
     var CtrlMainFSZ = new Area();
     CtrlMainFSZ.createCtrl("MainFSZCtrl", "bgSandyLight");
     //---------------------------------------------------------
-</script>
-<script>
+ 
     var SZWarn = new StateDisplay();
     SZWarn.create("MainFSZCtrl", "sandyLight", "", "20px", "20px", "60px", "202px", "20px",
         "Warnung",
@@ -86,4 +82,4 @@
     SZTPAussen.create("MainFSZCtrl", "sandyLight", "°C", "510px", "20px", "60px", "202px", "20px",
         "Taupunkt Aussen",
         "number");
-</script>
+ 

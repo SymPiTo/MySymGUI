@@ -1,7 +1,7 @@
-<!-- ************************** TV Guide  **************************  -->
-<Ctrl id="MainTVGuideCtrl" class="TVGuide"> </Ctrl>
+//<!-- ************************** TV Guide  **************************  -->
+//<Ctrl id="MainTVGuideCtrl" class="TVGuide"> </Ctrl>
 
-<script>
+ 
     var TVGuideframe = new SetIframe();
     TVGuideframe.create("MainTVGuideCtrl", "0px", "0px", "700px", "250px", "");
 
@@ -9,12 +9,12 @@
      var ProgGuide = new TVguide();
     ProgGuide.create("MainTVGuideCtrl"); 
     */
-</script>
+ 
 
-<!-- ************************** TV Source  **************************  -->
-<Ctrl id="MainTVSourceCtrl" class="TVSourceCtrl"> </Ctrl>
+//<!-- ************************** TV Source  **************************  -->
+//<Ctrl id="MainTVSourceCtrl" class="TVSourceCtrl"> </Ctrl>
 
-<script>
+ 
     var CtrlBtnStv = new CtrlStatButton();
     CtrlBtnStv.create("MainTVSourceCtrl", "3vh", "15%", "normal", "", "purple", "command",
         "send('command(TV,source,TV)') ");
@@ -51,7 +51,7 @@
     var CtrlBtnSDLNA = new CtrlStatButton();
     CtrlBtnSDLNA.create("MainTVSourceCtrl", "113vh", "15%", "normal", "", "purple", "command",
         "send('command(TV,source,DLNA)') ");
-</script>
+ 
 
 <!-- ************************** Right - TV Internet Links **************************  -->
 <Ctrl class="TVINet">

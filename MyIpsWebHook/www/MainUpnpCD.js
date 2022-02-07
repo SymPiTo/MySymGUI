@@ -1,8 +1,8 @@
-       <!-- ----------------------------------------------------------------------- -->
-       <!--                    MAIN - UPNP Musik CD                                 -->
-       <!--                id="MainUpnpCD"                                          -->
-       <!-- ----------------------------------------------------------------------- -->
-       <script>
+       //<!-- ----------------------------------------------------------------------- -->
+       //<!--                    MAIN - UPNP Musik CD                                 -->
+       //<!--                id="MainUpnpCD"                                          -->
+       //<!-- ----------------------------------------------------------------------- -->
+       
            var mainwindowUpnpCD = new Area();
            mainwindowUpnpCD.createMain("MainUpnpCD", "bgPurple");
 
@@ -65,16 +65,15 @@
            FontBtnPower.create("MainUpnpCD", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off",
                "100px", "50px",
                "send('command(upnp,power,toggle)')");
-       </script>
+     
 
-       <!-- ----------------------------------------------------------------------- -->
-       <!--                             Ctrl UPNP CD                                -->
-       <!-- ----------------------------------------------------------------------- -->
-       <script>
+       //<!-- ----------------------------------------------------------------------- -->
+       //<!--                             Ctrl UPNP CD                                -->
+       //<!-- ----------------------------------------------------------------------- -->
+       
            var CtrlMainUpnpCD = new Area();
            CtrlMainUpnpCD.createCtrl("MainUpnpCDCtrl", "bgPurpleLight");
-       </script>
-       <script>
+      
            var CtrlCDList = new DynIconList();
            CtrlCDList.create("MainUpnpCDCtrl", "CD");
-       </script>
+      

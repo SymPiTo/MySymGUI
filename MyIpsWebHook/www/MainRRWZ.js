@@ -1,14 +1,11 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--                        Saug Roboter Roborock 6                          -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                        Saug Roboter Roborock 6                          -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainRR = new Area();
     MainRR.createMain("MainRRWZ", "bgCyan");
     //-------------------------------------------------
-</script>
-
-
-<script>
+ 
     var roborock = new CtrlTile();
     roborock.create("MainRRWZ", "30px", "30px", "RoboRock", "cyan", "transparent", "roborock",
         "send('IPS_RunScript(48453)')", "send('IPS_RunScript(21227)')", "aus", "ein", "", "",
@@ -57,21 +54,20 @@
     var btnSideBrushReset = new CtrlButton();
     btnSideBrushReset.create("MainRRWZ", "505px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sidebrush", "black",
         "func", "", 'func(IPS_RunScript,31673)');
-</script>
+ 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainRRCtrl class="RRCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainRRCtrl class="RRCtrl"></Ctrl>  -->
+ 
     var CtrlMainRR = new Area();
     CtrlMainRR.createCtrl("MainRRWZCtrl", "bgCyanLight");
     //---------------------------------------------------------
-</script>
-<script>
+ 
     var RRBat = new StateDisplay();
     RRBat.create("MainRRWZCtrl", "cyanLight", "%", "20px", "20px", "60px", "202px", "20px",
         "Battery",
@@ -96,4 +92,4 @@
     RRSensor.create("MainRRWZCtrl", "cyanLight", "%", "370px", "20px", "60px", "202px", "20px",
         "Sensor",
         "number");
-</script>
+ 

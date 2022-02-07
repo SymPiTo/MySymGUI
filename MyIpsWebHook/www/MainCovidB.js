@@ -1,13 +1,12 @@
- <!-- ----------------------------------------------------------------------- -->
- <!--                            Area: Balkon - Covid                         -->
- <!-- ----------------------------------------------------------------------- -->
+ //<!-- ----------------------------------------------------------------------- -->
+ //<!--                            Area: Balkon - Covid                         -->
+ //<!-- ----------------------------------------------------------------------- -->
 
- <!-- ----------------------- Main Area: Balkon - Covid --------------------- -->
- <script>
+ //<!-- ----------------------- Main Area: Balkon - Covid --------------------- -->
+ 
      var winCovidB = new Area();
      winCovidB.createMain("MainCovidB", "bgBlue");
- </script>
- <script>
+ 
      var graphCovid = new MyChart();
      var ds0D = new Array();
      var ds1D = new Array();
@@ -37,14 +36,13 @@
      ds1D['color'] = 'blue';
      ds2D['color'] = 'white';
      graphCovid1.create("MainCovidB", '10026', '', '', ds0D, ds1D, ds2D, '600px', '200px', '320px', '10px');
- </script>
+ 
 
- <!-- ----------------------- Ctrl Area: Balkon - Covid ----------------------- -->
- <script>
+ //<!-- ----------------------- Ctrl Area: Balkon - Covid ----------------------- -->
+ 
      var CtrlwinCovidB = new Area();
      CtrlwinCovidB.createCtrl("MainCovidBCtrl", "blueLight");
- </script>
- <script>
+ 
      var D_Covidweek = new StateDisplay();
      D_Covidweek.create("MainCovidBCtrl", "blueLight", "", "10px", "20px", "60px", "202px", "20px",
          "Fälle pro Woche D",
@@ -96,4 +94,4 @@
      MA_Dead.create("MainCovidBCtrl", "blueLight", "", "780px", "20px", "60px", "202px", "20px",
          "Tode je Woche MA",
          "number");
- </script>
+ 

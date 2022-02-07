@@ -1,14 +1,13 @@
-<!-- *************************************************************************************   -->
-<!--  ************************         Main - Fenster Bad         ************************   -->
-<!-- *************************************************************************************   -->
-<!-- ************************ Fenster Bad ************************ -->
-<!-- <Main id="MainFBad"  class="FBad"></Main> -->
+//<!-- *************************************************************************************   -->
+//<!--  ************************         Main - Fenster Bad         ************************   -->
+//<!-- *************************************************************************************   -->
+//<!-- ************************ Fenster Bad ************************ -->
+//<!-- <Main id="MainFBad"  class="FBad"></Main> -->
 
-<script>
+ 
     var windowFBad = new Area();
     windowFBad.createMain("MainFBad", "bgViolet");
-</script>
-<script>
+ 
     var WindowBad = new CtrlTile();
     WindowBad.create("MainFBad", "30px", "30px", "Bad Fenster", "violet", "transparent", "Fenster",
         'func(IPS_RunScript,11670)', 'func(IPS_RunScript,37973)', "zu", "auf", "", "",
@@ -40,17 +39,16 @@
     ds1['color'] = 'blue';
     ds2['color'] = 'white';
     graphB.create("MainFBad", '26561', '%', '°C', ds0, ds1, ds2);
-</script>
+ 
 
-<!-- *************************************************************************************   -->
-<!--  ************************         Ctrl - Fenster Bad         ************************   -->
-<!-- *************************************************************************************   -->
-<!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
-<script>
+//<!-- *************************************************************************************   -->
+//<!--  ************************         Ctrl - Fenster Bad         ************************   -->
+//<!-- *************************************************************************************   -->
+//<!-- <Ctrl id="MainLightSZCtrl"  class="LightSZCtrl"></Ctrl> -->
+ 
     var CtrlwindowFBad = new Area();
     CtrlwindowFBad.createCtrl("MainFBadCtrl", "bgViolet");
-</script>
-<script>
+ 
     var BathWarn = new StateDisplay();
     BathWarn.create("MainFBadCtrl", "violetLight", "", "20px", "20px", "60px", "202px", "20px",
         "Warnung",
@@ -85,4 +83,4 @@
     BathTPAussen.create("MainFBadCtrl", "violetLight", "°C", "510px", "20px", "60px", "202px", "20px",
         "Taupunkt Aussen",
         "number");
-</script>
+ 

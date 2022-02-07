@@ -1,7 +1,7 @@
-<!-- ----------------------------------------------------------------------- -->
-<!--                                 Sonos Schlafzimmer                      -->
-<!-- ----------------------------------------------------------------------- -->
-<script>
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                 Sonos Schlafzimmer                      -->
+//<!-- ----------------------------------------------------------------------- -->
+ 
     var MainSonosSZ = new Area();
     MainSonosSZ.createMain("MainSonosSZ", "bgSandy");
     //-------------------------------------------------
@@ -38,22 +38,22 @@
     var FontBtnSonosPowerSZ = new FontButton();
     FontBtnSonosPowerSZ.create("MainSonosSZ", "fontbutton", "sandy", "74vh", "360px",
         "fa fa-power-off", "100px", "50px", "", "", 'func(SNS_Stop,53696)');
-</script>
+ 
 
 
 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-<!--                                  Ctrl                                   -->
-<!-- ----------------------------------------------------------------------- -->
+//<!-- ----------------------------------------------------------------------- -->
+//<!--                                  Ctrl                                   -->
+//<!-- ----------------------------------------------------------------------- -->
 
-<!--  <Ctrl id = MainSonosSZCtrl class="SonosSZCtrl"></Ctrl>  -->
-<script>
+//<!--  <Ctrl id = MainSonosSZCtrl class="SonosSZCtrl"></Ctrl>  -->
+ 
     var CtrlMainSonosSZ = new Area();
     CtrlMainSonosSZ.createCtrl("MainSonosSZCtrl", "bgSandyLight");
     //---------------------------------------------------------
     var CtrlSonosSZRadioList = new DynIconList();
     CtrlSonosSZRadioList.create("MainSonosSZCtrl", "SonosRadio", "110px", "SZ");
-</script>
+ 

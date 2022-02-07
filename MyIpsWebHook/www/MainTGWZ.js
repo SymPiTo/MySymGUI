@@ -1,13 +1,12 @@
- <!-- ----------------------------------------------------------------------- -->
- <!--                 Area: Wohnzimmer Graph Temperatur                       -->
- <!-- ----------------------------------------------------------------------- -->
+ //<!-- ----------------------------------------------------------------------- -->
+ //<!--                 Area: Wohnzimmer Graph Temperatur                       -->
+ //<!-- ----------------------------------------------------------------------- -->
 
- <!-- ----------------------- Main Area: Wohnzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Main Area: Wohnzimmer - Temperatur Graph ----------------------- -->
+  
      var windowTGWZ = new Area();
      windowTGWZ.createMain("MainTGWZ", "bgCyan");
- </script>
- <script>
+ 
      var graphTWZ = new MyChart();
      var ds0 = new Array();
      var ds1 = new Array();
@@ -22,13 +21,10 @@
      ds1['color'] = 'blue';
      ds2['color'] = 'white';
      graphTWZ.create("MainTGWZ", '34129', '%', '°C', ds0, ds1, ds2, "90%", "90%", "300px", "20px");
- </script>
+ 
 
- <!-- ----------------------- Ctrl Area: Wohnzimmer - Temperatur Graph ----------------------- -->
- <script>
+ //<!-- ----------------------- Ctrl Area: Wohnzimmer - Temperatur Graph ----------------------- -->
+ 
      var CtrlwindowTGWZ = new Area();
      CtrlwindowTGWZ.createCtrl("MainTGWZCtrl", "bgCyan");
- </script>
- <script>
-
- </script>
+ 

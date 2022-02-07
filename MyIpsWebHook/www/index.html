@@ -97,8 +97,10 @@
 
                 socket.onmessage = function (msg) {
                     var jsontext = msg.data;
+                    ips = JSON.parse(jsontext);
+                    var antwort = ips[1].toString().split(':');
                     var typ = msg.type;
-
+                    var buf = socket.bufferedAmount;
 
                     // Update, message, Refresh, Ping, Pong, 
 
@@ -154,6 +156,11 @@
                         var IPSValue = JSON.parse(ipsJsonValue);
                         updateIPSValue(ipsID, IPSValue);
 
+                    } else if (antwort[0] == "Antwort") {
+
+                        ipsObj.serverID = antwort[1];
+                        symvar = ips[0];
+                        ipsObj.update(symvar);
                     } else if (jsontext != "") {
                         //Variablen Paket einlesen
                         var paket = ips[1];
@@ -264,7 +271,7 @@
 
         function send(msg) {
             var msg;
-
+            var buf = socket.bufferedAmount;
             if (!msg) {
                 alert('Message can not be empty');
                 return;
