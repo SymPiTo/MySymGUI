@@ -51,7 +51,8 @@ require_once(__DIR__ . "/../libs/NW.php");
                 $this->SendDebug( "WhiteList: ", $wlArray, 0); 
                 $WL= false;
                 foreach ($wlArray as $key=>$value) {
-                        $this->SendDebug( $_SERVER["REMOTE_ADDR"],  $value, 0); 
+                        $this->SendDebug("a" ,  $value, 0); 
+                        $this->SendDebug("b" ,  $_SERVER["REMOTE_ADDR"], 0); 
                         if ($value == $_SERVER['REMOTE_ADDR']){
                                 $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
                                 $WL = true;
