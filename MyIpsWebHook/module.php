@@ -28,7 +28,7 @@
                 
                 $this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
                 
-                $this->SendDebug( "Server: SCRIPT_FILENAME.: ", $_SERVER['SCRIPT_FILENAME'], 0); 
+                
                 $this->SendDebug( "Server: SERVER_PORT.: ", $_SERVER['SERVER_PORT'], 0); 
                 $this->SendDebug( "Server: SCRIPT_NAME.: ", $_SERVER['SCRIPT_NAME'], 0); 
                 $this->SendDebug( "Server: HTTP_ACCEPT_ENCODING.: ", $_SERVER['HTTP_ACCEPT_ENCODING'], 0); 
