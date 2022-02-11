@@ -26,12 +26,11 @@
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
                         "width": "auto",
+                        "add": "192.168.78.000",
                         "edit": 
                         {
                             "type": "ValidationTextBox"
-                        },
-                        "add": 0
-                        
+                        }                        
                     }
                 ],
                 "values": [
