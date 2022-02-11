@@ -26,10 +26,7 @@
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
                         "width": "auto",
-                        "add": 
-                        {
-                            "type": "ValidationTextBox"
-                        },
+                        "add":   "- - - - - ",
                         "edit": 
                         {
                             "type": "ValidationTextBox"
