@@ -38,8 +38,8 @@
                     {
                         "Text": "One",
                         "Number": "1",
-                        "editable": true,
-                        "deletable": true
+                        "editable": "true",
+                        "deletable": "true"
 
                     },
                     {
