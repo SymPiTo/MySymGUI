@@ -9,7 +9,9 @@
                 $this->RegisterPropertyString("Username", "");
                 $this->RegisterPropertyString("Password", "");
 
-                $this->RegisterVariableString("WSS_Test", "TestString");
+                $this->RegisterPropertyString("Password", "");
+
+                $this->RegisterVariableString("WhiteList", "WhiteList");
 
         }
 
@@ -24,7 +26,9 @@
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
-                
+                $arrString = $this->ReadPropertyString("WhiteList");
+                $arr = json_decode($arrString);
+                $this->SendDebug( "WhiteList.: ", $arrString, 0); 
                 $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
                 //$this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
