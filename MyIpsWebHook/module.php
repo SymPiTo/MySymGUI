@@ -47,7 +47,7 @@
                 $wlArray = json_decode($wlJson);
                 //$this->SendDebug( "WhiteList: ", $wlJson, 0); 
                 $WL= false;
-                foreach ($wlArray as $key => $value) {
+                foreach ($wlArray as $value) {
                         $this->SendDebug( $_SERVER["REMOTE_ADDR"],  $value, 0); 
                         if ($value == $_SERVER['REMOTE_ADDR']){
                                 $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
