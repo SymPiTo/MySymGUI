@@ -47,7 +47,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
-                $wlArray = json_decode($wlJson, true);
+                $wlArray = json_decode($wlJson['Result']);
                 $this->SendDebug( "WhiteList: ", $wlArray, 0); 
                 $WL= false;
                 foreach ($wlArray as $key=>$value) {
