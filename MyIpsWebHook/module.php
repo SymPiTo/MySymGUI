@@ -24,7 +24,7 @@
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
-                $this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER, 0); 
+                $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
                 
                // $this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
