@@ -45,7 +45,18 @@
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
                 $wlArray = json_decode($wlJson);
-                $this->SendDebug( "WhiteList: ", $wlJson, 0); 
+                //$this->SendDebug( "WhiteList: ", $wlJson, 0); 
+                $WL= false;
+                foreach ($wlArray as $key => $value) {
+                        if ($value == $_SERVER['REMOTE_ADDR']){
+                                $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
+                                $WL = true;
+                        }
+                }
+                if($WL == false){
+                        header($_SERVER["REMOTE_ADDR"]." 404 Not Found");
+                        return;     
+                }
 
                 if(!isset($_SERVER['PHP_AUTH_USER']))
                 $_SERVER['PHP_AUTH_USER'] = "";
