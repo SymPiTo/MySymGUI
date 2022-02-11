@@ -47,13 +47,11 @@ require_once(__DIR__ . "/../libs/NW.php");
                
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
-                $wlArray = json_decode($wlJson);
-                //$this->SendDebug( "WhiteList: ", $wlArray[0], 0); 
+                $wlObj = json_decode($wlJson);
+         
                 $WL= false;
              
-                foreach ($wlArray as $key=>$value) {
-                        //$this->SendDebug("a" ,  $value, 0); 
-                        //$this->SendDebug("b" ,  $_SERVER["REMOTE_ADDR"], 0); 
+                foreach ($wlObj as $key=>$value) {
                         if ($value->whiteIP == $_SERVER['REMOTE_ADDR']){
                               $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
                                 $WL = true;

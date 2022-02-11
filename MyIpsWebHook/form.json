@@ -32,20 +32,35 @@
                             "caption": "IP of Client",
                             "type": "ValidationTextBox"
                         }                        
+                    },
+                    {
+                        "caption": "aktiv",
+                        "name": "IPactive",
+                        "width": "100",
+                        "add":   false,
+                        "edit": 
+                        {
+                            "caption": "select",
+                            "type": "CheckBox"
+                        }                        
                     }
                 ],
                 "values": [
                     {
-                        "whiteIP": "192.168.178.32"
+                        "whiteIP": "192.168.178.32",
+                        "IPactive": false
                     },
                     {
-                        "whiteIP": "192.168.178.28"
+                        "whiteIP": "192.168.178.28",
+                        "IPactive": false
                     },
                     {
-                        "whiteIP": "192.168.178.6"
+                        "whiteIP": "192.168.178.6",
+                        "IPactive": false
                     },
                     {
-                        "whiteIP": "192.168.178.13"
+                        "whiteIP": "192.168.178.13",
+                        "IPactive": false
                     }
     
                 ]
