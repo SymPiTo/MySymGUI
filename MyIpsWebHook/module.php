@@ -25,9 +25,9 @@
         */
         protected function ProcessHookData() { 
                 $this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
-                $this->SendDebug( "Server: REMOTE_HOST.: ", $_SERVER['REMOTE_HOST'], 0); 
+                
                 $this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
-                $this->SendDebug( "Server: REMOTE_USER.: ", $_SERVER['REMOTE_USER'], 0); 
+                
                 $this->SendDebug( "Server: SCRIPT_FILENAME.: ", $_SERVER['SCRIPT_FILENAME'], 0); 
                 $this->SendDebug( "Server: SERVER_PORT.: ", $_SERVER['SERVER_PORT'], 0); 
                 $this->SendDebug( "Server: SCRIPT_NAME.: ", $_SERVER['SCRIPT_NAME'], 0); 
