@@ -24,7 +24,7 @@
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
-             
+                $this->SendDebug( "Server: RemoteAddr.: ", $_SERVER['REMOTE_ADDR'], 0);  
             $this->setvalue("WSS_Test",$_SERVER['REMOTE_ADDR']);
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
