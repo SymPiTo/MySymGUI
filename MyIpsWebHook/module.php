@@ -1,6 +1,9 @@
 <?php
-
+require_once(__DIR__ . "/../libs/NW.php");
     class MyIpsWebHook extends IPSModule {
+
+        use 
+        MyDebugHelper4;
 
         public function Create() {
                 //Never delete this line!
@@ -45,9 +48,9 @@
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
                 $wlArray = json_decode($wlJson);
-                $this->SendDebug( "WhiteList: ", $wlJson, 0); 
+                $this->SendDebug( "WhiteList: ", $wlArray, 0); 
                 $WL= false;
-                foreach ($wlArray as $value) {
+                foreach ($wlArray as $key=>$value) {
                         $this->SendDebug( $_SERVER["REMOTE_ADDR"],  $value['whiteIP'], 0); 
                         if ($value == $_SERVER['REMOTE_ADDR']){
                                 $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
