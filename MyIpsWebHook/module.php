@@ -9,9 +9,9 @@
                 $this->RegisterPropertyString("Username", "");
                 $this->RegisterPropertyString("Password", "");
 
-                $this->RegisterPropertyString("Password", "");
+                $this->RegisterPropertyString("WhiteList", "");
 
-                $this->RegisterVariableString("WhiteList", "WhiteList");
+                $this->RegisterVariableString("WSS_Test", "WhiteList");
 
         }
 
