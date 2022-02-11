@@ -1103,8 +1103,14 @@ function updateValues() {
   /* ------------------------------- SonosWZ ----------------------------- */
   if (document.getElementById("MainAktien")) {
     DisUmlfRendite.update(ipsObj.ips.ID50816, 3);
-   
-    graphUlfR.dataload(this.ipsObj.ips.DATA50816 );
+
+                        //sollte nur bei click geladen werden
+                        if(ipsObj.serverID == 12760){
+                          graphUlfR.dataload(this.ipsObj.ips.DATA50816 );
+                          //Befehl nur einmal ausführen, deshalb serverID = 0
+                          ipsObj.serverID = 0;
+                        }
+    
     var x = 0;
   }
  
@@ -1272,9 +1278,13 @@ function updateValues() {
       ipsObj.serverID = 0;
     }
      // 
-     // graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
+    //sollte nur bei click geladen werden
+    if(ipsObj.serverID == 10026){
+      graphCovid1.dataload(this.ipsObj.ips.DATA38216, this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA51616);
+      //Befehl nur einmal ausführen, deshalb serverID = 0
+      ipsObj.serverID = 0;
     }
-
+  }
 
   /* ------------------------------- Wasser Filter------------------------------- */
   DiIPSFil1.update(ipsObj.ips.ID29770);
@@ -1384,18 +1394,35 @@ function updateValues() {
 
   /* ------------------------------- Wohnzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGWZ")) {
-    graphTWZ.dataload(this.ipsObj.ips.DATA41984, this.ipsObj.ips.DATA21198, this.ipsObj.ips.DATA20539);
+        //sollte nur bei click geladen werden
+        if(ipsObj.serverID == 34129){
+          graphTWZ.dataload(this.ipsObj.ips.DATA41984, this.ipsObj.ips.DATA21198, this.ipsObj.ips.DATA20539);
+          //Befehl nur einmal ausführen, deshalb serverID = 0
+          ipsObj.serverID = 0;
+        }
+    
   }
 
   /* ------------------------------- Schlafzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGSZ")) {
-    graphTSZ.dataload(this.ipsObj.ips.DATA15922, this.ipsObj.ips.DATA55889, this.ipsObj.ips.DATA37431);
+    
+        //sollte nur bei click geladen werden
+        if(ipsObj.serverID == 12276){
+          graphTSZ.dataload(this.ipsObj.ips.DATA15922, this.ipsObj.ips.DATA55889, this.ipsObj.ips.DATA37431);
+          //Befehl nur einmal ausführen, deshalb serverID = 0
+          ipsObj.serverID = 0;
+        }
   }
 
   /* ------------------------------- Kinderzimmer Temperatur Graph------------------------------ */
   if (document.getElementById("MainTGKZ")) {
+        //sollte nur bei click geladen werden
+        if(ipsObj.serverID == 27353){
+          graphTKZ.dataload(this.ipsObj.ips.DATA50730, this.ipsObj.ips.DATA25152, this.ipsObj.ips.DATA48718);
+          //Befehl nur einmal ausführen, deshalb serverID = 0
+          ipsObj.serverID = 0;
+        }
    
-   graphTKZ.dataload(this.ipsObj.ips.DATA50730, this.ipsObj.ips.DATA25152, this.ipsObj.ips.DATA48718);
    var x = 0;
   }
 
@@ -1415,7 +1442,13 @@ function updateValues() {
     KZTPInnen.update(ipsObj.ips.ID22124);
     KZTPAussen.update(ipsObj.ips.ID12637);
 
-    graphKZ.dataload(ipsObj.ips.DATA58606, ipsObj.ips.DATA37605, ipsObj.ips.DATA54511);
+            //sollte nur bei click geladen werden
+            if(ipsObj.serverID == 21504){
+              graphKZ.dataload(ipsObj.ips.DATA58606, ipsObj.ips.DATA37605, ipsObj.ips.DATA54511);
+              //Befehl nur einmal ausführen, deshalb serverID = 0
+              ipsObj.serverID = 0;
+            }
+    
   }
 
 
@@ -1440,7 +1473,13 @@ function updateValues() {
     WZTPInnen.update(ipsObj.sym[307]);
     WZTPAussen.update(ipsObj.sym[306]);
 
-    graphWZ.dataload(this.ipsObj.sym[314], this.ipsObj.sym[313], this.ipsObj.sym[312]);
+                //sollte nur bei click geladen werden
+                if(ipsObj.serverID == 20131){
+                  graphWZ.dataload(this.ipsObj.sym[314], this.ipsObj.sym[313], this.ipsObj.sym[312]);
+                  //Befehl nur einmal ausführen, deshalb serverID = 0
+                  ipsObj.serverID = 0;
+                }
+    
   }
 
   /* ------------------------------- Schlafzimmer Fenster------------------------------ */
@@ -1459,7 +1498,13 @@ function updateValues() {
     SZTPInnen.update(ipsObj.sym[292]);
     SZTPAussen.update(ipsObj.sym[291]);
 
-    graphSZ.dataload(this.ipsObj.sym[299], this.ipsObj.sym[298], this.ipsObj.sym[297]);
+                    //sollte nur bei click geladen werden
+                    if(ipsObj.serverID == 48881){
+                      graphSZ.dataload(this.ipsObj.sym[299], this.ipsObj.sym[298], this.ipsObj.sym[297]);
+                      //Befehl nur einmal ausführen, deshalb serverID = 0
+                      ipsObj.serverID = 0;
+                    }
+    
   }
 
   /* ------------------------------- Bad- Fenster------------------------------ */
@@ -1479,7 +1524,13 @@ function updateValues() {
     BathTPInnen.update(ipsObj.sym[284]);
     BathTPAussen.update(ipsObj.sym[283]);
 
-    graphB.dataload(this.ipsObj.sym[301], this.ipsObj.sym[302], this.ipsObj.sym[300]);
+                        //sollte nur bei click geladen werden
+                        if(ipsObj.serverID == 26561){
+                          graphB.dataload(this.ipsObj.sym[301], this.ipsObj.sym[302], this.ipsObj.sym[300]);
+                          //Befehl nur einmal ausführen, deshalb serverID = 0
+                          ipsObj.serverID = 0;
+                        }
+    
   }
 
 
@@ -1581,6 +1632,7 @@ function updateValues() {
     DynIconDoorB.update(ipsObj.sym[227]);
     DisDoorBCtrl.update(ipsObj.sym[227]);
   }
+  
   //<!-- ******************** Homematic Server **************************  -->
   DiHM1.update(ipsObj.sym[220]);
   DiHM2.update(ipsObj.sym[221]);
@@ -1744,7 +1796,7 @@ function updateValues() {
   RezeptName.update(ipsObj.sym[100]);
   DeviceBox.update(ipsObj.sym[132]);
 
-*/
+  */
 
 
 
@@ -1913,33 +1965,34 @@ function updateValues() {
 
 
 
+  if (document.getElementById("MainBatAlarm")) {
+    iBat01.update(ipsObj.sym[59]);
+    iBat02.update(ipsObj.sym[60]);
+    iBat03.update(ipsObj.sym[61]);
+    iBat04.update(ipsObj.sym[62]);
+    iBat05.update(ipsObj.sym[63]);
+    iBat06.update(ipsObj.sym[30]);
+    iBat07.update(ipsObj.sym[64]);
+    iBat08.update(ipsObj.sym[239]);
+    iBat09.update(ipsObj.sym[240]);
 
-  iBat01.update(ipsObj.sym[59]);
-  iBat02.update(ipsObj.sym[60]);
-  iBat03.update(ipsObj.sym[61]);
-  iBat04.update(ipsObj.sym[62]);
-  iBat05.update(ipsObj.sym[63]);
-  iBat06.update(ipsObj.sym[30]);
-  iBat07.update(ipsObj.sym[64]);
-  iBat08.update(ipsObj.sym[239]);
-  iBat09.update(ipsObj.sym[240]);
+    iBat11.update(ipsObj.sym[32]);
+    iBat12.update(ipsObj.sym[65]);
+    iBat13.update(ipsObj.sym[31]);
+    iBat14.update(ipsObj.sym[66]);
+    iBat15.update(ipsObj.sym[29]);
+    iBat16.update(ipsObj.sym[71]);
+    iBat17.update(ipsObj.sym[241]);
+    iBat18.update(ipsObj.sym[242]);
+    iBat19.update(ipsObj.sym[243]);
 
-  iBat11.update(ipsObj.sym[32]);
-  iBat12.update(ipsObj.sym[65]);
-  iBat13.update(ipsObj.sym[31]);
-  iBat14.update(ipsObj.sym[66]);
-  iBat15.update(ipsObj.sym[29]);
-  iBat16.update(ipsObj.sym[71]);
-  iBat17.update(ipsObj.sym[241]);
-  iBat18.update(ipsObj.sym[242]);
-  iBat19.update(ipsObj.sym[243]);
+    iBat20.update(ipsObj.sym[244]);
+    iBat21.update(ipsObj.sym[245]);
+    iBat22.update(ipsObj.sym[246]);
+    iBat23.update(ipsObj.sym[247]);
 
-  iBat20.update(ipsObj.sym[244]);
-  iBat21.update(ipsObj.sym[245]);
-  iBat22.update(ipsObj.sym[246]);
-  iBat23.update(ipsObj.sym[247]);
-
-  BatDis.update(ipsObj.sym[44]);
+    BatDis.update(ipsObj.sym[44]);
+  }
 
   DisSabAlarm.update(ipsObj.sym[67]);
 

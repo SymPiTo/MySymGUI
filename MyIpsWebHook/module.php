@@ -8,6 +8,9 @@
 
                 $this->RegisterPropertyString("Username", "");
                 $this->RegisterPropertyString("Password", "");
+
+                $this->RegisterVariableString("WSS_Test", "TestString");
+
         }
 
         public function ApplyChanges() {
@@ -21,8 +24,8 @@
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
-            
-     
+             
+            $this->setvalue(WSS_Test,$_SERVER['REMOTE_ADDR']);
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
 if(!isset($_SERVER['PHP_AUTH_PW']))

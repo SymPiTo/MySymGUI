@@ -49,46 +49,7 @@ function Navigation() {
     document.getElementsByClassName("Navigation")[0].style.width = "27vw";
 }
 
-function goodMorning() {
-    var x = "ghjgh";
-}
 
-function goodNight() {
-    //Schlafzimmerlicht einschalten
-    send('command(Light,SZ,true)');
-    //Wohnzimmer Licht ausschalten
-    send('command(Light,WZF,false)');
-    send('command(Light,WZM,false)');
-    //Dielenlicht ausschalten
-    send('command(Light,D,false)');
-    //Anlage ausschalten
-    send('command(DenonCeol,power,Standby)');
-    //Heizung in Nacht Modus schalten
-    send('command(Heizung,WZ,absenken)');
-    send('command(Heizung,SZ,absenken)');
-    send('command(Heizung,KZ,absenken)');
-    send('command(Heizung,K,absenken)');
-    //Rolladen zufahren
-    send('command(Rollo,WZ,down)');
-    send('command(Rollo,SZ,down)');
-    send('command(Rollo,KZ,down)');
-    send('command(Rollo,K,down)');
-    send('command(Rollo,B,down)');
-}
-
-function Bye() {
-    //Schlafzimmerlicht ausschalten
-
-    //Wohnzimmerfenster Licht ausschalten
-    //var cmd = "func(STV_T_setChannelbyName, 44308," + item['sender'] + ")";
-    var cmd = "func(HM_WriteValueBoolean, 15609, 'STATE', false)";
-    send(cmd);
-    //Heizung in AWAY Modus schalten
-
-
-
-
-}
 
 function SetCDCover(player) {
     var x = document.getElementById("placeCDLibhere").childElementCount;
