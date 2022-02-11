@@ -48,19 +48,19 @@ require_once(__DIR__ . "/../libs/NW.php");
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
                 $wlArray = json_decode($wlJson);
-                $this->SendDebug( "WhiteList: ", $wlArray[0], 0); 
+                //$this->SendDebug( "WhiteList: ", $wlArray[0], 0); 
                 $WL= false;
                 foreach ($wlArray as $key=>$value) {
-                        $this->SendDebug("a" ,  $value, 0); 
-                        $this->SendDebug("b" ,  $_SERVER["REMOTE_ADDR"], 0); 
+                        //$this->SendDebug("a" ,  $value, 0); 
+                        //$this->SendDebug("b" ,  $_SERVER["REMOTE_ADDR"], 0); 
                         if ($value == $_SERVER['REMOTE_ADDR']){
-                                $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
+                              //  $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
                                 $WL = true;
                         }
                 }
                 
                 if($WL == true){
-                        $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist nicht zugelassen", 0);
+                        //$this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist nicht zugelassen", 0);
 
                         header($_SERVER["REMOTE_ADDR"]." 404 Not Found");
                         echo $_SERVER["REMOTE_ADDR"]." Not Allowed";
