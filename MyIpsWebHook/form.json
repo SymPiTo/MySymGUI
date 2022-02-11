@@ -22,9 +22,15 @@
                 "add": false,
                 "columns": [
                     {
+                        "caption": "Text",
+                        "name": "Text",
+                        "width": "auto",
+                        "sortColumn": "Number"
+                    },
+                    {
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
-                        "width": "200px",
+                        "width": "400px",
                         "visible": false
                     }
                 ],
