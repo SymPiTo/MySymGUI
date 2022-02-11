@@ -24,13 +24,10 @@
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
+                
                 $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
-                
-               // $this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
-                
-                
-                
+                //$this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
                 //$this->SendDebug( "Server: SCRIPT_NAME.: ", $_SERVER['SCRIPT_NAME'], 0); 
                 //$this->SendDebug( "Server: HTTP_ACCEPT_ENCODING.: ", $_SERVER['HTTP_ACCEPT_ENCODING'], 0); 
                 //$this->SendDebug( "Server: HTTP_ACCEPT_LANGUAGE.: ", $_SERVER['HTTP_ACCEPT_LANGUAGE'], 0); 
@@ -39,6 +36,7 @@
                 
 
                 $this->setvalue("WSS_Test",$_SERVER['REMOTE_ADDR']);
+                //Whitelist überprüfen
 
                 if(!isset($_SERVER['PHP_AUTH_USER']))
                 $_SERVER['PHP_AUTH_USER'] = "";
@@ -46,17 +44,17 @@
                 $_SERVER['PHP_AUTH_PW'] = "";
  
                 if(($_SERVER['PHP_AUTH_USER'] != $this->ReadPropertyString("Username")) || ($_SERVER['PHP_AUTH_PW'] != $this->ReadPropertyString("Password"))) {
-                header('WWW-Authenticate: Basic Realm="MyIpsHomeControl"');
-                header('HTTP/1.0 401 Unauthorized');
-                echo "Authorization required";
-                return;
-        }
-//echo "Willkommen im geschützten Bereich";
+                        header('WWW-Authenticate: Basic Realm="MyIpsHomeControl"');
+                        header('HTTP/1.0 401 Unauthorized');
+                        echo "Authorization required";
+                        return;
+                }
+                //echo "Willkommen im geschützten Bereich";
 
 
 
-            $root = realpath(__DIR__ . "/www");
-//echo $root;
+                $root = realpath(__DIR__ . "/www");
+                //echo $root;
             //reduce any relative paths. this also checks for file existance
             $path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/myipshook/")));
           //echo $path;

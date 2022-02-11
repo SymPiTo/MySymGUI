@@ -1,19 +1,48 @@
 {
     "elements":
-            [
-                {
-                    "type":"Label",
-                    "label":"http://127.0.0.1:3777/hook/myipshook/"
-                },
-		{ 
-                    "name": "Username", 
-                    "type": "ValidationTextBox", 
-                    "caption": "Username" 
-                },
-		{ 
-                    "name": "Password", 
-                    "type": "PasswordTextBox", 
-                    "caption": "Password" 
-                }
-            ]
+        [
+            {
+                "type":"Label",
+                "label":"http://127.0.0.1:3777/hook/myipshook/"
+            },
+		    { 
+                "name": "Username", 
+                "type": "ValidationTextBox", 
+                "caption": "Username" 
+            },
+		    { 
+                "name": "Password", 
+                "type": "PasswordTextBox", 
+                "caption": "Password" 
+            },
+            {
+                "type": "List",
+                "name": "sortList",
+                "rowCount": 5,
+                "add": false,
+                "columns": [
+                    {
+                        "caption": "zulässige IP-Adresse",
+                        "name": "whiteIP",
+                        "width": "200px",
+                        "visible": false
+                    }
+                ],
+                "values": [
+                    {
+                        "Text": "One",
+                        "Number": "1"
+                    },
+                    {
+                        "Text": "Two",
+                        "Number": "2"
+                    },
+                    {
+                        "Text": "Three",
+                        "Number": "3"
+                    }
+                ]
+            }
+        
+        ]
 }
