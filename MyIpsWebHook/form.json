@@ -19,7 +19,8 @@
                 "type": "List",
                 "name": "sortList",
                 "rowCount": 5,
-                "add": false,
+                "add": true,
+                "delete": true,
                 "columns": [
                     {
                         "caption": "zulässige IP-Adresse",
@@ -36,17 +37,14 @@
                 ],
                 "values": [
                     {
-                        "Text": "One",
-                        "Number": "1"
+                        "whiteIP": "One",
+                        "sssss": "1"
                     },
                     {
-                        "Text": "Two",
-                        "Number": "2"
-                    },
-                    {
-                        "Text": "Three",
-                        "Number": "3"
+                        "whiteIP": "Two",
+                        "sssss": "2"
                     }
+    
                 ]
             }
         
