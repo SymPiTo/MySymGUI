@@ -37,10 +37,7 @@
                 "values": [
                     {
                         "Text": "One",
-                        "Number": "1",
-                        "editable": "true",
-                        "deletable": "true"
-
+                        "Number": "1"
                     },
                     {
                         "Text": "Two",
