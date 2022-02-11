@@ -17,7 +17,7 @@
             },
             {
                 "type": "List",
-                "name": "sortList",
+                "name": "WhiteList",
                 "rowCount": 5,
                 "add": true,
                 "delete": true,
