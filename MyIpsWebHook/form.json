@@ -25,7 +25,11 @@
                     {
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
-                        "width": "auto"
+                        "width": "auto",
+                        "edit": 
+                        {
+                            "type": "NumberSpinner"
+                        }
                     }
                 ],
                 "values": [
