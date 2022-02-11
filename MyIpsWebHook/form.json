@@ -25,24 +25,15 @@
                     {
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
-                        "width": "400px",
-                        "sortColumn": "Number"
-                    },
-                    {
-                        "caption": "xxxxxxxxxxxx",
-                        "name": "sssss",
-                        "width": "200px",
-                        "visible": false
+                        "width": "auto"
                     }
                 ],
                 "values": [
                     {
-                        "whiteIP": "One",
-                        "sssss": "1"
+                        "whiteIP": "192.168.178.32"
                     },
                     {
-                        "whiteIP": "Two",
-                        "sssss": "2"
+                        "whiteIP": "192.168.178.28"
                     }
     
                 ]
