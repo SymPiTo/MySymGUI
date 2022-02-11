@@ -29,6 +29,10 @@
                         "edit": 
                         {
                             "type": "ValidationTextBox"
+                        },
+                        "add": 
+                        {
+                            "type": "ValidationTextBox"
                         }
                     }
                 ],
