@@ -44,7 +44,7 @@
                
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
-                $wlArray = json_decode($wlJson);
+                $wlArray = json_decode($wlJson,true);
                 //$this->SendDebug( "WhiteList: ", $wlJson, 0); 
                 $WL= false;
                 foreach ($wlArray as $value) {
