@@ -53,9 +53,12 @@
                                 $WL = true;
                         }
                 }
-                $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist nicht zugelassen", 0);
+                
                 if($WL == false){
+                        $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist nicht zugelassen", 0);
+
                         header($_SERVER["REMOTE_ADDR"]." 404 Not Found");
+                        echo "Hau ab du Arsch";
                         return;     
                 }
 
