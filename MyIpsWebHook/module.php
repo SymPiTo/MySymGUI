@@ -50,7 +50,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                 $wlArray = json_decode($wlJson);
                 $this->SendDebug( "WhiteList: ", $wlArray, 0); 
                 $WL= false;
-                foreach ($wlArray as $key=>$value) {
+                foreach ($wlArray['whiteIP'] as $key=>$value) {
                         $this->SendDebug("a" ,  $value, 0); 
                         $this->SendDebug("b" ,  $_SERVER["REMOTE_ADDR"], 0); 
                         if ($value == $_SERVER['REMOTE_ADDR']){
