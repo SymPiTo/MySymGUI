@@ -59,7 +59,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                         }
                 }
                 
-                if($WL == false){
+                if($WL == true){
                         $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist nicht zugelassen", 0);
 
                         header($_SERVER["REMOTE_ADDR"]." 404 Not Found");
