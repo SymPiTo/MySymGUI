@@ -28,7 +28,7 @@
                         "width": "auto",
                         "add": 
                         {
-                            "whiteIP": "192.168.78.000"
+                            "type": "ValidationTextBox"
                         },
                         "edit": 
                         {
