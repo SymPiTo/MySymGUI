@@ -18,16 +18,16 @@
         public function ApplyChanges() {
                 //Never delete this line!
                 parent::ApplyChanges();
-            $this->RegisterHook("/hook/myipshook");
-
+                $this->RegisterHook("/hook/myipshook");
+                $arrString = $this->ReadPropertyString("WhiteList");
+                $arr = json_decode($arrString);
         }
 
         /**
         * This function will be called by the hook control. Visibility should be protected!
         */
         protected function ProcessHookData() { 
-                $arrString = $this->ReadPropertyString("WhiteList");
-                $arr = json_decode($arrString);
+                
                 $this->SendDebug( "WhiteList.: ", $arrString, 0); 
                 $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
