@@ -24,13 +24,13 @@
                     {
                         "caption": "zulässige IP-Adresse",
                         "name": "whiteIP",
-                        "width": "auto",
+                        "width": "400px",
                         "sortColumn": "Number"
                     },
                     {
                         "caption": "xxxxxxxxxxxx",
                         "name": "sssss",
-                        "width": "400px",
+                        "width": "200px",
                         "visible": false
                     }
                 ],
