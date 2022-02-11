@@ -22,14 +22,14 @@
                 "add": false,
                 "columns": [
                     {
-                        "caption": "Text",
-                        "name": "Text",
+                        "caption": "zulässige IP-Adresse",
+                        "name": "whiteIP",
                         "width": "auto",
                         "sortColumn": "Number"
                     },
                     {
-                        "caption": "zulässige IP-Adresse",
-                        "name": "whiteIP",
+                        "caption": "xxxxxxxxxxxx",
+                        "name": "sssss",
                         "width": "400px",
                         "visible": false
                     }
@@ -37,7 +37,10 @@
                 "values": [
                     {
                         "Text": "One",
-                        "Number": "1"
+                        "Number": "1",
+                        "editable": true,
+                        "deletable": true
+
                     },
                     {
                         "Text": "Two",
