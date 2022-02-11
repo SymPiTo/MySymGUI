@@ -31,7 +31,7 @@
         protected function ProcessHookData() { 
                 
                 
-                $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
+                //$this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
                 //$this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
                 //$this->SendDebug( "Server: SCRIPT_NAME.: ", $_SERVER['SCRIPT_NAME'], 0); 
@@ -41,11 +41,11 @@
                 //$this->SendDebug( "Server: HTTP_HOST.: ", $_SERVER['HTTP_HOST'], 0); 
                 
 
-                $
+               
                 //Whitelist überprüfen
-                $arrString = $this->getvalue("WSS_WhiteList");
-                $arr = json_decode($arrString);
-                $this->SendDebug( "WhiteList: ", $arrString, 0); 
+                $wlJson = $this->getvalue("WSS_WhiteList");
+                $wlArray = json_decode($wlJson);
+                $this->SendDebug( "WhiteList: ", $wlJson, 0); 
 
                 if(!isset($_SERVER['PHP_AUTH_USER']))
                 $_SERVER['PHP_AUTH_USER'] = "";
