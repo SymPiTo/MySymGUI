@@ -29,13 +29,13 @@
                 $this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
                 
                 
-                $this->SendDebug( "Server: SERVER_PORT.: ", $_SERVER['SERVER_PORT'], 0); 
+                
                 $this->SendDebug( "Server: SCRIPT_NAME.: ", $_SERVER['SCRIPT_NAME'], 0); 
                 $this->SendDebug( "Server: HTTP_ACCEPT_ENCODING.: ", $_SERVER['HTTP_ACCEPT_ENCODING'], 0); 
                 $this->SendDebug( "Server: HTTP_ACCEPT_LANGUAGE.: ", $_SERVER['HTTP_ACCEPT_LANGUAGE'], 0); 
                 $this->SendDebug( "Server: HTTP_CONNECTION.: ", $_SERVER['HTTP_CONNECTION'], 0); 
                 $this->SendDebug( "Server: HTTP_HOST.: ", $_SERVER['HTTP_HOST'], 0); 
-                $this->SendDebug( "Server: HTTP_REFERER.: ", $_SERVER['HTTP_REFERER'], 0); 
+                
 
                 $this->setvalue("WSS_Test",$_SERVER['REMOTE_ADDR']);
 
