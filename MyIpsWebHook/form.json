@@ -28,7 +28,7 @@
                         "width": "auto",
                         "edit": 
                         {
-                            "type": "NumberSpinner"
+                            "type": "ValidationTextBox"
                         }
                     }
                 ],
