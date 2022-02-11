@@ -11,7 +11,7 @@
 
                 $this->RegisterPropertyString("WhiteList", "");
 
-                $this->RegisterVariableString("WSS_Test", "WhiteList");
+                $this->RegisterVariableString("WSS_WhiteList", "WhiteList");
 
         }
 
@@ -20,7 +20,9 @@
                 parent::ApplyChanges();
                 $this->RegisterHook("/hook/myipshook");
                 $arrString = $this->ReadPropertyString("WhiteList");
-                $arr = json_decode($arrString);
+                $this->setvalue("WSS_WhiteList", $arrString);
+                
+                $this->SendDebug( "WhiteList.: ", $arrString, 0); 
         }
 
         /**
@@ -28,7 +30,7 @@
         */
         protected function ProcessHookData() { 
                 
-                $this->SendDebug( "WhiteList.: ", $arrString, 0); 
+                
                 $this->SendDebug( "Server: REMOTE_ADDR.: ", json_encode($_SERVER), 0); 
                 //$this->SendDebug( "Server: REMOTE_ADDR.: ", $_SERVER['REMOTE_ADDR'], 0);  
                 //$this->SendDebug( "Server: REMOTE_PORT.: ", $_SERVER['REMOTE_PORT'], 0); 
@@ -39,8 +41,11 @@
                 //$this->SendDebug( "Server: HTTP_HOST.: ", $_SERVER['HTTP_HOST'], 0); 
                 
 
-                $this->setvalue("WSS_Test",$_SERVER['REMOTE_ADDR']);
+                $
                 //Whitelist überprüfen
+                $arrString = $this->getvalue("WSS_WhiteList");
+                $arr = json_decode($arrString);
+                $this->SendDebug( "WhiteList: ", $arrString, 0); 
 
                 if(!isset($_SERVER['PHP_AUTH_USER']))
                 $_SERVER['PHP_AUTH_USER'] = "";
