@@ -25,7 +25,7 @@
         */
         protected function ProcessHookData() { 
              
-            $this->setvalue(WSS_Test,$_SERVER['REMOTE_ADDR']);
+            $this->setvalue("WSS_Test",$_SERVER['REMOTE_ADDR']);
 if(!isset($_SERVER['PHP_AUTH_USER']))
     $_SERVER['PHP_AUTH_USER'] = "";
 if(!isset($_SERVER['PHP_AUTH_PW']))
