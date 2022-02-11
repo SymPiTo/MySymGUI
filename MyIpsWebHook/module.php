@@ -44,8 +44,8 @@
                
                 //Whitelist überprüfen
                 $wlJson = $this->getvalue("WSS_WhiteList");
-                $wlArray = json_decode($wlJson,true);
-                //$this->SendDebug( "WhiteList: ", $wlJson, 0); 
+                $wlArray = json_decode($wlJson);
+                $this->SendDebug( "WhiteList: ", $wlJson, 0); 
                 $WL= false;
                 foreach ($wlArray as $value) {
                         $this->SendDebug( $_SERVER["REMOTE_ADDR"],  $value, 0); 
