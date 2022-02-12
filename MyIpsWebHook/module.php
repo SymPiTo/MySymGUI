@@ -13,8 +13,8 @@ require_once(__DIR__ . "/../libs/NW.php");
                 $this->RegisterPropertyString("Password", "");
 
                 $this->RegisterPropertyString("WhiteList", "");
-
-                $this->RegisterVariableString("WSS_WhiteList", "WhiteList");
+                $this->RegisterPropertyString("WLchecked", "");
+                
 
         }
 
@@ -23,7 +23,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                 parent::ApplyChanges();
                 $this->RegisterHook("/hook/myipshook");
                 $arrString = $this->ReadPropertyString("WhiteList");
-                $this->setvalue("WSS_WhiteList", $arrString);
+               
                 
                 $this->SendDebug( "WhiteList.: ", $arrString, 0); 
         }
@@ -46,15 +46,19 @@ require_once(__DIR__ . "/../libs/NW.php");
 
                
                 //Whitelist überprüfen
-                $wlJson = $this->getvalue("WSS_WhiteList");
+                $wlJson = $this->ReadPropertyString("WhiteList");
                 $wlObj = json_decode($wlJson);
-         
+                $wLcheckedJson = $this->ReadPropertyString("WLchecked");
+                $wLcheckedObj = json_decode($wLcheckedJson);
                 $WL= false;
              
                 foreach ($wlObj as $key=>$value) {
                         if ($value->whiteIP == $_SERVER['REMOTE_ADDR']){
-                              $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
-                                $WL = true;
+                                if(wLcheckedObj[$key]->whiteList) {
+                                        $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
+                                        $WL = true;
+                                }       
+
                         }
                 }
                 
@@ -77,19 +81,22 @@ require_once(__DIR__ . "/../libs/NW.php");
                         echo "Authorization required";
                         return;
                 }
-                //echo "Willkommen im geschützten Bereich";
+                
+                /* -------------------------------------------------------------------------- */
+                /*                  echo "Willkommen im geschützten Bereich";                 */
+                /* -------------------------------------------------------------------------- */
 
 
 
                 $root = realpath(__DIR__ . "/www");
                 //echo $root;
-            //reduce any relative paths. this also checks for file existance
-            $path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/myipshook/")));
-          //echo $path;
-            if($path === false) {
+                //reduce any relative paths. this also checks for file existance
+                $path = realpath($root . "/" . substr($_SERVER['SCRIPT_NAME'], strlen("/hook/myipshook/")));
+                //echo $path;
+                if($path === false) {
                     http_response_code(404);
                     die("File not found!");
-            }
+                }
                 if(substr($path, 0, strlen($root)) != $root) {
                         http_response_code(403);
                         die("Security issue. Cannot leave root folder!");

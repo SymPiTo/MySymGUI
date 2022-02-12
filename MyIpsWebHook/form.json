@@ -35,7 +35,7 @@
                     },
                     {
                         "caption": "aktiv",
-                        "name": "IPactive",
+                        "name": "WLchecked",
                         "width": "100",
                         "add":   false,
                         "edit": 
@@ -48,19 +48,19 @@
                 "values": [
                     {
                         "whiteIP": "192.168.178.32",
-                        "IPactive": false
+                        "IPactive": true
                     },
                     {
                         "whiteIP": "192.168.178.28",
-                        "IPactive": false
+                        "IPactive": true
                     },
                     {
                         "whiteIP": "192.168.178.6",
-                        "IPactive": false
+                        "IPactive": true
                     },
                     {
                         "whiteIP": "192.168.178.13",
-                        "IPactive": false
+                        "IPactive": true
                     }
     
                 ]

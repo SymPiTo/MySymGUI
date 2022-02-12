@@ -623,11 +623,11 @@ class MediaDisplay {
     }
 
     update(sourceurl, Sender, Album, Artist, Title) {
-        this.imgID.src = sourceurl;
-        this.SenderObj.innerHTML = Sender;
-        this.AlbumObj.innerHTML = Album;
-        this.ArtistObj.innerHTML = Artist;
-        this.TitleObj.innerHTML = Title;
+        this.imgID.src = sourceurl['value'];
+        this.SenderObj.innerHTML = Sender['value'];
+        this.AlbumObj.innerHTML = Album['value'];
+        this.ArtistObj.innerHTML = Artist['value'];
+        this.TitleObj.innerHTML = Title['value'];
         
 
     }
@@ -691,38 +691,38 @@ class DynIcon {
 
     update(value) {
         if (this.typ === "ana") {
-            if (value === 0) {
+            if (value['value'] === 0) {
                 this.ID.src = "images/" + this.ImageBaseName + "0.png";
-            } else if (value === 1) {
+            } else if (value['value'] === 1) {
                 this.ID.src = "images/" + this.ImageBaseName + "1.png";
-            } else if (value === 2) {
+            } else if (value['value'] === 2) {
                 this.ID.src = "images/" + this.ImageBaseName + "2.png";
-            } else if (value === 3) {
+            } else if (value['value'] === 3) {
                 this.ID.src = "images/" + this.ImageBaseName + "3.png";
-            } else if (value > 3 && value < 11) {
+            } else if (value['value'] > 3 && value < 11) {
                 this.ID.src = "images/" + this.ImageBaseName + "10.png";
-            } else if (value > 10 && value < 21) {
+            } else if (value['value'] > 10 && value < 21) {
                 this.ID.src = "images/" + this.ImageBaseName + "20.png";
-            } else if (value > 20 && value < 31) {
+            } else if (value['value'] > 20 && value < 31) {
                 this.ID.src = "images/" + this.ImageBaseName + "30.png";
-            } else if (value > 30 && value < 41) {
+            } else if (value['value'] > 30 && value < 41) {
                 this.ID.src = "images/" + this.ImageBaseName + "40.png";
-            } else if (value > 40 && value < 51) {
+            } else if (value['value'] > 40 && value < 51) {
                 this.ID.src = "images/" + this.ImageBaseName + "50.png";
-            } else if (value > 50 && value < 61) {
+            } else if (value['value'] > 50 && value < 61) {
                 this.ID.src = "images/" + this.ImageBaseName + "60.png";
-            } else if (value > 60 && value < 71) {
+            } else if (value['value'] > 60 && value < 71) {
                 this.ID.src = "images/" + this.ImageBaseName + "70.png";
-            } else if (value > 70 && value < 81) {
+            } else if (value['value'] > 70 && value < 81) {
                 this.ID.src = "images/" + this.ImageBaseName + "80.png";
-            } else if (value > 80 && value < 91) {
+            } else if (value['value'] > 80 && value < 91) {
                 this.ID.src = "images/" + this.ImageBaseName + "90.png";
-            } else if (value > 90 && value < 101) {
+            } else if (value['value'] > 90 && value < 101) {
                 this.ID.src = "images/" + this.ImageBaseName + "100.png";
             } else {}
         }
         if (this.typ === "bin") {
-            value = value + 0;
+            value = value['value'] + 0;
             if (this.revers) {
                 if (value === 0) {
                     this.ID.src = "images/" + this.ImageBaseName + "1.png";
@@ -832,12 +832,12 @@ class StateDisplay {
             this.ID2.innerHTML = title;
             this.ID.style.color = this.textColor;
             if (this.type === "number") {
-                var wert = value.toFixed(n);
+                var wert = value['value'].toFixed(n);
                 this.ID.innerHTML = (wert.toString() + this.unit);
             } else if (this.type === "string") {
-                this.ID.innerHTML = (value.toString() + this.unit);
+                this.ID.innerHTML = (value['value'].toString() + this.unit);
             } else if (this.type === "bool") {
-                switch (value) {
+                switch (value['value']) {
                     case 0:
                         this.ID.innerHTML = this.state0;
                         break;
@@ -853,7 +853,7 @@ class StateDisplay {
                 }
             }
             else {
-                switch (value) {
+                switch (value['value']) {
                     case 0:
                         this.ID.innerHTML = this.state0;
                         break;
@@ -959,16 +959,16 @@ class VarDis {
 
     update(value, n) {
         try {
-            if (value === false) {
+            if (value['value'] === false) {
                 this.ID.innerHTML = this.state1;
-            } else if (value === true) {
+            } else if (value['value'] === true) {
                 this.ID.innerHTML = this.state2;
             } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
-                var wert = value.toFixed(n);
+                var wert = value['value'].toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
             } else {
-                this.ID.innerHTML = value + this.unit;
+                this.ID.innerHTML = value['value'] + this.unit;
             }
         } catch (error) {
             // alert("error");
@@ -1187,10 +1187,10 @@ class HeatCtrl {
     }
 
     update(value1, value2, change = false) {
-        this.value1ID.innerHTML = value1 + this.unit;
-        this.value2ID.innerHTML = value2 + this.unit;
-        if (change) {
-            this.elemSollTemp.innerHTML = value2 + this.unit;
+        this.value1ID.innerHTML = value1['value'] + this.unit;
+        this.value2ID.innerHTML = value2['value'] + this.unit;
+        if (change['value']) {
+            this.elemSollTemp.innerHTML = value2['value'] + this.unit;
         }
     }
 
@@ -1350,7 +1350,7 @@ class CheckBoxCtrlBtn {
     }
 
     update(value) {
-        this.ID.checked = value;
+        this.ID.checked = value['value'];
     }
 }
 
@@ -1614,14 +1614,14 @@ class GlideButton {
     };
 
     update(value1, unit1, value2, unit2, value3, unit3, value4, unit4) {
-        this.unit1 = unit1;
-        this.unit2 = unit2;
-        this.unit3 = unit3;
-        this.unit4 = unit4;
-        this.value1 = value1;
-        this.value2 = value2;
-        this.value3 = value3;
-        this.value4 = value4;
+        this.unit1 = unit1['value'];
+        this.unit2 = unit2['value'];
+        this.unit3 = unit3['value'];
+        this.unit4 = unit4['value'];
+        this.value1 = value1['value'];
+        this.value2 = value2['value'];
+        this.value3 = value3['value'];
+        this.value4 = value4['value'];
         this.ObjValue1.innerHTML = this.value1 + this.unit1;
         this.ObjValue2.innerHTML = this.value2 + this.unit2;
         this.ObjValue3.innerHTML = this.value3 + this.unit3;
@@ -1761,8 +1761,8 @@ class KeyPad {
     }
 
     update(value) {
-        if (value != "") {
-            this.value1 = value;
+        if (value['value'] != "") {
+            this.value1 = value['value'];
             var n = this.value1.length;
             var code = "**************************";
             this.ID.innerHTML = code.substr(0, n);
@@ -1814,7 +1814,7 @@ class AlarmBox {
     }
 
     update(value) {
-        if (value == 2) {
+        if (value['value'] == 2) {
             document.getElementById(this.ID).style.display = "block";
         } else {
             document.getElementById(this.ID).style.display = "none";
@@ -1980,7 +1980,7 @@ class Kachel {
     }
 
     update(value) {
-        this.labelObj.innerHTML = value;
+        this.labelObj.innerHTML = value['value'];
     }
 }
 
@@ -2157,7 +2157,7 @@ class RolloCtrl {
 
     update(value, n) {
         try {
-            var wert = value.toFixed(n);
+            var wert = value['value'].toFixed(n);
             this.ID.innerHTML = (wert.toString() + this.unit);
 
         } catch (error) {
@@ -2204,7 +2204,7 @@ class analogBar {
         document.getElementById(ParentID).appendChild(container);
     }
     update(value) {
-        this.bb = (value + "%");
+        this.bb = (value['value'] + "%");
         this.balken.style.width = this.bb;
     }
 
@@ -2414,7 +2414,7 @@ class FontButtonNew {
     }
 
     update(value) {
-        if (value === true) {
+        if (value['value'] === true) {
             this.ID1.style.color = "lime";
         } else {
             this.ID1.style.color = "white";
@@ -2578,7 +2578,7 @@ class LEDdisplay {
 
     update(value) {
 
-        this.ID.innerHTML = value;
+        this.ID.innerHTML = value['value'];
 
 
     }
@@ -2632,7 +2632,7 @@ class TextScrollBox {
     update(text) {
         try {
             if (text !== "") {
-                this.ID.value = text;
+                this.ID.value = text['value'];
             } else {
                 this.ID.value = "no Alarm List";
             }
@@ -2731,13 +2731,13 @@ class IconVarDisplay {
     update(value, n) {
         try {
             if (n === "state") {
-                this.ID.innerHTML = this.state[value];
+                this.ID.innerHTML = this.state[value['value']];
             } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
-                var wert = value.toFixed(n);
+                var wert = value['value'].toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
             } else {
-                this.ID.innerHTML = value + this.unit;
+                this.ID.innerHTML = value['value'] + this.unit;
             }
         } catch (error) {
             // alert("error");
@@ -2803,14 +2803,14 @@ class TransVarDisplay {
             if (n === "state") {
 
 
-                this.ID.innerHTML = restArgs[value];
+                this.ID.innerHTML = restArgs[value['value']];
 
             } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
-                var wert = value.toFixed(n);
+                var wert = value['value'].toFixed(n);
                 this.ID.innerHTML = wert + this.unit;
             } else {
-                this.ID.innerHTML = value + this.unit;
+                this.ID.innerHTML = value['value'] + this.unit;
             }
         } catch (error) {
             // alert("error");
@@ -2848,7 +2848,7 @@ class Led {
     }
 
     update(state) {
-        if (state == true) {
+        if (state['value'] == true) {
             this.ID.style.backgroundColor = this.color;
         } else {
             this.ID.style.backgroundColor = "grey";
@@ -2911,7 +2911,7 @@ class flashLed {
     }
 
     update(state) {
-        if (state == true) {
+        if (state['value'] == true) {
             this.ID.style.WebkitAnimationDuration = "1s";
         } else {
             this.ID.style.WebkitAnimationDuration = "0s";
@@ -2955,7 +2955,7 @@ class TVguide {
     update(text) {
         try {
             var TVarray = Array(12);
-            TVarray = JSON.parse(text);
+            TVarray = JSON.parse(text['value']);
             for (var i = 0; i < 13; i++) {
                 this.TVchannel[i].innerHTML = TVarray[i].DispChName;
                 this.TVtime[i].innerHTML = TVarray[i].Time;
@@ -3040,19 +3040,19 @@ class CtrlStatButton {
 
     update(label, stat1, stat2) {
 
-        this.label = label;
+        this.label = label['value'];
         this.id2.innerHTML = this.label;
-        if (stat1 === true || stat1 === "Yes") {
+        if (stat1['value'] === true || stat1['value'] === "Yes") {
             this.statcolor = "lime";
             this.id1.style.color = this.statcolor;
-        } else if (stat1 === false || stat1 === "No") {
+        } else if (stat1['value'] === false || stat1['value'] === "No") {
             this.statcolor = "red";
             this.id1.style.color = this.statcolor;
         }
-        if (stat2 === true || stat1 === "Yes") {
+        if (stat2['value'] === true || stat1['value'] === "Yes") {
             this.statcolor = "lime";
             this.id3.style.color = this.statcolor;
-        } else if (stat2 === false || stat2 === "No") {
+        } else if (stat2['value'] === false || stat2['value'] === "No") {
             this.statcolor = "red";
             this.id3.style.color = this.statcolor;
         }
@@ -3188,7 +3188,7 @@ class CtrlTile {
     update(value, valueLeft, valueRight) {
         var colorOff = this.btnTextColor0;
         var colorOn = this.btnTextColor1;
-        if (value === true) {
+        if (value['value'] === true) {
             this.id1.src = "images/" + this.icon + "1" + ".png";
             this.id4.style.color = colorOff;
             this.id5.style.color = colorOn;
@@ -3197,8 +3197,8 @@ class CtrlTile {
             this.id4.style.color = colorOn;
             this.id5.style.color = colorOff;
         }
-        this.id2.innerHTML = valueLeft;
-        this.id3.innerHTML = valueRight;
+        this.id2.innerHTML = valueLeft['value'];
+        this.id3.innerHTML = valueRight['value'];
     }
 }
 
@@ -3230,8 +3230,8 @@ class SetIframe {
 
         var endDate = new Date();
         this.differenz = (endDate.getTime() - this.startDate.getTime());
-        if (this.differenz > interval) {
-            this.ID.srcdoc = urlstring;
+        if (this.differenz > interval['value']) {
+            this.ID.srcdoc = urlstring['value'];
             this.startDate = endDate;
         }
     }
@@ -3260,7 +3260,7 @@ class ShowUrlImage {
     update(SourceUrl) {
       
         try {
-            this.ID.src = SourceUrl;
+            this.ID.src = SourceUrl['value'];
           }
           catch(err) {
             var fehler =  err;
@@ -3303,7 +3303,7 @@ class ShowCamImage {
        // var timestamp = new Date().getTime();  
         //var queryString = "?t=" + timestamp;    
        //this.ID.src =  SourceUrl + queryString;  
-       this.ID.src = image;
+       this.ID.src = image['value'];
     }
 }
 
@@ -3370,8 +3370,8 @@ class ArrayListBox {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        if (ArrDaten .length > 0) {
-            ArrDaten .forEach(function (value) {
+        if (ArrDaten['value'].length > 0) {
+            ArrDaten['value'].forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
 
@@ -3426,7 +3426,7 @@ class ArraySelectListBox {
 
     update(jsonarray) {
         try {
-            var array = JSON.parse(jsonarray);
+            var array = JSON.parse(jsonarray['value']);
             // As long as <ul> has a child node, remove it
             while (this.ID.hasChildNodes()) {
                 this.ID.removeChild(this.ID.firstChild);
@@ -3485,7 +3485,7 @@ class TextBox {
     }
 
     update(text) {
-        this.ID.innerHTML = text;
+        this.ID.innerHTML = text['value'];
     }
 }
 
@@ -3509,8 +3509,8 @@ class HeadLine {
     }
 
     update(headline) {
-        if (typeof (headline) != 'undefined' && headline != null) {
-            this.ID.innerHTML = headline;
+        if (typeof (headline['value']) != 'undefined' && headline['value'] != null) {
+            this.ID.innerHTML = headline['value'];
         } else {
             $('fehler').innerHTML = "Variable wrong or missing:";
         }
@@ -3950,18 +3950,18 @@ class WeatherLabel {
     }
 
     update(iconurl, day, tempMax, tempMin, windspeed, windGust, cloudCover, humidity, ozone, uvIndex, summary) {
-        this.source.src = iconurl;
-        this.day.innerHTML = day;
-        this.tempMax_ID.innerHTML = tempMax;
-        this.tempMin_ID.innerHTML = tempMin;
-        this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed;
-        this.windGust_ID.innerHTML = "Wind Böen: " + windGust;
-        this.cloudCover_ID.innerHTML = "Bewölkung: " + cloudCover;
-        this.humidity_ID.innerHTML = "Feuchte: " + humidity;
-        if (ozone) {
-            this.ozone_ID.innerHTML = "Ozonwert: " + ozone;
-            this.uvIndex_ID.innerHTML = "UV-Index: " + uvIndex;
-            this.summary_ID.innerHTML = summary;
+        this.source.src = iconurl['value'];
+        this.day.innerHTML = day['value'];
+        this.tempMax_ID.innerHTML = tempMax['value'];
+        this.tempMin_ID.innerHTML = tempMin['value'];
+        this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed['value'];
+        this.windGust_ID.innerHTML = "Wind Böen: " + windGust['value'];
+        this.cloudCover_ID.innerHTML = "Bewölkung: " + cloudCover['value'];
+        this.humidity_ID.innerHTML = "Feuchte: " + humidity['value'];
+        if (ozone['value']) {
+            this.ozone_ID.innerHTML = "Ozonwert: " + ozone['value'];
+            this.uvIndex_ID.innerHTML = "UV-Index: " + uvIndex['value'];
+            this.summary_ID.innerHTML = summary['value'];
         }
     }
 
@@ -4201,7 +4201,7 @@ class ButtonSlider {
     }
 
     update(name) {
-        this.containerID.innerHTML = name;
+        this.containerID.innerHTML = name['value'];
     }
 }
 
@@ -4262,7 +4262,7 @@ class BtnIcon {
     }
 
     update(value) {
-        if (value) {
+        if (value['value']) {
             this.labelcolor = "red";
             this.ID.style.color = this.labelcolor;
         } else {
@@ -4581,7 +4581,7 @@ class FontSymb {
         document.getElementById(ParentID).appendChild(elem);
     }
     update(value, blink, sfarbeOn, sfarbeOff) {
-        if (value) {
+        if (value['value']) {
             if (blink) {
                 this.ID.id = "blinkOn";
                 this.ID.style.color = sfarbeOn;
@@ -4908,7 +4908,7 @@ class FontButton {
     }
 
     update(value) {
-        if (value === true) {
+        if (value['value'] === true) {
             this.ID1.style.color = "lime";
         } else {
             this.ID1.style.color = "white";
