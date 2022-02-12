@@ -529,7 +529,8 @@ class MediaDisplay {
         this.b = "";
         this.h = "";
         this.sender = ""; 
- 
+        this.SenderObj = "";
+        
 
         //optionale Parameter
     }
@@ -1614,14 +1615,25 @@ class GlideButton {
     };
 
     update(value1, unit1, value2, unit2, value3, unit3, value4, unit4) {
-        this.unit1 = unit1['value'];
-        this.unit2 = unit2['value'];
-        this.unit3 = unit3['value'];
-        this.unit4 = unit4['value'];
-        this.value1 = value1['value'];
-        this.value2 = value2['value'];
-        this.value3 = value3['value'];
-        this.value4 = value4['value'];
+        this.unit1 = unit1;
+        this.unit2 = unit2;
+        this.unit3 = unit3;
+        this.unit4 = unit4;
+        
+        if(typeof value1['value'] != "undefined"){
+            this.value1 =  value1['value'];
+        }
+        if(typeof value2['value'] != "undefined"){
+            this.value2 =  value2['value']; 
+        }
+        if(typeof value3['value'] != "undefined"){
+            this.value3 =  value3['value'];
+        }
+        if(typeof value4['value'] != "undefined"){
+            this.value4 =  value4['value']; 
+        }
+        
+        
         this.ObjValue1.innerHTML = this.value1 + this.unit1;
         this.ObjValue2.innerHTML = this.value2 + this.unit2;
         this.ObjValue3.innerHTML = this.value3 + this.unit3;
@@ -1761,7 +1773,7 @@ class KeyPad {
     }
 
     update(value) {
-        if (value['value'] != "") {
+        if (value != "") {
             this.value1 = value['value'];
             var n = this.value1.length;
             var code = "**************************";
@@ -1814,7 +1826,7 @@ class AlarmBox {
     }
 
     update(value) {
-        if (value['value'] == 2) {
+        if (value == 2) {
             document.getElementById(this.ID).style.display = "block";
         } else {
             document.getElementById(this.ID).style.display = "none";
@@ -3363,15 +3375,18 @@ class ArrayListBox {
 
     }
 
-    update(ArrDaten  = {}) {
+    update(ArrDaten) {
+        let ADarray =[]; 
+        var AD = ArrDaten.value;
+        ADarray = JSON.parse(AD);
 
         // As long as <ul> has a child node, remove it
         while (this.ID.hasChildNodes()) {
             this.ID.removeChild(this.ID.firstChild);
         }
         var a = this.ID;
-        if (ArrDaten['value'].length > 0) {
-            ArrDaten['value'].forEach(function (value) {
+        if (typeof (ADarray) !='undefined') {
+            ADarray.forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
 

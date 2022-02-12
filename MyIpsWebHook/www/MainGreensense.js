@@ -121,26 +121,26 @@
     //---------------------------------------------------------
     var Sensor1Stat = new StateDisplay();
     Sensor1Stat.create("MainGreensenseCtrl", "cyanLight", "", "20px", "20px", "60px", "202px", "20px",
-        "Sensor 1 - Zustand",
+        "Sensor 1 - Zustand","bool",
         "N OK", "OK", "", "", "");
 
     var Sensor2Stat = new StateDisplay();
     Sensor2Stat.create("MainGreensenseCtrl", "cyanLight", "", "120px", "20px", "60px", "202px", "20px",
-        "Sensor 2 - Zustand",
+        "Sensor 2 - Zustand","bool",
         "N OK", "OK", "", "", "");
 
     var Sensor3Stat = new StateDisplay();
     Sensor3Stat.create("MainGreensenseCtrl", "cyanLight", "", "220px", "20px", "60px", "202px", "20px",
-        "Sensor 3 - Zustand",
+        "Sensor 3 - Zustand","bool",
         "N OK", "OK", "", "", "");
 
     var Sensor4Stat = new StateDisplay();
     Sensor4Stat.create("MainGreensenseCtrl", "cyanLight", "", "320px", "20px", "60px", "202px", "20px",
-        "Sensor 4 - Zustand",
+        "Sensor 4 - Zustand","bool",
         "N OK", "OK", "", "", "");
 
     var Sensor5Stat = new StateDisplay();
     Sensor5Stat.create("MainGreensenseCtrl", "cyanLight", "", "420px", "20px", "60px", "202px", "20px",
-        "Sensor 5 - Zustand",
+        "Sensor 5 - Zustand","bool",
         "N OK", "OK", "", "", "");
  
