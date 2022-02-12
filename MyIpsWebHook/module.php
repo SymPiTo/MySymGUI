@@ -13,7 +13,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                 $this->RegisterPropertyString("Password", "");
 
                 $this->RegisterPropertyString("WhiteList", "");
-                $this->RegisterPropertyString("WLchecked", "");
+                
                 
 
         }
@@ -48,8 +48,7 @@ require_once(__DIR__ . "/../libs/NW.php");
                 //Whitelist überprüfen
                 $wlJson = $this->ReadPropertyString("WhiteList");
                 $wlObj = json_decode($wlJson);
-                $wLcheckedJson = $this->ReadPropertyString("WLchecked");
-                $wLcheckedObj = json_decode($wLcheckedJson);
+                
                 $WL= false;
              
                 foreach ($wlObj as $key=>$value) {
