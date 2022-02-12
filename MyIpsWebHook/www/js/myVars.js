@@ -1534,11 +1534,11 @@ function updateValues() {
 
   /* ------------------------------- Denon Ceol ------------------------------- */
   if (document.getElementById("MainCeolWZ")) {
-    ProgressCeol.update(ipsObj.sym[263]);
-    CeolVol.update(ipsObj.sym[257]);
-    CeolTrack.update(ipsObj.sym[264]);
+    ProgressCeol.update(ipsObj.ips.ID54627);
+    CeolVol.update(ipsObj.ips.ID39621);
+    CeolTrack.update(ipsObj.ips.ID25782);
     var s = "";
-    switch (ipsObj.sym[105]) {
+    switch (ipsObj.ips.ID46852) {
       case 0:
         s = "IRadio";
         break;
@@ -1568,7 +1568,7 @@ function updateValues() {
       UPNPDeviceBox.update(ipsObj.sym[132]);
       ServerImg.update(ipsObj.ips.ID31626);
       ClientImg.update(ipsObj.ips.ID14390);
-      ClientBtn.update(ipsObj.sym[256]);
+      ClientBtn.update(ipsObj.ips.ID46310);
        
       ServerBtn.update(ipsObj.ips.ID37365);
        
@@ -1576,13 +1576,13 @@ function updateValues() {
 
   /* ---------------------------------- UPNP Audio---------------------------------- */
   if (document.getElementById("MainUpnpAudio")) {
-    DiplayAudio.update(ipsObj.sym[253], ipsObj.sym[251], ipsObj.sym[252], ipsObj.sym[254], ipsObj.sym[250]);
+    DiplayAudio.update(ipsObj.ips.ID17831, ipsObj.ips.ID26207, ipsObj.ips.ID52798, ipsObj.ips.ID28233, ipsObj.ips.ID22167);
     
-    AudioTrack.update("Track: " + ipsObj.sym[255]);
+    AudioTrack.update("Track: " + ipsObj.ips.ID38745);
     AudioPlayer.update(ipsObj.ips.ID46310);
-    upnpAudioVol.update(ipsObj.sym[257]);
-    upnpAudioSource.update(ipsObj.sym[256]);
-    upnpAudioProgress.update(ipsObj.sym[259]);
+    upnpAudioVol.update(ipsObj.ips.ID39621);
+    upnpAudioSource.update(ipsObj.ips.ID46310);
+    upnpAudioProgress.update(ipsObj.ips.ID27733);
   }
 
   /* ---------------------------------- UPNP CD---------------------------------- */
@@ -1627,8 +1627,8 @@ function updateValues() {
   DisDoorDCtrl.update(ipsObj.ips.ID22196);
   /* --------------------------- Balkontür Position --------------------------- */
   if (document.getElementById("MainDoorB")) {
-    DynIconDoorB.update(ipsObj.ips.ID37348);
-    DisDoorBCtrl.update(ipsObj.ips.ID37348);
+    DynIconDoorB.update(ipsObj.ips.ID11008);
+    DisDoorBCtrl.update(ipsObj.ips.ID11008);
   }
   
   //<!-- ******************** Homematic Server **************************  -->
@@ -1669,7 +1669,7 @@ function updateValues() {
   DisLightCurrentDCtrl.update(ipsObj.ips.ID19440, 2);
   DisLightPowerDCtrl.update(ipsObj.ips.ID41504, 2);
   DisLightEnergyDCtrl.update(ipsObj.ips.ID16840, 2);
-  iLightD.update(ipsObj.sym[203]);
+  iLightD.update(ipsObj.ips.ID56831);
   //<!-- ******************** Wohnzimmer Licht Fenster**************************  -->
   Light1WZ.update(ipsObj.ips.ID42279, "", "");
   DisLightCurrent1WZCtrl.update(ipsObj.ips.ID58362, 2);
@@ -1741,51 +1741,51 @@ function updateValues() {
 
 
   //<!-- ******************** HMIP Wasser Sensor Küche   **************************  -->
-  DiIPSD1.update(ipsObj.sym[158]);
-  DiIPSD2.update(ipsObj.sym[159]);
-  DiIPSD3.update(ipsObj.sym[160]);
-  DiIPSD4.update(ipsObj.sym[161]);
-  DiIPSD5.update(ipsObj.sym[162]);
-  DiIPSD6.update(ipsObj.sym[163]);
-  DiIPSD7.update(ipsObj.sym[164]);
-  HM2.update(ipsObj.sym[164]);
+  DiIPSD1.update(ipsObj.ips.ID51834);
+  DiIPSD2.update(ipsObj.ips.ID36971);
+  DiIPSD3.update(ipsObj.ips.ID29563);
+  DiIPSD4.update(ipsObj.ips.ID14045);
+  DiIPSD5.update(ipsObj.ips.ID23035);
+  DiIPSD6.update(ipsObj.ips.ID48609);
+  DiIPSD7.update(ipsObj.ips.ID42463);
+  HM2.update(ipsObj.ips.ID42463);
 
 
   //<!-- ******************** HMIP Tem/Feuchte Sensor Schlafzimmer   **************************  -->
-  DiIPSC1.update(ipsObj.sym[155]);
-  DiIPSC2.update(ipsObj.sym[156]);
-  DiIPSC3.update(ipsObj.sym[157]);
-  HM5.update(ipsObj.sym[157]);
+  DiIPSC1.update(ipsObj.ips.ID20695);
+  DiIPSC2.update(ipsObj.ips.ID17718);
+  DiIPSC3.update(ipsObj.ips.ID25178);
+  HM5.update(ipsObj.ips.ID25178);
 
 
   //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
-  DiIPSB1.update(ipsObj.sym[152]);
-  DiIPSB2.update(ipsObj.sym[153]);
-  DiIPSB3.update(ipsObj.sym[154]);
-  HM1.update(ipsObj.sym[154]);
+  DiIPSB1.update(ipsObj.ips.ID22446);
+  DiIPSB2.update(ipsObj.ips.ID53621);
+  DiIPSB3.update(ipsObj.ips.ID51909);
+  HM1.update(ipsObj.ips.ID51909);
 
   //<!-- ******************** IPS Präsenz Diele   **************************  -->
-  DiIPSA1.update(ipsObj.sym[147]);
-  DiIPSA2.update(ipsObj.sym[148]);
-  DiIPSA3.update(ipsObj.sym[149]);
-  DiIPSA4.update(ipsObj.sym[150]);
-  DiIPSA5.update(ipsObj.sym[151]);
-  HM3.update(ipsObj.sym[151]);
+  DiIPSA1.update(ipsObj.ips.ID23367);
+  DiIPSA2.update(ipsObj.ips.ID56516);
+  DiIPSA3.update(ipsObj.ips.ID20750);
+  DiIPSA4.update(ipsObj.ips.ID48787);
+  DiIPSA5.update(ipsObj.ips.ID37634);
+  HM3.update(ipsObj.ips.ID37634);
 
 
   //<!-- ******************** IPS Server   **************************  -->
 
-  DiIPS1.update(ipsObj.sym[140]);
-  DiIPS2.update(ipsObj.sym[136]);
-  DiIPS3.update(ipsObj.sym[137]);
-  DiIPS4.update(ipsObj.sym[138]);
-  DiIPS5.update(ipsObj.sym[139]);
-  DiIPS6.update(ipsObj.sym[143]);
-  DiIPS7.update(ipsObj.sym[146]);
-  DiIPS8.update(ipsObj.sym[142]);
-  DiIPS9.update(ipsObj.sym[141]);
-  DiIPS10.update(ipsObj.sym[144]);
-  DiIPS11.update(ipsObj.sym[145]);
+  DiIPS1.update(ipsObj.ips.ID19292);
+  DiIPS2.update(ipsObj.ips.ID12369);
+  DiIPS3.update(ipsObj.ips.ID17974);
+  DiIPS4.update(ipsObj.ips.ID37859);
+  DiIPS5.update(ipsObj.ips.ID35144);
+  DiIPS6.update(ipsObj.ips.ID29733);
+  DiIPS7.update(ipsObj.ips.ID30080);
+  DiIPS8.update(ipsObj.ips.ID41816);
+  DiIPS9.update(ipsObj.ips.ID59797);
+  DiIPS10.update(ipsObj.ips.ID39889);
+  DiIPS11.update(ipsObj.ips.ID30080);
 
 
   //<!-- ******************** Kochbuch   **************************  -->
@@ -1801,10 +1801,10 @@ function updateValues() {
 
   //<!-- ******************** Web Socket Server   **************************  -->
 
-    DisWSSCL1.update(ipsObj.sym[125]);
-    DisWSSCL2.update(ipsObj.sym[126]);
-    DisWSSCL3.update(ipsObj.sym[127]);
-    DisWSSCL4.update(ipsObj.sym[128]);
+    DisWSSCL1.update(ipsObj.ips.ID56321);
+    DisWSSCL2.update(ipsObj.ips.ID43949);
+    DisWSSCL3.update(ipsObj.ips.ID15131);
+    DisWSSCL4.update(ipsObj.ips.ID38435);
     switch (socket.readyState) {
       case 0:
         Status = "not connecting";
@@ -1824,14 +1824,14 @@ function updateValues() {
 
   //<!-- ******************** Wetter   **************************  -->
   if (document.getElementById("MainWetterB")) {
-    WetterLabelA.update(ipsObj.ips.ID44125[1]['icon'], ipsObj.sym[111][1]['weekday'], ipsObj.sym[111][1]['temperatureHigh'], ipsObj.sym[111][1]['temperatureLow'], ipsObj.sym[111][1]['windSpeed'], ipsObj.sym[111][1]['windGust'], ipsObj.sym[111][1]['cloudCover'], ipsObj.sym[111][1]['humidity']);
-    WetterLabelB.update(ipsObj.sym[111][2]['icon'], ipsObj.sym[111][2]['weekday'], ipsObj.sym[111][2]['temperatureHigh'], ipsObj.sym[111][2]['temperatureLow'], ipsObj.sym[111][2]['windSpeed'], ipsObj.sym[111][2]['windGust'], ipsObj.sym[111][2]['cloudCover'], ipsObj.sym[111][2]['humidity']);
-    WetterLabelC.update(ipsObj.sym[111][3]['icon'], ipsObj.sym[111][3]['weekday'], ipsObj.sym[111][3]['temperatureHigh'], ipsObj.sym[111][3]['temperatureLow'], ipsObj.sym[111][3]['windSpeed'], ipsObj.sym[111][3]['windGust'], ipsObj.sym[111][3]['cloudCover'], ipsObj.sym[111][3]['humidity']);
-    WetterLabelD.update(ipsObj.sym[111][4]['icon'], ipsObj.sym[111][4]['weekday'], ipsObj.sym[111][4]['temperatureHigh'], ipsObj.sym[111][4]['temperatureLow'], ipsObj.sym[111][4]['windSpeed'], ipsObj.sym[111][4]['windGust'], ipsObj.sym[111][4]['cloudCover'], ipsObj.sym[111][4]['humidity']);
-    WetterLabelE.update(ipsObj.sym[111][5]['icon'], ipsObj.sym[111][5]['weekday'], ipsObj.sym[111][5]['temperatureHigh'], ipsObj.sym[111][5]['temperatureLow'], ipsObj.sym[111][5]['windSpeed'], ipsObj.sym[111][5]['windGust'], ipsObj.sym[111][5]['cloudCover'], ipsObj.sym[111][5]['humidity']);
-    WetterLabelF.update(ipsObj.sym[111][6]['icon'], ipsObj.sym[111][6]['weekday'], ipsObj.sym[111][6]['temperatureHigh'], ipsObj.sym[111][6]['temperatureLow'], ipsObj.sym[111][6]['windSpeed'], ipsObj.sym[111][6]['windGust'], ipsObj.sym[111][6]['cloudCover'], ipsObj.sym[111][6]['humidity']);
-    WetterLabelG.update(ipsObj.sym[111][7]['icon'], ipsObj.sym[111][7]['weekday'], ipsObj.sym[111][7]['temperatureHigh'], ipsObj.sym[111][7]['temperatureLow'], ipsObj.sym[111][7]['windSpeed'], ipsObj.sym[111][7]['windGust'], ipsObj.sym[111][7]['cloudCover'], ipsObj.sym[111][7]['humidity']);
-    WetterLabelNow.update(ipsObj.sym[112]['icon'], "Aktuell", ipsObj.sym[112]['apparentTemperature'], ipsObj.sym[112]['temperature'], ipsObj.sym[112]['windSpeed'], ipsObj.sym[112]['windGust'], ipsObj.sym[112]['cloudCover'], ipsObj.sym[112]['humidity'], ipsObj.sym[112]['ozone'], ipsObj.sym[112]['uvIndex'], ipsObj.sym[112]['summary']);
+    WetterLabelA.update(ipsObj.ips.ID44125[1]['icon'], ipsObj.ips.ID44125[1]['weekday'], ipsObj.ips.ID44125[1]['temperatureHigh'], ipsObj.ips.ID44125[1]['temperatureLow'], ipsObj.ips.ID44125[1]['windSpeed'], ipsObj.ips.ID44125[1]['windGust'], ipsObj.ips.ID44125[1]['cloudCover'], ipsObj.ips.ID44125[1]['humidity']);
+    WetterLabelB.update(ipsObj.ips.ID44125[2]['icon'], ipsObj.ips.ID44125[2]['weekday'], ipsObj.ips.ID44125[2]['temperatureHigh'], ipsObj.ips.ID44125[2]['temperatureLow'], ipsObj.ips.ID44125[2]['windSpeed'], ipsObj.ips.ID44125[2]['windGust'], ipsObj.ips.ID44125[2]['cloudCover'], ipsObj.ips.ID44125[2]['humidity']);
+    WetterLabelC.update(ipsObj.ips.ID44125[3]['icon'], ipsObj.ips.ID44125[3]['weekday'], ipsObj.ips.ID44125[3]['temperatureHigh'], ipsObj.ips.ID44125[3]['temperatureLow'], ipsObj.ips.ID44125[3]['windSpeed'], ipsObj.ips.ID44125[3]['windGust'], ipsObj.ips.ID44125[3]['cloudCover'], ipsObj.ips.ID44125[3]['humidity']);
+    WetterLabelD.update(ipsObj.ips.ID44125[4]['icon'], ipsObj.ips.ID44125[4]['weekday'], ipsObj.ips.ID44125[4]['temperatureHigh'], ipsObj.ips.ID44125[4]['temperatureLow'], ipsObj.ips.ID44125[4]['windSpeed'], ipsObj.ips.ID44125[4]['windGust'], ipsObj.ips.ID44125[4]['cloudCover'], ipsObj.ips.ID44125[4]['humidity']);
+    WetterLabelE.update(ipsObj.ips.ID44125[5]['icon'], ipsObj.ips.ID44125[5]['weekday'], ipsObj.ips.ID44125[5]['temperatureHigh'], ipsObj.ips.ID44125[5]['temperatureLow'], ipsObj.ips.ID44125[5]['windSpeed'], ipsObj.ips.ID44125[5]['windGust'], ipsObj.ips.ID44125[5]['cloudCover'], ipsObj.ips.ID44125[5]['humidity']);
+    WetterLabelF.update(ipsObj.ips.ID44125[6]['icon'], ipsObj.ips.ID44125[6]['weekday'], ipsObj.ips.ID44125[6]['temperatureHigh'], ipsObj.ips.ID44125[6]['temperatureLow'], ipsObj.ips.ID44125[6]['windSpeed'], ipsObj.ips.ID44125[6]['windGust'], ipsObj.ips.ID44125[6]['cloudCover'], ipsObj.ips.ID44125[6]['humidity']);
+    WetterLabelG.update(ipsObj.ips.ID44125[7]['icon'], ipsObj.ips.ID44125[7]['weekday'], ipsObj.ips.ID44125[7]['temperatureHigh'], ipsObj.ips.ID44125[7]['temperatureLow'], ipsObj.ips.ID44125[7]['windSpeed'], ipsObj.ips.ID44125[7]['windGust'], ipsObj.ips.ID44125[7]['cloudCover'], ipsObj.ips.ID44125[7]['humidity']);
+    WetterLabelNow.update(ipsObj.ips.ID46593['icon'], "Aktuell", ipsObj.ips.ID46593['apparentTemperature'], ipsObj.ips.ID46593['temperature'], ipsObj.ips.ID46593['windSpeed'], ipsObj.ips.ID46593['windGust'], ipsObj.ips.ID46593['cloudCover'], ipsObj.ips.ID46593['humidity'], ipsObj.ips.ID46593['ozone'], ipsObj.ips.ID46593['uvIndex'], ipsObj.ips.ID46593['summary']);
   }
 
 
@@ -1846,21 +1846,21 @@ function updateValues() {
   //<!-- ******************** Samsung TV **************************  -->
   if (document.getElementById("MainTV1")) {
     TVframe.update('https://www.chefkoch.de/rezepte/2853311437410196/Weisswurst.html', 10000);
-    TVGuideframe.update(ipsObj.sym[99], 10000);
-    transVarPower.update(ipsObj.sym[76], "state", "aus", "ein", "", "");
-    transVarVol.update(ipsObj.sym[75]);
-    transVarCh.update(ipsObj.sym[77]);
-    LedDisplayTV.update(ipsObj.sym[78]);
-    transVarSource.update(ipsObj.sym[79]);
+    TVGuideframe.update(ipsObj.ips.ID35025, 10000);
+    transVarPower.update(ipsObj.ips.ID34392, "state", "aus", "ein", "", "");
+    transVarVol.update(ipsObj.ips.ID23042);
+    transVarCh.update(ipsObj.ips.ID43304);
+    LedDisplayTV.update(ipsObj.ips.ID53698);
+    transVarSource.update(ipsObj.ips.ID26003);
 
-    iDisArtistSsz.update(ipsObj.sym[91], ipsObj.sym[84], ipsObj.sym[82], ipsObj.sym[83]);
-    transVarVolSsz.update(ipsObj.sym[85], "");
-    var bassCalc = Math.round(5 * (ipsObj.sym[88] + 10));
+    iDisArtistSsz.update(ipsObj.ips.ID35731, ipsObj.ips.ID38320, ipsObj.ips.ID32160, ipsObj.ips.ID23875);
+    transVarVolSsz.update(ipsObj.ips.ID36157, "");
+    var bassCalc = Math.round(5 * (ipsObj.ips.ID55859 + 10));
     transVarBassSsz.update(bassCalc, "");
-    var trebleCalc = Math.round(5 * (ipsObj.sym[89] + 10));
+    var trebleCalc = Math.round(5 * (ipsObj.ips.ID29767 + 10));
     transVarTrebleSsz.update(trebleCalc, "");
     var PM = "";
-    switch (ipsObj.sym[90]) {
+    switch (ipsObj.ips.ID57771) {
       case 0:
         PM = "NORMAL";
         break;
@@ -1883,9 +1883,9 @@ function updateValues() {
     transVarPlayModeSsz.update(PM, "");
   }
   //<!-- ******************** Person  **************************  -->
-  ihuman.update(ipsObj.sym[58]);
-  ihumanAZ.update(ipsObj.sym[228]);
-  ihumanWZ.update(ipsObj.sym[328]);
+  ihuman.update(ipsObj.ips.ID36168);
+  ihumanAZ.update(ipsObj.ips.ID34489);
+  ihumanWZ.update(ipsObj.ips.ID38470);
 
 
 
@@ -1895,18 +1895,18 @@ function updateValues() {
 
   //<!-- ******************** Licht Aktor AZ **************************  -->
 
-  DisLightCurrentAZCtrl.update(ipsObj.sym[265], 2);
-  DisLightPowerAZCtrl.update(ipsObj.sym[267], 2);
-  DisLightEnergyAZCtrl.update(ipsObj.sym[266], 2);
-  iLightAZ.update(ipsObj.sym[229]);
+  DisLightCurrentAZCtrl.update(ipsObj.ips.ID59093, 2);
+  DisLightPowerAZCtrl.update(ipsObj.ips.ID23507, 2);
+  DisLightEnergyAZCtrl.update(ipsObj.ips.ID24994, 2);
+  iLightAZ.update(ipsObj.ips.ID48642);
 
 
   //<!-- ******************** Schlafzimmer Licht **************************  -->
-  LightSZ.update(ipsObj.sym[106], "", "");
-  DisLightCurrentSZCtrl.update(ipsObj.sym[107], 2);
-  DisLightPowerSZCtrl.update(ipsObj.sym[108], 2);
-  DisLightEnergySZCtrl.update(ipsObj.sym[109], 2);
-  iLightSz.update(ipsObj.sym[106]);
+  LightSZ.update(ipsObj.ips.ID19506, "", "");
+  DisLightCurrentSZCtrl.update(ipsObj.ips.ID35590, 2);
+  DisLightPowerSZCtrl.update(ipsObj.ips.ID43083, 2);
+  DisLightEnergySZCtrl.update(ipsObj.ips.ID12561, 2);
+  iLightSz.update(ipsObj.ips.ID19506);
 
   //<!-- ********************   **************************  -->
   /*
@@ -2054,19 +2054,19 @@ function updateValues() {
   ABox.update(ipsObj.ips.ID15289);
 
   if (document.getElementById("MainCeolWZ")) {
-    iDisArtist.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
-    FontBtnIRadioPower.update(ipsObj.sym[96]);
+    iDisArtist.update(ipsObj.ips.ID57135, ipsObj.ips.ID31822, ipsObj.ips.ID30505, ipsObj.ips.ID17922);
+    FontBtnIRadioPower.update(ipsObj.ips.ID22520);
     //IconVarDisVol.update(ipsObj.sym[97], 0);
     //IconVarDisSource.update(ipsObj.sym[105], "state");
     //IconVarDisServerWZ.update(ipsObj.sym[81]);
 
-    if (ipsObj.sym[105] === 'IRADIO') {
-      iDisArtistWZ.update(ipsObj.sym[92], ipsObj.sym[95], ipsObj.sym[93], ipsObj.sym[94]);
+    if (ipsObj.ips.ID46852 === 'IRADIO') {
+      iDisArtistWZ.update(ipsObj.ips.ID57135, ipsObj.ips.ID31822, ipsObj.ips.ID30505, ipsObj.ips.ID17922);
     } else {
-      iDisArtistWZ.update(ipsObj.sym[260], ipsObj.sym[261], ipsObj.sym[93], ipsObj.sym[94], ipsObj.sym[262]);
+      iDisArtistWZ.update(ipsObj.ips.ID57135, ipsObj.ips.ID48125, ipsObj.ips.ID30505, ipsObj.ips.ID17922, ipsObj.ips.ID59871);
     }
 
-    FontBtnIRadioPowerWZ.update(ipsObj.sym[96]);
+    FontBtnIRadioPowerWZ.update(ipsObj.ips.ID22520);
     //IconVarDisVolWZ.update(ipsObj.sym[97], 0);
     //IconVarDisSourceWZ.update(ipsObj.sym[105], "state", 'Radio', 'Media', 'USB', 'IPOD', 'AUX A', 'AUX D');
   }
@@ -2081,8 +2081,8 @@ function updateValues() {
 function Klima() {
   //<!-- **************************  Feuchte Floorplan **************************  -->
 
-  VarDisHumidSZ_E.update(ipsObj.sym[11]);
-  VarDisHumidKZ_E.update(ipsObj.sym[10]);
+  VarDisHumidSZ_E.update(ipsObj.ips.ID50329);
+  VarDisHumidKZ_E.update(ipsObj.ips.ID56454);
 }
 
 function Security() {
@@ -2106,10 +2106,10 @@ function Security() {
                      $('door_E').innerHTML =  'close'; 
             }
   */
-  VarDisMainDoor.update(ipsObj.sym[9]);
+  VarDisMainDoor.update(ipsObj.ips.ID22196);
 
 
-  var alarmCode = ipsObj.sym[58];
+  var alarmCode = ipsObj.ips.ID36168;
 
   switch (alarmCode) {
     case 1:
@@ -2123,10 +2123,10 @@ function Security() {
   }
 
 
-  DisDoorOpen.update(ipsObj.sym[9]);
-  DisFloorPD.update(ipsObj.sym[8]);
-  DisBalkonDoorOpen.update(ipsObj.sym[25]);
-  KeyPadSecKey.update(ipsObj.sym[110]);
+  DisDoorOpen.update(ipsObj.ips.ID22196);
+  DisFloorPD.update(ipsObj.ips.ID36168);
+  DisBalkonDoorOpen.update(ipsObj.ips.ID37348);
+  KeyPadSecKey.update(ipsObj.ips.ID17052);
 
 
 }
