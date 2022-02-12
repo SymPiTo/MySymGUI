@@ -53,7 +53,7 @@ require_once(__DIR__ . "/../libs/NW.php");
              
                 foreach ($wlObj as $key=>$value) {
                         if ($value->whiteIP == $_SERVER['REMOTE_ADDR']){
-                                if($wLcheckedObj[$key]->whiteList) {
+                                if($value->WLchecked) {
                                         $this->SendDebug( "WhiteList: ", "IP ".$_SERVER['REMOTE_ADDR']." ist zugelassen", 0); 
                                         $WL = true;
                                 }       
