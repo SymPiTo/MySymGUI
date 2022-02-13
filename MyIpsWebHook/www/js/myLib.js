@@ -725,22 +725,24 @@ class DynIcon {
         if (this.typ === "bin") {
             if(typeof value != "undefined"){
                 value = value['value'] + 0;
+                if (this.revers) {
+                    if (value === 0) {
+                        this.ID.src = "images/" + this.ImageBaseName + "1.png";
+                    } else {
+                        this.ID.src = "images/" + this.ImageBaseName + "0.png";
+                    }
+                } else {
+                    if (value === 0) {
+                        this.ID.src = "images/" + this.ImageBaseName + "0.png";
+                    } else {
+                        this.ID.src = "images/" + this.ImageBaseName + "1.png";
+                    }
+                }
+
             }else{
                 this.ID.src = "images/error.png";
             }
-            if (this.revers) {
-                if (value === 0) {
-                    this.ID.src = "images/" + this.ImageBaseName + "1.png";
-                } else {
-                    this.ID.src = "images/" + this.ImageBaseName + "0.png";
-                }
-            } else {
-                if (value === 0) {
-                    this.ID.src = "images/" + this.ImageBaseName + "0.png";
-                } else {
-                    this.ID.src = "images/" + this.ImageBaseName + "1.png";
-                }
-            }
+
 
 
         }
