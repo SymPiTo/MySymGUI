@@ -59,18 +59,20 @@ class ipsbuffer {
     //this.ips.ID56454 = ""; // humidity KZ
     //this.ips.ID50329 = ""; // humidity SZ  
 
-    this.ips.ID54298 = ""; //Rollo KZ Mode
-    this.ips.ID59964 = ""; //Rollo KZ Postion 
+    //this.ips.ID54298 = ""; //Rollo KZ Mode
+    //this.ips.ID59964 = ""; //Rollo KZ Postion 
 
-    this.ips.ID53773 = ""; //Rollo WZ up/down
-    this.ips.ID49991 = ""; //Rollo WZ Position
-    this.ips.ID13953 = ""; //Rollo WZ Mode
-    this.ips.ID21488 = ""; //Rollo WZ Schaltzeit Mo-Fr
-    this.ips.ID37176 = ""; //Rollo WZ Schaltzeit Sa-So 
-    this.ips.ID15822 = ""; //Rollo WZ SSunSet  
+    //this.ips.ID53773 = ""; //Rollo WZ up/down
+    //this.ips.ID49991 = ""; //Rollo WZ Position
+    //this.ips.ID13953 = ""; //Rollo WZ Mode
+    //this.ips.ID21488 = ""; //Rollo WZ Schaltzeit Mo-Fr
+    //this.ips.ID37176 = ""; //Rollo WZ Schaltzeit Sa-So 
+    //this.ips.ID15822 = ""; //Rollo WZ SSunSet  
 
-    this.ips.ID57642 = ""; //Rollo B Mode
-    this.ips.ID25065 = ""; //Rollo B Postion          
+    //this.ips.ID57642 = ""; //Rollo B Mode
+    //this.ips.ID25065 = ""; //Rollo B Postion          
+    
+    /*
     this.ips.ID57942 = ""; //Sonnenuntergang
     this.ips.ID11938 = ""; //Sonnenaufgang
     this.ips.ID37348 = ""; //Balkontür
@@ -97,21 +99,23 @@ class ipsbuffer {
     this.ips.ID16709 = ""; //Temperatur Balkon Aussen
     this.ips.ID27502 = ""; //Humidity Balkon Aussen
     this.ips.ID44154 = ""; //Alarm Anlage aktiv
+*/
 
-    this.ips.ID53769 = ""; //Rollo K Mode
-    this.ips.ID11004 = ""; //Rollo K Postion 
-    this.ips.ID13003 = ""; //Rollo K up/down
-    this.ips.ID34905 = ""; //Rollo K Schaltzeit Mo-Fr
-    this.ips.ID52660 = ""; //Rollo K Schaltzeit Sa-So
-    this.ips.ID28605 = ""; //Rollo K SSunSet  
+    //this.ips.ID53769 = ""; //Rollo K Mode
+    //this.ips.ID11004 = ""; //Rollo K Postion 
+    //this.ips.ID13003 = ""; //Rollo K up/down
+    //this.ips.ID34905 = ""; //Rollo K Schaltzeit Mo-Fr
+    //this.ips.ID52660 = ""; //Rollo K Schaltzeit Sa-So
+    //this.ips.ID28605 = ""; //Rollo K SSunSet  
 
-    this.ips.ID25457 = ""; //Rollo B Mode
-    this.ips.ID26881 = ""; //Rollo B Postion 
-    this.ips.ID42649 = ""; //Rollo B up/Down
-    this.ips.ID41457 = ""; //Rollo B Schaltzeit Mo-Fr
-    this.ips.ID25503 = ""; //Rollo B Schaltzeit Sa-So
-    this.ips.ID11634 = ""; // Rollo B SunSet active  
+    //this.ips.ID25457 = ""; //Rollo B Mode
+    //this.ips.ID26881 = ""; //Rollo B Postion 
+    //this.ips.ID42649 = ""; //Rollo B up/Down
+    //this.ips.ID41457 = ""; //Rollo B Schaltzeit Mo-Fr
+    //this.ips.ID25503 = ""; //Rollo B Schaltzeit Sa-So
+    //this.ips.ID11634 = ""; // Rollo B SunSet active  
 
+    /*
     this.ips.ID36168 = ""; //Anwesenheit Stste Diele
     this.ips.ID30280 = "" //Bad Fenster Aktor LowBat
     this.ips.ID49846 = ""; //Bad Taster-Fenster LowBat
@@ -157,7 +161,8 @@ class ipsbuffer {
     this.ips.ID54563 = ""; //Kochbuch Titel
     this.ips.ID18416 = ""; //Kochbuch Image
     this.ips.ID29246 = ""; //Kochbuch Zutaten
-
+    */
+/*
     this.ips.ID59260 = ""; //Kochbuch Rezept
     this.ips.ID16493 = '{"first":"empty", "second":"empty"}'; //Kochbuch Liste
     this.ips.ID46852 = ""; //Denon Source
@@ -168,18 +173,21 @@ class ipsbuffer {
     this.ips.ID17052 = ""; // Security Code
     this.ips.ID44125 = '{"first":"empty", "second":"empty"}'; //Wetter Week Data
     this.ips.ID46593 = '{"first":"empty", "second":"empty"}'; //Wetter NowDay Data
+*/
 
-    this.ips.ID22052 = ""; //Rollo SZ Mode
-    this.ips.ID18298 = ""; //Rollo SZ Postion 
-    this.ips.ID58302 = ""; //Rollo SZ up/down
-    this.ips.ID18740 = ""; //Rollo SZ Schaltzeit Mo-Fr
-    this.ips.ID53883 = ""; //Rollo SZ Schaltzeit Sa-So
-    this.ips.ID12349 = ""; //Rollo SZ SSunSet  
+    //this.ips.ID22052 = ""; //Rollo SZ Mode
+    //this.ips.ID18298 = ""; //Rollo SZ Postion 
+    //this.ips.ID58302 = ""; //Rollo SZ up/down
+    //this.ips.ID18740 = ""; //Rollo SZ Schaltzeit Mo-Fr
+    //this.ips.ID53883 = ""; //Rollo SZ Schaltzeit Sa-So
+    //this.ips.ID12349 = ""; //Rollo SZ SSunSet  
 
-    this.ips.ID25277 = ""; //Rollo KZ Schaltzeit Sa-So
-    this.ips.ID53747 = ""; //Rollo KZ SSunSet            
-    this.ips.ID54434 = ""; //Rollo KZ up/down
-    this.ips.ID28071 = ""; //Rollo KZ Schaltzeit Mo-Fr
+    //this.ips.ID25277 = ""; //Rollo KZ Schaltzeit Sa-So
+    //this.ips.ID53747 = ""; //Rollo KZ SSunSet            
+    //this.ips.ID54434 = ""; //Rollo KZ up/down
+    //this.ips.ID28071 = ""; //Rollo KZ Schaltzeit Mo-Fr
+
+    /*
     this.ips.ID34292 = ""; //Denon DIDL AlbumArt URL
     this.ips.ID42467 = ""; //WSS active
     this.ips.ID56321 = ""; //WSS Client 1
@@ -454,7 +462,7 @@ class ipsbuffer {
     this.ips.ID38470 = ""; //Präsenzmelder WZ
     this.ips.ID55199 = "";
     this.ips.ID47124 = "";
-
+  */
 
     this.ips.DATA41984 = ""; //Temp Ist WZ
     this.ips.DATA21198 = ""; //Temp Soll WZ
@@ -820,8 +828,8 @@ function updateValues() {
   }
 
 
-  if(typeof ipsObj.ips.ID13996['value'] != "undefined"){
-    if (ipsObj.ips.ID13996['value'] != "-") { 
+  if(typeof ipsObj.ips.ID13996 != "undefined"){
+    if (ipsObj.ips.ID13996.value != "-") { 
       Meldung.set(true, "Eingehender Anruf.\n\r" + ipsObj.ips.ID13996['value'] + "\n\r" + ipsObj.ips.ID43770['value']);
     } else {
       Meldung.set(false, "");

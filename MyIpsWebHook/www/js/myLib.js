@@ -692,35 +692,39 @@ class DynIcon {
 
     update(value) {
         if (this.typ === "ana") {
-            if (value['value'] === 0) {
-                this.ID.src = "images/" + this.ImageBaseName + "0.png";
-            } else if (value['value'] === 1) {
-                this.ID.src = "images/" + this.ImageBaseName + "1.png";
-            } else if (value['value'] === 2) {
-                this.ID.src = "images/" + this.ImageBaseName + "2.png";
-            } else if (value['value'] === 3) {
-                this.ID.src = "images/" + this.ImageBaseName + "3.png";
-            } else if (value['value'] > 3 && value < 11) {
-                this.ID.src = "images/" + this.ImageBaseName + "10.png";
-            } else if (value['value'] > 10 && value < 21) {
-                this.ID.src = "images/" + this.ImageBaseName + "20.png";
-            } else if (value['value'] > 20 && value < 31) {
-                this.ID.src = "images/" + this.ImageBaseName + "30.png";
-            } else if (value['value'] > 30 && value < 41) {
-                this.ID.src = "images/" + this.ImageBaseName + "40.png";
-            } else if (value['value'] > 40 && value < 51) {
-                this.ID.src = "images/" + this.ImageBaseName + "50.png";
-            } else if (value['value'] > 50 && value < 61) {
-                this.ID.src = "images/" + this.ImageBaseName + "60.png";
-            } else if (value['value'] > 60 && value < 71) {
-                this.ID.src = "images/" + this.ImageBaseName + "70.png";
-            } else if (value['value'] > 70 && value < 81) {
-                this.ID.src = "images/" + this.ImageBaseName + "80.png";
-            } else if (value['value'] > 80 && value < 91) {
-                this.ID.src = "images/" + this.ImageBaseName + "90.png";
-            } else if (value['value'] > 90 && value < 101) {
-                this.ID.src = "images/" + this.ImageBaseName + "100.png";
-            } else {}
+            if(typeof value != "undefined"){
+                if (value['value'] === 0) {
+                    this.ID.src = "images/" + this.ImageBaseName + "0.png";
+                } else if (value['value'] === 1) {
+                    this.ID.src = "images/" + this.ImageBaseName + "1.png";
+                } else if (value['value'] === 2) {
+                    this.ID.src = "images/" + this.ImageBaseName + "2.png";
+                } else if (value['value'] === 3) {
+                    this.ID.src = "images/" + this.ImageBaseName + "3.png";
+                } else if (value['value'] > 3 && value < 11) {
+                    this.ID.src = "images/" + this.ImageBaseName + "10.png";
+                } else if (value['value'] > 10 && value < 21) {
+                    this.ID.src = "images/" + this.ImageBaseName + "20.png";
+                } else if (value['value'] > 20 && value < 31) {
+                    this.ID.src = "images/" + this.ImageBaseName + "30.png";
+                } else if (value['value'] > 30 && value < 41) {
+                    this.ID.src = "images/" + this.ImageBaseName + "40.png";
+                } else if (value['value'] > 40 && value < 51) {
+                    this.ID.src = "images/" + this.ImageBaseName + "50.png";
+                } else if (value['value'] > 50 && value < 61) {
+                    this.ID.src = "images/" + this.ImageBaseName + "60.png";
+                } else if (value['value'] > 60 && value < 71) {
+                    this.ID.src = "images/" + this.ImageBaseName + "70.png";
+                } else if (value['value'] > 70 && value < 81) {
+                    this.ID.src = "images/" + this.ImageBaseName + "80.png";
+                } else if (value['value'] > 80 && value < 91) {
+                    this.ID.src = "images/" + this.ImageBaseName + "90.png";
+                } else if (value['value'] > 90 && value < 101) {
+                    this.ID.src = "images/" + this.ImageBaseName + "100.png";
+                } else {}
+            }else{
+                this.ID.src = "images/error.png";
+            }
         }
         if (this.typ === "bin") {
             if(typeof value != "undefined"){
@@ -1198,11 +1202,23 @@ class HeatCtrl {
     }
 
     update(value1, value2, change = false) {
-        this.value1ID.innerHTML = value1['value'] + this.unit;
-        this.value2ID.innerHTML = value2['value'] + this.unit;
-        if (change['value']) {
-            this.elemSollTemp.innerHTML = value2['value'] + this.unit;
+        if(typeof value1 != "undefined"){
+            this.value1ID.innerHTML = value1['value'] + this.unit;
+        }else{
+            this.value1ID.innerHTML = "????";
         }
+        if(typeof value2 != "undefined"){
+            this.value2ID.innerHTML = value2['value'] + this.unit;
+        }else{
+            
+            this.value2ID.innerHTML = "????";
+        }
+        if(typeof change['value'] != "undefined"){
+            if (change['value']) {
+                this.elemSollTemp.innerHTML = value2['value'] + this.unit;
+            }
+        }
+
     }
 
 }
@@ -1361,7 +1377,9 @@ class CheckBoxCtrlBtn {
     }
 
     update(value) {
-        this.ID.checked = value['value'];
+        if(typeof value != "undefined"){
+            this.ID.checked = value['value'];
+        }
     }
 }
 
@@ -1808,11 +1826,13 @@ class KeyPad {
     }
 
     update(value) {
-        if (value != "") {
-            this.value1 = value['value'];
-            var n = this.value1.length;
-            var code = "**************************";
-            this.ID.innerHTML = code.substr(0, n);
+        if(typeof value != "undefined"){
+            if (value != "") {
+                this.value1 = value['value'];
+                var n = this.value1.length;
+                var code = "**************************";
+                this.ID.innerHTML = code.substring(0, n);
+            }
         }
     };
     
@@ -3235,17 +3255,23 @@ class CtrlTile {
     update(value, valueLeft, valueRight) {
         var colorOff = this.btnTextColor0;
         var colorOn = this.btnTextColor1;
-        if (value['value'] === true) {
-            this.id1.src = "images/" + this.icon + "1" + ".png";
-            this.id4.style.color = colorOff;
-            this.id5.style.color = colorOn;
-        } else {
-            this.id1.src = "images/" + this.icon + "0" + ".png";
-            this.id4.style.color = colorOn;
-            this.id5.style.color = colorOff;
+        if(value != "" &  typeof value != "undefined"){
+            if (value['value'] === true) {
+                this.id1.src = "images/" + this.icon + "1" + ".png";
+                this.id4.style.color = colorOff;
+                this.id5.style.color = colorOn;
+            } else {
+                this.id1.src = "images/" + this.icon + "0" + ".png";
+                this.id4.style.color = colorOn;
+                this.id5.style.color = colorOff;
+            }
+            this.id2.innerHTML = valueLeft['value'];
+            this.id3.innerHTML = valueRight['value'];
+        }else{
+            this.id1.src = "images/error.png";
         }
-        this.id2.innerHTML = valueLeft['value'];
-        this.id3.innerHTML = valueRight['value'];
+
+
     }
 }
 
@@ -3305,9 +3331,12 @@ class ShowUrlImage {
     }
 
     update(SourceUrl) {
-
-        if(SourceUrl != ""){
-          this.ID.src = SourceUrl['value'];
+        if(typeof SourceUrl != "undefined"){
+            if(SourceUrl != ""){
+                this.ID.src = SourceUrl['value'];
+            }
+        }else{
+            this.ID.src = "images/error.png";
         }
     }
 
@@ -3405,7 +3434,7 @@ class ArrayListBox {
 
     update(ArrDaten) {
         let ADarray =[]; 
-        if (typeof (ArrDaten.value) !='undefined') {
+        if (typeof (ArrDaten) !='undefined') {
             var AD = ArrDaten.value;
             ADarray = JSON.parse(AD);
 
@@ -3529,7 +3558,7 @@ class TextBox {
     }
 
     update(text) {
-        if (typeof (text['value']) != 'undefined'){
+        if (typeof text != 'undefined'){
 
       
             let x = text['value'];
@@ -3562,10 +3591,10 @@ class HeadLine {
     }
 
     update(headline) {
-        if (typeof (headline['value']) != 'undefined' && headline['value'] != null) {
+        if (typeof (headline) != 'undefined' && headline['value'] != null) {
             this.ID.innerHTML = headline['value'];
         } else {
-            //$('fehler').innerHTML = "Variable wrong or missing:";
+            this.ID.innerHTML = "????";
         }
 
     }
@@ -4332,13 +4361,16 @@ class BtnIcon {
     }
 
     update(value) {
-        if (value['value']) {
-            this.labelcolor = "red";
-            this.ID.style.color = this.labelcolor;
-        } else {
-            this.labelcolor = "lime";
-            this.ID.style.color = this.labelcolor;
+        if(typeof value != "undefined"){
+            if (value['value']) {
+                this.labelcolor = "red";
+                this.ID.style.color = this.labelcolor;
+            } else {
+                this.labelcolor = "lime";
+                this.ID.style.color = this.labelcolor;
+            }
         }
+
     }
 }
 
@@ -4651,18 +4683,22 @@ class FontSymb {
         document.getElementById(ParentID).appendChild(elem);
     }
     update(value, blink, sfarbeOn, sfarbeOff) {
-        if (value['value']) {
-            if (blink) {
-                this.ID.id = "blinkOn";
-                this.ID.style.color = sfarbeOn;
-
+        if(typeof value != "undefined"){
+            if (value['value']) {
+                if (blink) {
+                    this.ID.id = "blinkOn";
+                    this.ID.style.color = sfarbeOn;
+    
+                } else {
+    
+                }
+    
             } else {
-
+                this.ID.id = "blinkOff";
+                this.ID.style.color = sfarbeOff;
             }
+        }else{
 
-        } else {
-            this.ID.id = "blinkOff";
-            this.ID.style.color = sfarbeOff;
         }
     }
 }
