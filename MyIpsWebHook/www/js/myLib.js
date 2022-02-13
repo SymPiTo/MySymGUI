@@ -624,13 +624,31 @@ class MediaDisplay {
     }
 
     update(sourceurl, Sender, Album, Artist, Title) {
-        this.imgID.src = sourceurl['value'];
-        this.SenderObj.innerHTML = Sender['value'];
-        this.AlbumObj.innerHTML = Album['value'];
-        this.ArtistObj.innerHTML = Artist['value'];
-        this.TitleObj.innerHTML = Title['value'];
-        
-
+        if(typeof sourceurl != "undefined"){
+            this.imgID.src = sourceurl['value'];
+        }else{
+            this.imgID.src = "images/error.png";
+        }
+        if(typeof Sender != "undefined"){
+            this.SenderObj.innerHTML = Sender['value'];
+        }else{
+            this.SenderObj.innerHTML = "";
+        }
+        if(typeof Album != "undefined"){
+            this.AlbumObj.innerHTML = Album['value'];
+        }else{
+            this.AlbumObj.innerHTML = "";
+        }
+        if(typeof Artist != "undefined"){
+            this.ArtistObj.innerHTML = Artist['value'];
+        }else{
+            this.ArtistObj.innerHTML = "";
+        }
+        if(typeof Title != "undefined"){
+            this.TitleObj.innerHTML = Title['value'];
+        }else{
+            this.TitleObj.innerHTML = "";
+        }
     }
 }
 
@@ -972,9 +990,9 @@ class VarDis {
 
     update(value, n) {
         try {
-            if (value['value'] === false) {
+            if ((value['value'] === false) || (value['value'] == 0)) {
                 this.ID.innerHTML = this.state1;
-            } else if (value['value'] === true) {
+            } else if ((value['value'] === true) || (value['value'] == 1)) {
                 this.ID.innerHTML = this.state2;
             } else if (n === 0 || n > 0) {
                 //var wert = Math.round(value).toFixed(n);
@@ -3255,7 +3273,7 @@ class CtrlTile {
     update(value, valueLeft, valueRight) {
         var colorOff = this.btnTextColor0;
         var colorOn = this.btnTextColor1;
-        if(value != "" &  typeof value != "undefined"){
+        if(typeof value != "undefined"){
             if (value['value'] === true) {
                 this.id1.src = "images/" + this.icon + "1" + ".png";
                 this.id4.style.color = colorOff;
@@ -3265,8 +3283,16 @@ class CtrlTile {
                 this.id4.style.color = colorOn;
                 this.id5.style.color = colorOff;
             }
-            this.id2.innerHTML = valueLeft['value'];
-            this.id3.innerHTML = valueRight['value'];
+            if(typeof valueLeft.value != "undefined"){
+                this.id2.innerHTML = valueLeft['value'];
+            }else{
+                this.id2.innerHTML = "";
+            }
+            if(typeof valueRight.value != "undefined"){
+                this.id3.innerHTML = valueRight['value'];
+            }else{
+                this.id3.innerHTML = "";
+            }
         }else{
             this.id1.src = "images/error.png";
         }
@@ -3372,7 +3398,9 @@ class ShowCamImage {
        // var timestamp = new Date().getTime();  
         //var queryString = "?t=" + timestamp;    
        //this.ID.src =  SourceUrl + queryString;  
-       this.ID.src = image['value'];
+       if(typeof image != "undefined"){
+            this.ID.src = image['value'];
+       }
     }
 }
 

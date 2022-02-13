@@ -44,7 +44,7 @@ class ipsbuffer {
   }
 
   init() {
-    this.ips.ID14879 = ""; //Mute Sonos WZ
+    //this.ips.ID14879 = ""; //Mute Sonos WZ
     
     //this.ips.ID29022 = ""; //Temperatur SZ (HM)
     //this.ips.ID50730 = ""; //Temperatur KZ
@@ -463,7 +463,7 @@ class ipsbuffer {
     this.ips.ID55199 = "";
     this.ips.ID47124 = "";
   */
-
+/*
     this.ips.DATA41984 = ""; //Temp Ist WZ
     this.ips.DATA21198 = ""; //Temp Soll WZ
     this.ips.DATA20539 = ""; //Hz Stellung WZ
@@ -476,6 +476,7 @@ class ipsbuffer {
     this.ips.DATA25152 = ""; //Temp Soll KZ
     this.ips.DATA48718 = ""; //Umlaufrendite
     this.ips.DATA50816 = ""; //Umlaufrendite
+  */
   }
 
   update(symvar) {
@@ -960,7 +961,8 @@ function updateValues() {
       default:
         // code block
     }
-    roborock.update(Status, "", "");
+    
+    roborock.update(RRstate, "", "");
     RRBat.update(ipsObj.ips.ID28007);
     RRError.update(ipsObj.ips.ID43768);
     RRHB.update(ipsObj.ips.ID54799);
@@ -1041,7 +1043,7 @@ function updateValues() {
 
   /* ------------------------------- Wohnzimmer Fenster------------------------------ */
   if (document.getElementById("MainFWZ")) {
-    iWindowWZ.update(ipsObj.ips.ID37348, "", "");
+    iWindowWZ.update(ipsObj.ips.ID11008, "", "");
 
     WZTemp.update(ipsObj.ips.ID29022);
     WZDisHumid.update(ipsObj.ips.ID19285);
@@ -1203,7 +1205,7 @@ function updateValues() {
   VarDisTempBad.update(ipsObj.ips.ID59969);
   VarDisHumidBad.update(ipsObj.ips.ID14487);
   /* -------------------------------- Balkontür ------------------------------- */
-  VarDisBDoor.update(ipsObj.ips.ID37348);
+  VarDisBDoor.update(ipsObj.ips.ID11008);
   /* --------------------------- Haustür Position --------------------------- */
   DynIconDoorD.update(ipsObj.ips.ID22196);
   DisDoorDCtrl.update(ipsObj.ips.ID22196);
@@ -1571,8 +1573,8 @@ function updateValues() {
 
     iBat20.update(ipsObj.ips.ID55813);
     iBat21.update(ipsObj.ips.ID42343);
-    iBat22.update(ipsObj.ips.ID44533);
-    iBat23.update(ipsObj.ips.ID44533);
+    iBat22.update(ipsObj.ips.ID39063);
+    iBat23.update(ipsObj.ips.ID35552);
 
     BatDis.update(ipsObj.ips.ID41310);
   }
