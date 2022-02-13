@@ -1197,7 +1197,7 @@ function updateValues() {
   /* -------------------------------- Balkontür ------------------------------- */
   VarDisBDoor.update(ipsObj.ips.ID37348);
   /* --------------------------- Haustür Position --------------------------- */
-  DynIconDoorD.update(ipsObj.ips.ID22196000);
+  DynIconDoorD.update(ipsObj.ips.ID22196);
   DisDoorDCtrl.update(ipsObj.ips.ID22196);
   /* --------------------------- Balkontür Position --------------------------- */
   if (document.getElementById("MainDoorB")) {
