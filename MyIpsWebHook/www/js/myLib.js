@@ -723,7 +723,11 @@ class DynIcon {
             } else {}
         }
         if (this.typ === "bin") {
-            value = value['value'] + 0;
+            if(typeof value != "undefined"){
+                value = value['value'] + 0;
+            }else{
+                this.ID.src = "images/error.png";
+            }
             if (this.revers) {
                 if (value === 0) {
                     this.ID.src = "images/" + this.ImageBaseName + "1.png";
@@ -900,6 +904,7 @@ class VarDis {
         this.iconColor = "yellow";
         this.width = "250px";
         this.height = "170px";
+       
     }
 
     create(ParentID, bgColor, posTop, posLeft, b, h, einheit, ...param) {
@@ -907,6 +912,7 @@ class VarDis {
         this.height = h;
         this.bgColor = bgColor;
         this.unit = einheit;
+         
 
         if (param[0]) {
             this.state1 = param[0];
@@ -972,7 +978,9 @@ class VarDis {
                 this.ID.innerHTML = value['value'] + this.unit;
             }
         } catch (error) {
-            // alert("error");
+            if(typeof value == "undefined"){
+                this.ID.innerHTML = '????';
+            }
         }
 
     }
@@ -1620,17 +1628,42 @@ class GlideButton {
         this.unit3 = unit3;
         this.unit4 = unit4;
         
-        if(typeof value1['value'] != "undefined"){
-            this.value1 =  value1['value'];
+        if(typeof value1 == "undefined"){
+            this.value1 = "????";
         }
-        if(typeof value2['value'] != "undefined"){
-            this.value2 =  value2['value']; 
+        else{
+            if(typeof value1['value'] == "undefined"){
+                this.value1 = value1;
+            }else{
+                this.value1 =  value1['value'];
+            }
         }
-        if(typeof value3['value'] != "undefined"){
-            this.value3 =  value3['value'];
+        if(typeof value2 == "undefined"){
+            this.value2 = "????"; 
+        }else{
+            if(typeof value2['value'] == "undefined"){
+                this.value2 = value2;
+            }else{
+                this.value2 =  value2['value'];
+            }
         }
-        if(typeof value4['value'] != "undefined"){
-            this.value4 =  value4['value']; 
+        if(typeof value3 == "undefined"){
+            this.value3 = "????";
+        }else{
+            if(typeof value3['value'] == "undefined"){
+                this.value3 = value3;
+            }else{
+                this.value3 =  value3['value'];
+            }
+        }
+        if(typeof value4 == "undefined"){
+            this.value4 = "????";
+        }else{
+            if(typeof value4['value'] == "undefined"){
+                this.value4 = value4;
+            }else{
+                this.value4 =  value4['value'];
+            }
         }
         
         
@@ -3272,7 +3305,7 @@ class ShowUrlImage {
     update(SourceUrl) {
 
         if(SourceUrl != ""){
-        //    this.ID.src = SourceUrl['value'];
+          this.ID.src = SourceUrl['value'];
         }
     }
 
@@ -3967,20 +4000,37 @@ class WeatherLabel {
         document.getElementById(ParentID).appendChild(container);
     }
 
-    update(iconurl, day, tempMax, tempMin, windspeed, windGust, cloudCover, humidity, ozone, uvIndex, summary) {
-        this.source.src = iconurl['value'];
-        this.day.innerHTML = day['value'];
-        this.tempMax_ID.innerHTML = tempMax['value'];
-        this.tempMin_ID.innerHTML = tempMin['value'];
-        this.windspeed_ID.innerHTML = "Windgeschw.: " + windspeed['value'];
-        this.windGust_ID.innerHTML = "Wind Böen: " + windGust['value'];
-        this.cloudCover_ID.innerHTML = "Bewölkung: " + cloudCover['value'];
-        this.humidity_ID.innerHTML = "Feuchte: " + humidity['value'];
-        if (ozone['value']) {
-            this.ozone_ID.innerHTML = "Ozonwert: " + ozone['value'];
-            this.uvIndex_ID.innerHTML = "UV-Index: " + uvIndex['value'];
-            this.summary_ID.innerHTML = summary['value'];
+    //update(iconurl, day, tempMax, tempMin, windspeed, windGust, cloudCover, humidity, ozone, uvIndex, summary) {
+    update(WeatherObjectID,day){
+        let w = JSON.parse(WeatherObjectID.value);
+        if(day>0){
+            this.source.src = w[day]['icon'];
+            this.day.innerHTML = w[day]['weekday'];
+            this.tempMax_ID.innerHTML = w[day]['temperatureHigh'];
+            this.tempMin_ID.innerHTML = w[day]['temperatureLow'];
+            this.windspeed_ID.innerHTML = w[day]['windSpeed'];
+            this.windGust_ID.innerHTML = w[day]['windGust'];
+            this.cloudCover_ID.innerHTML = w[day]['cloudCover'];
+            this.humidity_ID.innerHTML = w[day]['humidity'];
         }
+        if(day == 0){
+            this.source.src = w['icon'];
+            this.day.innerHTML = 'Aktuell';
+            this.tempMax_ID.innerHTML = w['apparentTemperature'];
+            this.tempMin_ID.innerHTML = w['temperature'];
+            this.windspeed_ID.innerHTML = w['windSpeed'];
+            this.windGust_ID.innerHTML = w['windGust'];
+            this.cloudCover_ID.innerHTML = w['cloudCover'];
+            this.humidity_ID.innerHTML = w['humidity'];
+            this.ozone_ID.innerHTML = w['ozone'];
+            this.uvIndex_ID.innerHTML = w['uvIndex'];
+            this.summary_ID.innerHTML = w['summary'];
+        }
+        /*
+        if (ozone['value']) {
+
+        }
+        */
     }
 
 

@@ -46,18 +46,18 @@ class ipsbuffer {
   init() {
     this.ips.ID14879 = ""; //Mute Sonos WZ
     
-    this.ips.ID29022 = ""; //Temperatur SZ (HM)
-    this.ips.ID50730 = ""; //Temperatur KZ
-    this.ips.ID41984 = ""; //Temperatur WZ
-    this.ips.ID54070 = ""; //Temperatur K
-    this.ips.ID20539 = ""; //Position HZ WZ
-    this.ips.ID48718 = ""; //Position HZ KZ
-    this.ips.ID37431 = ""; //Position HZ SZ (HM)
-    this.ips.ID51619 = ""; //Position HZ K   
-    this.ips.ID36168 = ""; // Diele Präsenzmelder
-    this.ips.ID22196 = ""; // Diele Haustür   
-    this.ips.ID56454 = ""; // humidity KZ
-    this.ips.ID50329 = ""; // humidity SZ  
+    //this.ips.ID29022 = ""; //Temperatur SZ (HM)
+    //this.ips.ID50730 = ""; //Temperatur KZ
+    //this.ips.ID41984 = ""; //Temperatur WZ
+    //this.ips.ID54070 = ""; //Temperatur K
+    //this.ips.ID20539 = ""; //Position HZ WZ
+    //this.ips.ID48718 = ""; //Position HZ KZ
+    //this.ips.ID37431 = ""; //Position HZ SZ (HM)
+    //this.ips.ID51619 = ""; //Position HZ K   
+    //this.ips.ID36168 = ""; // Diele Präsenzmelder
+    //this.ips.ID22196 = ""; // Diele Haustür   
+    //this.ips.ID56454 = ""; // humidity KZ
+    //this.ips.ID50329 = ""; // humidity SZ  
 
     this.ips.ID54298 = ""; //Rollo KZ Mode
     this.ips.ID59964 = ""; //Rollo KZ Postion 
@@ -820,13 +820,13 @@ function updateValues() {
   }
 
 
-
-  if (ipsObj.ips.ID13996['value'] != "-") {
-    Meldung.set(true, "Eingehender Anruf.\n\r" + ipsObj.ips.ID13996 + "\n\r" + ipsObj.ips.ID43770);
-  } else {
-    Meldung.set(false, "");
+  if(typeof ipsObj.ips.ID13996['value'] != "undefined"){
+    if (ipsObj.ips.ID13996['value'] != "-") { 
+      Meldung.set(true, "Eingehender Anruf.\n\r" + ipsObj.ips.ID13996['value'] + "\n\r" + ipsObj.ips.ID43770['value']);
+    } else {
+      Meldung.set(false, "");
+    }
   }
-
 
 
 
@@ -1191,15 +1191,13 @@ function updateValues() {
     }
 
 
-
-
   /* --------------------------- Bad Temp / Humidity -------------------------- */
   VarDisTempBad.update(ipsObj.ips.ID59969);
   VarDisHumidBad.update(ipsObj.ips.ID14487);
   /* -------------------------------- Balkontür ------------------------------- */
   VarDisBDoor.update(ipsObj.ips.ID37348);
   /* --------------------------- Haustür Position --------------------------- */
-  DynIconDoorD.update(ipsObj.ips.ID22196);
+  DynIconDoorD.update(ipsObj.ips.ID22196000);
   DisDoorDCtrl.update(ipsObj.ips.ID22196);
   /* --------------------------- Balkontür Position --------------------------- */
   if (document.getElementById("MainDoorB")) {
@@ -1400,14 +1398,14 @@ function updateValues() {
 
   //<!-- ******************** Wetter   **************************  -->
   if (document.getElementById("MainWetterB")) {
-    WetterLabelA.update(ipsObj.ips.ID44125[1]['icon'], ipsObj.ips.ID44125[1]['weekday'], ipsObj.ips.ID44125[1]['temperatureHigh'], ipsObj.ips.ID44125[1]['temperatureLow'], ipsObj.ips.ID44125[1]['windSpeed'], ipsObj.ips.ID44125[1]['windGust'], ipsObj.ips.ID44125[1]['cloudCover'], ipsObj.ips.ID44125[1]['humidity']);
-    WetterLabelB.update(ipsObj.ips.ID44125[2]['icon'], ipsObj.ips.ID44125[2]['weekday'], ipsObj.ips.ID44125[2]['temperatureHigh'], ipsObj.ips.ID44125[2]['temperatureLow'], ipsObj.ips.ID44125[2]['windSpeed'], ipsObj.ips.ID44125[2]['windGust'], ipsObj.ips.ID44125[2]['cloudCover'], ipsObj.ips.ID44125[2]['humidity']);
-    WetterLabelC.update(ipsObj.ips.ID44125[3]['icon'], ipsObj.ips.ID44125[3]['weekday'], ipsObj.ips.ID44125[3]['temperatureHigh'], ipsObj.ips.ID44125[3]['temperatureLow'], ipsObj.ips.ID44125[3]['windSpeed'], ipsObj.ips.ID44125[3]['windGust'], ipsObj.ips.ID44125[3]['cloudCover'], ipsObj.ips.ID44125[3]['humidity']);
-    WetterLabelD.update(ipsObj.ips.ID44125[4]['icon'], ipsObj.ips.ID44125[4]['weekday'], ipsObj.ips.ID44125[4]['temperatureHigh'], ipsObj.ips.ID44125[4]['temperatureLow'], ipsObj.ips.ID44125[4]['windSpeed'], ipsObj.ips.ID44125[4]['windGust'], ipsObj.ips.ID44125[4]['cloudCover'], ipsObj.ips.ID44125[4]['humidity']);
-    WetterLabelE.update(ipsObj.ips.ID44125[5]['icon'], ipsObj.ips.ID44125[5]['weekday'], ipsObj.ips.ID44125[5]['temperatureHigh'], ipsObj.ips.ID44125[5]['temperatureLow'], ipsObj.ips.ID44125[5]['windSpeed'], ipsObj.ips.ID44125[5]['windGust'], ipsObj.ips.ID44125[5]['cloudCover'], ipsObj.ips.ID44125[5]['humidity']);
-    WetterLabelF.update(ipsObj.ips.ID44125[6]['icon'], ipsObj.ips.ID44125[6]['weekday'], ipsObj.ips.ID44125[6]['temperatureHigh'], ipsObj.ips.ID44125[6]['temperatureLow'], ipsObj.ips.ID44125[6]['windSpeed'], ipsObj.ips.ID44125[6]['windGust'], ipsObj.ips.ID44125[6]['cloudCover'], ipsObj.ips.ID44125[6]['humidity']);
-    WetterLabelG.update(ipsObj.ips.ID44125[7]['icon'], ipsObj.ips.ID44125[7]['weekday'], ipsObj.ips.ID44125[7]['temperatureHigh'], ipsObj.ips.ID44125[7]['temperatureLow'], ipsObj.ips.ID44125[7]['windSpeed'], ipsObj.ips.ID44125[7]['windGust'], ipsObj.ips.ID44125[7]['cloudCover'], ipsObj.ips.ID44125[7]['humidity']);
-    WetterLabelNow.update(ipsObj.ips.ID46593['icon'], "Aktuell", ipsObj.ips.ID46593['apparentTemperature'], ipsObj.ips.ID46593['temperature'], ipsObj.ips.ID46593['windSpeed'], ipsObj.ips.ID46593['windGust'], ipsObj.ips.ID46593['cloudCover'], ipsObj.ips.ID46593['humidity'], ipsObj.ips.ID46593['ozone'], ipsObj.ips.ID46593['uvIndex'], ipsObj.ips.ID46593['summary']);
+    WetterLabelA.update(ipsObj.ips.ID44125,1);
+    WetterLabelB.update(ipsObj.ips.ID44125,2);
+    WetterLabelC.update(ipsObj.ips.ID44125,3);
+    WetterLabelD.update(ipsObj.ips.ID44125,4);
+    WetterLabelE.update(ipsObj.ips.ID44125,5);
+    WetterLabelF.update(ipsObj.ips.ID44125,6);
+    WetterLabelG.update(ipsObj.ips.ID44125,7);
+    WetterLabelNow.update(ipsObj.ips.ID46593,0);
   }
 
 
