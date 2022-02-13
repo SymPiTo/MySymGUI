@@ -3270,17 +3270,10 @@ class ShowUrlImage {
     }
 
     update(SourceUrl) {
-      
-        try {
-            this.ID.src = SourceUrl['value'];
-          }
-          catch(err) {
-            var fehler =  err;
-          }   
-     
-            
-        
 
+        if(SourceUrl != ""){
+        //    this.ID.src = SourceUrl['value'];
+        }
     }
 
  
@@ -3377,15 +3370,16 @@ class ArrayListBox {
 
     update(ArrDaten) {
         let ADarray =[]; 
-        var AD = ArrDaten.value;
-        ADarray = JSON.parse(AD);
+        if (typeof (ArrDaten.value) !='undefined') {
+            var AD = ArrDaten.value;
+            ADarray = JSON.parse(AD);
 
-        // As long as <ul> has a child node, remove it
-        while (this.ID.hasChildNodes()) {
-            this.ID.removeChild(this.ID.firstChild);
-        }
-        var a = this.ID;
-        if (typeof (ADarray) !='undefined') {
+            // As long as <ul> has a child node, remove it
+            while (this.ID.hasChildNodes()) {
+                this.ID.removeChild(this.ID.firstChild);
+            }
+            var a = this.ID;
+        
             ADarray.forEach(function (value) {
                 var elem1 = document.createElement("tr");
                 a.append(elem1);
@@ -3500,7 +3494,16 @@ class TextBox {
     }
 
     update(text) {
-        this.ID.innerHTML = text['value'];
+        if (typeof (text['value']) != 'undefined'){
+
+      
+            let x = text['value'];
+            let y = x.substring(0,8);
+            if( y != "Zwiebeln"){
+               let A = text['value'];
+            }
+            this.ID.innerHTML = text['value'];
+        }
     }
 }
 
@@ -3527,7 +3530,7 @@ class HeadLine {
         if (typeof (headline['value']) != 'undefined' && headline['value'] != null) {
             this.ID.innerHTML = headline['value'];
         } else {
-            $('fehler').innerHTML = "Variable wrong or missing:";
+            //$('fehler').innerHTML = "Variable wrong or missing:";
         }
 
     }
