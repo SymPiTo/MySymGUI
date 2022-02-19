@@ -711,33 +711,34 @@ class DynIcon {
     update(value) {
         if (this.typ === "ana") {
             if(typeof value != "undefined"){
-                if (value['value'] === 0) {
+                let pos = parseInt(value['value']);
+                if (pos === 0) {
                     this.ID.src = "images/" + this.ImageBaseName + "0.png";
-                } else if (value['value'] === 1) {
+                } else if (pos === 1) {
                     this.ID.src = "images/" + this.ImageBaseName + "1.png";
-                } else if (value['value'] === 2) {
+                } else if (pos === 2) {
                     this.ID.src = "images/" + this.ImageBaseName + "2.png";
-                } else if (value['value'] === 3) {
+                } else if (pos === 3) {
                     this.ID.src = "images/" + this.ImageBaseName + "3.png";
-                } else if (value['value'] > 3 && value < 11) {
+                } else if (pos > 3 && pos < 11) {
                     this.ID.src = "images/" + this.ImageBaseName + "10.png";
-                } else if (value['value'] > 10 && value < 21) {
+                } else if (pos > 10 && pos < 21) {
                     this.ID.src = "images/" + this.ImageBaseName + "20.png";
-                } else if (value['value'] > 20 && value < 31) {
+                } else if (pos > 20 && pos < 31) {
                     this.ID.src = "images/" + this.ImageBaseName + "30.png";
-                } else if (value['value'] > 30 && value < 41) {
+                } else if (pos > 30 && pos < 41) {
                     this.ID.src = "images/" + this.ImageBaseName + "40.png";
-                } else if (value['value'] > 40 && value < 51) {
+                } else if (pos > 40 && pos < 51) {
                     this.ID.src = "images/" + this.ImageBaseName + "50.png";
-                } else if (value['value'] > 50 && value < 61) {
+                } else if (pos > 50 && pos < 61) {
                     this.ID.src = "images/" + this.ImageBaseName + "60.png";
-                } else if (value['value'] > 60 && value < 71) {
+                } else if (pos > 60 && pos < 71) {
                     this.ID.src = "images/" + this.ImageBaseName + "70.png";
-                } else if (value['value'] > 70 && value < 81) {
+                } else if (pos > 70 && pos < 81) {
                     this.ID.src = "images/" + this.ImageBaseName + "80.png";
-                } else if (value['value'] > 80 && value < 91) {
+                } else if (pos > 80 && pos < 91) {
                     this.ID.src = "images/" + this.ImageBaseName + "90.png";
-                } else if (value['value'] > 90 && value < 101) {
+                } else if (pos > 90 && pos < 101) {
                     this.ID.src = "images/" + this.ImageBaseName + "100.png";
                 } else {}
             }else{
@@ -3399,7 +3400,7 @@ class ShowCamImage {
         //var queryString = "?t=" + timestamp;    
        //this.ID.src =  SourceUrl + queryString;  
        if(typeof image != "undefined"){
-            this.ID.src = image['value'];
+            this.ID.src = image;
        }
     }
 }
@@ -4885,16 +4886,16 @@ class MyChart {
 
     dataload(ds1, ds2, ds3, ds4) {
         if (ds1) {
-            this.C.data.datasets[0].data = JSON.parse(ds1);
+            this.C.data.datasets[0].data = JSON.parse(ds1['value']);
         }
         if (ds2) {
-            this.C.data.datasets[1].data = JSON.parse(ds2);
+            this.C.data.datasets[1].data = JSON.parse(ds2['value']);
         }
         if (ds3) {
-            this.C.data.datasets[2].data = JSON.parse(ds3);
+            this.C.data.datasets[2].data = JSON.parse(ds3['value']);
         }
         if (ds4) {
-            this.C.data.datasets[3].data = JSON.parse(ds4);
+            this.C.data.datasets[3].data = JSON.parse(ds4)['value'];
         }
         this.C.update();
     }

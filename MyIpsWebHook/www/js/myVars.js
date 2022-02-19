@@ -1016,6 +1016,7 @@ function updateValues() {
   if (document.getElementById("MainFKZ")) {
     KZTemp.update(ipsObj.ips.ID48220);
     KZDisHumid.update(ipsObj.ips.ID56454);
+    //iWindowKZ.update(ipsObj.ips.ID51433, "", "");
 
     KZWarn.update(ipsObj.ips.ID40120);
     KZDisKlima.update(ipsObj.ips.ID51301)
@@ -1045,8 +1046,8 @@ function updateValues() {
   if (document.getElementById("MainFWZ")) {
     iWindowWZ.update(ipsObj.ips.ID11008, "", "");
 
-    WZTemp.update(ipsObj.ips.ID29022);
-    WZDisHumid.update(ipsObj.ips.ID19285);
+    WZTemp.update(ipsObj.ips.ID41984);
+    WZDisHumid.update(ipsObj.ips.ID39390);
 
     WZWarn.update(ipsObj.ips.ID43544);
     WZDisKlima.update(ipsObj.ips.ID32911)
@@ -1057,12 +1058,12 @@ function updateValues() {
     WZTPInnen.update(ipsObj.ips.ID32126);
     WZTPAussen.update(ipsObj.ips.ID49863);
 
-                //sollte nur bei click geladen werden
-                if(ipsObj.serverID == 20131){
-                  graphWZ.dataload(this.ipsObj.ips.DATA23948, this.ipsObj.ips.DATA43084, this.ipsObj.ips.DATA12337);
-                  //Befehl nur einmal ausführen, deshalb serverID = 0
-                  ipsObj.serverID = 0;
-                }
+    //wird nur bei click einmal geladen werden
+    if(ipsObj.serverID == 20131){
+      graphWZ.dataload(this.ipsObj.ips.DATA23948, this.ipsObj.ips.DATA43084, this.ipsObj.ips.DATA12337);
+      //Befehl nur einmal ausführen, deshalb serverID = 0
+      ipsObj.serverID = 0;
+    }
     
   }
 

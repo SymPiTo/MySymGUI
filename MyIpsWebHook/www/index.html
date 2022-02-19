@@ -27,9 +27,7 @@
     <script src="js/myLib.js"></script>
     <script src="js/data.js"></script>
     <script src="js/iconSet.js"></script>
-
     <script src="js/ips_functions.js"></script>
-
     <script src="js/flipclock.js"></script>
 
     <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
@@ -165,7 +163,25 @@
                         //Variablen Paket einlesen
                         var paket = ips[1];
                         ips = JSON.parse(jsontext);
+
                         symvar = ips[0];
+
+                        //nur aktivieren für Prüf Modus
+
+                        let x = [];
+                        let wert = "";
+                        for (var arrayIndex in symvar) {
+                            //third += ' ' + symvar[arrayIndex]['value'];
+                            wert = symvar[arrayIndex]['value'];
+                            x['value'] += ' ' + arrayIndex + '-' + wert + "\n";
+                            if (arrayIndex == "DATA12337") {
+
+                                WSSbox.update(x);
+                            }
+                        }
+
+
+
 
                         //eingelesene Datenpakete/Werte in die IPS variablen schreiben
                         //=> update der IPS Variablen
@@ -2668,6 +2684,11 @@
             DisWSSCL4.create("MainWSS", "midgreenLight", "", "410px", "380px", "70px", "202px", "18px",
                 "WS Client 4",
                 "string");
+
+            var DisWSSCL5 = new StateDisplay();
+            DisWSSCL5.create("MainWSS", "midgreenLight", "", "530px", "380px", "70px", "202px", "18px",
+                "WS Client 5",
+                "string");
         </script>
 
 
@@ -3538,7 +3559,29 @@
 
 
 
+<script type='text/javascript'>
+    const element2 = document.querySelector("#DownxScrollContainer");
 
+    element2.addEventListener('wheel', (event) => {
+        event.preventDefault();
+
+        element2.scrollBy({
+            left: event.deltaY < 0 ? -30 : 30,
+        });
+    });
+</script>
+
+<script type='text/javascript'>
+    const element3 = document.querySelector("#TopxScrollContainer");
+
+    element3.addEventListener('wheel', (event) => {
+        event.preventDefault();
+
+        element3.scrollBy({
+            top: event.deltaX < 0 ? -30 : 30,
+        });
+    });
+</script>
 
 
 </html>

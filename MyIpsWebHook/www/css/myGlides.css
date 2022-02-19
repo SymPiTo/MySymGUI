@@ -3753,3 +3753,61 @@ select:focus::-ms-value {
 
     animation: blink none;
 }
+
+
+
+
+
+
+
+
+
+
+
+.xScrollContainer {
+    display: flex;
+    overflow-x: hidden;
+
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.xScrollContainer p {
+    font-family: sans-serif;
+
+    border-radius: 8px;
+    background: #ff6961;
+    color: white;
+
+    padding: 2rem 3rem;
+    margin: 2rem 1rem;
+}
+
+
+.yScrollContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    color: white;
+
+    width: 200px;
+    max-height: 50rem;
+    margin: 0 auto;
+    border: solid #ff6961;
+}
+
+.yScrollContainer p {
+    font-family: sans-serif;
+    width: 50px;
+    border-radius: 8px;
+    background: #ff6961;
+    color: white;
+
+    padding: 2rem 3rem;
+    margin: 2rem 1rem;
+}
+
+.yScrollContainer::-webkit-scrollbar {
+    display: none;
+}

@@ -5,7 +5,10 @@
     var MainFKZ = new Area();
     MainFKZ.createMain("MainFKZ", "bgOlive");
     //-------------------------------------------------
- 
+
+    var iWindowKZ = new DynIcon("Fenster", "bin", false);
+    iWindowKZ.create("MainFKZ", "40px", "30px", "170px", "170px");
+
     var KZDisHumid = new StateDisplay();
     KZDisHumid.create("MainFKZ", "oliveLight", "%rel", "150px", "300px", "60px", "202px", "20px",
         "rel. Feuchte",
