@@ -1,0 +1,364 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 RaspMatic Server                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="82">
+    VarPageNo.update("82");
+    var R0 = new Kachel();
+    var R1 = new Kachel();
+    var R2 = new Kachel();
+    var R3 = new Kachel();
+    var R4 = new Kachel();
+    var R5 = new Kachel();
+    var R6 = new Kachel();
+    var R7 = new Kachel();
+    var R8 = new Kachel();
+    var R9 = new Kachel();
+    var R10 = new Kachel();
+    var R11 = new Kachel();
+    var R12 = new Kachel();
+    var R13 = new Kachel();
+    var R14 = new Kachel();
+    var R15 = new Kachel();
+    var R16 = new Kachel();
+    var R17 = new Kachel();
+    var R18 = new Kachel();
+    var R19 = new Kachel();
+    var R20 = new Kachel();
+    var R21 = new Kachel();
+    var R22 = new Kachel();
+    var R23 = new Kachel();
+    var R24 = new Kachel();
+    var R25 = new Kachel();
+    var R26 = new Kachel();
+    var R27 = new Kachel();
+    var R28 = new Kachel();
+    var R29 = new Kachel();
+    var R30 = new Kachel();
+    var Roa = [R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22,
+        R23, R24, R25, R26, R27, R28, R29, R30
+    ];
+
+    var HM1 = new BtnIcon();
+    HM1.create("MAIN82", "20px", "50px", "grey", "HM-WDS40.png", "Temp/Humid", "ctrlWindow", Roa, 0,
+        "100px", "100px", "14px");
+
+    var HM2 = new BtnIcon();
+    HM2.create("MAIN82", "20px", "180px", "grey", "_HMIP_SWD.png", "Water", "ctrlWindow", Roa, 1,
+        "100px", "100px", "14px");
+    var HM3 = new BtnIcon();
+    HM3.create("MAIN82", "20px", "310px", "grey", "HMIP-SPI.png", "Präsenz", "ctrlWindow", Roa, 2,
+        "100px", "100px", "14px");
+    var HM4 = new BtnIcon();
+    HM4.create("MAIN82", "20px", "440px", "grey", "HMIP-SWDO.png",
+        "TürKontakt", "ctrlWindow", Roa, 3,
+        "100px", "100px", "14px");
+    var HM5 = new BtnIcon();
+    HM5.create("MAIN82", "140px", "50px", "grey", "HM-WDS40.png", "Temp/Humid", "ctrlWindow", Roa, 4,
+        "100px", "100px", "14px");
+    var HM6 = new BtnIcon();
+    HM6.create("MAIN82", "140px", "180px", "grey", "_HMIP_SWD.png", "Water", "ctrlWindow", Roa, 5,
+        "100px", "100px", "14px");
+    var HM7 = new BtnIcon();
+    HM7.create("MAIN82", "140px", "310px", "grey", "HMIP-BSM.png", "Schalter/Mess", "ctrlWindow", Roa, 6,
+        "100px", "100px", "14px");
+    var HM8 = new BtnIcon();
+    HM8.create("MAIN82", "140px", "440px", "grey", "_HMIP_WRC6.png", "Schalter 6fach", "ctrlWindow", Roa, 7,
+        "100px", "100px", "14px");
+    var HM9 = new BtnIcon();
+    HM9.create("MAIN82", "260px", "50px", "grey", "_HM-LC-Sw4.png", "Aktor 4fach", "ctrlWindow", Roa, 8,
+        "100px", "100px", "14px");
+    var HM10 = new BtnIcon();
+    HM10.create("MAIN82", "260px", "180px", "grey", "_HMIP-PB2.jpg", "Wandtaster", "ctrlWindow", Roa, 9,
+        "100px", "100px", "14px");
+    //<!-- --------------------------------- AZ ---------------------------------- -->
+    var HM11 = new BtnIcon();
+    HM11.create("MAIN82", "260px", "310px", "grey", "HMIP-FSM.png", "Licht-Aktor", "ctrlWindow", Roa, 10,
+        "100px", "100px", "14px");
+    var HM12 = new BtnIcon();
+    HM12.create("MAIN82", "260px", "440px", "grey", "HMIP-SPI.png", "Präsenzmelder", "ctrlWindow", Roa, 11,
+        "100px", "100px", "14px");
+    //<!-- --------------------------------- Bad --------------------------------- -->
+    var HM13 = new BtnIcon();
+    HM13.create("MAIN82", "380px", "50px", "grey", "HMIP-STH.png", "Temp/Feuchte", "ctrlWindow", Roa, 12,
+        "100px", "100px", "14px");
+    //<!-- ------------------------------- Balkon -------------------------------- -->
+    var HM14 = new BtnIcon();
+    HM14.create("MAIN82", "380px", "180px", "grey", "HMIP-SWDO.png", "Tür-Kontakt", "ctrlWindow", Roa, 13,
+        "100px", "100px", "14px");
+
+    var HM15 = new BtnIcon();
+    HM15.create("MAIN82", "380px", "310px", "grey", "HMIP_STHO.png", "Temp/Feuchte", "ctrlWindow", Roa, 14,
+        "100px", "100px", "14px");
+    //<!-- ------------------------------- Diele -------------------------------- -->
+    var HM16 = new BtnIcon();
+    HM16.create("MAIN82", "380px", "440px", "grey", "HMIP-FSM.png", "Licht-Aktor", "ctrlWindow", Roa, 15,
+        "100px", "100px", "14px");
+    var HM17 = new BtnIcon();
+    HM17.create("MAIN82", "500px", "50px", "grey", "HMIP-FCI1.png", "Licht-Schalter", "ctrlWindow", Roa, 16,
+        "100px", "100px", "14px");
+    //<!-- ------------------------------- Kinderzimmer -------------------------------- -->
+    var HM18 = new BtnIcon();
+    HM18.create("MAIN82", "500px", "180px", "grey", "HMIP-eTRV-2.png", "Heizung-Aktor", "ctrlWindow", Roa, 17,
+        "100px", "100px", "14px");
+    var HM19 = new BtnIcon();
+    HM19.create("MAIN82", "500px", "310px", "grey", "HmIP-WTH-2.png", "Hz-Regler", "ctrlWindow", Roa, 18,
+        "100px", "100px", "14px");
+    var HM20 = new BtnIcon();
+    HM20.create("MAIN82", "500px", "440px", "grey", "HMIP-SWDO.png", "Fenster-Kont", "ctrlWindow", Roa, 19,
+        "100px", "100px", "14px");
+    //<!-- ------------------------------- Schlafzimmer -------------------------------- -->
+    var HM21 = new BtnIcon();
+    HM21.create("MAIN82", "620px", "50px", "grey", "HMIP-SWDO.png", "Fenster-Kont", "ctrlWindow", Roa, 20,
+        "100px", "100px", "14px");
+    var HM22 = new BtnIcon();
+    HM22.create("MAIN82", "620px", "180px", "grey", "HMIP-eTRV-2.png", "HZ-Aktor", "ctrlWindow", Roa, 21,
+        "100px", "100px", "14px");
+    var HM23 = new BtnIcon();
+    HM23.create("MAIN82", "620px", "310px", "grey", "HmIP-WTH-2.png", "HZ-Regler", "ctrlWindow", Roa, 22,
+        "100px", "100px", "14px");
+
+    var HM24 = new BtnIcon();
+    HM24.create("MAIN82", "620px", "440px", "grey", "HMIP-FCI1.png", "Lichtschalter", "ctrlWindow", Roa, 23,
+        "100px", "100px", "14px");
+    //<!-- ------------------------------- Wohnzimmer -------------------------------- -->
+    var HM25 = new BtnIcon();
+    HM25.create("MAIN82", "740px", "50px", "grey", "HMIP-eTRV-2.png", "Hz-Aktor", "ctrlWindow", Roa, 24,
+        "100px", "100px", "14px");
+    var HM26 = new BtnIcon();
+    HM26.create("MAIN76", "740px", "180px", "grey", "HmIP-WTH-2.png", "HZ-Regler", "ctrlWindow", Roa, 25,
+        "100px", "100px", "14px");
+
+    var HM27 = new BtnIcon();
+    HM27.create("MAIN82", "740px", "310px", "grey", "HMIP-FSM.png", "Licht-Aktor", "ctrlWindow", Roa, 26,
+        "100px", "100px", "14px");
+    var HM28 = new BtnIcon();
+    HM28.create("MAIN82", "740px", "440px", "grey", "HMIP-FSM.png", "Licht-Aktor", "ctrlWindow", Roa, 27,
+        "100px", "100px", "14px");
+    /* var HM29 = new BtnIcon();
+    HM29.create("MAIN76", "980px", "50px", "grey", "HMIP-FSM.png", "Licht-Aktor", "ctrlWindow", 28,
+        Roa, "100px", "100px", "14px");
+*/
+    var HM30 = new BtnIcon();
+    HM30.create("MAIN82", "860px", "180px", "grey", "HMIP-PS.jpg", "Steckdose", "ctrlWindow", Roa, 29,
+        "100px", "100px", "14px");
+</script>
+//TRENNUNG//
+<script>
+    //<!-- ******************** HMIP Tem/Feuchte Sensor Kinderzimmer   **************************  -->
+    R0.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Temp/Feuchte KZ", "rahm0");
+
+    var s0_1 = new StateDisplay();
+    s0_1.create("rahm0", "midgreenLight", "V", "50px", "13%", "60px", "202px", "24px",
+        "Voltage",
+        "string");
+
+    R1.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Wasser Sensor Küche", "rahm1");
+    var s1_1 = new StateDisplay();
+    s1_1.create("rahm1", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+
+    R2.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Präsenz Diele", "rahm2");
+    var s2_1 = new StateDisplay();
+    s2_1.create("rahm2", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+
+    R3.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Haustür Kontakt", "rahm3");
+    var s3_1 = new StateDisplay();
+    s3_1.create("rahm3", "midgreenLight", "", "50px", "13%", "60px", "202px", "18px",
+        "Error",
+        "string");
+
+    R4.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Temp/Feuchte Sensor SZ", "rahm4");
+
+    R5.create("CTRL76", "20px", "20px", "300px", "900px", "green", "WasserSensor Bad", "rahm5");
+    var s5_1 = new StateDisplay();
+    s5_1.create("rahm5", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R6.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Licht Schalter SZ", "rahm6");
+    var s6_1 = new StateDisplay();
+    s6_1.create("rahm6", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    var s6_2 = new StateDisplay();
+    s6_2.create("rahm6", "midgreenLight", "°C", "150px", "13%", "60px", "202px", "18px",
+        "Temperatur",
+        "string");
+    R7.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Licht Schalter WZ", "rahm7");
+    var s7_1 = new StateDisplay();
+    s7_1.create("rahm7", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R8.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Fenster Aktor Bad", "rahm8");
+
+    R9.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Lichttaster Bad", "rahm9");
+
+    R10.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Licht Aktor AZ", "rahm10");
+    var s9_1 = new StateDisplay();
+    s9_1.create("rahm10", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    var s9_2 = new StateDisplay();
+    s9_2.create("rahm10", "midgreenLight", "", "150px", "13%", "60px", "202px", "18px",
+        "Error",
+        "string");
+    var s9_3 = new StateDisplay();
+    s9_3.create("rahm10", "midgreenLight", "°C", "250px", "13%", "60px", "202px", "18px",
+        "Temp.",
+        "string");
+    R11.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Präsenz AZ", "rahm11");
+    var s10_1 = new StateDisplay();
+    s10_1.create("rahm11", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R12.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Feuchte Sensor Bad", "rahm12");
+    var s11_1 = new StateDisplay();
+    s11_1.create("rahm12", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R13.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Balkon Tür Kontakt", "rahm13");
+    var s12_1 = new StateDisplay();
+    s12_1.create("rahm13", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R14.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Balkon Wetter Sensor", "rahm14");
+    var s13_1 = new StateDisplay();
+    s13_1.create("rahm14", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R15.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Diele Lampe Aktor", "rahm15");
+    var s14_1 = new StateDisplay();
+    s14_1.create("rahm15", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    var s14_2 = new StateDisplay();
+    s14_2.create("rahm15", "midgreenLight", "", "150px", "13%", "60px", "202px", "18px",
+        "Error",
+        "string");
+    var s14_3 = new StateDisplay();
+    s14_3.create("rahm15", "midgreenLight", "°C", "250px", "13%", "60px", "202px", "18px",
+        "Temperatur",
+        "string");
+
+    R16.create("CTRL76", "20px", "20px", "300px", "900px", "green", "Diele Lichtschalter", "rahm16");
+    var s15_1 = new StateDisplay();
+    s15_1.create("rahm16", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R17.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Aktor KZ", "rahm17");
+    var s16_1 = new StateDisplay();
+    s16_1.create("rahm17", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R18.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Regler KZ", "rahm18");
+    var s17_1 = new StateDisplay();
+    s17_1.create("rahm18", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R19.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Fenster Kontakt KZ", "rahm19");
+    var s18_1 = new StateDisplay();
+    s18_1.create("rahm19", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R20.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Fenster Kontakt SZ", "rahm20")
+    var s19_1 = new StateDisplay();
+    s19_1.create("rahm20", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R21.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Aktor SZ", "rahm21");
+    var s20_1 = new StateDisplay();
+    s20_1.create("rahm21", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    R22.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Regler SZ", "rahm22");
+    var s21_1 = new StateDisplay();
+    s21_1.create("rahm22", "midgreenLight", "V", "50px", "13%", "60px", "202px", "18px",
+        "Voltage",
+        "string");
+    // Der ist doppelt
+    R23.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Lichtschalter SZ", "rahm23");
+    var s22_1 = new StateDisplay();
+    s22_1.create("rahm23", "midgreenLight", "V", "50px", "13%", "60px",
+        "202px", "18px",
+        "Voltage",
+        "string");
+    var s22_2 = new StateDisplay();
+    s22_2.create("rahm23", "midgreenLight", "", "150px", "13%", "60px",
+        "202px", "18px",
+        "Error",
+        "string");
+    var s22_3 = new StateDisplay();
+    s22_3.create("rahm23", "midgreenLight", "°C", "250px", "13%", "60px",
+        "202px", "18px",
+        "Temperatur",
+        "string");
+
+
+    R24.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Aktor WZ", "rahm24");
+    var s23_1 = new StateDisplay();
+    s23_1.create("rahm24", "midgreenLight", "V", "50px", "13%", "60px",
+        "202px", "18px",
+        "Voltage",
+        "string");
+    R25.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Heizung Regler WZ", "rahm25");
+    var s24_1 = new StateDisplay();
+    s24_1.create("rahm25", "midgreenLight", "V", "50px", "13%", "60px",
+        "202px", "18px",
+        "Voltage",
+        "string");
+    R26.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Lampe Fenster", "rahm26");
+    var s25_1 = new StateDisplay();
+    s25_1.create("rahm26", "midgreenLight", "V", "50px", "13%", "60px",
+        "202px", "18px",
+        "Voltage",
+        "string");
+    var s25_2 = new StateDisplay();
+    s25_2.create("rahm26", "midgreenLight", "", "150px", "13%", "60px",
+        "202px", "18px",
+        "Error",
+        "string");
+    var s25_3 = new StateDisplay();
+    s25_3.create("rahm26", "midgreenLight", "°C", "250px", "13%", "60px",
+        "202px", "18px",
+        "Temperatur",
+        "string");
+
+    R27.create("CTRL82",
+        "20px", "20px", "300px", "900px", "green", "Lampe Mitte", "rahm27");
+    var s26_1 = new StateDisplay();
+    s26_1.create("rahm27", "midgreenLight", "V", "50px", "13%", "60px",
+        "202px", "18px",
+        "Voltage",
+        "string");
+    var s26_2 = new StateDisplay();
+    s26_2.create("rahm27", "midgreenLight", "", "150px", "13%", "60px",
+        "202px", "18px",
+        "Error",
+        "string");
+    var s26_3 = new StateDisplay();
+    s26_3.create("rahm27", "midgreenLight", "°C", "250px", "13%", "60px",
+        "202px", "18px",
+        "Temperatur",
+        "string");
+
+    R28.create("CTRL82", "20px", "20px",
+        "300px", "900px", "green", "Titel4", "rahm28");
+
+    R29.create("CTRL82", "20px", "20px", "300px", "900px",
+        "green", "Steckdose WZ", "rahm29");
+    var s28_1 = new StateDisplay();
+    s28_1.create("rahm29", "midgreenLight", "dB", "50px", "13%", "60px",
+        "202px", "18px",
+        "RSSI Device",
+        "string");
+    var s28_2 = new StateDisplay();
+    s28_2.create("rahm29", "midgreenLight", "dB", "150px", "13%", "60px",
+        "202px", "18px",
+        "RSSI PEER",
+        "string");
+
+    R30.create("CTRL82", "20px", "20px", "300px", "900px", "green", "Titel4",
+        "rahm30");
+</script>

@@ -1,0 +1,49 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 Stromzähler                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="94">
+    var graphStrom = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Verbrauch";
+    ds1['label'] = "Kosten";
+    ds2['label'] = "";
+    ds0['id'] = "A";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphStrom.create("MAIN94", "50px", "10px", "600px", "300px", '20131', 'kWh', '€', ds0, ds1, ds2);
+</script>
+//TRENNUNG//
+<script>
+    var DisVJVerbrauch = new StateDisplay();
+    DisVJVerbrauch.create("CTRL94", "yellowLight", " kWh", "10px", "13%", "60px",
+        "202px",
+        "20px",
+        "Vohrjahres Verbrauch", "number");
+    DisVJVerbrauch.textColor = "black";
+
+    var DisAktVerbrauch = new StateDisplay();
+    DisAktVerbrauch.create("CTRL94", "yellowLight", " kWh", "90px", "13%", "60px",
+        "202px",
+        "20px",
+        "Aktueller Verbrauch", "number");
+    DisAktVerbrauch.textColor = "black";
+
+    var DisVJKosten = new StateDisplay();
+    DisVJKosten.create("CTRL94", "yellowLight", " €", "200px", "13%", "60px",
+        "202px",
+        "20px",
+        "Vorjahres Verbrauchskosten", "number");
+    DisVJKosten.textColor = "black";
+
+    var DisAktKosten = new StateDisplay();
+    DisAktKosten.create("CTRL94", "yellowLight", " €", "280px", "13%", "60px",
+        "202px",
+        "20px",
+        "Aktuelle Verbrauchskosten", "number");
+    DisAktKosten.textColor = "black";
+</script>

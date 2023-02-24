@@ -1,0 +1,80 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Roborock                              -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="12">
+    VarPageNo.update("12");
+    var roborock = new CtrlTile();
+    roborock.create("MAIN12", "20px", "20px", "200px", "200px", "RoboRock", "cyan", "transparent", "roborock",
+        'func(IPS_RunScript,48453)', 'func(IPS_RunScript,21227)', "aus", "ein", "", "", "black", "lime");
+
+    var RRStat = new StateDisplay();
+    RRStat.create("MAIN12", "cyanLight", "", "150px", "300px", "60px", "202px", "20px",
+        "Status",
+        "string");
+
+    var RRLstg = new StateDisplay();
+    RRLstg.create("MAIN12", "cyanLight", "%", "50px", "300px", "60px", "202px", "20px",
+        "Saugeistung",
+        "number");
+
+    var Rahmen3WZ = new Kachel();
+    Rahmen3WZ.create("MAIN12", "270px", "20px", "230px", "200px", "transparent", "Mode");
+
+    var btnRRPause = new CtrlButton();
+    btnRRPause.create("MAIN12", "310px", "30px", "ctrlbutton", "smaller", "cyan", "Pause", "black",
+        "func", "", 'func(IPS_RunScript,19621)');
+
+    var bbtnRRLocate = new CtrlButton();
+    bbtnRRLocate.create("MAIN12", "310px", "135px", "ctrlbutton", "smaller", "cyan", "Locate", "black", "func", "",
+        'func(IPS_RunScript,25879)');
+
+    var bbtnRRLoad = new CtrlButton();
+    bbtnRRLoad.create("MAIN12", "390px", "45px", "ctrlbutton", "normal", "cyan", "go to base", "black", "func", "",
+        'func(IPS_RunScript,16629)');
+
+    var Rahmen3WZ = new Kachel();
+    Rahmen3WZ.create("MAIN12", "270px", "280px", "230px", "340px", "transparent", "Reset");
+
+    var btnRRFilterReset = new CtrlButton();
+    btnRRFilterReset.create("MAIN12", "310px", "310px", "ctrlbutton", "normal", "cyan", "Reset Filter", "black",
+        "func", "", 'func(IPS_RunScript,23889)');
+
+    var btnMainbrushReset = new CtrlButton();
+    btnMainbrushReset.create("MAIN12", "385px", "310px", "ctrlbutton", "normal", "cyan", "Reset Mainbrush", "black",
+        "func", "", 'func(IPS_RunScript,52712)');
+
+    var btnSensorReset = new CtrlButton();
+    btnSensorReset.create("MAIN12", "460px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sensor", "black", "func",
+        "", 'func(IPS_RunScript,17714)');
+
+    var btnSideBrushReset = new CtrlButton();
+    btnSideBrushReset.create("MAIN12", "535px", "310px", "ctrlbutton", "normal", "cyan", "Reset Sidebrush", "black",
+        "func", "", 'func(IPS_RunScript,31673)');
+</script>
+//TRENNUNG//
+<script>
+    var RRBat = new StateDisplay();
+    RRBat.create("CTRL12", "cyanLight", "%", "20px", "13%", "60px", "202px", "20px",
+        "Battery",
+        "number");
+    var RRError = new StateDisplay();
+    RRError.create("CTRL12", "cyanLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Fehler", "",
+        "keine", "f0", "pp", "kk");
+    var RRHB = new StateDisplay();
+    RRHB.create("CTRL12", "cyanLight", "%", "160px", "13%", "60px", "202px", "20px",
+        "Hauptbürste",
+        "number");
+    var RRSB = new StateDisplay();
+    RRSB.create("CTRL12", "cyanLight", "%", "230px", "13%", "60px", "202px", "20px",
+        "Seitenbürste",
+        "number");
+    var RRFilter = new StateDisplay();
+    RRFilter.create("CTRL12", "cyanLight", "%", "300px", "13%", "60px", "202px", "20px",
+        "Filter",
+        "number");
+    var RRSensor = new StateDisplay();
+    RRSensor.create("CTRL12", "cyanLight", "%", "370px", "13%", "60px", "202px", "20px",
+        "Sensor",
+        "number");
+</script>

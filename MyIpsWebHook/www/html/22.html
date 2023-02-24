@@ -1,0 +1,80 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Fenster/Feuchte Kinderzimmer                   -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="22">
+    VarPageNo.update("22");
+    var iWindowKZ = new DynIcon("Fenster", "bin", false);
+    iWindowKZ.create("MAIN22", "40px", "30px", "170px", "170px");
+
+    var KZDisHumid = new StateDisplay();
+    KZDisHumid.create("MAIN22", "oliveLight", "%rel", "150px", "250px", "60px", "150px", "20px",
+        "rel. Feuchte",
+        "number");
+
+    var KZTemp = new StateDisplay();
+    KZTemp.create("MAIN22", "oliveLight", "°C", "50px", "250px", "60px", "150px", "20px",
+        "Temperatur",
+        "string");
+
+    var KZDisHumidRoom = new StateDisplay();
+    KZDisHumidRoom.create("MAIN22", "oliveLight", "%rel", "150px", "440px", "60px", "150px", "20px",
+        "rel. Feuchte",
+        "number");
+
+    var KZTempRoom = new StateDisplay();
+    KZTempRoom.create("MAIN22", "oliveLight", "°C", "50px", "440px", "60px", "150px", "20px",
+        "Temperatur",
+        "string");
+
+    var graphKZ = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Wasser-Innen";
+    ds1['label'] = "Wasser-Aussen";
+    ds2['label'] = "Differenz";
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphKZ.create("MAIN22", "250px", "10px", "600px", "300px", '21504', '%', '°C', ds0, ds1, ds2);
+</script>
+//TRENNUNG//
+<script>
+    var KZWarn = new StateDisplay();
+    KZWarn.create("CTRL22", "oliveLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Warnung",
+        "string");
+    var KZDisKlima = new StateDisplay();
+    KZDisKlima.create("CTRL22", "oliveLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Klima Innen",
+        "string");
+    var KZDisHstate = new StateDisplay();
+    KZDisHstate.create("CTRL22", "oliveLight", "", "160px", "13%", "60px", "202px", "20px",
+        "Hinweis", "bool",
+        "nicht lüften", "lüften erlaubt");
+    var KZDisHstateDiff = new StateDisplay();
+    KZDisHstateDiff.create("CTRL22", "oliveLight", "%", "230px", "13%", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "number");
+
+    var KZFeuchteInnen = new StateDisplay();
+    KZFeuchteInnen.create("CTRL22", "oliveLight", "mg/m³", "300px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "number");
+    var KZFeuchteAussen = new StateDisplay();
+    KZFeuchteAussen.create("CTRL22", "oliveLight", "mg/m³", "370px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "number");
+
+    var KZTPInnen = new StateDisplay();
+    KZTPInnen.create("CTRL22", "oliveLight", "°C", "440px", "13%", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "number");
+    var KZTPAussen = new StateDisplay();
+    KZTPAussen.create("CTRL22", "oliveLight", "°C", "510px", "13%", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "number");
+</script>

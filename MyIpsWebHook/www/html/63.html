@@ -1,0 +1,118 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                UPNP                                     -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="63">
+    VarPageNo.update("63");
+    var UPNPIconList0 = new DynIconList();
+    var UPNPIconList1 = new DynIconList();
+    var UPNPIconList2 = new DynIconList();
+    var UPNPIconList3 = new DynIconList();
+
+    var UPNPoa = [UPNPIconList0, UPNPIconList1, UPNPIconList2, UPNPIconList3];
+
+    var RahmenA = new Kachel();
+    RahmenA.create("MAIN63", "10px", "20px", "200px", "240px", "transparent", "Server")
+    var ServerImg = new ShowUrlImage();
+    ServerImg.create("MAIN63", "50px", "60px", "100px", "100px", "");
+
+    var ServerBtn = new ButtonSlider();
+    ServerBtn.create("MAIN63", "180px", "25px", "190px", "50px", "purple",
+        'func(UPNP_setServer,19824,0,dec)', 'func(UPNP_setServer,19824,0,inc)');
+
+    var RahmenB = new Kachel();
+    RahmenB.create("MAIN63", "10px", "360px", "200px", "240px", "transparent", "Devices")
+
+    var ClientImg = new ShowUrlImage();
+    ClientImg.create("MAIN63", "50px", "400px", "100px", "100px", "");
+
+    var ClientBtn = new ButtonSlider();
+    ClientBtn.create("MAIN63", "180px", "365px", "190px", "50px", "purple",
+        'func(UPNP_setClient,19824,0,dec)', 'func(UPNP_setClient,19824,0,inc)');
+
+
+
+
+    var RahmenC = new Kachel();
+    RahmenC.create("MAIN63", "290px", "10px", "550px", "110px", "transparent", "Libraries")
+
+    var CtrlBtnupnp1 = new FontCtrlButton();
+    CtrlBtnupnp1.create("MAIN63", "purple", "335px", "20px", "fa fa-music", "CD", "CtrlFunc",
+        "", UPNPoa, 0, "120px", "50px", "black", "19px", "yellow");
+
+    var CtrlBtnupnp2 = new FontCtrlButton();
+    CtrlBtnupnp2.create("MAIN63", "purple", "335px", "150px", "fa fa-file-audio", "Audiobook", "CtrlFunc",
+        "", UPNPoa, 3, "120px", "50px", "black", "19px", "yellow");
+
+    var CtrlBtnupnp3 = new FontCtrlButton();
+    CtrlBtnupnp3.create("MAIN63", "purple", "335px", "280px", "fa fa-image", "Foto", "CtrlFunc",
+        "", UPNPoa, 1, "120px", "50px", "black", "19px", "yellow");
+
+    var CtrlBtnupnp4 = new FontCtrlButton();
+    CtrlBtnupnp4.create("MAIN63", "purple", "335px", "410px", "fa fa-video", "Video", "CtrlFunc",
+        "", UPNPoa, 2, "120px", "50px", "black", "19px", "yellow");
+
+
+
+
+    var SyncMeldung = new StateDisplay();
+    SyncMeldung.create("MAIN63", "purpleLight", "", "410px", "13%", "50px", "500px", "20px",
+        "Meldung",
+        "string");
+
+    var btnSyncMusik = new FontCtrlButton();
+    btnSyncMusik.create("MAIN63", "purple", "480px", "10px", "fa fa-sync", "Sync Musik",
+        "func", 'func(UPNP_syncLib,19824,Musik)', "", "",
+        "130px", "50px", "white", "19px", "yellow");
+
+    var btnSyncAudio = new FontCtrlButton();
+    btnSyncAudio.create("MAIN63", "purple", "480px", "150px", "fa fa-sync", "Sync Audio",
+        "func", 'func(UPNP_syncLib,19824,Audio)', "", "",
+        "130px", "50px", "white", "19px", "yellow");
+
+    var btnSyncFoto = new FontCtrlButton();
+    btnSyncFoto.create("MAIN63", "purple", "480px", "290px", "fa fa-sync", "Sync Foto",
+        "func", 'func(UPNP_syncLib,19824,Foto)', "", "",
+        "130px", "50px", "white", "19px", "yellow");
+
+    var btnSyncVideo = new FontCtrlButton();
+    btnSyncVideo.create("MAIN63", "purple", "480px", "430px", "fa fa-sync", "Sync Video",
+        "func", 'func(UPNP_syncLib,19824,Video)', "", "",
+        "130px", "50px", "white", "19px", "yellow");
+</script>
+//TRENNUNG//
+<script>
+    var UPNPcmdA = [];
+    var UPNPcmdB = [];
+    var UPNPcmdC = [];
+    var UPNPcmdD = [];
+
+    UPNPcmdA[0] = 'func(CEOL_SetRadioChannel,49535,item[fv])';
+    UPNPIconList0.create("CTRL63", "MusicLib", "0px", "0px", "100%", "100%", 3, "", UPNPcmdA);
+    UPNPcmdB[0] = 'func(CEOL_loadPlaylist,49535,item[playlistname],CD)';
+    UPNPIconList1.create("CTRL63", "FotoLib", "0px", "0px", "30%", "100%", 2, "", UPNPcmdB);
+    UPNPIconList1.hide();
+    UPNPcmdC[0] = 'func(CEOL_loadPlaylist,49535,item[playlistname],Audio)';
+    UPNPIconList2.create("CTRL63", "VideoLib", "0px", "0px", "25%", "100%", 3, "", UPNPcmdC);
+    UPNPIconList2.hide();
+    UPNPcmdB[0] = 'func(CEOL_loadPlaylist,49535,item[playlistname],CD)';
+    UPNPIconList3.create("CTRL63", "AudiobookLib", "0px", "0px", "100%", "100%", 3, "", UPNPcmdD);
+    UPNPIconList3.hide();
+
+
+    /*
+     var UPNPServerBox = new ArrayListBox();
+     UPNPServerBox.create("CTRL63", "10px", "30px", "150px", "190px", "purple", "white", "Serverliste");
+
+     var btnSearchServer = new CtrlButton();
+     btnSearchServer.create("CTRL63", "220px", "20px", "ctrlbutton", "normal", "purpleBtn",
+         "Get Server", "black", "func", "", 'func(UPNP_searchUPNP,19824,server)');
+
+     var UPNPDeviceBox = new ArrayListBox();
+     UPNPDeviceBox.create("CTRL63", "110px", "30px", "150px", "190px", "purple", "white",
+         "Deviceliste");
+
+     var btnSearchClient = new CtrlButton();
+     btnSearchClient.create("CTRL63", "500px", "20px", "ctrlbutton", "normal", "purpleBtn",
+         "Get Devices", "black", "func", "", 'func(UPNP_searchUPNP,19824,client)');
+     */
+</script>

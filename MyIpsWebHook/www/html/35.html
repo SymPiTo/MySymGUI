@@ -1,0 +1,23 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                             Rezepte Küche                               -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="35">
+    VarPageNo.update("35");
+
+    var RezeptName = new HeadLine();
+    RezeptName.create("MAIN35", "0px", "transparent", "Spargel Soße");
+
+    var Zutaten = new TextScrollBox();
+    Zutaten.create("MAIN35", "50px", "20px", "600px", "150px", "16px", "yellow");
+
+    var Rezept = new TextScrollBox();
+    Rezept.create("MAIN35", "250px", "20px", "600px", "350px", "20px", "pink");
+</script>
+//TRENNUNG//
+<script>
+    var cmd = [];
+    var RezeptList = new DynIconList();
+    cmd[0] = 'func(KR_readKochbuch,54833,item[no])';
+
+    RezeptList.create("CTRL35", "RezepteLib", "0px", "0px", "100%", "100%", 1, "", cmd);
+</script>

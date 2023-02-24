@@ -1,0 +1,99 @@
+ <!-- ----------------------------------------------------------------------- -->
+ <!--                            Area: Balkon - Covid                         -->
+ <!-- ----------------------------------------------------------------------- -->
+
+ <!-- ----------------------- Main Area: Balkon - Covid --------------------- -->
+ <script>
+     var winCovidB = new Area();
+     winCovidB.createMain("MainCovidB", "bgBlue");
+ </script>
+ <script>
+     var graphCovid = new MyChart();
+     var ds0D = new Array();
+     var ds1D = new Array();
+     var ds2D = new Array();
+     ds0D['label'] = "Deutschland";
+     ds1D['label'] = "Heidelberg";
+     ds2D['label'] = "Mannheim";
+     ds0D['id'] = "A";
+     ds1D['id'] = "A";
+     ds2D['id'] = "A";
+     ds0D['color'] = 'red';
+     ds1D['color'] = 'blue';
+     ds2D['color'] = 'white';
+     graphCovid.create("MainCovidB", '33023', '', '', ds0D, ds1D, ds2D, '600px', '200px', '5px', '10px');
+
+     var graphCovid1 = new MyChart();
+     var ds0D = new Array();
+     var ds1D = new Array();
+     var ds2D = new Array();
+     ds0D['label'] = "Fälle/100K D";
+     ds1D['label'] = "Fälle/7Tage D";
+     ds2D['label'] = "Tote";
+     ds0D['id'] = "B";
+     ds1D['id'] = "B";
+     ds2D['id'] = "B";
+     ds0D['color'] = 'red';
+     ds1D['color'] = 'blue';
+     ds2D['color'] = 'white';
+     graphCovid1.create("MainCovidB", '10026', '', '', ds0D, ds1D, ds2D, '600px', '200px', '320px', '10px');
+ </script>
+
+ <!-- ----------------------- Ctrl Area: Balkon - Covid ----------------------- -->
+ <script>
+     var CtrlwinCovidB = new Area();
+     CtrlwinCovidB.createCtrl("MainCovidBCtrl", "blueLight");
+ </script>
+ <script>
+     var D_Covidweek = new StateDisplay();
+     D_Covidweek.create("MainCovidBCtrl", "blueLight", "", "10px", "20px", "60px", "202px", "20px",
+         "Fälle pro Woche D",
+         "number");
+     var D_Inz = new StateDisplay();
+     D_Inz.create("MainCovidBCtrl", "blueLight", "", "80px", "20px", "60px", "202px", "20px",
+         "Inzidenz D",
+         "number");
+     var D_R = new StateDisplay();
+     D_R.create("MainCovidBCtrl", "blueLight", "", "150px", "20px", "60px", "202px", "20px",
+         "R-Wert D",
+         "number");
+
+     var BW_Covidweek = new StateDisplay();
+     BW_Covidweek.create("MainCovidBCtrl", "blueLight", "", "220px", "20px", "60px", "202px", "20px",
+         "Fälle pro Woche BW",
+         "number");
+     var BW_Inz = new StateDisplay();
+     BW_Inz.create("MainCovidBCtrl", "blueLight", "", "290px", "20px", "60px", "202px", "20px",
+         "Inzidenz BW",
+         "number");
+     var BW_Dead = new StateDisplay();
+     BW_Dead.create("MainCovidBCtrl", "blueLight", "", "360px", "20px", "60px", "202px", "20px",
+         "Tode je Woche BW",
+         "number");
+
+     var HD_Covidweek = new StateDisplay();
+     HD_Covidweek.create("MainCovidBCtrl", "blueLight", "", "430px", "20px", "60px", "202px", "20px",
+         "Fälle pro Woche HD",
+         "number");
+     var HD_Inz = new StateDisplay();
+     HD_Inz.create("MainCovidBCtrl", "blueLight", "", "500px", "20px", "60px", "202px", "20px",
+         "Inzidenz HD",
+         "number");
+     var HD_Dead = new StateDisplay();
+     HD_Dead.create("MainCovidBCtrl", "blueLight", "", "570px", "20px", "60px", "202px", "20px",
+         "Tode je Woche HD",
+         "number");
+
+     var MA_Covidweek = new StateDisplay();
+     MA_Covidweek.create("MainCovidBCtrl", "blueLight", "", "640px", "20px", "60px", "202px", "20px",
+         "Fälle pro Woche MA",
+         "number");
+     var MA_Inz = new StateDisplay();
+     MA_Inz.create("MainCovidBCtrl", "blueLight", "", "710px", "20px", "60px", "202px", "20px",
+         "Inzidenz MA",
+         "number");
+     var MA_Dead = new StateDisplay();
+     MA_Dead.create("MainCovidBCtrl", "blueLight", "", "780px", "20px", "60px", "202px", "20px",
+         "Tode je Woche MA",
+         "number");
+ </script>

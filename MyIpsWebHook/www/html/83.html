@@ -1,0 +1,133 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 Computer                                -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="83">
+    var rahmComp1 = new Rahmen();
+    rahmComp1.create("MAIN83", "20px", "70px", "300px", "200px", "glas");
+
+    var screen1 = new DynIcon("Screen", "bin", false);
+    screen1.create("MAIN83", "40px", "90px", "160px", "100px");
+
+
+    var labelPC1 = new label();
+    labelPC1.create("MAIN83", "160px", "120px", "22px", "blue", "Torsten PC", "150px", "50px");
+
+    var FontBtnPC1 = new FontButton();
+    FontBtnPC1.create("MAIN83", "fontbutton", "midgreen", "220px", "140px", "fa fa-power-off", "60px", "60px",
+        "32px", "", 'func(PC_SwitchPC,22936,toggle28999)');
+
+
+    var btnPC1auto = new CtrlButton();
+    btnPC1auto.create("MAIN83", "350px", "70px", "ctrlbutton", "normal", "midgreen", "Automatik", "black",
+        "func", "", 'func(SetValue,57420,toggle57420)');
+
+    var btnPC1stop = new CtrlButton();
+    btnPC1stop.create("MAIN83", "420px", "70px", "ctrlbutton", "normal", "midgreen", "Stop Switch Off", "black",
+        "func", "", 'func(PC_StopSwitchOff,22936)');
+
+    var btnPowerPC1 = new FontCtrlButton();
+    btnPowerPC1.create("MAIN83", "midgreen", "520px", "70px",
+        "fa fa-power-off", "Power", "func",
+        'func(HM_WriteValueBoolean,48334,STATE,toggle22565)', "", "",
+        "170px", "50px", "black", "22px", "black");
+
+    var stat1 = new VarDis();
+    stat1.create("MAIN83", "brown", "150px", "100px", "120px", "20px", "", "white");
+
+
+
+    var rahmComp2 = new Rahmen();
+    rahmComp2.create("MAIN83", "20px", "400px", "300px", "200px", "glas");
+
+    var screen2 = new DynIcon("Screen", "bin", false);
+    screen2.create("MAIN83", "40px", "420px", "160px", "100px");
+
+
+    var labelPC2 = new label();
+    labelPC2.create("MAIN83", "160px", "450px", "22px", "blue", "Pierre PC");
+
+    var FontBtnPC2 = new FontButton();
+    FontBtnPC2.create("MAIN83", "fontbutton", "midgreen", "220px", "470px", "fa fa-power-off", "60px", "60px",
+        "32px", "", 'func(PC_SwitchPC,20474,toggle30858)');
+
+    var btnPC2auto = new CtrlButton();
+    btnPC2auto.create("MAIN83", "350px", "420px", "ctrlbutton", "normal", "midgreen", "Automatik", "black",
+        "func", "", 'func(SetValue,46749,toggle46749)');
+
+    var btnPC1stop = new CtrlButton();
+    btnPC1stop.create("MAIN83", "420px", "420px", "ctrlbutton", "normal", "midgreen", "Stop Switch Off", "black",
+        "func", "", 'func(PC_StopSwitchOff,20474)');
+
+    var btnPowerPC2 = new FontCtrlButton();
+    btnPowerPC2.create("MAIN83", "midgreen", "520px", "420px",
+        "fa fa-power-off", "Power", "func",
+        'func(HM_WriteValueBoolean,57513,STATE,toggle12836)', "", "",
+        "170px", "50px", "black", "22px", "black");
+
+    var stat2 = new VarDis();
+    stat2.create("MAIN83", "brown", "150px", "430px", "120px", "20px", "", "white");
+</script>
+//TRENNUNG//
+<script>
+    var DisPC1a = new StateDisplay();
+    DisPC1a.create("CTRL83", "midgreenLight", " mA", "10px", "13%", "50px", "202px", "20px",
+        "Strom - PC Torsten",
+        "number");
+    DisPC1a.setTextColor("black");
+
+    var DisPC1b = new StateDisplay();
+    DisPC1b.create("CTRL83", "midgreenLight", " W", "65px", "13%", "50px", "202px", "20px",
+        "Leistung - PC Torsten",
+        "number");
+    DisPC1b.setTextColor("black");
+
+    var DisPC1c = new StateDisplay();
+    DisPC1c.create("CTRL83", "midgreenLight", " kWh", "120px", "13%", "50px", "202px", "20px",
+        "Verbrauch - PC Torsten",
+        "number");
+    DisPC1c.setTextColor("black");
+
+    var DisPC1d = new StateDisplay();
+    DisPC1d.create("CTRL83", "midgreenLight", " ", "175px", "13%", "50px", "202px", "20px",
+        "Plug Auto-Off Modus",
+        "bool", "Man", "Auto", "", "");
+    DisPC1d.setTextColor("black");
+
+    var DisKostenPC1 = new StateDisplay();
+    DisKostenPC1.create("CTRL83", "midgreenLight", " €", "230px", "13%", "50px", "202px", "20px",
+        "Kosten - PC Torsten",
+        "number");
+    DisKostenPC1.setTextColor("black");
+
+
+
+    var DisPC2a = new StateDisplay();
+    DisPC2a.create("CTRL83", "midgreenLight", " mA", "330px", "13%", "50px", "202px", "20px",
+        "Strom - PC Pierre",
+        "number");
+    DisPC2a.setTextColor("black");
+
+    var DisPC2b = new StateDisplay();
+    DisPC2b.create("CTRL83", "midgreenLight", " W", "385px", "13%", "50px", "202px", "20px",
+        "Leistung - PC Pierre",
+        "number");
+    DisPC2b.setTextColor("black");
+
+    var DisPC2c = new StateDisplay();
+    DisPC2c.create("CTRL83", "midgreenLight", " kWh", "440px", "13%", "50px", "202px", "20px",
+        "Verbrauch - PC Pierre",
+        "number");
+    DisPC2c.setTextColor("black");
+
+    var DisPC2d = new StateDisplay();
+    DisPC2d.create("CTRL83", "midgreenLight", " ", "495px", "13%", "50px", "202px", "20px",
+        "Plug Auto-Off Modus",
+        "bool", "Man", "Auto", "", "");
+    DisPC2d.setTextColor("black");
+
+    var DisKostenPC2 = new StateDisplay();
+    DisKostenPC2.create("CTRL83", "midgreenLight", " €", "550px", "13%", "50px", "202px", "20px",
+        "Kosten - PC Pierre",
+        "number");
+    DisKostenPC2.setTextColor("black");
+</script>

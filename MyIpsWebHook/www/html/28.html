@@ -1,0 +1,83 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Fenster/Feuchte Schlafzimmer                   -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="28">
+    VarPageNo.update("28");
+    var iWindowSZ = new DynIcon("Fenster", "bin", false);
+    iWindowSZ.create("MAIN28", "40px", "30px", "170px", "170px");
+
+
+    var SZDisHumid = new StateDisplay();
+    SZDisHumid.create("MAIN28", "sandyLight", "%rel", "150px", "250px", "60px", "150px", "20px",
+        "rel. Feuchte",
+        "number");
+
+    var SZTemp = new StateDisplay();
+    SZTemp.create("MAIN28", "sandyLight", "°C", "50px", "250px", "60px", "150px", "20px",
+        "Temperatur",
+        "string");
+
+
+    var SZDisHumidRoom = new StateDisplay();
+    SZDisHumidRoom.create("MAIN28", "sandyLight", "%rel", "150px", "440px", "60px", "150px", "20px",
+        "rel. Feuchte",
+        "number");
+
+    var SZTempRoom = new StateDisplay();
+    SZTempRoom.create("MAIN28", "sandyLight", "°C", "50px", "440px", "60px", "150px", "20px",
+        "Temperatur",
+        "string");
+
+
+    var graphSZ = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Wasser-Innen";
+    ds1['label'] = "Wasser-Aussen";
+    ds2['label'] = "Differenz";
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphSZ.create("MAIN28", "250px", "10px", "600px", "300px", '48881', '%', '°C', ds0, ds1, ds2);
+</script>
+//TRENNUNG//
+<script>
+    var SZWarn = new StateDisplay();
+    SZWarn.create("CTRL28", "sandyLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Warnung",
+        "string");
+    var SZDisKlima = new StateDisplay();
+    SZDisKlima.create("CTRL28", "sandyLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Klima Innen",
+        "string");
+    var SZDisHstate = new StateDisplay();
+    SZDisHstate.create("CTRL28", "sandyLight", "", "160px", "13%", "60px", "202px", "20px",
+        "Hinweis", "bool",
+        "nicht lüften", "lüften erlaubt");
+    var SZDisHstateDiff = new StateDisplay();
+    SZDisHstateDiff.create("CTRL28", "sandyLight", "%", "230px", "13%", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "number");
+
+    var SZFeuchteInnen = new StateDisplay();
+    SZFeuchteInnen.create("CTRL28", "sandyLight", "mg/m³", "300px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "number");
+    var SZFeuchteAussen = new StateDisplay();
+    SZFeuchteAussen.create("CTRL28", "sandyLight", "mg/m³", "370px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "number");
+
+    var SZTPInnen = new StateDisplay();
+    SZTPInnen.create("CTRL28", "sandyLight", "°C", "440px", "13%", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "number");
+    var SZTPAussen = new StateDisplay();
+    SZTPAussen.create("CTRL28", "sandyLight", "°C", "510px", "13%", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "number");
+</script>

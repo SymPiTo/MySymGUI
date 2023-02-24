@@ -1,0 +1,97 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Kinderzimmer Heizung                           -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="19">
+    VarPageNo.update("19");
+    var MainTempVHzKZ = new VarDis();
+    MainTempVHzKZ.create("MAIN19", "black", "90px", "490px", "85px", "20px", "°C", "white");
+    var MainTempRHzKZ = new VarDis();
+    MainTempRHzKZ.create("MAIN19", "black", "220px", "490px", "85px", "20px", "°C", "white");
+    var MainTempHzKZ = new VarDis();
+    MainTempHzKZ.create("MAIN19", "black", "40px", "100px", "85px", "20px", "°C", "white");
+    var MainPosHzKZ = new VarDis();
+    MainPosHzKZ.create("MAIN19", "black", "40px", "220px", "85px", "20px", "%", "white");
+
+
+    var iHzKZ = new DynIcon("heizkoerper", "bin", false);
+    iHzKZ.create("MAIN19", "80px", "30px", "450px", "170px");
+
+    var Rahmen1KZ = new Kachel();
+    Rahmen1KZ.create("MAIN19", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
+    var btnHzKZauto = new CtrlButton();
+    btnHzKZauto.create("MAIN19", "350px", "30px", "ctrlbutton", "smaller", "olive", "Automatik", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,0)');
+
+    var btnHzKZman = new CtrlButton();
+    btnHzKZman.create("MAIN19", "350px", "135px", "ctrlbutton", "smaller", "olive", "Manual", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)');
+
+
+    var Rahmen3KZ = new Kachel();
+    Rahmen3KZ.create("MAIN19", "450px", "20px", "230px", "120px", "transparent", "Preset");
+
+    var btnHzKZUrlaub = new CtrlButton();
+    btnHzKZUrlaub.create("MAIN19", "500px", "30px", "ctrlbutton", "smaller", "olive", "Urlaub", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,2)');
+
+    var btnHzKZParty = new CtrlButton();
+    btnHzKZParty.create("MAIN19", "500px", "135px", "ctrlbutton", "smaller", "olive", "Party", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,3)');
+
+    var Rahmen2KZ = new Kachel();
+    Rahmen2KZ.create("MAIN19", "300px", "295px", "270px", "120px", "transparent", "Control")
+
+    var btnHzKZHeizen = new FontCtrlButton();
+    btnHzKZHeizen.create("MAIN19", "olive", "350px", "305px", "fa fa-temperature-high", "Heizen",
+        "func",
+        'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,22.0)', "", "", "120px", "50px", "black", "19px",
+        "red");
+
+    var btnHzKZAbsenken = new FontCtrlButton();
+    btnHzKZAbsenken.create("MAIN19", "olive", "350px", "435px", "fa fa-temperature-low", "Absenken",
+        "func",
+        'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,16.0)', "", "", "120px", "50px", "black", "19px",
+        "blue");
+
+
+    var Rahmen4KZ = new Kachel();
+    Rahmen4KZ.create("MAIN19", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
+    var btnHzKZAus = new CtrlButton();
+    btnHzKZAus.create("MAIN19", "500px", "305px", "ctrlbutton", "smaller", "olive", "Aus", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
+        'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,5.0)');
+
+    var btnHzKZAuf = new CtrlButton();
+    btnHzKZAuf.create("MAIN19", "500px", "410px", "ctrlbutton", "smaller", "olive", "Auf", "black",
+        "func", "", 'func(HM_WriteValueInteger,17995,CONTROL_MODE,1)',
+        'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,23.0)');
+</script>
+//TRENNUNG//
+<script>
+    var DisModeHzKZCtrl = new StateDisplay();
+    DisModeHzKZCtrl.create("CTRL19", "oliveLight", "", "10px", "13%", "60px", "202px", "20px",
+        "Mode", "bool",
+        "Auto",
+        "Man",
+        "Urlaub", "Party", "");
+    var DisTempHzKZCtrl = new StateDisplay();
+    DisTempHzKZCtrl.create("CTRL19", "oliveLight", "°C", "85px", "13%", "60px", "202px", "20px",
+        "Temperatur",
+        "number",
+        "", "", "", "", "");
+    var DisPosHzKZCtrl = new StateDisplay();
+    DisPosHzKZCtrl.create("CTRL19", "oliveLight", "%", "160px", "13%", "60px", "202px", "20px",
+        "Position",
+        "number");
+    var DisHumidKZCtrl = new StateDisplay();
+    DisHumidKZCtrl.create("CTRL19", "oliveLight", "%rel", "240px", "13%", "60px", "202px",
+        "20px",
+        "Humidity",
+        "number");
+
+    var HzCtrlKZ = new HeatCtrl();
+    HzCtrlKZ.create("CTRL19", "335px", "30px", "olive", "Heat-Control",
+        'func(HM_WriteValueFloat,17995,SET_POINT_TEMPERATURE,xx.x)');
+</script>

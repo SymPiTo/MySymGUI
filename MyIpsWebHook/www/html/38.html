@@ -1,0 +1,46 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Wasserzähler Küche                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="38">
+    VarPageNo.update("38");
+    var iWZKKueche = new DynIcon("Wasserzaehler", "bin", false);
+    iWZKKueche.create("MAIN38", "20px", "70px", "300px", "300px");
+
+
+    var iWZWKueche = new DynIcon("Wasserzaehler", "bin", false);
+    iWZWKueche.create("MAIN38", "300px", "70px", "300px", "300px");
+
+    var VarDisWZKKueche = new VarDis();
+    VarDisWZKKueche.create("MAIN38", "blueLight", "130px", "160px", "100px", "25px", "", "black");
+
+    var VarDisWZWKueche = new VarDis();
+    VarDisWZWKueche.create("MAIN38", "redLight", "410px", "160px", "100px", "25px", "", "black");
+</script>
+//TRENNUNG//
+<script>
+    var DisVJKWK = new StateDisplay();
+    DisVJKWK.create("CTRL38", "midgreenLight", " m³", "80px", "13%", "60px", "202px", "20px",
+        "Vorjahr KaltWasser Verbrauch",
+        "number");
+    DisVJKWK.setTextColor("black");
+
+
+    var DisAktKWK = new StateDisplay();
+    DisAktKWK.create("CTRL38", "midgreenLight", " m³", "160px", "13%", "60px", "202px", "20px",
+        "aktueller KaltWasser Verbrauch",
+        "number");
+    DisAktKWK.setTextColor("black");
+
+    var DisVJWWK = new StateDisplay();
+    DisVJWWK.create("CTRL38", "midgreenLight", " m³", "360px", "13%", "60px", "202px", "20px",
+        "Vorjahr WarmWasser Verbrauch",
+        "number");
+    DisVJWWK.setTextColor("black");
+
+
+    var DisAktWWK = new StateDisplay();
+    DisAktWWK.create("CTRL38", "midgreenLight", " m³", "440px", "13%", "60px", "202px", "20px",
+        "aktueller WarmWasser Verbrauch",
+        "number");
+    DisAktWWK.setTextColor("black");
+</script>

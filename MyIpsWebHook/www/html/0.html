@@ -1,0 +1,18 @@
+<script id="0">
+    var container = document.createElement("div");
+    document.getElementById("COVER0").appendChild(container);
+    container.className = "StartScreen";
+
+    var elem1 = document.createElement("img");
+    container.append(elem1);
+    elem1.src = "images/MyHomeControl.png";
+    elem1.alt = "images/error.png";
+    elem1.style.width = "350px";
+    elem1.style.height = "250px";
+    elem1.style.paddingTop = "50px";
+
+
+    var uhr = new clock();
+    uhr.create("COVER0", "400px", "150px", "400px", "120px", true, "70px", "30px", "blue");
+    uhr.startTime();
+</script>

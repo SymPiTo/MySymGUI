@@ -1,0 +1,34 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                             Licht Diele                                 -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="53">
+    VarPageNo.update("53");
+    var LightD = new CtrlTile();
+    LightD.create("MAIN53", "10px", "10px", "200px", "200px", "Licht Diele", "yellowgreen", "transparent", "Light",
+        'func(HM_WriteValueBoolean,38883,STATE,0)', 'func(HM_WriteValueBoolean,38883,STATE,1)', "aus", "ein", "",
+        "",
+        "black", "white");
+</script>
+//TRENNUNG//
+<script>
+    var DisLightEnergyDCtrl = new StateDisplay();
+    DisLightEnergyDCtrl.create("CTRL53", "yellowgreenLight", "Wh", "50px", "13%", "60px",
+        "202px",
+        "20px",
+        "Energy",
+        "number");
+    DisLightEnergyDCtrl.setTextColor("red");
+    var DisLightCurrentDCtrl = new StateDisplay();
+    DisLightCurrentDCtrl.create("CTRL53", "yellowgreenLight", "mA", "150px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number");
+    DisLightCurrentDCtrl.setTextColor("red");
+    var DisLightPowerDCtrl = new StateDisplay();
+    DisLightPowerDCtrl.create("CTRL53", "yellowgreenLight", "W", "250px", "13%", "60px",
+        "202px",
+        "20px",
+        "Power", "number");
+    DisLightPowerDCtrl.setTextColor("red");
+</script>

@@ -17,14 +17,26 @@ require_once(__DIR__ . "/../libs/NW.php");
                 
 
         }
-
+        public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
+        {
+    
+            //Never delete this line!
+            parent::MessageSink($TimeStamp, $SenderID, $Message, $Data);
+    
+            if ($Message == IPS_KERNELMESSAGE && $Data[0] == KR_READY) {
+                $this->RegisterHook("/hook/myipshook");
+            }
+        }
         public function ApplyChanges() {
                 //Never delete this line!
                 parent::ApplyChanges();
-                $this->RegisterHook("/hook/myipshook");
+           
                 $arrString = $this->ReadPropertyString("WhiteList");
                
-                
+        //Only call this in READY state. On startup the WebHook instance might not be available yet
+        if (IPS_GetKernelRunlevel() == KR_READY) {
+                $this->RegisterHook("/hook/myipshook");
+            }
                 $this->SendDebug( "WhiteList.: ", $arrString, 0); 
         }
 

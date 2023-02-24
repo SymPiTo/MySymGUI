@@ -1,0 +1,53 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Energy Control                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="4">
+    var CountPerson = new StateDisplay();
+    CountPerson.create("MAIN4", "redLight", "", "30px", "30px", "60px", "202px", "20px",
+        "Anzahl Personen",
+        "number");
+</script>
+//TRENNUNG//
+<script>
+    var PersonDetect = new StateDisplay();
+    PersonDetect.create("CTRL4", "redLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Wohnung", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectWZ = new StateDisplay();
+    PersonDetectWZ.create("CTRL4", "redLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Wohnzimmer", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectSZ = new StateDisplay();
+    PersonDetectSZ.create("CTRL4", "redLight", "", "160px", "13%", "60px", "202px", "20px",
+        "Schlafzimmer", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectKZ = new StateDisplay();
+    PersonDetectKZ.create("CTRL4", "redLight", "", "230px", "13%", "60px", "202px", "20px",
+        "Kinderzimmer", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectD = new StateDisplay();
+    PersonDetectD.create("CTRL4", "redLight", "", "300px", "13%", "60px", "202px", "20px",
+        "Diele", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectK = new StateDisplay();
+    PersonDetectK.create("CTRL4", "redLight", "", "370px", "13%", "60px", "202px", "20px",
+        "Küche", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+
+    var PersonDetectAZ = new StateDisplay();
+    PersonDetectAZ.create("CTRL4", "redLight", "", "440px", "13%", "60px", "202px", "20px",
+        "Arbeitszimmer", "bool",
+        "leer",
+        "Person anwesend", "", "", "", "cyanLight");
+</script>

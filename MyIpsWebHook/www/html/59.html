@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                      Licht Arbeitsbereich                               -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="59">
+    VarPageNo.update("59");
+    var LightAZ = new CtrlTile();
+    LightAZ.create("MAIN59", "10px", "10px", "200px", "200px", "Licht Arbeitsecke", "orangerot", "transparent", "Light",
+        'func(HM_WriteValueBoolean,22331,STATE,0)', 'func(HM_WriteValueBoolean,22331,STATE,1)', "aus", "ein", "",
+        "",
+        "black", "white");
+</script>
+//TRENNUNG//
+<script>
+    var DisLightEnergyAZCtrl = new StateDisplay();
+    DisLightEnergyAZCtrl.create("CTRL59", "orangerotLight", "Wh", "50px", "13%", "60px",
+        "202px",
+        "20px",
+        "Energy",
+        "number");
+    var DisLightCurrentAZCtrl = new StateDisplay();
+    DisLightCurrentAZCtrl.create("CTRL59", "orangerotLight", "mA", "150px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number");
+    var DisLightPowerAZCtrl = new StateDisplay();
+    DisLightPowerAZCtrl.create("CTRL59", "orangerotLight", "W", "250px", "13%", "60px",
+        "202px",
+        "20px",
+        "Power", "number");
+</script>

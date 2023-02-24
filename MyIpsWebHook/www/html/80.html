@@ -1,0 +1,60 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Websocket Server                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="80">
+    var rahmWss = new Rahmen();
+    rahmWss.create("MAIN80", "90px", "10px", "350px", "200px", "red");
+
+    var WssLabel = new label();
+    WssLabel.create("MAIN80", "100px", "40px", "18px", "white", "WebSocketServer");
+
+    var DisWSSStat = new StateDisplay();
+    DisWSSStat.create("MAIN80", "midgreenLight", "", "200px", "20px", "50px", "170px", "18px",
+        "socket.readyState",
+        "string");
+
+    var DisWSSError = new StateDisplay();
+    DisWSSError.create("MAIN80", "midgreenLight", "", "300px", "20px", "50px", "170px", "18px",
+        "socket.Error",
+        "string");
+
+    var WSSsend = new VarDis();
+    WSSsend.create("MAIN80", "black", "150px", "270px", "300px", "30px", "", "white",
+        null, null, "fa fa-arrow-left");
+
+    var WSSreceive = new VarDis();
+    WSSreceive.create("MAIN80", "black", "250px", "270px", "300px", "30px", "", "white", null, null,
+        "fa fa-arrow-right");
+
+
+
+
+    //  WSSbox.maximize();
+</script>
+//TRENNUNG//
+<script>
+    var HeadWSC = new HeadLine();
+    HeadWSC.create("CTRL80", "0px", "transparent", "Clients");
+
+
+
+
+
+
+    var DisWSSCL1 = new StateDisplay();
+    DisWSSCL1.create("CTRL80", "midgreenLight", "", "150px", "13%", "60px", "202px", "20px",
+        "WS Client 1",
+        "string");
+    var DisWSSCL2 = new StateDisplay();
+    DisWSSCL2.create("CTRL80", "midgreenLight", "", "270px", "13%", "60px", "202px", "20px",
+        "WS Client 2",
+        "string");
+    var DisWSSCL3 = new StateDisplay();
+    DisWSSCL3.create("CTRL80", "midgreenLight", "", "390px", "13%", "60px", "202px", "20px",
+        "WS Client 3",
+        "string");
+    var DisWSSCL4 = new StateDisplay();
+    DisWSSCL4.create("CTRL80", "midgreenLight", "", "510px", "13%", "60px", "202px", "20px",
+        "WS Client 4",
+        "string");
+</script>

@@ -1,0 +1,81 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                                     -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="68">
+    VarPageNo.update("68");
+    var DiplayFoto = new MediaDisplay();
+    DiplayFoto.create("MAIN68", "10px", "20px", "600px", "250px", "DisplayBlue");
+
+    var rahm = new Rahmen();
+    rahm.create("MAIN68", "272px", "24px", "73px", "615px", "DisplayBlue");
+
+    var upnpFotoVol = new TransVarDisplay();
+    upnpFotoVol.create("MAIN68", "280px", "10%", "lime", "28px", "Volume", "");
+
+    var upnpFotoSource = new TransVarDisplay();
+    upnpFotoSource.create("MAIN68", "280px", "50%", "lime", "28px", "Source", "", );
+
+    var FotoTrack = new Kachel();
+    FotoTrack.create("MAIN68", "360px", "20px", "600px", "55px", "transparent", "Track")
+
+    var upnpFotoProgress = new analogBar();
+    upnpFotoProgress.create("MAIN68", "425px", "20px", "cyan", "500px");
+
+    var FotoPlayer = new ButtonSlider();
+    FotoPlayer.create("MAIN68", "83vh", "230px", "200px", "45px", "purple", "ClientList");
+
+    var FontBtnStart = new FontButton();
+    FontBtnStart.create("MAIN68", "fontbutton", "purple", "71vh", "20px", "fa fa-step-backward", "60px", "60px",
+        "32px", "",
+        'func(UPNP_seekStart,19824)');
+
+
+    var FontBtnPrev = new FontButton();
+    FontBtnPrev.create("MAIN68", "fontbutton", "purple", "71vh", "90px", "fa fa-backward", "60px", "60px", "32px", "",
+        'func(UPNP_previous,19824)');
+
+
+    var FontBtnNext = new FontButton();
+    FontBtnNext.create("MAIN68", "fontbutton", "purple", "71vh", "160px", "fa fa-forward", "60px", "60px", "32px", "",
+        'func(UPNP_next,19824)');
+
+    var FontBtnStop = new FontButton();
+    FontBtnStop.create("MAIN68", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px", "32px", "",
+        'func(UPNP_stop,19824)');
+
+
+    var FontBtnPause = new FontButton();
+    FontBtnPause.create("MAIN68", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px", "32px", "",
+        'func(UPNP_pause,19824)');
+
+
+    var FontBtnPlay = new FontButton();
+    FontBtnPlay.create("MAIN68", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px", "32px", "",
+        'func(UPNP_play,19824)');
+
+
+    var FontBtnVolDwn = new FontButton();
+    FontBtnVolDwn.create("MAIN68", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
+        "50px", "32px", "", 'func(UPNP_setVolume,19824,down)');
+
+    var FontBtnMute = new FontButton();
+    FontBtnMute.create("MAIN68", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
+        "50px", "32px", "", 'func(UPNP_setMute,19824,toggle14879)');
+
+    var FontBtnVolUp = new FontButton();
+    FontBtnVolUp.create("MAIN68", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
+        "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
+
+    var FontBtnPower = new FontButton();
+    FontBtnPower.create("MAIN68", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
+        "50px", "32px", "",
+        'func(STV_SetPower,38391,toggle59911)');
+</script>
+//TRENNUNG//
+<script>
+    var Fotocmd = [];
+    var FotoList = new DynIconList();
+    Fotocmd[0] = 'func(UPNP_loadPlaylist,19824,item[playlistname],Foto)';
+
+    FotoList.create("CTRL68", "VideoLib", "0px", "0px", "100%", "100%", 3, "", Fotocmd);
+</script>

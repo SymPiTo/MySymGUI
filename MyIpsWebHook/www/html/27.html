@@ -1,0 +1,28 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Licht Schlafzimmer                            -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="27">
+    VarPageNo.update("27");
+    var LightSZ = new CtrlTile();
+    LightSZ.create("MAIN27", "10px", "10px", "200px", "200px", "Schlafzimmer", "sandy", "transparent", "Light",
+        'func(HM_WriteValueBoolean,32856,STATE,0)', 'func(HM_WriteValueBoolean,32856,STATE,1)');
+</script>
+//TRENNUNG//
+<script>
+    var DisLightEnergySZCtrl = new StateDisplay();
+    DisLightEnergySZCtrl.create("CTRL27", "sandyLight", "Wh", "50px", "13%", "60px", "202px",
+        "20px",
+        "Energy",
+        "number");
+    var DisLightCurrentSZCtrl = new StateDisplay();
+    DisLightCurrentSZCtrl.create("CTRL27", "sandyLight", "mA", "150px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number");
+    var DisLightPowerSZCtrl = new StateDisplay();
+    DisLightPowerSZCtrl.create("CTRL27", "sandyLight", "W", "250px", "13%", "60px", "202px",
+        "20px",
+        "Power",
+        "number");
+</script>

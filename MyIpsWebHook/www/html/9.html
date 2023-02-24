@@ -1,0 +1,85 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                             Licht Wohnzimmer                            -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="9">
+    VarPageNo.update("9");
+    var Light1WZ = new CtrlTile();
+    Light1WZ.create("MAIN9", "20px", "20px", "200px", "200px", "Lampe Fenster", "cyan", "transparent", "Light",
+        'func(HM_WriteValueBoolean,15609,STATE,0)', 'func(HM_WriteValueBoolean,15609,STATE,1)', "aus",
+        "ein", '', '', "black", "white");
+
+    var Light2WZ = new CtrlTile();
+    Light2WZ.create("MAIN9", "20px", "320px", "200px", "200px", "Lampe Mitte", "cyan", "transparent", "Light",
+        'func(HM_WriteValueBoolean,26078,STATE,0)', 'func(HM_WriteValueBoolean,26078,STATE,1)', "aus",
+        "ein", "", "", "black", "white");
+
+    var Light3WZ = new CtrlTile();
+    Light3WZ.create("MAIN9", "300px", "20px", "200px", "200px", "Lampe Schreibtisch", "cyan", "transparent",
+        "Light",
+        'func(HM_WriteValueBoolean,28324,STATE,0)', 'func(HM_WriteValueBoolean,28324,STATE,1)', "aus",
+        "ein", "", "", "black", "white");
+</script>
+//TRENNUNG//
+<script>
+    var scrollrahmen = new ScrollBox();
+    scrollrahmen.create("CTRL9", "ID9", "5px", "5px", "100%", "100%", "transparent");
+
+    var HeadWZL1 = new HeadLine();
+    HeadWZL1.create("ID9", "0px", "transparent", "Fenster Lampe");
+
+    var DisLightEnergy1WZCtrl = new StateDisplay();
+    DisLightEnergy1WZCtrl.create("ID9", "cyanLight", "Wh", "50px", "13%", "60px", "202px",
+        "20px",
+        "Energy",
+        "number");
+    var DisLightCurrent1WZCtrl = new StateDisplay();
+    DisLightCurrent1WZCtrl.create("ID9", "cyanLight", "mA", "120px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number");
+    var DisLightPower1WZCtrl = new StateDisplay();
+    DisLightPower1WZCtrl.create("ID9", "cyanLight", "W", "190px", "13%", "60px", "202px",
+        "20px",
+        "Power",
+        "number");
+    var HeadWZL2 = new HeadLine();
+    HeadWZL2.create("ID9", "220px", "transparent", "Mitte Lampe");
+    var DisLightEnergy2WZCtrl = new StateDisplay();
+    DisLightEnergy2WZCtrl.create("ID9", "cyanLight", "Wh", "330px", "13%", "60px", "202px",
+        "20px",
+        "Energy",
+        "number");
+    var DisLightCurrent2WZCtrl = new StateDisplay();
+    DisLightCurrent2WZCtrl.create("ID9", "cyanLight", "mA", "400px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number");
+    var DisLightPower2WZCtrl = new StateDisplay();
+    DisLightPower2WZCtrl.create("ID9", "cyanLight", "W", "470px", "13%", "60px", "202px",
+        "20px",
+        "Power",
+        "number");
+    var HeadWZL3 = new HeadLine();
+    HeadWZL3.create("ID9", "450px", "transparent", "Vorne Lampe");
+    var DisLightEnergy3WZCtrl = new StateDisplay();
+    DisLightEnergy3WZCtrl.create("ID9", "cyanLight", "Wh", "610px", "13%", "60px", "202px",
+        "20px",
+        "Energy",
+        "number");
+    var DisLightCurrent3WZCtrl = new StateDisplay();
+    DisLightCurrent3WZCtrl.create("ID9", "cyanLight", "mA", "680px", "13%", "60px",
+        "202px",
+        "20px",
+        "Strom",
+        "number", "", "");
+    var DisLightPower3WZCtrl = new StateDisplay();
+    DisLightPower3WZCtrl.create("ID9", "cyanLight", "W", "750px", "13%", "60px", "202px",
+        "20px",
+        "Power",
+        "number");
+
+    var HeadWZL4 = new HeadLine();
+    HeadWZL4.create("ID9", "750px", "transparent", " ---- ");
+</script>

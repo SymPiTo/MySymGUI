@@ -1,0 +1,79 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Covid                                         -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="44">
+    VarPageNo.update("44");
+    var graphCovid = new MyChart();
+    var ds0D = new Array();
+    var ds1D = new Array();
+    var ds2D = new Array();
+    ds0D['label'] = "Fälle/Woche D";
+    ds1D['label'] = "Fälle/Woche BW";
+    ds2D['label'] = "Fälle/Woche HD";
+    ds0D['id'] = "A";
+    ds1D['id'] = "A";
+    ds2D['id'] = "A";
+    ds0D['color'] = 'red';
+    ds1D['color'] = 'blue';
+    ds2D['color'] = 'white';
+    graphCovid.create("MAIN44", "50px", "10px", "700px", "400px", '33023', '', '', ds0D, ds1D, ds2D, '600px', '200px',
+        '5px', '10px');
+
+
+    var graphCovid1 = new MyChart();
+    var ds0D = new Array();
+    var ds1D = new Array();
+    var ds2D = new Array();
+    ds0D['label'] = "Inzidenz D";
+    ds1D['label'] = "Inzidenz BW";
+    ds2D['label'] = "Inzidenz HD";
+    ds0D['id'] = "B";
+    ds1D['id'] = "B";
+    ds2D['id'] = "B";
+    ds0D['color'] = 'red';
+    ds1D['color'] = 'blue';
+    ds2D['color'] = 'white';
+    graphCovid1.create("MAIN44", "450px", "10px", "700px", "400px", '10026', '', '', ds0D, ds1D, ds2D, '600px',
+        '200px', '320px', '10px');
+</script>
+//TRENNUNG//
+<script>
+    var D_Covidweek = new StateDisplay();
+    D_Covidweek.create("CTRL44", "blueLight", "", "10px", "13%", "60px", "202px", "20px",
+        "Fälle pro Woche D",
+        "number");
+    var D_Inz = new StateDisplay();
+    D_Inz.create("CTRL44", "blueLight", "", "80px", "13%", "60px", "202px", "20px",
+        "Inzidenz D",
+        "number");
+    var D_R = new StateDisplay();
+    D_R.create("CTRL44", "blueLight", "", "150px", "13%", "60px", "202px", "20px",
+        "Hospital. Rate D",
+        "number");
+
+    var BW_Covidweek = new StateDisplay();
+    BW_Covidweek.create("CTRL44", "blueLight", "", "220px", "13%", "60px", "202px", "20px",
+        "Fälle pro Woche BW",
+        "number");
+    var BW_Inz = new StateDisplay();
+    BW_Inz.create("CTRL44", "blueLight", "", "290px", "13%", "60px", "202px", "20px",
+        "Inzidenz BW",
+        "number");
+    var D_Dead = new StateDisplay();
+    D_Dead.create("CTRL44", "blueLight", "", "360px", "13%", "60px", "202px", "20px",
+        "Tode je Woche D",
+        "number");
+
+    var HD_Covidweek = new StateDisplay();
+    HD_Covidweek.create("CTRL44", "blueLight", "", "430px", "13%", "60px", "202px", "20px",
+        "Fälle pro Woche HD",
+        "number");
+    var HD_Inz = new StateDisplay();
+    HD_Inz.create("CTRL44", "blueLight", "", "500px", "13%", "60px", "202px", "20px",
+        "Inzidenz HD",
+        "number");
+    var HD_Dead = new StateDisplay();
+    HD_Dead.create("CTRL44", "blueLight", "", "570px", "13%", "60px", "202px", "20px",
+        "Tode je Woche HD",
+        "number");
+</script>

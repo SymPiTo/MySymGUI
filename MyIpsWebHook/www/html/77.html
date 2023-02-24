@@ -1,0 +1,66 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                            IPS Server                             -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="77">
+    VarPageNo.update("77");
+    // Mainbar.fadeWidth("1300px");
+    //Ctrlbar.moveTo("1500px");
+
+    var ipsFrame = new SetIframe();
+    ipsFrame.create("MAIN77", "2px", "2px", "600px", "900px", "http://192.168.178.28:8888/status.html");
+</script>
+//TRENNUNG//
+<script>
+    var Head1 = new HeadLine();
+    Head1.create("CTRL77", "0px", "transparent", "IPS-RASPI");
+    var DiIPS1 = new StateDisplay();
+    DiIPS1.create("CTRL77", "midgreenLight", "", "50px", "13%", "60px", "202px", "18px",
+        "IP Adress",
+        "string");
+    var DiIPS2 = new StateDisplay();
+    DiIPS2.create("CTRL77", "midgreenLight", "", "110px", "13%", "60px", "202px", "18px",
+        "Frequency",
+        "string");
+    var DiIPS3 = new StateDisplay();
+    DiIPS3.create("CTRL77", "midgreenLight", "", "170px", "13%", "60px", "202px", "18px",
+        "CPU load 15min",
+        "string");
+    var DiIPS4 = new StateDisplay();
+    DiIPS4.create("CTRL77", "midgreenLight", "", "230px", "13%", "60px", "202px", "18px",
+        "CPU Temperature",
+        "string");
+    var DiIPS5 = new StateDisplay();
+    DiIPS5.create("CTRL77", "midgreenLight", "", "290px", "13%", "60px", "202px", "18px",
+        "CPU Voltage",
+        "string");
+    var DiIPS6 = new StateDisplay();
+    DiIPS6.create("CTRL77", "midgreenLight", "", "350px", "13%", "60px", "202px", "18px",
+        "Memory Free",
+        "string");
+    var DiIPS7 = new StateDisplay();
+    DiIPS7.create("CTRL77", "midgreenLight", "", "410px", "13%", "60px", "202px", "18px",
+        "Memory SD Free",
+        "string");
+    var Head2 = new HeadLine();
+    Head2.create("CTRL77", "420px", "transparent", "IPS-Server");
+    var DiIPS8 = new StateDisplay();
+    DiIPS8.create("CTRL77", "midgreenLight", "", "530px", "13%", "60px", "202px", "18px",
+        "IPS Version",
+        "string");
+    var DiIPS9 = new StateDisplay();
+    DiIPS9.create("CTRL77", "midgreenLight", "", "590px", "13%", "60px", "202px", "18px",
+        "Kernel Status",
+        "string",
+        "", "", "",
+        "", "", "202px", "80px");
+    var DiIPS10 = new StateDisplay();
+    DiIPS10.create("CTRL77", "midgreenLight", "", "670px", "13%", "60px", "202px", "18px",
+        "Port 3777",
+        "string");
+    var Head3 = new HeadLine();
+    Head3.create("CTRL77", "630px", "transparent", "WSS-Server");
+    var DiIPS11 = new StateDisplay();
+    DiIPS11.create("CTRL77", "midgreenLight", "", "790px", "13%", "60px", "202px", "18px",
+        "Port 9000",
+        "string");
+</script>

@@ -1,0 +1,30 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                    Temperatur Schlafzimmer                              -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="29">
+    VarPageNo.update("29");
+    var w = parseInt(dimMainBarWidth) + parseInt(dimCtrlBarWidth) + 'px';
+
+    Mainbar.fadeWidth(w);
+    Ctrlbar.fadeOut();
+    Ctrlbar.item[29]['off'] = true;
+
+    var graphTSZ = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Temp-Ist";
+    ds1['label'] = "Temp-Soll";
+    ds2['label'] = "Position";
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphTSZ.create("MAIN29", "50px", "10px", "1000px", "600px", '12276', '%', '°C', ds0, ds1, ds2, "90%", "90%",
+        "300px", "20px");
+</script>
+//TRENNUNG//
+<script>
+</script>

@@ -1,0 +1,87 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Heizung Küche                              -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="31">
+    VarPageNo.update("31");
+    var MainTempVHzK = new VarDis();
+    MainTempVHzK.create("MAIN31", "black", "90px", "490px", "85px", "20px", "°C", "white");
+    var MainTempRHzK = new VarDis();
+    MainTempRHzK.create("MAIN31", "black", "220px", "490px", "85px", "20px", "°C", "white");
+    var MainTempHzK = new VarDis();
+    MainTempHzK.create("MAIN31", "black", "40px", "100px", "85px", "20px", "°C", "white");
+    var MainPosHzK = new VarDis();
+    MainPosHzK.create("MAIN31", "black", "40px", "220px", "85px", "20px", "%", "white");
+
+
+    var iHzK = new DynIcon("heizkoerper", "bin", false);
+    iHzK.create("MAIN31", "80px", "30px", "450px", "170px");
+
+    var Rahmen1K = new Kachel();
+    Rahmen1K.create("MAIN31", "300px", "20px", "230px", "120px", "transparent", "Mode");
+
+    var btnHzKauto = new CtrlButton();
+    btnHzKauto.create("MAIN31", "350px", "30px", "ctrlbutton", "smaller", "midgreen", "Automatik", "black",
+        "func", "", 'func(FHT_SetMode,13226,0)');
+
+    var btnHzKman = new CtrlButton();
+    btnHzKman.create("MAIN31", "350px", "135px", "ctrlbutton", "smaller", "midgreen", "Manual", "black",
+        "func", "", 'func(FHT_SetMode,13226,1)');
+
+
+    var Rahmen3K = new Kachel();
+    Rahmen3K.create("MAIN31", "450px", "20px", "230px", "120px", "transparent", "Preset");
+
+    var btnHzKUrlaub = new CtrlButton();
+    btnHzKUrlaub.create("MAIN31", "500px", "30px", "ctrlbutton", "smaller", "midgreen", "Urlaub", "black",
+        "func", "", 'func(FHT_SetMode,13226,2)');
+
+    var btnHzKParty = new CtrlButton();
+    btnHzKParty.create("MAIN31", "500px", "135px", "ctrlbutton", "smaller", "midgreen", "Party", "black",
+        "func", "", 'func(FHT_SetMode,13226,3)');
+
+    var Rahmen2K = new Kachel();
+    Rahmen2K.create("MAIN31", "300px", "295px", "270px", "120px", "transparent", "Control")
+
+    var btnHzKHeizen = new FontCtrlButton();
+    btnHzKHeizen.create("MAIN31", "midgreen", "350px", "305px", "fa fa-temperature-high", "Heizen",
+        "func",
+        'func(FHT_SetTemperature,13226,22.0)', "", "", "120px", "50px", "black", "19px", "red");
+
+    var btnHzKAbsenken = new FontCtrlButton();
+    btnHzKAbsenken.create("MAIN31", "midgreen", "350px", "435px", "fa fa-temperature-low", "Absenken",
+        "func",
+        'func(FHT_SetTemperature,13226,16.0)', "", "", "120px", "50px", "black", "19px", "blue");
+
+
+    var Rahmen4K = new Kachel();
+    Rahmen4K.create("MAIN31", "450px", "295px", "230px", "120px", "transparent", "End Position")
+
+    var btnHzKAus = new CtrlButton();
+    btnHzKAus.create("MAIN31", "500px", "305px", "ctrlbutton", "smaller", "midgreen", "Aus", "black",
+        "func", "", 'func(FHT_SetMode,13226,1)', 'func(FHT_SetTemperature,13226,6.0)');
+
+    var btnHzKAuf = new CtrlButton();
+    btnHzKAuf.create("MAIN31", "500px", "410px", "ctrlbutton", "smaller", "midgreen", "Auf", "black",
+        "func", "", 'func(FHT_SetMode,13226,1)', 'func(FHT_SetTemperature,13226,24.0)');
+</script>
+//TRENNUNG//
+<script>
+    var DisModeHzKCtrl = new StateDisplay();
+    DisModeHzKCtrl.create("CTRL31", "midgreenLight", "", "10px", "13%", "60px", "202px", "20px",
+        "Mode", "bool",
+        "Auto",
+        "Man",
+        "Urlaub", "Party", "");
+    var DisTempHzKCtrl = new StateDisplay();
+    DisTempHzKCtrl.create("CTRL31", "midgreenLight", "°C", "85px", "13%", "60px", "202px", "20px",
+        "Temperatur",
+        "number");
+    var DisPosHzKCtrl = new StateDisplay();
+    DisPosHzKCtrl.create("CTRL31", "midgreenLight", "%", "160px", "13%", "60px", "202px", "20px",
+        "Position",
+        "number");
+
+    var HzCtrlK = new HeatCtrl();
+    HzCtrlK.create("CTRL31", "335px", "30px", "midgreen", "Heat-Control",
+        'func(FHT_SetTemperature,13226,xx.x)');
+</script>

@@ -1,0 +1,94 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Rolladen Wohnzimmer                           -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="8">
+    VarPageNo.update("8");
+    var iRolloWZ = new DynIcon("rollo", "ana", false);
+    iRolloWZ.create("MAIN8", "0px", "100px", "350px", "250px");
+
+    var Rahmen3WZ = new Kachel();
+    Rahmen3WZ.create("MAIN8", "290px", "60px", "230px", "100px", "transparent", "Mode");
+
+
+    var btnRolloWZAuto = new CtrlButton();
+    btnRolloWZAuto.create("MAIN8", "330px", "70px", "ctrlbutton", "smaller", "cyan", "Automatik", "black",
+        "func", "", 'func(FSS_SetMode,18067,1)');
+
+
+    var btnRolloWZMan = new CtrlButton();
+    btnRolloWZMan.create("MAIN8", "330px", "175px", "ctrlbutton", "smaller", "cyan", "Manual", "black",
+        "func", "", 'func(FSS_SetMode,18067,0)');
+
+    var Rahmen1WZ = new Kachel();
+    Rahmen1WZ.create("MAIN8", "400px", "60px", "230px", "170px", "transparent", "Preset");
+
+    var btnRolloWZ99 = new CtrlButton();
+    btnRolloWZ99.create("MAIN8", "440px", "175px", "ctrlbutton", "smaller", "cyan", "99%", "black",
+        "func", "", 'func(FSS_SetRollo,18067,99)');
+
+    var btnRolloWZ75 = new CtrlButton();
+    btnRolloWZ75.create("MAIN8", "500px", "175px", "ctrlbutton", "smaller", "cyan", "75%", "black",
+        "func", "", 'func(FSS_SetRollo,18067,75)');
+
+    var btnRolloWZ50 = new CtrlButton();
+    btnRolloWZ50.create("MAIN8", "440px", "72px", "ctrlbutton", "smaller", "cyan", "50%", "black",
+        "func", "", 'func(FSS_SetRollo,18067,50)');
+
+    var btnRolloWZ25 = new CtrlButton();
+    btnRolloWZ25.create("MAIN8", "500px", "72px", "ctrlbutton", "smaller", "cyan", "25%", "black",
+        "func", "", 'func(FSS_SetRollo,18067,25)');
+
+    var Rahmen2WZ = new Kachel();
+    Rahmen2WZ.create("MAIN8", "290px", "355px", "150px", "280px", "transparent", "Control");
+
+    //var btnRolloWZHoch = new CtrlButton();
+    //btnRolloWZHoch.create("MainRolloWZ", "330px", "370px", "ctrlbutton", "smaller", "cyan", "Hoch", "command","", "send('command(Rollo,WZ,up)') ");
+
+
+
+
+
+    var btnRolloWZHoch = new FontCtrlButton();
+    btnRolloWZHoch.create("MAIN8", "cyan", "330px", "370px", "fa fa-chevron-up", "Hoch",
+        "func",
+        'func(FSS_SetRolloUp,18067)', "", "", "120px", "50px", "black", "22px", "black");
+
+    var btnRolloWZStop = new FontCtrlButton();
+    btnRolloWZStop.create("MAIN8", "cyan", "415px", "370px", "fa fa-stop", "Halt", "func",
+        'func(FSS_SetRolloStop,18067)', "", "", "120px", "50px", "black", "22px", "black");
+
+    var btnRolloWZRunter = new FontCtrlButton();
+    btnRolloWZRunter.create("MAIN8", "cyan", "500px", "370px", "fa fa-chevron-down", "Runter",
+        "func",
+        'func(FSS_SetRolloDown,18067)', "", "", "120px", "50px", "black", "22px", "black");
+</script>
+//TRENNUNG//
+<script>
+    var DisModeRolloWZCtrl = new StateDisplay();
+    DisModeRolloWZCtrl.create("CTRL8", "cyanLight", "", "20px", "30px", "60px", "202px",
+        "20px",
+        "Mode", "bool",
+        "Man",
+        "Auto", "", "", "");
+
+    var DisST1RolloWZCtrl = new StateDisplay();
+    DisST1RolloWZCtrl.create("CTRL8", "cyanLight", "", "130px", "30px", "60px", "202px",
+        "20px",
+        "Schaltzeiten Mo-Fr",
+        "string");
+
+    var DisST2RolloWZCtrl = new StateDisplay();
+    DisST2RolloWZCtrl.create("CTRL8", "cyanLight", "", "210px", "30px", "60px", "202px",
+        "20px",
+        "Schaltzeiten Sa-so",
+        "string");
+
+    CbSSrolloWZ = new CheckBoxCtrlBtn();
+    CbSSrolloWZ.create("CTRL8", "cyan", "300px", "30px", "202px", "40px", "20px", "SunRise-SunSet",
+        'func(FSS_SetSunSet,18067,0)', 'func(FSS_SetSunSet,18067,1)');
+
+
+    var rolloCtrlWZ = new RolloCtrl();
+    rolloCtrlWZ.create("CTRL8", "400px", "30px", "202px", "150px", "cyan",
+        "Position", 'func(FSS_StepRolloUp,18067)', 'func(FSS_StepRolloDown,18067)');
+</script>

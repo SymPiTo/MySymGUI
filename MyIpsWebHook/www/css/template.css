@@ -1,0 +1,67 @@
+body {
+    /* ----------------------------- Hide scrollbars ---------------------------- */
+    overflow: hidden;
+
+}
+
+#base {
+    /* ------------------------------- Hintergrund ------------------------------ */
+
+    background-color: rgb(205, 188, 188);
+
+}
+
+
+
+.fontbutton {
+    border: thin #000000 solid;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+
+}
+
+/* ------------------------ horizontale Scroll Leiste ----------------------- */
+.xScrollContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    /*overflow-x: scroll;*/
+    scroll-snap-type: x mandatory;
+}
+
+.xScrollContainer div {
+    scroll-snap-align: start;
+}
+
+
+
+/* ------------------------- vertikale Scroll Leiste ------------------------ */
+.yScrollContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /*overflow-y: scroll;*/
+    scroll-snap-type: y mandatory;
+}
+
+.yScrollContainer div {
+    scroll-snap-align: start;
+}
+
+.yScrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* --------------------------- Tastatur  - Zahlen --------------------------- */
+.ZahlenContainer {
+    border: thin black solid;
+    display: flex;
+    flex-wrap: Wrap;
+    justify-content: space-evenly;
+    color: white;
+}

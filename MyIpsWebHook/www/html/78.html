@@ -1,0 +1,47 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 RaspMatic Server                             -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<script id="78">
+    VarPageNo.update("78");
+
+    var csl = new ProgressCircleBar();
+    csl.create("MAIN78", "10px", "10px", "170px", "200px", "midgreen", "HMIP Duty Cycle");
+
+    var cs2 = new ProgressCircleBar();
+    cs2.create("MAIN78", "10px", "200px", "170px", "200px", "midgreen", "HM Duty Cycle");
+
+    var cs3 = new ProgressCircleBar();
+    cs3.create("MAIN78", "250px", "10px", "170px", "200px", "midgreen", "RF Duty Cycle Level");
+</script>
+
+<!---
+<div class="progress-circle p20">
+    <span>20%</span>
+    <div class="left-half-clipper">
+        <div class="first50-bar"></div>
+        <div class="value-bar"></div>
+    </div>
+</div>      
+-->
+
+//TRENNUNG//
+<script>
+    var CCUconnect = new StateDisplay();
+    CCUconnect.create("CTRL78", "midgreenLight", "", "20px", "13%", "60px", "202px", "20px",
+        "CCU", "bool",
+        "disconnected", "connected", "",
+        "", "");
+
+    var CCUVersion = new StateDisplay();
+    CCUVersion.create("CTRL78", "midgreenLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Firmware Version",
+        "string");
+
+    var CCUAdress = new StateDisplay();
+    CCUAdress.create("CTRL78", "midgreenLight", "", "160px", "13%", "60px", "202px", "20px",
+        "IP Adresse",
+        "string");
+</script>

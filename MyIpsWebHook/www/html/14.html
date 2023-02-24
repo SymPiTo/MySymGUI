@@ -1,0 +1,106 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Denon Anlage                               -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="14">
+    VarPageNo.update("14");
+    var IconList0 = new DynIconList();
+
+    var IconList1 = new DynIconList();
+
+    var IconList2 = new DynIconList();
+
+
+
+
+
+    var oa = [IconList0, IconList1, IconList2];
+
+    var iDisArtistWZ = new MediaDisplay();
+    iDisArtistWZ.create("MAIN14", "5px", "10px", "600px", "250px", "DisplayBlue");
+
+    var rahm = new Rahmen();
+    rahm.create("MAIN14", "272px", "24px", "70px", "595px", "DisplayBlue");
+
+    var CeolVol = new TransVarDisplay();
+    CeolVol.create("MAIN14", "280px", "70px", "lime", "28px", "Volume", "");
+
+    var CeolTrack = new TransVarDisplay();
+    CeolTrack.create("MAIN14", "280px", "270px", "lime", "28px", "Track", "", );
+
+    var CeolSource = new TransVarDisplay();
+    CeolSource.create("MAIN14", "280px", "470px", "lime", "28px", "Source", "", );
+
+
+    var RahmenCeol = new Kachel();
+    RahmenCeol.create("MAIN14", "350px", "25px", "590px", "95px", "transparent", "Internet Radio")
+
+    var btnIRadioWZ = new FontCtrlButton();
+    btnIRadioWZ.create("MAIN14", "cyan", "385px", "65px", "fa fa-podcast", "IRadio", "CtrlFunc",
+        "", oa, 0, "120px", "50px", "black", "19px", "red");
+
+    var btnCDWZ = new FontCtrlButton();
+    btnCDWZ.create("MAIN14", "cyan", "385px", "260px", "fa fa-music", "CD", "CtrlFunc",
+        "", oa, 1, "120px", "50px", "black", "19px", "red");
+
+    var btnAudioCeol = new FontCtrlButton();
+    btnAudioCeol.create("MAIN14", "cyan", "385px", "450px", "fa fa-book", "Audiobook", "CtrlFunc",
+        "", oa, 2, "120px", "50px", "black", "19px", "red");
+
+
+    var ProgressCeol = new ProgressBar();
+    ProgressCeol.create("MAIN14", "460px", "25px", "cyan", "450px");
+
+    var FontBtnCDA = new FontButton();
+    FontBtnCDA.create("MAIN14", "fontbutton", "cyan", "470px", "110px", "fa fa-backward", "60px",
+        "60px", "", "", 'func(CEOL_previous,49535)');
+
+    var FontBtnCDE = new FontButton();
+    FontBtnCDE.create("MAIN14", "fontbutton", "cyan", "470px", "180px", "fa fa-forward", "60px",
+        "60px", "", "", 'func(CEOL_next,49535)');
+
+    var FontBtnCDB = new FontButton();
+    FontBtnCDB.create("MAIN14", "fontbutton", "cyan", "470px", "350px", "fa fa-pause", "60px",
+        "60px", "", "", 'func(CEOL_pause,49535)');
+
+
+    var FontBtnCDD = new FontButton();
+    FontBtnCDD.create("MAIN14", "fontbutton", "cyan", "470px", "280px", "fa fa-stop", "60px", "60px", "", "",
+        'func(CEOL_stop,49535)');
+
+
+    var FontBtnCDC = new FontButton();
+    FontBtnCDC.create("MAIN14", "fontbutton", "cyan", "470px", "420px", "fa fa-play", "60px", "60px", "", "",
+        'func(CEOL_play,49535)');
+
+
+    var FontBtnIRadioVolDwnWZ = new FontButton();
+    FontBtnIRadioVolDwnWZ.create("MAIN14", "fontbutton", "cyan", "550px", "160px", "fa fa-volume-down", "60px",
+        "60px", "32px", "", 'func(CEOL_DecVolume,49535)');
+
+    var FontBtnIRadioMuteWZ = new FontButton();
+    FontBtnIRadioMuteWZ.create("MAIN14", "fontbutton", "cyan", "550px", "230px", "fa fa-volume-off", "60px",
+        "60px", "32px", "", 'func(CEOL_ToggleMute,49535,toggle59848)');
+
+    var FontBtnIRadioVolUpWZ = new FontButton();
+    FontBtnIRadioVolUpWZ.create("MAIN14", "fontbutton", "cyan", "550px", "300px", "fa fa-volume-up", "60px",
+        "60px", "32px", "", 'func(CEOL_IncVolume,49535)');
+
+
+    var FontBtnIRadioPowerWZ = new FontButton();
+    FontBtnIRadioPowerWZ.create("MAIN14", "fontbutton", "cyan", "550px", "460px",
+        "fa fa-power-off", "100px", "50px", "32px", "", 'func(CEOL_SetPower,49535,toggle22520)');
+</script>
+//TRENNUNG//
+<script>
+    var cmdA = [];
+    var cmdB = [];
+    var cmdC = [];
+    cmdA[0] = 'func(CEOL_SetRadioChannel,49535,item[fv])';
+    IconList0.create("CTRL14", "IRadiochannels", "0px", "0px", "50%", "100%", 3, "", cmdA);
+    cmdB[0] = 'func(CEOL_loadPlaylist,49535,item[playlistname],CD)';
+    IconList1.create("CTRL14", "MusicLib", "0px", "0px", "100%", "100%", 3, "", cmdB);
+    IconList1.hide();
+    cmdC[0] = 'func(CEOL_loadPlaylist,49535,item[playlistname],Audio)';
+    IconList2.create("CTRL14", "AudiobookLib", "0px", "0px", "100%", "100%", 3, "", cmdC);
+    IconList2.hide();
+</script>

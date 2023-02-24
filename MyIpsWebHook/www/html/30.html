@@ -1,0 +1,44 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                        Sonos  Schlafzimmer                              -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="30">
+    VarPageNo.update("30");
+    var iDisSonosSZ = new MediaDisplay();
+    iDisSonosSZ.create("MAIN30", "20px", "20px", "590px", "325px", "DisplayBlue", "Album", "Künstler", "Titel");
+
+    var rahmSZ = new Rahmen();
+    rahmSZ.create("MAIN30", "370px", "24px", "73px", "603px", "DisplayBlue");
+
+    var SonosSZVol = new TransVarDisplay();
+    SonosSZVol.create("MAIN30", "385px", "70px", "lime", "28px", "Volume", "%");
+
+    var SonosSZTrack = new TransVarDisplay();
+    SonosSZTrack.create("MAIN30", "385px", "270px", "lime", "28px", "Track", "");
+
+    var SonosSZSource = new TransVarDisplay();
+    SonosSZSource.create("MAIN30", "385px", "470px", "lime", "28px", "Source", "");
+
+    var FontBtnSonosVolDwnSZ = new FontButton();
+    FontBtnSonosVolDwnSZ.create("MAIN30", "fontbutton", "cyan", "73vh", "40px",
+        "fa fa-volume-down", "60px", "60px", "32px", "", 'func(SNS_ChangeVolume,53696,-2)');
+
+    var FontBtnSonosMuteSZ = new FontButton();
+    FontBtnSonosMuteSZ.create("MAIN30", "fontbutton", "cyan", "73vh", "110px",
+        "fa fa-volume-off", "60px", "60px", "32px", "", 'func(SNS_SetMute,53696,toggle50128)');
+
+    var FontBtnSonosVolUpSZ = new FontButton();
+    FontBtnSonosVolUpSZ.create("MAIN30", "fontbutton", "cyan", "73vh", "180px",
+        "fa fa-volume-up", "60px", "60px", "32px", "", 'func(SNS_ChangeVolume,53696,2)');
+
+    var FontBtnSonosPowerSZ = new FontButton();
+    FontBtnSonosPowerSZ.create("MAIN30", "fontbutton", "cyan", "74vh", "360px",
+        "fa fa-power-off", "100px", "50px", "32px", "", 'func(SNS_Stop,53696)');
+</script>
+//TRENNUNG//
+<script>
+    var cmd = [];
+    var SonosSZRadioList = new DynIconList();
+    cmd[0] = 'func(SNS_SetRadio,53696,item[sendername])';
+    cmd[1] = 'func(SNS_Play,53696)';
+    SonosSZRadioList.create("CTRL30", "SonosRadioLib", "0px", "0px", "100%", "100%", 3, "", cmd);
+</script>

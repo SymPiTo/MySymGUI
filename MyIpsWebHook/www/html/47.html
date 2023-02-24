@@ -1,0 +1,73 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                             Bad Fenster                                 -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="47">
+    VarPageNo.update("47");
+    var WindowBad = new CtrlTile();
+    WindowBad.create("MAIN47", "10px", "10px", "200px", "200px", "Bad Fenster", "violet", "transparent", "Fenster",
+        'func(IPS_RunScript,11670)', 'func(IPS_RunScript,37973)', "zu", "auf", "", "", "black", "white");
+
+    var BathDisHumid = new StateDisplay();
+    BathDisHumid.create("MAIN47", "violetLight", "%rel", "150px", "300px", "60px", "202px", "20px",
+        "rel. Feuchte",
+        "number");
+
+    var BathTemp = new StateDisplay();
+    BathTemp.create("MAIN47", "violetLight", "°C", "50px", "300px", "60px", "202px", "20px",
+        "Temperatur",
+        "string");
+
+
+
+    var graphB = new MyChart();
+    var ds0 = new Array();
+    var ds1 = new Array();
+    var ds2 = new Array();
+    ds0['label'] = "Wasser-Innen";
+    ds1['label'] = "Wasser-Aussen";
+    ds2['label'] = "Differenz";
+    ds0['id'] = "B";
+    ds1['id'] = "B";
+    ds2['id'] = "A";
+    ds0['color'] = 'red';
+    ds1['color'] = 'blue';
+    ds2['color'] = 'white';
+    graphB.create("MAIN47", "250px", "10px", "600px", "300px", '26561', '%', '°C', ds0, ds1, ds2);
+</script>
+//TRENNUNG//
+<script>
+    var BathWarn = new StateDisplay();
+    BathWarn.create("CTRL47", "violetLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Warnung",
+        "string", "");
+    var BathDisKlima = new StateDisplay();
+    BathDisKlima.create("CTRL47", "violetLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Klima Innen",
+        "string", "");
+    var BathDisHstate = new StateDisplay();
+    BathDisHstate.create("CTRL47", "violetLight", "", "160px", "13%", "60px", "202px", "20px",
+        "Hinweis", "bool",
+        "nicht lüften", "lüften erlaubt");
+    var BathDisHstateDiff = new StateDisplay();
+    BathDisHstateDiff.create("CTRL47", "violetLight", "%", "230px", "13%", "60px", "202px", "20px",
+        "Diff-Feuchte",
+        "number");
+
+    var BathFeuchteInnen = new StateDisplay();
+    BathFeuchteInnen.create("CTRL47", "violetLight", "mg/m³", "300px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Innen",
+        "number");
+    var BathFeuchteAussen = new StateDisplay();
+    BathFeuchteAussen.create("CTRL47", "violetLight", "mg/m³", "370px", "13%", "60px", "202px", "20px",
+        "Wassergehalt Aussen",
+        "number");
+
+    var BathTPInnen = new StateDisplay();
+    BathTPInnen.create("CTRL47", "violetLight", "°C", "440px", "13%", "60px", "202px", "20px",
+        "Taupunkt Innen",
+        "number");
+    var BathTPAussen = new StateDisplay();
+    BathTPAussen.create("CTRL47", "violetLight", "°C", "510px", "13%", "60px", "202px", "20px",
+        "Taupunkt Aussen",
+        "number");
+</script>

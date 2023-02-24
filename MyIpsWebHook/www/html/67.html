@@ -1,0 +1,73 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                            UPNP Video                                   -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="67">
+    VarPageNo.update("67");
+    var DiplayVideo = new MediaDisplay();
+    DiplayVideo.create("MAIN67", "10px", "20px", "600px", "250px", "DisplayBlue");
+
+    var rahm = new Rahmen();
+    rahm.create("MAIN67", "272px", "24px", "73px", "615px", "DisplayBlue");
+    var upnpVideoVol = new TransVarDisplay();
+    upnpVideoVol.create("MAIN67", "280px", "10%", "lime", "28px", "Volume", "");
+    var upnpVideoSource = new TransVarDisplay();
+    upnpVideoSource.create("MAIN67", "280px", "50%", "lime", "28px", "Source", "", );
+
+    var VideoTrack = new Kachel();
+    VideoTrack.create("MAIN67", "360px", "10px", "600px", "55px", "transparent", "Track")
+
+    var upnpVideoProgress = new analogBar();
+    upnpVideoProgress.create("MAIN67", "455px", "20px", "cyan", "500px");
+
+    var VideoPlayer = new ButtonSlider();
+    VideoPlayer.create("MAIN67", "83vh", "230px", "200px", "45px", "purple", "ClientList");
+
+    var FontBtnStart = new FontButton();
+    FontBtnStart.create("MAIN67", "fontbutton", "purple", "71vh", "20px", "fa fa-step-backward", "60px", "60px",
+        "32px",
+        "", 'func(UPNP_seekStart,19824)');
+
+    var FontBtnPrev = new FontButton();
+    FontBtnPrev.create("MAIN67", "fontbutton", "purple", "71vh", "90px", "fa fa-backward", "60px", "60px", "32px",
+        "", 'func(UPNP_previous,19824)');
+
+    var FontBtnNext = new FontButton();
+    FontBtnNext.create("MAIN67", "fontbutton", "purple", "71vh", "160px", "fa fa-forward", "60px", "60px", "32px",
+        "", 'func(UPNP_next,19824)');
+
+    var FontBtnStop = new FontButton();
+    FontBtnStop.create("MAIN67", "fontbutton", "purple", "71vh", "300px", "fa fa-stop", "60px", "60px", "32px", "",
+        'func(UPNP_stop,19824)');
+
+    var FontBtnPause = new FontButton();
+    FontBtnPause.create("MAIN67", "fontbutton", "purple", "71vh", "370px", "fa fa-pause", "60px", "60px", "32px", "",
+        'func(UPNP_pause,19824)');
+
+    var FontBtnPlay = new FontButton();
+    FontBtnPlay.create("MAIN67", "fontbutton", "purple", "71vh", "440px", "fa fa-play", "60px", "60px", "32px", "",
+        'func(UPNP_play,19824)');
+
+    var FontBtnVolDwn = new FontButton();
+    FontBtnVolDwn.create("MAIN67", "fontbutton", "purple", "83vh", "20px", "fa fa-volume-down", "60px",
+        "50px", "32px", "", 'func(UPNP_setVolume,19824,down)');
+
+    var FontBtnMute = new FontButton();
+    FontBtnMute.create("MAIN67", "fontbutton", "purple", "83vh", "90px", "fa fa-volume-off", "60px",
+        "50px", "32px", "", 'func(UPNP_setMute,19824,toggle14879)');
+
+    var FontBtnVolUp = new FontButton();
+    FontBtnVolUp.create("MAIN67", "fontbutton", "purple", "83vh", "160px", "fa fa-volume-up", "60px",
+        "50px", "32px", "", 'func(UPNP_setVolume,19824,up)');
+
+    var FontBtnPower = new FontButton();
+    FontBtnPower.create("MAIN67", "fontbutton", "purple", "83vh", "440px", "fa fa-power-off", "100px",
+        "50px", "32px", 'func(UPNP_setVolume,19824,up)');
+</script>
+//TRENNUNG//
+<script>
+    var Videocmd = [];
+    var VideoList = new DynIconList();
+    Videocmd[0] = 'func(UPNP_loadPlaylist,19824,item[playlistname],Video)';
+
+    VideoList.create("CTRL67", "VideoLib", "0px", "0px", "100%", "100%", 3, "", Videocmd);
+</script>

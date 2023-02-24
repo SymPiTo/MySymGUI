@@ -1,0 +1,130 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Pflanzen                                   -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="17">
+    VarPageNo.update("17");
+    var Sensor5Icon = new DynIcon("smily", "ana", false);
+    Sensor5Icon.create("MAIN17", "10px", "20px", "100px", "100px");
+
+    var Sensor3Icon = new DynIcon("smily", "ana", false);
+    Sensor3Icon.create("MAIN17", "10px", "140px", "100px", "100px");
+
+    var Sensor4Icon = new DynIcon("smily", "ana", false);
+    Sensor4Icon.create("MAIN17", "10px", "260px", "100px", "100px");
+
+    var Sensor1Icon = new DynIcon("smily", "ana", false);
+    Sensor1Icon.create("MAIN17", "10px", "380px", "100px", "100px");
+
+    var Sensor2Icon = new DynIcon("smily", "ana", false);
+    Sensor2Icon.create("MAIN17", "10px", "500px", "100px", "100px");
+
+    var Sensor5Lm = new TransVarDisplay();
+    Sensor5Lm.create("MAIN17", "130px", "40px", "lime", "24px", "Licht", "Lx");
+
+    var Sensor3Lm = new TransVarDisplay();
+    Sensor3Lm.create("MAIN17", "130px", "150px", "lime", "24px", "Licht", "Lx");
+
+    var Sensor4Lm = new TransVarDisplay();
+    Sensor4Lm.create("MAIN17", "130px", "270px", "lime", "24px", "Licht", "Lx");
+
+    var Sensor1Lm = new TransVarDisplay();
+    Sensor1Lm.create("MAIN17", "130px", "390px", "lime", "24px", "Licht", "Lx");
+
+    var Sensor2Lm = new TransVarDisplay();
+    Sensor2Lm.create("MAIN17", "130px", "510px", "lime", "24px", "Licht", "Lx");
+
+    var Plant5Img = new ShowUrlImage();
+    Plant5Img.create("MAIN17", "200px", "30px", "100px", "100px",
+        "http://api.greensens.de/plants/ZXVwaG9yYmlhIGFlcnVnaW5vc2EuanBn.jpg");
+
+    var Plant3Img = new ShowUrlImage();
+    Plant3Img.create("MAIN17", "200px", "140px", "100px", "100px",
+        "http://api.greensens.de/plants/YXN0cm9waHl0dW0gYXN0ZXJpYXMuanBn.jpg");
+
+    var Plant4Img = new ShowUrlImage();
+    Plant4Img.create("MAIN17", "200px", "250px", "100px", "100px",
+        "http://api.greensens.de/plants/ZWNoaW5vcHNpcyB0dWJpZmxvcmEuanBn.jpg");
+
+    var Plant1Img = new ShowUrlImage();
+    Plant1Img.create("MAIN17", "200px", "380px", "100px", "100px",
+        "http://api.greensens.de/plants/YWxvZSB2ZXJhLmpwZw==.jpg");
+
+    var Plant2Img = new ShowUrlImage();
+    Plant2Img.create("MAIN17", "200px", "490px", "100px", "100px",
+        "http://api.greensens.de/plants/YWxvZSB2ZXJhLmpwZw==.jpg");
+
+    var Sensor5Temp = new TransVarDisplay();
+    Sensor5Temp.create("MAIN17", "350px", "40px", "lime", "24px", "Temp.", "°C");
+
+    var Sensor3Temp = new TransVarDisplay();
+    Sensor3Temp.create("MAIN17", "350px", "150px", "lime", "24px", "Temp", "°C");
+
+    var Sensor4Temp = new TransVarDisplay();
+    Sensor4Temp.create("MAIN17", "350px", "270px", "lime", "24px", "Temp", "°C");
+
+    var Sensor1Temp = new TransVarDisplay();
+    Sensor1Temp.create("MAIN17", "350px", "390px", "lime", "24px", "Temp", "°C");
+
+    var Sensor2Temp = new TransVarDisplay();
+    Sensor2Temp.create("MAIN17", "350px", "510px", "lime", "24px", "Temp", "°C");
+
+
+    var Sensor5Feuchte = new TransVarDisplay();
+    Sensor5Feuchte.create("MAIN17", "450px", "40px", "lime", "24px", "Feuchte.", "%");
+
+    var Sensor3Feuchte = new TransVarDisplay();
+    Sensor3Feuchte.create("MAIN17", "450px", "150px", "lime", "24px", "Feuchte", "%");
+
+    var Sensor4Feuchte = new TransVarDisplay();
+    Sensor4Feuchte.create("MAIN17", "450px", "270px", "lime", "24px", "Feuchte", "%");
+
+    var Sensor1Feuchte = new TransVarDisplay();
+    Sensor1Feuchte.create("MAIN17", "450px", "390px", "lime", "24px", "Feuchte", "%");
+
+    var Sensor2Feuchte = new TransVarDisplay();
+    Sensor2Feuchte.create("MAIN17", "450px", "510px", "lime", "24px", "Feuchte", "%");
+
+
+
+    var Sensor5ID = new TransVarDisplay();
+    Sensor5ID.create("MAIN17", "550px", "50px", "lime", "18px", "ID", "");
+
+    var Sensor3ID = new TransVarDisplay();
+    Sensor3ID.create("MAIN17", "550px", "160px", "lime", "18px", "ID", "");
+
+    var Sensor4ID = new TransVarDisplay();
+    Sensor4ID.create("MAIN17", "550px", "280px", "lime", "18px", "ID", "");
+
+    var Sensor1ID = new TransVarDisplay();
+    Sensor1ID.create("MAIN17", "550px", "400px", "lime", "18px", "ID", "", );
+
+    var Sensor2ID = new TransVarDisplay();
+    Sensor2ID.create("MAIN17", "550px", "520px", "lime", "18px", "ID", "");
+</script>
+//TRENNUNG//
+<script>
+    var Sensor1Stat = new StateDisplay();
+    Sensor1Stat.create("CTRL17", "cyanLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Sensor 1 - Zustand", "bool",
+        "N OK", "OK", "", "", "");
+
+    var Sensor2Stat = new StateDisplay();
+    Sensor2Stat.create("CTRL17", "cyanLight", "", "120px", "13%", "60px", "202px", "20px",
+        "Sensor 2 - Zustand", "bool",
+        "N OK", "OK", "", "", "");
+
+    var Sensor3Stat = new StateDisplay();
+    Sensor3Stat.create("CTRL17", "cyanLight", "", "220px", "13%", "60px", "202px", "20px",
+        "Sensor 3 - Zustand", "bool",
+        "N OK", "OK", "", "", "");
+
+    var Sensor4Stat = new StateDisplay();
+    Sensor4Stat.create("CTRL17", "cyanLight", "", "320px", "13%", "60px", "202px", "20px",
+        "Sensor 4 - Zustand", "bool",
+        "N OK", "OK", "", "", "");
+
+    var Sensor5Stat = new StateDisplay();
+    Sensor5Stat.create("CTRL17", "cyanLight", "", "420px", "13%", "60px", "202px", "20px",
+        "Sensor 5 - Zustand", "bool",
+        "N OK", "OK", "", "", "");
+</script>

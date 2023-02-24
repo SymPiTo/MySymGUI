@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                Security                                 -->
+<!-- ----------------------------------------------------------------------- -->
+
+<script id="1">
+    VarPageNo.update("1");
+    //<!-- ----------------------------- Main Panel ------------------------------ -->
+    var KeyPadSecKey = new KeyPad();
+    KeyPadSecKey.create("MAIN1", "security", "grey", "1", "10vh", "120px",
+        'func(A_checkCode,33438,XXXXXX)');
+
+    var BtnAlarmActive = new CtrlButton();
+    BtnAlarmActive.create("MAIN1", "520px", "200px", "ctrlbutton", "normal", "red", "Alarm aktivieren", "black",
+        "func", "", 'func(A_activateSecAlarm,33438)');
+</script>
+//TRENNUNG//
+<script>
+    //<!-- ----------------------------- Ctrl Panel ------------------------------ -->
+
+    var DisAlarmActiveSec = new StateDisplay();
+    DisAlarmActiveSec.create("CTRL1", "redLight", "", "50px", "13%", "60px", "202px", "20px",
+        "Alarm Anlage", "bool",
+        "deaktiviert", "aktiviert", "", "", "");
+
+
+    var DisSabAlarm = new StateDisplay();
+    DisSabAlarm.create("CTRL1", "redLight", "", "140px", "13%", "60px", "202px", "20px",
+        "Sabotage", "bool",
+        "manipuliert",
+        "ok");
+
+    var DisDoorOpen = new StateDisplay();
+    DisDoorOpen.create("CTRL1", "redLight", "", "240px", "13%", "60px", "202px", "20px",
+        "Eingangstür", "bool",
+        "geschlossen",
+        "offen", "", "", "");
+
+    var DisBalkonDoorOpen = new StateDisplay();
+    DisBalkonDoorOpen.create("CTRL1", "redLight", "", "320px", "13%", "60px", "202px",
+        "20px",
+        "Balkon Tür", "bool",
+        "geschlossen", "offen", "", "", "");
+
+    var DisFloorPD = new StateDisplay();
+    DisFloorPD.create("CTRL1", "redLight", "", "400px", "13%", "60px", "202px", "20px",
+        "Wohnung", "bool",
+        "keine Person ",
+        " Person anwesend", "", "", "");
+
+    var DisAlarm = new StateDisplay();
+    DisAlarm.create("CTRL1", "redLight", "", "520px", "13%", "60px", "202px", "20px",
+        "Alarm ausgelöst", "string",
+        "",
+        "", "", "", "");
+</script>

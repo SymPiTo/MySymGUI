@@ -1,0 +1,85 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Rolladen Schlafzimmer                          -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="26">
+    VarPageNo.update("26");
+    var iRolloSZ = new DynIcon("rollo", "ana", false);
+    iRolloSZ.create("MAIN26", "0px", "100px", "350px", "250px");
+
+
+    var Rahmen1SZ = new Kachel();
+    Rahmen1SZ.create("MAIN26", "290px", "60px", "230px", "100px", "transparent", "Mode");
+
+
+    var btnRolloSZAuto = new CtrlButton();
+    btnRolloSZAuto.create("MAIN26", "330px", "70px", "ctrlbutton", "smaller", "sandy", "Automatik",
+        "black",
+        "func", "", 'func(FSS_SetMode,53809,1)');
+
+    var btnRolloSZMan = new CtrlButton();
+    btnRolloSZMan.create("MAIN26", "330px", "175px", "ctrlbutton", "smaller", "sandy", "Manual", "black",
+        "func", "", 'func(FSS_SetMode,53809,0)');
+
+    var Rahmen2SZ = new Kachel();
+    Rahmen2SZ.create("MAIN26", "400px", "60px", "230px", "170px", "transparent", "Preset");
+
+    var btnRolloSZ99 = new CtrlButton();
+    btnRolloSZ99.create("MAIN26", "440px", "175px", "ctrlbutton", "smaller", "sandy", "99%", "black",
+        "func", "", 'func(FSS_SetRollo,53809,99)');
+
+    var btnRolloSZ75 = new CtrlButton();
+    btnRolloSZ75.create("MAIN26", "500px", "175px", "ctrlbutton", "smaller", "sandy", "75%", "black",
+        "func", "", 'func(FSS_SetRollo,53809,75)');
+
+    var btnRolloSZ50 = new CtrlButton();
+    btnRolloSZ50.create("MAIN26", "440px", "72px", "ctrlbutton", "smaller", "sandy", "50%", "black",
+        "func", "", 'func(FSS_SetRollo,53809,50)');
+
+    var btnRolloSZ25 = new CtrlButton();
+    btnRolloSZ25.create("MAIN26", "500px", "72px", "ctrlbutton", "smaller", "sandy", "25%", "black",
+        "func", "", 'func(FSS_SetRollo,53809,25)');
+
+    var Rahmen3SZ = new Kachel();
+    Rahmen3SZ.create("MAIN26", "290px", "355px", "150px", "280px", "transparent", "Control");
+
+
+    var btnRolloSZHoch = new FontCtrlButton();
+    btnRolloSZHoch.create("MAIN26", "sandy", "330px", "370px", "fa fa-chevron-up", "Hoch",
+        "func",
+        'func(FSS_SetRolloUp,53809)', "", "", "120px", "50px", "black", "22px", "black");
+
+    var btnRolloSZStop = new FontCtrlButton();
+    btnRolloSZStop.create("MAIN26", "sandy", "415px", "370px", "fa fa-stop", "Halt", "func",
+        'func(FSS_SetRolloStop,53809)', "", "", "120px", "50px", "black", "22px", "black");
+
+    var btnRolloSZRunter = new FontCtrlButton();
+    btnRolloSZRunter.create("MAIN26", "sandy", "500px", "370px", "fa fa-chevron-down", "Runter",
+        "func",
+        'func(FSS_SetRolloDown,53809)', "", "", "120px", "50px", "black", "22px", "black");
+</script>
+//TRENNUNG//
+<script>
+    var DisModeRolloSZ = new StateDisplay();
+    DisModeRolloSZ.create("CTRL26", "sandyLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Mode", "bool",
+        "Man", "Auto",
+        "", "", "");
+
+    var DisST1RolloSZ = new StateDisplay();
+    DisST1RolloSZ.create("CTRL26", "sandyLight", "", "130px", "13%", "60px", "202px", "20px",
+        "Schaltzeiten Mo-Fr",
+        "string");
+
+    var DisST2RolloSZ = new StateDisplay();
+    DisST2RolloSZ.create("CTRL26", "sandyLight", "", "210px", "13%", "60px", "202px", "20px",
+        "Schaltzeiten Sa-so",
+        "string");
+
+    CbSSrolloSZ = new CheckBoxCtrlBtn();
+    CbSSrolloSZ.create("CTRL26", "sandy", "290px", "30px", "202px", "40px", "22px", "SunRise-SunSet",
+        'func(FSS_SetSunSet,53809,0)', 'func(FSS_SetSunSet,53809,1)');
+
+    var rolloCtrlSZ = new RolloCtrl();
+    rolloCtrlSZ.create("CTRL26", "400px", "30px", "202px", "150px", "sandy", "Position", 'func(FSS_StepRolloUp,53809)',
+        'func(FSS_StepRolloDown,53809)');
+</script>

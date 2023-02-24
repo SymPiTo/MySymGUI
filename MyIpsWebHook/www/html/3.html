@@ -1,0 +1,45 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Wasser Alarm                               -->
+<!-- ----------------------------------------------------------------------- -->
+<script id="3">
+    VarPageNo.update("3");
+    var iBath = new DynIcon("BadewanneW", "bin", false);
+    iBath.create("MAIN3", "20px", "70px", "250px", "250px");
+    var iWashM = new DynIcon("WaschmaschineW", "bin", false);
+    iWashM.create("MAIN3", "300px", "70px", "250px", "250px");
+    var ilabel1 = new label();
+    ilabel1.create("MAIN3", "20px", "350px", "18px", "white", "Badewanne Überlauf");
+    var ilabel2 = new label();
+    ilabel2.create("MAIN3", "300px", "350px", "18px", "white", "Waschmaschine Überlauf");
+</script>
+//TRENNUNG//
+<script>
+    var BathDisAlarm = new StateDisplay();
+    BathDisAlarm.create("CTRL3", "redLight", "", "20px", "13%", "60px", "202px", "20px",
+        "Alarm", "bool",
+        "OK",
+        "Warnung");
+    var BathDisFeuchte = new StateDisplay();
+    BathDisFeuchte.create("CTRL3", "redLight", "", "90px", "13%", "60px", "202px", "20px",
+        "Feuchte", "bool",
+        "OK", "Warnung");
+    var BathDisWater = new StateDisplay();
+    BathDisWater.create("CTRL3", "redLight", "", "160px", "13%", "60px", "202px", "20px",
+        "Wasserstand", "bool",
+        "OK", "Warnung");
+
+    var WashMDisAlarm = new StateDisplay();
+    WashMDisAlarm.create("CTRL3", "redLight", "", "300px", "13%", "60px", "202px", "20px",
+        "Alarm", "bool",
+        "OK",
+        "Warnung");
+    var WashMDisFeuchte = new StateDisplay();
+    WashMDisFeuchte.create("CTRL3", "redLight", "", "370px", "13%", "60px", "202px",
+        "20px",
+        "Feuchte", "bool",
+        "OK", "Warnung");
+    var WashMDisWater = new StateDisplay();
+    WashMDisWater.create("CTRL3", "redLight", "", "440px", "13%", "60px", "202px", "20px",
+        "Wasserstand", "bool",
+        "OK", "Warnung");
+</script>
