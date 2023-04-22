@@ -709,30 +709,7 @@ function updateValues() {
   /* -------------------------------- Covid ------------------------------- */
   var loaded = document.getElementById(44);
   if(loaded){
-      D_Covidweek.update(ipsObj.ips.ID31063,0);
-      D_Inz.update(ipsObj.ips.ID44672,0);
-      D_R.update(ipsObj.ips.ID55297,0);
-      BW_Covidweek.update(ipsObj.ips.ID58647,0);
-      BW_Inz.update(ipsObj.ips.ID13065,0);
-      D_Dead.update(ipsObj.ips.ID39647,0);
-      HD_Covidweek.update(ipsObj.ips.ID17646,0);
-      HD_Inz.update(ipsObj.ips.ID12102,0);
-      HD_Dead.update(ipsObj.ips.ID44803,0);
-    
-    /* ------------------------------- Covid Graph------------------------------ */
-    //sollte nur bei click geladen werden
-    if(ipsObj.serverID == 33023){
-      graphCovid.dataload(this.ipsObj.ips.DATA31063, this.ipsObj.ips.DATA58647, this.ipsObj.ips.DATA17646);
-      //Befehl nur einmal ausführen, deshalb serverID = 0
-      ipsObj.serverID = 0;
-    }
-    
-    //sollte nur bei click geladen werden
-    if(ipsObj.serverID == 10026){
-      graphCovid1.dataload(this.ipsObj.ips.DATA44672, this.ipsObj.ips.DATA13065, this.ipsObj.ips.DATA12102);
-      //Befehl nur einmal ausführen, deshalb serverID = 0
-      ipsObj.serverID = 0;
-    }
+
   }
   /* ---------------------------------   -------------------------------- */
   var loaded = document.getElementById(45);
